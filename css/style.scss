@@ -1,0 +1,188 @@
+---
+---
+
+$light: #eee;
+$text: #444;
+$link: #777;
+$banner: #777;
+$accent: #339999;
+
+$banner-font: "Lobster Two";
+$main-font: "Noto Sans";
+
+$banner-font-url: str-replace($banner-font, ' ', '+');
+$main-font-url: str-replace($main-font, ' ', '+');
+
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css?family=" + $banner-font-url + "|" + $main-font-url);
+
+body {
+    font-size: 16px;
+    font-family: $main-font, sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    color: $text;
+
+    min-width: 30em;
+    max-width: 45em;
+    text-align: left;
+    padding-left: 5em;
+    padding-right: 5em;
+
+    em {
+        font-style: italic;
+    }
+
+    strong {
+        font-weight: bold;
+    }
+
+    a, a:visited {
+        color: $link;
+        text-decoration: none;
+    }
+
+    a:hover, a:active, a.current {
+        color: $accent;
+    }
+
+    blockquote, .blockquote {
+        padding-left: 2em;
+        border-left-style: solid;
+        border-left-width: 5px;
+        border-left-color: $light;
+    }
+
+    table {
+        tr {
+            border: 1px solid $light;
+        }
+        th, td {
+            border: 1px solid $light;
+            padding: 0.5em;
+        }
+
+        th {
+            background-color: $light;
+        }
+    }
+}
+
+#banner {
+    padding-top: 1em;
+
+    a, a:visited {
+        font-size: 2em;
+        color: $banner;
+        font-weight: normal;
+        font-family: $banner-font, cursive;
+    }
+
+    a:hover, a:active {
+        color: $accent;
+    }
+}
+
+.sidepic {
+    width: 15em;
+    float: right;
+    margin-left: 1em;
+}
+
+#sitenav {
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+
+    ul {
+        list-style: none;
+
+        li {
+            display: inline;
+            margin-right: 1em;
+        }
+    }
+}
+
+main {
+    padding-bottom: 5em;
+
+    h1 {
+        font-weight: bold;
+        font-size: 1.5em;
+        margin-top: 1.5em;
+        margin-bottom: 1em;
+
+        span.date {
+            font-weight: normal;
+        }
+    }
+
+    h2, article h1 {
+        font-weight: bold;
+        font-style: normal;
+        font-size: 1em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    article h2 {
+        font-weight: normal;
+        font-style: italic;
+    }
+
+    p {
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    ul {
+        list-style: square;
+        padding-left: 2.5em;
+
+        ul {
+            list-style: circle;
+        }
+    }
+
+    ol {
+        list-style: decimal;
+        padding-left: 2.5em;
+    }
+
+    .footnote {
+        vertical-align: super;
+        font-size: 0.6em;
+    }
+}
+
+.email::after {
+    content: "coloradocollege.edu";
+}
+.email::before {
+    content: "sagrawal";
+}
+
+ul.tags {
+    padding-left: 0;
+
+    li {
+        display: inline;
+        margin-right: 0.4em;
+        background-color: $light;
+        padding: 0.1em 0.4em 0.1em 0.4em;
+        border-radius: 0.2em;
+    }
+
+    li:before {
+        content: "#";
+        color: $link;
+        padding: 0;
+        margin: 0;
+    }
+}
