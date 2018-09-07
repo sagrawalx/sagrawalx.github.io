@@ -15,4 +15,4 @@ Here are a few things I like and/or find useful.
 
 # About the website
 
-This website was created and is maintained using [Jekyll](https://jekyllrb.com/) and [Inkscape](https://inkscape.org/). <!--The Javascript library [KaTeX](https://khan.github.io/KaTeX/) is used to render mathematical expressions: this is the only non-static component of this website.-->
+This website was created and is maintained using [Jekyll](https://jekyllrb.com/) and [Inkscape](https://inkscape.org/).

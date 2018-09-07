@@ -12,7 +12,7 @@ None
 
 ## UC Berkeley
 
-* Fall 2017. [Math 16A - Analytic geometry and calculus](fa17_math16a).
+* Fall 2017. [Math 16A - Analytic Geometry and Calculus](fa17_math16a).
 * Summer 2017. [Math 110 - Linear Algebra](su17_math110).
 * Spring 2016. Math 54 - Linear Algebra and Differential Equations.
 * Fall 2015. Math 110 - Linear Algebra.

@@ -3,17 +3,17 @@ layout: nonav
 title: CV
 ---
 
-<img class="sidepic" src="{{ site.baseurl }}/img/hello-bunny.svg"/>
+<img class="sidepic" src="{{ site.baseurl }}/img/hello-bunny.svg" title="Hello!"/>
 
 # Basic information
 
 * Email: <span class="email">@</span>
-* Website: [math.berkeley.edu/~sagrawal/](https://math.berkeley.edu/~sagrawal/)
+* Website: [sagrawalx.github.io](https://sagrawalx.github.io)
 * Citizenship: USA
 
-# Employment.
+# Employment
 
-* Colorado College. Visiting Assistant Professor (present).
+* Colorado College. Visiting Assistant Professor (2018-present).
 
 # Education
 
@@ -86,6 +86,7 @@ title: CV
 
 ## Mentor
 
+* Senior thesis with Zhaopeng Li (2018-2019). 
 * Directed reading program with Frank Dai (Fall 2017). Topic: Class field theory.
 * Directed reading program with Alice Zhao (Fall 2014). Topic: Elliptic curves.
 
