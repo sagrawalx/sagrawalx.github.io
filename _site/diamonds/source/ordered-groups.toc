@@ -1,0 +1,21 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Ordered sets}{1}{section.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Totally ordered abelian groups}{3}{section.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Constructions}{5}{section.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Convex subgroups}{7}{section.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Ordered set of convex subgroups}{9}{section.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Quotients by convex subgroups}{10}{section.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Height of a totally ordered abelian group}{11}{section.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8}Categorical properties}{12}{section.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9}Hahn embedding theorem}{15}{section.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{References}{15}{section*.3}

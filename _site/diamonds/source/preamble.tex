@@ -1,0 +1,72 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{amsthm,marginnote}
+\usepackage{microtype,amsmath,amssymb,verbatim,newpxtext}
+\usepackage[euler-digits,euler-hat-accent]{eulervm}
+\usepackage[mathscr]{euscript}
+
+\usepackage{enumitem, tikz-cd,xr-hyper}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage[noabbrev]{cleveref}
+
+\usepackage{xparse}
+\DeclareDocumentCommand{\dref}{om}{\IfNoValueTF{#1}{\cref{#2}}{#1, \cref{#1-#2}}}
+
+
+\usepackage[style=alphabetic]{biblatex}
+\bibliography{references}
+\newcommand{\stackstaglink}[1]{\href{http://stacks.math.columbia.edu/tag/#1}{#1}}
+\newcommand{\stackstag}[1]{\cite[\stackstaglink{#1}]{stacks}}
+% find a way for making multiple tags
+
+\newcommand{\reference}[1]{\marginnote{\footnotesize\textnormal{#1}}}
+
+\date{}
+
+% Numbered elements
+\numberwithin{equation}{section}
+\renewcommand{\thesubsection}{\thesection.\Alph{subsection}}
+
+\newtheorem{theorem}[equation]{Theorem}
+\newtheorem{lemma}[equation]{Lemma}
+\newtheorem{proposition}[equation]{Proposition}
+\newtheorem{corollary}[equation]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[equation]{Definition}
+\newtheorem{history}[equation]{History}
+\newtheorem{example}[equation]{Example}
+\newtheorem{remark}[equation]{Remark}
+\newtheorem{notation}[equation]{Notation}
+
+\crefname{condition}{condition}{conditions}
+
+% Commands
+\newcommand{\st}{\; : \;}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\renewcommand{\O}{\mathscr{O}}
+
+\DeclareMathOperator*\colim{colim}
+\DeclareMathOperator{\coker}{coker}
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\height}{ht}
+
+\DeclareMathOperator{\Convex}{Cnv}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Spa}{Spa}
+\DeclareMathOperator{\Spv}{Spv}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Frac}{Frac}
+
+% External documents
+\externaldocument[ordered-groups-]{ordered-groups}
+\externaldocument[valuations-]{valuations}

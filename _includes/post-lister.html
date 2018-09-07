@@ -1,0 +1,5 @@
+<ul class="posts">
+{% for post in include.content limit:include.limit %}
+<li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%Y-%m-%d" }}). {% if include.excerpt==true %}<span class="excerpt">{{ post.excerpt | remove: "<p>" | remove: "</p>" | remove: "<em>" | remove: "</em>" }}</span>{% endif %}</li>
+{% endfor %}
+</ul>

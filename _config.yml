@@ -1,0 +1,12 @@
+baseurl: /~sagrawal
+permalink: pretty
+
+plugins:
+    - jekyll-pandoc
+
+markdown: Pandoc
+
+pandoc:
+    extensions:
+        - mathjax
+        - bibliography: refs.bib

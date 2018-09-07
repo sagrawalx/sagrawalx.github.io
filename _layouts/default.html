@@ -1,0 +1,15 @@
+---
+layout: bare
+---
+
+<nav id="sitenav">
+<ul id="pages">
+    {% for p in site.data.navbar %}{% for q in site.html_pages %}{% if q.permalink == p %}<li><a href="{{ site.baseurl }}/{{ q.permalink }}" {% if page.permalink == p %} class="current"{% endif %}>{{ q.title }}</a></li>
+    {% endif %}{% endfor %}{% endfor %}
+</ul>
+
+</nav>
+
+<main>
+{{ content }}
+</main>

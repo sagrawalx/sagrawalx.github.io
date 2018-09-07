@@ -1,0 +1,443 @@
+\include{preamble}
+
+\title{Valuations}
+
+\begin{document}
+\maketitle
+
+\phantomsection
+\label{section-phantom}
+\tableofcontents
+
+
+\section{Valuations subrings of a field}
+
+\begin{definition}
+	Let $K$ be a field and $L$ be an algebraically closed field. The \emph{ordered set of homomorphisms from subrings of $K$ into $L$} is the set of pairs $(A, \phi)$ where $A$ is a subring of $K$ and $\phi : A \to L$ is a homomorphism, equipped with the order where $(A, \phi) \leq (A', \phi')$ if and only if $A \subseteq A'$ and $\phi'|_A = \phi$. 
+\end{definition}
+
+\begin{lemma}
+\label{result:ordered-set-of-maps-maximal}
+Let $K$ be a field and $L$ be an algebraically closed field. Every nonempty chain in the ordered set of homomorphisms from subrings of $K$ into $L$ has an upper bound. Thus, given any subring $A$ and a homomorphism $\phi : A \to L$, there exists a maximal element of the ordered set of homomorphisms from subrings of $K$ into $L$ which is greater than $(A, \phi)$. 
+\end{lemma}
+
+\begin{proof}
+Suppose $I$ is a nonempty totally ordered set and we have a chain $(A_i, \phi_i)_{i \in I}$ indexed by $I$. Then $A = \bigcup_{i \in I} A_i$ is a subring of $K$ containing $A_i$ for all $i$, and defining $\phi : A \to L$ by declaring that $\phi(a) = \phi_i(a)$ for any $i \in I$ such that $a \in A_i$ yields a well defined homomorphism from $A$ into $L$. The second assertion then follows immediately from Zorn's lemma. 
+\end{proof}
+
+\begin{lemma}
+\label{result:not-integral-implies-not-unit}
+\reference{\cite[VI.1, lemma 1]{bourbaki_ac}}
+Let $K$ be a field and $A$ a subring, and suppose that $x \in K$ is not integral over $A$. Then $x^{-1}$ is not a unit in $A[x^{-1}]$. If $\mathfrak{m}$ is a maximal ideal of $A[x^{-1}]$ containing $x^{-1}$, then the composite $A \hookrightarrow A[x^{-1}] \to A[x^{-1}]/\mathfrak{m}$ is surjective, and $A \cap \mathfrak{m}$ is a maximal ideal in $A$. 
+\end{lemma}
+
+\begin{proof}
+If $x^{-1}$ were a unit in $A[x]$, we have 
+\[ x =  a_0 + a_1x^{-1} + \dotsb + a_n x^{-n} \]
+for some $a_0, \dotsc, a_n \in A$. Multiplying through by $x^n$ we see that $x$ satisfies a monic polynomial of degree $n+1$ over $A$, contradicting our assumption that $x$ not be integral over $A$. Thus $x^{-1}$ cannot be a unit in $A[x^{-1}]$. 
+
+Now suppose that $\mathfrak{m}$ is a maximal ideal of $A[x^{-1}]$ containing $x^{-1}$. Then $A[x^{-1}]/\mathfrak{m}$ is a field, and the composite $A \hookrightarrow A[x^{-1}] \to A[x^{-1}]/\mathfrak{m}$ clearly has kernel $\mathfrak{m} \cap A$. Moreover, this composite is surjective since $x^{-1} \in \mathfrak{m}$, so $\mathfrak{m} \cap A$ must be a maximal ideal in $A$. 
+\end{proof}
+
+\begin{theorem} 
+\label{result:characterizing-valuation-subrings}
+\reference{\cite[VI.1, theorem 1]{bourbaki_ac}}
+Let $K$ be a field and $A$ a subring of $K$. Then the following are equivalent.
+\begin{enumerate}[label=(\alph{*})]
+\item \label[condition]{enumi:maximal-local-subring} $A$ is maximal in the set of local subrings of $K$ ordered by domination. 
+\item \label[condition]{enumi:maximal-map-alg-closed} There exists an algebraically closed field $L$ and a homomorphism $A \to L$ which is maximal in the ordered set of homomorphisms from subrings of $K$ into $L$. 
+\item \label[condition]{enumi:element-or-inverse} If $x \in K \setminus A$ then $x^{-1} \in A$. 
+\item \label[condition]{enumi:local-bezout-domain} $\Frac(A) = K$, $A$ is local, and every finitely generated ideal of $A$ is principal. 
+\item \label[condition]{enumi:principal-ideals-totally-ordered} $\Frac(A) = K$ and the set of principal ideals of $A$ is totally ordered by inclusion.
+\item \label[condition]{enumi:ideals-totally-ordered} $\Frac(A) = K$ and the set of ideals of $A$ is totally ordered by inclusion.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\ref{enumi:maximal-local-subring} $\implies$ \ref{enumi:maximal-map-alg-closed}. Note that $A$ is a local ring with maximal ideal $\mathfrak{m}$. Let $L$ an algebraic closure of the residue field $A/\mathfrak{m}$, and $A \to L$ the natural map. Notice that its kernel is precisely $\mathfrak{m}$. Suppose $B$ is a subring of $K$ containing $A$ and $\phi : B \to L$ a homomorphism extending $\phi$. Then $\ker(\phi)$ is a prime ideal of $B$ and $A \cap \ker(\phi) = \mathfrak{m}$. Then the local ring $B_{\ker(\phi)}$ dominates $A$, so we must have $A = B_{\ker(\phi)}$. Thus $\phi$ coincides with $A \to L$, proving that $A \to L$ is maximal in the set of homomorphisms from subrings of $A$ into $L$ ordered by extension. 
+
+\medskip
+\noindent
+\ref{enumi:maximal-map-alg-closed} $\implies$ \ref{enumi:element-or-inverse}. Let $L$ be a field and $\phi : A \to L$ maximal in the set of homomorphisms from subrings of $A$ into $L$. Then $\ker(\phi)$ is a prime ideal of $A$ and $\phi$ can be extended to the local ring $A_{\ker(\phi)}$ which is a subring of $K$ containing $A$. By maximality, we must have  $A = A_{\ker(\phi)}$, so $A$ is a local ring and $\ker(\phi)$ is its maximal ideal. 
+
+Suppose we have $x \in K$ is integral over $A$, then there exists a monic polynomial $f = T^n + a_{1}T^{n-1} + \dotsb + a_n \in A[T]$ for some formal indeterminate $T$ such that $T \mapsto x$ defines an isomorphism of $A$-algebras $A[T]/(f) = A[x]$. Since $L$ is algebraically closed, $\phi(f)$ has a root $\alpha \in L$, so $x \mapsto \alpha$ defines an $A$-algebra homomorphism $A[x] \to L$. By maximality, we must have $A[x] = A$. In other words, $A$ is integrally closed in $K$. 
+
+Now suppose that $x \in K \setminus A$. Then, as we have just seen, $x$ is not integral over $A$. \Cref{result:not-integral-implies-not-unit} tells us that$x^{-1}$ is not a unit in $A[x^{-1}]$, so there exists a maximal ideal $\mathfrak{m}$ of $A[x^{-1}]$ containing $x^{-1}$. Then $\mathfrak{m} \cap A$ is a maximal ideal of $A$, but $A$ is local with maximal ideal $\ker(\phi)$, so $\ker(\phi) = \mathfrak{m} \cap A$ is the kernel of the surjection $A \to A[x^{-1}]/\mathfrak{m}$. Thus $\phi$ naturally extends to a homomorphism $A[x^{-1}]/\mathfrak{m} \to L$. Precomposing with the quotient map $A[x^{-1}] \to A[x^{-1}]/\mathfrak{m}$ yields an extension of $\phi$ to $A[x^{-1}]$. By maximality, we conclude that $A[x^{-1}] = A$. In other words, we have $x^{-1} \in A$. 
+
+
+\medskip
+\noindent
+\ref{enumi:element-or-inverse} $\implies$ \ref{enumi:local-bezout-domain}. It is clear that $\Frac(A) = K$. Let us show that $A$ is local. We know that $A$ has at least one maximal ideal $\mathfrak{m}$. Suppose it had a second maximal ideal $\mathfrak{m}'$. Then $\mathfrak{m}' \not\subseteq \mathfrak{m}$ and $\mathfrak{m} \not\subseteq \mathfrak{m}'$, so there exists $x \in \mathfrak{m} \setminus \mathfrak{m}'$ and $x' \in \mathfrak{m}' \setminus \mathfrak{m}$. Now consider $x/x' \in K$. If $x/x' \in A$, then $x = x'(x/x') \in \mathfrak{m}'$, contradicting our choice of $x$, so $x/x' \notin A$. But for the same reasons, we also have $x'/x \notin A$. This is a contradiction. Thus $A$ must have just one maximal ideal.
+
+Finally, to see that every finitely generated ideal is principal, it is sufficient to show that any ideal $I = (x, y)$ that is generated by two elements $x, y \in A$ must be principal. If $y = 0$, then $I = (x)$ and we are done, so suppose $y \neq 0$ and consider $x/y \in K$. If $x/y \in A$, then $x = (x/y)y$ so $I = (y)$ and we are done. Otherwise we have $y/x \in A$, and then $y = (y/x)x$ so $I = (x)$ and again we are done. 
+
+\medskip
+\noindent
+\ref{enumi:local-bezout-domain} $\implies$ \ref{enumi:principal-ideals-totally-ordered}. Suppose we have two elements $x, y \in A$. 
+We want to show that either $(x) \subseteq (y)$ or $(y) \subseteq (x)$.
+Consider the ideal $I = (x, y)$. Since $I$ is principal, there exist $a, b \in A$ such that $I = (ax + by)$. Moreover, there exists $u \in A$ such that $x = u(ax + by)$. 
+
+If $u$ is a unit, then $(x) = (ax + by) = I \supseteq  (y)$ and we are done. If $u$ is not a unit, then $u$ is in the maximal ideal $\mathfrak{m}$ of $A$. Then $x(1-ua) = uby$. Since $u \in \mathfrak{m}$, then $ua \in \mathfrak{m}$, so $1-ua$ is a unit in $A$, so $x = (1-ua)^{-1}uby \in (y)$, proving that $(x) \subseteq (y)$. 
+
+\medskip
+\noindent
+\ref{enumi:principal-ideals-totally-ordered} $\implies$ \ref{enumi:ideals-totally-ordered}. Suppose $I$ and $J$ are ideals of $A$ and $J \not\subseteq I$. Then there exists $y \in J  \setminus I$, which means that for any $x \in I$, we have $y \notin (x)$. In other words, $(y) \not\subseteq (x)$. Thus $(x) \subseteq (y)$. Since $x \in I$ is arbitrary, we see that $I \subseteq (y) \subseteq J$. 
+
+\medskip
+\noindent
+\ref{enumi:ideals-totally-ordered} $\implies$ \ref{enumi:maximal-local-subring}. Since the ideals of $A$ are totally ordered, it must be a local ring. Suppose $B$ is a local subring of $K$ dominating $A$. Then for any $z \in B \subseteq K = \Frac(A)$, we can write $z = x/y$ with $x, y \in A$.  We want to show that $z \in A$. 
+
+Suppose for a contradiction that $z = x/y \notin A$. This means that $(x) \subsetneq (y)$, so since the ideals of $A$ are totally ordered by inclusion, we must have $(y) \subseteq (x)$. In other words, $z^{-1} = y/x \in A$. Since $z \notin A$ by assumption, we see that $z^{-1}$ is a non-unit in $A$, which means that $z^{-1}$ is in the maximal ideal of $A$. On the other hand, we know that $z \in B$ and $z^{-1} \in A \subseteq B$, so $z$ is a unit in $B$. This means that $z^{-1}$ cannot be in the maximal ideal of $B$, which contradicts the assumption that $B$ dominates $A$. 
+\end{proof}
+
+\begin{definition}
+\label{definition:valuation-subring}
+Let $K$ be a field. A \emph{valuation subring} of $K$ is a subring satisfying one of the equivalent conditions of \cref{result:characterizing-valuation-subrings}. 
+\end{definition}
+
+\begin{lemma}
+\label{result:valuation-subrings-integrally-closed}
+Let $A$ be a valuation subring of a field $K$. Then $A$ is integrally closed in $K$. 
+\end{lemma}
+
+\begin{proof}
+This is shown during the proof of \cref{result:characterizing-valuation-subrings}, \ref{enumi:maximal-map-alg-closed} $\implies$ \ref{enumi:element-or-inverse} above. 
+\end{proof}
+
+\begin{lemma}
+\label{result:local-rings-dominated-by-valuation-rings}
+\reference{\cite[VI.1, corollary to theorem 2]{bourbaki_ac}}
+Let $A$ be a local domain and $K = \Frac(A)$. Then there exist a valuation subring of $K$ dominating $A$. 
+\end{lemma}
+
+\begin{proof}
+Let $L$ be an algebraic closure of the residue field of $A$ and $\phi : A \to L$ the canonical map. Then $\ker(\phi)$ is the maximal ideal of $A$. The ordered set of homomorphisms from subrings of $K$ into $L$ is nonempty since it contains $(A, \phi)$, so it contains a maximal element $(A', \phi')$ extending $(A, \phi)$ by \cref{result:ordered-set-of-maps-maximal}. Then $A'$ is a valuation subring of $K$ by \cref{enumi:maximal-map-alg-closed} of \cref{result:characterizing-valuation-subrings}. Note that $\ker(\phi')$ is a prime ideal of $A'$ and $\phi'$ can be extended naturally to $A'_{\ker(\phi')}$, so maximality guarantees that $A' = A'_{\ker(\phi')}$. In other words, $\ker(\phi')$ is the maximal ideal of $A'$. Now clearly $A \cap \ker(\phi') = \ker(\phi)$ since $\phi'$ extends $\phi$, so we see that $A'$ dominates $A$. 
+\end{proof}
+
+\begin{lemma}
+\label{result:integral-closure-intersection-of-valuation-rings}
+\reference{\cite[VI.1, theorem 3]{bourbaki_ac}}
+Let $A$ be a domain and $K = \Frac(A)$. The integral closure of $A$ in $K$ is the intersection of all valuation subrings of $K$ containing $A$. 
+\end{lemma}
+
+\begin{proof}
+Let $A'$ denote the integral closure of $A$ in $K$ and let $B$ be a valuation subring of $K$ containing $A$. If $x \in A'$, then $x$ is integral over $A$ and therefore also over $B$. Thus the inclusion $B \hookrightarrow B[x]$ is a finite homomorphism, so by going up \stackstag{00GQ} we find that there exists a prime ideal $\mathfrak{p} \subseteq B[x]$ such that $\mathfrak{p} \cap B$ is the maximal ideal $\mathfrak{m}_B$ of $B$. Then $B[x]_{\mathfrak{p}}$ is a local ring dominating $B$, so \cref{enumi:maximal-local-subring} of \cref{result:characterizing-valuation-subrings} guarantees that $B = B[x]_{\mathfrak{p}}$. In particular, we see that $x \in B$, so $A' \subseteq B$. 
+
+Conversely, suppose we have $x \in K \setminus A'$. In other words, $x$ is not integral over $A$, so \cref{result:not-integral-implies-not-unit} tells us that $x^{-1}$ is not a unit in $A[x^{-1}]$, so there exists a maximal ideal $\mathfrak{m}$ of $A[x^{-1}]$ containing $x^{-1}$ and that $\mathfrak{m} \cap A$ is a maximal ideal of $A$. Then there exists a valuation subring $B$ of $K$ dominating $A[x^{-1}]_{\mathfrak{m}}$ by \cref{result:local-rings-dominated-by-valuation-rings}. Since $x^{-1}$ is not a unit in $A[x^{-1}]_{\mathfrak{m}}$, it is not a unit in the dominating ring $B$ either. Thus $x \notin B$. 
+\end{proof}
+
+\begin{lemma}
+\label{result:overrings-and-prime-ideals}
+\reference{\cite[VI.4, proposition 1]{bourbaki_ac}}
+Let $K$ be a field and $A$ a valuation subring of $K$. If $B$ is a subring of $K$ containing $A$, then $B$ is a valuation subring of $K$, and the maximal ideal $\mathfrak{m}_B$ of $B$ is a prime ideal of $A$. The map $B \mapsto \mathfrak{m}_B$ is an inclusion reversing bijection between the set of subrings of $K$ containing $A$ onto $\Spec(A)$, with inclusion reversing inverse given by $\mathfrak{p} \mapsto A_{\mathfrak{p}}$.
+\end{lemma}
+
+\begin{proof}
+We will use \cref{enumi:element-or-inverse} of \cref{result:characterizing-valuation-subrings} as a characterization of valuation subrings of $K$ repeatedly. 
+Suppose $B$ is a subring of $K$ containing $A$. If $x \in K \setminus B$, then $x \in K \setminus A$, so $x^{-1} \in A \subseteq B$, so $B$ is a valuation ring. Moreover, if $x \in \mathfrak{m}_B$, then $x^{-1} \in K \setminus B \subseteq K \setminus A$, so $x \in A$. In other words, $\mathfrak{m}_B \subseteq A$. Then $\mathfrak{m}_B = \mathfrak{m}_B \cap A$, so $\mathfrak{m}_B$ must be a prime ideal of $A$. 
+	
+Since every element of $A \setminus \mathfrak{m}_B$ is a unit in $B$, we have $A_{\mathfrak{m}_B} \subseteq B$. If $x \in B \setminus A_{\mathfrak{m}_B}$, then $x \notin A$ and $x^{-1} \notin \mathfrak{m}_B$. But, since $A$ is a valuation ring, we do have $x^{-1} \in A$. In other words, $x^{-1} \in A \setminus \mathfrak{m}_B$, which means that $x \in \mathfrak{m}_B$. Thus $B = A_{\mathfrak{m}_B}$. 
+
+If $\mathfrak{p}$ is a prime ideal of $A$, then $A_{\mathfrak{p}}$ is a subring of $K$ containing $A$, so it is a valuation subring of $K$, and its maximal ideal $\mathfrak{p}A_{\mathfrak{p}}$ is contained in $A$ and must equal $\mathfrak{p}$. This shows that $\mathfrak{p} \mapsto A_{\mathfrak{p}}$ is bijective and that its inverse is $B \mapsto \mathfrak{m}_B$. 
+
+The map $\mathfrak{p} \mapsto A_{\mathfrak{p}}$ is clearly inclusion reversing. We know from \cref{enumi:ideals-totally-ordered} of \cref{result:characterizing-valuation-subrings} that $\Spec(A)$ is totally ordered by inclusion, so it follows from \dref[ordered-groups]{result:order-embedding-total-order} that its inverse must also be an inclusion reversing. 
+\end{proof}
+
+\begin{lemma}
+\label{result:extension-of-valuation-subring}
+Let $K$ be a field, $A$ a valuation subring of $K$, and $K'$ a field extension of $K$. Then there exists a valuation subring $A'$ of $K'$ such that $A' \cap K = A$. In fact, if $x_1, \dotsc, x_n$ are algebraically independent elements of $K'$ over $K$, then $A'$ can be chosen so that $A[x_1,  \dotsc, x_n] \subseteq A'$.  
+\end{lemma}
+
+\begin{proof}
+Let $L$ be an algebraic closure of the residue field of $A$ and $\phi : A \to L$ the canonical map. Since $x_1, \dotsc, x_n$ are algebraically independent over $K$, the ring $A[x_1, \dotsc, x_n]$ is a polynomial algebra over $A$. So, by choosing an arbitrary $n$-tuple of elements of $L$, we can extend $\phi$ to a homomorphism $\phi : A[x_1, \dotsc, x_n] \to L$. 
+
+Now the pair $(A[x_1, \dotsc, x_n], \phi)$ defines an element of the ordered set of homomorphisms from subrings of $K'$ into $L$. Applying \cref{result:ordered-set-of-maps-maximal}, we can enlarge $A[x_1, \dotsc, x_n]$ to a maximal subring $A'$ of $K'$ which contains $A[x_1, \dotsc, x_n]$ such that $\phi$ extends to $A'$. By \cref{enumi:maximal-map-alg-closed} of \cref{result:characterizing-valuation-subrings}, we know that $A'$ is a valuation subring of $K'$. 
+
+We know that $A \subseteq A' \cap K$ immediately. Moreover, observe that $A' \cap K$ is a subring of $K$ and that $\phi : A' \to L$ restricts to a homomorphism $A' \cap K \to L$ which extends the original map $A \to L$. In other words, the pair $(A' \cap K, \phi)$ is an element of the ordered set of homomorphisms from subrings of $K$ into $L$ which is larger than $(A, \phi)$. Since $A$ is a valuation subring of $K$, we use \cref{enumi:maximal-map-alg-closed} of \cref{result:characterizing-valuation-subrings} once again to conclude that $A = A' \cap K$. 
+\end{proof}
+
+\section{Valuations on a ring}
+
+\begin{definition}
+Suppose $\Gamma$ is a totally ordered abelian group (cf. \dref[ordered-groups]{definition:totally-ordered-abelian-group}). We let $\infty$ denote an element disjoint from $\Gamma$ and $\Gamma \cup \{\infty\}$ denote the totally ordered set in which $\infty \geq x$ for all $x \in \Gamma$. We also extend the group operation $+$ on $\Gamma$ to an operation on $\Gamma \cup \{\infty\}$ by declaring $x + \infty = \infty + x = \infty$ for all $x \in \Gamma \cup \{\infty\}$. This makes $\Gamma \cup \{\infty\}$ a totally ordered monoid. Also, for any $x \in \Gamma$, we define $\infty - x = \infty$. 
+\end{definition}
+
+\begin{definition}
+\label{definition:valuation}
+Let $A$ be a ring. 
+\begin{itemize}
+\item A \emph{valuation} on $A$ is a function $\nu : A \to \Gamma \cup \{\infty\}$ for some totally ordered abelian group $\Gamma$ which satisfies the following conditions for all $a, b \in A$. 
+\begin{enumerate}[label=(\arabic{*})]
+\item $\nu(ab) = \nu(a) + \nu(b)$. 
+\item $\nu(a + b) \geq \min\{\nu(a), \nu(b)\}$. 
+\item $\nu(1) = 0$ and $\nu(0) = \infty$. 
+\end{enumerate}
+
+\item If $\nu$ is a valuation on $A$, then we associate to $\nu$ the following subsets of $A$. 
+\[ \begin{aligned} A^{\nu \geq 0} &= \{ x \in A : \nu(x) \geq 0\} \\
+A^{\nu \gneq 0} &= \{ x \in A : \nu(x) \gneq 0 \} \\
+\supp(\nu) &= \{ x \in A : \nu(x) = \infty \}. \end{aligned} \]
+We will see in \cref{result:support-valuation-prime} that $\supp(\nu)$, called the \emph{support of $\nu$}, is a prime ideal of $A$, and we define $\kappa(\nu) = \Frac(A/\supp(\nu))$. 
+
+\item If $\nu : A \to \Gamma \cup \{\infty\}$ is a valuation on $A$, the subgroup of $\Gamma$ generated by $\nu(A \setminus \supp(\nu))$ is called the \emph{value group} of $\nu$ and is denoted $\Gamma_\nu$.
+\end{itemize}
+\end{definition}
+
+\begin{lemma}
+\label{result:positive-ring}
+Let $A$ be a ring and $\nu$ a valuation on $A$. Then $A^{\nu \geq 0}$ is a subring of $A$, and $A^{\nu \gneq 0}$ is a proper ideal of $A^{\nu \geq 0}$. 
+\end{lemma}
+
+\begin{proof}
+This is immediate from the axioms for a valuation in \cref{definition:valuation}.
+\end{proof}
+
+\begin{lemma}
+\label{result:support-valuation-prime}
+Let $A$ be a ring and $\nu$ a valuation on $A$. Then $\supp(\nu)$ is a prime ideal in $A$. 
+\end{lemma}
+
+\begin{proof}
+We know that $0 \in \supp(\nu)$, and if $a, b \in \supp(\nu)$, then
+\[ \infty \geq \nu(a+b) \geq \min\{\nu(a), \nu(b)\} = \infty \]
+so $a+b \in \supp(\nu)$, proving that $\supp(\nu)$ is an additive subgroup of $A$. If $a \in \supp(\nu)$ and $x \in A$, then $\nu(ax) = \nu(a) + \nu(x) = \infty$ so $ax \in \supp(\nu)$, proving that $\supp(\nu)$ is an ideal of $A$. Note that $1 \notin \supp(\nu)$, so $\supp(\nu)$ is a proper ideal. Finally, suppose we have $a, b \in A$ such that $a \notin \supp(\nu)$ and $ab \in \supp(\nu)$. Then
+\[ \infty = \nu(ab) = \nu(a) + \nu(b) \]
+and $\nu(a) \neq \infty$ so we must have $\nu(b) = \infty$. 
+\end{proof}
+
+\begin{lemma}
+\label{result:valuation-of-inverse}
+Let $A$ be a ring and $\nu$ a valuation on $A$. If $a \in A^\times$, then $\nu(a) \neq \infty$ and $\nu(a) = -\nu(a^{-1})$. 
+\end{lemma}
+
+\begin{proof}
+Since $\supp(\nu)$ is a prime ideal by \cref{result:support-valuation-prime}, in particular it is a proper ideal so we must have $\nu(a) \neq \infty$. Moreover, $0 = \nu(1) = \nu(aa^{-1}) = \nu(a) + \nu(a^{-1})$.
+\end{proof}
+
+\begin{lemma}
+\label{result:valuation-of-roots-of-unity}
+Let $A$ be a ring and $\nu$ a valuation on $A$. If $\zeta \in A$ is a root of unity, then $\nu(\zeta) = 0$. 
+\end{lemma}
+
+\begin{proof}
+If $\zeta^n = 1$ for some $n \geq 1$, then $0 = \nu(1) = \nu(\zeta^n) = n\nu(\zeta)$.
+But totally ordered abelian groups are torsion free (cf. \dref[ordered-groups]{result:ordered-group-torsion-free}), so this forces $\nu(\zeta) = 0$. 
+\end{proof}
+
+\begin{lemma}
+\label{result:valuation-of-negative}
+Let $A$ be a ring and $\nu$ a valuation on $A$. Then $\nu(a) = \nu(-a)$ for all $a \in A$.
+\end{lemma}
+
+\begin{proof}
+Since $(-1)^2 = 1$, it follows from \cref{result:valuation-of-roots-of-unity} that $\nu(-1) = 0$. Thus 
+\[ \nu(-a) = \nu((-1)a) = \nu(-1) + \nu(a) = \nu(a). \qedhere \]
+\end{proof}
+
+\begin{lemma}
+\label{result:strong-triangle-inequality-strengthening}
+Let $A$ be a ring and $\nu$ a valuation on $A$. If we have $a, b \in A$ and $\nu(a) \neq \nu(b)$, then 
+\[ \nu(a+b) = \min\{\nu(a),  \nu(b)\}. \]
+\end{lemma}
+
+\begin{proof}
+We can assume without loss of generality that $\nu(a) \gneq \nu(b)$. Then $\min\{\nu(a), \nu(b)\} = \nu(b)$. We know that $\nu(a+b) \geq \nu(b)$, and we want to show that $\nu(a+b) = \nu(b)$. Observe that
+\[ \nu(b) = \nu((a+b) - a) \geq \min\{ \nu(a+b), \nu(a) \}, \]
+where we have used \cref{result:valuation-of-negative}.
+If $\min\{ \nu(a+b), \nu(a)\} = \nu(a)$, then this tells us that $\nu(b) \geq \nu(a)$, contradicting our initial assumption. Thus it must be the case that $\nu(a) \gneq \nu(a+b)$, and we have
+\[ \nu(b) \geq \min\{ \nu(a+b), \nu(a) \} = \nu(a+b) \geq \nu(b), \]
+forcing equality throughout. 
+\end{proof}
+
+\begin{lemma}
+\label{result:pullback-valuation}
+Let $\phi : A \to B$ be a homomorphism of rings and $\nu$ a valuation on $B$. Then $\nu \circ \phi$ is a valuation on $A$. 
+\end{lemma}
+
+\begin{proof}
+Omitted. 
+\end{proof}
+
+\begin{lemma}
+\label{result:valuation-unique-extension-residue-field}
+Let $A$ be a field and $\nu : A \to \Gamma \cup \{\infty\}$ a valuation on $A$. Then there exists a unique valuation on $\kappa(\nu) = \Frac(A/\supp(\nu))$ which makes the following diagram commute. 
+\[ \begin{tikzcd} A \ar{r} \ar[bend right]{dr}[swap]{\nu} & \kappa(\nu) \ar{d}{\nu} \\ & \Gamma  \cup \{\infty\} \end{tikzcd} \]
+Moreover, the value group of $\nu : A \to \Gamma \cup \{\infty\}$ coincides with $\nu(\kappa(\nu) \setminus \{0\})$. 
+\end{lemma}
+
+\begin{proof}
+First note that there exists a unique valuation $\bar{\nu}$ on $A/\supp(\nu)$ which makes the following diagram commute. 
+\[ \begin{tikzcd} A \ar{r}{\pi} \ar[bend right]{dr}[swap]{\nu} & A/\supp(\nu) \ar{d}{\bar{\nu}} \\ & \Gamma \end{tikzcd} \]
+Uniqueness is clear, since the quotient map $\pi : A \to A/\supp(\nu)$ is surjective. We need to prove existence. Suppose we have $a = b + \epsilon$ where $\epsilon \in \supp(\nu)$. We claim that $\nu(a) = \nu(b)$. If $b \in \supp(\nu)$, then $a \in \supp(\nu)$ by \cref{result:support-valuation-prime} and we are done. Otherwise, if $b \notin \supp(\nu)$, then $\nu(b) \lneq \nu(\epsilon)$, so by \cref{result:strong-triangle-inequality-strengthening} we see that $\nu(a) = \nu(b)$. Thus there exists a well-defined function $\bar{\nu}$ which makes the above diagram commute. Now it follows from the fact that $\nu$ is a valuation that $\bar{\nu}$ must also be a valuation. 
+
+Thus, by replacing $A$ with $A/\supp(\nu)$, we can assume that $A$ is a domain and $\supp(\nu) = 0$. Let $K = \Frac(A)$. We now want to show that $\nu$ extends uniquely to a valuation $\bar{\nu}$ on $K$ making the following diagram commute. 
+\[ \begin{tikzcd} A \ar[hookrightarrow]{r} \ar[bend right]{dr}[swap]{\nu} & K \ar{d}{\bar{\nu}} \\ & \Gamma \end{tikzcd} \]
+For uniqueness, note simply that every element of $K$ can be written as $a/b$ where $a, b \in A$ and $b \neq 0$, so if we had a valuation $\bar{\nu}$ on $K$ extending $\nu$, we would have to have
+\begin{equation} \label{eqn:extension-to-fraction-field} \bar{\nu}(a/b) = \nu(a) - \nu(b) \end{equation}
+using \cref{result:valuation-of-inverse}. To prove existence, we need to show that a function $\bar{\nu}$ defined as in \cref{eqn:extension-to-fraction-field} is a well-defined valuation on $K$. 
+
+First, let us show that $\bar{\nu}$ is a well-defined function. Suppose $a/b = a'/b'$ with $a, a', b, b' \in A$ and $b, b' \neq 0$. Then $ab' = a'b$ in $A$, so
+\[ \nu(a) + \nu(b') = \nu(a') + \nu(b). \]
+Rearranging shows that $\nu(a') - \nu(b') = \nu(a) - \nu(b)$, proving that $\bar{\nu}(a/b) = \nu(a) - \nu(b)$ is a well-defined function on $K$. 
+
+It is clear that $\bar{\nu}$ extends $\nu$. In particular, we have $\bar{\nu}(0) = \infty$. Next, let us show that $\bar{\nu}$ behaves well with respect to multiplication. Suppose we have $a/b$ and $a'/b'$. Then
+\[ \bar{\nu}((a/b)(a'/b')) = \bar{\nu}(aa'/bb') = \nu(a) + \nu(a') - \nu(b) - \nu(b') = \bar{\nu}(a/b) + \bar{\nu}(a'/b'). \]
+Finally, we need to show that $\bar{\nu}$ behaves well with respect to addition. 
+\[ \begin{aligned} \bar{\nu}((a/b) + (a'/b')) &= \nu(ab' + a'b) - \nu(bb') \\
+&\geq \min\{ \nu(ab'), \nu(a'b)\} - \nu(bb') \\
+&= \min\{ \nu(ab') - \nu(bb'), \nu(a'b) - \nu(bb') \} \\
+&= \min\{ \bar{\nu}(a/b), \bar{\nu}(a'/b') \}. \end{aligned} \]
+Thus the function $\bar{\nu}$ is in fact a valuation. 
+
+% ASSErtion about value groups  
+\end{proof}
+
+\section{Quotient and restricted valuation}
+
+\begin{definition}
+\label{definition:quotient-valuation}
+Let $A$ be a ring, $\nu : A \to \Gamma \cup \{\infty\}$ a valuation on $A$, and $\Delta$ a convex subgroup of $\Gamma$ (cf. \dref[ordered-groups]{definition:convex-subgroup}). Then the quotient group $\Gamma/\Delta$ is naturally a totally ordered abelian group (cf. \dref[ordered-groups]{result:quotient-order}), and we define $\nu_{/\Delta}$ to be the composite
+\[ \begin{tikzcd} A \ar{r}{\nu} & \Gamma \cup \{ \infty\} \ar{r} & \Gamma/\Delta \cup \{\infty\}. \end{tikzcd} \]
+Evidently, $\nu_{/\Delta}$ is a valuation on $A$. 
+\end{definition}
+
+\begin{lemma} \label{result:support-of-quotient-valuation}
+Let $A$ be a ring, $\nu : A \to \Gamma \cup \{\infty\}$ a valuation on $A$ and $\Delta$ a convex subgroup of $\Gamma$. Then $\supp(\nu) = \supp(\nu_{/\Delta})$. 
+\end{lemma}
+
+\begin{proof}
+This is clear from construction. 
+\end{proof}
+
+% DEFINe restricted valuations, characteristic subgroups, etc
+
+\section{Valuations on a field}
+
+\begin{lemma}
+\label{result:valuation-field-valuation-subring}
+Let $K$ be a field and $\nu$ a valuation on $K$. Then $K^{\nu \geq 0}$ is a valuation subring of $K$ and $K^{\nu \gneq 0}$ is its maximal ideal. In particular, the group of units of $K^{\nu \geq 0}$ is precisely the set
+\[ \{ x \in K : \nu(x) = 0 \}. \]
+\end{lemma}
+
+\begin{proof}
+We know already from \cref{result:positive-ring} that $A = K^{\nu \geq 0}$ is a subrbing of $K$ and that $\mathfrak{m} = K^{\nu \gneq 0}$ is an ideal of $A$. If $x \in K^\times$, it follows from \cref{result:valuation-of-inverse} that either $\nu(x) \geq 0$ or $\nu(x^{-1}) \geq 0$. In other words, $A$ satisfies \cref{enumi:element-or-inverse} of \cref{result:characterizing-valuation-subrings}, so it is a valuation subring of $K$. Now note that $x$ is a unit in $A$ if and only if both $x$ and $x^{-1}$ are in $A$, if and only if $\nu(x) = 0$. Thus $\mathfrak{m}$ is precisely the set of non-units of $A$, so it is the maximal ideal of $A$. 
+\end{proof}
+
+\begin{lemma}
+Let $K$ be a field and $\nu : K \to \Gamma \cup \{\infty\}$ a valuation on $K$. Then $\Gamma_\nu = \nu(K^\times)$. 
+\end{lemma}
+
+\begin{proof}
+Since $K$ is a field and $\supp(\nu)$ is a prime ideal of $K$ by \cref{result:support-valuation-prime}, it must be that $\supp(\nu) = 0$. Thus $\Gamma_\nu$ is the subgroup of $\Gamma$ generated by $\nu(K^\times)$. But note that $\nu : K^\times \to \Gamma$ is a group homomorphism, so $\nu(K^\times)$ is already a subgroup of $\Gamma$. 
+\end{proof}
+
+\begin{lemma}
+Let $K$ be a field and $A$ a valuation subring of $K$. Then there exists a totally ordered abelian group $\Gamma$ and a surjective valuation $\nu : K \to \Gamma \cup \{\infty\}$ such that $K^{\nu \geq 0} = A$. 
+\end{lemma}
+
+\begin{proof}
+Define $\Gamma = K^\times/A^\times$ with group law written additively. For any $x \in K^\times$, we let $\nu(x)$ denote its class in $\Gamma$. Then $\nu : K^\times \to \Gamma$ is a group homomorphism (it transforms multiplication into addition, and $\nu(a) = 0$ for any $a \in A^\times$). 
+
+Observe that $A \setminus \{0\}$ is a multiplicative submonoid of $K^\times$, so its image $S = \nu(A \setminus \{0\})$ in $\Gamma$ is a submonoid of $\Gamma$. For any $x \in K^\times$, observe that $\nu(x) \in S$ if and only if $x \in A \setminus \{0\}$. Indeed, the ``if'' direction is clear, and conversely, if $\nu(x) \in S$, then there exists some $u \in A^\times$ such that $ux \in A \setminus \{0\}$. But then $x = u^{-1}ux \in A \setminus \{0\}$ also. Let us show that $S$ satisfies the conditions of \dref[ordered-groups]{result:orders-and-submonoids}. Suppose we have some $x \in A \setminus \{0\}$ such that $-\nu(x) \in S$. Then $-\nu(x) = \nu(x^{-1})$, so $x^{-1} \in A \setminus \{0\}$. In other words, $x \in A^\times$, so $\nu(x) = 0$. This proves that $S$ satisfies \dref[ordered-groups]{enumi:antisymmetry}. Now \dref[ordered-groups]{enumi:totality} follows immediately from the definition of valuation subrings.  Thus $S$ is the set of positive elements for a unique translation invariant total order on $\Gamma$. 
+
+We now extend $\nu$ to a function $K \to \Gamma \cup \{\infty\}$ by setting $\nu(0) = \infty$. We need to show that this is a valuation. We already know that $\nu$ is a group homomorphism when restricted to $K^\times$. Since $\nu(x \cdot 0) = \nu(0) = \infty$ for all $x \in K$, it follows that $\nu$ behaves well with respect to multiplication. 
+
+To see that it behaves well with respect to addition, suppose we have $a, b \in K$ and let us assume without loss of generality that $\nu(a) \geq \nu(b)$. We want to show that $\nu(a+b) \geq \nu(b)$. If either $a = 0$ or $b = 0$, then we have $\nu(a+b) = \nu(b)$ and we are done. If $a + b = 0$, we are again done immediately. 
+
+So we can assume that $a, b$ and $a+b$ are all nonzero. Since $\nu(a) \geq \nu(b)$, we see that $\nu(a/b) \in A \setminus \{0\}$. Moreover, $(a+b)/b$ is nonzero since $a+b$ is nonzero, and
+\[ \frac{a + b}{b} = \frac{a}{b} + 1 \]
+is an element of $A$, since $a/b$ is. This means that 
+\[ \nu(a+b) - \nu(b) = \nu((a+b)/b) \geq 0, \]
+completing the proof that $\nu$ is a valuation. It is clear from construction that $K^{\nu \geq 0} = A$. 
+\end{proof}
+
+\begin{lemma}
+\label{result:image-of-group-of-units-of-overring}
+Let $K$ be a field and $\nu : A \to \Gamma \cup \{\infty\}$ a valuation on $K$. Let $A = K^{\nu \geq 0}$ and let $B$ be a subring of $K$ containing $A$. If $x \in K^\times$ is such that $\nu(x) \in \nu(B^\times)$, then in fact $x \in B^\times$. 
+\end{lemma}
+
+\begin{proof}
+Since $\nu(x) \in \nu(B^\times)$, there exists $y \in B^\times$ such that $\nu(x) = \nu(y)$. Then $\nu(x/y) = \nu(x) - \nu(y) = 0$, so $x/y \in A^\times$ by \cref{result:valuation-field-valuation-subring}. Thus $x/y \in B^\times$ also, so $x = y(x/y) \in B^\times$. 
+\end{proof}
+
+\begin{lemma}
+\label{result:convex-subgroups-and-overrings}
+\reference{\cite[VI.4, proposition 4]{bourbaki_ac}}
+Let $K$ be a field and $\nu : K \to \Gamma \cup \{\infty\}$ a surjective valuation on $K$. Let $A = K^{\nu \geq 0}$. For a convex subgroup $\Delta \subseteq \Gamma$, we have the quotient valuation $\nu_{/\Delta}$ (cf. \cref{definition:quotient-valuation}), and 
+\[ B_\Delta = \{ x \in K \st \nu_{/\Delta}(x) \geq 0 \} \]
+is a subring of $K$ containing $A$. Moreover, the map $\Delta \mapsto B_\Delta$ is an order isomorphism from $\Convex(\Gamma)$ onto the set of subrings of $K$ containing $A$ ordered by inclusion. Its inverse maps a subring $B$ of $K$ containing $A$ to the convex subgroup $\Delta_B = \nu(B^\times)$. 
+\end{lemma}
+
+\begin{proof}
+Since $\nu_{/\Delta}$ is a valuation on $K$, we know that $B_\Delta$ is a subring of $K$ by \cref{result:positive-ring}, and it contains $A$ because the quotient map $\Gamma \to \Gamma/\Delta$ is order preserving (cf. \dref[ordered-groups]{result:quotient-order}). If $\Delta' \subseteq \Delta$ are two convex subgroups of $\Gamma$, then $\Delta/\Delta'$ is a convex subgroup of $\Gamma/\Delta'$ (cf. \dref[ordered-groups]{result:quotient-convex-subgroups}), so the quotient map 
+\[ \begin{tikzcd} \Gamma/\Delta' \ar{r} & \Gamma/\Delta = (\Gamma/\Delta')/(\Delta/\Delta') \end{tikzcd} \] is also order preserving. Thus for any $x \in K$ we see that $\nu_{/\Delta'}(x) \geq  0$ implies $\nu_{/\Delta}(x) \geq 0$. In other words, we have $B_{\Delta'} \subseteq B_\Delta$, proving that $\Delta \mapsto B_\Delta$ is order preserving. 
+
+To see that it is injective, let us show that $\Delta$ coincides with $\nu(B_\Delta^\times)$ and can therefore be recovered from the subring $B_\Delta$. Since $\nu$ is surjective, every element of $\Gamma$ can be written as $\nu(x)$ for some $x \in K^\times$. Then $\nu(x) \in \nu(B_\Delta^\times)$ if and only if $x \in B_\Delta^\times$ (cf.  \cref{result:image-of-group-of-units-of-overring}), if and only if $\nu_{/\Delta}(x) = 0$ (cf. \cref{result:valuation-field-valuation-subring} applied to the quotient valuation $\nu_{/\Delta}$), if and only if $\nu(x) \in \ker(\Gamma \to \Gamma/\Delta) = \Delta$. Thus $\Delta = \nu(B_\Delta^\times)$. 
+
+Thus $\Delta \mapsto B_\Delta$ is injective and order preserving. Since $\Convex(\Gamma)$ is totally ordered by inclusion (cf. \dref[ordered-groups]{result:convex-subgroups-totally-ordered}), we see that $\Delta \mapsto \Delta_B$ is an order embedding (cf. \dref[ordered-groups]{result:order-embedding-total-order}). It thus suffices to prove that $\Delta \mapsto B_\Delta$ it is surjective.
+
+Suppose $B$ is a subring of $K$ containing $A$. Since $\nu : K^\times \to \Gamma$ is a group homomorphism and $B^\times$ is a subgroup of $K^\times$, we see immediately that $\Delta_B = \nu(B^\times)$ is a subgroup of $\Gamma$. To show that $\Delta_B$ is convex, we use the criterion of \dref[ordered-groups]{result:convexity-positive-sufficient}. Suppose we have $x \in B^\times$ and $\gamma \in \Gamma$ such that 
+\[ \nu(x) \geq \gamma \geq 0. \]
+Since $\nu : K^\times \to \Gamma$ is surjective, there exists $y \in K^\times$ such that $\nu(y) = \gamma$. Notice that $\nu(y) \geq 0$, so $y \in A \subseteq B$. Since $x \in B^\times$, we also have $y/x \in B$. But $\nu(x/y) = \nu(x) - \nu(y) \geq 0$, so $x/y \in A \subseteq B$, so in fact we have $y/x \in B^\times$. Thus $y = (y/x)x \in B^\times$, showing that $\gamma = \nu(y) \in \Delta_B$. 
+
+To conclude, we must show that $B$ coincides with $B_{\Delta_B} = \{ x \in K : \nu_{/\Delta_B}(x) \geq  0 \}$. They are both valuation subrings of $K$ by  \cref{result:overrings-and-prime-ideals,result:valuation-field-valuation-subring}, so it is sufficient to show that one dominates the other (cf. \cref{result:characterizing-valuation-subrings}). We will show that $B$ dominates $B_{\Delta_B}$. 
+
+Suppose $x \in B_{\Delta_B}$. In other words, $x \in K$ and $\nu_{/\Delta_B}(x) \geq 0$. We know that $x = 0 \in B$, so suppose $x \in K^\times$. Since $\nu_{/\Delta_B}(x) \geq 0$, we see that either $\nu(x) \geq 0$ or $\nu(x) \in \Delta_B = \nu(B^\times)$ (cf. \dref[ordered-groups]{result:quotient-order-positives}). In the former case, we have $x \in A \subseteq B$, and in the latter case, we have $x \in B^\times \subseteq B$ by \cref{result:image-of-group-of-units-of-overring}. Thus $B_{\Delta_B} \subseteq B$. Moreover, note that $x \in B^\times$ if and only if $\nu(x) \in \Delta_B = \nu(B^\times)$ (cf. \cref{result:image-of-group-of-units-of-overring}), if and only if $\nu_{/\Delta_B}(x) = 0$, if and only if $x \in B_{\Delta}^\times$ (cf. \cref{result:valuation-field-valuation-subring}). Thus $B$ dominates $B_{\Delta_B}$. 
+\end{proof}
+
+\begin{lemma}
+Let $K$ be a field and $\nu : K \to \Gamma \cup \{\infty\}$ a surjective valuation on $K$. Let $A = K^{\nu \geq 0}$. For a convex subgroup $\Delta \subseteq \Gamma$, we have the quotient valuation $\nu_{/\Delta}$ (cf. \cref{definition:quotient-valuation}) and
+\[ \mathfrak{p}_\Delta = \{ x \in K : \nu_{/\Delta}(x) \gneq 0 \} \]
+is a prime ideal of $A$. Moreover, the map $\Delta \mapsto \mathfrak{p}_\Delta$ defines an inclusion reversing bijection from $\Convex(\Gamma)$ onto $\Spec(A)$. The inclusion reversing inverse is given by mapping a prime ideal $\mathfrak{p}$ to the convex subgroup $\Delta_{\mathfrak{p}} = \nu(A_{\mathfrak{p}}^\times)$.
+\end{lemma}
+
+\begin{proof}
+Combine \cref{result:overrings-and-prime-ideals,result:convex-subgroups-and-overrings}.
+\end{proof}
+
+\section{Equivalence of valuations}
+
+\begin{definition}
+\label{definition:equivalent-valuations}
+Let $A$ be a ring and suppose $\nu : A \to \Gamma \cup \{\infty\}$ and $\nu' : A \to \Gamma' \cup \{\infty\}$ are two valuations on $A$. Then $\nu$ and $\nu'$ are \emph{equivalent} if, for all $a, b \in A$, we have $\nu(a) \geq \nu(b)$ if and only if $\nu'(a) \geq \nu'(b)$. 
+\end{definition}
+
+\begin{remark}
+The collection of all valuations on a ring $A$ forms a proper class, since the cardinality of the totally ordered abelian group in which a valuation takes values can be arbitrarily large. Evidently \cref{definition:equivalent-valuations} defines an equivalence relation on this class. In any case, we will see momentarily that the collection of equivalence classes is a set. 
+\end{remark}
+
+\begin{lemma}
+Let $A$ be a ring and suppose $\nu : A \to \Gamma \cup \{\infty\}$ and $\nu' : A \to \Gamma' \cup \{\infty\}$ are two valuations on $A$. Then the following are equivalent. 
+\begin{enumerate}[label=(\alph{*})]
+\item $\nu$ and $\nu'$ are equivalent. 
+\item There exists an order preserving isomorphism $f : \Gamma_\nu \to \Gamma_{\nu'}$ such that $f(\nu(a)) = \nu'(a)$ for all $a \in A$.
+\item We have $\supp(\nu) = \supp(\nu')$ and $\kappa(\nu)^{\nu \geq 0} = \kappa(\nu')^{\nu' \geq 0}$. 
+\end{enumerate}
+\end{lemma}
+
+\section{Valuation spectrum}
+
+\begin{definition}
+Let $A$ be a ring. The \emph{valuation spectrum} of $A$, denoted $\Spv(A)$, is the set of pairs $(\mathfrak{p},B)$ where $\mathfrak{p}$ is a prime ideal in $A$ and $B$ is a valuation subring of $\Frac(A/\mathfrak{p})$. If $x = (\mathfrak{p}, B)$ is an element of $\Spv(A)$, we write $\supp(x)$ for the prime ideal $\mathfrak{p}$, $\kappa(x)$ for the field $\Frac(A/\mathfrak{p}(x))$, and $\kappa(x)^+$ for the valuation subring $B$. 
+\end{definition}
+
+\begin{lemma}
+Let $A$ be a ring and $\nu$ a valuation on $A$. Then $\nu$ defines a unique point $x_\nu \in \Spv(A)$ such that $\supp(\nu) = \supp(x_\nu)$ and $\kappa(x_\nu) = \Frac(A/\supp(\nu))^+$. 
+\end{lemma}
+
+% INCOMPLETE
+
+\begin{lemma}
+Let $A$ be a ring and $x \in \Spv(A)$. There exists a valuation $\nu$ on $A$ such that $\supp(x) = \supp(\nu)$ and $\kappa^+(x) = \Frac(A/\supp(\nu))^+$. 
+\end{lemma}
+
+\begin{proof}
+Let $\Gamma = \kappa(x)^\times / \kappa^+(x)^\times$ with group law written additively. Then $\Gamma$ is naturally a totally ordered abelian group \stackstag{00ID}. Consider the function $\bar{\nu} : \kappa(x) \to \Gamma \cup \{\infty\}$ where $\bar{\nu}(0) = \infty$ and $\bar{\nu}(x)$ is the class of $x$ in $\Gamma$ for all $x \in \kappa(x)^\times$. Then $\bar{\nu}$ is a valuation on $\kappa(x)$ such that
+\[ \kappa^+(x) = \kappa(x)^+ := \{ x \in \kappa(x) : \bar{\nu}(x) \geq 0 \}.  \]
+% CHECK this
+
+We denote by $\nu$ the composite $A \to \kappa(x) \to \Gamma \cup \{\infty\}$. This is a valuation on $A$ by \cref{result:pullback-valuation}. Clearly $\supp(\nu) = \supp(x)$ and $\kappa(x) = \Frac(A/\supp(\nu))$, and the unique extension of $\nu$ to $\kappa(x)$ as in \cref{result:valuation-unique-extension-residue-field} must be $\bar{\nu}$, so 
+\[ \Frac(A/\supp(\nu))^+ = \kappa(x)^+ = \kappa^+(x). \qedhere \]
+\end{proof}
+
+\end{document}

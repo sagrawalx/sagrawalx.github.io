@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<header>
+<h1>{{ page.title }} <span class="date">({{ page.date | date: "%Y-%m-%d" }})</span></h1>
+</header>
+
+<article>
+{{ content }}
+</article>
+
+<footer>
+<br/>
+{% include tag-lister.html content=page.tags %}
+</footer>

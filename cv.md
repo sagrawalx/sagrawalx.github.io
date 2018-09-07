@@ -1,0 +1,117 @@
+---
+layout: nonav
+title: CV
+---
+
+<img class="sidepic" src="{{ site.baseurl }}/img/hello-bunny.svg"/>
+
+# Basic information
+
+* Email: <span class="email">@</span>
+* Website: [math.berkeley.edu/~sagrawal/](https://math.berkeley.edu/~sagrawal/)
+* Citizenship: USA
+
+# Employment.
+
+* Colorado College. Visiting Assistant Professor (present).
+
+# Education
+
+* UC Berkeley. PhD in mathematics (2018).
+    * Dissertation: Deformations of overconvergent isocrystals on the projective line.
+    * Advisor: David Nadler.
+* UC San Diego. BS in mathematics, summa cum laude (2011).
+    * Minors in computer science and general biology.
+    * GPA: 3.96.
+
+# Papers
+
+{% include papers.html %}
+
+# Talks
+
+* Rigid local systems and rigid isocrystals (June 2018). Number theory seminar, UC San Diego.
+* Rigidity: Local systems and beyond (February 2018). Fearless Fridays, Colorado College.
+* A Smörgåsbord of Arithmetic Geometry (February 2018). Fearless Fridays, Colorado College.
+* Tilting (April 2016). Rigid analytic geometry seminar, UC Berkeley.
+* Introduction to D-modules (February 2015). Geometric representation theory seminar, UC Berkeley.
+* What is an arithmetic D-module? (April 2014). Geometric representation theory seminar, UC Berkeley.
+* $\ell$-adic representations (October 2013). Student number theory seminar, UC Berkeley.
+* Cotangent complex (October 2013). Geometric representation theory seminar, UC Berkeley.
+* Grothendieck ring of varieties (February 2013). Student algebraic geometry seminar, UC Berkeley.
+* Jacobians (November 2012). Student arithmetic geometry seminar, UC Berkeley.
+* Derived categories (October 2012). Student algebraic geometry seminar, UC Berkeley.
+
+# Research support
+
+* Graduate student researcher (Spring 2018). NSF RTG grant DMS-1646385.
+* Chateaubriand fellowship (with Christine Huyghe, 2016-2017). Embassy of France.
+* Summer grant (2012, 2013, 2016). UC Berkeley.
+* Graduate student researcher (Spring 2015). FRG: Collaborative Research: In and Around Theory X.
+* Chancellor's research scholarship (2009). UC San Diego.
+
+# Teaching
+
+## Primary instructor
+
+* UC Berkeley
+    * Linear algebra (Summer 2017).
+    * Analysis (Summer 2015).
+    * Discrete mathematics (Summer 2014).
+
+## Teaching assistant
+
+* UC Berkeley
+    * Analytic geometry and calculus (Fall 2017). Instructor: Alexander Paulin.
+    * Linear algebra and differential equations (Spring 2016). Instructor: Xinyi Yuan.
+    * Linear algebra (Fall 2015). Instructor: Olga Holtz.
+    * Discrete mathematics (Fall 2014). Instructor: Zvezdalina Stankova.
+    * Linear algebra (Spring 2014). Instructor: Ken Ribet.
+    * Calculus 1A (Fall 2013). Instructor: John Steel.
+    * Linear algebra and differential equations (Spring 2013). Instructor: Constantin Teleman.
+    * Calculus 1A (Fall 2012). Instructor: Solobodan Simić.
+    * Linear algebra and differential equations (Spring 2012). Instructor: Fraydoun Rezakhanlou.
+    * Calculus 1A (Fall 2011). Instructor: Ian Agol.
+* UC San Diego
+    * Calculus (Winter 2011). Instructor: Jiří Lebl.
+    * Calculus (Fall 2010). Instructor: Jacques Verstraete.
+
+## Grader
+
+* UC San Diego
+    * Honors vector calculus (Spring 2011). Instructor: John Eggers.
+    * Honors vector calculus (Spring 2010). Instructor: John Eggers.
+    * Honors vector calculus (Spring 2009). Instructor: Jeff Rabin.
+    * Honors multivariable calculus (Winter 2009). Instructor: Jeff Rabin.
+
+## Mentor
+
+* Directed reading program with Frank Dai (Fall 2017). Topic: Class field theory.
+* Directed reading program with Alice Zhao (Fall 2014). Topic: Elliptic curves.
+
+# Conferences
+
+* RTG Research Workshop (May 2018). University of California, Berkeley.
+* Old and new themes in $p$-adic cohomology (April 2018). University of Arkansas.
+* Hot Topics: The Homological Conjectures (March 2018). MSRI, Berkeley.
+* D-modules, geometric representation theory, and arithmetic applications (December 2017). Oxford University.
+    * Poster: Rigid overconvergent isocrystals on $\mathbb{P}^1$.
+* $p$-adic analytic geometry and differential equations (March 2017). CIRM, Luminy.
+* Nonarchimedean geometry and its applications (June 2015). University of Michigan, Ann Arbor.
+* New geometric methods in number theory and automorphic forms (August 2014). MSRI, Berkeley.
+* Perfectoid spaces and their applications (Februrary 2014). MSRI, Berkeley.
+* Geometric methods in number theory (July 2013). MSRI, Berkeley.
+* Homotopical methods in algebraic geometry (May 2013). University of Southern California.
+* Bridgeland stability workshop (March 2013). University of Illinois, Chicago.
+
+# Languages
+
+* Fluent: English, Hindi
+* Intermediate: French, Japanese
+
+# Awards
+
+* Muir scholar (2011). John Muir College, UC San Diego.
+* Honors with highest distinction (2011). Department of Mathematics, UC San Diego.
+* Dean's award for excellence (2009). Division of Physical Sciences, UC San Diego.
+* Regents scholarship (2007-2011). UC San Diego.
