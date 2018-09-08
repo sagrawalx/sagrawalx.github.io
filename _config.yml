@@ -1,5 +1,7 @@
 permalink: pretty
-plugins: ["jekyll-scholar"]
+plugins: ["jekyll-scholar", "jekyll-pandoc"]
+
+markdown: Pandoc
 
 scholar:
   style: css/custom.csl

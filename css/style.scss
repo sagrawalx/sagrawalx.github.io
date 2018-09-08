@@ -155,14 +155,16 @@ main {
         padding-left: 2.5em;
     }
 
-    .footnote {
+    .footnoteRef {
         vertical-align: super;
         font-size: 0.6em;
     }
 
-    div.footnotes {
+    hr {
         margin-top: 1em;
-        border-top: 1px solid $link;
+        border: 0;
+        height: 1px;
+        background: $link;
     }
 }
 
