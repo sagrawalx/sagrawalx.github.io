@@ -23,7 +23,7 @@ That said, it seems to be well understood that there is no purely orthographic c
 
 Second, there is what might be called *diachronic schwa deletion*. This involves comparing modern Hindustani to its ancestral languages and noting that certain schwas that existed in the phonemic representations of words in these ancestral languages have been silenced in modern Hindustani. For example, the word /hatʰ/ ("hand") in modern Hindustani descends from a root that contained a final schwa (cf. the root *hasta* in Sanskrit).
 
-Diachronic phenomena are always difficult to explain, due to an absence of completely accurate phonological data prior to the era of audio recordings. That said, it has been suggested that word-final schwas began to be systematically deleted at some point in the transition between the 1600s and today [@misra, section 6.3]. In fact, more seems to be true: not only word-final but morpheme-final schwas seem to have disappeared at some point.
+Diachronic phenomena are always difficult to explain, due to an absence of completely accurate phonological data prior to the era of audio recordings. That said, it has been suggested that word-final schwas began to be systematically deleted at some point in the transition between the 1600s and today {% cite misra --label section --locator 6.3 --file linguistics %}. In fact, more seems to be true: not only word-final but morpheme-final schwas seem to have disappeared at some point.
 
 ## Morphophonemic schwa deletion
 
@@ -89,3 +89,5 @@ The situation is also ambiguous when it comes to diaphonemic schwa deletion.
 A final observation is that orthographic schwa deletion occasionally occurs when none of the factors described above would suffice as adequate explanations. For example, the morpheme /ət͡ʃɾəd͡ʒ/ ("astonishment") is consistently transcribed in Nagari as अचरज, without marking the absent medial schwa. An etymology deriving it from Sanskrit *āścarya* may explain why the /t͡ʃ/ in /ət͡ʃɾəd͡ʒ/ should be written with a full consonant symbol, but /ət͡ʃ/ in Hindustani and *āśca* in Sanskrit are not morphemes as far as I know, so this does not seem to be a particular case of the diachronic morpheme-final schwa deletion rule I've described above. It may be that there are other diachronic schwa deletion rules that can be formalized, or it may just be that this is an orthographic anomaly. Ultimately, orthographic schwa deletion seems to be an amalgam resulting from from some diachronic etymological factors, some synchronic morphophonemic factors, and some idiosyncratic factors depending on the personal preferences of the scribe.  
 
 # References
+
+{% bibliography --cited --file linguistics %}

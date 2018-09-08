@@ -1,4 +1,9 @@
 permalink: pretty
+plugins: ["jekyll-scholar"]
+
+scholar:
+  style: css/custom.csl
+  bibliography_template: bib
 
 exclude: ["README.md"]
 include: [".nojekyll"]

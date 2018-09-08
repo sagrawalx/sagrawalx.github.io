@@ -28,7 +28,7 @@
       <name> Brenton M. Wiernik</name>
       <email>zotero@wiernik.org</email>
     </contributor>
-    <category citation-format="author-date"/>
+    <category citation-format="author"/>
     <category field="psychology"/>
     <category field="generic-base"/>
     <updated>2016-09-28T13:09:49+00:00</updated>
@@ -99,9 +99,12 @@
   </macro>
   <macro name="author-short">
     <choose>
-      <if type="patent" variable="number" match="all">
-        <text macro="patent-number"/>
+      <if variable="shortauthor">
+        <text variable="shortauthor"/>
       </if>
+      <else-if type="patent" variable="number" match="all">
+        <text macro="patent-number"/>
+      </else-if>
       <else>
         <names variable="author">
           <name form="short" and="symbol" delimiter=", " initialize-with=". "/>
@@ -152,58 +155,7 @@
     </group>
   </macro>
   <macro name="access">
-    <choose>
-      <if type="thesis report" match="any">
-        <choose>
-          <if variable="DOI" match="any">
-            <text variable="DOI" prefix="https://doi.org/"/>
-          </if>
-          <else-if variable="URL" match="any">
-            <group>
-              <text term="retrieved" text-case="capitalize-first" suffix=" "/>
-              <text term="from" suffix=" "/>
-              <text variable="URL"/>
-            </group>
-          </else-if>
-          <else-if variable="archive" match="any">
-            <group>
-              <text term="retrieved" text-case="capitalize-first" suffix=" "/>
-              <text term="from" suffix=" "/>
-              <text variable="archive" suffix="."/>
-              <text variable="archive_location" prefix=" (" suffix=")"/>
-            </group>
-          </else-if>
-        </choose>
-      </if>
-      <else>
-        <choose>
-          <if variable="DOI">
-            <text variable="DOI" prefix="https://doi.org/"/>
-          </if>
-          <else>
-            <choose>
-              <if type="post post-weblog webpage" match="any">
-                <group delimiter=" ">
-                  <text term="retrieved" text-case="capitalize-first" suffix=" "/>
-                  <group>
-                    <date variable="accessed" form="text" suffix=", "/>
-                  </group>
-                  <text term="from"/>
-                  <text variable="URL"/>
-                </group>
-              </if>
-              <else>
-                <group>
-                  <text term="retrieved" text-case="capitalize-first" suffix=" "/>
-                  <text term="from" suffix=" "/>
-                  <text variable="URL"/>
-                </group>
-              </else>
-            </choose>
-          </else>
-        </choose>
-      </else>
-    </choose>
+
   </macro>
   <macro name="title">
     <choose>
@@ -658,7 +610,6 @@
     <layout prefix="(" suffix=")" delimiter="; ">
       <group delimiter=", ">
         <text macro="author-short"/>
-        <text macro="issued-year"/>
         <text macro="citation-locator"/>
       </group>
     </layout>
