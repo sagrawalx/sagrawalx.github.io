@@ -4,14 +4,18 @@ permalink: misc/
 title: Miscellaneous
 ---
 
+# Cool things
+
 Here are a few things I like and/or find useful.
 
 * Watterson's *Calvin and Hobbes*
+* [Drawabox](http://drawabox.com/)
 * [Ginsberg's "Howl"](https://www.poetryfoundation.org/poems/49303/howl)
 * बच्चन की "मधुशाला"
 * [A Desertful of Roses](http://www.columbia.edu/itc/mealac/pritchett/00ghalib/)
 * [Chomsky.info](https://chomsky.info/)
-* [हिंदी शब्दसागर](http://dsal.uchicago.edu/dictionaries/dasa-hindi/)
+* [Digital Dictionaries of South Asia](http://dsal.uchicago.edu/dictionaries/)
+* [jisho.org](https://jisho.org/)
 
 # About the website
 
