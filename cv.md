@@ -17,11 +17,11 @@ nonav: true
 
 # Education
 
-* UC Berkeley. PhD in mathematics (2018).
-    * Dissertation: Deformations of overconvergent isocrystals on the projective line.
+* UC Berkeley. PhD in Mathematics (2018).
+    * Thesis: Deformations of overconvergent isocrystals on the projective line. [eScholarship:1sp926n0](https://escholarship.org/uc/item/1sp926n0).
     * Advisor: David Nadler.
-* UC San Diego. BS in mathematics, summa cum laude (2011).
-    * Minors in computer science and general biology.
+* UC San Diego. BS in Mathematics, summa cum laude (2011).
+    * Minors: Computer Science, General Biology.
     * GPA: 3.96.
 
 # Papers
