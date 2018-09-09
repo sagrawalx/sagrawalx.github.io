@@ -28,7 +28,7 @@ body {
     font-size: 16px;
     font-family: $main-font, sans-serif;
     font-weight: 300;
-    line-height: 1.5;
+    line-height: 1.7;
     color: $text;
 
     min-width: 30em;
@@ -168,9 +168,9 @@ main {
         padding-left: 2.5em;
     }
 
-    .footnoteRef {
+    .footnoteRef, sup {
         vertical-align: super;
-        font-size: 0.6em;
+        font-size: 0.75em;
     }
 
     hr {
