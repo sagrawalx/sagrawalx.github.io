@@ -1,7 +1,6 @@
 ---
-layout: default
-permalink: misc/
 title: Miscellaneous
+permalink: misc/
 ---
 
 # Cool things

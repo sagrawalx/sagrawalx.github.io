@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Thesis Errata
 ---
 

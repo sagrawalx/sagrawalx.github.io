@@ -1,7 +1,9 @@
 ---
-layout: nonav
+layout: default
 title: Fall 2018, Block 2 — MA220
 bannertext: Fall 2018, Block 2 — MA220
+bannerlink: teaching/fa18-b2_ma220
+nonav: true
 ---
 
 # Overview

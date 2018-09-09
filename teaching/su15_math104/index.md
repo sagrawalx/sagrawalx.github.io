@@ -1,7 +1,8 @@
 ---
-layout: nonav
 title: Summer 2015 — Math 104
 bannertext: Summer 2015 — Math 104
+bannerlink: teaching/su15_math104
+nonav: true
 ---
 
 # Overview

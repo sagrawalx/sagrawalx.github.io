@@ -1,7 +1,8 @@
 ---
-layout: nonav
-title: Fall 2018, Block 2 — MA220 — Syllabus
+layout: default
 bannertext: Fall 2018, Block 2 — MA220
+bannerlink: teaching/fa18-b2_ma220
+nonav: true
 ---
 
 # Syllabus
@@ -16,7 +17,7 @@ bannertext: Fall 2018, Block 2 — MA220
 
 MA220 is an introduction to *linear algebra*, the field of mathematics that seeks to understand the geometry of lines, planes, and hyperplanes, and of the transformations between them. It's an elegant theory in an of itself, but it also has remarkable applications that span across wide expanses of human knowledge. In this class, we'll explore both the theory of linear algebra and the applications it finds across many disciplines.
 
-We'll be following the 3rd edition of *Linear Algebra* by Jim Hefferon, available freely [online](http://joshua.smcvt.edu/linearalgebra/). The goal will be to get through Chapter 5, Section II (skipping some sections along the way). 
+We'll be following the 3rd edition of *Linear Algebra* by Jim Hefferon, available freely [online](http://joshua.smcvt.edu/linearalgebra/). The goal will be to get through Chapter 5, Section II (skipping some sections along the way).
 
 ## Course Structure
 

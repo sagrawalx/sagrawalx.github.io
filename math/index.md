@@ -1,7 +1,6 @@
 ---
-layout: default
-permalink: math/
 title: Mathematics
+permalink: math/
 ---
 
 # Overview

@@ -1,7 +1,8 @@
 ---
-layout: nonav
-title: Fall 2017 — Math 16A
-bannertext: Fall 2017 — Math 16A
+title: Summer 2017 — Math 110
+bannertext: Summer 2017 — Math 110
+bannerlink: teaching/su17_math110
+nonav: true
 ---
 
 # Overview

@@ -1,7 +1,6 @@
 ---
-layout: default
-permalink: teaching/
 title: Teaching
+permalink: teaching/
 ---
 
 # Currently Teaching

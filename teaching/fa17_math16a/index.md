@@ -1,7 +1,8 @@
 ---
-layout: nonav
 title: Fall 2017 — Math 16A
 bannertext: Fall 2017 — Math 16A
+bannerlink: teaching/fa17_math16a
+nonav: true
 ---
 
 # Overview

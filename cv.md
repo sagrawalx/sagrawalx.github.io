@@ -1,6 +1,6 @@
 ---
-layout: nonav
 title: CV
+nonav: true
 ---
 
 <img class="sidepic" src="{{ site.baseurl }}/img/hello-bunny.svg" title="Hello!"/>

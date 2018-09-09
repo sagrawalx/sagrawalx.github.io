@@ -9,3 +9,10 @@ scholar:
 
 exclude: ["README.md", "jekgit.sh"]
 include: [".nojekyll"]
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
