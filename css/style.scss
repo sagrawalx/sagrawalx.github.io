@@ -7,8 +7,16 @@ $link: #777;
 $banner: #777;
 $accent: #339999;
 
-$banner-font: "Lobster Two";
+$banner-font: "Grand Hotel";
 $main-font: "Noto Sans";
+
+@function str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search);
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+    @return $string;
+}
 
 $banner-font-url: str-replace($banner-font, ' ', '+');
 $main-font-url: str-replace($main-font, ' ', '+');
@@ -77,7 +85,7 @@ body {
     padding-top: 1em;
 
     a, a:visited {
-        font-size: 2em;
+        font-size: 2.25em;
         color: $banner;
         font-weight: normal;
         font-family: $banner-font, cursive;

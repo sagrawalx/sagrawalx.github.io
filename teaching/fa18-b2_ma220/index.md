@@ -8,7 +8,10 @@ nonav: true
 
 # Overview
 
-* [Course syllabus](syllabus)
+* Class: Monday through Friday, 9:15-11:45.
+* Office Hours: TBA.
+* [Course syllabus](syllabus).
+* Textbook: Hefferon, *Linear Algebra*, 3rd edition. Available [online](http://joshua.smcvt.edu/linearalgebra/).
 
 # Getting help
 
