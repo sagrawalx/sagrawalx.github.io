@@ -86,7 +86,7 @@ title: CV
 
 ## Mentor
 
-* Senior thesis with Zhaopeng Li (2018-2019). 
+* Senior thesis with Zhaopeng Li (2018-2019).
 * Directed reading program with Frank Dai (Fall 2017). Topic: Class field theory.
 * Directed reading program with Alice Zhao (Fall 2014). Topic: Elliptic curves.
 

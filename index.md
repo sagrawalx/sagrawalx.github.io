@@ -7,7 +7,7 @@ title: Home
 
 # About
 
-Hi there! My name is Shishir; sometimes I also introduce myself as Sunny. I am a mathematician at [Colorado College](https://www.coloradocollege.edu/). I study [arithmetic algebraic geometry](math).
+Hi there! My name is Shishir; I also go by Sunny. I am a mathematician at [Colorado College](https://www.coloradocollege.edu/). I study [algebraic and arithmetic geometry](math).
 
 * Email: <span class="email">@</span>
 * [Curriculum vitae](cv)

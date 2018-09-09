@@ -53,6 +53,11 @@ body {
         border-left-color: $light;
     }
 
+    span.blockquote-attribution {
+        display:  block;
+        text-align: right;
+    }
+
     table {
         tr {
             border: 1px solid $light;
@@ -131,7 +136,7 @@ main {
         margin-bottom: 1em;
     }
 
-    article h2 {
+    h3, article h2 {
         font-weight: normal;
         font-style: italic;
     }

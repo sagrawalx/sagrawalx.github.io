@@ -16,11 +16,7 @@ I completed my PhD at UC Berkeley in 2018. My advisor was [David Nadler](https:/
 
 {% include papers.html %}
 
-My dissertation as-submitted is available [here](https://escholarship.org/uc/item/1sp926n0). Here is a list of errors that I am currently aware of:
-
-* In the final paragraph of the abstract, it should read "over an arbitrary ~~associate~~ *associative* algebra."
-
-Please let me know if you find any others!
+My PhD thesis is available [here](https://escholarship.org/uc/item/1sp926n0), and here are some [errata](thesis_errata).
 
 # Miscellaneous
 
