@@ -5,7 +5,9 @@ permalink: teaching/
 
 # Currently Teaching
 
-None
+## Colorado College
+
+* Fall 2018, Block 2. MA220 - Linear Algebra. 
 
 # Previously Taught
 

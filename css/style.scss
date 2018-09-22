@@ -2,6 +2,7 @@
 ---
 
 $light: #eee;
+$less-light: #ddd;
 $text: #444;
 $link: #777;
 $banner: #777;
@@ -67,16 +68,17 @@ body {
     }
 
     table {
-        tr {
-            border: 1px solid $light;
-        }
         th, td {
-            border: 1px solid $light;
+            border: 1px solid $less-light;
             padding: 0.5em;
         }
 
         th {
             background-color: $light;
+        }
+        td.subheading {
+            background-color: $light;
+            font-style: italic;
         }
     }
 }
@@ -147,6 +149,8 @@ main {
     h3, article h2 {
         font-weight: normal;
         font-style: italic;
+        margin-top: 1em;
+        margin-bottom: 1em;
     }
 
     p {
@@ -177,7 +181,7 @@ main {
         margin-top: 1em;
         border: 0;
         height: 1px;
-        background: $link;
+        background: $less-light;
     }
 }
 

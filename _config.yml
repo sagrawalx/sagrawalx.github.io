@@ -1,4 +1,3 @@
-permalink: pretty
 plugins: ["jekyll-scholar", "jekyll-pandoc"]
 
 markdown: Pandoc
