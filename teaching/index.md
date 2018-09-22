@@ -7,7 +7,7 @@ permalink: teaching/
 
 ## Colorado College
 
-* Fall 2018, Block 2. MA220 - Linear Algebra. 
+* Fall 2018, Block 2. [MA220 - Linear Algebra](fa18-b2_ma220). 
 
 # Previously Taught
 
