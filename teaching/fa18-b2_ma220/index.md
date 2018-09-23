@@ -16,7 +16,7 @@ nonav: true
 * Textbook: Hefferon, *Linear Algebra*, 3rd edition.
     * Textbook and solutions are available <a href="http://joshua.smcvt.edu/linearalgebra/" target="_blank">online</a>.
     * See also: a running list of <a href="errata.pdf" target="_blank">errata</a>.
-* For help outside of class, see below for Sunny's office hours (in Tutt Science 234) and for problem sessions with Haley and Bob. Also, check the <a href="https://www.coloradocollege.edu/offices/colketcenter/qrc/blocktutorschedule/" target="_blank">tutoring schedule for the QRC</a>.
+* For help outside of class, see below for Sunny's office hours (in Tutt Science 234) and for problem sessions with Haley (TBA) and Bob. Also, check the <a href="https://www.coloradocollege.edu/offices/colketcenter/qrc/blocktutorschedule/" target="_blank">tutoring schedule for the QRC</a>.
 * <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqMGdi8dt1oH8L9OO7VTuROhgXO0MhDM1erB9dlj36EZs_ww/viewform" target="_blank">Reading assignment submission form</a>.
 
 # Calendar
