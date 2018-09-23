@@ -25,7 +25,7 @@ Students explaining concepts to each other is a key component of successful educ
 
 ## Course Mechanics
 
-On the course [webpage](../), you'll find a calendar that looks like this:
+On the course [webpage](/teaching/fa18-b2_ma220), you'll find a calendar that looks like this:
 
 <table style="width: 100%">
 <tr>
@@ -101,9 +101,9 @@ Here are some details about each of the components of your grade.
 
 * Every reading assignment you submit is worth up to 2 points: 1 for the question, 1 for the exercises. The reading assignments component of your grade will be the total number of points you accumulate in this way, out of a maximum of $2(n-2)$ points, where $n$ is the total number of reading assignments assigned. In other words, you don't need to do submit both things every day to get a perfect score for this component of your grade.
 
-* There will be a short writing assignment towards the beginning of the block. You'll find more details on the [webpage](..).
+* There will be a short writing assignment towards the beginning of the block. You'll find more details on the [webpage](/teaching/fa18-b2_ma220).
 
-* There will be three quizzes during the block. They will take place in the afternoons (see the calendar on the course [webpage](..) for the dates and times). There will be some free response questions, and some true-false questions. No books, notes, or electronic devices will be permitted.
+* There will be three quizzes during the block. They will take place in the afternoons (see the calendar on the course [webpage](/teaching/fa18-b2_ma220) for the dates and times). There will be some free response questions, and some true-false questions. No books, notes, or electronic devices will be permitted.
 
     A day or two after the quiz, I'll block off a few hours in the afternoons for "quiz revisions." During this time, you can come by and meet with me one-on-one to discuss up to 2 of the true-false questions that you left blank. If you convince me that you now fully understand the solution, you'll get points for that question.
 
@@ -113,7 +113,7 @@ Here are some details about each of the components of your grade.
 
     If your score on the final exam is higher than your lowest quiz score, I'll use the final exam score to replace the lowest quiz score.
 
-* On the last day of class, we'll have a poster session. There will be more details on the course [webpage](..).
+* On the last day of class, we'll have a poster session. There will be more details on the course [webpage](/teaching/fa18-b2_ma220).
 
 * You'll get a full score for the participation component of your grade as long as I am able to see that you are putting in a good faith effort to engage with the class. If at any point during the block I think that you might not get a full participation score, I'll reach out and let you know what you need to be doing to get a full participation score.
 
