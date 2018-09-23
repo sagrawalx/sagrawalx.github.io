@@ -230,7 +230,7 @@ Do:
 <td colspan="3">
 Sunny's office hours (12:30–2pm).  
 Problem session with Bob (2–3pm).  
-Sunny's office hours (3-4pm).  
+Sunny's office hours (3–4pm).  
 </td>
 </tr>
 

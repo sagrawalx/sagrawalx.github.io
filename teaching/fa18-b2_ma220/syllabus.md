@@ -7,9 +7,6 @@ nonav: true
 
 # Syllabus
 
-> There is hardly any theory which is more elementary [than linear algebra], in  spite of the fact that generations of professors and textbook writers have obscured its simplicity by preposterous calculations with matrices.  
-> <span class="blockquote-attribution">—Jean Dieudonné</span>
-
 > ... while we expect to get numbers out of the machine, we also expect to take action based on them, and, therefore we need to understand thoroughly what numbers may, or may not, mean. To cite the author's favorite motto, "The purpose of computing is insight, not numbers."  
 > <span class="blockquote-attribution">—Richard Hamming</span>
 
@@ -132,3 +129,7 @@ Please make sure that you are familiar with the [Honor Code](https://www.colorad
 * The structure of this class will require you to be proactive about your learning. If you need help developing good study habits, please ask me for help and I'll be happy to assist you.
 * Reading math can be challenging: you have to read slowly, and pause constantly to ask yourself if you really understood the last sentence you just read.
 * You may quickly find that row reduction is a very tedious process to do by hand. Once you feel confident that you know how to do it by hand, I encourage you to figure out how to get a computer to row reduce matrices for you.
+
+
+> There is hardly any theory which is more elementary [than linear algebra], in  spite of the fact that generations of professors and textbook writers have obscured its simplicity by preposterous calculations with matrices.  
+> <span class="blockquote-attribution">—Jean Dieudonné</span>
