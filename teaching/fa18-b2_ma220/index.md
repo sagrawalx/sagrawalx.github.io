@@ -8,7 +8,7 @@ nonav: true
 
 # Overview
 
-* Class: Monday through Friday, 9:15-11:45, in Tutt Science 229.
+* Class: Monday through Friday, 9:15–11:45, in Tutt Science 229.
 * Instructor: Shishir Agrawal (I also go by Sunny), <span class="email">@</span>.
     * LA: Haley Colgate.
     * Paraprof: Bob Kuo.
@@ -44,8 +44,7 @@ nonav: true
 
 <tr>
 <td colspan="3">
-Sunny's office hours (12:30–2pm).  
-Problem session with Bob (2–3pm).
+Sunny's office hours (12:30–2pm).
 </td>
 </tr>
 
