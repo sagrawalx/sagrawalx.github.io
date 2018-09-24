@@ -14,10 +14,10 @@ nonav: true
     * Paraprof: Bob Kuo.
 * [Course syllabus](syllabus).
 * Textbook: Hefferon, *Linear Algebra*, 3rd edition.
-    * Textbook and solutions are available <a href="http://joshua.smcvt.edu/linearalgebra/" target="_blank">online</a>.
+    * Textbook and solutions are available <a href="http://joshua.smcvt.edu/linearalgebra/" target="_blank">online</a>. <!--_-->
     * See also: a running list of <a href="errata.pdf" target="_blank">errata</a>.
-* For help outside of class, see below for Sunny's office hours (in Tutt Science 234) and for problem sessions with Haley (TBA) and Bob. Also, check the <a href="https://www.coloradocollege.edu/offices/colketcenter/qrc/blocktutorschedule/" target="_blank">tutoring schedule for the QRC</a>.
-* <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqMGdi8dt1oH8L9OO7VTuROhgXO0MhDM1erB9dlj36EZs_ww/viewform" target="_blank">Reading assignment submission form</a>.
+* For help outside of class, see below for Sunny's office hours (in Tutt Science 234) and for problem sessions with Haley and Bob. Also, check the <a href="https://www.coloradocollege.edu/offices/colketcenter/qrc/blocktutorschedule/" target="_blank">tutoring schedule for the QRC</a>. <!--_-->
+* <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqMGdi8dt1oH8L9OO7VTuROhgXO0MhDM1erB9dlj36EZs_ww/viewform" target="_blank">Reading assignment submission form</a>. <!--_-->
 
 # Calendar
 
@@ -37,7 +37,8 @@ nonav: true
 <td rowspan="2">Mon</td>
 <td>Linear geometry</td>
 <td>None</td>
-<td>(Read: One.II)  
+<td>
+(Read: One.II)  
 1.1–4  
 2.11–12, 14–16  
 [In class questions](w1_mon.pdf)
@@ -51,13 +52,17 @@ Sunny's office hours (12:30–2pm).
 </tr>
 
 <tr>
-<td>Tue</td>
+<td rowspan="2">Tue</td>
 <td>Gaussian elimination</td>
 <td>Read: One.I.1–2, III  
 Do: I.1.18, 20, 2.18</td>
 <td>I.1.22–25, 27, 37, 40  
 2.21–23, 29, 32
 </td>
+</tr>
+
+<tr>
+<td colspan="3">Problem session with Haley (7–8pm).</td>
 </tr>
 
 <tr>
@@ -88,7 +93,8 @@ Do: 1.20–21
 </tr>
 
 <tr>
-<td colspan="3">Sunny's office hours (12:30–2pm).</td>
+<td colspan="3">Sunny's office hours (12:30–2pm).  
+Problem session with Haley (8:30–9:30pm).</td>
 </tr>
 
 <tr>
@@ -109,6 +115,11 @@ Do: 1.18–20, 2.17
 </tr>
 
 <tr>
+<td>Sun</td>
+<td colspan="3">Problem session with Haley (7–8pm).</td>
+</tr>
+
+<tr>
 <td class="subheading" colspan="4" style="padding-left: 3em;">Week 2</td>
 </tr>
 
@@ -116,9 +127,12 @@ Do: 1.18–20, 2.17
 <td rowspan="2">Mon</td>
 <td>Isomorphisms</td>
 <td>Read: Three.I  
-Do:
+Do: 1.13, 16, 2.9–11
 </td>
-<td></td>
+<td>
+1.17–18, 21, 31, 37  
+2.12, 17–19
+</td>
 </tr>
 
 <tr>
@@ -132,9 +146,11 @@ Problem session with Bob (2–3pm).
 <td rowspan="2">Tue</td>
 <td>Linear maps</td>
 <td>Read: Three.II  
-Do:
+Do: 1.18–20, 2.21–22
 </td>
-<td></td>
+<td>1.21–22, 25–26, 28, 32, 41   
+2.23–24, 26–27, 29, 30, 33, 37
+</td>
 </tr>
 
 <tr>
@@ -145,12 +161,16 @@ Quiz 1 revisions (12:30–3pm). See [syllabus](syllabus) for details.
 
 <tr>
 <td rowspan="2">Wed</td>
-<td>Matrix representations</td>
+<td>Matrix representations[^1]</td>
 <td>Read: Three.III  
-Do:
+Do: 1.12, 18, 2.14, 16
 </td>
-<td></td>
+<td>1.13–17, 19–21, 26, 29, 33(a–c)  
+2.12, 14, 17–20, 26, 30, 32(a–b)
+</td>
 </tr>
+
+[^1]: You might find this topic quite challenging, but it's also really important to get down. I've assigned a lot of exercises to help with this. If you can understand what's going on with matrix representations, you'll have a much easier time when we discuss change of basis and diagonalization next week!
 
 <tr>
 <td colspan="3">
@@ -160,8 +180,11 @@ Sunny's office hours (3–4pm).</td>
 
 <tr>
 <td rowspan="2">Thu</td>
-<td colspan="2">Review</td>
-<td></td>
+<td>Review  
+FAC Activity (?)
+</td>
+<td>None</td>
+<td>None</td>
 </tr>
 
 <tr>
@@ -173,10 +196,13 @@ Sunny's office hours (12:30–2pm).
 <tr>
 <td rowspan="2">Fri</td>
 <td>Matrix operations</td>
-<td>Read: Three.IV   
-Do:
+<td>Read: Three.IV  
+Do: 1.8, 2.14, 19, 3.24, 4.13–14
 </td>
-<td></td>
+<td>1.15  
+2.15, 21, 32  
+4.15, 20, 22, 35
+</td>
 </tr>
 
 <tr>
@@ -193,7 +219,7 @@ Quiz 2 (2–3pm). Sections covered: up through Three.III.
 <td rowspan="2">Mon</td>
 <td>Change of basis</td>
 <td>Read: Three.V, Five.II.1  
-Do:  
+Do:
 </td>
 <td></td>
 </tr>
@@ -231,7 +257,7 @@ Do:
 <td colspan="3">
 Sunny's office hours (12:30–2pm).  
 Problem session with Bob (2–3pm).  
-Sunny's office hours (3–4pm).  
+Sunny's office hours (3–4pm).
 </td>
 </tr>
 
@@ -239,7 +265,7 @@ Sunny's office hours (3–4pm).
 <td rowspan="2">Thu</td>
 <td>Eigenvalues, Diagonalization</td>
 <td>Read: Five.II.2–3  
-Do:  
+Do:
 </td>
 <td></td>
 </tr>
@@ -266,8 +292,9 @@ Quiz 3 (1–2pm). Sections covered: up through Five.II.1 (excluding Four).
 
 <tr>
 <td rowspan="2">Mon</td>
-<td colspan="2">Review</td>
-<td></td>
+<td>Review</td>
+<td>None</td>
+<td>None</td>
 </tr>
 
 <tr>
