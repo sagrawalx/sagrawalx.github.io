@@ -39,7 +39,9 @@ nonav: true
 <td>None</td>
 <td>(Read: One.II)  
 1.1–4  
-2.11–12, 14–16</td>
+2.11–12, 14–16  
+[In class questions](w1_mon.pdf)
+</td>
 </tr>
 
 <tr>
