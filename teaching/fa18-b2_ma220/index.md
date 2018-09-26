@@ -73,7 +73,8 @@ Do: I.1.18, 20, 2.18</td>
 Do: 1.17–19, 2.20, 23
 </td>
 <td>1.20–22, 28–30, 32, 45  
-2.24–27, 29–30, 32, 44
+2.24–27, 29–30, 32, 44  
+[In class questions](w1_wed.pdf)
 </td>
 </tr>
 
@@ -86,7 +87,7 @@ Writing assignment due (11:59pm). [Prompt](prompt.pdf).</td>
 
 <tr>
 <td rowspan="2">Thu</td>
-<td>Linear independence</td>
+<td>Span, Linear independence</td>
 <td>Read: Two.II  
 Do: 1.20–21
 </td>
