@@ -14,6 +14,6 @@ cd _site && \
   git add . && \
   git commit -am "$1"
 git push origin master && \
-  echo "Successfully built and pushed master to GitHub."
+  echo "Successfully pushed master to GitHub."
 cd ..
 
