@@ -7,11 +7,13 @@ fi
 
 jekyll build && \
   git add . && \
-  git commit -am "$1" && \
-  git push origin source && \
-  cd _site && \
+  git commit -am "$1"
+git push origin source && \
+  echo "Successfully built and pushed source to GitHub."
+cd _site && \
   git add . && \
-  git commit -am "$1" && \
-  git push origin master && \
-  cd .. && \
-  echo "Successfully built and pushed to GitHub."
+  git commit -am "$1"
+git push origin master && \
+  echo "Successfully built and pushed master to GitHub."
+cd ..
+
