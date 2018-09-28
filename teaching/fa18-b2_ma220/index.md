@@ -91,7 +91,7 @@ Writing assignment due (11:59pm). [Prompt](prompt.pdf).</td>
 <td>Read: Two.II  
 Do: 1.20–21
 </td>
-<td>1.23–24, 28, 32, 35–36  
+<td>1.23–24, 28, 32, 35–36   
 [In class questions](w1_thu.pdf)
 </td>
 </tr>
