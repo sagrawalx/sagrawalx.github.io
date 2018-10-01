@@ -115,7 +115,7 @@ Do: 1.18–20, 2.17
 </tr>
 
 <tr>
-<td colspan="3">Quiz 1 (1–2pm). Sections covered: up through Two.I.1.
+<td colspan="3">Quiz 1 (1–2pm). Sections covered: up through Two.I.1. [Solutions](quiz1.pdf).
 </td>
 </tr>
 
@@ -235,22 +235,29 @@ Problem session with Haley (7–8pm).
 <td rowspan="2">Mon</td>
 <td>Change of basis</td>
 <td>Read: Three.V, Five.II.1  
-Do:
+Do: (Three.V) 1.7–9, 2.10–11, (Five.II) 1.5, 7
 </td>
-<td></td>
+<td>(Three.V)  
+1.10–15, 21(a), 22, 24  
+2.13, 15–16, 28(a), 31(d–e)  
+(Five.II)  
+1.8–9, 11, 13–14, 19, 21–22
+</td>
 </tr>
 
 <tr>
 <td colspan="3">
 Sunny's office hours (12:30–2pm).  
-Problem session with Bob (2–3pm).
+Problem session with Bob (2–3pm).   
+Sunny's office hours (3-4pm).
 </td>
 </tr>
 
 <tr>
 <td rowspan="2">Tue</td>
-<td colspan="2">Review</td>
-<td></td>
+<td>Review</td>
+<td>None</td>
+<td>None</td>
 </tr>
 
 <tr>
@@ -264,16 +271,18 @@ Poster project proposals due (11:59pm). [Details](poster.pdf).
 <td rowspan="2">Wed</td>
 <td>Determinants</td>
 <td>Read: Four.I.1–2, II  
-Do:
+Do: I.1–2, 4, 2.8–9
 </td>
-<td></td>
+<td>I.1.3, 5–6, 9, 15, 17–18  
+2.10–11, 20  
+II.1.9–12
+</td>
 </tr>
 
 <tr>
 <td colspan="3">
 Sunny's office hours (12:30–2pm).  
-Problem session with Bob (2–3pm).  
-Sunny's office hours (3–4pm).
+Problem session with Bob (2–3pm).
 </td>
 </tr>
 
@@ -281,9 +290,11 @@ Sunny's office hours (3–4pm).
 <td rowspan="2">Thu</td>
 <td>Eigenvalues, Diagonalization</td>
 <td>Read: Five.II.2–3  
-Do:
+Do: 2.7–9, 3.22–23
 </td>
-<td></td>
+<td>2.10–11, 14–18  
+3.24–30, 32, 35–36, 41–46
+</td>
 </tr>
 
 <tr>
@@ -294,8 +305,9 @@ Quiz 3 (1–2pm). Sections covered: up through Five.II.1 (excluding Four).
 
 <tr>
 <td rowspan="2">Fri</td>
-<td colspan="2">Review</td>
-<td></td>
+<td>Review</td>
+<td>None</td>
+<td>None</td>
 </tr>
 
 <tr>
