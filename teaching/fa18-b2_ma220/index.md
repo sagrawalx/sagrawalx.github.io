@@ -136,7 +136,8 @@ Do: 1.13, 16, 2.9–11
 </td>
 <td>
 1.17–18, 21, 31, 37  
-2.12, 17–19
+2.12, 17–19  
+[In class questions](w2_mon.pdf)
 </td>
 </tr>
 
@@ -196,7 +197,7 @@ FAC Activity
 
 <tr>
 <td colspan="3">
-Sunny's office hours (1:30–3pm).  
+Sunny's office hours (12:30–2pm).  
 Problem session with Haley (6–7pm).
 </td>
 </tr>
