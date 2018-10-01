@@ -54,6 +54,8 @@ nonav: true
 
 ## Primary instructor
 
+* Colorado College
+    * Linear Algebra (Fall 2018, Block 2)
 * UC Berkeley
     * Linear algebra (Summer 2017).
     * Analysis (Summer 2015).
@@ -92,6 +94,7 @@ nonav: true
 
 # Conferences
 
+* Front Range Number Theory Day (September 2018). Colorado State University.
 * RTG Research Workshop (May 2018). University of California, Berkeley.
 * Old and new themes in $p$-adic cohomology (April 2018). University of Arkansas.
 * Hot Topics: The Homological Conjectures (March 2018). MSRI, Berkeley.
@@ -104,6 +107,10 @@ nonav: true
 * Geometric methods in number theory (July 2013). MSRI, Berkeley.
 * Homotopical methods in algebraic geometry (May 2013). University of Southern California.
 * Bridgeland stability workshop (March 2013). University of Illinois, Chicago.
+
+# Professional service
+
+* Reviewer for zbMATH
 
 # Languages
 

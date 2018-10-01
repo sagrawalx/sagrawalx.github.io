@@ -160,7 +160,9 @@ Do: 1.18–20, 2.21–22
 
 <tr>
 <td colspan="3">
-Quiz 1 revisions (12:30–3pm). See [syllabus](syllabus) for details.
+Quiz 1 revisions (12:30–3pm). See [syllabus](syllabus) for details.  
+Sunny's office hours (3–4pm).  
+Problem session with Haley (7–8pm).
 </td>
 </tr>
 
@@ -179,14 +181,14 @@ Do: 1.12, 18, 2.14, 16
 
 <tr>
 <td colspan="3">
-Problem session with Bob (2–3pm).  
-Sunny's office hours (3–4pm).</td>
+Problem session with Bob (2–3pm).
+</td>
 </tr>
 
 <tr>
 <td rowspan="2">Thu</td>
 <td>Review  
-FAC Activity (?)
+FAC Activity
 </td>
 <td>None</td>
 <td>None</td>
@@ -194,7 +196,8 @@ FAC Activity (?)
 
 <tr>
 <td colspan="3">
-Sunny's office hours (12:30–2pm).
+Sunny's office hours (1:30–3pm).  
+Problem session with Haley (6–7pm).
 </td>
 </tr>
 
@@ -213,6 +216,13 @@ Do: 1.8, 2.14, 19, 3.24, 4.13–14
 <tr>
 <td colspan="3">
 Quiz 2 (2–3pm). Sections covered: up through Three.III.
+</td>
+</tr>
+
+<tr>
+<td>Sun</td>
+<td colspan="3">
+Problem session with Haley (7–8pm).
 </td>
 </tr>
 
@@ -245,7 +255,7 @@ Problem session with Bob (2–3pm).
 <tr>
 <td colspan="3">
 Quiz 2 revisions (1:45–4:15pm).  
-Poster project proposals due (11:59pm). Details coming soon!
+Poster project proposals due (11:59pm). [Details](poster.pdf).
 </td>
 </tr>
 
@@ -316,6 +326,6 @@ Problem session with Bob (2–3pm).
 
 <tr>
 <td>Wed</td>
-<td colspan="3">Poster session (in class). Details coming soon!</td>
+<td colspan="3">Poster session (in class). [Details](poster.pdf).</td>
 </tr>
 </table>
