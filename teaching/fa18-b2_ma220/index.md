@@ -173,7 +173,7 @@ Problem session with Haley (7–8pm).
 <td>Read: Three.III  
 Do: 1.12, 18, 2.14, 16
 </td>
-<td>1.13–17, 19–21, 26, 29, 33(a–c)  
+<td>1.13–21, 26, 29, 33(a–c)  
 2.12, 14, 17–20, 26, 30, 32(a–b)
 </td>
 </tr>
