@@ -155,7 +155,8 @@ Problem session with Bob (2–3pm).
 Do: 1.18–20, 2.21–22
 </td>
 <td>1.21–22, 25–26, 28, 32, 41   
-2.23–24, 26–27, 29, 30, 33, 37
+2.23–24, 26–27, 29, 30, 33, 37  
+[In class questions](w2_tue.pdf)
 </td>
 </tr>
 
@@ -174,7 +175,8 @@ Problem session with Haley (7–8pm).
 Do: 1.12, 18, 2.14, 16
 </td>
 <td>1.13–21, 26, 29, 33(a–c)  
-2.12, 14, 17–20, 26, 30, 32(a–b)
+2.12, 14, 17–20, 26, 30, 32(a–b)  
+[In class questions](w2_wed.pdf)
 </td>
 </tr>
 
@@ -189,7 +191,7 @@ Problem session with Bob (2–3pm).
 <tr>
 <td rowspan="2">Thu</td>
 <td>Review  
-FAC Activity
+[FAC Activity](fac.pdf)
 </td>
 <td>None</td>
 <td>None</td>
