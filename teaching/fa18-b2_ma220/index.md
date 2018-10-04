@@ -223,13 +223,6 @@ Quiz 2 (2–3pm). Sections covered: up through Three.III.
 </tr>
 
 <tr>
-<td>Sun</td>
-<td colspan="3">
-Problem session with Haley (7–8pm).
-</td>
-</tr>
-
-<tr>
 <td class="subheading" colspan="4" style="padding-left: 3em;">Week 3</td>
 </tr>
 
