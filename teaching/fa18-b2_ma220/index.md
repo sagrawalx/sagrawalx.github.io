@@ -212,7 +212,9 @@ Do: 1.8, 2.14, 19, 3.24, 4.13–14
 </td>
 <td>1.15  
 2.15, 21, 32  
-4.15, 20, 22, 35
+4.15, 20, 22, 35  
+[Worksheet: Inverse Matrices](wksht_inversion.pdf)  
+[In class questions](w2_fri.pdf)
 </td>
 </tr>
 
@@ -242,9 +244,8 @@ Do: (Three.V) 1.7–9, 2.10–11, (Five.II) 1.5, 7
 
 <tr>
 <td colspan="3">
-Sunny's office hours (12:30–2pm).  
 Problem session with Bob (2–3pm).   
-Sunny's office hours (3-4pm).
+Sunny's office hours (3–5pm).
 </td>
 </tr>
 
@@ -306,7 +307,8 @@ Quiz 3 (1–2pm). Sections covered: up through Five.II.1 (excluding Four).
 </tr>
 
 <tr>
-<td colspan="3">Quiz 3 revisions (1–3:30pm).</td>
+<td colspan="3">Quiz 3 revisions (1–3:30pm).  
+Sunny's office hours (3:30–4:30pm).</td>
 </tr>
 
 <tr>
