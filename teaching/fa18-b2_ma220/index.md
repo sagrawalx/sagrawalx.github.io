@@ -259,6 +259,7 @@ Sunny's office hours (3–5pm).
 <tr>
 <td colspan="3">
 Quiz 2 revisions (1:45–4:15pm).  
+Problem session with Haley (7–8pm).  
 Poster project proposals due (11:59pm). [Details](poster.pdf).
 </td>
 </tr>
@@ -278,7 +279,8 @@ II.1.9–12
 <tr>
 <td colspan="3">
 Sunny's office hours (12:30–2pm).  
-Problem session with Bob (2–3pm).
+Problem session with Bob (2–3pm).  
+Problem session with Haley (7–8pm).  
 </td>
 </tr>
 
