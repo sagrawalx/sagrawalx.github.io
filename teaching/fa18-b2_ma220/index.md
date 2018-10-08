@@ -234,7 +234,7 @@ Quiz 2 (2–3pm). Sections covered: up through Three.III.
 <td>Read: Three.V, Five.II.1  
 Do: (Three.V) 1.7–9, 2.10–11, (Five.II) 1.5, 7
 </td>
-<td>(Three.V)  
+<td>(Three.V)   
 1.10–15, 21(a), 22, 24  
 2.13, 15–16, 28(a), 31(d–e)  
 (Five.II)  
