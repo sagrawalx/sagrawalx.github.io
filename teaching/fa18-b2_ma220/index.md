@@ -220,7 +220,7 @@ Do: 1.8, 2.14, 19, 3.24, 4.13–14
 
 <tr>
 <td colspan="3">
-Quiz 2 (2–3pm). Sections covered: up through Three.III.
+Quiz 2 (2–3pm). Sections covered: up through Three.III. [Solutions](quiz2.pdf).
 </td>
 </tr>
 
