@@ -238,7 +238,8 @@ Do: (Three.V) 1.7–9, 2.10–11, (Five.II) 1.5, 7
 1.10–15, 21(a), 22, 24  
 2.13, 15–16, 28(a), 31(d–e)  
 (Five.II)  
-1.8–9, 11, 13–14, 19, 21–22
+1.8–9, 11, 13–14, 19, 21–22  
+[In class questions](w3_mon.pdf)
 </td>
 </tr>
 
@@ -253,7 +254,7 @@ Sunny's office hours (3–5pm).
 <td rowspan="2">Tue</td>
 <td>Review</td>
 <td>None</td>
-<td>None</td>
+<td>[In class questions](w3_tue.pdf)</td>
 </tr>
 
 <tr>
