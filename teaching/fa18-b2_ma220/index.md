@@ -330,7 +330,8 @@ Sunny's office hours (3:30–4:30pm).</td>
 <tr>
 <td colspan="3">
 Sunny's office hours (12:30–2pm).  
-Problem session with Bob (2–3pm).
+Problem session with Bob (2–3pm).  
+Problem session with Haley (6–8pm).
 </td>
 </tr>
 
