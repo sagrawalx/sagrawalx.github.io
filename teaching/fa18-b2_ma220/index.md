@@ -293,7 +293,8 @@ Problem session with Haley (7–8pm).
 Do: 2.7–9, 3.22–23
 </td>
 <td>2.10–11, 14–18  
-3.24–30, 32, 35–36, 41–46
+3.24–30, 32, 35–36, 41–46  
+[In class questions](w3_thu.pdf)
 </td>
 </tr>
 
