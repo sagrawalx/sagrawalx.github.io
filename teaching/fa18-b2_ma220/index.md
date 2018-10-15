@@ -300,7 +300,7 @@ Do: 2.7–9, 3.22–23
 
 <tr>
 <td colspan="3">
-Quiz 3 (1–2pm). Sections covered: up through Five.II.1 (excluding Four).
+Quiz 3 (1–2pm). Sections covered: up through Five.II.1 (excluding Four). [Solutions](quiz3.pdf)
 </td>
 </tr>
 
@@ -327,7 +327,7 @@ Sunny's office hours (3:30–4:30pm).</td>
 <td>[In class questions](w4_mon.pdf)[^2]</td>
 </tr>
 
-[^2]: There are a few extra problems in these slides that we did not get to in class today. 
+[^2]: There are a few extra problems in these slides that we did not get to in class today.
 
 <tr>
 <td colspan="3">
