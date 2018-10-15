@@ -1,7 +1,7 @@
 ---
 layout: default
-bannertext: Fall 2018, Block 2 — MA220
-bannerlink: teaching/fa18-b2_ma220
+bannertext: Fall 2018, Block 3 — MA126
+bannerlink: teaching/fa18-b3_ma126
 nonav: true
 ---
 
@@ -10,12 +10,9 @@ nonav: true
 > ... while we expect to get numbers out of the machine, we also expect to take action based on them, and, therefore we need to understand thoroughly what numbers may, or may not, mean. To cite the author's favorite motto, "The purpose of computing is insight, not numbers."  
 > <span class="blockquote-attribution">—Richard Hamming</span>
 
-> There is hardly any theory which is more elementary [than linear algebra], in  spite of the fact that generations of professors and textbook writers have obscured its simplicity by preposterous calculations with matrices.  
-> <span class="blockquote-attribution">—Jean Dieudonné</span>
-
 ## Overview
 
-MA220 is an introduction to *linear algebra*, the field of mathematics that seeks to understand the geometry of lines, planes, and hyperplanes, and of the transformations between them. It's an elegant theory in and of itself, but it also has remarkable applications that span wide expanses of human knowledge. In this class, we'll explore both the theory of linear algebra and its applications across many disciplines.
+MA126 is an introduction to calculus, the branch of mathematics that studies rates of change, areas, and volumes.  
 
 ## Course Structure Philosophy
 
@@ -25,7 +22,7 @@ Students explaining concepts to each other is a key component of successful educ
 
 ## Course Mechanics
 
-On the course [webpage](/teaching/fa18-b2_ma220), you'll find a calendar that looks like this:
+On the course [webpage](/teaching/fa18-b3_ma126), you'll find a calendar that looks like this:
 
 <table style="width: 100%">
 <tr>
@@ -61,11 +58,11 @@ A few thoughts about these submissions:
 
 * I'll do my best to tailor our in-class discussions to address as many of your questions as I can. The earlier you send me your question, the more likely I am to be able to work it into our discussions. If I don't address your question in class or via email, please find me during office hours and ask again!
 
-* I'll check your solutions to the exercises for completeness. Hefferon provides an answer key for all of the exercises in the textbook, and you are encouraged to check your solutions for correctness yourself.
+* I'll check your solutions to the reading assignment exercises only for completeness. They'll always be odd-numbered problems, and you're encouraged to check your answers to the reading assignment exercises in the back of the book.
 
 ### In-class structure
 
-I'll begin class with a very brief discussion of the reading (ideally no longer than 30 minutes). This is not intended to be a substitute for having done the reading. Instead, the idea is to refresh your memory about what we'll be discussing in class today.
+I'll begin class with a very brief discussion of the reading. This is not intended to be a substitute for having done the reading. Instead, the idea is to refresh your memory about what we'll be discussing in class today by working through an couple of examples.
 
 We'll spend most of class time solving problems in the following format.
 
@@ -80,9 +77,7 @@ Finally, the end of class will be more open-ended. You'll have a little bit of t
 
 ### Problem sets
 
-After class, you will hopefully be ready to tackle the problem set listed in the fourth column of the calendar. Some of those will be identical to (or closely related to) problems we already discussed in class.
-
-The problem sets will not be collected, but the quizzes and the final exam will draw *very heavily* from these problem sets. You can check your answers against Hefferon's solutions. If you have a solution to a problem that you think is correct but is different from Hefferon's solution, let's discuss it during office hours! I have already found at least one error in the solutions manual.
+After class, you will hopefully be ready to tackle the problem set listed in the fourth column of the calendar. These problem sets will be due in batches 4 times throughout the block. Only the problems that are multiples of 4 will be graded, but it is strongly recommended that you do all of them. Practice is the name of the game!
 
 ## Assessment
 
@@ -90,8 +85,9 @@ Grades will be calculated as follows.
 
 --------------------- ------
 Reading assignments   10%
+Problem sets          15%
 Writing assignment    5%
-Quizzes               45%
+Quizzes               30%
 Final exam            20%
 Poster project        15%
 Participation         5%
@@ -101,11 +97,13 @@ Here are some details about each of the components of your grade.
 
 * Every reading assignment you submit is worth up to 2 points: 1 for the question, 1 for the exercises. The reading assignments component of your grade will be the total number of points you accumulate in this way, out of a maximum of $2(n-2)$ points, where $n$ is the total number of reading assignments assigned. In other words, you don't need to do submit both things every day to get a perfect score for this component of your grade.
 
-* There will be a short writing assignment towards the beginning of the block. You'll find more details on the [webpage](/teaching/fa18-b2_ma220).
+* Problem sets will be collected in batches on quiz/exam days. Only the problems that are multiples of 4 will be graded. A random subset of the multiples of 4 will be graded for correctness, and you'll get completion points for the rest.  
+
+* There will be a short writing assignment towards the beginning of the block. You'll find more details on the [webpage](/teaching/fa18-b3_ma126).
 
 * There will be three quizzes during the block. They will take place in the afternoons (see the calendar on the course [webpage](/teaching/fa18-b2_ma220) for the dates and times). There will be some free response questions, and some true-false questions. No books, notes, or electronic devices will be permitted.
 
-    A day or two after the quiz, I'll block off a few hours in the afternoons for "quiz revisions." During this time, you can come by and meet with me one-on-one to discuss up to 2 of the true-false questions that you left blank. If you convince me that you now fully understand the solution, you'll get points for that question.
+    A day or two after the quiz, I'll block off a couple of hours in the afternoons for "quiz revisions." During this time, you can come by and meet with me one-on-one to discuss up to 2 of the true-false questions that you left blank. If you convince me that you now fully understand the solution, you'll get points for that question.
 
     If you know that you won't be able to to make it to a quiz, please reach out to me as soon as possible!
 
@@ -113,7 +111,7 @@ Here are some details about each of the components of your grade.
 
     If your score on the final exam is higher than your lowest quiz score, I'll use the final exam score to replace the lowest quiz score.
 
-* On the last day of class, we'll have a poster session. There will be more details on the course [webpage](/teaching/fa18-b2_ma220).
+* There will be a poster session on the last day of class. You'll have to put together a poster about a topic related to calculus. You'll find more details on the [webpage](/teaching/fa18-b3_ma126).
 
 * You'll get a full score for the participation component of your grade as long as I am able to see that you are putting in a good faith effort to engage with the class. If at any point during the block I think that you might not get a full participation score, I'll reach out and let you know what you need to be doing to get a full participation score.
 
@@ -131,4 +129,3 @@ Please make sure that you are familiar with the [Honor Code](https://www.colorad
 * If you do happen to get sick, please stay home to avoid getting your classmates sick, and let me know so that we can figure out how you'll make up class work.
 * The structure of this class will require you to be proactive about your learning. If you need help developing good study habits, please ask me for help and I'll be happy to assist you.
 * Reading math can be challenging: you have to read slowly, and pause constantly to ask yourself if you really understood the last sentence you just read.
-* You may quickly find that row reduction is a very tedious process to do by hand. Once you feel confident that you know how to do it by hand, I encourage you to figure out how to get a computer to row reduce matrices for you.

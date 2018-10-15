@@ -2,7 +2,7 @@
 layout: default
 title: Fall 2018, Block 3 — MA126
 bannertext: Fall 2018, Block 3 — MA126
-bannerlink: teaching/fa18-b2_ma220
+bannerlink: teaching/fa18-b3_ma126
 nonav: true
 ---
 
@@ -13,11 +13,32 @@ nonav: true
     * LA: Sam Kottler.
     * Paraprof: Bob Kuo.
 * [Course syllabus](syllabus).
-* Textbook:
+* Textbook: *Calculus: Early Transcendentals* by Rogawski and Adams, 3rd edition.
 * For help outside of class, see below for Sunny's office hours (in Tutt Science 234) and for problem sessions with Sam and Bob. Also, check the <a href="https://www.coloradocollege.edu/offices/colketcenter/qrc/blocktutorschedule/" target="_blank">tutoring schedule for the QRC</a>. <!--_-->
 <!-- * <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqMGdi8dt1oH8L9OO7VTuROhgXO0MhDM1erB9dlj36EZs_ww/viewform" target="_blank">Reading assignment submission form</a>. <!--_-->
 
 # Calendar
+
+<!--
+3.5 — 2, 6, 14, 40  
+3.7 — 30, 32, 40, 44, 50, 66  
+3.8 — 10, 20, 24, 54, 60  
+3.9 — 2, 8, 32  
+3.10 — 5, 7, 9, 22
+
+4.2 — 20, 21, 22, 23, 24, 25, 32, 33  
+4.3 — 20, 22, 24, 28, 42, 63  
+4.4 — 4, 6, 8, 18, 42, 50  
+4.5 — 2, 6, 12, 14, 30, 40  
+4.6 — 16, 18, 19, 22, 31, 56, 58
+4.7 — 2, 6, 7, 19, 43
+
+5.1 — 2, 9, 16  
+5.2 — 2, 13, 26, 30  
+5.3 — 4, 8, 12, 14, 18, 24, 36, 38  
+5.4 — 10, 14, 26, 34, 43  
+5.5 — 21, 22, 25  
+5.7 — 30, 32, 42, 49, 66, 72 -->
 
 <table style="width: 100%">
 <tr>
@@ -33,34 +54,115 @@ nonav: true
 
 <tr>
 <td rowspan="2">Mon</td>
-<td></td>
+<td>Introduction</td>
 <td>None</td>
 <td>
+(Optional! Chapter 1 Review) 9–10, 11, 13, 17, 19, 21, 41–42, 51–52
 </td>
 </tr>
 
 <tr>
 <td colspan="3">
-Problem session with Bob (1–2pm).
+Problem session with Bob (1–2pm).  
+Sunny's office hours (2–3pm).
 </td>
 </tr>
 
 <tr>
 <td rowspan="2">Tue</td>
-<td></td>
-<td></td>
+<td>Limits</td>
+<td>Read: 2.1–3, 2.6–7  
+Do: (2.2) 1, 5  
+(2.3) 9, 13  
+(2.6) 7  
+(2.7) 7, 9
+</td>
 <td>
+(2.1) 24  
+(2.2) 6, 40, 50, 52, 56  
+(2.3) 14–20 evens, 34  
+(2.6) 8, 12, 20, 28   
+(2.7) 10–20 evens, 38  
 </td>
 </tr>
 
 <tr>
-<td colspan="3"></td>
+<td colspan="3">
+Sunny's office hours (2–3pm).
+</td>
 </tr>
 
 <tr>
 <td rowspan="2">Wed</td>
-<td></td>
-<td></td>
+<td>Continuity</td>
+<td>Read: 2.4–5, 2.8  
+Do: (2.4) 5  
+(2.5) 1, 3  
+(2.8) 3, 7
+</td>
+<td>
+(2.4) 16, 20, 22, 49, 50–54 evens, 58–64 evens  
+(2.5) 12, 14, 30, 44  
+(2.8) 4, 12, 20
+</td>
+</tr>
+
+<tr>
+<td colspan="3">
+Problem session with Bob (1–2pm).  
+Sunny's office hours (2–3pm).  
+Writing assignment due (11:59pm). <a href="/teaching/prompt.pdf" target="_blank">Prompt</a>.<!--_--></td>
+</tr>
+
+<tr>
+<td rowspan="2">Thu</td>
+<td>Derivatives</td>
+<td>Read: 3.1  
+Do: (3.1) 29, 31
+</td>
+<td>
+(3.1) 30–42 evens
+</td>
+</tr>
+
+<tr>
+<td colspan="3">
+Sunny's office hours (2–3pm).
+</td>
+</tr>
+
+<tr>
+<td rowspan="2">Fri</td>
+<td>Rules of differentiation</td>
+<td>Read: 3.2–3, 3.6  
+Do: (3.2) 9, 11  
+(3.3) 3, 7  
+(3.6) 3, 5
+</td>
+<td>
+(3.2) 18–30 evens, 50–54 evens  
+(3.3) 20–34 evens, 53  
+(3.6) 6, 12, 14, 18, 24, 26
+</td>
+</tr>
+
+<tr>
+<td colspan="3">
+Problem sets for 2.2–8 due (1pm).  
+Quiz 1 (1–2pm). Sections covered: up through 2.8.
+</td>
+</tr>
+
+<tr>
+<td class="subheading" colspan="4" style="padding-left: 3em;">Week 2</td>
+</tr>
+
+<tr>
+<td rowspan="2">Mon</td>
+<td>More rules of differentiation</td>
+<td>Read: 3.7–9  
+Do:
+</td>
 <td>
 </td>
 </tr>
@@ -68,100 +170,70 @@ Problem session with Bob (1–2pm).
 <tr>
 <td colspan="3">
 Problem session with Bob (1–2pm).  
-Writing assignment due (11:59pm). [Prompt](prompt.pdf).</td>
-</tr>
-
-<tr>
-<td rowspan="2">Thu</td>
-<td></td>
-<td></td>
-<td>
-</td>
-</tr>
-
-<tr>
-<td colspan="3"></td>
-</tr>
-
-<tr>
-<td rowspan="2">Fri</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td colspan="3">Quiz 1 (1–2pm).
-</td>
-</tr>
-<tr>
-<td class="subheading" colspan="4" style="padding-left: 3em;">Week 2</td>
-</tr>
-
-<tr>
-<td rowspan="2">Mon</td>
-<td></td>
-<td></td>
-<td>
-</td>
-</tr>
-
-<tr>
-<td colspan="3">
-Problem session with Bob (1–2pm).
+Quiz 1 revisions (2–4pm).  
 </td>
 </tr>
 
 <tr>
 <td rowspan="2">Tue</td>
-<td></td>
-<td></td>
+<td>Rates of change</td>
+<td>Read: 3.4–5, 3.10  
+Do:
+</td>
 <td>
 </td>
 </tr>
 
 <tr>
 <td colspan="3">
+Sunny's office hours (2–3pm).  
 </td>
 </tr>
 
 <tr>
 <td rowspan="2">Wed</td>
-<td></td>
-<td></td>
+<td>Linear approximations</td>
+<td>Read: 4.1, 4.8  
+Do:
+</td>
 <td>
 </td>
 </tr>
 
 <tr>
 <td colspan="3">
-Problem session with Bob (1–2pm).
+Problem session with Bob (1–2pm).  
+Sunny's office hours (2–3pm).  
 </td>
 </tr>
 
 <tr>
-<td rowspan="2"></td>
-<td></td>
-<td></td>
+<td rowspan="2">Thu</td>
+<td>Shapes of graphs</td>
+<td>Read: 4.2–4, 4.6
+</td>
 <td></td>
 </tr>
 
 <tr>
 <td colspan="3">
+Sunny's office hours (2–3pm).
 </td>
 </tr>
 
 <tr>
 <td rowspan="2">Fri</td>
-<td></td>
-<td></td>
+<td>L'Hôpital's rule, Optimization</td>
+<td>Read: 4.5, 4.7
+</td>
 <td>
 </td>
 </tr>
 
 <tr>
 <td colspan="3">
-Quiz 2 (1–2pm).
+Problem sets for 3.1–4.1 and 4.8 due (1pm).  
+Quiz 2 (1–2pm). Sections covered: up through 4.1, and also 4.8.
 </td>
 </tr>
 
@@ -171,34 +243,9 @@ Quiz 2 (1–2pm).
 
 <tr>
 <td rowspan="2">Mon</td>
-<td></td>
-<td></td>
-<td>
+<td>Definite integrals</td>
+<td>Read: 5.1–2  
 </td>
-</tr>
-
-<tr>
-<td colspan="3">
-Problem session with Bob (1–2pm).   
-</td>
-</tr>
-
-<tr>
-<td rowspan="2">Tue</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td colspan="3">
-</td>
-</tr>
-
-<tr>
-<td rowspan="2">Wed</td>
-<td></td>
-<td></td>
 <td>
 </td>
 </tr>
@@ -206,32 +253,69 @@ Problem session with Bob (1–2pm).
 <tr>
 <td colspan="3">
 Problem session with Bob (1–2pm).  
+Quiz 2 revisions (2–4pm).  
 </td>
 </tr>
 
 <tr>
-<td rowspan="2">Thu</td>
+<td rowspan="2">Tue</td>
+<td>Fundamental theorem of calculus</td>
+<td>Read: 5.3–5  
+Do:
+</td>
 <td></td>
-<td></td>
+</tr>
+
+<tr>
+<td colspan="3">
+Sunny's office hours (2–3pm).  
+Poster project proposals due (11:59pm). Details coming soon!
+</td>
+</tr>
+
+<tr>
+<td rowspan="2">Wed</td>
+<td>Substitution</td>
+<td>Read: 5.7–8  
+Do: </td>
 <td>
 </td>
 </tr>
 
 <tr>
 <td colspan="3">
-Quiz 3 (1–2pm).
+Problem session with Bob (1–2pm).  
+Sunny's office hours (2–3pm).  
+</td>
+</tr>
+
+<tr>
+<td rowspan="2">Thu</td>
+<td>Applications of integration</td>
+<td>Read: 5.6, 5.9  
+Do: </td>
+<td>
+</td>
+</tr>
+
+<tr>
+<td colspan="3">
+Problem sets for 4.2–7 and 5.1–2 due (1pm).  
+Quiz 3 (1–2pm). Up through 5.2.
 </td>
 </tr>
 
 <tr>
 <td rowspan="2">Fri</td>
-<td></td>
-<td></td>
-<td></td>
+<td>Review</td>
+<td>None</td>
+<td>None</td>
 </tr>
 
 <tr>
-<td colspan="3"></td>
+<td colspan="3">
+Quiz 3 revisions (12:30–2:30pm).
+</td>
 </tr>
 
 <tr>
@@ -247,17 +331,21 @@ Quiz 3 (1–2pm).
 
 <tr>
 <td colspan="3">
-Problem session with Bob (1–2pm).
+Problem session with Bob (1–2pm).  
+Sunny's office hours (2–3pm).
 </td>
 </tr>
 
 <tr>
 <td>Tue</td>
-<td colspan="3">Final exam (in class). Sections covered: everything.</td>
+<td colspan="3">
+Problem sets for 5.3–9 due (9:15am).
+Final exam (in class). Sections covered: everything.
+</td>
 </tr>
 
 <tr>
 <td>Wed</td>
-<td colspan="3">Poster session (in class). [Details](poster.pdf).</td>
+<td colspan="3">Poster session (in class). Details coming soon!</td>
 </tr>
 </table>

@@ -324,8 +324,10 @@ Sunny's office hours (3:30–4:30pm).</td>
 <td rowspan="2">Mon</td>
 <td>Review</td>
 <td>None</td>
-<td>None</td>
+<td>[In class questions](w4_mon.pdf)[^2]</td>
 </tr>
+
+[^2]: There are a few extra problems in these slides that we did not get to in class today. 
 
 <tr>
 <td colspan="3">
