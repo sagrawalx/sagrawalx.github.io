@@ -300,7 +300,7 @@ Do: 2.7–9, 3.22–23
 
 <tr>
 <td colspan="3">
-Quiz 3 (1–2pm). Sections covered: up through Five.II.1 (excluding Four). [Solutions](quiz3.pdf)
+Quiz 3 (1–2pm). Sections covered: up through Five.II.1 (excluding Four). [Solutions](quiz3.pdf).
 </td>
 </tr>
 
@@ -339,7 +339,7 @@ Problem session with Haley (6–8pm).
 
 <tr>
 <td>Tue</td>
-<td colspan="3">Final exam (in class). Sections covered: everything.</td>
+<td colspan="3">Final exam (in class). Sections covered: everything. [Solutions](final.pdf).</td>
 </tr>
 
 <tr>
