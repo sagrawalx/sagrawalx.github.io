@@ -7,16 +7,19 @@ nonav: true
 
 # Syllabus
 
-> ... while we expect to get numbers out of the machine, we also expect to take action based on them, and, therefore we need to understand thoroughly what numbers may, or may not, mean. To cite the author's favorite motto, "The purpose of computing is insight, not numbers."  
-> <span class="blockquote-attribution">—Richard Hamming</span>
+> And what are these fluxions? The velocities of evanescent increments? And what are these same evanescent increments? They are neither finite quantities, nor quantities infinitely small, nor yet nothing. May we not call them ghosts of departed quantities?  
+> <span class="blockquote-attribution">—George Berkeley</span>
+
+> Although the whole of this life were said to be nothing but a dream and the physical world nothing but a phantasm, I should call this dream or phantasm real enough, if, using reason well, we were never deceived by it.  
+> <span class="blockquote-attribution">—Gottfried Leibniz</span>
 
 ## Overview
 
-MA126 is an introduction to calculus, the branch of mathematics that studies rates of change, areas, and volumes.  
+MA126 is an introduction to calculus, the branch of mathematics that studies rates of change and areas. It appeared in its modern form in the 1600s, independently in the works of Gottfried Leibniz and of Isaac Newton. It led to dramatic advances within mathematics itself, and has also found widespread applicability throughout science, engineering, and economics.
 
 ## Course Structure Philosophy
 
-I'm interested in applying evidence-based educational techniques in the classroom. One such system that I've experimented with once before and found to be quite effective is called *peer instruction*. It was pioneered by the physicist Eric Mazur at Harvard, and is predicated on the observation that *information transfer* (listening to lectures or reading books) is easier than *information assimilation* (solving problems and explaining concepts to others). So, the idea is to move as much information transfer as possible *out* of the classroom (ie, to minimize the time spent listening to lectures), and as much information assimilation as possible *into* the classroom (ie, to maximize the time spent solving problems and explaining concepts to each other). There's a growing body of data that suggests this format is quite effective: by a certain metric, it seems to lead to an improvement in conceptual understanding over more traditional methods by over a factor of 2!
+I'm interested in applying evidence-based educational techniques in the classroom. One such system that I've experimented with before and found to be quite effective is called *peer instruction*. It was pioneered by the physicist Eric Mazur at Harvard, and is predicated on the observation that *information transfer* (listening to lectures or reading books) is easier than *information assimilation* (solving problems and explaining concepts to others). So, the idea is to move as much information transfer as possible *out* of the classroom (ie, to minimize the time spent listening to lectures), and as much information assimilation as possible *into* the classroom (ie, to maximize the time spent solving problems and explaining concepts to each other). There's a growing body of data that suggests this format is quite effective: by a certain metric, it seems to lead to an improvement in conceptual understanding over more traditional methods by over a factor of 2!
 
 Students explaining concepts to each other is a key component of successful education. If you're struggling to understand something, often an explanation from one of your classmates can be very useful (your classmates are more likely to understand precisely what you're struggling with, since they probably struggled with the same thing not that long ago). Conversely, if you've already managed to understand something, explaining it to a student who's struggling can really help solidify your understanding. The peer instruction model builds in discussion among students inside the classroom. I *strongly* encourage all of you to discuss concepts with each other outside of class as well.
 
@@ -88,8 +91,8 @@ Reading assignments   10%
 Problem sets          15%
 Writing assignment    5%
 Quizzes               30%
-Final exam            20%
-Poster project        15%
+Final exam            25%
+Poster project        10%
 Participation         5%
 --------------------- ------
 
@@ -97,11 +100,13 @@ Here are some details about each of the components of your grade.
 
 * Every reading assignment you submit is worth up to 2 points: 1 for the question, 1 for the exercises. The reading assignments component of your grade will be the total number of points you accumulate in this way, out of a maximum of $2(n-2)$ points, where $n$ is the total number of reading assignments assigned. In other words, you don't need to do submit both things every day to get a perfect score for this component of your grade.
 
-* Problem sets will be collected in batches on quiz/exam days. Only the problems that are multiples of 4 will be graded. A random subset of the multiples of 4 will be graded for correctness, and you'll get completion points for the rest.  
+* Problem sets will be collected in batches on quiz/exam days. Only the problems that are multiples of 4 will be graded (a random subset will be graded for correctness, and you'll get completion points for the rest).  
+
+    We'll also do a "zombie project" in the middle of the block. It'll count as a problem set.
 
 * There will be a short writing assignment towards the beginning of the block. You'll find more details on the [webpage](/teaching/fa18-b3_ma126).
 
-* There will be three quizzes during the block. They will take place in the afternoons (see the calendar on the course [webpage](/teaching/fa18-b2_ma220) for the dates and times). There will be some free response questions, and some true-false questions. No books, notes, or electronic devices will be permitted.
+* There will be three quizzes during the block. They will take place in the afternoons (see the calendar on the course [webpage](/teaching/fa18-b3_ma126) for the dates and times). There will be some free response questions, and some true-false questions. No books, notes, or electronic devices will be permitted.
 
     A day or two after the quiz, I'll block off a couple of hours in the afternoons for "quiz revisions." During this time, you can come by and meet with me one-on-one to discuss up to 2 of the true-false questions that you left blank. If you convince me that you now fully understand the solution, you'll get points for that question.
 
@@ -121,11 +126,11 @@ If you anticipate or experience any disability-related barriers to your learning
 
 ## Honor code
 
-Please make sure that you are familiar with the [Honor Code](https://www.coloradocollege.edu/other/honorcouncil/) at CC. Violations of the Honor Code will have to be reported to the Honor Council, which is no fun for anyone.
+Please make sure that you are familiar with the [Honor Code](https://www.coloradocollege.edu/other/honorcouncil/) at CC. Violations of the Honor Code will have to be reported to the Honor Council, which is really no fun for anyone.
 
 ## Advice
 
 * *Mens sana in corpore sano*. It is very challenging to get caught up after being ill, especially on the block plan. I encourage you to make sure that you're getting enough sleep, that you're eating well, and that you're staying physically active. Take care of yourself!
 * If you do happen to get sick, please stay home to avoid getting your classmates sick, and let me know so that we can figure out how you'll make up class work.
-* The structure of this class will require you to be proactive about your learning. If you need help developing good study habits, please ask me for help and I'll be happy to assist you.
+* The structure of this class will require you to be proactive about your learning. If you need help developing good study habits, please ask me for help and I'll be happy to help.
 * Reading math can be challenging: you have to read slowly, and pause constantly to ask yourself if you really understood the last sentence you just read.

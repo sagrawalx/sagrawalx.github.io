@@ -14,10 +14,10 @@ nonav: true
     * Paraprof: Bob Kuo.
 * [Course syllabus](syllabus).
 * Textbook: Hefferon, *Linear Algebra*, 3rd edition.
-    * Textbook and solutions are available <a href="http://joshua.smcvt.edu/linearalgebra/" target="_blank">online</a>. <!--_-->
-    * See also: a running list of <a href="errata.pdf" target="_blank">errata</a>.
-* For help outside of class, see below for Sunny's office hours (in Tutt Science 234) and for problem sessions with Haley and Bob. Also, check the <a href="https://www.coloradocollege.edu/offices/colketcenter/qrc/blocktutorschedule/" target="_blank">tutoring schedule for the QRC</a>. <!--_-->
-* <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqMGdi8dt1oH8L9OO7VTuROhgXO0MhDM1erB9dlj36EZs_ww/viewform" target="_blank">Reading assignment submission form</a>. <!--_-->
+    * Textbook and solutions are available [online](http://joshua.smcvt.edu/linearalgebra/).
+    * See also: a running list of [errata](errata.pdf).
+* For help outside of class, see below for Sunny's office hours (in Tutt Science 234) and for problem sessions with Haley and Bob. Also, check the [tutoring schedule for the QRC](https://www.coloradocollege.edu/offices/colketcenter/qrc/blocktutorschedule/).
+* Reading assignment submission form (class is over, link disabled).
 
 # Calendar
 
@@ -115,7 +115,7 @@ Do: 1.18–20, 2.17
 </tr>
 
 <tr>
-<td colspan="3">Quiz 1 (1–2pm). Sections covered: up through Two.I.1. [Solutions](quiz1.pdf).
+<td colspan="3">Quiz 1 (1–2pm). Sections covered: up through Two.I.1.
 </td>
 </tr>
 
@@ -220,7 +220,7 @@ Do: 1.8, 2.14, 19, 3.24, 4.13–14
 
 <tr>
 <td colspan="3">
-Quiz 2 (2–3pm). Sections covered: up through Three.III. [Solutions](quiz2.pdf).
+Quiz 2 (2–3pm). Sections covered: up through Three.III.
 </td>
 </tr>
 
@@ -300,7 +300,7 @@ Do: 2.7–9, 3.22–23
 
 <tr>
 <td colspan="3">
-Quiz 3 (1–2pm). Sections covered: up through Five.II.1 (excluding Four). [Solutions](quiz3.pdf).
+Quiz 3 (1–2pm). Sections covered: up through Five.II.1 (excluding Four).
 </td>
 </tr>
 
@@ -327,7 +327,7 @@ Sunny's office hours (3:30–4:30pm).</td>
 <td>[In class questions](w4_mon.pdf)[^2]</td>
 </tr>
 
-[^2]: There are a few extra problems in these slides that we did not get to in class today.
+[^2]: There are a few extra problems in these slides that we did not get to in class. I left them in the slides in case you wanted more practice.
 
 <tr>
 <td colspan="3">
@@ -339,7 +339,7 @@ Problem session with Haley (6–8pm).
 
 <tr>
 <td>Tue</td>
-<td colspan="3">Final exam (in class). Sections covered: everything. [Solutions](final.pdf).</td>
+<td colspan="3">Final exam (in class). Sections covered: everything.</td>
 </tr>
 
 <tr>

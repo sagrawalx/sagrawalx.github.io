@@ -5,9 +5,13 @@ permalink: teaching/
 
 # Currently Teaching
 
-* Fall 2018, Block 2. [MA220 - Linear Algebra](fa18-b2_ma220).
+* Fall 2018, Block 3. [MA126 - Calculus 1](fa18-b3_ma126).
 
 # Previously Taught
+
+## Colorado College
+
+* Fall 2018, Block 2. [MA220 - Linear Algebra](fa18-b2_ma220).
 
 ## UC Berkeley
 

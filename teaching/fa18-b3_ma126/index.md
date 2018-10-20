@@ -8,14 +8,14 @@ nonav: true
 
 # Overview
 
-* Class: Monday through Friday, 9:15–11:45.
+* Class: Monday through Friday, 9:15–11:45, in Armstrong 301.
 * Instructor: Shishir Agrawal (I also go by Sunny), <span class="email">@</span>.
     * LA: Sam Kottler.
     * Paraprof: Bob Kuo.
 * [Course syllabus](syllabus).
 * Textbook: *Calculus: Early Transcendentals* by Rogawski and Adams, 3rd edition.
-* For help outside of class, see below for Sunny's office hours (in Tutt Science 234) and for problem sessions with Sam and Bob. Also, check the <a href="https://www.coloradocollege.edu/offices/colketcenter/qrc/blocktutorschedule/" target="_blank">tutoring schedule for the QRC</a>. <!--_-->
-<!-- * <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqMGdi8dt1oH8L9OO7VTuROhgXO0MhDM1erB9dlj36EZs_ww/viewform" target="_blank">Reading assignment submission form</a>. <!--_-->
+* For help outside of class, see below for Sunny's office hours (in Tutt Science 234) and for problem sessions with Sam and Bob. Also, check the [tutoring schedule for the QRC](https://www.coloradocollege.edu/offices/colketcenter/qrc/blocktutorschedule/).
+* [Reading assignment submission form](https://docs.google.com/forms/d/e/1FAIpQLSc9fJS_VF27cCJKtwQtIECxH5-JiGYgV5DyeBB5Un67Bg0X1g/viewform).
 
 # Calendar
 
@@ -176,7 +176,8 @@ Quiz 1 revisions (2–4pm).
 
 <tr>
 <td rowspan="2">Tue</td>
-<td>Rates of change</td>
+<td>Rates of change  
+[Zombie project](zombie.pdf)</td>
 <td>Read: 3.4–5, 3.10  
 Do:
 </td>
@@ -204,6 +205,7 @@ Do:
 <td colspan="3">
 Problem session with Bob (1–2pm).  
 Sunny's office hours (2–3pm).  
+[Zombie project](zombie.pdf) data plot due (11:59pm).
 </td>
 </tr>
 
@@ -254,6 +256,7 @@ Quiz 2 (1–2pm). Sections covered: up through 4.1, and also 4.8.
 <td colspan="3">
 Problem session with Bob (1–2pm).  
 Quiz 2 revisions (2–4pm).  
+[Zombie project](zombie.pdf) report due (11:59pm).
 </td>
 </tr>
 
@@ -301,7 +304,7 @@ Do: </td>
 <tr>
 <td colspan="3">
 Problem sets for 4.2–7 and 5.1–2 due (1pm).  
-Quiz 3 (1–2pm). Up through 5.2.
+Quiz 3 (1–2pm). Sections covered: up through 5.2.
 </td>
 </tr>
 
@@ -339,7 +342,7 @@ Sunny's office hours (2–3pm).
 <tr>
 <td>Tue</td>
 <td colspan="3">
-Problem sets for 5.3–9 due (9:15am).
+Problem sets for 5.3–9 due (9:15am).  
 Final exam (in class). Sections covered: everything.
 </td>
 </tr>
