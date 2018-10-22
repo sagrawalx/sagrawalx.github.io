@@ -14,7 +14,10 @@ nonav: true
     * Paraprof: Bob Kuo.
 * [Course syllabus](syllabus).
 * Textbook: *Calculus: Early Transcendentals* by Rogawski and Adams, 3rd edition.
-* For help outside of class, see below for Sunny's office hours (in Tutt Science 234) and for problem sessions with Sam and Bob. Also, check the [tutoring schedule for the QRC](https://www.coloradocollege.edu/offices/colketcenter/qrc/blocktutorschedule/).
+* For help outside of class...
+    * See below for Sunny's office hours (in Tutt Science 234).
+    * See below also for problem sessions with Sam and Bob (in our classroom). If you'd like to attend a problem session, please make sure to arrive within about 15 minutes of the indicated starting time.
+    * Check the [tutoring schedule for the QRC](https://www.coloradocollege.edu/offices/colketcenter/qrc/blocktutorschedule/). Note that Sam will have drop-in hours at the QRC on Thursdays, 2–4pm.
 * [Reading assignment submission form](https://docs.google.com/forms/d/e/1FAIpQLSc9fJS_VF27cCJKtwQtIECxH5-JiGYgV5DyeBB5Un67Bg0X1g/viewform).
 
 # Calendar
@@ -63,7 +66,7 @@ nonav: true
 
 <tr>
 <td colspan="3">
-Problem session with Bob (1–2pm).  
+Problem session with Bob (1pm).  
 Sunny's office hours (2–3pm).
 </td>
 </tr>
@@ -88,7 +91,8 @@ Do: (2.2) 1, 5
 
 <tr>
 <td colspan="3">
-Sunny's office hours (2–3pm).
+Sunny's office hours (2–3pm).  
+Problem session with Sam (7pm).
 </td>
 </tr>
 
@@ -109,7 +113,7 @@ Do: (2.4) 5
 
 <tr>
 <td colspan="3">
-Problem session with Bob (1–2pm).  
+Problem session with Bob (1pm).  
 Sunny's office hours (2–3pm).  
 Writing assignment due (11:59pm). <a href="/teaching/prompt.pdf" target="_blank">Prompt</a>.<!--_--></td>
 </tr>
@@ -127,7 +131,8 @@ Do: (3.1) 29, 31
 
 <tr>
 <td colspan="3">
-Sunny's office hours (2–3pm).
+Sunny's office hours (2–3pm).  
+Problem session with Sam (7pm).
 </td>
 </tr>
 
@@ -169,7 +174,7 @@ Do:
 
 <tr>
 <td colspan="3">
-Problem session with Bob (1–2pm).  
+Problem session with Bob (1pm).  
 Quiz 1 revisions (2–4pm).  
 </td>
 </tr>
@@ -188,6 +193,7 @@ Do:
 <tr>
 <td colspan="3">
 Sunny's office hours (2–3pm).  
+Problem session with Sam (7pm).
 </td>
 </tr>
 
@@ -203,7 +209,7 @@ Do:
 
 <tr>
 <td colspan="3">
-Problem session with Bob (1–2pm).  
+Problem session with Bob (1pm).  
 Sunny's office hours (2–3pm).  
 [Zombie project](zombie.pdf) data plot due (11:59pm).
 </td>
@@ -219,7 +225,8 @@ Sunny's office hours (2–3pm).
 
 <tr>
 <td colspan="3">
-Sunny's office hours (2–3pm).
+Sunny's office hours (2–3pm).  
+Problem session with Sam (7pm).
 </td>
 </tr>
 
@@ -254,7 +261,7 @@ Quiz 2 (1–2pm). Sections covered: up through 4.1, and also 4.8.
 
 <tr>
 <td colspan="3">
-Problem session with Bob (1–2pm).  
+Problem session with Bob (1pm).  
 Quiz 2 revisions (2–4pm).  
 [Zombie project](zombie.pdf) report due (11:59pm).
 </td>
@@ -272,6 +279,7 @@ Do:
 <tr>
 <td colspan="3">
 Sunny's office hours (2–3pm).  
+Problem session with Sam (7pm).  
 Poster project proposals due (11:59pm). Details coming soon!
 </td>
 </tr>
@@ -287,8 +295,9 @@ Do: </td>
 
 <tr>
 <td colspan="3">
-Problem session with Bob (1–2pm).  
+Problem session with Bob (1pm).  
 Sunny's office hours (2–3pm).  
+Problem session with Sam (7pm).
 </td>
 </tr>
 
@@ -334,8 +343,9 @@ Quiz 3 revisions (12:30–2:30pm).
 
 <tr>
 <td colspan="3">
-Problem session with Bob (1–2pm).  
-Sunny's office hours (2–3pm).
+Problem session with Bob (1pm).  
+Sunny's office hours (2–3pm).  
+Problem session with Sam (7pm).
 </td>
 </tr>
 
