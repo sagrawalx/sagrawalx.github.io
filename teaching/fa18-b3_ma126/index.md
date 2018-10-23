@@ -57,7 +57,7 @@ nonav: true
 
 <tr>
 <td rowspan="2">Mon</td>
-<td>Introduction</td>
+<td>[Introduction](precalc.pdf)</td>
 <td>None</td>
 <td>
 (Optional! Chapter 1 Review) 9–10, 11, 13, 17, 19, 21, 41–42, 51–52
@@ -73,7 +73,7 @@ Sunny's office hours (2–3pm).
 
 <tr>
 <td rowspan="2">Tue</td>
-<td>Limits</td>
+<td>[Limits](limits.pdf)</td>
 <td>Read: 2.1–3, 2.6–7  
 Do: (2.2) 1, 5  
 (2.3) 9, 13  
