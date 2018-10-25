@@ -109,7 +109,7 @@ Writing assignment due (11:59pm). <a href="/teaching/prompt.pdf" target="_blank"
 
 <tr>
 <td rowspan="2">Thu</td>
-<td>Derivatives</td>
+<td>[Derivatives](differentiation1.pdf)</td>
 <td>Read: 3.1  
 Do: (3.1) 29, 31
 </td>
