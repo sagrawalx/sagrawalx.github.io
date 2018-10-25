@@ -156,7 +156,7 @@ Quiz 1 (1–2pm). Sections covered: up through 2.8.
 <td>More rules of differentiation</td>
 <td>Read: 3.7–9  
 Do: (3.7) 1, 3  
-(3.8) 3
+(3.8) 3  
 (3.9) 1, 3, 37  
 </td>
 <td>
