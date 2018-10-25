@@ -23,18 +23,7 @@ nonav: true
 # Calendar
 
 <!--
-3.5 — 2, 6, 14, 40  
-3.7 — 30, 32, 40, 44, 50, 66  
-3.8 — 10, 20, 24, 54, 60  
-3.9 — 2, 8, 32  
-3.10 — 5, 7, 9, 22
 
-4.2 — 20, 21, 22, 23, 24, 25, 32, 33  
-4.3 — 20, 22, 24, 28, 42, 63  
-4.4 — 4, 6, 8, 18, 42, 50  
-4.5 — 2, 6, 12, 14, 30, 40  
-4.6 — 16, 18, 19, 22, 31, 56, 58
-4.7 — 2, 6, 7, 19, 43
 
 5.1 — 2, 9, 16  
 5.2 — 2, 13, 26, 30  
@@ -98,7 +87,7 @@ Problem session with Sam (7pm).
 
 <tr>
 <td rowspan="2">Wed</td>
-<td>Continuity</td>
+<td>[Continuity](continuity.pdf)</td>
 <td>Read: 2.4–5, 2.8  
 Do: (2.4) 5  
 (2.5) 1, 3  
@@ -166,9 +155,14 @@ Quiz 1 (1–2pm). Sections covered: up through 2.8.
 <td rowspan="2">Mon</td>
 <td>More rules of differentiation</td>
 <td>Read: 3.7–9  
-Do:
+Do: (3.7) 1, 3  
+(3.8) 3
+(3.9) 1, 3, 37  
 </td>
 <td>
+(3.7) 52–72 evens, 86, 104  
+(3.8) 18–26 evens, 66, 86  
+(3.9) 16–20 evens, 38–42 evens  
 </td>
 </tr>
 
@@ -184,9 +178,14 @@ Quiz 1 revisions (2–4pm).
 <td>Rates of change  
 [Zombie project](zombie.pdf)</td>
 <td>Read: 3.4–5, 3.10  
-Do:
+Do: (3.4) 1, 5  
+(3.5) 39  
+(3.10) 3, 5, 9  
 </td>
 <td>
+(3.4) 14, 22–28 evens  
+(3.5) 32, 40, 46  
+(3.10) 16–26 evens   
 </td>
 </tr>
 
@@ -201,9 +200,12 @@ Problem session with Sam (7pm).
 <td rowspan="2">Wed</td>
 <td>Linear approximations</td>
 <td>Read: 4.1, 4.8  
-Do:
+Do: (4.1) 9, 25  
+(4.8) 1, 3  
 </td>
 <td>
+(4.1) 10, 12, 20  
+(4.8) 8, 12, 24
 </td>
 </tr>
 
@@ -218,9 +220,18 @@ Sunny's office hours (2–3pm).
 <tr>
 <td rowspan="2">Thu</td>
 <td>Shapes of graphs</td>
-<td>Read: 4.2–4, 4.6
+<td>Read: 4.2–4, 4.6  
+Do: (4.2) 1, 3   
+(4.3) 19, 23   
+(4.4) 1, 3  
+(4.6) 1  
 </td>
-<td></td>
+<td>
+(4.2) 14–24 evens, 32–40 evens  
+(4.3) 40–48 evens, 64  
+(4.4) 20–24 evens, 42, 44, 62  
+(4.6) 20–26 evens   
+</td>
 </tr>
 
 <tr>
@@ -233,9 +244,13 @@ Problem session with Sam (7pm).
 <tr>
 <td rowspan="2">Fri</td>
 <td>L'Hôpital's rule, Optimization</td>
-<td>Read: 4.5, 4.7
+<td>Read: 4.5, 4.7  
+Do: (4.5) 1   
+(4.7) 1, 3, 5   
 </td>
 <td>
+(4.5) 20, 22     
+(4.7) 10–20 evens, 44–50 evens   
 </td>
 </tr>
 
