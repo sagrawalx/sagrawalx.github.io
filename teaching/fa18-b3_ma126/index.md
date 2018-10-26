@@ -127,7 +127,7 @@ Problem session with Sam (7pm).
 
 <tr>
 <td rowspan="2">Fri</td>
-<td>Rules of differentiation</td>
+<td>[Rules of differentiation](differentiation2.pdf)</td>
 <td>Read: 3.2–3, 3.6  
 Do: (3.2) 9, 11  
 (3.3) 3, 7  
