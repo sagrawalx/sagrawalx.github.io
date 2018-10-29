@@ -143,7 +143,7 @@ Do: (3.2) 9, 11
 <tr>
 <td colspan="3">
 Problem sets for 2.2–8 due (1pm).  
-Quiz 1 (1–2pm). Sections covered: up through 2.8.
+Quiz 1 (1–2pm). Sections covered: up through 2.8. [Solutions](quiz1.pdf).
 </td>
 </tr>
 
@@ -153,7 +153,7 @@ Quiz 1 (1–2pm). Sections covered: up through 2.8.
 
 <tr>
 <td rowspan="2">Mon</td>
-<td>More rules of differentiation</td>
+<td>[More rules of differentiation](differentiation3.pdf)</td>
 <td>Read: 3.7–9  
 Do: (3.7) 1, 3  
 (3.8) 3  

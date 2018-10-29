@@ -55,7 +55,8 @@ nonav: true
 ## Primary instructor
 
 * Colorado College
-    * Linear Algebra (Fall 2018, Block 2)
+    * Calculus 1 (Fall 2018, Block 3).
+    * Linear Algebra (Fall 2018, Block 2).
 * UC Berkeley
     * Linear algebra (Summer 2017).
     * Analysis (Summer 2015).
