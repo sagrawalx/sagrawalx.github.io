@@ -22,16 +22,6 @@ nonav: true
 
 # Calendar
 
-<!--
-
-
-5.1 — 2, 9, 16  
-5.2 — 2, 13, 26, 30  
-5.3 — 4, 8, 12, 14, 18, 24, 36, 38  
-5.4 — 10, 14, 26, 34, 43  
-5.5 — 21, 22, 25  
-5.7 — 30, 32, 42, 49, 66, 72 -->
-
 <table style="width: 100%">
 <tr>
 <th style="width: 10%;">Day</th>
@@ -175,7 +165,7 @@ Quiz 1 revisions (2–4pm).
 
 <tr>
 <td rowspan="2">Tue</td>
-<td>Rates of change  
+<td>[Rates of change](rate-of-change.pdf)  
 [Zombie project](zombie.pdf)</td>
 <td>Read: 3.4–5, 3.10  
 Do: (3.4) 1, 5  
@@ -269,8 +259,12 @@ Quiz 2 (1–2pm). Sections covered: up through 4.1, and also 4.8.
 <td rowspan="2">Mon</td>
 <td>Definite integrals</td>
 <td>Read: 5.1–2  
+Do: (5.1) 11, 23, 29  
+(5.2) 3, 7, 9  
 </td>
 <td>
+(5.1) 16–20 evens, 26, 40, 44, 56–62 evens, 73  
+(5.2) 8, 16, 20, 26, 44–52 evens, 56–60 evens   
 </td>
 </tr>
 
@@ -286,9 +280,15 @@ Quiz 2 revisions (2–4pm).
 <td rowspan="2">Tue</td>
 <td>Fundamental theorem of calculus</td>
 <td>Read: 5.3–5  
-Do:
+Do: (5.3) 3  
+(5.4) 7  
+(5.5) 8, 21
 </td>
-<td></td>
+<td>
+(5.3) 24–30 evens, 44, 70, 74  
+(5.4) 30–36 evens, 46  
+(5.5) 30, 40, 44, 48
+</td>
 </tr>
 
 <tr>
@@ -303,8 +303,12 @@ Poster project proposals due (11:59pm). Details coming soon!
 <td rowspan="2">Wed</td>
 <td>Substitution</td>
 <td>Read: 5.7–8  
-Do: </td>
+Do: (5.7) 1, 7  
+(5.8) 1, 3  
+</td>
 <td>
+(5.7) 34–40 evens, 70–74 evens, 78–84 evens    
+(5.8) 54–64 evens
 </td>
 </tr>
 
@@ -320,8 +324,12 @@ Problem session with Sam (7pm).
 <td rowspan="2">Thu</td>
 <td>Applications of integration</td>
 <td>Read: 5.6, 5.9  
-Do: </td>
+Do: (5.6) 1  
+(5.9) 1, 5  
+</td>
 <td>
+(5.6) 4, 8–12 evens  
+(5.9) 13–15, 28, 34   
 </td>
 </tr>
 
