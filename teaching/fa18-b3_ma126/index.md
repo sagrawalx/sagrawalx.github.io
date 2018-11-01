@@ -188,7 +188,7 @@ Problem session with Sam (7pm).
 
 <tr>
 <td rowspan="2">Wed</td>
-<td>Linear approximations</td>
+<td>[Linear approximations](wksht_linear-approx.pdf)</td>
 <td>Read: 4.1, 4.8  
 Do: (4.1) 9, 25  
 (4.8) 1, 3  
