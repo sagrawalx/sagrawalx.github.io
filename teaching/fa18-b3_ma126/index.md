@@ -295,7 +295,7 @@ Do: (5.3) 3
 <td colspan="3">
 Sunny's office hours (2–3pm).  
 Problem session with Sam (7pm).  
-Poster project proposals due (11:59pm). Details coming soon!
+Poster project proposals due (11:59pm). [Details](poster.pdf).
 </td>
 </tr>
 
@@ -382,6 +382,6 @@ Final exam (in class). Sections covered: everything.
 
 <tr>
 <td>Wed</td>
-<td colspan="3">Poster session (in class). Details coming soon!</td>
+<td colspan="3">Poster session (in class). [Details](poster.pdf).</td>
 </tr>
 </table>
