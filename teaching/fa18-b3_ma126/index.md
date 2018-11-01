@@ -209,7 +209,7 @@ Sunny's office hours (2–3pm).
 
 <tr>
 <td rowspan="2">Thu</td>
-<td>Shapes of graphs</td>
+<td>[Shapes of graphs](graph-shape.pdf)</td>
 <td>Read: 4.2–4, 4.6  
 Do: (4.2) 1, 3   
 (4.3) 19, 23   
