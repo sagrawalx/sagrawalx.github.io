@@ -257,7 +257,7 @@ Quiz 2 (1–2pm). Sections covered: up through 4.1, and also 4.8.
 
 <tr>
 <td rowspan="2">Mon</td>
-<td>Definite integrals</td>
+<td>[Definite integrals](definite.pdf)</td>
 <td>Read: 5.1–2  
 Do: (5.1) 11, 23, 29  
 (5.2) 3, 7, 9  
@@ -278,7 +278,7 @@ Quiz 2 revisions (2–4pm).
 
 <tr>
 <td rowspan="2">Tue</td>
-<td>Fundamental theorem of calculus</td>
+<td>[Fundamental theorem of calculus](ftc.pdf)</td>
 <td>Read: 5.3–5  
 Do: (5.3) 3  
 (5.4) 7  
