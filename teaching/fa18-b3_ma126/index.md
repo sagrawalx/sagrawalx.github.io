@@ -301,7 +301,7 @@ Poster project proposals due (11:59pm). [Details](poster.pdf).
 
 <tr>
 <td rowspan="2">Wed</td>
-<td>Substitution</td>
+<td>[Substitution](wksht_integration.pdf)</td>
 <td>Read: 5.7–8  
 Do: (5.7) 1, 7  
 (5.8) 1, 3  
@@ -322,7 +322,7 @@ Problem session with Sam (7pm).
 
 <tr>
 <td rowspan="2">Thu</td>
-<td>Applications of integration</td>
+<td>[Applications of integration](wksht_integration-applications.pdf)</td>
 <td>Read: 5.6, 5.9  
 Do: (5.6) 1  
 (5.9) 1, 5  
