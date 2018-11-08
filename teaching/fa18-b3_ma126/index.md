@@ -247,7 +247,7 @@ Do: (4.5) 1
 <tr>
 <td colspan="3">
 Problem sets for 3.1–4.1 and 4.8 due (1pm).  
-Quiz 2 (1–2pm). Sections covered: up through 4.1, and also 4.8.
+Quiz 2 (1–2pm). Sections covered: up through 4.1, and also 4.8. [Solutions](quiz2.pdf).
 </td>
 </tr>
 
