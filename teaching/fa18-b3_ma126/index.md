@@ -342,7 +342,7 @@ Quiz 3 (1–2pm). Sections covered: up through 5.2.
 
 <tr>
 <td rowspan="2">Fri</td>
-<td>Review</td>
+<td>[Review](review1.pdf)</td>
 <td>None</td>
 <td>None</td>
 </tr>
