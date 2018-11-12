@@ -359,7 +359,7 @@ Quiz 3 revisions (12:30–2:30pm).
 
 <tr>
 <td rowspan="2">Mon</td>
-<td>Review</td>
+<td>[Review](review2.pdf)</td>
 <td>None</td>
 <td>None</td>
 </tr>
