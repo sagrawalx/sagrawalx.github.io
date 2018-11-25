@@ -18,7 +18,7 @@ nonav: true
     * See below for Sunny's office hours (in Tutt Science 234).
     * See below also for problem sessions with Sam and Bob (in our classroom). If you'd like to attend a problem session, please make sure to arrive within about 15 minutes of the indicated starting time.
     * Check the [tutoring schedule for the QRC](https://www.coloradocollege.edu/offices/colketcenter/qrc/blocktutorschedule/). Note that Sam will have drop-in hours at the QRC on Thursdays, 2–4pm.
-* [Reading assignment submission form](https://docs.google.com/forms/d/e/1FAIpQLSc9fJS_VF27cCJKtwQtIECxH5-JiGYgV5DyeBB5Un67Bg0X1g/viewform).
+* Reading assignment submission form (class is over, link disabled).
 
 # Calendar
 
