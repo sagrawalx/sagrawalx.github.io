@@ -172,11 +172,18 @@ main {
         padding-left: 2.5em;
     }
 
-    .introduction {
+    .introduction, .references {
         font-size: small;
         background-color: $light;
         padding: 0.2em 2em;
         margin-bottom: 1em;
+        border-radius: 0.2em;
+    }
+
+    .references {
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        margin-top: 1em;
     }
 
     .footnoteRef, sup {
@@ -186,6 +193,10 @@ main {
 
     .footnotes {
         font-size: small;
+        ol {
+            padding-left: 4.5em;
+            padding-right: 2em;
+        }
     }
 
     hr {

@@ -97,16 +97,24 @@ main {
   main ol {
     list-style: decimal;
     padding-left: 2.5em; }
-  main .introduction {
+  main .introduction, main .references {
     font-size: small;
     background-color: #eee;
     padding: 0.2em 2em;
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+    border-radius: 0.2em; }
+  main .references {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    margin-top: 1em; }
   main .footnoteRef, main sup {
     vertical-align: super;
     font-size: xx-small; }
   main .footnotes {
     font-size: small; }
+    main .footnotes ol {
+      padding-left: 4.5em;
+      padding-right: 2em; }
   main hr {
     margin-top: 1em;
     border: 0;
