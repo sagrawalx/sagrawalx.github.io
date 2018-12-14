@@ -9,7 +9,7 @@ layout: post
 
 <div class="introduction">
 
-This is a translation of a short piece of satire by famed author Saadat Hasan Manto (1912-1955). The original can be found on [Rekhta](https://www.rekhta.org/articles/hindi-aur-urdu-saadat-hasan-manto-articles?lang=ur) in the Urdu alphabet, and a Nagari transliteration can be found [here]({% post_url 2018-12-12-हिंदी-और-उर्दू %}). All footnotes were added in translation in order to explain some relevant background information.
+This is a translation of a short piece of satire by famed author Saadat Hasan Manto (1912-1955), published in a collection titled *Manto's Essays* (मंटो के मज़ामीन · <span dir="rtl">منٹو کے مضامین</span>, 1942). The original can be found on [Rekhta](https://www.rekhta.org/articles/hindi-aur-urdu-saadat-hasan-manto-articles?lang=ur) in the Urdu alphabet, and a Nagari transliteration can be found [here]({% post_url 2018-12-12-हिंदी-और-उर्दू %}). All footnotes were added in translation in order to explain some relevant background information.
 
 But first, a whirlwind synopsis of the historical background for those who may need it...
 
@@ -19,11 +19,11 @@ At this time, profound sectarianism began coursing through South Asia. The cause
 
 "Camp Urdu" proposed an opposite reactionary vision. Adherents of this camp would attempt to eliminate all Indo-Aryan vocabulary from their writing and replace them with Persian loanwords, to the point that one could find "whole sentences in which the only Indian thing is the grammar, and with nothing but Persian words from beginning to end" {% cite grierson --locator 45 in vol. 9 pt. 1 %}.
 
-And then there was "Camp Hindustani," the center of the spectrum spanned by Camp Hindi on one end and Camp Urdu on the other. They emphasized the language that was actually used by the rural masses. With the other two camps polarizing the usage of the names "Hindi" and "Urdu," some in Camp Hindustani tried to popularize the name "Hindustani" to refer to this common core (but this was not universal: some people who used the terms "Hindi" or "Urdu," including Manto, would likely still be placed ideologically in Camp Hindustani). Some in Camp Hindustani also proposed a compromise system where both Nagari and the Urdu alphabet would be accepted orthographies for this language.
+And then there was "Camp Hindustani," the center of the spectrum spanned by Camp Hindi on one end and Camp Urdu on the other. They emphasized the language that was actually used by the rural masses. With the other two camps polarizing the usage of the names "Hindi" and "Urdu," some in Camp Hindustani tried to popularize the name "Hindustani" to refer to this common core (but this was not universal: some people who used the terms "Hindi" or "Urdu" would likely still be placed ideologically in Camp Hindustani). Some in Camp Hindustani also proposed a compromise orthographic system where both Nagari and the Urdu alphabet would be recognized scripts for writing this language.
 
 Needless to say, the above simplifies a great deal, and the interested reader will find numerous and voluminous tomes written about the Hindi-Urdu fissure (e.g., {% cite king %}, {% cite chand %}, ...). In any case, by the 1940s, intellectual arguments between these camps had reached fever pitch. With independence looming just around the corner, questions about the "national language" of the soon-to-be-independent state(s) brought this debate to the political forefront. And then, Partition befell the Subcontinent, and the extremes won out politically: the vision of Camp Hindi became enshrined as one of the official languages of the Government of India (alongside English), and the vision of Camp Urdu became enshrined as one of the official languages of Pakistan (again, alongside English).
 
-Of course, none of this intellectual brouhaha has had much bearing on the language as it used by the masses. Even today, speakers in India can largely understand speakers in Pakistan and conversely, except when the diction becomes highly Sanskritized or highly Persianized. Perhaps the only significant impact of the Hindi-Urdu debates is that, since literacy only rose dramatically after independence, most people on both sides of the border cannot read written work produced on the other side until it is transliterated.
+Of course, none of this intellectual brouhaha has had much bearing on the language as it used by the masses. Even today, speakers in India can largely understand speakers in Pakistan, and conversely, except when the diction becomes highly Sanskritized or highly Persianized. Perhaps the only significant impact of the Hindi-Urdu debates is that, since literacy only rose dramatically after independence, most people on both sides of the border cannot read written work produced on the other side until it is transliterated.
 
 The hysterical tenor and simultaneous pointlessness of the Hindi-Urdu debates is the object of satire in the following.
 </div>
@@ -55,7 +55,7 @@ Munshi: So you hate lemon soda.
 
 Iqbal: No... Why would I hate it, Munshi Narayan Prashad? It's just that everyone in my family drinks club soda, so I've gotten used to it. It's not a big deal, and actually I think that lemon soda is more enjoyable than club soda.
 
-Munshi: That's why I'm surprised. Why would you prefer a brackish drink over a sweet one? Lemon soda is not only sweet, it also smells nice. What do you think?
+Munshi: That's why I'm surprised. Why would you prefer a brackish drink over a sweet one? Lemon soda is not only sweet, it also smells nice. Don't you think so?
 
 Iqbal: You're absolutely right. But...
 
@@ -63,7 +63,7 @@ Munshi: But what?
 
 Iqbal: Nothing... I was just about to say that I'm going to have club soda anyway.
 
-Munshi: You're being so insensible! If someone was listening, they'd think I was forcing you to drink poison... C'mon, is there even any difference between lemon soda and club soda? The same factory makes both bottles. The same machine fills them both up. And besides, if you take the sweetness and the fragrance out of lemon soda, what would you be left with?
+Munshi: How insensible! If someone was listening, they'd think I was forcing you to drink poison... C'mon, is there even any difference between lemon soda and club soda? The same factory makes both bottles. The same machine fills them both up. And besides, if you take the sweetness and the fragrance out of lemon soda, what would you be left with?
 
 Iqbal: Club soda... Brackish water...
 
@@ -95,7 +95,7 @@ Munshi: There's... no... problem.
 
 Iqbal: It's just that club soda is a little better.
 
-Munshi: Lemon, I think lemon soda is a little better.
+Munshi: Lemon — I think lemon soda is a little better.
 
 Iqbal: That may be... But I grew up hearing that club soda is better.
 
