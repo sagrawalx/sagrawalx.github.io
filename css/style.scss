@@ -172,9 +172,20 @@ main {
         padding-left: 2.5em;
     }
 
+    .introduction {
+        font-size: small;
+        background-color: $light;
+        padding: 0.2em 2em;
+        margin-bottom: 1em;
+    }
+
     .footnoteRef, sup {
         vertical-align: super;
-        font-size: 0.75em;
+        font-size: xx-small;
+    }
+
+    .footnotes {
+        font-size: small;
     }
 
     hr {
