@@ -7,7 +7,7 @@ layout: post
 *A translation of a poem by Harivansh Rai Bachchan*
 
 <div class="introduction">
-The original poem, written by Harivanish Rai Bachchan (1907-2003) in Hindustani, is called आ रही रवी की सवारी · <span dir="rtl">آ رہی روی کی سواری </span>. It comes from the collection निशा निमंत्रण · <span dir="rtl">نشا نمنترن</span> ("Invitation of the night," published in 1938), and the original is available in Nagari on [Kavita Kosh](http://kavitakosh.org/kk/%E0%A4%86_%E0%A4%B0%E0%A4%B9%E0%A5%80_%E0%A4%B0%E0%A4%B5%E0%A4%BF_%E0%A4%95%E0%A5%80_%E0%A4%B8%E0%A4%B5%E0%A4%BE%E0%A4%B0%E0%A5%80_/_%E0%A4%B9%E0%A4%B0%E0%A4%BF%E0%A4%B5%E0%A4%82%E0%A4%B6%E0%A4%B0%E0%A4%BE%E0%A4%AF_%E0%A4%AC%E0%A4%9A%E0%A5%8D%E2%80%8D%E0%A4%9A%E0%A4%A8).
+The original poem, written by Harivanish Rai Bachchan (1907-2003) in Hindustani, is called आ रही रवी की सवारी · <span dir="rtl">آ رہی روی کی سواری</span>, and comes from the collection निशा निमंत्रण · <span dir="rtl">نشا نمنترن</span> ("Invitation of the night," 1938). The original is available in Nagari on [Kavita Kosh](http://kavitakosh.org/kk/%E0%A4%86_%E0%A4%B0%E0%A4%B9%E0%A5%80_%E0%A4%B0%E0%A4%B5%E0%A4%BF_%E0%A4%95%E0%A5%80_%E0%A4%B8%E0%A4%B5%E0%A4%BE%E0%A4%B0%E0%A5%80_/_%E0%A4%B9%E0%A4%B0%E0%A4%BF%E0%A4%B5%E0%A4%82%E0%A4%B6%E0%A4%B0%E0%A4%BE%E0%A4%AF_%E0%A4%AC%E0%A4%9A%E0%A5%8D%E2%80%8D%E0%A4%9A%E0%A4%A8).
 
 I have a friend who enjoys waking up very early and watching the sunrise (sentiments I cannot understand...). I was reminded of this poem during one of our conversations, and decided to translate it — in part to share it with my friend since she does not speak Hindustani, but mostly to procrastinate.
 </div>
@@ -16,8 +16,8 @@ I have a friend who enjoys waking up very early and watching the sunrise (sentim
 Here comes the procession of the Sun!
 
 The gilded chariot of newborn sunbeams,
-Its floral path blooming before it,
-Its cloud-like attendants clad in gold,
+A floral path blooming before it,
+Cloud-like attendants clad in gold,
 Here comes the procession of the Sun!
 
 The birds are a convoy of minstrels,
