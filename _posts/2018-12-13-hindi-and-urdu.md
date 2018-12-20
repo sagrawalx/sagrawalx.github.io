@@ -149,6 +149,6 @@ Iqbal: I want club soda mixed with lemon soda.
 Munshi: And I want lemon soda mixed with club soda.
 
 
-[^pickle]: The reference is to [South Asian pickles](https://en.wikipedia.org/wiki/South_Asian_pickles): fruits and vegetables pickled in oil or brine with a lot of spices. They are usually spicy, sour, and very fragrant.  
+[^pickle]: The reference is to [South Asian pickles](https://en.wikipedia.org/wiki/South_Asian_pickles): fruits and vegetables pickled in oil or brine with a lot of spices. They are usually spicy, sour, and very fragrant. I am not aware of health concerns associated to these pickles, but maybe rumors of such concerns were prevalent at the time of this writing. 
 
 {% include refbox.html content=linguistics %}
