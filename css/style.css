@@ -20,11 +20,15 @@ body {
     text-decoration: none; }
   body a:hover, body a:active, body a.current {
     color: #339999; }
-  body blockquote, body .blockquote {
+  body blockquote, body .blockquote, body div.sourceCode {
+    display: block;
     padding-left: 2em;
     border-left-style: solid;
     border-left-width: 5px;
     border-left-color: #eee; }
+  body div.sourceCode {
+    font-family: monospace;
+    overflow: auto; }
   body span.blockquote-attribution {
     display: block;
     text-align: right; }
