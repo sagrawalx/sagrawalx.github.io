@@ -55,6 +55,7 @@ nonav: true
 ## Primary instructor
 
 * Colorado College
+    * Ordinary Differential Equations (Spring 2019, Block 5).
     * Calculus 1 (Fall 2018, Block 3).
     * Linear Algebra (Fall 2018, Block 2).
 * UC Berkeley
