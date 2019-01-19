@@ -13,7 +13,7 @@ nonav: true
 
 ## Overview
 
-MA315 is an introduction to ordinary differential equations (ODEs). This is a very expansive subject with applications throughout the physical and social sciences. Part of the reason for the complexity is that there is no general theory that tells us how to solve all possible ODEs; instead, there are idiosyncratic techniques associated to different class of ODEs. Our focus in this class will be on two of these many classes: (1) first order ODEs, and (2) first order linear systems of ODEs with constant coefficients.
+MA315 is an introduction to ordinary differential equations (ODEs). This is a very expansive subject with applications throughout the physical and social sciences. Part of the reason for the expansiveness of the subject is that there is no general theory telling us how to solve all possible ODEs; instead, we have to learn to apply idiosyncratic techniques for each of many different classes of ODEs. Broadly speaking, our focus in this class will be on (1) first order ODEs, and (2) first order linear systems of ODEs with constant coefficients.
 
 ## Prerequisites
 
