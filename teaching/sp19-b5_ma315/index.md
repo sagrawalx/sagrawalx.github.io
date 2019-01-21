@@ -14,6 +14,7 @@ nonav: true
     * Office: Tutt Science 234.
 * [Course syllabus](syllabus).
 * Textbook: Lebl, [*Notes on Diffy Qs*](https://www.jirka.org/diffyqs/).
+    * See [here](exercise-notes) for some notes about some of the exercises.
     * See [here](comparative) for a comparison of our textbook with Judson's [*ODEs Project*](http://faculty.sfasu.edu/judsontw/ode/html-20190111/odeproject.html).
     * See [here](resources) for a longer list of potentially useful resources (including many free ones).
 * [Reading assignment submission form](https://docs.google.com/forms/d/e/1FAIpQLSd3DYI-j54LJkH8_KNA7YGStTrEHqruyxy4fOW0rNvKONEM2w/viewform).
@@ -213,7 +214,7 @@ Do: 2.2.103, 3.4.4, 102
 
 <tr>
 <td colspan="3">
-Office hours (12:30–1:30pm).
+Office hours (2–3pm).
 </td>
 </tr>
 
