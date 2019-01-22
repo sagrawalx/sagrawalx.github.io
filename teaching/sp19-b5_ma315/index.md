@@ -60,7 +60,8 @@ Do: 1.2.101, 104, 1.7.101
 </td>
 <td>
 1.2.102–103, 105, 7–8[^challenging]  
-1.7.103, 104a
+1.7.103, 104a  
+[In class problems](slope-fields.pdf)
 </td>
 </tr>
 
