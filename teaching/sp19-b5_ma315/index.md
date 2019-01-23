@@ -83,7 +83,8 @@ Do: 1.3.101, 103, 1.4.101
 </td>
 <td>
 1.3.102, 104–105, 107, 12  
-1.4.102–105
+1.4.102–105  
+[In class questions](separable+linear.pdf)
 </td>
 </tr>
 
