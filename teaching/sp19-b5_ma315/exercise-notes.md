@@ -22,7 +22,7 @@ These are not intended to be solutions. Just some thoughts.
 
     Note also that, not only is there not a continuously differentiable solution when the initial condition is $y(0) = 0$, there is just no solution whatsoever (more precisely, I mean that there is no differentiable function defined on an interval containing $x = 0$ that satisfies the differential equation). This is a consequence of [Darboux's theorem](https://en.wikipedia.org/wiki/Darboux%27s_theorem_%28analysis%29). If you've taken some real analysis, I encourage you to work out the details and write up a formal $\epsilon$-$\delta$ proof.
 
-* (1.2.7) Possible hint: if $g$ is a solution of the ODE $y' = f(x,y)$, consider the function $h$ defined by $h(x) = f(x) - x$.
+* (1.2.7) Possible hint: if $g$ is a solution of the ODE $y' = f(x,y)$, consider the function $h$ defined by $h(x) = g(x) - x$.
 
 * (1.3.107) Possible hint: partial fractions.
 
