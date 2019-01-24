@@ -103,7 +103,8 @@ Writing assignment due (11:59pm). [Prompt](/teaching/prompt.pdf).
 Do: 1.6.1, 101  
 </td>
 <td>
-1.6.2, 102, 104, 6–7
+1.6.2, 102, 104, 6–7  
+[In class questions](autonomous+review.pdf)
 </td>
 </tr>
 
