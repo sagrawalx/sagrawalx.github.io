@@ -129,9 +129,12 @@ Office hours (12:30–1:30pm).
 3.3.101  
 3.4.1, 2, 101a, 102a, 5, 11  
 3.7.8  
-3.8.9
+3.8.9  
+[In class questions](linalg-review.pdf)[^review]
 </td>
 </tr>
+
+[^review]: We didn't get a chance to go through these problems in class, but I'm posting them anyway in case you wanted a few more problems for practice.
 
 [^lin-alg]: Specifically, should review the following concepts:
 
@@ -285,9 +288,14 @@ Quiz 2 revisions (1–2:30pm).
 
 <tr>
 <td rowspan="2">Tue</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
+<td>Nonhomogeneous equations: Integrating factors and eigenvector decomposition</td>
+<td>
+Read: 3.9.1 (through the section on eigenvector decomposition)  
+Do: 3.9.101(a, b)
+</td>
+<td>
+3.9.102(a, b), 103–104
+</td>
 </tr>
 
 <tr>
@@ -299,9 +307,15 @@ Office hours (12:30–1:30pm).
 
 <tr>
 <td rowspan="2">Wed</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
+<td>Nonhomogeneous equations: Undetermined coefficients</td>
+<td>
+Read: 2.5.1–2, 3.9.1 (the section on undetermined coefficients)  
+Do: 2.5.103, 3.9.101
+</td>
+<td>
+2.5.101–102  
+3.9.102(c)
+</td>
 </tr>
 
 <tr>
@@ -313,9 +327,15 @@ Office hours (12:30–1:30pm).
 
 <tr>
 <td rowspan="2">Thu</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
+<td>Oscillations, Review</td>
+<td>
+Read: 2.4, 2.6  
+Do: 2.4.101, 2.6.101  
+</td>
+<td>
+2.4.103, 4  
+2.6.103
+</td>
 </tr>
 
 <tr>
