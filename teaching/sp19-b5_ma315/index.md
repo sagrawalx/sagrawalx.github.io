@@ -230,11 +230,11 @@ Office hours (2–3pm).
 <td rowspan="2">Thu</td>
 <td>Eigenvalue method: Defective eigenvalues</td>
 <td>Read: 3.7, and finish off 2.2[^1]  
-Do: 2.2.2, 102 (both ways), 3.7.101  
+Do: 2.2.2, 102 (both ways), 3.7.102  
 </td>
 <td>
 3.5.2, 3.5.103  
-3.7.102–104  
+3.7.103–104
 </td>
 </tr>
 
