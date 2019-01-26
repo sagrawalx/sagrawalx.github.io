@@ -10,7 +10,7 @@ nonav: true
 
 This project[^reference] asks you to explore an ODE model that is used in epidemiology. The output of this project is a report. You're strongly encouraged to discuss with each other, but you should write up your report individually in your own words. One part of the project will involve generating some data in groups; your analysis should still be written up individually.
 
-[^reference]: This project is adapted from the SIR project described by Stanley Florkowski and Ryan Miller on [SIMIODE](https://www.simiode.org/resources/4796/download/6-018-S-ExploringSIRModel-StudentVersion.pdf?b192279d45ce41a0fded95960ba3c998=1), and from ideas I got from Andrea Bruder.
+[^reference]: This project is adapted from the SIR project described by Stanley Florkowski and Ryan Miller on [SIMIODE](https://www.simiode.org/resources/4796/download/6-018-S-ExploringSIRModel-StudentVersion.pdf?b192279d45ce41a0fded95960ba3c998=1), and from ideas I got from conversations with Andrea Bruder.
 
 Email me your report as a PDF by 11:59pm on 3rd Monday.
 
@@ -22,7 +22,7 @@ A *compartmental model* in epidemiology is one that divides the population into 
 2. The people that are currently <strong>I</strong>nfected.
 3. The people that are immune to the disease, either inherently, or because they have <strong>R</strong>ecovered from the infection and have now developed immunity.
 
-Let $t$ denote the number of days that have elapsed since the infection begins to spread; we let $S(t), I(t)$ and $R(t)$ be the number of people in each of the above categories on day $t$. The model makes several simplifying assumptions and uses it to derive a system of ODEs satisfied by the functions $S, I$ and $R$.
+Let $t$ denote the number of days that have elapsed since the infection begins to spread; we let $S(t)$, $I(t)$, and $R(t)$ be the number of people in each of the above categories on day $t$. The model makes several simplifying assumptions and uses it to derive a system of ODEs satisfied by the functions $S$, $I$, and $R$.
 
 1. The total population $$N = S(t) + I(t) + R(t)$$ is always constant. In other words, this model makes the most sense for infections that spread in relatively short periods of time (much shorter than the life span of a human being) and do not kill off those who get infected.
 
@@ -30,7 +30,7 @@ Let $t$ denote the number of days that have elapsed since the infection begins t
 
 3. A fixed fraction, $c$, of infected individuals recover every day. In other words, $dR/dt = cI$.
 
-Putting the above assumptions together, we find $dI/dt = bSI - cI$. In other words, the SIR model asserts that the functions $S, I$ and $R$ satisfy the following system of ODEs.
+Putting the above assumptions together, we find $dI/dt = bSI - cI$. In other words, the SIR model asserts that the functions $S$, $I$, and $R$ satisfy the following system of ODEs.
 $$\begin{aligned}
 \frac{dS}{dt} &= -bSI \\
 \frac{dI}{dt} &= bSI - cI \\
@@ -98,8 +98,8 @@ I encourage you to toy around with the code until you've figured out what's goin
 
 Colorado Springs has a population of about 500,000. Suppose that initially just 1 person contracts an infection that's very contagious, but not very deadly. No one is immune initially, but people develop immunity after they've recovered from the infection. Each infected person infects 0.0005% of the susceptible population every day, and 40% of the infected population recovers every day.  
 
-1. What values of the parameters $b$ and $c$ are suggested by the above description? What initial conditions $S(0), I(0)$ and $R(0)$ are suggested?
-2. Generate a plot showing how $S, I$ and $R$ vary with time until day 40. Be sure your plot is clearly labeled.
+1. What values of the parameters $b$ and $c$ are suggested by the above description? What initial conditions $S(0)$, $I(0)$, and $R(0)$ are suggested?
+2. Generate a plot showing how $S$, $I$, and $R$ vary with time until day 40. Be sure your plot is clearly labeled.
 3. On what day is the infected population the highest?
 
 Now assume that 40% of the population is inherently immune to this infection.
@@ -146,7 +146,7 @@ Once you have your data, your job is to find the parameters $b$ and $c$ that fit
 
 <img src="sir-sample-2.png" style="width: 80%;"/>
 
-You can do this by guessing and checking various values of the parameters $b$ and $c$ until you find something that works reasonably well. For an optional challenge, try to figure out a way to find optimal[^optimal] values of for the parameters :)
+You can do this by guessing and checking various values of the parameters $b$ and $c$ until you find something that works reasonably well. For an optional challenge, try to figure out a way to find optimal[^optimal] values for the parameters :)
 
 [^optimal]: There are probably many ways of defining "optimal," and even with a fixed definition of "optimal," there are many ways of finding those optimal parameters. You'll have to figure out both of these things if you decide to do this challenge. If you'd like some possible hints, come talk to me!
 
@@ -208,4 +208,4 @@ Describe another scenario, besides the spread of an infection, that could reason
 \frac{dI}{dt} &= bSI - cI \\
 \frac{dR}{dt} &= cI
 \end{aligned}$$
-Be sure to explain precisely what $S, I$ and $R$ stand for in your model. What units do they have? What real world interpretation do the parameters $b$ and $c$ have? What simplifying assumptions about the scenario make this system of ODEs appropriate?
+Be sure to explain precisely what $S$, $I$, and $R$ stand for in your model. What units do they have? What real world interpretation do the parameters $b$ and $c$ have? What simplifying assumptions about the scenario make this system of ODEs appropriate?
