@@ -43,13 +43,13 @@ Spring 2019, Block 5 — MA315 — SIR Project
 <li>The people that are currently <strong>I</strong>nfected.</li>
 <li>The people that are immune to the disease, either inherently, or because they have <strong>R</strong>ecovered from the infection and have now developed immunity.</li>
 </ol>
-<p>Let <span class="math inline">\(t\)</span> denote the number of days that have elapsed since the infection begins to spread; we let <span class="math inline">\(S(t), I(t)\)</span> and <span class="math inline">\(R(t)\)</span> be the number of people in each of the above categories on day <span class="math inline">\(t\)</span>. The model makes several simplifying assumptions and uses it to derive a system of ODEs satisfied by the functions <span class="math inline">\(S, I\)</span> and <span class="math inline">\(R\)</span>.</p>
+<p>Let <span class="math inline">\(t\)</span> denote the number of days that have elapsed since the infection begins to spread; we let <span class="math inline">\(S(t)\)</span>, <span class="math inline">\(I(t)\)</span>, and <span class="math inline">\(R(t)\)</span> be the number of people in each of the above categories on day <span class="math inline">\(t\)</span>. The model makes several simplifying assumptions and uses it to derive a system of ODEs satisfied by the functions <span class="math inline">\(S\)</span>, <span class="math inline">\(I\)</span>, and <span class="math inline">\(R\)</span>.</p>
 <ol type="1">
 <li><p>The total population <span class="math display">\[N = S(t) + I(t) + R(t)\]</span> is always constant. In other words, this model makes the most sense for infections that spread in relatively short periods of time (much shorter than the life span of a human being) and do not kill off those who get infected.</p></li>
 <li><p>Each infected person infects a fixed fraction, <span class="math inline">\(b\)</span>, of susceptible people every day. In other words, each infected person causes <span class="math inline">\(bS(t)\)</span> new infections on day <span class="math inline">\(t\)</span>, so <span class="math inline">\(dS/dt = -bSI\)</span>.</p></li>
 <li><p>A fixed fraction, <span class="math inline">\(c\)</span>, of infected individuals recover every day. In other words, <span class="math inline">\(dR/dt = cI\)</span>.</p></li>
 </ol>
-<p>Putting the above assumptions together, we find <span class="math inline">\(dI/dt = bSI - cI\)</span>. In other words, the SIR model asserts that the functions <span class="math inline">\(S, I\)</span> and <span class="math inline">\(R\)</span> satisfy the following system of ODEs. <span class="math display">\[\begin{aligned}
+<p>Putting the above assumptions together, we find <span class="math inline">\(dI/dt = bSI - cI\)</span>. In other words, the SIR model asserts that the functions <span class="math inline">\(S\)</span>, <span class="math inline">\(I\)</span>, and <span class="math inline">\(R\)</span> satisfy the following system of ODEs. <span class="math display">\[\begin{aligned}
 \frac{dS}{dt} &amp;= -bSI \\
 \frac{dI}{dt} &amp;= bSI - cI \\
 \frac{dR}{dt} &amp;= cI
@@ -104,8 +104,8 @@ plot.show()
 <h2 id="part-2">Part 2</h2>
 <p>Colorado Springs has a population of about 500,000. Suppose that initially just 1 person contracts an infection that's very contagious, but not very deadly. No one is immune initially, but people develop immunity after they've recovered from the infection. Each infected person infects 0.0005% of the susceptible population every day, and 40% of the infected population recovers every day.</p>
 <ol type="1">
-<li>What values of the parameters <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> are suggested by the above description? What initial conditions <span class="math inline">\(S(0), I(0)\)</span> and <span class="math inline">\(R(0)\)</span> are suggested?</li>
-<li>Generate a plot showing how <span class="math inline">\(S, I\)</span> and <span class="math inline">\(R\)</span> vary with time until day 40. Be sure your plot is clearly labeled.</li>
+<li>What values of the parameters <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> are suggested by the above description? What initial conditions <span class="math inline">\(S(0)\)</span>, <span class="math inline">\(I(0)\)</span>, and <span class="math inline">\(R(0)\)</span> are suggested?</li>
+<li>Generate a plot showing how <span class="math inline">\(S\)</span>, <span class="math inline">\(I\)</span>, and <span class="math inline">\(R\)</span> vary with time until day 40. Be sure your plot is clearly labeled.</li>
 <li>On what day is the infected population the highest?</li>
 </ol>
 <p>Now assume that 40% of the population is inherently immune to this infection.</p>
@@ -165,7 +165,7 @@ plot.show()
 </table>
 <p>Once you have your data, your job is to find the parameters <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> that fit your data well, and to generate a plot that looks something like the following (where the points represent the data that you actually collected from the simulation, and the curves are the solutions generated by the SIR model).</p>
 <p><img src="sir-sample-2.png" style="width: 80%;"/></p>
-<p>You can do this by guessing and checking various values of the parameters <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> until you find something that works reasonably well. For an optional challenge, try to figure out a way to find optimal<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> values of for the parameters :)</p>
+<p>You can do this by guessing and checking various values of the parameters <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> until you find something that works reasonably well. For an optional challenge, try to figure out a way to find optimal<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> values for the parameters :)</p>
 <p>Note that I artificially concocted the simulation data displayed in the above plot precisely so that the ODE model fits the data reasonably well. Your model might not fit your data as well, and that's perfectly okay. Share the plot using the best values of <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> you can find, and then answer the following questions.</p>
 <ol type="1">
 <li>What values did you use for the parameters?</li>
@@ -218,11 +218,11 @@ plot.show()</code></pre></div>
 \frac{dS}{dt} &amp;= -bSI \\
 \frac{dI}{dt} &amp;= bSI - cI \\
 \frac{dR}{dt} &amp;= cI
-\end{aligned}\]</span> Be sure to explain precisely what <span class="math inline">\(S, I\)</span> and <span class="math inline">\(R\)</span> stand for in your model. What units do they have? What real world interpretation do the parameters <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> have? What simplifying assumptions about the scenario make this system of ODEs appropriate?</p>
+\end{aligned}\]</span> Be sure to explain precisely what <span class="math inline">\(S\)</span>, <span class="math inline">\(I\)</span>, and <span class="math inline">\(R\)</span> stand for in your model. What units do they have? What real world interpretation do the parameters <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> have? What simplifying assumptions about the scenario make this system of ODEs appropriate?</p>
 <section class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>This project is adapted from the SIR project described by Stanley Florkowski and Ryan Miller on <a href="https://www.simiode.org/resources/4796/download/6-018-S-ExploringSIRModel-StudentVersion.pdf?b192279d45ce41a0fded95960ba3c998=1">SIMIODE</a>, and from ideas I got from Andrea Bruder.<a href="#fnref1">↩</a></p></li>
+<li id="fn1"><p>This project is adapted from the SIR project described by Stanley Florkowski and Ryan Miller on <a href="https://www.simiode.org/resources/4796/download/6-018-S-ExploringSIRModel-StudentVersion.pdf?b192279d45ce41a0fded95960ba3c998=1">SIMIODE</a>, and from ideas I got from conversations with Andrea Bruder.<a href="#fnref1">↩</a></p></li>
 <li id="fn2"><p>There are probably many ways of defining &quot;optimal,&quot; and even with a fixed definition of &quot;optimal,&quot; there are many ways of finding those optimal parameters. You'll have to figure out both of these things if you decide to do this challenge. If you'd like some possible hints, come talk to me!<a href="#fnref2">↩</a></p></li>
 </ol>
 </section>
