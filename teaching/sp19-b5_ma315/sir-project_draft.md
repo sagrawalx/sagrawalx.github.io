@@ -95,13 +95,13 @@ I encourage you to toy around with the code until you've figured out what's goin
 
 Colorado Springs has a population of about 500,000. Suppose that initially just 1 person contracts an infection that's very contagious, but not very deadly. No one is immune initially, but people develop immunity after they've recovered from the infection. Each infected person infects 0.0005% of the susceptible population every day, and 40% of the infected population recovers every day.  
 
-1. What values of the parameters $b$ and $k$ are suggested by the above description? What initial conditions $S(0), I(0), R(0)$ are suggested?
+1. What values of the parameters $b$ and $k$ are suggested by the above description? What initial conditions $S(0), I(0)$ and $R(0)$ are suggested?
 2. Generate a plot showing how $S, I$ and $R$ vary with time until day 40. Be sure your plot is clearly labeled.
 3. On what day is the infected population the highest?
 
 Now assume that 40% of the population is inherently immune to this infection.
 
-4. How do the parameters and/or initial conditions change under this assumption?
+4. How do the initial conditions and/or parameters change under this assumption?
 5. At what point is over 90% of the population immune to the infection?
 
 ## Part 2
@@ -112,7 +112,7 @@ In a small town of 50 inhabitants, 1 person has been infected by a zombie virus.
 
 You should assume that humans and zombies do not reproduce or die, so that the total number of zombies and humans combined is always 50, but aside from that, feel free to decide on rules however you like, and to clearly record all of the rules you're using to generate your data.
 
-Then run the simulation and generate your data. Use a spreadsheet or something to record your data in a table that looks something like the following. Keep running your simulation until either it is clear to you that nothing is going to change, or until you hit time step 40.
+Then run the simulation and generate your data. Use a spreadsheet (or just a plain text file) to record your data in a table that looks something like the following. Keep running your simulation until either it is clear to you that nothing is going to change, or until you hit time step 40.
 
 <table style="display: block; margin: auto; width=80%">
 <tr>
