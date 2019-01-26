@@ -37,7 +37,7 @@ $$\begin{aligned}
 \frac{dR}{dt} &= cI
 \end{aligned}$$
 
-## Part 0
+## Part 1
 
 Answer the following questions.
 
@@ -51,7 +51,7 @@ Answer the following questions.
 
 ## Interlude
 
-Parts 1 and 2 will ask you to do some numerical calculations using a computer. If you are already comfortable with some programming language that can do numerical calculations with systems of ODEs, I encourage you to use that it. This should be possible with most high-level mathematical programming software (Sage, R, Octave/MATLAB, Maple, Mathematica...), and there are probably libraries that will do this for lower-level programming languages (C, Java...).
+Parts 2 and 3 will ask you to do some numerical calculations using a computer. If you are already comfortable with some programming language that can do numerical calculations with systems of ODEs, I encourage you to use that it. This should be possible with most high-level mathematical programming software (Sage, R, Octave/MATLAB, Maple, Mathematica...), and there are probably libraries that will do this for lower-level programming languages (C, Java...).
 
 If you don't have one you're comfortable with yet, I suggest familiarizing yourself with one of the open-source ones. You do have access to licenses to some proprietary software through CC, but you won't after you graduate. My suggestion is [SageMath](https://www.sagemath.org/).
 
@@ -94,7 +94,7 @@ I encourage you to toy around with the code until you've figured out what's goin
 
 <img src="sir-sample.png" style="width: 80%;"/>
 
-## Part 1
+## Part 2
 
 Colorado Springs has a population of about 500,000. Suppose that initially just 1 person contracts an infection that's very contagious, but not very deadly. No one is immune initially, but people develop immunity after they've recovered from the infection. Each infected person infects 0.0005% of the susceptible population every day, and 40% of the infected population recovers every day.  
 
@@ -108,7 +108,7 @@ Now assume that 40% of the population is inherently immune to this infection.
 5. Generate a plot showing how $S$, $I$, and $R$ vary with time.
 6. At what point is over 90% of the population immune to the infection?
 
-## Part 2
+## Part 3
 
 For this part, you'll generate some data modeling the spread of a zombie virus in groups of 3-4 using some markers and hex grid transparencies, and then fit an SIR model to the data you collect from your simulation. I'll explain the details of how the mechanics of simulation will go in class.
 
@@ -146,7 +146,9 @@ Once you have your data, your job is to find the parameters $b$ and $c$ that fit
 
 <img src="sir-sample-2.png" style="width: 80%;"/>
 
-You can do this by guessing and checking various values of the parameters $b$ and $c$ until you find something that works reasonably well. For an optional challenge, try to figure out the *optimal* values of for the parameters :)
+You can do this by guessing and checking various values of the parameters $b$ and $c$ until you find something that works reasonably well. For an optional challenge, try to figure out a way to find optimal[^optimal] values of for the parameters :)
+
+[^optimal]: There are probably many ways of defining "optimal," and even with a fixed definition of "optimal," there are many ways of finding those optimal parameters. You'll have to figure out both of these things if you decide to do this challenge. If you'd like some possible hints, come talk to me!
 
 Note that I artificially concocted the simulation data displayed in the above plot precisely so that the ODE model fits the data reasonably well. Your model might not fit your data as well, and that's perfectly okay. Share the plot using the best values of $b$ and $c$ you can find, and then answer the following questions.
 
@@ -199,7 +201,7 @@ plot += list_plot(Sdata, color="blue") + list_plot(Idata, color="red") + list_pl
 plot.show()
 ~~~
 
-## Part 3
+## Part 4
 
 Describe another scenario, besides the spread of an infection, that could reasonably be modeled using the SIR system of ODEs: $$\begin{aligned}
 \frac{dS}{dt} &= -bSI \\
