@@ -10,7 +10,7 @@ nonav: true
 
 This project[^reference] asks you to explore an ODE model that is used in epidemiology. The output of this project is a report. You're strongly encouraged to discuss with each other, but you should write up your report individually in your own words. One part of the project will involve generating some data in groups; your analysis should still be written up individually.
 
-[^reference]: This project is adapted from the SIR project described by Florkowski and Miller on [SIMIODE](https://www.simiode.org/resources/4796/download/6-018-S-ExploringSIRModel-StudentVersion.pdf?b192279d45ce41a0fded95960ba3c998=1), and from ideas I got from Andrea Bruder.
+[^reference]: This project is adapted from the SIR project described by Stanley Florkowski and Ryan Miller on [SIMIODE](https://www.simiode.org/resources/4796/download/6-018-S-ExploringSIRModel-StudentVersion.pdf?b192279d45ce41a0fded95960ba3c998=1), and from ideas I got from Andrea Bruder.
 
 Email me your report as a PDF by 11:59pm on 3rd Monday.
 
