@@ -54,7 +54,7 @@ Spring 2019, Block 5 — MA315 — SIR Project
 \frac{dI}{dt} &amp;= bSI - cI \\
 \frac{dR}{dt} &amp;= cI
 \end{aligned}\]</span></p>
-<h2 id="part-0">Part 0</h2>
+<h2 id="part-1">Part 1</h2>
 <p>Answer the following questions.</p>
 <ol type="1">
 <li>Why does it make sense for <span class="math inline">\(dS/dt\)</span> to be negative and <span class="math inline">\(dR/dt\)</span> to be positive?</li>
@@ -66,7 +66,7 @@ Spring 2019, Block 5 — MA315 — SIR Project
 <li>Describe a real world interpretation of the ratio <span class="math inline">\(c/b\)</span>.</li>
 </ol>
 <h2 id="interlude">Interlude</h2>
-<p>Parts 1 and 2 will ask you to do some numerical calculations using a computer. If you are already comfortable with some programming language that can do numerical calculations with systems of ODEs, I encourage you to use that it. This should be possible with most high-level mathematical programming software (Sage, R, Octave/MATLAB, Maple, Mathematica...), and there are probably libraries that will do this for lower-level programming languages (C, Java...).</p>
+<p>Parts 2 and 3 will ask you to do some numerical calculations using a computer. If you are already comfortable with some programming language that can do numerical calculations with systems of ODEs, I encourage you to use that it. This should be possible with most high-level mathematical programming software (Sage, R, Octave/MATLAB, Maple, Mathematica...), and there are probably libraries that will do this for lower-level programming languages (C, Java...).</p>
 <p>If you don't have one you're comfortable with yet, I suggest familiarizing yourself with one of the open-source ones. You do have access to licenses to some proprietary software through CC, but you won't after you graduate. My suggestion is <a href="https://www.sagemath.org/">SageMath</a>.</p>
 <p>Here is some Sage code that will generate plots of <span class="math inline">\(S\)</span>, <span class="math inline">\(I\)</span> and <span class="math inline">\(R\)</span> for <span class="math inline">\(t = 0\)</span> through <span class="math inline">\(t = 30\)</span> using the parameters <span class="math inline">\(b = 0.01\)</span>, <span class="math inline">\(c = 0.1\)</span>, and <span class="math inline">\(N = 100\)</span>, and the initial conditions <span class="math inline">\(I(0) = 1\)</span>, <span class="math inline">\(R(0) = 0\)</span>, and <span class="math display">\[S(0) = N - (I(0) + R(0)) = 99.\]</span></p>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># Parameters</span>
@@ -101,7 +101,7 @@ plot.show()
 <span class="co"># To save your plot, use plot.save(&quot;location/of/file/to/save/to.png&quot;)</span></code></pre></div>
 <p>I encourage you to toy around with the code until you've figured out what's going on. It may be worth pointing out that the object <code>Ss</code> is a list consisting of pairs <span class="math inline">\([t, S(t)]\)</span>, and similarly with <code>Is</code> and <code>Rs</code>. The output of the above code is the following plot.</p>
 <p><img src="sir-sample.png" style="width: 80%;"/></p>
-<h2 id="part-1">Part 1</h2>
+<h2 id="part-2">Part 2</h2>
 <p>Colorado Springs has a population of about 500,000. Suppose that initially just 1 person contracts an infection that's very contagious, but not very deadly. No one is immune initially, but people develop immunity after they've recovered from the infection. Each infected person infects 0.0005% of the susceptible population every day, and 40% of the infected population recovers every day.</p>
 <ol type="1">
 <li>What values of the parameters <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> are suggested by the above description? What initial conditions <span class="math inline">\(S(0), I(0)\)</span> and <span class="math inline">\(R(0)\)</span> are suggested?</li>
@@ -114,7 +114,7 @@ plot.show()
 <li>Generate a plot showing how <span class="math inline">\(S\)</span>, <span class="math inline">\(I\)</span>, and <span class="math inline">\(R\)</span> vary with time.</li>
 <li>At what point is over 90% of the population immune to the infection?</li>
 </ol>
-<h2 id="part-2">Part 2</h2>
+<h2 id="part-3">Part 3</h2>
 <p>For this part, you'll generate some data modeling the spread of a zombie virus in groups of 3-4 using some markers and hex grid transparencies, and then fit an SIR model to the data you collect from your simulation. I'll explain the details of how the mechanics of simulation will go in class.</p>
 <p>In a small town of 50 inhabitants, 1 person has been infected by a zombie virus. As a group, decide on some infection rules, recovery rules, and movement rules. How close does a human have to be to be infected by a zombie? How many humans or cells can one zombie infect in a single time step? How many cells can a human move in a single time step? How many cells can a zombie move in a single time step? How do you deal with the edge of the grid? Are any of the humans immune from zombiehood from the outset? Under what conditions does a zombie recover and become immune from zombiehood?</p>
 <p>You should assume that humans and zombies do not reproduce or die, so that the total population is always 50, but aside from that, feel free to decide on rules however you like, and to clearly record all of the rules you're using to generate your data.</p>
@@ -165,7 +165,7 @@ plot.show()
 </table>
 <p>Once you have your data, your job is to find the parameters <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> that fit your data well, and to generate a plot that looks something like the following (where the points represent the data that you actually collected from the simulation, and the curves are the solutions generated by the SIR model).</p>
 <p><img src="sir-sample-2.png" style="width: 80%;"/></p>
-<p>You can do this by guessing and checking various values of the parameters <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> until you find something that works reasonably well. For an optional challenge, try to figure out the <em>optimal</em> values of for the parameters :)</p>
+<p>You can do this by guessing and checking various values of the parameters <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> until you find something that works reasonably well. For an optional challenge, try to figure out a way to find optimal<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> values of for the parameters :)</p>
 <p>Note that I artificially concocted the simulation data displayed in the above plot precisely so that the ODE model fits the data reasonably well. Your model might not fit your data as well, and that's perfectly okay. Share the plot using the best values of <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> you can find, and then answer the following questions.</p>
 <ol type="1">
 <li>What values did you use for the parameters?</li>
@@ -213,7 +213,7 @@ Rdata <span class="op">=</span> [ [i,l] <span class="cf">for</span> i, j, k, l <
 plot <span class="op">=</span> list_plot(Ss, color<span class="op">=</span><span class="st">&quot;blue&quot;</span>, plotjoined<span class="op">=</span><span class="va">True</span>, legend_label<span class="op">=</span><span class="st">&#39;$S$&#39;</span>, axes_labels<span class="op">=</span>[<span class="st">&#39;$t$&#39;</span>,<span class="st">&#39;#&#39;</span>]) <span class="op">+</span> list_plot(Is, color<span class="op">=</span><span class="st">&quot;red&quot;</span>, legend_label<span class="op">=</span><span class="st">&#39;$I$&#39;</span>, plotjoined<span class="op">=</span><span class="va">True</span>) <span class="op">+</span> list_plot(Rs,  color<span class="op">=</span><span class="st">&quot;green&quot;</span>, legend_label<span class="op">=</span><span class="st">&#39;$R$&#39;</span>, plotjoined<span class="op">=</span><span class="va">True</span>)
 plot <span class="op">+=</span> list_plot(Sdata, color<span class="op">=</span><span class="st">&quot;blue&quot;</span>) <span class="op">+</span> list_plot(Idata, color<span class="op">=</span><span class="st">&quot;red&quot;</span>) <span class="op">+</span> list_plot(Rdata,  color<span class="op">=</span><span class="st">&quot;green&quot;</span>)
 plot.show()</code></pre></div>
-<h2 id="part-3">Part 3</h2>
+<h2 id="part-4">Part 4</h2>
 <p>Describe another scenario, besides the spread of an infection, that could reasonably be modeled using the SIR system of ODEs: <span class="math display">\[\begin{aligned}
 \frac{dS}{dt} &amp;= -bSI \\
 \frac{dI}{dt} &amp;= bSI - cI \\
@@ -223,6 +223,7 @@ plot.show()</code></pre></div>
 <hr />
 <ol>
 <li id="fn1"><p>This project is adapted from the SIR project described by Florkowski and Miller on <a href="https://www.simiode.org/resources/4796/download/6-018-S-ExploringSIRModel-StudentVersion.pdf?b192279d45ce41a0fded95960ba3c998=1">SIMIODE</a>, and from ideas I got from Andrea Bruder.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>There are probably many ways of defining &quot;optimal,&quot; and even with a fixed definition of &quot;optimal,&quot; there are many ways of finding those optimal parameters. You'll have to figure out both of these things if you decide to do this challenge. If you'd like some possible hints, come talk to me!<a href="#fnref2">↩</a></p></li>
 </ol>
 </section>
 
