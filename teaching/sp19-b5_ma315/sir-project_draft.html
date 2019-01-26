@@ -101,20 +101,20 @@ plot.show()
 <h2 id="part-1">Part 1</h2>
 <p>Colorado Springs has a population of about 500,000. Suppose that initially just 1 person contracts an infection that's very contagious, but not very deadly. No one is immune initially, but people develop immunity after they've recovered from the infection. Each infected person infects 0.0005% of the susceptible population every day, and 40% of the infected population recovers every day.</p>
 <ol type="1">
-<li>What values of the parameters <span class="math inline">\(b\)</span> and <span class="math inline">\(k\)</span> are suggested by the above description? What initial conditions <span class="math inline">\(S(0), I(0), R(0)\)</span> are suggested?</li>
+<li>What values of the parameters <span class="math inline">\(b\)</span> and <span class="math inline">\(k\)</span> are suggested by the above description? What initial conditions <span class="math inline">\(S(0), I(0)\)</span> and <span class="math inline">\(R(0)\)</span> are suggested?</li>
 <li>Generate a plot showing how <span class="math inline">\(S, I\)</span> and <span class="math inline">\(R\)</span> vary with time until day 40. Be sure your plot is clearly labeled.</li>
 <li>On what day is the infected population the highest?</li>
 </ol>
 <p>Now assume that 40% of the population is inherently immune to this infection.</p>
 <ol start="4" type="1">
-<li>How do the parameters and/or initial conditions change under this assumption?</li>
+<li>How do the initial conditions and/or parameters change under this assumption?</li>
 <li>At what point is over 90% of the population immune to the infection?</li>
 </ol>
 <h2 id="part-2">Part 2</h2>
 <p>For this part, you'll generate some data modeling the spread of a zombie virus in groups of 3-4 using some markers and hex grid transparencies. I'll explain how this will go in class.</p>
 <p>In a small town of 50 inhabitants, 1 person has been infected by a zombie virus. As a group, decide on some infection rules, recovery rules, and movement rules. How close does a human have to be to be infected by a zombie? How many humans or cells can one zombie infect in a single time step? How many cells can a human move in a single time step? How many cells can a zombie move in a single time step? How do you deal with the edge of the grid? Are any of the humans immune from zombiehood from the outset? Under what conditions does a zombie recover and become immune from zombiehood?</p>
 <p>You should assume that humans and zombies do not reproduce or die, so that the total number of zombies and humans combined is always 50, but aside from that, feel free to decide on rules however you like, and to clearly record all of the rules you're using to generate your data.</p>
-<p>Then run the simulation and generate your data. Use a spreadsheet or something to record your data in a table that looks something like the following. Keep running your simulation until either it is clear to you that nothing is going to change, or until you hit time step 40.</p>
+<p>Then run the simulation and generate your data. Use a spreadsheet (or just a plain text file) to record your data in a table that looks something like the following. Keep running your simulation until either it is clear to you that nothing is going to change, or until you hit time step 40.</p>
 <table style="display: block; margin: auto; width=80%">
 <tr>
 <th>
