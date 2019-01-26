@@ -171,7 +171,7 @@ Submit [self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSc0neAKrz
 Do: 3.1.101, 103, 3.3.103  </td>
 <td>
 2.1.104  
-3.1.102, 104–105  
+3.1.104–105  
 3.3.104
 </td>
 </tr>
@@ -191,7 +191,8 @@ Start working on the [SIR project](sir). Due 3rd Monday.
 Do: 2.2.1, 7 (both ways)[^both-ways], 3.4.3  
 </td>
 <td>
-2.2.101 (both ways), 104, 107    
+2.2.101 (both ways), 104, 107   
+3.1.102   
 3.4.101, 103  
 3.5.3–4
 </td>
