@@ -291,7 +291,8 @@ Quiz 2 revisions (1–2:30pm).
 <td rowspan="2">Tue</td>
 <td>Nonhomogeneous equations: Integrating factors and eigenvector decomposition</td>
 <td>
-Read: 3.9.1 (through the section on eigenvector decomposition)  
+Review: theorem 3.3.2  
+Read: 3.9.1 (up through the section on eigenvector decomposition)  
 Do: 3.9.101(a, b)
 </td>
 <td>
