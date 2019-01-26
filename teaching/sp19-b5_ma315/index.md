@@ -179,7 +179,7 @@ Do: 3.1.101, 103, 3.3.103  </td>
 <tr>
 <td colspan="3">
 Quiz 1 revisions (1–2:30pm).  
-Start working on the [SIR project](sir_project). Due 3rd Monday.
+Start working on the [SIR project](sir-project). Due 3rd Monday.
 </td>
 </tr>
 
@@ -281,7 +281,7 @@ Do: 3.8.103</td>
 <tr>
 <td colspan="3">
 Quiz 2 revisions (1–2:30pm).  
-[SIR project](sir_project) due (11:59pm).
+[SIR project](sir-project) due (11:59pm).
 </td>
 </tr>
 

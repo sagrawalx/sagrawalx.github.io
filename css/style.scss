@@ -63,9 +63,10 @@ body {
         border-left-color: $light;
     }
 
-    div.sourceCode {
+    code, div.sourceCode {
         font-family: monospace;
         overflow: auto;
+        max-height: 20em;
     }
 
     span.blockquote-attribution {

@@ -2,6 +2,10 @@ plugins: ["jekyll-scholar", "jekyll-pandoc"]
 
 markdown: Pandoc
 
+pandoc:
+    extensions:
+        - mathjax
+
 scholar:
   style: css/custom.csl
   bibliography_template: bib
