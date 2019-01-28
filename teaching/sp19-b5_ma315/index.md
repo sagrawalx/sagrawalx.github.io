@@ -166,13 +166,14 @@ Submit [self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSc0neAKrz
 
 <tr>
 <td rowspan="2">Mon</td>
-<td>First order linear systems</td>
+<td>First order systems</td>
 <td>Read: 2.1, 3.1, 3.3  
 Do: 3.1.101, 103, 3.3.103  </td>
 <td>
 2.1.104  
 3.1.104–105  
-3.3.104
+3.3.104  
+[In class questions](systems.pdf)
 </td>
 </tr>
 
