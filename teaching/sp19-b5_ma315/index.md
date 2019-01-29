@@ -203,7 +203,7 @@ Do: 2.2.1, 7 (both ways)[^both-ways], 3.4.3
 
 <tr>
 <td colspan="3">
-Office hours (12:30–1:30pm).
+Office hours (1–2pm).
 </td>
 </tr>
 
