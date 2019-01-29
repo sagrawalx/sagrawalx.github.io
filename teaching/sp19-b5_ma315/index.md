@@ -195,7 +195,8 @@ Do: 2.2.1, 7 (both ways)[^both-ways], 3.4.3
 2.2.101 (both ways), 104, 107   
 3.1.102   
 3.4.101, 103  
-3.5.3–4
+3.5.3–4  
+[In class questions](real-complete.pdf)
 </td>
 </tr>
 
