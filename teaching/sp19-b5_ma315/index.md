@@ -217,7 +217,8 @@ Do: 2.2.103, 3.4.4, 102
 <td>
 2.2.105  
 3.4.104  
-3.5.102
+3.5.102  
+[In class questions](real+complex-complete.pdf)
 </td>
 </tr>
 
