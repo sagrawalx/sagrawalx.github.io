@@ -237,7 +237,8 @@ Do: 2.2.2, 102 (both ways), 3.7.102
 </td>
 <td>
 3.5.2, 3.5.103  
-3.7.103–104
+3.7.103–104  
+[In class questions](eigenvalue-1.pdf)
 </td>
 </tr>
 
