@@ -259,6 +259,7 @@ Office hours (12:30–1:30pm).
 <td>None[^trdetplane]</td>
 <td>
 3.5.1, 101  
+[In class questions](eigenvalue-2.pdf)
 </td>
 </tr>
 
@@ -306,7 +307,7 @@ Do: 3.9.101(a, b)
 
 <tr>
 <td colspan="3">
-Office hours (12:30–1:30pm).  
+Office hours (1:30–2:30pm).  
 [Final project](final-project) proposals due (11:59pm).
 </td>
 </tr>
