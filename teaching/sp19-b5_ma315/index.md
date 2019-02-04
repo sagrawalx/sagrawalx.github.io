@@ -281,7 +281,9 @@ Submit [self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSc0neAKrz
 <td>Matrix exponentials</td>
 <td>Read: 3.8  
 Do: 3.8.103</td>
-<td>3.8.101–102, 104, 6–8</td>
+<td>3.8.101–102, 104, 6–8  
+[In class questions](matrix-exponential.pdf)
+</td>
 </tr>
 
 <tr>
