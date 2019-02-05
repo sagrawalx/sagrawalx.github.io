@@ -303,7 +303,8 @@ Read: 3.9.1 (up through the section on eigenvector decomposition)
 Do: 3.9.101(a, b)
 </td>
 <td>
-3.9.102(a, b), 103–104
+3.9.102(a, b), 103–104  
+[In class questions](nonhomogeneous-1.pdf)
 </td>
 </tr>
 
@@ -349,7 +350,7 @@ Do: 2.4.101, 2.6.101
 
 <tr>
 <td colspan="3">
-Quiz 3 (in class, 11–12). Sections covered: TBA.
+Quiz 3 (in class, 11–12). Sections covered: Sections covered: 2.1–2, 3.1, 3.3–5, 3.7–8 (ie, everything about homogeneous first order linear systems with constant coefficients).  
 </td>
 </tr>
 
