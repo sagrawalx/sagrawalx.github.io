@@ -320,7 +320,8 @@ Office hours (1:30–2:30pm).
 <td>Nonhomogeneous equations: Undetermined coefficients</td>
 <td>
 Read: 2.5.1–2, 3.9.1 (the section on undetermined coefficients)  
-Do: 2.5.103, 3.9.101
+Do: 2.5.103, 3.9.101(c)  
+[In class questions](nonhomogeneous-2.pdf)
 </td>
 <td>
 2.5.101–102  
