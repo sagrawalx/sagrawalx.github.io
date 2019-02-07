@@ -345,7 +345,8 @@ Do: 2.4.101, 2.6.101
 </td>
 <td>
 2.4.103, 4  
-2.6.103
+2.6.103  
+[In class questions](review-1.pdf)
 </td>
 </tr>
 
