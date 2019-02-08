@@ -384,7 +384,7 @@ Submit [self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSc0neAKrz
 
 <tr>
 <td colspan="3">
-Office hours (12:30–2pm).  
+Office hours (1–2pm).  
 </td>
 </tr>
 
