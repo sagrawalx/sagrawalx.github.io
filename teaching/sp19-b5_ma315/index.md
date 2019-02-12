@@ -379,7 +379,7 @@ Submit [self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSc0neAKrz
 <td rowspan="2">Mon</td>
 <td>Review</td>
 <td>None</td>
-<td></td>
+<td>[In class questions](review-2.pdf)</td>
 </tr>
 
 <tr>
