@@ -1,24 +1,25 @@
 ---
 layout: default
-title: Fall 2018, Block 3 — MA126
-bannertext: Fall 2018, Block 3 — MA126
+title: Spring 2019, Block 6 — MA126
+bannertext: Spring 2019, Block 6 — MA126
 bannerlink: teaching/fa18-b3_ma126
 nonav: true
 ---
 
 # Overview
 
-* Class: Monday through Friday, 9:15–11:45, in Armstrong 301.
+* Class: Monday through Friday, 9:15–11:45, in Palmer 225.
 * Instructor: Shishir Agrawal (I also go by Sunny), <span class="email">@</span>.
-    * LA: Sam Kottler.
+    * LA: Lauren Stierman.
     * Paraprof: Bob Kuo.
 * [Course syllabus](syllabus).
 * Textbook: *Calculus: Early Transcendentals* by Rogawski and Adams, 3rd edition.
 * For help outside of class...
-    * See below for Sunny's office hours (in Tutt Science 234).
-    * See below also for problem sessions with Sam and Bob (in our classroom). If you'd like to attend a problem session, please make sure to arrive within about 15 minutes of the indicated starting time.
-    * Check the [tutoring schedule for the QRC](https://www.coloradocollege.edu/offices/colketcenter/qrc/blocktutorschedule/). Note that Sam will have drop-in hours at the QRC on Thursdays, 2–4pm.
-* Reading assignment submission form (class is over, link disabled).
+    * See below for problem sessions with Lauren and Bob (in our classroom). If you'd like to attend a problem session, please make sure to arrive within about 15 minutes of the indicated starting time.
+    * See below for Sunny's office hours (in Tutt Science 234). Please make sure to refresh frequently, since I may have to change the times of my office hours occasionally.
+    * Check the [tutoring schedule for the QRC](https://www.coloradocollege.edu/offices/colketcenter/qrc/blocktutorschedule/).
+* [Reading assignment submission form](https://docs.google.com/forms/d/e/1FAIpQLSdEMAifwT7BkJ3aIUatKwqBSgmdjTDWVoGZPNUYeWW6nQ3usQ/viewform).
+* [Self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSeVKVktopo9RA5pg2hdVAdxZhRlqcP_L7eXTmE5x8kJdiFpGQ/viewform).
 
 # Calendar
 
@@ -36,7 +37,7 @@ nonav: true
 
 <tr>
 <td rowspan="2">Mon</td>
-<td>[Introduction](precalc.pdf)</td>
+<td>Introduction</td>
 <td>None</td>
 <td>
 (Optional! Chapter 1 Review) 9–10, 11, 13, 17, 19, 21, 41–42, 51–52
@@ -45,14 +46,13 @@ nonav: true
 
 <tr>
 <td colspan="3">
-Problem session with Bob (1pm).  
-Sunny's office hours (2–3pm).
+Sunny's office hours (12:30–1:30pm).
 </td>
 </tr>
 
 <tr>
 <td rowspan="2">Tue</td>
-<td>[Limits](limits.pdf)</td>
+<td>Limits</td>
 <td>Read: 2.1–3, 2.6–7  
 Do: (2.2) 1, 5  
 (2.3) 9, 13  
@@ -70,14 +70,14 @@ Do: (2.2) 1, 5
 
 <tr>
 <td colspan="3">
-Sunny's office hours (2–3pm).  
-Problem session with Sam (7pm).
+Sunny's office hours (1–2pm).  
+Problem session with Bob (2pm).
 </td>
 </tr>
 
 <tr>
 <td rowspan="2">Wed</td>
-<td>[Continuity](continuity.pdf)</td>
+<td>Continuity</td>
 <td>Read: 2.4–5, 2.8  
 Do: (2.4) 5  
 (2.5) 1, 3  
@@ -92,14 +92,14 @@ Do: (2.4) 5
 
 <tr>
 <td colspan="3">
-Problem session with Bob (1pm).  
-Sunny's office hours (2–3pm).  
-Writing assignment due (11:59pm). <a href="/teaching/prompt.pdf" target="_blank">Prompt</a>.<!--_--></td>
+Sunny's office hours (12:30–1:30pm).  
+Writing assignment due (11:59pm). [Prompt](/teaching/prompt.pdf).
+</td>
 </tr>
 
 <tr>
 <td rowspan="2">Thu</td>
-<td>[Derivatives](differentiation1.pdf)</td>
+<td>Derivatives</td>
 <td>Read: 3.1  
 Do: (3.1) 29, 31
 </td>
@@ -110,14 +110,14 @@ Do: (3.1) 29, 31
 
 <tr>
 <td colspan="3">
-Sunny's office hours (2–3pm).  
-Problem session with Sam (7pm).
+Sunny's office hours (12:30–1:30pm).  
+Problem session with Bob (2pm).
 </td>
 </tr>
 
 <tr>
 <td rowspan="2">Fri</td>
-<td>[Rules of differentiation](differentiation2.pdf)</td>
+<td>Rules of differentiation</td>
 <td>Read: 3.2–3, 3.6  
 Do: (3.2) 9, 11  
 (3.3) 3, 7  
@@ -132,8 +132,9 @@ Do: (3.2) 9, 11
 
 <tr>
 <td colspan="3">
-Problem sets for 2.2–8 due (1pm).  
-Quiz 1 (1–2pm). Sections covered: up through 2.8. [Solutions](quiz1.pdf).
+Problem sets for 2.2–8 due (in class).  
+Quiz 1 (in class, 11–12pm). Sections covered: up through 2.8.  
+Submit [self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSeVKVktopo9RA5pg2hdVAdxZhRlqcP_L7eXTmE5x8kJdiFpGQ/viewform) for week 1 (due Sunday 11:59pm).
 </td>
 </tr>
 
@@ -143,7 +144,7 @@ Quiz 1 (1–2pm). Sections covered: up through 2.8. [Solutions](quiz1.pdf).
 
 <tr>
 <td rowspan="2">Mon</td>
-<td>[More rules of differentiation](differentiation3.pdf)</td>
+<td>More rules of differentiation</td>
 <td>Read: 3.7–9  
 Do: (3.7) 1, 3  
 (3.8) 3  
@@ -158,15 +159,14 @@ Do: (3.7) 1, 3
 
 <tr>
 <td colspan="3">
-Problem session with Bob (1pm).  
-Quiz 1 revisions (2–4pm).  
+Quiz 1 revisions (12:30–2pm).  
 </td>
 </tr>
 
 <tr>
 <td rowspan="2">Tue</td>
-<td>[Rates of change](rate-of-change.pdf)  
-[Zombie project](zombie.pdf)</td>
+<td>Rates of change  
+Zombie project</td>
 <td>Read: 3.4–5, 3.10  
 Do: (3.4) 1, 5  
 (3.5) 39  
@@ -181,14 +181,14 @@ Do: (3.4) 1, 5
 
 <tr>
 <td colspan="3">
-Sunny's office hours (2–3pm).  
-Problem session with Sam (7pm).
+Sunny's office hours (12:30–1:30pm).  
+Problem session with Bob (2pm).
 </td>
 </tr>
 
 <tr>
 <td rowspan="2">Wed</td>
-<td>[Linear approximations](wksht_linear-approx.pdf)</td>
+<td>Linear approximations</td>
 <td>Read: 4.1, 4.8  
 Do: (4.1) 9, 25  
 (4.8) 1, 3  
@@ -201,15 +201,13 @@ Do: (4.1) 9, 25
 
 <tr>
 <td colspan="3">
-Problem session with Bob (1pm).  
-Sunny's office hours (2–3pm).  
-[Zombie project](zombie.pdf) data plot due (11:59pm).
+Zombie project data plot due (11:59pm).
 </td>
 </tr>
 
 <tr>
 <td rowspan="2">Thu</td>
-<td>[Shapes of graphs](graph-shape.pdf)</td>
+<td>Shapes of graphs</td>
 <td>Read: 4.2–4, 4.6  
 Do: (4.2) 1, 3   
 (4.3) 19, 23   
@@ -226,14 +224,14 @@ Do: (4.2) 1, 3
 
 <tr>
 <td colspan="3">
-Sunny's office hours (2–3pm).  
-Problem session with Sam (7pm).
+Sunny's office hours (12:30–1:30pm).  
+Problem session with Bob (2pm).
 </td>
 </tr>
 
 <tr>
 <td rowspan="2">Fri</td>
-<td>[L'Hôpital's rule, Optimization](l'hopital-optimization.pdf)</td>
+<td>L'Hôpital's rule, Optimization</td>
 <td>Read: 4.5, 4.7  
 Do: (4.5) 1   
 (4.7) 1, 3, 5   
@@ -246,8 +244,9 @@ Do: (4.5) 1
 
 <tr>
 <td colspan="3">
-Problem sets for 3.1–4.1 and 4.8 due (1pm).  
-Quiz 2 (1–2pm). Sections covered: up through 4.1, and also 4.8. [Solutions](quiz2.pdf).
+Problem sets for 3.1–4.1 and 4.8 due (in class).  
+Quiz 2 (in class, 11–12pm). Sections covered: up through 4.1, and also 4.8.  
+Submit [self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSeVKVktopo9RA5pg2hdVAdxZhRlqcP_L7eXTmE5x8kJdiFpGQ/viewform) for week 2 (due Sunday 11:59pm).
 </td>
 </tr>
 
@@ -257,7 +256,7 @@ Quiz 2 (1–2pm). Sections covered: up through 4.1, and also 4.8. [Solutions](qu
 
 <tr>
 <td rowspan="2">Mon</td>
-<td>[Definite integrals](definite.pdf)</td>
+<td>Definite integrals</td>
 <td>Read: 5.1–2  
 Do: (5.1) 11, 23, 29  
 (5.2) 3, 7, 9  
@@ -270,15 +269,14 @@ Do: (5.1) 11, 23, 29
 
 <tr>
 <td colspan="3">
-Problem session with Bob (1pm).  
-Quiz 2 revisions (2–4pm).  
-[Zombie project](zombie.pdf) report due (11:59pm).
+Quiz 2 revisions (12:30–2pm).  
+Zombie project report due (11:59pm).
 </td>
 </tr>
 
 <tr>
 <td rowspan="2">Tue</td>
-<td>[Fundamental theorem of calculus](ftc.pdf)</td>
+<td>Fundamental theorem of calculus</td>
 <td>Read: 5.3–5  
 Do: (5.3) 3  
 (5.4) 7  
@@ -293,15 +291,15 @@ Do: (5.3) 3
 
 <tr>
 <td colspan="3">
-Sunny's office hours (2–3pm).  
-Problem session with Sam (7pm).  
-Poster project proposals due (11:59pm). [Details](poster.pdf).
+Sunny's office hours (12:30–1:30pm).  
+Problem session with Bob (2pm).  
+[Final project proposals](final-project) due (11:59pm).  
 </td>
 </tr>
 
 <tr>
 <td rowspan="2">Wed</td>
-<td>[Substitution](wksht_integration.pdf)</td>
+<td>Substitution</td>
 <td>Read: 5.7–8  
 Do: (5.7) 1, 7  
 (5.8) 1, 3  
@@ -313,16 +311,14 @@ Do: (5.7) 1, 7
 </tr>
 
 <tr>
-<td colspan="3">
-Problem session with Bob (1pm).  
-Sunny's office hours (2–3pm).  
-Problem session with Sam (7pm).
+<td colspan="3">  
+Sunny's office hours (12:30–1:30pm).
 </td>
 </tr>
 
 <tr>
 <td rowspan="2">Thu</td>
-<td>[Applications of integration](wksht_integration-applications.pdf)</td>
+<td>Applications of integration</td>
 <td>Read: 5.6, 5.9  
 Do: (5.6) 1  
 (5.9) 1, 5  
@@ -335,21 +331,23 @@ Do: (5.6) 1
 
 <tr>
 <td colspan="3">
-Problem sets for 4.2–7 and 5.1–2 due (1pm).  
-Quiz 3 (1–2pm). Sections covered: up through 5.2.
+Problem sets for 4.2–7 and 5.1–2 due (in class).  
+Quiz 3 (in class, 11–12pm). Sections covered: up through 5.2.  
+Problem session with Bob (2pm).
 </td>
 </tr>
 
 <tr>
 <td rowspan="2">Fri</td>
-<td>[Review](review1.pdf)</td>
+<td>Review</td>
 <td>None</td>
 <td>None</td>
 </tr>
 
 <tr>
 <td colspan="3">
-Quiz 3 revisions (12:30–2:30pm).
+Quiz 3 revisions (12:30–2pm).  
+Submit [self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSeVKVktopo9RA5pg2hdVAdxZhRlqcP_L7eXTmE5x8kJdiFpGQ/viewform) for week 3 (due Sunday 11:59pm).
 </td>
 </tr>
 
@@ -359,29 +357,27 @@ Quiz 3 revisions (12:30–2:30pm).
 
 <tr>
 <td rowspan="2">Mon</td>
-<td>[Review](review2.pdf)</td>
+<td>Review</td>
 <td>None</td>
 <td>None</td>
 </tr>
 
 <tr>
-<td colspan="3">
-Problem session with Bob (1pm).  
-Sunny's office hours (2–3pm).  
-Problem session with Sam (7pm).
+<td colspan="3">  
+Sunny's office hours (12:30–2pm).  
 </td>
 </tr>
 
 <tr>
 <td>Tue</td>
 <td colspan="3">
-Problem sets for 5.3–9 due (9:15am).  
+Problem sets for 5.3–9 due (in class).  
 Final exam (in class). Sections covered: everything.
 </td>
 </tr>
 
 <tr>
 <td>Wed</td>
-<td colspan="3">Poster session (in class). [Details](poster.pdf).</td>
+<td colspan="3">Final project presentations (during class). [Details](final-project).</td>
 </tr>
 </table>

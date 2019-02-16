@@ -55,6 +55,7 @@ nonav: true
 ## Primary instructor
 
 * Colorado College
+    * Calculus 1 (Spring 2019, Block 6).
     * Ordinary Differential Equations (Spring 2019, Block 5).
     * Calculus 1 (Fall 2018, Block 3).
     * Linear Algebra (Fall 2018, Block 2).
@@ -90,12 +91,13 @@ nonav: true
 
 ## Mentor
 
-* Senior thesis with Zhaopeng Li (2018-2019).
+* Senior thesis with Zhaopeng Li (2018-2019). Topic: Sums of cubes over finite fields.
 * Directed reading program with Frank Dai (Fall 2017). Topic: Class field theory.
 * Directed reading program with Alice Zhao (Fall 2014). Topic: Elliptic curves.
 
 # Conferences
 
+* Derived algebraic geometry and its applications (March 2019). MSRI, Berkeley.
 * Front Range Number Theory Day (September 2018). Colorado State University.
 * RTG Research Workshop (May 2018). University of California, Berkeley.
 * Old and new themes in $p$-adic cohomology (April 2018). University of Arkansas.
@@ -117,7 +119,7 @@ nonav: true
 # Languages
 
 * Fluent: English, Hindi
-* Intermediate: French, Japanese
+* Intermediate: Japanese, French
 
 # Awards
 
