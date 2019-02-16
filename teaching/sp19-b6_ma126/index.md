@@ -2,7 +2,7 @@
 layout: default
 title: Spring 2019, Block 6 — MA126
 bannertext: Spring 2019, Block 6 — MA126
-bannerlink: teaching/fa18-b3_ma126
+bannerlink: teaching/sp19-b6_ma126
 nonav: true
 ---
 
