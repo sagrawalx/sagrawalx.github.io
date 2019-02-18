@@ -37,7 +37,7 @@ nonav: true
 
 <tr>
 <td rowspan="2">Mon</td>
-<td>Introduction</td>
+<td>[Introduction](precalc.pdf)</td>
 <td>None</td>
 <td>
 (Optional! Chapter 1 Review) 9–10, 11, 13, 17, 19, 21, 41–42, 51–52
@@ -111,7 +111,8 @@ Do: (3.1) 29, 31
 <tr>
 <td colspan="3">
 Sunny's office hours (12:30–1:30pm).  
-Problem session with Bob (2pm).
+Problem session with Bob (2pm).  
+Problem session with Lauren (7pm).
 </td>
 </tr>
 
@@ -165,8 +166,7 @@ Quiz 1 revisions (12:30–2pm).
 
 <tr>
 <td rowspan="2">Tue</td>
-<td>Rates of change  
-Zombie project</td>
+<td>Rates of change</td>
 <td>Read: 3.4–5, 3.10  
 Do: (3.4) 1, 5  
 (3.5) 39  
@@ -187,7 +187,7 @@ Problem session with Bob (2pm).
 </tr>
 
 <tr>
-<td rowspan="2">Wed</td>
+<td rowspan="1">Wed</td>
 <td>Linear approximations</td>
 <td>Read: 4.1, 4.8  
 Do: (4.1) 9, 25  
@@ -199,11 +199,10 @@ Do: (4.1) 9, 25
 </td>
 </tr>
 
-<tr>
+<!--tr>
 <td colspan="3">
-Zombie project data plot due (11:59pm).
 </td>
-</tr>
+</tr-->
 
 <tr>
 <td rowspan="2">Thu</td>
@@ -225,7 +224,8 @@ Do: (4.2) 1, 3
 <tr>
 <td colspan="3">
 Sunny's office hours (12:30–1:30pm).  
-Problem session with Bob (2pm).
+Problem session with Bob (2pm).  
+Problem sesison with Lauren (7pm).
 </td>
 </tr>
 
@@ -269,8 +269,7 @@ Do: (5.1) 11, 23, 29
 
 <tr>
 <td colspan="3">
-Quiz 2 revisions (12:30–2pm).  
-Zombie project report due (11:59pm).
+Quiz 2 revisions (12:30–2pm).
 </td>
 </tr>
 
@@ -312,7 +311,8 @@ Do: (5.7) 1, 7
 
 <tr>
 <td colspan="3">  
-Sunny's office hours (12:30–1:30pm).
+Sunny's office hours (12:30–1:30pm).  
+Problem session with Lauren (7pm).
 </td>
 </tr>
 
@@ -347,6 +347,7 @@ Problem session with Bob (2pm).
 <tr>
 <td colspan="3">
 Quiz 3 revisions (12:30–2pm).  
+Problem session with Lauren (Sunday, 2-4pm).  
 Submit [self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSeVKVktopo9RA5pg2hdVAdxZhRlqcP_L7eXTmE5x8kJdiFpGQ/viewform) for week 3 (due Sunday 11:59pm).
 </td>
 </tr>
@@ -378,6 +379,6 @@ Final exam (in class). Sections covered: everything.
 
 <tr>
 <td>Wed</td>
-<td colspan="3">Final project presentations (during class). [Details](final-project).</td>
+<td colspan="3">[Final project](final-project) presentations (during class).</td>
 </tr>
 </table>
