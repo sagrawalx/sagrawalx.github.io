@@ -92,7 +92,6 @@ Do: (2.4) 5
 
 <tr>
 <td colspan="3">
-Sunny's office hours (12:30–1:30pm).  
 Writing assignment due (11:59pm). [Prompt](/teaching/prompt.pdf).
 </td>
 </tr>
@@ -110,7 +109,7 @@ Do: (3.1) 29, 31
 
 <tr>
 <td colspan="3">
-Sunny's office hours (12:30–1:30pm).  
+Sunny's office hours (12:30–2pm).  
 Problem session with Bob (2pm).  
 Problem session with Lauren (7pm).
 </td>
@@ -181,7 +180,6 @@ Do: (3.4) 1, 5
 
 <tr>
 <td colspan="3">
-Sunny's office hours (12:30–1:30pm).  
 Problem session with Bob (2pm).
 </td>
 </tr>
@@ -223,7 +221,7 @@ Do: (4.2) 1, 3
 
 <tr>
 <td colspan="3">
-Sunny's office hours (12:30–1:30pm).  
+Sunny's office hours (12:30–2pm).  
 Problem session with Bob (2pm).  
 Problem sesison with Lauren (7pm).
 </td>
@@ -290,7 +288,7 @@ Do: (5.3) 3
 
 <tr>
 <td colspan="3">
-Sunny's office hours (12:30–1:30pm).  
+Sunny's office hours (12:30–2pm).  
 Problem session with Bob (2pm).  
 [Final project proposals](final-project) due (11:59pm).  
 </td>
@@ -311,7 +309,6 @@ Do: (5.7) 1, 7
 
 <tr>
 <td colspan="3">  
-Sunny's office hours (12:30–1:30pm).  
 Problem session with Lauren (7pm).
 </td>
 </tr>
