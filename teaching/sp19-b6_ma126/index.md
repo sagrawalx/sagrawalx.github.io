@@ -109,7 +109,7 @@ Do: (3.1) 29, 31
 
 <tr>
 <td colspan="3">
-Sunny's office hours (12:30–2pm).  
+Sunny's office hours (12:30–1:30pm).  
 Problem session with Bob (2pm).  
 Problem session with Lauren (7pm).
 </td>
@@ -222,7 +222,7 @@ Do: (4.2) 1, 3
 
 <tr>
 <td colspan="3">
-Sunny's office hours (12:30–1:30pm).  
+Sunny's office hours (12:30–2pm).  
 Problem session with Bob (2pm).  
 Problem sesison with Lauren (7pm).
 </td>
