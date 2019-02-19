@@ -110,6 +110,8 @@ Here are some details about each of the components of your grade.
 
 * Problem sets will be collected in batches on quiz/exam days. Only the problems that are multiples of 4 will be graded (a random subset will be graded for correctness, and you'll get completion points for the rest).
 
+    Late problem sets cannot be accepted. If you will be gone on a submission day, please make sure to get them to me in advance.
+
 * There will be a short writing assignment towards the beginning of the block. You'll find more details on the [webpage](index).
 
 * There will be three quizzes during the block. They will take place in class, 11-12pm (see the calendar on the course [webpage](index) for the dates). There will be some free response questions, and some true-false questions. No books or electronic devices will be permitted, but you will be allowed one handwritten page of notes.

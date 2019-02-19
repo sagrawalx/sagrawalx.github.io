@@ -52,7 +52,7 @@ Sunny's office hours (12:30–1:30pm).
 
 <tr>
 <td rowspan="2">Tue</td>
-<td>Limits</td>
+<td>[Limits](limits.pdf)</td>
 <td>Read: 2.1–3, 2.6–7  
 Do: (2.2) 1, 5  
 (2.3) 9, 13  
