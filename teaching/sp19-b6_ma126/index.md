@@ -77,7 +77,7 @@ Problem session with Bob (2pm).
 
 <tr>
 <td rowspan="2">Wed</td>
-<td>Continuity</td>
+<td>[Continuity](continuity.pdf)</td>
 <td>Read: 2.4–5, 2.8  
 Do: (2.4) 5  
 (2.5) 1, 3  
