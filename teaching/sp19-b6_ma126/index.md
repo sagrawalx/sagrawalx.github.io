@@ -98,7 +98,7 @@ Writing assignment due (11:59pm). [Prompt](/teaching/prompt.pdf).
 
 <tr>
 <td rowspan="2">Thu</td>
-<td>Derivatives</td>
+<td>[Derivatives](derivative-definition.pdf)</td>
 <td>Read: 3.1  
 Do: (3.1) 29, 31
 </td>
