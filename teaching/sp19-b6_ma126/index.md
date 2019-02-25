@@ -144,7 +144,7 @@ Submit [self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSeVKVktop
 
 <tr>
 <td rowspan="2">Mon</td>
-<td>More rules of differentiation</td>
+<td>[More rules of differentiation](differentiation2.pdf)</td>
 <td>Read: 3.7–9  
 Do: (3.7) 1, 3  
 (3.8) 3  
