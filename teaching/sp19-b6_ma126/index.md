@@ -165,7 +165,7 @@ Quiz 1 revisions (12:30–2pm).
 
 <tr>
 <td rowspan="2">Tue</td>
-<td>Rates of change</td>
+<td>[Rates of change](rate-of-change.pdf)</td>
 <td>Read: 3.4–5, 3.10  
 Do: (3.4) 1, 5  
 (3.5) 39  
