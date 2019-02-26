@@ -180,7 +180,7 @@ Do: (3.4) 1, 5
 
 <tr>
 <td colspan="3">
-Sunny's office hours (12:30–2pm).  
+Sunny's office hours (1–2pm).  
 Problem session with Bob (2pm).
 </td>
 </tr>
