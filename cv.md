@@ -30,6 +30,7 @@ nonav: true
 
 # Talks
 
+* How local systems arise (February 2019). Rings and Wings, UC Colorado Springs. 
 * Rigid local systems and rigid isocrystals (June 2018). Number theory seminar, UC San Diego.
 * Rigidity: Local systems and beyond (February 2018). Fearless Fridays, Colorado College.
 * A Smörgåsbord of Arithmetic Geometry (February 2018). Fearless Fridays, Colorado College.

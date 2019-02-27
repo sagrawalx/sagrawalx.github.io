@@ -187,7 +187,7 @@ Problem session with Bob (2pm).
 
 <tr>
 <td rowspan="1">Wed</td>
-<td>Linear approximations</td>
+<td>[Linear approximations](linear-approx.pdf) (and a [worksheet](wksht_linear-approx.pdf))</td>
 <td>Read: 4.1, 4.8  
 Do: (4.1) 9, 25  
 (4.8) 1, 3  
