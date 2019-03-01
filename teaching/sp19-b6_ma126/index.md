@@ -230,7 +230,7 @@ Problem sesison with Lauren (7pm).
 
 <tr>
 <td rowspan="2">Fri</td>
-<td>L'Hôpital's rule, Optimization</td>
+<td>[L'Hôpital's rule, Optimization](lhopital-optimization.pdf)</td>
 <td>Read: 4.5, 4.7  
 Do: (4.5) 1   
 (4.7) 1, 3, 5   
