@@ -255,7 +255,7 @@ Submit [self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSeVKVktop
 
 <tr>
 <td rowspan="2">Mon</td>
-<td>Definite integrals</td>
+<td>[Optimization, Definite integrals](optimization+definite.pdf)</td>
 <td>Read: 5.1–2  
 Do: (5.1) 11, 23, 29  
 (5.2) 3, 7, 9  
