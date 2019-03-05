@@ -274,7 +274,7 @@ Quiz 2 revisions (12:30–2pm).
 
 <tr>
 <td rowspan="2">Tue</td>
-<td>Fundamental theorem of calculus</td>
+<td>[Fundamental theorem of calculus](ftc.pdf)</td>
 <td>Read: 5.3–5  
 Do: (5.3) 3  
 (5.4) 7  

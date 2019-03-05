@@ -30,7 +30,7 @@ nonav: true
 
 # Talks
 
-* How local systems arise (February 2019). Rings and Wings, UC Colorado Springs. 
+* How local systems arise (February 2019). Rings and Wings, UC Colorado Springs.
 * Rigid local systems and rigid isocrystals (June 2018). Number theory seminar, UC San Diego.
 * Rigidity: Local systems and beyond (February 2018). Fearless Fridays, Colorado College.
 * A Smörgåsbord of Arithmetic Geometry (February 2018). Fearless Fridays, Colorado College.
@@ -45,6 +45,7 @@ nonav: true
 
 # Research support
 
+* Faculy student collaborative research grant (Summer 2019). Colorado College. (With Cinea Jenkins)
 * Graduate student researcher (Spring 2018). NSF RTG grant DMS-1646385.
 * Chateaubriand fellowship (with Christine Huyghe, 2016-2017). Embassy of France.
 * Summer grant (2012, 2013, 2016). UC Berkeley.
