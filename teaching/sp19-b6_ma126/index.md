@@ -297,7 +297,7 @@ Problem session with Bob (2pm).
 
 <tr>
 <td rowspan="2">Wed</td>
-<td>Substitution</td>
+<td>[Fundamental Theorem of Calculus, Substitution](ftc+substitution.pdf)</td>
 <td>Read: 5.7–8  
 Do: (5.7) 1, 7  
 (5.8) 1, 3  
