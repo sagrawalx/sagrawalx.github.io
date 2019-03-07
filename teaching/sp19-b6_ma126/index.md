@@ -18,7 +18,7 @@ nonav: true
     * See below for problem sessions with Lauren and Bob (in our classroom). If you'd like to attend a problem session, please make sure to arrive within about 15 minutes of the indicated starting time.
     * See below for Sunny's office hours (in Tutt Science 234). Please make sure to refresh frequently, since I may have to change the times of my office hours occasionally.
     * Check the [tutoring schedule for the QRC](https://www.coloradocollege.edu/offices/colketcenter/qrc/blocktutorschedule/).
-* [Reading assignment submission form](https://docs.google.com/forms/d/e/1FAIpQLSdEMAifwT7BkJ3aIUatKwqBSgmdjTDWVoGZPNUYeWW6nQ3usQ/viewform).
+* Reading assignment submission form (link disabled).
 * [Self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSeVKVktopo9RA5pg2hdVAdxZhRlqcP_L7eXTmE5x8kJdiFpGQ/viewform).
 
 # Calendar
@@ -316,7 +316,7 @@ Problem session with Lauren (7pm).
 
 <tr>
 <td rowspan="2">Thu</td>
-<td>Applications of integration</td>
+<td>[Applications of integration](wksht_integration-applications.pdf)</td>
 <td>Read: 5.6, 5.9  
 Do: (5.6) 1  
 (5.9) 1, 5  
