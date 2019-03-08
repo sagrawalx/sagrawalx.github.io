@@ -337,7 +337,7 @@ Problem session with Bob (2pm).
 
 <tr>
 <td rowspan="2">Fri</td>
-<td>Review</td>
+<td>[Review](review1.pdf)</td>
 <td>None</td>
 <td>None</td>
 </tr>
