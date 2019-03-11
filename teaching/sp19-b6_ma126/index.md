@@ -19,7 +19,7 @@ nonav: true
     * See below for Sunny's office hours (in Tutt Science 234). Please make sure to refresh frequently, since I may have to change the times of my office hours occasionally.
     * Check the [tutoring schedule for the QRC](https://www.coloradocollege.edu/offices/colketcenter/qrc/blocktutorschedule/).
 * Reading assignment submission form (link disabled).
-* [Self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSeVKVktopo9RA5pg2hdVAdxZhRlqcP_L7eXTmE5x8kJdiFpGQ/viewform).
+* Self reflection form (link disabled).
 
 # Calendar
 
@@ -134,7 +134,7 @@ Do: (3.2) 9, 11
 <td colspan="3">
 Problem sets for 2.2–8 due (in class).  
 Quiz 1 (in class, 11–12pm). Sections covered: up through 2.8.  
-Submit [self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSeVKVktopo9RA5pg2hdVAdxZhRlqcP_L7eXTmE5x8kJdiFpGQ/viewform) for week 1 (due Sunday, 11:59pm).
+Submit self reflection form for week 1 (due Sunday, 11:59pm).
 </td>
 </tr>
 
@@ -245,7 +245,7 @@ Do: (4.5) 1
 <td colspan="3">
 Problem sets for 3.1–4.1 and 4.8 due (in class).  
 Quiz 2 (in class, 11–12pm). Sections covered: up through 4.1, and also 4.8.  
-Submit [self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSeVKVktopo9RA5pg2hdVAdxZhRlqcP_L7eXTmE5x8kJdiFpGQ/viewform) for week 2 (due Sunday, 11:59pm).
+Submit self reflection form for week 2 (due Sunday, 11:59pm).
 </td>
 </tr>
 
@@ -346,7 +346,7 @@ Problem session with Bob (2pm).
 <td colspan="3">
 Quiz 3 revisions (12:30–2pm).  
 Problem session with Lauren (Sunday, 2–4pm).  
-Submit [self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSeVKVktopo9RA5pg2hdVAdxZhRlqcP_L7eXTmE5x8kJdiFpGQ/viewform) for week 3 (due Sunday, 11:59pm).
+Submit self reflection form for week 3 (due Sunday, 11:59pm).
 </td>
 </tr>
 
