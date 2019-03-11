@@ -356,7 +356,7 @@ Submit [self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSeVKVktop
 
 <tr>
 <td rowspan="2">Mon</td>
-<td>Review</td>
+<td>[Review](review2.pdf)</td>
 <td>None</td>
 <td>None</td>
 </tr>
