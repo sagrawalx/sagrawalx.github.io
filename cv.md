@@ -45,7 +45,7 @@ nonav: true
 
 # Research support
 
-* Faculy student collaborative research grant (Summer 2019). Colorado College. (With Cinea Jenkins)
+* Faculy student collaborative research grant (with Cinea Jenkins, Summer 2019). Colorado College.
 * Graduate student researcher (Spring 2018). NSF RTG grant DMS-1646385.
 * Chateaubriand fellowship (with Christine Huyghe, 2016-2017). Embassy of France.
 * Summer grant (2012, 2013, 2016). UC Berkeley.
@@ -57,6 +57,7 @@ nonav: true
 ## Primary instructor
 
 * Colorado College
+    * Linear Algebra (Spring 2019, Block 8).
     * Calculus 1 (Spring 2019, Block 6).
     * Ordinary Differential Equations (Spring 2019, Block 5).
     * Calculus 1 (Fall 2018, Block 3).
@@ -93,7 +94,9 @@ nonav: true
 
 ## Mentor
 
-* Senior thesis with Zhaopeng Li (2018-2019). Topic: Sums of cubes over finite fields.
+* Senior thesis with Kadin Mangalik (2019–2020).
+* Faculty student collaborative research with Cinea Jenkins (Summer 2019).
+* Senior thesis with Zhaopeng Li (2018–2019). Topic: Sums of cubes over $\mathbb{F}_p$.
 * Directed reading program with Frank Dai (Fall 2017). Topic: Class field theory.
 * Directed reading program with Alice Zhao (Fall 2014). Topic: Elliptic curves.
 
@@ -117,6 +120,7 @@ nonav: true
 
 # Professional service
 
+* Constributor to Stacks Project
 * Reviewer for zbMATH
 
 # Languages

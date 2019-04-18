@@ -19,3 +19,5 @@ The following consequence of the above lemma is a weakly étale generalization o
 *Proof.* The morphism $F_{U/X}$ is a universal homeomorphism
 {% include stacks.html tag="0CCB" %}. Since both $U$ and $U \times_{X,F_X} X$ are weakly étale over $X$, we see that $F_{U/X}$ must be weakly étale as well
 {% include stacks.html tag="0951" %}. Thus $f$ is an isomorphism by the lemma above.
+
+**Edit** (2019-04-04). These lemmas have now been incorporated into the Stacks Project at {% include stacks.html tag="0F6V" %} and {% include stacks.html tag="0F6W" %}, respectively.

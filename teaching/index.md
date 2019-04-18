@@ -5,15 +5,16 @@ permalink: teaching/
 
 # Currently Teaching
 
-* Spring 2019, Block 6. [MA126 - Calculus 1](sp19-b6_ma126).
+* Spring 2019, Block 8. [MA220 - Linear Algebra](sp19-b8_ma220).
 
 # Previously Taught
 
 ## Colorado College
 
+* Spring 2019, Block 6. [MA126 - Calculus 1](sp19-b6_ma126).
 * Spring 2019, Block 5. [MA315 - Ordinary Differential Equations](sp19-b5_ma315).
 * Fall 2018, Block 3. MA126 - Calculus 1.
-* Fall 2018, Block 2. [MA220 - Linear Algebra](fa18-b2_ma220).
+* Fall 2018, Block 2. MA220 - Linear Algebra.
 
 ## UC Berkeley
 
