@@ -65,6 +65,7 @@ Do: I.1.18, 20, 2.18</td>
 <tr>
 <td colspan="3">
 Sunny's office hours (12:30–1:30pm).  
+Problem session with Sam (7pm).
 </td>
 </tr>
 
@@ -81,7 +82,7 @@ Do: 1.17–19, 2.20, 23
 
 <tr>
 <td colspan="3">
-Problem session with Bob (2–3pm).  
+Problem session with Bob (2pm).  
 Writing assignment due (11:59pm). [Prompt](/teaching/prompt.pdf).</td>
 </tr>
 
@@ -98,6 +99,7 @@ Do: 1.20–21
 <tr>
 <td colspan="3">
 Sunny's office hours (12:30–1:30pm).  
+Problem session with Sam (2pm).
 </tr>
 
 <tr>
@@ -138,7 +140,7 @@ Do: 1.13, 16, 2.9–11
 <tr>
 <td colspan="3">
 Sunny's office hours (12:30–1:30pm).  
-Problem session with Bob (2–3pm).  
+Problem session with Bob (2pm).  
 Start population project (link forthcoming). Due 3rd Monday.
 </td>
 </tr>
@@ -157,6 +159,7 @@ Do: 1.18–20, 2.21–22
 <tr>
 <td colspan="3">
 Quiz 1 revisions (12:30–2pm).   
+Problem session with Sam (7pm).
 </td>
 </tr>
 
@@ -175,7 +178,7 @@ Do: 1.12, 18, 2.14, 16
 
 <tr>
 <td colspan="3">
-Problem session with Bob (2–3pm).
+Problem session with Bob (2pm).
 </td>
 </tr>
 
@@ -191,6 +194,7 @@ FAC Activity
 <tr>
 <td colspan="3">
 Sunny's office hours (12:30–1:30pm).  
+Problem session with Sam (7pm).
 </td>
 </tr>
 
@@ -234,7 +238,7 @@ Do: (Three.V) 1.7–9, 2.10–11, (Five.II) 1.5, 7
 <tr>
 <td colspan="3">
 Sunny's office hours (12:30–1:30pm).  
-Problem session with Bob (2–3pm).  
+Problem session with Bob (2pm).  
 Population project due (11:59pm).
 </td>
 </tr>
@@ -249,6 +253,7 @@ Population project due (11:59pm).
 <tr>
 <td colspan="3">
 Quiz 2 revisions (12:30–2pm).  
+Problem session with Sam (7pm).  
 [Final project](final-project) proposals due (11:59pm).
 </td>
 </tr>
@@ -268,7 +273,8 @@ II.1.9–12
 <tr>
 <td colspan="3">
 Sunny's office hours (12:30–1:30pm).  
-Problem session with Bob (2–3pm).  
+Problem session with Bob (2pm).  
+Problem session with Sam (7pm).  
 </td>
 </tr>
 
@@ -316,7 +322,8 @@ Submit [self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSfbrAJgG9
 <tr>
 <td colspan="3">
 Sunny's office hours (12:30–2pm).  
-Problem session with Bob (2–3pm).  
+Problem session with Bob (2pm).  
+Problem session with Sam (7pm).  
 </td>
 </tr>
 
