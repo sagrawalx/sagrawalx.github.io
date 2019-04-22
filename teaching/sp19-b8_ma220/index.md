@@ -8,7 +8,7 @@ nonav: true
 
 # Overview
 
-* Class: Monday through Friday, 9:15–11:45, in TBA.
+* Class: Monday through Friday, 9:15–11:45, in Palmer 227.
 * Instructor: Shishir Agrawal (I also go by Sunny), <span class="email">@</span>.
     * LA: Sam Kottler.
     * Paraprof: Bob Kuo.
