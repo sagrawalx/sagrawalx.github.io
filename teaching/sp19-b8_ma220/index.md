@@ -43,6 +43,7 @@ nonav: true
 (Read: One.II)  
 1.1–4  
 2.11–12, 14–16  
+[In class questions](linear-geometry.pdf)
 </td>
 </tr>
 
