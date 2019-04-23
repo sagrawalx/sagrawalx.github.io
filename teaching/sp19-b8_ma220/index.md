@@ -60,6 +60,7 @@ Sunny's office hours (12:30–1:30pm).
 Do: I.1.18, 20, 2.18</td>
 <td>I.1.22–25, 27, 37, 40  
 2.21–23, 29, 32  
+[In class questions](gaussian-elimination.pdf)
 </td>
 </tr>
 
