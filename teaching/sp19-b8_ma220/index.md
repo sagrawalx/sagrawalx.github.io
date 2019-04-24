@@ -101,7 +101,7 @@ Do: 1.20–21
 <tr>
 <td colspan="3">
 Sunny's office hours (12:30–1:30pm).  
-Problem session with Sam (2pm).
+Problem session with Sam (7pm).
 </tr>
 
 <tr>
@@ -180,7 +180,7 @@ Do: 1.12, 18, 2.14, 16
 
 <tr>
 <td colspan="3">
-Problem session with Bob (2pm).
+Problem session with Bob (2pm).  
 </td>
 </tr>
 
@@ -195,8 +195,7 @@ FAC Activity
 
 <tr>
 <td colspan="3">
-Sunny's office hours (12:30–1:30pm).  
-Problem session with Sam (7pm).
+Problem session with Sam (7pm).  
 </td>
 </tr>
 
