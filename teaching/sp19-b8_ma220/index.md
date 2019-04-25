@@ -96,6 +96,7 @@ Writing assignment due (11:59pm). [Prompt](/teaching/prompt.pdf).</td>
 Do: 1.20–21
 </td>
 <td>1.23–24, 28, 32, 35–36   
+[In class questions](span+indep.pdf)
 </td>
 </tr>
 
