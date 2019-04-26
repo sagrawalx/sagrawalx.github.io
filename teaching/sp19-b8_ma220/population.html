@@ -42,7 +42,7 @@ Spring 2019, Block 8 — MA220 — Population Project
 <p>If you aren't already familiar with one, my suggestion is to familiarize yourself with <a href="https://www.sagemath.org/">SageMath</a>, an open source mathematical programming language with Python-like syntax.</p>
 <h2 id="introduction">Introduction</h2>
 <p>We're in charge of managing the population of a certain species of fish in a certain lake. This species of fish has a life span of 10 years.</p>
-<p>Every year, we run a census to find the number of fish of each age (in millions), and record this number using a vector in <span class="math inline">\(\mathbb{R}^{10}\)</span>. For example, the population vector <span class="math inline">\(v = (100,90,80,70,60,50,40,30,20,10)\)</span> means that there are 100 million newborn haddock, 90 million 1 year old haddock, 80 million 2 year old haddock, and so forth.</p>
+<p>Every year, we run a census to find the number of fish of each age (in millions), and record this number using a vector in <span class="math inline">\(\mathbb{R}^{10}\)</span>. For example, a population vector <span class="math inline">\(v = (100,90,80,70,60,50,40,30,20,10)\)</span> means that there are 100 million newborn haddock, 90 million 1 year old haddock, 80 million 2 year old haddock, and so forth.</p>
 <p>After collecting a many years of data, we find that if the population vector one year is <span class="math inline">\(v\)</span>, then the population vector the following year is given by the matrix-vector product <span class="math inline">\(Av\)</span>, where <span class="math inline">\(A\)</span> is the following <span class="math inline">\(10 \times 10\)</span> matrix.</p>
 <p><span class="math display">\[A = \begin{bmatrix}
 0 &amp; 0 &amp; 1.5 &amp; 4.2 &amp; 3.8 &amp; 1.5 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
@@ -55,16 +55,21 @@ Spring 2019, Block 8 — MA220 — Population Project
 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; .4  &amp; 0 &amp; 0 &amp; 0 \\
 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; .35 &amp; 0 &amp; 0 \\
 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; .2  &amp; 0 \end{bmatrix}\]</span></p>
+<p>Suppose that the lake was empty in the year 2000 and we introduced 100 million newborn fish into the lake. Let <span class="math inline">\(v_n\)</span> denote the population vector when <span class="math inline">\(n\)</span> years have elapsed. In other words, <span class="math inline">\(v_0 = (100, 0, 0, 0, 0, 0, 0, 0, 0, 0)\)</span>, <span class="math inline">\(v_1 = Av_0, v_2 = Av_1, \dotsc\)</span>. The matrix <span class="math inline">\(A\)</span> is called the <em>evolution matrix</em> of the system.</p>
 <h2 id="part-1-basics">Part 1: Basics</h2>
 <ol type="1">
-<li><p>What does the first row of <span class="math inline">\(A\)</span> tell you about the reproductive behavior of this species of fish?</p></li>
-<li><p>The entry in the <span class="math inline">\(i\)</span>th row and the <span class="math inline">\(j\)</span>th column of a matrix is called its <em><span class="math inline">\((i,j)\)</span> entry</em>. Notice that the <span class="math inline">\((2,1),(3,2),\dotsc,(10,9)\)</span> entries are all between 0 and 1. Why?</p></li>
+<li><p>What do the numbers in the first row of <span class="math inline">\(A\)</span> tell you about the reproductive behavior of this species of fish? These numbers are called <em>birth rates</em>. Can you explain why?</p></li>
+<li><p>The entry in the <span class="math inline">\(i\)</span>th row and the <span class="math inline">\(j\)</span>th column of a matrix is called its <em><span class="math inline">\((i,j)\)</span> entry</em>. Notice that the <span class="math inline">\((2,1),(3,2),\dotsc,(10,9)\)</span> entries are all between 0 and 1. These numbers are called <em>survival rates</em>. Can you explain what these numbers mean?</p></li>
+<li><p>What is <span class="math inline">\(v_1\)</span>? <span class="math inline">\(v_{10}\)</span>? <span class="math inline">\(v_{100}\)</span>? <span class="math inline">\(v_{1000}\)</span>? Can you qualitatively describe what happens to the fish population over time (eg, does it stay stable, does it blow up, ...)?</p></li>
+<li><p>Compare <span class="math inline">\(v_{100}\)</span> and <span class="math inline">\(v_{101}\)</span>. Is there a <span class="math inline">\(\lambda\)</span> such that <span class="math inline">\(v_{101}\)</span> is <em>approximately</em> equal to <span class="math inline">\(v_{100}\)</span>? If so, what is <span class="math inline">\(\lambda\)</span>? Then do the same to compare <span class="math inline">\(v_{1000}\)</span> and <span class="math inline">\(v_{1001}\)</span>.</p></li>
 </ol>
-<h2 id="part-2-stability">Part 2: Stability</h2>
+<h2 id="part-2-pollution">Part 2: Pollution</h2>
 <ol type="1">
-<li><p>Suppose that the lake was empty in the year 2000 and we introduced 100 million newborn fish into the lake. Let <span class="math inline">\(v_n\)</span> denote the population vector when <span class="math inline">\(n\)</span> years have elapsed. What is <span class="math inline">\(v_0\)</span>?</p></li>
-<li><p>What is <span class="math inline">\(v_1\)</span>? <span class="math inline">\(v_5\)</span>? <span class="math inline">\(v_{10}\)</span>? <span class="math inline">\(v_{20}\)</span>? <span class="math inline">\(v_{100}\)</span>?</p></li>
-<li></li>
+<li><p>Suppose that pollution in the lake causes all of the birth rates to decline by 50% and survival coefficients to decline by 15%. Let <span class="math inline">\(B\)</span> denote the new evolution matrix. How does the evolution matrix change? Can you write <span class="math inline">\(B = DA\)</span> for some matrix <span class="math inline">\(D\)</span>?</p></li>
+<li><p>What is <span class="math inline">\(v_1\)</span>? <span class="math inline">\(v_{10}\)</span>? <span class="math inline">\(v_{100}\)</span>? <span class="math inline">\(v_{1000}\)</span>? Qualitatively describe what happens to the fish population.</p></li>
+<li><p>Compare <span class="math inline">\(v_{100}\)</span> and <span class="math inline">\(v_{101}\)</span>. Is there a <span class="math inline">\(\lambda\)</span> such that <span class="math inline">\(v_{101}\)</span> is <em>approximately</em> equal to <span class="math inline">\(v_{100}\)</span>? If so, what is <span class="math inline">\(\lambda\)</span>?</p></li>
+<li><p>Suppose instead that pollution in the lake causes all of the birth rates to decline by 49% instead, and survival coefficients still decline by 15%. Qualitatively describe what happens to the fish population now.</p></li>
+<li><p>Again, compare <span class="math inline">\(v_{100}\)</span> and <span class="math inline">\(v_{101}\)</span>. Is there a <span class="math inline">\(\lambda\)</span> such that <span class="math inline">\(v_{101}\)</span> is <em>approximately</em> equal to <span class="math inline">\(v_{100}\)</span>? If so, what is <span class="math inline">\(\lambda\)</span>?</p></li>
 </ol>
 <section class="footnotes">
 <hr />
