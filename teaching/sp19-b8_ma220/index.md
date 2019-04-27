@@ -146,7 +146,7 @@ Do: 1.13, 16, 2.9–11
 <td colspan="3">
 Sunny's office hours (12:30–1:30pm).  
 Problem session with Bob (2pm).  
-Start population project (link forthcoming). Due 3rd Monday.
+Start [population project](population). Due 3rd Monday.
 </td>
 </tr>
 
@@ -243,7 +243,7 @@ Do: (Three.V) 1.7–9, 2.10–11, (Five.II) 1.5, 7
 <td colspan="3">
 Sunny's office hours (12:30–1:30pm).  
 Problem session with Bob (2pm).  
-Population project due (11:59pm).
+[Population project](population) due (11:59pm).
 </td>
 </tr>
 
