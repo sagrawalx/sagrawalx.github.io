@@ -139,8 +139,11 @@ Do: 1.13, 16, 2.9–11
 <td>
 1.17–18, 21, 31, 37  
 2.12, 17–19  
+[In class problems](dim.pdf)[^behind]
 </td>
 </tr>
+
+[^behind]: These in class problems are all about dimension (rather than isomorphisms), so, topically speaking, belong with the in class problems from Week 1, Friday. Our in class discussions are a bit behind the reading schedule, but hopefully we'll catch up soon. We'll have some spare time on Thursday to play catch-up too.
 
 <tr>
 <td colspan="3">
