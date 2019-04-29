@@ -201,7 +201,7 @@ FAC Activity
 
 <tr>
 <td colspan="3">
-Office hours (2–3pm).  
+Sunny's office hours (2–3pm).  
 Problem session with Sam (7pm).  
 </td>
 </tr>
