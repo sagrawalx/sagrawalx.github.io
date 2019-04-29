@@ -43,7 +43,7 @@ nonav: true
 (Read: One.II)  
 1.1–4  
 2.11–12, 14–16  
-[In class questions](linear-geometry.pdf)
+[In class problems](linear-geometry.pdf)
 </td>
 </tr>
 
@@ -60,7 +60,7 @@ Sunny's office hours (12:30–1:30pm).
 Do: I.1.18, 20, 2.18</td>
 <td>I.1.22–25, 27, 37, 40  
 2.21–23, 29, 32  
-[In class questions](gaussian-elimination.pdf)
+[In class problems](gaussian-elimination.pdf)
 </td>
 </tr>
 
@@ -79,7 +79,7 @@ Do: 1.17–19, 2.20, 23
 </td>
 <td>1.20–22, 28–30, 32, 45  
 2.24–27, 29–30, 32, 44  
-[In class questions](vec+sub.pdf)
+[In class problems](vec+sub.pdf)
 </td>
 </tr>
 
@@ -96,7 +96,7 @@ Writing assignment due (11:59pm). [Prompt](/teaching/prompt.pdf).</td>
 Do: 1.20–21
 </td>
 <td>1.23–24, 28, 32, 35–36   
-[In class questions](span+indep.pdf)
+[In class problems](span+indep.pdf)
 </td>
 </tr>
 
@@ -115,7 +115,7 @@ Do: 1.18–20, 2.17
 <td>1.21–26, 28–29, 33, 37  
 2.18–22, 25, 36  
 3.21, 25  
-[In class questions](bases.pdf)
+[In class problems](bases.pdf)
 </td>
 </tr>
 
