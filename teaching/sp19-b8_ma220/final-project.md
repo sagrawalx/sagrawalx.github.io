@@ -49,8 +49,8 @@ If you're struggling to find things, you probably haven't looked :P Here's a sho
 * Stress tensors.
 * Algorithms for computations in linear algebra (for calculating determinants, or for matrix multiplication, or...).
 * Page ranking.
-* Linear Support Vector Machines.
-* Leontief Input-Output Model.
+* Linear support vector machines.
+* Leontief input-output model.
 * Lines of best fit.
 * Markov chains.
 * Singular value decomposition.
