@@ -179,7 +179,8 @@ Problem session with Sam (7pm).
 Do: 1.12, 18, 2.14, 16
 </td>
 <td>1.13–21, 26, 29, 33(a–c)  
-2.12, 14, 17–20, 26, 30, 32(a–b)
+2.12, 14, 17–20, 26, 30, 32(a–b)  
+[In class problems](matrix-reps.pdf)
 </td>
 </tr>
 
