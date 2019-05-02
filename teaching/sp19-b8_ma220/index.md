@@ -198,7 +198,7 @@ Problem session with Bob (2pm).
 [FAC Activity](fac.pdf)
 </td>
 <td>None</td>
-<td></td>
+<td>[In class problems](review-1.pdf)</td>
 </tr>
 
 <tr>
