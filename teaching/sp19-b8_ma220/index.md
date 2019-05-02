@@ -195,7 +195,7 @@ Problem session with Bob (2pm).
 <tr>
 <td rowspan="2">Thu</td>
 <td>Review  
-FAC Activity
+[FAC Activity](fac.pdf)
 </td>
 <td>None</td>
 <td></td>
@@ -203,7 +203,7 @@ FAC Activity
 
 <tr>
 <td colspan="3">
-Sunny's office hours (12:30–1:30pm).  
+Sunny's office hours (12:30–2pm).  
 Problem session with Sam (7pm).  
 </td>
 </tr>
