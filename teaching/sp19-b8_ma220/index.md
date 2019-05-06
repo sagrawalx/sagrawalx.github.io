@@ -243,6 +243,7 @@ Do: (Three.V) 1.7–9, 2.10–11, (Five.II) 1.5, 7
 2.13, 15–16, 28(a), 31(d–e)  
 (Five.II)  
 1.8–9, 11, 13–14, 19, 21–22  
+[In class problems](changing-basis.pdf)
 </td>
 </tr>
 
