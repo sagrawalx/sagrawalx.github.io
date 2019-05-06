@@ -45,7 +45,7 @@ Evidently, the population blows up.
 
 The following uses the corrected numbers, where in problem 1, birth rates decline by 35\%.
 
-1. The entries in the first row of $B$ are 65\% of the entries in the first row of $A$, and all other entries are 85\% of the corresponding entries of $A$. We have $B = DA$ for $$D = \begin{bmatrix} 0.65 & 0 & 0 & 0 \\ 0 & 0.85 & 0 & 0 \\ 0 & 0 & 0.85 & 0 \\ 0 & 0 & 0 & 0.85 \end{bmatrix}.
+1. The entries in the first row of $B$ are 65\% of the entries in the first row of $A$, and all other entries are 85\% of the corresponding entries of $A$. We have $B = DA$ for $$D = \begin{bmatrix} 0.65 & 0 & 0 & 0 \\ 0 & 0.85 & 0 & 0 \\ 0 & 0 & 0.85 & 0 \\ 0 & 0 & 0 & 0.85 \end{bmatrix}.$$
 
 2. We have the following. $$\begin{aligned}
 v_{10} &= (2.55e7, 1.07e7, 5.58e6,
@@ -66,10 +66,11 @@ The population still blows up, but more slowly than before.
 
 ## Part 3: Sustainable Harvesting
 
-1. All entries of $B$ are 50\% of the corresponding entries of $A$.
+1. All entries below the first row of $B$ are 50\% of the corresponding entries of $A$, and the first rows are the same. In other words, $B = DA$ where
+$$D = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 0.5 & 0 & 0 \\ 0 & 0 & 0.5 & 0 \\ 0 & 0 & 0 & 0.5 \end{bmatrix}.$$
 
-2. The dominant eigenvalue is $\lambda = 0.6544$, and the population declines. This is not sustainable over the course of 50 years; the fish population dies off.
+2. The dominant eigenvalue is $\lambda = 0.8607$, and the population declines. This is not sustainable over the course of 100 years; the fish population dies off.
 
-3. 23\% of the fish can be taken; more than that, and the dominant eigenvalue drops below 1.
+3. 35\% of the fish can be taken; more than that, and the dominant eigenvalue drops below 1 and the fish population declines.
 
 ## Part 4: Maximizing Harvesting
