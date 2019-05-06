@@ -57,9 +57,7 @@ v_{10000} &amp;= (8.43e1175, 3.22e1175, 1.48e1175,
 <h2 id="part-2-pollution">Part 2: Pollution</h2>
 <p>The following uses the corrected numbers, where in problem 1, birth rates decline by 35%.</p>
 <ol type="1">
-<li>The entries in the first row of <span class="math inline">\(B\)</span> are 65% of the entries in the first row of <span class="math inline">\(A\)</span>, and all other entries are 85% of the corresponding entries of <span class="math inline">\(A\)</span>. We have <span class="math inline">\(B = DA\)</span> for $$D =
-<span class="math display">\[\begin{bmatrix} 0.65 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0.85 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0.85 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0.85 \end{bmatrix}\]</span>
-<p>.</p></li>
+<li><p>The entries in the first row of <span class="math inline">\(B\)</span> are 65% of the entries in the first row of <span class="math inline">\(A\)</span>, and all other entries are 85% of the corresponding entries of <span class="math inline">\(A\)</span>. We have <span class="math inline">\(B = DA\)</span> for <span class="math display">\[D = \begin{bmatrix} 0.65 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0.85 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0.85 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0.85 \end{bmatrix}.\]</span></p></li>
 <li><p>We have the following. <span class="math display">\[\begin{aligned}
 v_{10} &amp;= (2.55e7, 1.07e7, 5.58e6,
 1.85e6) \\
@@ -75,9 +73,9 @@ v_{10000} &amp;= (4.05e17, 1.72e17, 8.73e16,
 </ol>
 <h2 id="part-3-sustainable-harvesting">Part 3: Sustainable Harvesting</h2>
 <ol type="1">
-<li><p>All entries of <span class="math inline">\(B\)</span> are 50% of the corresponding entries of <span class="math inline">\(A\)</span>.</p></li>
-<li><p>The dominant eigenvalue is <span class="math inline">\(\lambda = 0.6544\)</span>, and the population declines. This is not sustainable over the course of 50 years; the fish population dies off.</p></li>
-<li><p>23% of the fish can be taken; more than that, and the dominant eigenvalue drops below 1.</p></li>
+<li><p>All entries below the first row of <span class="math inline">\(B\)</span> are 50% of the corresponding entries of <span class="math inline">\(A\)</span>, and the first rows are the same. In other words, <span class="math inline">\(B = DA\)</span> where <span class="math display">\[D = \begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0.5 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0.5 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0.5 \end{bmatrix}.\]</span></p></li>
+<li><p>The dominant eigenvalue is <span class="math inline">\(\lambda = 0.8607\)</span>, and the population declines. This is not sustainable over the course of 100 years; the fish population dies off.</p></li>
+<li><p>35% of the fish can be taken; more than that, and the dominant eigenvalue drops below 1 and the fish population declines.</p></li>
 </ol>
 <h2 id="part-4-maximizing-harvesting">Part 4: Maximizing Harvesting</h2>
 
