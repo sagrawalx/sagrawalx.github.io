@@ -257,7 +257,7 @@ Do: (Three.V) 1.7–9, 2.10–11, (Five.II) 1.5, 7
 <td rowspan="2">Tue</td>
 <td>Review</td>
 <td>None</td>
-<td></td>
+<td>[In class problems](review-2.pdf)</td>
 </tr>
 
 <tr>
