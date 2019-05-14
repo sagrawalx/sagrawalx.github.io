@@ -1,0 +1,63 @@
+\documentclass[letterpaper]{scrbook}
+
+\title{Meditations on derivatives}
+\author{Shishir Agrawal}
+\date{Draft of \today}
+
+% Fonts and symbols
+\usepackage{newpxtext, bbold, amsmath, amssymb}
+\usepackage[euler-digits,euler-hat-accent]{eulervm}
+\usepackage[mathscr]{euscript}
+\linespread{1.2}
+
+% Miscellaneous
+\usepackage{enumerate, tikz-cd, color, cancel, microtype, verbatim}
+\usepackage[colorlinks=true]{hyperref}
+
+% Numbering and environments
+\usepackage{amsthm}
+\usepackage[noabbrev]{cleveref}
+
+\numberwithin{equation}{chapter}
+\renewcommand{\thesection}{\thechapter.\Alph{section}}
+
+\makeatletter
+\let\c@figure\c@equation
+\let\c@table\c@equation
+\makeatother
+
+\newtheorem{theorem}[equation]{Theorem}
+\newtheorem{lemma}[equation]{Lemma}
+\newtheorem{proposition}[equation]{Proposition}
+\newtheorem{conjecture}[equation]{Conjecture}
+\newtheorem{corollary}[equation]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[equation]{Definition}
+\newtheorem{example}[equation]{Example}
+\newtheorem{remark}[equation]{Remark}
+\newtheorem{exercise}[equation]{Exercise}
+
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\O}{\mathscr{O}}
+
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+	
+	\include{introduction}
+	
+	\include{single-var}
+	
+	\include{multi-var}
+	
+	\chapter{Manifolds}
+	
+	\chapter{Tangent spaces}
+	
+	
+	\bibliographystyle{alphaurl}
+	\bibliography{references}
+	
+\end{document}
