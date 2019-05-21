@@ -1,6 +1,7 @@
 \documentclass[letterpaper]{scrbook}
 
-\title{Meditations on derivatives}
+\title{Off on a Tangent}
+\subtitle{Meditations on the derivative}
 \author{Shishir Agrawal}
 \date{Draft of \today}
 
@@ -11,7 +12,7 @@
 \linespread{1.2}
 
 % Miscellaneous
-\usepackage{enumerate, tikz-cd, color, cancel, microtype, verbatim}
+\usepackage{enumerate, tikz-cd, color, cancel, microtype, verbatim, pgfplots}
 \usepackage[colorlinks=true]{hyperref}
 
 % Numbering and environments
@@ -20,6 +21,7 @@
 
 \numberwithin{equation}{chapter}
 \renewcommand{\thesection}{\thechapter.\Alph{section}}
+
 
 \makeatletter
 \let\c@figure\c@equation
@@ -37,6 +39,12 @@
 \newtheorem{example}[equation]{Example}
 \newtheorem{remark}[equation]{Remark}
 \newtheorem{exercise}[equation]{Exercise}
+
+\crefname{exercise}{exercise}{exercises}
+\Crefname{exercise}{Exercise}{Exercises}
+
+\theoremstyle{remark}
+\newtheorem*{proofsketch}{Proof sketch}
 
 \newcommand{\R}{\mathbb{R}}
 \renewcommand{\O}{\mathscr{O}}
