@@ -1,0 +1,153 @@
+\chapter{Multivariable derivatives}
+
+\section{Definition of the derivative}
+
+Throughout, $S$ will denote a subset of $\R^m$. 
+
+\begin{definition}
+	A function $f : S \to \R^n$ is \emph{differentiable at} an interior point $a \in S$ if there exists a linear map $\ell : \R^m \to \R^n$ such that
+	\[ |f(a+h)-f(a)-\ell(h)| = o(|h|) \text{ as } h \to 0. \]
+\end{definition}
+
+It turns out that there can exist at most one linear map that has the above property. 
+
+\begin{lemma}
+	Suppose $f : S \to \R^m$ is differentiable at an interior point $a \in S$. If $\ell$ and $\ell'$ are both linear maps $\R^m \to \R^n$ such that
+	\[ |f(a+h) - f(a) - \ell(h)| = o(|h|) \text { and } |f(a+h) - f(a) - \ell'(h)| = o(|h|) \text{ as } h \to 0, \]
+	then $\ell = \ell'$. 
+\end{lemma}
+
+\begin{proof}
+	Let $\phi = \ell' - \ell$. Then $\phi$ is also a linear map $\R^m \to \R^n$. Moreover, observe that
+	\[ \begin{aligned} |\phi(h)| &= |\ell'(h) - \ell(h)| \\
+	&= |(f(a+h)-f(a)-\ell(h))-(f(a+h)-f(a)-\ell'(h)| \\
+	&\leq |f(a+h)-f(a)-\ell(h)| + |f(a+h)-f(a)-\ell'(h)|. \end{aligned} \]
+	Since both $|f(a+h)-f(a)-\ell(h)|$ and $|f(a+h)-f(a)-\ell'(h)|$ are $o(|h|)$, \cref{less-than-small-is-small,little-o-vector-space} imply that $|\phi(h)|$ is also $o(|h|)$. Then \cref{linear-and-small} implies that $\phi = 0$. 
+\end{proof}
+
+\begin{definition}
+	Suppose $f : S \to \R^n$ is differentiable at an interior point $a \in S$. Then the \emph{derivative} of $f$ at $a$, denoted $df_a$, is the unique linear map $\R^m \to \R^n$ satisfying
+	\[ |f(a+h)-f(a)-df_a(h)| = o(|h|) \text{ as } h \to 0.  \]
+\end{definition}
+
+This definition is very difficult to compute examples from. Virtually the only concrete example that we can calculate without much effort directly from the definition is the following. 
+
+\begin{exercise} \label{derivative-of-linear}
+	Suppose $\ell : \R^m \to \R^n$ is a linear map. Prove that $\ell$ is differentiable at every $a \in \R^m$ and $d\ell_a = \ell$.  
+\end{exercise}
+
+So we are now going to embark upon a journey to find a more concrete description of the derivative; ultimately, we will calculate an explicit matrix representation for the derivative whose entries will be single-variable derivatives. But our journey will be arduous and abstract. So, before we embark, let us explore a concrete example. 
+
+\section{Detailed example}
+
+\section{Rules of differentiation}
+
+\subsection{Sum and scalar multiples rule}
+
+\begin{exercise}[Sum rule] \label{sum-rule-multivar}
+	Prove that, if $f, g : S \to \R^n$ are both differentiable at an interior point $a \in S$, then $f + g$ is also differentiable at $a$ and \[ d(f+g)_a = df_a + dg_a. \]
+\end{exercise}
+
+\begin{exercise}[Scalar multiples rule] \label{scalar-multiples-rule-multivar}
+	Prove that, if $c$ is a constant and $f : S \to \R^n$ is differentiable at an interior point $a \in S$, then $cf$ is also differentiable at $a$ and \[ d(cf)_a = c \cdot df_a. \]
+\end{exercise}
+
+\subsection{Chain rule}
+
+The proof of the following is essentially the same as the second proof of the single variable chain rule \ref{chain-rule-single}. Since this proof is basically a repeat, some details are omitted; you are asked to fill in the details in \cref{chain-rule-multi-details} below. 
+
+\begin{proposition}[Chain rule] \label{chain-rule}
+	Suppose that $S$ and $T$ are subsets of $\R^m$ and $\R^n$, respectively, that $f : S \to T$ is differentiable at an interior point $a$, that $f(a)$ is an interior point of $T$, and that $g : T \to \R^p$ is differentiable at $f(a)$. Then the composite $g \circ f : S \to \R^p$ is also differentiable at $a$, and 
+	\[ d(g \circ f)_a = dg_{f(a)} \circ df_a. \]
+\end{proposition}
+
+\begin{proof}
+	Define the ``error in approximation'' functions
+	\[ \begin{aligned} 
+	r(h) &= f(a+h)-f(a) - df_a(h) \\ 
+	s(k) &= g(f(a)+k)-g(f(a))-dg_{f(a)}(k) 
+	\end{aligned} \]
+	and then observe that
+	\begin{equation} \label{rewrite-error} g(f(a+h)) - g(f(a)) - dg_{f(a)}(df_a(h)) = dg_{f(a)}(r(h)) + s(df_a(h)+r(h)). \end{equation}
+	This means that 
+	\[ |g(f(a+h)) - g(f(a)) - dg_{f(a)}(df_a(h))| \leq |dg_{f(a)}(r(h))| + |s(df_a(h)+r(h))|. \]
+	Since $dg_{f(a)}$ is linear and $|r(h)| = o(|h|)$, \cref{linear-of-small-is-small} guarantees that $|dg_{f(a)}(r(h))| = o(|h|)$ also. Thus it is sufficient to prove that $|s(df_a(h) + r(h))| = o(|h|)$. To do this, define $\eta(k) = |s(k)|/|k|$ and then notice that 
+	\[ \begin{aligned} \frac{|s(df_a(h)+r(h))|}{|h|} &= \eta(df_a(h)+r(h)) \cdot \frac{|df_a(h) + r(h)|}{|h|} \\
+	&\leq \eta(df_a(h) + r(h)) \left( \|df_a\| + \frac{|r(h)|}{|h|} \right). \end{aligned} \]
+	We now take the limit as $h \to 0$. Using the facts that $\eta \circ (df_a + r)$ is continuous at 0 and that $|r(h)| = o(|h|)$, we obtain the result. 
+\end{proof}
+
+\begin{exercise} \label{chain-rule-multi-details}
+	\begin{enumerate}[(a)]
+		\item Prove \cref{rewrite-error}. 
+		\item If you haven't done it already, do \cref{linear-of-small-is-small}.
+		\item Prove that $\eta \circ (df_a + r)$ is continuous at 0. 
+	\end{enumerate}
+\end{exercise}
+
+\subsection{Differentiability by components}
+
+In this section, we'll show that it's ``enough'' to consider the case $n = 1$. 
+
+\begin{definition}
+	For $j = 1, \dotsc, n$, let $\pi_j : \R^n \to \R$ denote the $j$th \emph{projection map}
+	\[ \pi_j(x_1, \dotsc, x_n) = x_j. \]
+	Then, for any function $f : S \to \R^n$, we define the $j$th \emph{component function} $f_j : S \to \R$ to be the composite $\pi_j \circ f$. 
+\end{definition}
+
+\begin{proposition} \label{differentiable-by-components}
+	A function $f : S \to \R^n$ is differentiable at an interior point $a \in S$ if and only if the component function $f_j : S \to \R$ is differentiable at $a$ for all $j = 1, \dotsc n$. Moreover,
+	\begin{equation} \label{derivative-of-components} df_a(h) = \begin{bmatrix} df_{1,a}(h) \\ \vdots \\ df_{n,a}(h) \end{bmatrix}. \end{equation}
+\end{proposition}
+
+\begin{proof}
+	If $f$ is differentiable at $a$, then the composite $f_j = \pi_j \circ f$ is also differentiable at $a$ by the chain rule \ref{chain-rule}. Moreover, since $\pi_j$ is linear, we know that $d\pi_{j,f(a)} = \pi_j$ by \cref{derivative-of-linear}. Thus, by the chain rule, 
+	\[ df_{j,a}(h) = (d\pi_{j,f(a)} \circ df_a)(h) = \pi_j(df_a(h)) \]
+	for all $j$, which is precisely \cref{derivative-of-components}. 
+	For the converse, we turn \cref{derivative-of-components} on its head. Suppose $f_j$ is differentiable at $a$ for all $j$, and let $\ell : \R^m \to \R^n$ be the linear map 
+	\[ \ell(h) = \begin{bmatrix} df_{1,a}(h) \\ \vdots \\ df_{n,a}(h) \end{bmatrix}.  \]
+	We now want to show that $|f(a+h)-f(a)-\ell(h)| = o(|h|)$ as $h \to 0$. 
+\end{proof}
+
+\section{Partial derivatives}
+
+\begin{definition}
+	Suppose $f : S \to \R$ is a function and $a \in S$ is an interior point. 
+\end{definition}
+
+\begin{proposition} \label{differentiability-implies-partials}
+	If $f : S \to \R$ is differentiable at $a$, then $\partial_i f(a)$ exists for all $i = 1, \dotsc m$. 
+\end{proposition}
+
+\section{Jacobian matrix}
+
+\begin{definition}
+	Suppose $f : S \to \R^n$ is differentiable at an interior point $a \in S$. The \emph{Jacobian matrix} at $a$, denoted $J(a)$, is the $n \times m$ matrix whose $(j, i)$-entry is $\partial_i f_j(a)$. In other words,
+	\[ J(a) = \begin{bmatrix} \partial_1 f_1(a) & \partial_1 f_2(a) & \dotsb & \partial_1 f_n(a) \\ 
+	\partial_2 f_1(a) & \partial_2 f_2(a) & \dotsb & \partial_2 f_n(a) \\
+	\vdots & \vdots & \ddots & \vdots \\ 
+	\partial_m f_1(a) & \partial_m f_2(a) & \dotsb & \partial_m f_n(a) \end{bmatrix} \]
+	It follows from \cref{differentiability-implies-partials} that all of these partial derivatives exist. 
+\end{definition}
+
+\begin{theorem}
+	Suppose $f : S \to \R^m$ is differentiable at an interior point $a \in S$. Then \[ [df_a] = J(a). \]
+\end{theorem}
+
+\section{Inverse function theorem}
+
+\section{Levels of differentiability}
+
+Throughout, $U$ denotes an open subset of $\R^m$. 
+
+\begin{definition}
+	If a function $f : U \to \R^n$ is differentiable at every $a \in U$, then $f$ is \emph{differentiable on $U$}. Then the function $U \to \mathscr{L}(\R^m, \R^n)$ given by $a \mapsto df_a$ is denoted $df$.
+\end{definition}
+
+\begin{definition}
+	If $f : U \to \R^n$ is a differentiable function and $df : U \to \mathscr{L}(\R^m, \R^n)$ is continuous, then $f$ is \emph{continuously differentiable}. 
+\end{definition}
+
+\begin{lemma}
+	A function $f : U \to \R^n$ is continuously differentiable if and only if $\partial_i f_j : U \to \R$ is continuously. 
+\end{lemma}
