@@ -20,7 +20,9 @@
 \usepackage[noabbrev]{cleveref}
 
 \numberwithin{equation}{chapter}
+\setcounter{secnumdepth}{4}
 \renewcommand{\thesection}{\thechapter.\Alph{section}}
+\renewcommand{\thesubsubsection}{\thesubsection.\Alph{subsubsection}}
 
 
 \makeatletter
@@ -48,6 +50,7 @@
 
 \newcommand{\R}{\mathbb{R}}
 \renewcommand{\O}{\mathscr{O}}
+\newcommand{\id}{\mathrm{id}}
 
 
 \begin{document}
@@ -60,9 +63,9 @@
 	
 	\include{multi-var}
 	
-	\chapter{Manifolds}
+	\include{manifolds}
 	
-	\chapter{Tangent spaces}
+	\include{tangent}
 	
 	
 	\bibliographystyle{alphaurl}

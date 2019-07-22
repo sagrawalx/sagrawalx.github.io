@@ -6,13 +6,34 @@ This text assumes familiarity with metric space theory and with linear algebra.
 
 \section{Linear algebra notation}
 
+\subsection{Some important vector spaces}
+
+\begin{definition}
+	We write $\R^n$ to denote the vector space of lists of $n$ numbers. We will sometimes write its elements as horizontal lists with commas, as in $(a_1, \dotsc, a_n)$, and sometimes as vertical column vectors, as in \[ \begin{bmatrix} a_1 \\ \vdots \\ a_n \end{bmatrix}.  \]
+\end{definition}
+
+\begin{definition}
+	We write $\mathscr{M}_{n,m}$ for the set of all $n \times m$ matrices (ie, the matrices with $n$ rows and $m$ columns). This is naturally a vector space. 
+\end{definition}
+
+\begin{definition}
+	If $V$ and $W$ are both vector spaces, we write $\mathscr{L}(V, W)$ for the set of all linear maps $V \to W$. This is naturally a vector space. 
+\end{definition}
+
+\subsection{Matrix notation}
+
 \begin{definition}
 	Suppose $V$ is a finite dimensional vector space and $B = ( v_1, \dotsc, v_n )$ is a basis for $V$. Then any $v \in V$ can be written uniquely as $a_1v_1 + \dotsb + a_n v_n$ for some scalars $a_1, \dotsc, a_n \in \R$, and we define the \emph{representation of $v$ with respect to $B$}, denoted $[v]_B$, to be the column vector with $n$ entries that records the scalars $a_1, \dotsc, a_n$. In other words,
 \[ [v]_B = \begin{bmatrix} a_1 \\ \vdots \\ a_n \end{bmatrix}. \]
 \end{definition}
 
+\begin{lemma}
+	If $V$ is an $n$-dimensional vector space and $B = (v_1, \dotsc, v_n)$ is a basis for $V$, then the function $V \to \R^n$ given by $v \mapsto [v]_B$ is an isomorphism, with inverse given by
+	\[ \begin{bmatrix} a_1 \\ \vdots \\ a_n \end{bmatrix} \mapsto a_1 v_1 + \dotsb + a_n v_n. \]
+\end{lemma}
+
 \begin{definition}
-Suppose $\ell : V \to W$ is a linear map between finite dimensional vector spaces. Let $B = v_1, \dotsc, v_m$ be a basis for $V$ and let $C$ be a basis for $W$. The \emph{representation of $\ell$ with respect to $B$ and $C$}, denoted $[\ell]_{B,C}$, is the $n \times m$ matrix whose $i$th column of $[\ell]_{B,C}$ is $[\ell(v_i)]_C$. In other words,
+Suppose $\ell : V \to W$ is a linear map between finite dimensional vector spaces. Let $B = v_1, \dotsc, v_m$ be a basis for $V$ and let $C$ be a basis for $W$. The \emph{matrix representation of $\ell$ with respect to $B$ and $C$}, denoted $[\ell]_{B,C}$, is the $n \times m$ matrix whose $i$th column of $[\ell]_{B,C}$ is $[\ell(v_i)]_C$. In other words,
 \[ [\ell]_{B,C} = \begin{bmatrix} [\ell(v_1)]_C & \dotsb & [\ell(v_m)]_C \end{bmatrix}. \]
 \end{definition}
 
@@ -30,8 +51,12 @@ Suppose $\ell : V \to W$ is a linear map between finite dimensional vector space
 	If $\ell : V \to W$ is a linear map between finite dimensional vector spaces and $B$ and $C$ are bases for $V$ and $W$, respectively, then the rank of the matrix $[\ell]_{B,C}$ equals the dimension of the range $\ell(V)$.
 \end{lemma}
 
+\begin{lemma}
+	Suppose that $V$ and $W$ are $m$- and $n$-dimensional vector spaces, respectively, and that and $B$ and $C$ are bases for $V$ and $W$, respectively. Then the function $\ell \mapsto [\ell]_{B,C}$ is an isomorphism \[ \begin{tikzcd} \mathscr{L}(V, W) \ar{r} & \mathscr{M}_{n,m}. \end{tikzcd} \] 
+\end{lemma}
+
 \begin{definition}
-	If $\ell : \R^m \to \R^n$ is a linear map, we just write $[\ell]$ to denote the matrix of $\ell$ with respect to the standard bases on $\R^m$ and $\R^n$.
+	If $\ell : \R^m \to \R^n$ is a linear map, the \emph{standard matrix representation} of $\ell$, denoted $[\ell]$, is the matrix of $\ell$ with respect to the standard bases on $\R^m$ and $\R^n$.
 \end{definition} 
 
 \begin{lemma}
@@ -135,20 +160,42 @@ Suppose $g$ is a positive function. \Cref{little-o-definition} below formulates 
 \begin{definition}
 	Suppose $\ell : \R^m \to \R^n$ is a linear map. Then we define the \emph{operator norm}, or just \emph{norm}, of $\ell$, denoted $\|\ell\|$, by
 	\[ \|\ell\| = \sup\, \{ |\ell(v)| : |v| \leq 1 \}. \]
-\end{definition}
+\end{definition} 
+
+\begin{exercise}
+	Suppose $\ell : \R^m \to \R^n$ is a linear map. Show that 
+	\[ \|\ell\| = \inf \, \{ \lambda \in \R : |\ell(v)| \leq \lambda |v| \text{ for all } v \in \R^m \}. \]
+	In particular, $|\ell(v)| \leq \|\ell\| \cdot |v|$ for all $v \in \R^m$. 
+\end{exercise}
 
 \begin{exercise} \label{norm-is-hausdorff}
 	Suppose $\ell : \R^m \to \R^n$ is a linear map. Show that $\ell = 0$ if and only if $\|\ell\| = 0$. 
 \end{exercise}
 
-\begin{exercise}
-	Suppose $\ell : \R^m \to \R^n$ is a linear map. Show that 
-	\[ \|\ell\| = \inf \, \{ \lambda \in \R : |\ell(v)| \leq \lambda |v| \text{ for all } v \in \R^m \}. \]
+\begin{exercise}[Subadditivity] \label{subadditive}
+	Suppose $\ell, \ell' :  \R^m \to \R^n$ are both linear maps. Show that
+	\[ \|\ell + \ell'\| \leq \|\ell\| + \|\ell'\|. \]
+\end{exercise}
+
+\begin{definition} \label{operators-as-metric-space}
+	Let $\mathscr{L}(\R^m, \R^n)$ denote the set of all linear maps $\R^m \to \R^n$. Define the distance between $\ell, \ell' \in \mathscr{L}(\R^m, \R^n)$ by $\|\ell - \ell'\|$. It follows from \cref{norm-is-hausdorff,subadditive} that this distance function makes $\mathscr{L}(\R^m, \R^n)$ a metric space. 
+\end{definition}
+
+\begin{exercise}[``Evaluation is continuous''] \label{evaluation-continuous}
+	Suppose $v_0 \in \R^m$ is a fixed vector. Then the ``evaluate at $v_0$'' function $\mathscr{L}(\R^m, \R^n) \to \R^n$ given by $\phi \mapsto \phi(v_0)$ is continuous. \textit{Possible hint}. Since the ``evaluate at $v_0$'' function is linear, it is sufficient to check continuity at 0. 
 \end{exercise}
 
 \begin{exercise}[Submultiplicativity] \label{norm-is-submultiplicative}
 	Suppose $\ell : \R^m \to \R^n$ and $\ell' : \R^n \to \R^p$ are both linear maps. Show that \[ \|\ell' \circ \ell\| \leq \|\ell'\| \cdot \|\ell\|. \]
 	Give an example to show that this inequality can be strict. 
+\end{exercise}
+
+\begin{exercise}[``Composition is continuous''] \label{composition-continuous}
+	\begin{enumerate}[(a)]
+		\item Suppose $\ell : \R^n \to \R^p$ is a linear map. Show that the ``postcompose with $\ell$'' function $\mathscr{L}(\R^m, \R^n) \to \mathscr{L}(\R^m, \R^p)$ given by $\phi \mapsto \ell \circ \phi$ is continuous. 
+		\item Suppose $\ell : \R^m \to \R^n$ is a linear map. Show that the ``precompose with $\ell$'' function $\mathscr{L}(\R^n, \R^p) \to \mathscr{L}(\R^m, \R^p)$ given by $\phi \mapsto \phi \circ \ell$ is continuous. 
+	\end{enumerate}
+	\noindent \textit{Possible hint} (for both parts). Because both the ``postcompose with $\ell$'' and the ``precompose with $\ell$'' maps are linear, it is sufficient to show that the maps are continuous at 0. You will likely find \cref{norm-is-submultiplicative} useful. 
 \end{exercise}
 
 \begin{exercise}[``Linear functions of small functions are still small''] \label{linear-of-small-is-small}
