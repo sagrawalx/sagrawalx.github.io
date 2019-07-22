@@ -15,18 +15,18 @@ I completed my PhD at UC Berkeley in 2018. My advisor was [David Nadler](https:/
 
 {% include papers.html %}
 
-My PhD thesis is available [here](https://escholarship.org/uc/item/1sp926n0), and here are some [errata](thesis_errata).
+My PhD thesis is available [here](https://escholarship.org/uc/item/1sp926n0). There are numerous errata in the document. Most are not terribly serious, but I suggest that readers look at the arXiv version.
 
 # Miscellaneous
 
 Here are some slides for presentations I've given.
 
-* [A Smörgåsbord of Arithmetic Geometry]({{ site.baseurl}}/mathdocs/smorgasbord.pdf). Slides for a talk I gave at Colorado College's *Fearless Fridays* seminar in February 2018.
+* [A Smörgåsbord of Arithmetic Geometry](smorgasbord.pdf). Slides for a talk I gave at Colorado College's *Fearless Fridays* seminar in February 2018.
 
 Here are some miscellaneous mathematical writings.
 
-* [Exponential at infinity]({{ site.baseurl}}/math/exp-infty.pdf). A fun explicit calculation I did during summer 2017 involving an irregular rank 1 overconvergent differential module over the Robba ring.
-* [Contangent complex]({{ site.baseurl}}/math/cotangent.pdf). Some incomplete notes I compiled when I was preparing for a talk I gave in  David Nadler's Fall 2013 Geometric Representation Theory Seminar.
-* [Fundamental group of a curve]({{ site.baseurl}}/math/fg-curve.pdf). An expository term paper from Martin Olsson's Spring 2012 Algebraic Geometry course.
+* [Exponential at infinity](exp-infty.pdf). A fun explicit calculation I did during summer 2017 involving an irregular rank 1 overconvergent differential module over the Robba ring.
+* [Contangent complex](cotangent.pdf). Some incomplete notes I compiled when I was preparing for a talk I gave in  David Nadler's Fall 2013 Geometric Representation Theory Seminar.
+* [Fundamental group of a curve](fg-curve.pdf). An expository term paper from Martin Olsson's Spring 2012 Algebraic Geometry course.
 
 If you find errors in any of these, please let me know!

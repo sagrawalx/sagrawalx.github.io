@@ -1,0 +1,46 @@
+\chapter{Tangent Spaces}
+
+\section{Tangent space}
+
+\subsection{Curves based at a point}
+
+\begin{definition}
+	Let $X$ be a manifold and $P \in X$ a point. A \emph{curve in $X$ based at $P$} is a smooth function $\gamma : (-1, 1) \to X$ such that $\gamma(0) = P$. If $(U, x) \in \mathscr{A}_X$ and $P \in U$, then $x^{-1} \circ \gamma$ 
+\end{definition}
+
+\begin{definition}
+	Let $X$ be a manifold and $P \in X$ a point. Two curves $\gamma_1, \gamma_2$ in $X$ based at $P$ are \emph{equivalent} if, for all $(U, x) \in \mathscr{A}_X$ such that $P  \in U$, we have \[ d(x^{-1} \circ \gamma_1)_0 = d(x^{-1} \circ \gamma_2)_0. \]
+\end{definition}
+
+As usual, the first point of order is to check that we don't need to check all possible charts. 
+
+\begin{exercise}
+	Show that, if $\gamma_1, \gamma_2$ are two curves in $X$ based at $P$ and there exists a chart $(U, x) \in \mathscr{A}_X$ such that $P \in U$ and \[ d(x^{-1} \circ \gamma_1)_0 = d(x^{-1} \circ \gamma_2)_0, \]
+	then $\gamma_1$ is equivalent to $\gamma_2$.  
+\end{exercise}
+
+\begin{definition}
+	For a manifold $X$ and a point $P \in X$, we define the \emph{tangent space of $X$ at $P$}, denoted $T_PX$, to be the set of equivalence classes of curves in $X$ based at $P$. Elements of $T_PX$ are called \emph{tangent vectors} at $P$. 
+\end{definition}
+
+\subsection{Vector space structure on the tangent space}
+
+\subsection{Derivations}
+
+\section{Pushing tangent vectors forward}
+
+Let $f : X \to Y$ be a smooth map of manifolds and $P \in X$ a point. Given a curve $\gamma$ in $X$ based at $P$, observe that $f \circ \gamma$ is a curve in $Y$ based at $f(P)$. 
+
+\begin{lemma}
+	If $f : X \to Y$ is a smooth map of manifolds, $P \in X$, and $\gamma_1$ and $\gamma_2$ are equivalent curves in $X$ based at $P$, then $f \circ \gamma_1$ and $f \circ \gamma_2$ are equivalent curves in $Y$ based at $f(P)$. 
+\end{lemma}
+
+This allows us to make the following definition, which in some sense is the ``ultimate'' generalization of derivatives. 
+
+\begin{definition}
+	Let $f : X \to Y$ be a smooth map of manifolds. Given a tangent vector $v \in T_P X$ defined by a curve $\gamma$, we define its \emph{pushforward} $f_*v \in T_{f(P)}Y$ to be the tangent vector defined by $f \circ \gamma$. This defines a \emph{pushforward map} $f_* : T_P X \to T_{f(P)} Y$. 
+\end{definition}
+
+\begin{proposition}
+	Let $f : X \to Y$ be a smooth map of manifolds and $P \in X$ a point. Then $f_* : T_P X \to T_{f(P)} Y$ is a linear map.
+\end{proposition}

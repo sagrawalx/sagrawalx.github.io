@@ -69,7 +69,7 @@ This quantity is often called a \emph{difference quotient}. See \cref{figure-dif
 	\[ (a+h)^n = \sum_{k = 0}^n {n \choose k} a^k h^{n-k}. \]
 \end{exercise}
 
-\begin{exercise}[Differentiability implies continuity] \label{differentiable-implies-continuous}
+\begin{exercise}[Differentiability implies continuity] \label{differentiable-implies-continuous-single}
 	Prove that if $f : U \to \R$ is differentiable at $a \in U$, then $f$ is also continuous at $a$. 
 \end{exercise}
 
@@ -153,17 +153,17 @@ The goal in this section is to prove the rules for differentiation that one enco
 
 Both of the following can be proved using either the definition of the derivative \ref{single-var-derivative-definition} or the equivalent ``best linear approximation'' characterization of \cref{unique-linear-single-var}. My suggestion is that you try both methods for both of these exercises. When you use \cref{unique-linear-single-var}, you may find \cref{little-o-vector-space} useful. 
 
-\begin{exercise}[Sum rule] \label{sum-rule}
+\begin{exercise}[Sum rule] \label{sum-rule-single}
 	Prove that, if $f, g : S \to \R$ are both differentiable at an interior point $a \in U$, then $f + g$ is also differentiable at $a$ and \[ (f+g)'(a) = f'(a) + g'(a). \]
 \end{exercise}
 
-\begin{exercise}[Scalar multiples rule] \label{scalar-multiples-rule}
+\begin{exercise}[Scalar multiples rule] \label{scalar-multiples-rule-single}
 	Prove that, if $c$ is a constant and $f : S \to \R$ is differentiable at an interior point $a \in S$, then $cf$ is also differentiable at $a$ and \[ (cf)'(a) = c f'(a). \]
 \end{exercise}
 
 \subsection{Product and quotient rules}
 
-\begin{proposition}[Product rule]
+\begin{proposition}[Product rule] \label{product-rule}
 	Suppose $f, g : U \to \R$ are both differentiable at $a \in U$. Then $fg$ is also differentiable at $a$ and 
 	\[ (fg)'(a) = f'(a)g(a) + f(a)g'(a). \]
 \end{proposition}
@@ -181,19 +181,19 @@ Both of the following can be proved using either the definition of the derivativ
 	Check your understanding of the above proof of the product rule. 
 \begin{enumerate}[(a)]
 	\item Could you have instead introduced a cross term of the form $f(a+h)g(a)$?
-	\item At what point is \cref{differentiable-implies-continuous} tacitly used in the above proof?
+	\item At what point is \cref{differentiable-implies-continuous-single} tacitly used in the above proof?
 \end{enumerate}
 \end{exercise}
 
 \begin{exercise}
-	 Reprove the scalar multiples rule (\cref{scalar-multiples-rule}) using the product rule. 
+	 Reprove the scalar multiples rule (\cref{scalar-multiples-rule-single}) using the product rule. 
 \end{exercise}
 
 \begin{exercise}[Quotient rule] \label{quotient-rule}
 	Suppose $f, g : S \to \R$ are both differentiable at an interior point $a \in U$, and that $g(a) \neq 0$. Prove that $f/g$ is also differentiable at $a$ and 
 	\[ (f/g)'(a) = \frac{f'(a)g(a) - f(a)g'(a)}{g(a)^2}. \] 
 	\textit{Hint.} Observe that \[ \frac{(f/g)(a+h)-(f/g)(a)}{h} = \frac{\frac{f(a+h)}{g(a+h)} - \frac{f(a)}{g(a)} }{h}. \]
-	Multiply both the numerator and denominator by $g(a+h)g(a)$ to clear the denominators inside the numerator, and then introduce the cross term $f(a)g(a)$. Be sure to notice at what point you use \cref{differentiable-implies-continuous}.
+	Multiply both the numerator and denominator by $g(a+h)g(a)$ to clear the denominators inside the numerator, and then introduce the cross term $f(a)g(a)$. Be sure to notice at what point you use \cref{differentiable-implies-continuous-single}.
 \end{exercise}
 
 \begin{comment}
@@ -219,7 +219,7 @@ Both of the following can be proved using either the definition of the derivativ
 
 Let us discuss two different proofs of this important result. 
 
-\subsubsection*{First proof}
+\subsubsection{First proof} \label{chain-rule-single-first-proof}
 
 The first proof uses the definition of the derivative \ref{single-var-derivative-definition}, but there is a subtle technicality involved; so, let us discuss it informally first before diving into the formal proof.  
 
@@ -227,7 +227,7 @@ The idea involved is again a clever rewriting of difference quotients. Again, we
 \[ \begin{aligned} \frac{(g \circ f)(a+h) - (g \circ f)(a)}{h} &= \frac{g(f(a+h)) - g(f(a))}{h} \\ &= \frac{g(f(a+h)) - g(f(a))}{f(a+h)-f(a)} \cdot \frac{f(a+h)-f(a)}{h}. \end{aligned} \]
 The difference quotient on the right is precisely $f'(a)$. Thus, it would be sufficient to prove  
 \begin{equation} \label{wrong-conjecture} \lim_{h \to 0} \frac{g(f(a+h)) - g(f(a))}{f(a+h)-f(a)} = g'(f(a)). \end{equation}
-This formula looks an awful lot like the difference quotient that is used to define the derivative of $g$ at $f(a)$. In fact, since $f$ is continuous at $a$ by \cref{differentiable-implies-continuous}, we have $f(a+h) \approx f(a)+h$ for small values of $h$, which means that
+This formula looks an awful lot like the difference quotient that is used to define the derivative of $g$ at $f(a)$. In fact, since $f$ is continuous at $a$ by \cref{differentiable-implies-continuous-single}, we have $f(a+h) \approx f(a)+h$ for small values of $h$, which means that
 \[ \frac{g(f(a+h)) - g(f(a))}{f(a+h)-f(a)} \approx \frac{g(f(a)+h) - g(f(a))}{f(a)+h-f(a)} = \frac{(g \circ f)(a+h) - (g\circ f)(a)}{h} \]
 for small values of $h$. Taking the limit as $h \to 0$ on the right-hand side yields precisely $g'(f(a))$, so \cref{wrong-conjecture} seems like a reasonable conjecture. 
 
@@ -319,7 +319,7 @@ This leads us to our first proof of the chain rule.
 			\end{axis}
 			\end{tikzpicture}
 		\end{center}
-		\caption{The graph of $g$ is depicted in black. The output of the function $s$ on a small nonzero input value $h$ is the slope of the red secant line passing through the two points $(f(a), g(f(a))$ and $(f(a)+k, g(f(a)+k))$. }  \label{slope-function-chain-rule}
+		\caption{The graph of $g$ is depicted in black. The output of the function $\sigma$ on a small nonzero input value $k$ is the slope of the red secant line passing through the two points $(f(a), g(f(a))$ and $(f(a)+k, g(f(a)+k))$. }  \label{slope-function-chain-rule}
 	\end{figure}
 	
 	
@@ -332,7 +332,7 @@ This leads us to our first proof of the chain rule.
 	where we have used the continuity of $\epsilon$ and $\sigma$ and the definition of the derivative of $f$ at $a$ for the step labeled $(*)$ above. This proves the chain rule. 
 \end{proof}
 	
-\begin{exercise} \label{chain-rule-details}
+\begin{exercise} \label{chain-rule-single-first-proof-details}
 	Verify the missing details in the above proof. Specifically, check the following. 
 	\begin{enumerate}[(a)]
 		\item Prove that $\epsilon$ is continuous at 0.
@@ -340,7 +340,7 @@ This leads us to our first proof of the chain rule.
 	\end{enumerate}
 \end{exercise}
 
-\subsubsection*{Second proof}
+\subsubsection{Second proof} \label{chain-rule-single-second-proof}
 
 Our second proof of the chain rule will use the ``best linear approximation'' interpretation of derivatives provided by \cref{unique-linear-single-var}. 
 
@@ -443,18 +443,18 @@ so that it is also defined when $f(a+h) = f(a)$.
 	The $\delta$ obtained by going through the above process then has the desired property. 
 \end{comment}
 
-\begin{exercise} \label{chain-rule-proof-2-details}
+\begin{exercise} \label{chain-rule-single-second-proof-details}
 	Check that the function $r$ is continuous at 0.
 \end{exercise}
 
-Notice that in the first proof, the trick to overcoming the technicality was defining the function $\sigma$ at $k = 0$. In the second proof, the trick to overcoming the same technicality was defining $\eta$ at $k = 0$. These tricks are really the same trick, as shown by the following.  
+Notice that in the first proof, the trick to overcoming the technicality was defining the function $\sigma$ at $k = 0$. In the second proof, the trick to overcoming the same technicality was defining $\eta$ at $k = 0$. These two tricks are really the same trick, as shown by the following.  
 
 \begin{exercise}
 	Prove that the function $\eta$ from the second proof and the function $\sigma$ from the first proof are related by the equation
 	\[ \sigma(k) = g'(f(a)) + \eta(k). \]
 \end{exercise}
 
-\subsubsection*{Applications of the chain rule}
+\subsubsection{Applications of the chain rule}
 
 \begin{exercise}[Derivatives of inverses] \label{inverse-derivative}
 	Suppose $S$ and $T$ are both subsets of $\R$ and $f : S \to T$ is bijective, with inverse function $f^{-1} : T \to S$. Suppose further that $f$ is differentiable at an interior point $a \in S$, that $f'(a) \neq 0$, and that $b = f(a)$ is an interior point of $T$. Prove that $f^{-1}$ is differentiable at $b$ and
