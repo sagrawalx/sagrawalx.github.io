@@ -1,8 +1,10 @@
-\chapter{Single variable derivatives}
+\chapter{Single variable derivatives} \label{single-var}
 
 The goal in this chapter is to formalize derivatives of functions whose input is a single real number and whose output is also a single real number. 
 
-\section{Slope of tangent lines}
+\section{Two definitions of the derivative}
+
+\subsection{Slope of the tangent line}
 
 Let $S$ be a subset of $\R$ and $a \in S$ an interior point. We would like to define the tangent line to the graph of a function $f : S \to \R$ at $a$. We know intuitively what ``tangent line'' should mean: a line that ``just barely touches'' the graph of $f$ at the point $(a, f(a))$. But it's not immediately clear how to formalize this intuition.  
 
@@ -50,7 +52,8 @@ This quantity is often called a \emph{difference quotient}. See \cref{figure-dif
 \begin{definition} \label{single-var-derivative-definition}
 	A function $f : S \to \R$ is \emph{differentiable} at an interior point $a \in S$ if 
 	\[ \lim_{h \to 0} \frac{f(a+h) - f(a)}{h} \]
-	exists. If this limit does exist, its value is called the \emph{derivative of $f$ at $a$}, and is denoted $f'(a)$. 
+	exists. If this limit does exist, its value is called the \emph{derivative of $f$ at $a$}, and it is denoted either $f'(a)$ or
+	\[ \left.\frac{df}{dx}\right|_{x = a}. \] 
 \end{definition}
 
 \begin{exercise}
@@ -73,7 +76,7 @@ This quantity is often called a \emph{difference quotient}. See \cref{figure-dif
 	Prove that if $f : U \to \R$ is differentiable at $a \in U$, then $f$ is also continuous at $a$. 
 \end{exercise}
 
-\section{Best linear approximation}
+\subsection{Best linear approximation}
 
 Before proceeding further, we reinterpret the definition of the derivative in a way that will be better suited to generalization to the multivariable setting. Suppose a function $f : S \to \R$ is differentiable at an interior point $a \in S$. The tangent line to the graph at the point $(a, f(a))$ is the graph of the function
 \[ t(x) = f'(a)(x-a) + f(a). \]
@@ -117,7 +120,7 @@ for small values of $h$. See \cref{figure-linear-approximation}.
 \end{figure}
 
 
-Notice that the function $h \mapsto f'(a)h$ is a linear map $\R \to \R$ in the sense of linear algebra. One way to interpret the following result is that the function $h \mapsto f'(a)h$ is the \emph{only} linear map that is a good approximation to $h \mapsto f(a+h)-f(a)$.  
+Notice that the function $h \mapsto f'(a)h$ is a linear map $\R \to \R$ in the sense of linear algebra. One way to interpret the following result is that the function $h \mapsto f'(a)h$ is the \emph{only} linear map that is a good approximation to $h \mapsto f(a+h)-f(a)$. The precise statement of the result uses little-oh notation; if you have not seen this notation before, see \cref{little-oh}.
 
 \begin{proposition} \label{unique-linear-single-var}
 	A function $f : S \to \R$ is differentiable at an interior point $a \in S$ if and only if there exists a linear map $\ell : \R \to \R$ such that
@@ -142,16 +145,19 @@ Notice that the function $h \mapsto f'(a)h$ is a linear map $\R \to \R$ in the s
 	If $f : S \to \R$ is differentiable at an interior point $a \in U$, we define $df_a : \R \to \R$ to be the linear map $df_a(h) = f'(a)h$. 
 \end{definition}
 
-In other words, $df_a$ is the only good linear approximation to the function $h \mapsto f(a+h)-f(a)$. Being the only good linear approximation, it is also the best linear approximation, whence the name of this section. 
+In other words, $df_a$ is the only good linear approximation to the function \[ h \mapsto f(a+h)-f(a). \] Being the \emph{only good} linear approximation, it is also the \emph{best} linear approximation, whence the name of this section. 
 
 \section{Rules of differentiation}
 
-
-The goal in this section is to prove the rules for differentiation that one encounters in an introductory calculus course. 
+The goal in this section is to prove the rules for differentiation that one normally encounters in an introductory calculus course. 
 
 \subsection{Sum and scalar multiples rule}
 
-Both of the following can be proved using either the definition of the derivative \ref{single-var-derivative-definition} or the equivalent ``best linear approximation'' characterization of \cref{unique-linear-single-var}. My suggestion is that you try both methods for both of these exercises. When you use \cref{unique-linear-single-var}, you may find \cref{little-o-vector-space} useful. 
+The following can be proved using either the definition of the derivative \ref{single-var-derivative-definition} or the equivalent ``best linear approximation'' characterization of \cref{unique-linear-single-var}. My suggestion is that you try both methods for these exercises. When you use \cref{unique-linear-single-var}, you may find \cref{little-o-vector-space} useful. 
+
+\begin{exercise}[Constant functions rule] \label{constant-deriv-zero}
+	Prove that, if $f : S \to \R$ is constant (ie, there exists a real number $c$ such that $f(x) = c$ for all $x \in S$), then $f'(a) = 0$ for all interior points $a \in S$. 
+\end{exercise}
 
 \begin{exercise}[Sum rule] \label{sum-rule-single}
 	Prove that, if $f, g : S \to \R$ are both differentiable at an interior point $a \in U$, then $f + g$ is also differentiable at $a$ and \[ (f+g)'(a) = f'(a) + g'(a). \]
@@ -180,7 +186,7 @@ Both of the following can be proved using either the definition of the derivativ
 \begin{exercise}
 	Check your understanding of the above proof of the product rule. 
 \begin{enumerate}[(a)]
-	\item Could you have instead introduced a cross term of the form $f(a+h)g(a)$?
+	\item Could you have instead introduced a cross term of the form $f(a+h)g(a)$? If so, rewrite the proof using this cross term. If not, explain why not. 
 	\item At what point is \cref{differentiable-implies-continuous-single} tacitly used in the above proof?
 \end{enumerate}
 \end{exercise}
@@ -217,7 +223,7 @@ Both of the following can be proved using either the definition of the derivativ
 	\[ (g \circ f)'(a) = g'(f(a))f'(a). \]
 \end{proposition}
 
-Let us discuss two different proofs of this important result. 
+Let us discuss two different (but similar) proofs of this important result. 
 
 \subsubsection{First proof} \label{chain-rule-single-first-proof}
 
@@ -247,7 +253,6 @@ This leads us to our first proof of the chain rule.
 
 \begin{proof}[First proof of the chain rule]
 	Consider the function $\epsilon$ defined for small values of $h$ by $\epsilon(h) = f(a+h)-f(a)$. See \cref{value-difference-chain-rule}. You will verify in \cref{chain-rule-details} below that $\epsilon$ is continuous at 0. 
-	
 	
 	\begin{figure}
 		\begin{center}
@@ -367,10 +372,10 @@ Our second proof of the chain rule will use the ``best linear approximation'' in
 			axis line style=lightgray,
 			width=0.75\textwidth
 			]
-			\addplot[black,<->] expression[domain=-0.5:2.45,samples=50]{(x*(x^2+1)+5)/10}; 
+			\addplot[black,thick,<->] expression[domain=-0.5:2.45,samples=50]{(x*(x^2+1)+5)/10}; 
 			
 			
-			\addplot[black,<->] expression[domain=0.5:2.4,samples=2]{0.4*x+0.3}; 
+			\addplot[black,<->] expression[domain=0.1:2.4,samples=2]{0.4*x+0.3}; 
 			
 			
 			\addplot[lightgray,dotted] expression[domain=0:2.75,samples=2]{0.7};
@@ -389,7 +394,7 @@ Our second proof of the chain rule will use the ``best linear approximation'' in
 			\end{axis}
 			\end{tikzpicture}
 		\end{center}
-		\caption{The graphs of a function $f$ and its tangent line $f(a) + df_a$ are depicted in red. On a small input $h$, the ``error in approximation'' function $r$ outputs the vertical distance indicated in red.}  \label{figure-error-in-approximation}
+		\caption{The thick black curve is the graph of a function $f$ and the thinner black line is its tangent line $f(a) + df_a$ are depicted in black. On a small input $h$, the ``error in approximation'' function $r$ outputs the vertical distance indicated in red.}  \label{figure-error-in-approximation}
 	\end{figure}
 
 	Since
@@ -422,7 +427,7 @@ so that it is also defined when $f(a+h) = f(a)$.
 	Define $\eta(k) = s(k)/k$. Observe that $\eta(0) = 0$. Moreover, since $s(k) = o(|k|)$ by \cref{unique-linear-single-var}, we see that $\eta$ is continuous at 0. Then 
 	\[ \begin{aligned} \frac{|s(df_a(h)+r(h))|}{|h|} &= \frac{|\eta(df_a(h)+r(h))| \cdot |df_a(h)+r(h)|}{|h|} \\
 	&\leq |\eta(df_a(h)+r(h))| \cdot \left( |f'(a)| + \frac{|r(h)|}{|h|} \right). \end{aligned} \]
-	Observe that $df_a + r$ is continuous at $0$ by \cref{chain-rule-proof-2-details} below; moreover, we have just seen that $\eta$ is continuous at $(df_a + r)(0) = 0$. Thus the composite $\eta \circ (df_a + r)$ is also continuous at 0. Thus
+	Observe that $df_a + r$ is continuous at $0$ by \cref{chain-rule-single-second-proof-details} below; moreover, we have just seen that $\eta$ is continuous at $(df_a + r)(0) = 0$. Thus the composite $\eta \circ (df_a + r)$ is also continuous at 0. Thus
 	\[ \lim_{h \to 0} |\eta(df_a(h)+r(h))| \cdot \left( |f'(a)| + \frac{|r(h)|}{|h|} \right) = 0, \]
 	where we have used the fact that $|r(h)| = o(|h|)$ to see that the parenthetical expression has a finite limit (namely, $|f'(a)|$). So, by the squeeze theorem, we can therefore conclude that $|s(df_a(h)+r(h))| = o(|h|)$.  
 \end{proof}
@@ -458,7 +463,7 @@ Notice that in the first proof, the trick to overcoming the technicality was def
 
 \begin{exercise}[Derivatives of inverses] \label{inverse-derivative}
 	Suppose $S$ and $T$ are both subsets of $\R$ and $f : S \to T$ is bijective, with inverse function $f^{-1} : T \to S$. Suppose further that $f$ is differentiable at an interior point $a \in S$, that $f'(a) \neq 0$, and that $b = f(a)$ is an interior point of $T$. Prove that $f^{-1}$ is differentiable at $b$ and
-	\[ (f^{-1})'(b) = \frac{1}{f'(a)}. \]
+	\[ (f^{-1})'(b) = \frac{1}{f'(a)} = \frac{1}{f'(f^{-1}(b))}. \]
 \end{exercise}
 
 \begin{exercise}[Power rule for fractional exponents] \label{power-rule-fractional}
@@ -477,64 +482,421 @@ Here are some other rules you probably remember from calculus. We won't prove th
 \end{enumerate}
 Note that by doing \cref{power-rule-fractional}, you have already proved the most common cases of the power rule (5). 
 
-The proofs of these facts are omitted not because the proofs are particularly difficult, but because we would have to go on a long detour to even define the functions involved sufficiently rigorously to prove anything about them. That would distract us from our object of meditation.
+The proofs of these facts are omitted not because the proofs are particularly difficult, but because we would have to go on a long detour to even define the functions involved sufficiently rigorously to prove anything about them. That would distract us from our object of meditation: the derivative.
 
 \begin{exercise} \label{power-times-sine}
 	\begin{enumerate}[(a)]
-		\item Prove that the function \[ f_1(x) = \begin{cases} x\sin(1/x) & \text{if } x \neq 0 \\ 0 & \text{if } x = 0 \end{cases} \]
-		is continuous at 0 but is not differentiable at 0. In particular words, $f \in C^0(\R) \setminus C^1(\R)$. 
-		\item Prove that the function \[ f_2(x) = \begin{cases} x^2\sin(1/x) & \text{if } x \neq 0 \\ 0 & \text{if } x = 0 \end{cases} \]
-		is differentiable at 0 but the derivative $f_2'$ is not continuous at 0.  
+		\item Prove that the function \[ f(x) = \begin{cases} x\sin(1/x) & \text{if } x \neq 0 \\ 0 & \text{if } x = 0 \end{cases} \]
+		is continuous at 0 but is not differentiable at 0. 
+		\item Prove that the function \[ f(x) = \begin{cases} x^2\sin(1/x) & \text{if } x \neq 0 \\ 0 & \text{if } x = 0 \end{cases} \]
+		is differentiable at 0 but the derivative $f'$ is not continuous at 0.  
 	\end{enumerate} 
-\end{exercise} 
+\end{exercise}
+
+\section{Derivative at local extrema}
+
+We first recall the following definition. 
+
+\begin{definition}
+	If $X$ is a metric space and $f : X \to \R$ is a function, a point $a \in X$ is said to be a \emph{local maximum} of $f$ if there exists a neighborhood $U$ of $a$ in $X$ such that $f(x) \leq f(a)$ for all $x \in U$. We define \emph{local minimum} by reversing the inequality. A \emph{local extremum} is a point that is either a local maximum or a local minimum.
+\end{definition}
+
+The following is a key property of derivatives. 
+
+\begin{exercise}[Fermat's interior extremum theorem] \label{derivative-at-extremum}
+	Suppose an interior point $a \in S$ is a local extremum of a function $f : S \to \R$. If $f$ is differentiable at $a$, prove that $f'(a) = 0$. \textit{Hint}. Consider the following function (cf. the first proof of the chain rule in \cref{chain-rule-single-first-proof}).
+	\[ \sigma(h) = \begin{cases} \dfrac{f(a+h)-f(a)}{h} & \text{if } h \neq 0 \\ f'(a) & \text{if } h = 0 \end{cases} \]
+	Since $f$ is differentiable at $x = a$, $\sigma$ is continuous at $h = 0$. If $a$ is a local minimum, what can you say about the values of $\sigma$ for nonzero values of $h$? What about if $a$ is a local maximum?
+\end{exercise}
+
+\section{Differentiable functions}
+
+\begin{definition}
+	If $U$ is an open subset of $\R$, a function $f : U \to \R$ is \emph{differentiable} if $f$ is differentiable at every $a \in U$. The function $U \to \R$ defined by $a \mapsto f'(a)$ is called the \emph{derivative} of $f$, and is denoted by $f'$. 
+\end{definition}
+
+\subsection{Mean value theorem}
+
+The mean value theorem \ref{mean-value-theorem} is an important foundational result; it allows us to prove many results about derivatives which we are familiar with from calculus. Rolle's theorem \ref{rolles-theorem} is a special case of the mean value theorem, but the general case can be derived from this special case. 
+
+\begin{exercise}[Rolle's theorem] \label{rolles-theorem}
+	Suppose $a < b$ and let $f : [a, b] \to \R$ be a continuous function that is differentiable on $(a, b)$. If $f(a) = f(b) = 0$, prove that there exists $c \in (a, b)$ such that $f'(c) = 0$. \textit{Hint}. Any function must fall into at least one of the following three cases: (i) $f$ is constantly zero, (ii) $f$ takes on positive values somewhere on $[a, b]$, and (iii) $f$ takes on negative values somewhere on $[a, b]$. Deal with the first case using \cref{constant-deriv-zero}, and the latter two cases using the extreme value theorem\footnotemark\ together with \cref{derivative-at-extremum}. 
+\end{exercise}
+
+\footnotetext{The \emph{extreme value theorem} says that if $K$ is a compact metric space and $f : K \to \R$ is continuous, then $f$ achieves its global maximum and its global minimum somewhere on $K$.}
+
+\begin{exercise}[Mean value theorem] \label{mean-value-theorem}
+	Suppose $a < b$ and let $f : [a, b] \to \R$ be a continuous function that is differentiable on $(a, b)$. Prove that there exists $c \in (a, b)$ such that
+	\[ f'(c) = \frac{f(b) - f(a)}{b-a}. \]
+	\textit{Hint}. Let $\ell$ be the secant line passing through $(a, f(a))$ and $(b, f(b))$. Then consider the function $g = f - \ell$. See \cref{subtracting-the-secant}. 
+	\begin{figure}
+		\begin{center}
+			\begin{tikzpicture}
+			\begin{axis}[
+			xmin=-0.1,xmax=2.5,
+			ymin=-0.1,ymax=2,
+			ytick={0.5, 1.5},
+			xtick={0.5,2},
+			xticklabels={$a$, $b$},
+			yticklabels={$f(a)$, $f(b)$},
+			axis lines=middle,
+			axis line style=lightgray,
+			width=0.5\textwidth
+			]
+			\addplot[black,thick,-] expression[domain=0.5:2,samples=50]{2/3*x+1/6 + 2*(x-0.5)*(x-1.5)*(x-2)}; 
+			
+			
+			\addplot[red,<->] expression[domain=0.25:2.25,samples=2]{2/3*x+1/6}; 
+			
+			
+			\addplot[lightgray,dotted] expression[domain=0:2.75,samples=2]{0.5};
+			\addplot[lightgray,dotted] expression[domain=0:2.75,samples=2]{1.5}; 
+			\addplot +[mark=none,lightgray,dotted] coordinates {(0.5, 0) (0.5, 2)};
+			\addplot +[mark=none,lightgray,dotted] coordinates {(2, 0) (2, 2)};
+			
+			
+			\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:0.5,0.5) {}; 
+			\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:2,1.5) {}; 
+			\end{axis}
+			\end{tikzpicture}\hspace{1cm}
+			\begin{tikzpicture}
+			\begin{axis}[
+			xmin=-0.1,xmax=2.5,
+			ymin=-1,ymax=1.1,
+			ytick={0},
+			xtick={0.5,2},
+			xticklabels={$a$, $b$},
+			yticklabels={},
+			axis lines=middle,
+			axis line style=lightgray,
+			width=0.5\textwidth
+			]
+			\addplot[black,thick,-] expression[domain=0.5:2,samples=50]{2*(x-0.5)*(x-1.5)*(x-2)}; 
+			
+			\addplot[red,<->] expression[domain=0.25:2.25,samples=2]{0};
+			
+			\addplot +[mark=none,lightgray,dotted] coordinates {(0.5, -2) (0.5, 2)};
+			\addplot +[mark=none,lightgray,dotted] coordinates {(2, -2) (2, 2)};
+			
+			\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:0.5,0) {}; 
+			\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:2,0) {}; 
+			\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		\caption{On the left is depicted the graph of a function $f$ and the secant line $\ell$. Subtracting $\ell$ from the picture on the left yields the picture on the right. }  \label{subtracting-the-secant}
+	\end{figure}
+	Then $g(a) = g(b) = 0$, so we can apply Rolle's theorem \ref{rolles-theorem} to $g$. 
+\end{exercise}
+
+\subsection{Consequences of the mean value theorem}
+
+Here is a standard property of derivatives from calculus; the proof follows quickly from the mean value theorem. 
+
+\begin{lemma} \label{deriv-zero-implies-constant}
+	Suppose $I$ is an open interval and that $f : I \to \R$ is differentiable. If $f' = 0$, then $f$ is constant. 
+\end{lemma}
+
+\begin{proof}
+	We need to show that, for any distinct pair of points $a, b \in I$, we have $f(a) = f(b)$. We can assume without loss of generality that $a < b$. Since $f$ is differentiable on $I$ and $[a,b] \subseteq I$, we know in particular that $f$ is continuous on $[a,b]$ and differentiable on $(a,b)$, so the mean value theorem applies: there exists a point $c \in (a,b)$ such that
+	\[ \frac{f(b)-f(a)}{b-a} = f'(c). \]
+	But $f'(c) = 0$ by assumption, so $f(a) = f(b)$. 
+\end{proof}
+
+Next, we recall the following definition. 
+
+\begin{definition}
+	Suppose $f : S \to \R$ is a function and $x, y \in S$. 
+	\begin{itemize}
+		\item $f$ is \emph{increasing} if $x < y$ implies $f(x) \leq f(y)$. 
+		\item $f$ is \emph{decreasing} if $x < y$ implies $f(x) \geq f(y)$.
+		\item $f$ is \emph{strictly increasing} if $x < y$ implies $f(x) < f(y)$. 
+		\item $f$ is \emph{strictly decreasing} if $x < y$ implies $f(x) > f(y)$. 
+	\end{itemize}
+Further, $f$ is \emph{monotonic} if it is either increasing or decreasing, and \emph{strictly monotonic} if it is either strictly increasing or strictly decreasing. 
+\end{definition}
+
+The following standard property of differentiable functions again follows quickly from the mean value theorem. 
+
+\begin{exercise} \label{deriv-increasing-decreasing}
+	Suppose $I$ is an open interval and that $f : I \to \R$ is differentiable. Prove the following four statements. 
+	\begin{enumerate}[(a)]
+		\item If $f' \geq 0$, then $f$ is increasing. 
+		\item If $f' > 0$, then $f$ is strictly increasing. 
+		\item If $f' \leq 0$, then $f$ is decreasing. 
+		\item If $f' < 0$, then $f$ is strictly decreasing. 
+	\end{enumerate} 
+	\textit{Hint}. For all four, imitate the proof of \cref{deriv-zero-implies-constant}. 
+\end{exercise}
+
+\subsection{Darboux's theorem $\ast$}
+
+Darboux's theorem is not commonly discussed in elementary calculus, nor is it strictly necessary for what follows. But it is an interesting fact about derivatives, and is sometimes useful to know. Before getting to the statement of the theorem, it is convenient to make the following definition. 
+
+\begin{definition}
+	Suppose $I$ is an interval and $f : I \to \R$ is a function. Then $f$ \emph{has the intermediate value property} if, for every $a < b$ in $I$ and every $y \in \R$ strictly between $f(a)$ and $f(b)$, there exists $x \in (a, b)$ such that $f(x) = y$. 
+\end{definition}
+
+The intermediate value theorem asserts that every continuous function has the intermediate value property. Simple examples of discontinuous functions don't have the intermediate value property (cf. \cref{removable-jump-ivp} below). But, it turns out that some discontinuous functions do have the intermediate value property (cf. \cref{discontinuous-ivp} below). 
+
+\begin{exercise} \label{removable-jump-ivp}
+	Let $I$ be an interval and $f : I \to \R$ a function. 
+	\begin{enumerate}[(a)]
+		\item Recall that $f$ has a \emph{removable discontinuity} at a point $a \in I$ if
+		\[ \lim_{x \to a} f(x) \]
+		exists, but the value of this limit does not equal $f(a)$. Show that, if $f$ has a removable discontinuity, then $f$ does \emph{not} have the intermediate value property. 
+		 
+		\item Recall that $f$ has a \emph{jump discontinuity} at a point $a \in I$ if the two one-sided limits
+		\[ \lim_{x \to a^-} f(x) \text{ and } \lim_{x \to a^+} f(x) \]
+		both exist, but their values are not equal to each other. Show that, if $f$ has a jump discontinuity, then $f$ does \emph{not} have the intermediate value property.  
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise} \label{discontinuous-ivp}
+	Show that the function $f : \R \to \R$ defined by
+	\[ f(x) = \begin{cases} \sin(1/x) & \text{if } x \neq 0 \\ 0 & \text{if } x = 0 \end{cases} \]
+	is discontinuous at $x = 0$ but has the intermediate value property. \textit{Hint}. First show that for any non-degenerate interval $I$ containing 0, we have $f(I) = [-1,1]$. Then explain how this implies the intermediate value property. 
+\end{exercise}
+
+We know that the derivative $f'$ of a differentiable function $f$ need not be continuous (cf. \cref{power-times-sine}). Darboux's theorem asserts that, even though $f'$ might not be continuous, it must still have the intermediate value property! This means, for example, that derivatives cannot have removable or jump discontinuities (cf. \cref{removable-jump-ivp}). 
+
+\begin{theorem}[Darboux] \label{darboux}
+	Suppose $I$ is an open interval and $f : I \to \R$ is differentiable. Then $f'$ has the intermediate value property. 
+\end{theorem}
+
+\begin{proof}
+	Suppose $a < b$ are two elements of $I$ and $m$ is a real number strictly between $f'(a)$ and $f'(b)$. We want to show that there exists $c \in (a,b)$ such that $f'(c) = m$. This statement somewhat resembles the statement of the mean value theorem \ref{mean-value-theorem}, and indeed, our proof will also somewhat resemble the proof we gave of the mean value theorem. 
+	
+	Consider the differentiable function $g : I \to \R$ defined by $g(x) = f(x) - mx$. See \cref{subtracting-a-line}. Observe that $f'(c) = m$ if and only if $g'(c) = 0$. Thus we would like to show that there exists $c \in (a, b)$ such that $g'(c) = 0$. 
+	
+	
+	\begin{figure}
+		\begin{center}
+			\begin{tikzpicture}
+			\begin{axis}[
+			xmin=-0.5,xmax=2.5,
+			ymin=-0.25,ymax=4,
+			xtick={0.5,2},
+			ytick={0},
+			xticklabels={$a$, $b$},
+			yticklabels={},
+			axis lines=middle,
+			axis line style=lightgray,
+			width=0.5\textwidth
+			]
+			\addplot[black,thick,<->] expression[domain=0.25:2.25,samples=50]{(x-1)^2+1 + x/2}; 
+			
+			
+			\addplot[red,<->] expression[domain=-0.25:2.25,samples=2]{x/2}; 
+			
+			
+			\addplot[lightgray,dashed,<->] expression[domain=-0.25:1,samples=2]{-0.5*(x-0.5) + 1.5};
+			\addplot[lightgray,dashed,<->] expression[domain=1.5:2.4,samples=2]{2.5*(x-2) + 3}; 
+			
+			\addplot +[mark=none,lightgray,dotted] coordinates {(0.5, 0) (0.5, 4)};
+			\addplot +[mark=none,lightgray,dotted] coordinates {(2, 0) (2, 4)};
+			
+			
+			\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:0.5,1.25+0.25) {}; 
+			\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:2,2+1) {}; 
+			\end{axis}
+			\end{tikzpicture}\hspace{1cm}
+			\begin{tikzpicture}
+			\begin{axis}[
+			xmin=-0.5,xmax=2.5,
+			ymin=-1.25,ymax=3,
+			ytick={0},
+			xtick={0.5,2},
+			xticklabels={$a$, $b$},
+			yticklabels={},
+			axis lines=middle,
+			axis line style=lightgray,
+			width=0.5\textwidth
+			]
+			\addplot[black,thick,<->] expression[domain=0.25:2.25,samples=50]{(x-1)^2+1}; 
+			
+			\addplot[red,<->] expression[domain=-0.25:2.25,samples=2]{0};
+			
+			\addplot +[mark=none,lightgray,dotted] coordinates {(0.5, -2) (0.5, 3)};
+			\addplot +[mark=none,lightgray,dotted] coordinates {(2, -2) (2, 3)};
+			
+			\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:0.5,1.25) {}; 
+			\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:2,2) {}; 
+			\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		\caption{On the left is depicted the graph of a function $f$, the two tangent lines at $a$ and $b$, and the graph of the line $\ell(x) = mx$ for some $m$ in between $f'(a)$ and $f'(b)$. Subtracting $\ell$ from this picture yields the picture on the right.}  \label{subtracting-a-line}
+	\end{figure}
+	
+	There are two cases two consider: either (i) $f'(a) < m < f'(b)$ or (ii) $f'(a) > m > f'(b)$. Suppose we are in case (i). By the extreme value theorem, $g$ attains its minimum on the compact interval $[a,b]$ at some point $c \in [a,b]$. We claim that $c$ must be an interior point of $[a,b]$, and then Fermat's interior extremum theorem \ref{derivative-at-extremum} will imply that $g'(c) = 0$. 
+	
+	If $c = a$ were the minimum of $g$ on $[a,b]$, then we would have 
+	\[ \frac{g(a+h)-g(a)}{h} > 0 \]
+	for all sufficiently small positive values of $h$. This would mean that $g'(a) \geq 0$, but we know that $g'(a) = f'(a) - m < 0$, which is a contradiction. Similarly, if $c = b$ were the minimum of $g$ on $[a,b]$, then we would have
+	\[ \frac{g(b+h)-g(b)}{h} < 0 \]
+	for all sufficiently small negative values of $h$. This would imply that $g'(b) \leq 0$, but we know that $g'(b) = f'(b) - m > 0$. 
+	
+	In case (ii), we instead let $c$ be the \emph{maximum} of $g$ on $[a,b]$, and argue similarly to show that $c$ must be an interior point. 
+\end{proof}
 
 \section{Levels of differentiability} 
 
 \subsection{$C^n$ functions}
 
 \begin{definition}
-	Suppose $U$ is an open subset of $\R$ and $f : U \to \R$ is a function. Then $f$ is \emph{differentiable} if $f$ is differentiable at every $a \in U$. If the function $f' : U \to \R$ is also continuous, then $f$ is \emph{continuously differentiable}. 
+	Suppose $U$ is an open subset of $\R$ and $f : U \to \R$ is differentiable. If the derivative $f' : U \to \R$ is also continuous, then $f$ is said to be \emph{continuously differentiable}. 
 \end{definition}
 
-\begin{definition}
-	Let $U$ be an open subset of $\R$. For any non-negative integer $n$, we define the set $C^n(U)$ inductively as follows. 
+\begin{definition} \label{cn-single-var}
+	Let $U$ be an open subset of $\R$ and $f : U \to \R$ a function. We make the following string of definitions. 
 	\begin{itemize}
-		\item $C^0(U)$ is the set of continuous functions $f : U \to \R$. 
-		\item $C^1(U)$ is the set of functions $f$ such that $f'$ exists and is in $C^0(U)$. Concretely, this means that $f$ is continuously differentiable. 
-		\item $C^2(U)$ is the set of functions $f : U \to \R$ such that the derivative $f'$ exists and is in $C^1(U)$. Concretely, this means that the the derivative of the derivative $(f')'$, called the \emph{second derivative} of $f$ and written $f''$ or $f^{(2)}$, exists and is continuous on $U$. 
-		\item In general, $C^{n+1}(U)$ is the set of functions $f : U \to \R$ such that $f'$ exists and is in $C^n(U)$. This means that the \emph{$(n+1)$st derivative} $f^{(n+1)} = (f^{(n)})'$ exists and is continuous on $U$.
+		\item $f$ is $C^0$ if it is continuous. 
+		\item $f$ is $C^1$ if it is continuously differentiable. 
+		\item $f$ is $C^2$ if the derivative $f'$ is $C^1$. In other words, this means that the derivative of the derivative $(f')'$, denoted $f''$ or $f^{(2)}$ and called the \emph{second derivative}, exists and is continuous. 
+		\item In general, for any positive integer $n$, we say that $f$ is $C^n$ if $f'$ exists and is $C^{n-1}$. This means that the \emph{$n$th derivative} $f^{(n)} = (f^{(n-1)})'$ exists and is continuous.
 	\end{itemize}
 \end{definition}
 
-\begin{exercise}
-	Prove that, for every non-negative integer $n$, $C^n(U)$ is a subspace of the vector space of all functions $U \to \R$. 
+\begin{exercise} \label{sums-scalars-cn-singlevar}
+	Prove that, for every non-negative integer $n$, the set of all $C^n$ functions $U \to \R$ is a vector space. 
 \end{exercise}
 
-\begin{exercise}
-	Prove that, if $f, g \in C^n(U)$, then the product $fg$ is also in $C^n(U)$. 
+\begin{exercise}[General Leibniz Rule] \label{product-cn-singlevar}
+	Suppose that $f, g : U \to \R$ are $C^n$ functions. Prove that the product $fg$ is also $C^n$, and that
+	\[ (fg)^{(n)} = \sum_{k = 0}^n {n \choose k} f^{(k)} g^{(n-k)}. \]
 \end{exercise}
 
-We have an infinite chain of inclusions
-\[ \{\text{all functions } U \to \R\} \supseteq C^0(U) \supseteq C^1(U) \supseteq C^2(U) \supseteq C^3(U) \supseteq \dotsb. \]
-The following exercise shows that all of these inclusions are strict; in other words $C^n(U) \supseteq C^{n+1}(U)$ for all $n$. 
+\begin{exercise} \label{composite-cn-singlevar}
+	Show that the composite of two $C^n$ functions is also $C^n$. \textit{Hint}. Induct on $n$. The base case $n = 0$ is clear. For the inductive step, use the chain rule \ref{chain-rule-single} and the first part of \cref{product-cn-singlevar}. 
+\end{exercise}
+
+Observe that we have an infinite chain of implications
+\[ \dotsb \implies C^3 \implies C^2 \implies C^1 \implies C^0. \]
+The following exercise shows that all of these implications are strict; in other words, for every $n$, there exists a $C^n$ function which is not $C^{n+1}$.
 
 \begin{exercise}
 	For every non-negative integer $n$, let 
 	\[ f_n(x) = x^n|x|. \]
-	Prove that $f_n$ is in $C^n(\R)$ but not $C^{n+1}(\R)$. \textit{Hint.} Prove that $f_{n+1}' = (n+2)f_n$. Then use induction. 
+	Prove that $f_n$ is $C^n$ but not $C^{n+1}$. \textit{Hint.} First prove that $f_{n+1}' = (n+2)f_n$. 
 \end{exercise}
 
 \subsection{Smooth functions}
 
 \begin{definition}
-	A function $f : U \to \R$ is \emph{infinitely differentiable} or \emph{smooth} if it is in $C^n(U)$ for all $n$. The set of smooth functions is denoted $C^\infty(U)$ or $\O(U)$. 
+	A function $f : U \to \R$ is said to be $C^\infty$, or \emph{infinitely differentiable}, or \emph{smooth}, if it is in $C^n$ for all $n$. 
 \end{definition}
 
-\begin{exercise} \label{canonical-bump}
-	Consider the function $\psi : \R \to \R$ defined as follows.  
-	\[ \psi(x) = \begin{cases} e^{1/(x^2-1)} & \text{if } -1 < x < 1 \\ 0 & \text{otherwise} \end{cases} \]
-	See \cref{canonical-bump-graph} for its graph. Prove that $\psi$ is smooth. \textit{Hint.} First prove directly from definitions that $\psi$ is continuously differentiable. Then use induction to prove that it is in $C^n(\R)$ for all $n$. 
+It's a little annoying that there are three different words that all mean the same thing, but that's just how it is; all three are commonly used in the mathematical literature, so it's best to get used to all of them. We'll usually use the word ``smooth.'' It follows immediately from \cref{sums-scalars-cn-singlevar,product-cn-singlevar,composite-cn-singlevar} that sums, scalar multiples, products, and composites of smooth functions are also smooth. 
+
+An important principle is that we can tailor smooth functions to almost arbitrary specifications. Our first example of this principle is the following smooth bijection $(-1,1) \to \R$ whose inverse is also smooth. A smooth bijection with a smooth inverse is also called a ``diffeomorphism.''
+
+\begin{example} \label{interval-to-line}
+	Consider the function $f : (-1,1) \to \R$ defined by \[ f(x) = \frac{x}{1-x^2}. \]
+	See \cref{interval-to-line-graph}. 
+	\begin{figure}
+		\begin{center}
+			\begin{tikzpicture}
+			\begin{axis}[
+			xmin=-1.5,xmax=1.5,
+			ymin=-5,ymax=5,
+			ytick={0},
+			xtick={-1,1},
+			xticklabels={$-1$,1},
+			yticklabels={},
+			axis lines=middle,
+			axis line style=lightgray,
+			width=0.75\textwidth
+			]
+			
+			
+			\addplot[black,style=thick,<->] expression[domain=-0.9:0.9,samples=100]{x/(1-x^2)};
+			\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		\caption{The graph of the function $f$ from \cref{interval-to-line}.}  \label{interval-to-line-graph}
+	\end{figure}
+	Since this is a quotient of two smooth functions and the denominator is nonzero on $(-1,1)$, this function is also smooth. We can calculate that
+	\[ f'(x) = \frac{1+x^2}{(1-x^2)^2} \]
+	and we can see from this formula that the derivative is always strictly positive. Thus $f$ is strictly increasing (cf. \cref{deriv-increasing-decreasing}); in partcular, it is injective. Moreover, we have
+	\[ \lim_{x \to -1^+} f(x) = -\infty \quad \text{ and } \lim_{x \to 1^-} f(x) = +\infty \]
+	so the intermediate value theorem guarantees that $f$ is bijective. Thus the inverse function $f^{-1} : \R \to (-1,1)$ exists. Finally, since $f'$ is always nonzero, it follows from \cref{smooth-nonzero-deriv-diffeo-single-var} that $f^{-1}$ must be smooth. It is possible to verify that
+	\[ f^{-1}(x) = \frac{-1+\sqrt{4x^2+1}}{2x} \]
+	by check that composing this formula with $f$ yields the identity, but, thanks to \cref{smooth-nonzero-deriv-diffeo-single-var}, we don't actually need this formula for $f^{-1}$ at all to know that $f^{-1}$ is smooth.
+\end{example}
+
+\begin{lemma} \label{smooth-nonzero-deriv-diffeo-single-var}
+	Suppose $U$ and $V$ are open subsets of $\R$, that $f : U \to V$ is a smooth bijection, and that $f'$ is always nonzero. Then $f$ is a diffeomorphism. 
+\end{lemma}
+
+\begin{proof}
+	We want to show that $f^{-1} : V \to U$ is smooth. Since $f'$ is always nonzero, we know from \cref{inverse-derivative} that $f^{-1}$ is differentiable and that
+	\[ (f^{-1})'(a) = \frac{1}{f'(f^{-1}(a))}. \]
+	In other words, $(f^{-1})'$ is the composite of three functions: $f^{-1}$, $f'$, and inversion (ie, the function $x \mapsto 1/x$). Inversion is clearly smooth; since $f$ is smooth, so is $f'$. 
 	
+	We now prove by induction that $f^{-1}$ is $C^n$ for all integers $n$. For the base case, we know from above that it is $C^0$ (in fact, we even know more: we know that $f^{-1}$ is even differentiable, but all we need to know for the base case is that it is continuous). Suppose inductively that $f^{-1}$ is $C^n$ for some non-negative integer $n$. Then, as we saw above, $(f^{-1})'$ is the composite of $f^{-1}$, $f'$, and inversion. The latter two are smooth, so in particular are $C^n$. By the inductive hypothesis, we know that $f^{-1}$ is $C^n$. Thus $(f^{-1})'$, being the composite of three $C^n$ functions, is also $C^n$ by \cref{composite-cn-singlevar}. This means that $f^{-1}$ is $C^{n+1}$, which completes the induction. 
+\end{proof}
+
+\begin{exercise}
+	For any $a < b$, construct a diffeomorphism $f : (a, b) \to \R$.
+\end{exercise}
+
+Our next example of a slightly strange smooth function is the following one, which gets ``infinitely flat'' at 0 but is not constantly equal to 0. 
+
+\begin{remark} \label{exponential-limit}
+	You probably remember proving that
+	\[ \lim_{u \to \infty} \frac{u^m}{e^u} = 0 \]
+	for any non-negative integer $m$ using L'H\^{o}pital's rule in your calculus class. We haven't proved L'H\^{o}pital's rule (too much of a tangent (pun intended)), but we'll use this fact anyway. In particular, note that by making the substitution $u = 1/x$ above, we find that
+	\[ \lim_{x \to 0^+} \frac{e^{-1/x}}{x^m} = 0 \]
+	for any non-negative integer $m$.
+\end{remark} 
+
+\begin{exercise} \label{infinitely-flat}
+	Consider the function $f : \R \to \R$ defined as follows.
+	\[ f(x) = \begin{cases} e^{-1/x} & \text{if } x > 0 \\ 0 & \text{if } x \leq 0 \end{cases} \]
+	See \cref{infinitely-flat-graph}. 
+	\begin{figure}
+		\begin{center}
+			\begin{tikzpicture}
+			\begin{axis}[
+			xmin=-1,xmax=2,
+			ymin=-0.25,ymax=1.1,
+			ytick={1},
+			xtick={-1,1},
+			xticklabels={$-1$,1},
+			yticklabels={1},
+			axis lines=middle,
+			axis line style=lightgray,
+			width=0.75\textwidth
+			]
+			
+			
+			\addplot[black,style=thick,->] expression[domain=0.01:1.9,samples=100]{exp(-1/x)};
+			\addplot[black,style=thick,<-] expression[domain=-0.9:0,samples=2]{0};
+			\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		\caption{The graph of the function $f$ from \cref{infinitely-flat}.}  \label{infinitely-flat-graph}
+	\end{figure}
+	\begin{enumerate}[(a)]
+		\item Use \cref{exponential-limit} to show, using the definition of the derivative \ref{single-var-derivative-definition}, that $f'(0) = 0$.
+		\item Check that
+		\[ f'(x) = \begin{cases} \dfrac{e^{-1/x}}{x^2} & \text{if } x > 0 \\ 0 & \text{if } x \leq 0. \end{cases} \]
+		You've already computed $f'(0)$. You can compute formulas for the derivative $f'(x)$ for $x > 0$ and for $x < 0$ using the usual rules for differentiation.
+		\item Use \cref{exponential-limit} to show that $f''(0) = 0$, and then check that 
+		\[ f''(x) = \begin{cases} p_2(x) \cdot \dfrac{e^{-1/x}}{x^4} & \text{if } x > 0 \\ 0 & \text{if } x \leq 0 \end{cases} \]
+		where $p_2$ is the function $p_2(x) = 1-2x$. 
+		\item Inductively, prove that
+		\[ f^{(n)}(x) = \begin{cases} p_n(x) \cdot \dfrac{e^{-1/x}}{x^{2n}} & \text{if } x > 0 \\ 0 & \text{if } x \leq 0 \end{cases} \]
+		where $p_n$ is a polynomial function of degree $n-1$ such that $p_n(0) = 1$. 
+	\end{enumerate}
+	Thus $f$ is an example of a smooth function that is ``infinitely flat'' at $x = 0$, in the sense that $f^{(n)}(x) = 0$ for all $n$, but is not constantly equal to 0. 
+\end{exercise}
+
+Next up, we have ``bump functions.'' Recall that the ``support'' of a function $f : U \to \R$ is the closure of the set $\{ x \in U : f(x) \neq 0 \}$. A ``bump function'' is a smooth function whose support is compact. 
+
+\begin{exercise} \label{canonical-bump}
+	Consider the function $\psi : \R \to \R$ given by the following. 
+	\[ \psi(x) = \begin{cases} e^{-1/(1-x^2)} & \text{if } x \in (-1,1) \\ 0 & \text{otherwise}. \end{cases} \]
+	See \cref{canonical-bump-graph} for its graph. 
 	\begin{figure}
 		\begin{center}
 			\begin{tikzpicture}
@@ -561,9 +923,38 @@ The following exercise shows that all of these inclusions are strict; in other w
 		\end{center}
 		\caption{The graph of the function $\psi$ from \cref{canonical-bump}.}  \label{canonical-bump-graph}
 	\end{figure}
+	Check that $\psi$ is the composite of the ``infinitely flat'' function from \cref{infinitely-flat} and the polynomial $p(x) = 1-x^2$. Conclude that $\psi$ is a bump function whose support is $[-1,1]$.
 \end{exercise}
 
 \begin{exercise}
-	Let $K = [a, b]$ be a compact interval in $\R$ and let $U$ be an open subset containing $K$. Prove that there exists a smooth function $f : \R \to \R$ such that $f(x) = 1$ for all $x \in K$ and $f(x) = 0$ for all $x \notin U$. \textit{Hint.} Since $U$ is open, show that there exist $a' < a$ and $b' > b$ in $U$. Thus, if we let $I = [a',b']$, then $K \subsetneq I \subseteq U$. The characteristic function \[ \chi_I(x) = \begin{cases} 1 & \text{if } x \in I \\ 0 & \text{if } x \notin I \end{cases} \]
-	is not smooth, since it's not even continuous; obtain $f$ by modifying $\chi_I$ on the intervals $[a', a]$ and $[b, b']$ using inspiration from the function $\psi$ of \cref{canonical-bump}.
+	For any $a < b$ in $\R$, construct a bump function whose support is $[a,b]$. 
+\end{exercise}
+
+\begin{comment}
+The next example to consider is the so-called Gaussian function. 
+
+\begin{example}[Gaussian function] \label{gaussian}
+	Consider the function $\psi : \R \to \R$ defined by \[ \psi(x) = e^{-x^2}, \]
+	called the \emph{Gaussian function}. As the composite of the smooth function $x \mapsto e^x$ with the smooth function $x \mapsto -x^2$, this function is also smooth. Observe that $\psi$ has the property that
+	\[ \lim_{x \to \pm \infty} \psi(x) = 0. \]
+	We can also calculate that $\psi'(x) = -2xe^{-x^2}$, and then using l'H\^opital's rule (which we haven't proved), we can show that
+	\[ \lim_{x \to \pm \infty} \psi'(x) = 0. \]
+	A more difficult property of $\psi$ is that
+	\[ \int_{-\infty}^\infty \psi(t)\, dt = \sqrt{\pi}. \]
+\end{example}
+\end{comment}
+
+In the following two examples, we will have to invoke the fundamental theorem of calculus, even though we have not proved it (or even defined integrals, for that matter). 
+
+\begin{example} \label{integral-canonical-bump}
+	Let $\psi$ be the bump function from \cref{canonical-bump}, and then consider 
+	\[ \eta(x) = \int_{-1}^x \psi(t)\, dt. \]
+	Then 
+	\[ \eta'(x) = \frac{d}{dx} \int_{-1}^x \psi(t)\, dt = \psi(x) \]
+	by the fundamental theorem of calculus. Thus $\eta$ is smooth, since $\eta' = \psi$ is smooth. Note moreover that $\eta$ is increasing, since $\eta' = \psi \geq 0$. Finally, it is clear from the geometric interpretation of integrals as ``area under the curve'' that $\eta$ is constantly 0 for all $x \leq -1$ and that it is constantly $\eta(1)$ for all $x \geq 1$. 
+\end{example}
+
+\begin{exercise} \label{constant-compact-zero-outside-neighborhood}
+	Let $I = [a, b]$ be a compact interval in $\R$ and let $U$ be an open subset containing $I$. Prove that there exists a bump function $f : \R \to \R$ such that $f(x) = 1$ for all $x \in K$ and $f(x) = 0$ for all $x \notin U$. \textit{Hint.} The characteristic function \[ \chi_I(x) = \begin{cases} 1 & \text{if } x \in I \\ 0 & \text{if } x \notin I \end{cases} \]
+	is close to having all of the properties we want, but it's not smooth (it's clearly not even continuous). Since $U$ is open, there exist $a' < a$ and $b' > b$ such that $I := [a', b'] \subseteq U$. Modify $\chi_I$ on the intervals $[a', a]$ and $[b, b']$ to obtain the desired function. Use inspiration from the function $\eta$ of \cref{integral-canonical-bump}.
 \end{exercise}

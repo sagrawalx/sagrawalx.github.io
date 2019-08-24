@@ -1,10 +1,10 @@
 \chapter{Manifolds}
 
-\section{Defining Manifolds}
+At this point, we will need to use the language of topological spaces. If you have seen metric spaces but not topological spaces, you should look over \cref{topological-spaces-basics} at this point.
 
-\subsection{Charts and atlases}
+\section{Definition of a manifold}
 
-Throughout, let $X$ be a metric space.
+Throughout, let $X$ be a topological space.
 
 \begin{definition}
 	A \emph{chart} on $X$ is a pair $(U, x)$ consisting of an open subset $U \subseteq X$ and a function $x : U \to \R^n$ which is a homeomorphism onto an open subset of $\R^n$ for some $n$. We call the functions $x_i := \pi_i \circ x : U \to \R$ \emph{coordinate functions} on $U$ with respect to the chart $(U, x)$, and for any $P \in U$, the list of numbers $x_1(P), \dotsc, x_n(P)$ are the \emph{coordinates} of $P$ with respect to the chart $(U, x)$. 
@@ -46,19 +46,17 @@ Throughout, let $X$ be a metric space.
 	Prove that every atlas $\mathscr{A}$ is contained in a unique maximal atlas. \textit{Hint}. Let $\mathscr{A}'$ be the set of all charts that are compatible with all of the charts in $\mathscr{A}$. Prove that $\mathscr{A}'$ is an atlas (caution: keep \cref{compatibility-not-equivalence-relation} in mind). Then prove that it is maximal, and it is the only maximal atlas containing $\mathscr{A}$. 
 \end{exercise}
 
-
-\begin{exercise} \label{pulling-back-atlases}
-	Let $f : X \to Y$ be a continuous function and $\mathscr{A}$ an atlas on $Y$. Define
-	\[ f^*\mathscr{A} = \{ (f^{-1}(U)) \} \]
-\end{exercise}
-
-\subsection{Definition and examples}
+This leads us to the following definition.
 
 \begin{definition}
-	A \emph{smooth manifold}, or just a \emph{manifold}, is a pair $(X, \mathscr{A}_X)$ where $X$ is a metric space and $\mathscr{A}_X$ is a maximal atlas. Often, write simply ``$X$'' in place of the pair $(X, \mathscr{A}_X)$, and sometimes $\mathscr{A}_X$ is called the ``manifold structure on $X$.''
+	A \emph{smooth manifold}, or just a \emph{manifold}, is a pair $(X, \mathscr{A}_X)$ where $X$ is a topological space and $\mathscr{A}_X$ is a maximal atlas. Often, write simply ``$X$'' in place of the pair $(X, \mathscr{A}_X)$, and sometimes $\mathscr{A}_X$ is called the ``manifold structure on $X$.''
 \end{definition}
 
 Of course, \cref{existence-maximal-atlas} tells us that any not-necessarily-maximal atlas on a metric space $X$ defines a manifold structure on $X$ in a canonical way. When constructing examples, it is usually useful to consider non-maximal atlases. But, when dealing with abstract manifolds, we will often find it convenient to assume that the atlas that the manifold comes equipped with is already maximal, which is the reason that the definition is made the way it is. 
+
+\section{Examples}
+
+\subsection{First examples}
 
 \begin{example} \label{natural-euclidean-atlas}
 	The single chart $(\R^n, \id)$, where $\id : \R^n \to \R^n$ is the identity map, defines an atlas on $\R^n$. We can extend this to a maximal atlas by \cref{existence-maximal-atlas}, called the \emph{euclidean atlas} on $\R^n$. Unless explicitly specified otherwise, we always regard $\R^n$ as a manifold by equipping it with the euclidean atlas. By \cref{polar-compatible-with-identity}, the polar representation chart $(U, \text{polar})$ is an element of the euclidean atlas. 
@@ -68,13 +66,15 @@ Of course, \cref{existence-maximal-atlas} tells us that any not-necessarily-maxi
 	The single chart $(\R, f)$ where $f : \R \to \R$ is the function $f(x) = x^3$ is an atlas on $\R$. Show that the corresponding maximal atlas is \emph{not} the euclidean atlas. 
 \end{exercise}
 
-\begin{exercise} \label{circle-projection-atlas}
+\begin{exercise}[The circle $S^1$] \label{circle-projection-atlas}
 	Let $S^1$ denote the set of points in $\R^2$ along the unit circle. In other words,
 	\[ S^1 = \{ (x, y) \in \R^2 : x^2 + y^2 = 1 \}. \]
+	To regard $S^1$ as a topological space, we do what you might expect: we first restrict the euclidean metric on $\R^2$ to $S^1$, and then we forget this restricted metric and just remember the resulting topology as in \cref{metric-to-topological}. 
+	
 	Given a point $P \in S^1 \setminus \{(0,1)\}$, the \emph{projection of $P$ from $(0,1)$ onto $\R \times \{-1\}$}, which we will denote $\pi_1(P)$, is defined as the point of intersection between the line $y = -1$ and the line passing through $P$ and $(0,1)$. See \cref{circle-projection}. Similarly, for $P \in S^1 \setminus \{(0,-1)\}$, we can define the projection of $P$ from $(0,-1)$ onto $\R \times \{1\}$, denoted $\pi_2(P)$. Show that $\pi_1$ and $\pi_2$ together define an atlas on $S^1$. 
 \end{exercise}
 
-\begin{exercise} \label{sphere-projection-atlas}
+\begin{exercise}[The $n$-sphere $S^n$] \label{sphere-projection-atlas}
 	Let $S^n$ denote the set of points in $\R^{n+1}$ of norm 1. Generalize \cref{circle-projection-atlas} and show that ``projection from the north pole'' and ``projection from the south pole'' define an atlas on $S^n$. 
 \end{exercise}
 
@@ -113,36 +113,105 @@ Of course, \cref{existence-maximal-atlas} tells us that any not-necessarily-maxi
 	\caption{Given a point $P$ on $S^1 \setminus \{(0,1)\}$, we draw a line connecting $P$ to $(0,1)$. The point where that line intersects the line $\R \times \{-1\}$ is the \emph{projection of $P$ from $(0,1)$ onto $\R \times \{-1\}$}, denoted $\pi_1(P)$. }  \label{circle-projection}
 \end{figure}
 
-% TODO: torus
-% TODO: mobius strip
-% TODO: projective line
-
 \begin{exercise}[Open submanifolds] \label{open-submanifold}
 	Let $X$ be a manifold and $U \subseteq X$ an open subset. Show that \[ \mathscr{A}_U = \{ (V,x) \in \mathscr{A}_X : V \subseteq U \} \]
 	is a maximal atlas on $U$. We call $U$, equipped with this maximal atlas, an \emph{open submanifold} of $X$. 
 \end{exercise}
 
-% TODO: products
+\begin{exercise}[Product manifold]
+	Let $X$ and $Y$ be manifolds. Let $\mathscr{A}$ be the set of charts of the form $(U \times V, x \times y)$, where $(U,x : U \to \R^m) \in \mathscr{A}_X$, $(V, y : V \to \R^n) \in \mathscr{A}_Y$, and $x \times y$ denotes the natural map $U \times V \to \R^m \times \R^n = \R^{m+n}$. Show that $\mathscr{A}$ is an atlas on $X \times Y$. We call $X \times Y$, equipped with the corresponding maximal atlas, the \emph{product manifold}. 
+\end{exercise}
+
+\subsection{M\"obius strip}
+
+Let $B$ denote the box $[0,1] \times (0,1)$ inside $\R^2$, and define an equivalence relation $\sim$ on $B$ by declaring $(0, b) \sim (1, 1-b)$ for all $b \in (0,1)$. We will denote the equivalence class of a point $(a, b) \in B$ as $[a, b]$. 
+
+% TODO: PICTURE
+
+\begin{exercise}
+	Check that $\sim$ is an equivalence relation. 
+\end{exercise}
+
+The \emph{M\"obius strip} is the set of equivalence classes $M := B/\sim$. In other words, we take the box $[0,1] \times (0,1)$ and ``glue'' its left and right edges, with a twist. If you've ever made a M\"obius strip out of paper, you should be able to see that we've formalized exactly that same process. We regard $M$ as a topological space using the quotient topology, as in \cref{quotient-space}. 
+
+To give $X$ the structure of a manifold, we will now produce an atlas on $X$. It will consist of two charts. The first chart is easy to describe. Let \[ U = \{ [a, b] \in M : a \neq 0, 1 \} \] 
+and let $x : U \to \R^2$ be the function $x([a,b]) = (a, b)$.
+
+\begin{exercise}
+	Show that $x : U \to \R^2$ is well-defined and that it is a homeomorphism onto its image.
+\end{exercise}
+
+Intuitively, what we've done here is cut along the same edge where we glued the Mobius strip together. What we're left with is $U$, which is just a flat rectangle and therefore embeds into $\R^2$. 
+
+% TODO: Picture
+
+The second chart is a bit harder to describe mathematically, but the intuitive idea is the same. Instead of cutting the M\"obius strip along the line where we glued, we'll cut along the line where $a = 1/2$. This should still leave us with a flat rectangle, which we can embed into $\R^2$. Formally, let \[ V = \{ [a, b] \in M : a \neq 1/2 \} \] and let $y : V \to  \R^2$ be the function defined by 
+\[ y([a,b]) = \begin{cases} (a, b) & \text{if } a < 1/2 \\ (a-1, 1-b) & \text{if } a > 1/2 \end{cases} \]
+
+\begin{exercise}
+	Show that $y : V \to \R^2$ is well-defined and that it is a homeomorphism onto its image. 
+\end{exercise}
+
+\begin{exercise}
+	Show that $(U, x)$ and $(V, y)$ are compatible.
+\end{exercise}
+
+Thus $\mathscr{A} = \{(U, x), (V, y)\}$ is an atlas on the M\"obius strip $M$. Letting $\mathscr{A}_M$ denote the corresponding maximal atlas, we obtain the structure of a manifold on $M$.
+
+\subsection{More examples of manifolds}
+
+\begin{exercise}[Torus] \label{torus}
+	Let $B$ denote the box $[0,1] \times [0,1]$ inside $\R^2$ and define the equivalence relation $\sim$ by $(a,0) \sim (a,1)$ and $(0,b) \sim (1,b)$ for all $a, b \in [0,1]$. The \emph{torus} $T$ is defined to be the quotient $B/\sim$. Describe an atlas on $T$. 
+\end{exercise}
+
+\begin{exercise}[Projective line] \label{rp1}
+	Let $S^1$ denote the circle as in \cref{circle-projection-atlas}. Define an equivalence relation $\sim$ on $S^1$ which identifies antipodal points; in other words, every point on $S^1$ is declared to be equivalent to the point that is diametrically opposite it. The \emph{projective line} $\bbP^1$ is defined to be the quotient $S^1/\sim$. Describe an atlas on $\bbP^1$. 
+\end{exercise}
+
+\begin{exercise}[Projective plane] \label{rp2}
+	Let $S^2$ denote the 2-sphere as in \cref{sphere-projection-atlas}. Define an equivalence relation $\sim$ on $S^2$ which identifies antipodal points; in other words, every point on $S^2$ is declared to be equivalent to the point that is diametrically opposite it. The \emph{projective plane} $\bbP^2$ is defined to be the quotient $S^2/\sim$. Describe an atlas on $\bbP^2$. 
+\end{exercise}
 
 \section{Smooth functions}
 
 \subsection{Smooth real-valued functions}
 
 \begin{definition} \label{smooth-real-valued}
-	Let $X$ be a manifold. A \emph{smooth function} $f : X \to \R$ is a function such that, for any chart $(U, x) \in \mathscr{A}_X$, the function $f \circ x^{-1}$ is smooth.
-	\[ \begin{tikzcd} \phi(U) \ar{r}{x^{-1}} & U \ar{r}{f} & \R \end{tikzcd} \]
+	Let $X$ be a manifold. A function $f : X \to \R$ is said to be \emph{smooth} if, for any chart $(U, x) \in \mathscr{A}_X$, the function $f \circ x^{-1}$ is smooth.
+	\[ \begin{tikzcd} x(U) \ar{r}{x^{-1}} & U \ar{r}{f} & \R \end{tikzcd} \]
 \end{definition}
 
-This definition might seem a bit annoying at first glance, since the maximal atlas $\mathscr{A}_X$ has \emph{many, many} charts. The following exercise shows that we don't need to check all of the charts. 
+There are two disconcerting things about this definition. First, there is the issue that checking smoothness of a particular function seems next to impossible: the maximal atlas $\mathscr{A}_X$ will have \emph{many, many} charts, and the definition makes it seem like we need to check smoothness on each of these charts. 
+
+Thankfully, we don't need to check on all possible charts. As soon as we check smoothness on a collection of charts that cover $X$, we're done. 
+
+\begin{lemma} \label{smooth-real-val-local}
+	Let $X$ be a manifold and $f : X \to \R$ a function. Suppose that there exists an atlas $\mathscr{A} \subseteq \mathscr{A}_X$ such that $f \circ x^{-1}$ is smooth for any $(U, x) \in \mathscr{A}$. Then $f$ is smooth. 
+\end{lemma}
+
+\begin{proof}
+	Suppose $(V, y) \in \mathscr{A}_X$. For any $(U, x) \in \mathscr{A}$, we have maps as follows.
+	\[ \begin{tikzcd} y(U \cap V) \ar{r}{y^{-1}} \ar{d}[swap]{x \circ y^{-1}} & U \cap V \ar{r}{f} & \R \\ x(U \cap V) \ar[bend right]{ur}[swap]{x^{-1}} \end{tikzcd} \]
+	Since $(V, y)$ and $(U, x)$ are both elements of the maximal atlas $\mathscr{A}_X$, we know that the transition function $x \circ y^{-1}$ is smooth. Since $(U, x) \in \mathscr{A}$, we know by assumption that $f \circ x^{-1}$ is smooth. Thus \[ f \circ y^{-1} = (f \circ x^{-1}) \circ (x \circ y^{-1}) \]
+	is a smooth function $y(U \cap V) \to \R$. 
+	
+	Now note that, since $\mathscr{A}$ is an atlas, its charts cover all of $X$, so
+	\[ \bigcup_{(U,x) \in \mathscr{A}} y(U \cap V) = y(V). \]
+	Since $f \circ y^{-1}$ is smooth when restricted to each the open subset $y(U \cap V)$ for all $(U, x) \in \mathscr{A}$, we conclude that $f \circ y^{-1}$ must be smooth on all of $y(V)$.
+\end{proof}
+
+The second disconcerting thing is the following. Suppose $U \subseteq \R^m$ is an open subset and $f : U \to \R$ is a function. On the one hand, we defined what it means for $f$ to be smooth back in \cref{smooth-multivar}. On the other hand, we can regard $U$ as an open submanifold of $\R^n$ (cf. \cref{open-submanifold}) and then \cref{smooth-real-valued} gives us another definition of what it means to be smooth. A priori, it could be that these definitions conflict. Thankfully, they do not. 
 
 \begin{exercise}
-	Let $X$ be a manifold and $\mathscr{A} \subseteq \mathscr{A}_X$ an atlas. If $f : X \to \R$ is a function such that $f \circ x^{-1}$ is smooth for any $(U, x) \in \mathscr{A}$, show that $f$ is smooth. 
+	Suppose $U \subseteq \R^m$ is an open subset and $f : U \to \R$ is a function. Show that $f$ is smooth in the sense of \cref{smooth-multivar} if and only if it is smooth in the sense of \cref{smooth-real-valued}. \textit{Hint}. You might find \cref{smooth-real-val-local} useful. 
 \end{exercise}
+
+\subsection{Partial derivatives of real-valued functions}
 
 \begin{definition}
 	Let $X$ be a manifold and $(U, x) \in \mathscr{A}_X$ a chart. Recall that we then have coordinate functions $x_1, \dotsc, x_n : U \to \R$, where $x_i = \pi_i \circ x$. Given a smooth function $f : X \to \R$ and a point $P \in U$, we define the \emph{partial derivative of $f$ at $P$ with respect to $x_i$} by
-	\[ \left.\frac{df}{dx_i}\right|_P = \partial_i (f \circ x^{-1})(x(P)). \]
-	In other words, $df/dx_i$ is the function $\partial_i(f \circ x^{-1}) \circ x : U \to \R$.  
+	\[ \left.\frac{df}{dx_i}\right|_P := \partial_i (f \circ x^{-1})(x(P)). \]
+	In other words, $df/dx_i = \partial_i(f \circ x^{-1}) \circ x$ as functions $U \to \R$.  
 \end{definition}
 
 \subsection{Smooth functions between manifolds}
@@ -160,6 +229,8 @@ Once again, we don't need to check all possible charts. The precise statement is
 \begin{exercise}
 	Suppose $X$ and $Y$ are manifolds and $f : X \to Y$ is a function. Suppose further that there exists an atlas $\mathscr{A} \subseteq \mathscr{A}_Y$ such that, for every $(V, y) \in \mathscr{A}$, there exists an atlas $\mathscr{A}' \subseteq \mathscr{A}_{f^{-1}(V)}$, such that for every $(U, x) \in \mathscr{A}'$, the function $y \circ f \circ x^{-1} : x(U) \to y(V)$ is smooth. Show that $f$ is smooth.
 \end{exercise}
+
+We should also note that we haven't redefined the word ``smooth'' in any conflicting ways. More precisely, we have the following two exercises. 
 
 \begin{exercise}
 	If $U \subseteq \R^m$ is an open subset and $f : U \to \R^n$ is a function, show that $f$ is smooth in the sense of \cref{smooth-multivar} if and only if it is smooth in the sense of \cref{smooth-between-manifolds}.

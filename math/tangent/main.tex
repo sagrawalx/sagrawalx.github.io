@@ -13,6 +13,8 @@
 
 % Miscellaneous
 \usepackage{enumerate, tikz-cd, color, cancel, microtype, verbatim, pgfplots}
+\usepgfplotslibrary{fillbetween}
+\pgfplotsset{compat=1.15}
 \usepackage[colorlinks=true]{hyperref}
 
 % Numbering and environments
@@ -20,6 +22,7 @@
 \usepackage[noabbrev]{cleveref}
 
 \numberwithin{equation}{chapter}
+\setcounter{chapter}{-1}
 \setcounter{secnumdepth}{4}
 \renewcommand{\thesection}{\thechapter.\Alph{section}}
 \renewcommand{\thesubsubsection}{\thesubsection.\Alph{subsubsection}}
@@ -49,15 +52,19 @@
 \newtheorem*{proofsketch}{Proof sketch}
 
 \newcommand{\R}{\mathbb{R}}
+\newcommand{\bbP}{\mathbb{P}}
 \renewcommand{\O}{\mathscr{O}}
 \newcommand{\id}{\mathrm{id}}
 
 
 \begin{document}
 	\maketitle
-	\tableofcontents
 	
 	\include{introduction}
+	
+	\tableofcontents
+	
+	\include{prerequisites}
 	
 	\include{single-var}
 	
@@ -66,7 +73,6 @@
 	\include{manifolds}
 	
 	\include{tangent}
-	
 	
 	\bibliographystyle{alphaurl}
 	\bibliography{references}

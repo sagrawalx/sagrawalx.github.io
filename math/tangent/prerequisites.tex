@@ -1,0 +1,331 @@
+\chapter{Prerequisites} \label{prerequisites}
+
+\section{Little-oh notation} \label{little-oh}
+
+Throughout this section, let $X$ be a metric space and let $x_0$ be a point in $X$. 
+
+\begin{definition}
+	A function $g : X \setminus \{x_0\} \to \R$ is \emph{positive} if $g(x) > 0$ for all $x \in X \setminus \{x_0\}$. Similarly, $g$ is \emph{non-negative} if $g(x) \geq 0$ for all $x \in X \setminus \{x_0\}$.
+\end{definition}
+
+Suppose $g$ is a positive function. \Cref{little-o-definition} below formulates what it means for a non-negative function $f : X \setminus \{x_0\} \to \R$ to be ``little-oh of $g$ as $x$ tends to $x_0$.'' Intuitively, this condition means that $f$ is \emph{much smaller} than $g$ near $x_0$. 
+
+\begin{definition} \label{little-o-definition}
+	A function $f : X \setminus \{x_0\} \to \R$ is \emph{little-oh of $g$ as $x$ tends to $x_0$}, written \[ f(x) = o(g(x)) \text{ as } x \to x_0 \] 
+	if, for every $\epsilon > 0$, there exists an open neighborhood $U$ of $x_0$ such that $f(x) \leq \epsilon g(x)$ for all $x \in U \setminus \{x_0\}$. Equivalently, this means that 
+	\[ \lim_{x \to x_0} \frac{|f(x)|}{g(x)} = 0. \]
+	When $x_0$ can be inferred from context, we write simply $f = o(g)$. 
+\end{definition} 
+
+\begin{remark}
+	It's worth noting that the use of the symbol ``$=$'' above is mathematically abusive. The left-hand side of the ``$=$'' is a function and the right-hand side is a property of functions; of course, a function cannot literally be equal to a property. Rather, the ``$=$'' is being used here to mean that the function on the left-hand side \emph{has} the property described on the right-hand side. As annoying as it is, this abuse of notation is fairly standard, so it's probably best to just get used to it. 
+\end{remark}
+
+\begin{exercise} \label{little-o-equivalent-exercise}
+	Prove that the two conditions in \cref{little-o-definition} are in fact equivalent. 
+\end{exercise}
+
+\begin{exercise}
+	Let $X = \R$ and $x_0 = 0$. For each of the functions $f$ and $g$ described below, sketch graphs of $f$ and $g$ and then determine whether or not $f = o(g)$ as $x \to 0$.
+	\begin{enumerate}[(a)]
+		\item $f(x) = x$ and $g(x) = x^2$. 
+		\item $f(x) = x$ and $g(x) = |x|$. 
+		\item $f(x) = x^2$ and $g(x) = |x|$. 
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+	Let $X = \R^2$ and $x_0 = 0$. For each of the following functions $f$, determine whether or not $f(x) = o(|x|)$ as $x \to 0$. 
+	\begin{enumerate}[(a)]
+		\item $f(x,y) = x - y$. 
+		\item $f(x,y) = x^2 + y^2$. 
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[``Smaller than small is still small''] \label{less-than-small-is-small}
+	Suppose $f_1, f_2 : X \setminus \{x_0\} \to \R$ are functions such that $|f_1(x)| \leq |f_2(x)|$ for all $x$ in a punctured neighborhood of $x_0$, and $f_2(x) = o(g(x))$ as $x \to x_0$. Then $f_1(x) = o(g(x))$ also. 
+\end{exercise}
+
+\begin{exercise} \label{little-o-vector-space}
+	For a fixed positive function $g : X \setminus \{x_0\} \to \R$, prove that the set of functions $f : X \setminus \{x_0\} \to \R$ which are $o(g)$ as $x \to x_0$ is a vector space under the natural operations. In other words, verify the following three facts. 
+	\begin{enumerate}[(1)]
+		\item The zero function is $o(g(x))$. 
+		\item (``Scalar multiples of small are still small'') If $c \in \R$ is a scalar and $f(x) = o(g(x))$, then 
+		\[ cf(x) = o(g(x)). \] 
+		\item (``Sum of smalls is still small'') If $f_1(x) = o(g(x))$ and $f_2(x) = o(g(x))$, then \[ (f_1 + f_2)(x) = o(g(x)). \]
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise} \label{little-o-multiplicative}
+	Suppose $f_1, f_2, g_1, g_2 : X \setminus \{x_0\} \to \R$ are functions with $g_1, g_2$ positive such that $f_1(x) = o(g_1(x))$ and $f_2(x) = o(g_2(x))$ as $x \to x_0$. Prove that $(f_1 \cdot f_2)(x) = o((g_1 \cdot g_2)(x))$. 
+\end{exercise}
+
+\begin{comment}
+\begin{exercise}
+Suppose $f : X \to \R$ is continuous at $x_0$ and $f(x_0) = 0$, and that $f = o(g)$ as $x \to  x_0$ for some function $g : X \setminus\{x_0\} \to \R$. Suppose further that $s : \R \to \R$ is a function such that $s = o(|r|)$ as $r \to 0$. Then $s \circ f = o(g)$ as $x \to x_0$. 
+\end{exercise}
+
+\begin{proof}
+Suppose $\epsilon > 0$. We want to find an open neighborhood $U$ of $x_0$ such that
+\[ |s(f(x))| \leq \epsilon|t(g(x))| \]
+for $x \in U$. 
+
+Since $s$ is $o(t)$ as $r \to 0$, we know that for any $\epsilon_1 > 0$ there exists $\delta_1 > 0$ such that $|r| < \delta_1$ implies that
+\[ \begin{aligned} |s(r)| \leq \epsilon_1|t(r)|. \end{aligned} \] 
+Since $f(x_0) = 0$ and $f$ is continuous at $x_0$, there exists a neighborhood $U_1$ of $x_0$ such that
+\[ |f(x)| < \delta_1  \]
+for all $x \in U_1$. This means that for $x \in U_1$, we have
+\[ |s(f(x))| \leq \epsilon_1|t(f(x))|. \]
+Since $f = o(g)$ as $x \to x_0$, for any $\epsilon_2 > 0$ there is another neighborhood $U_2$ of $x_0$ such that $|f(x)| \leq \epsilon_2 |g(x)|$. This means that
+\[ |s(f(x))| \leq \epsilon_1 \epsilon_2 |g(x)|. \]
+
+there then exists $\delta_2 > 0$ such that $|h| < \delta$ implies that $|df_a(h) + r(h)| < \delta_1$. Then for $|h| < \delta_2$, we have
+\[ |s(df_a(h) + r(h)| \leq \epsilon_1 |df_a(h) + r(h)| 
+\leq \epsilon_1|f'(a)||h| + \epsilon_1|r(h)| \]
+Since $r$ is $o(|h|)$, for any $\epsilon_2 > 0$ there exists $\delta_3 > 0$ such that $|h| < \delta_3$ implies that $|r(h)| \leq \epsilon_2 |h|$. Let $\delta = \min\{\delta_2, \delta_3\}$. Then for $|h| < \delta$, we can continue the above chain of inequalities to obtain the following.  
+\[ |s(df_a(h) + r(h)| \leq \epsilon_1|f'(a)||h| + \epsilon_1 \epsilon_2|h| = \epsilon_1(|f'(a)| + \epsilon_2)|h| \]
+So we let $\epsilon_2 = 1$ and then let 
+\[ \epsilon_1 = \frac{\epsilon}{|f'(a)| + 1}. \]
+The $\delta$ obtained by going through the above process then has the desired property.
+\end{proof}
+\end{comment}
+
+% TODO: exercise about composition? i'm not sure how to formuulate the correct statement though
+
+\section{Linear algebra} \label{linear-algebra}
+
+\subsection{Important vector spaces}
+
+\begin{definition}
+	We write $\R^n$ to denote the vector space of lists of $n$ numbers. We will sometimes write its elements as horizontal lists with commas, as in $(a_1, \dotsc, a_n)$, and sometimes as vertical column vectors, as in \[ \begin{bmatrix} a_1 \\ \vdots \\ a_n \end{bmatrix}.  \]
+\end{definition}
+
+\begin{definition}
+	We write $\mathscr{M}_{n,m}$ for the set of all $n \times m$ matrices (ie, the matrices with $n$ rows and $m$ columns). This is naturally a vector space. 
+\end{definition}
+
+\begin{definition}
+	If $V$ and $W$ are both vector spaces, we write $\mathscr{L}(V, W)$ for the set of all linear maps $V \to W$. This is naturally a vector space. 
+\end{definition}
+
+\subsection{Matrices}
+
+\begin{definition}
+	Suppose $V$ is a finite dimensional vector space and $B = ( v_1, \dotsc, v_n )$ is a basis for $V$. Then any $v \in V$ can be written uniquely as $a_1v_1 + \dotsb + a_n v_n$ for some scalars $a_1, \dotsc, a_n \in \R$, and we define the \emph{representation of $v$ with respect to $B$}, denoted $[v]_B$, to be the column vector with $n$ entries that records the scalars $a_1, \dotsc, a_n$. In other words,
+	\[ [v]_B = \begin{bmatrix} a_1 \\ \vdots \\ a_n \end{bmatrix}. \]
+\end{definition}
+
+\begin{lemma}
+	If $V$ is an $n$-dimensional vector space and $B = (v_1, \dotsc, v_n)$ is a basis for $V$, then the function $V \to \R^n$ given by $v \mapsto [v]_B$ is an isomorphism, with inverse given by
+	\[ \begin{bmatrix} a_1 \\ \vdots \\ a_n \end{bmatrix} \mapsto a_1 v_1 + \dotsb + a_n v_n. \]
+\end{lemma}
+
+\begin{definition}
+	Suppose $\ell : V \to W$ is a linear map between finite dimensional vector spaces. Let $B = v_1, \dotsc, v_m$ be a basis for $V$ and let $C$ be a basis for $W$. The \emph{matrix representation of $\ell$ with respect to $B$ and $C$}, denoted $[\ell]_{B,C}$, is the $n \times m$ matrix whose $i$th column of $[\ell]_{B,C}$ is $[\ell(v_i)]_C$. In other words,
+	\[ [\ell]_{B,C} = \begin{bmatrix} [\ell(v_1)]_C & \dotsb & [\ell(v_m)]_C \end{bmatrix}. \]
+\end{definition}
+
+\begin{lemma}
+	If $\ell : V \to W$ is a linear map between finite dimensional vector spaces and $B$ and $C$ are bases for $V$ and $W$, respectively, then \[ [\ell]_{B,C}[v]_B = [\ell(v)]_C \]
+	for any $v  \in V$. 
+\end{lemma}
+
+\begin{lemma}
+	If $\ell : U \to V$ and $\ell' :  V \to W$ are linear maps between finite dimensional vector spaces, and $A, B$ and $C$ are bases for $U, V$, and $W$, respectively, then 
+	\[ [\ell' \circ \ell]_{A,C} = [\ell']_{B,C}[\ell]_{A,B}. \]
+\end{lemma}
+
+\begin{lemma}
+	If $\ell : V \to W$ is a linear map between finite dimensional vector spaces and $B$ and $C$ are bases for $V$ and $W$, respectively, then the rank of the matrix $[\ell]_{B,C}$ equals the dimension of the range $\ell(V)$.
+\end{lemma}
+
+\begin{lemma}
+	Suppose that $V$ and $W$ are $m$- and $n$-dimensional vector spaces, respectively, and that and $B$ and $C$ are bases for $V$ and $W$, respectively. Then the function $\ell \mapsto [\ell]_{B,C}$ is an isomorphism \[ \begin{tikzcd} \mathscr{L}(V, W) \ar{r} & \mathscr{M}_{n,m}. \end{tikzcd} \] 
+\end{lemma}
+
+\begin{definition}
+	If $\ell : \R^m \to \R^n$ is a linear map, the \emph{standard matrix representation} of $\ell$, denoted $[\ell]$, is the matrix of $\ell$ with respect to the standard bases on $\R^m$ and $\R^n$.
+\end{definition} 
+
+\begin{lemma}
+	If $A$ is a $n \times m$ matrix and $\ell_A : \R^m \to \R^n$ is the linear map $\ell_A(v) = Av$, then \[ [\ell_A] = A. \]
+\end{lemma} 
+
+
+\section{Norms of linear maps} \label{operator-norm}
+
+\begin{definition}
+	Suppose $\ell : \R^m \to \R^n$ is a linear map. Then we define the \emph{operator norm}, or just \emph{norm}, of $\ell$, denoted $\|\ell\|$, by
+	\[ \|\ell\| = \sup\, \{ |\ell(v)| : |v| \leq 1 \}. \]
+\end{definition} 
+
+\begin{exercise}
+	Suppose $\ell : \R^m \to \R^n$ is a linear map. Show that 
+	\[ \|\ell\| = \inf \, \{ \lambda \in \R : |\ell(v)| \leq \lambda |v| \text{ for all } v \in \R^m \}. \]
+	In particular, $|\ell(v)| \leq \|\ell\| \cdot |v|$ for all $v \in \R^m$. 
+\end{exercise}
+
+\begin{exercise} \label{norm-is-hausdorff}
+	Suppose $\ell : \R^m \to \R^n$ is a linear map. Show that $\ell = 0$ if and only if $\|\ell\| = 0$. 
+\end{exercise}
+
+\begin{exercise}[Subadditivity] \label{subadditive}
+	Suppose $\ell, \ell' :  \R^m \to \R^n$ are both linear maps. Show that
+	\[ \|\ell + \ell'\| \leq \|\ell\| + \|\ell'\|. \]
+\end{exercise}
+
+\begin{definition} \label{operators-as-metric-space}
+	Let $\mathscr{L}(\R^m, \R^n)$ denote the set of all linear maps $\R^m \to \R^n$. Define the distance between $\ell, \ell' \in \mathscr{L}(\R^m, \R^n)$ by $\|\ell - \ell'\|$. It follows from \cref{norm-is-hausdorff,subadditive} that this distance function makes $\mathscr{L}(\R^m, \R^n)$ a metric space. 
+\end{definition}
+
+\begin{exercise}[``Evaluation is continuous''] \label{evaluation-continuous}
+	Suppose $v_0 \in \R^m$ is a fixed vector. Then the ``evaluate at $v_0$'' function $\mathscr{L}(\R^m, \R^n) \to \R^n$ given by $\phi \mapsto \phi(v_0)$ is continuous. \textit{Possible hint}. Since the ``evaluate at $v_0$'' function is linear, it is sufficient to check continuity at 0. 
+\end{exercise}
+
+\begin{exercise}[Submultiplicativity] \label{norm-is-submultiplicative}
+	Suppose $\ell : \R^m \to \R^n$ and $\ell' : \R^n \to \R^p$ are both linear maps. Show that \[ \|\ell' \circ \ell\| \leq \|\ell'\| \cdot \|\ell\|. \]
+	Give an example to show that this inequality can be strict. 
+\end{exercise}
+
+\begin{exercise}[``Composition is continuous''] \label{composition-continuous}
+	\begin{enumerate}[(a)]
+		\item Suppose $\ell : \R^n \to \R^p$ is a linear map. Show that the ``postcompose with $\ell$'' function $\mathscr{L}(\R^m, \R^n) \to \mathscr{L}(\R^m, \R^p)$ given by $\phi \mapsto \ell \circ \phi$ is continuous. 
+		\item Suppose $\ell : \R^m \to \R^n$ is a linear map. Show that the ``precompose with $\ell$'' function $\mathscr{L}(\R^n, \R^p) \to \mathscr{L}(\R^m, \R^p)$ given by $\phi \mapsto \phi \circ \ell$ is continuous. 
+	\end{enumerate}
+	\noindent \textit{Possible hint} (for both parts). Because both the ``postcompose with $\ell$'' and the ``precompose with $\ell$'' maps are linear, it is sufficient to show that the maps are continuous at 0. You will likely find \cref{norm-is-submultiplicative} useful. 
+\end{exercise}
+
+\begin{exercise}[``Linear functions of small functions are still small''] \label{linear-of-small-is-small}
+	Suppose $r : \R^m \to \R^n$ is a function such that $|r(v)| = o(|v|)$ as $v \to 0$. If $\ell : \R^n \to \R^p$ is linear, prove that $|\ell(r(v))| = o(|v|)$ also. 
+\end{exercise}
+
+\begin{comment}
+\begin{proof}
+Observe that
+\[ \frac{|\ell(r(v))|}{|v|} \leq \frac{\|\ell\| \cdot |r(v)|}{|v|}. \]
+Since $|r(v)| = o(|v|)$, we see that the right-hand side tends to 0 as $v \to 0$. The squeeze theorem thus guarantees that $|\ell(r(v))| = o(|v|)$ also. 
+\end{proof}
+\end{comment}
+
+\begin{lemma} \label{norm-is-realized}
+	Suppose $\ell : \R^m \to \R^n$ is a nonzero linear map. Then there exists $v_0 \in \R^m$ such that $|v_0| = 1$ and $|\ell(v_0)| = \|\ell\|$. 
+\end{lemma}
+
+\begin{proof}
+	The ``unit disk'' \[ D = \{ x \in \R^m : |x| \leq 1 \} \]
+	is a nonempty, connected, and compact subset of $\R^m$. The function $v \mapsto |\ell(v)|$ is also a continuous function $D \to \R$, so its image $|\ell(D)|$ must also be a nonempty, connected, and compact subset of $\R$. In other words, it must be a closed interval in $\R$. This means that there exists $v_0 \in D$ such that 
+	\[ |\ell(v_0)| = \sup |\ell(D)| = \|\ell\|. \]
+	Since $\ell \neq 0$, we know $\|\ell\| \neq 0$ from \cref{norm-is-hausdorff}, which in turn means that $v_0 \neq 0$. To prove that $|v_0| = 1$, assume for a contradiction that $|v_0| < 1$, and let $c = 1/|v_0| > 1$. Then $|cv_0| = |c||v_0| = 1$, so $cv_0 \in D$. But then
+	\[ |\ell(cv_0)| = |c\ell(v_0)| = c|\ell(v_0)| > |\ell(v_0)| = \sup |\ell(D)|, \]
+	which is absurd. 
+\end{proof}
+
+\begin{exercise} \label{linear-and-small}
+	Suppose $\ell : \R^m \to \R^n$ is a linear map and $|\ell(v)| = o(|v|)$ as $v \to 0$. Prove that $\ell = 0$. 
+\end{exercise}
+
+\begin{comment}
+The fact that $|\ell(v)| = o(|v|)$ tells us that
+\begin{equation} \label{big-sequence} \lim_{v \to 0} \frac{|\ell(v)|}{|v|} = 0, \end{equation}
+using \cref{little-o-equivalent}. Suppose for a contradiction that $\ell \neq 0$. Using \cref{norm-is-realized}, choose $v_0 \in \R^m$ such that $|v_0| = 1$ and $|\ell(v_0)| = \|\ell\|$. For scalars $c$, observe that $cv_0 \to 0$ as $c \to 0$, which means that \cref{big-sequence} implies that
+\[ \lim_{c \to 0} \frac{|\ell(cv_0)|}{|cv_0|} = 0.  \]
+But observe that
+\[ \frac{|\ell(cv_0)|}{|cv_0|} = \frac{|c\ell(v_0)|}{|cv_0|} = \|\ell\| \]
+so
+\[ 0 = \lim_{c \to 0} \frac{|\ell(cv_0)|}{|cv_0|} = \lim_{c \to 0} \|\ell\| = \|\ell\|. \]
+This contradicts \cref{norm-is-hausdorff}. 
+\end{comment}
+
+\section{Topological spaces} \label{topological-spaces}
+
+This is a bare-bones introduction to topological spaces, intended for readers who have seen metric spaces but not topological spaces before. 
+
+\subsection{Basics} \label{topological-spaces-basics}
+
+\begin{definition}
+	Let $X$ be a set. A \emph{topology} on $X$ is a set $\tau_X$ of subsets of $X$, called \emph{open subsets}, which satisfy the following axioms.
+	\begin{enumerate}[(T1)]
+		\item $\emptyset$ and $X$ are both open subsets. 
+		\item The union of an arbitrary collection of open subsets is open. 
+		\item The intersection of a finite collection of open subsets is open. 
+	\end{enumerate}
+	A pair $(X, \tau_X)$ consisting of a set $X$ and a topology $\tau$ on $X$ is called a \emph{topological space}. Often, we write simply ``$X$'' in place of the pair $(X, \tau_X)$. 
+\end{definition}
+
+Topological spaces come up throughout mathematics, and in general can be very very bizarre. We will not delve into the general theory of topological spaces, and won't see any of these bizarre examples. Instead, you are encouraged to content yourself with the following examples. 
+
+\begin{example}[Metric spaces] \label{metric-to-topological}
+	If $X$ is a metric space, the collection of subsets of $X$ that are open with respect to the metric defines a topology on $X$. Thus, every metric space can be regarded as a topological space in a natural way. It's worth noticing that this process of regarding a metric space as a topological space ``forgets information,'' since equivalent metrics on a set will define the same topology. 
+\end{example}
+
+\begin{example}[Quotient spaces] \label{quotient-space}
+	Suppose $Y$ is any topological space (for instance, one that comes from a metric space), and let $\sim$ be an equivalence relation on $Y$. For an element $y \in Y$, let $[y]$ denote its equivalence class, and let $X = Y/\sim$ denote the set of all equivalence classes. There is a natural function $\pi : Y \to X$ given by sending a point $y \in Y$ to its equivalence class $[y]$. We define a topology on $X$, called the \emph{quotient topology}, by declaring a subset $U \subseteq X$ to be open if and only if its preimage \[ \pi^{-1}(U) = \{ y \in Y : [y] \in U \} \] is open in $Y$. 
+\end{example}
+
+We now make a few further definitions that readers are invited to compare against the definitions they are familiar with from their experience with metric spaces. 
+
+\begin{definition}[Closed subsets]
+	If $X$ is a topological space, a subset $F$ is \emph{closed} if its complement $U$ is \emph{open}. 
+\end{definition}
+
+\begin{definition}[Continuous functions]
+	If $X$ and $Y$ are topological spaces, a function $f : X \to Y$ is \emph{continuous} if $f^{-1}(U)$ is an open subset of $X$ whenever $U$ is an open subset of $Y$. 
+\end{definition}
+
+\begin{example}
+	If $Y$ is a topological space, $\sim$ an equivalence relation on $Y$, and $X = Y/\sim$ the quotient space as in \cref{quotient-space} above, then the map $\pi : Y \to X$ which carries a point $y \in Y$ to its equivalence class is continuous. This follows immediately from the definition of the quotient topology.
+\end{example}
+
+\begin{definition}[Homeomorphisms]
+	Suppose $X$ and $Y$ are topological spaces and $f : X \to Y$ is a function. Then $f$ is a \emph{homeomorphism} if it is bijective, continuous, and $f^{-1} : Y \to X$ is continuous. More generally, $f$ is a \emph{homeomorphism onto its image} if is injective, continuous, and $f^{-1} : f(X) \to X$ is also continuous. 
+\end{definition}
+
+\begin{definition}[Subspace]
+	If $X$ is a topological space and $S$ is a subset, then the \emph{subspace topology} on $S$ is
+	\[ \tau_S := \{ S \cap U : U \in \tau_X \}. \]
+	Further, $S$ equipped with the subspace topology is called a \emph{subspace} of $X$. 
+\end{definition}
+
+\begin{exercise}
+	If $X$ is a topological space and $S$ is a subspace, prove that the inclusion map $i : S \to X$ is continuous. 
+\end{exercise}
+
+\subsection{Hausdorff spaces}
+
+\begin{definition}
+	A topological space $X$ is \emph{Hausdorff} if, for every pair of distinct points $x, y \in X$, there exist disjoint open subsets $U$ and $V$ containing $x$ and $y$, respectively. 
+\end{definition}
+
+\begin{example}
+	If $X$ is a metric space, the corresponding topological space as in \cref{metric-to-topological} is automatically Hausdorff. 
+\end{example}
+
+\begin{exercise}
+	Quotient spaces need not be Hausdorff. For example, let $Y = \R \times \{\pm 1 \}$ inside $\R^2$, and define an equivalence relation $\sim$ by declaring that $(a, 1) \sim (a,-1)$ for all $a \neq 0$. Show that $X = Y/\sim$ is not Hausdorff. 
+\end{exercise}
+
+\subsection{Compact and $\sigma$-compact spaces}
+
+\begin{definition}[Open covers]
+	An \emph{open cover} of a topological space $X$ is a collection $\mathscr{U}$ of open subsets of $X$ which cover $X$, in the sense that \[ \bigcup_{U \in \mathscr{U}} U = X. \]
+	A \emph{subcover} of $\mathscr{U}$ is a subset $\mathscr{U}' \subseteq  \mathscr{U}$ which is itself an open cover. 
+\end{definition}
+
+\begin{definition}[Compact]
+	A topological space $X$ is \emph{compact} if every open subcover has a finite subcover. 
+\end{definition}
+
+% TODO: Figure out sigma-compact, Hausdorff, etc
+
+The following may be notions that you have not seen before in the context of metric spaces. 
+
+\begin{definition}
+	A topological space $X$ is \emph{$\sigma$-compact} if it is a countable union of compact subspaces. 
+\end{definition}
+
+\begin{example}
+	$\R^n$ is $\sigma$-compact, since
+	\[ \R^n = \bigcup_{k = 1}^\infty [-k,k]^n \]
+	and each hypercube $[-k,k]^n$ is compact. 
+\end{example}
+
