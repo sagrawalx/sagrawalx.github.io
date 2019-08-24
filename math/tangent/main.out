@@ -1,45 +1,62 @@
-\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.1.1}{Prerequisites}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{Linear algebra notation}{chapter.1}% 3
-\BOOKMARK [2][-]{subsection.1.2.1}{Some important vector spaces}{section.1.2}% 4
-\BOOKMARK [2][-]{subsection.1.2.2}{Matrix notation}{section.1.2}% 5
-\BOOKMARK [1][-]{section.1.3}{Little-oh notation}{chapter.1}% 6
-\BOOKMARK [1][-]{section.1.4}{Norms of linear maps}{chapter.1}% 7
-\BOOKMARK [0][-]{chapter.2}{Single variable derivatives}{}% 8
-\BOOKMARK [1][-]{section.2.1}{Slope of tangent lines}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.2}{Best linear approximation}{chapter.2}% 10
-\BOOKMARK [1][-]{section.2.3}{Rules of differentiation}{chapter.2}% 11
-\BOOKMARK [2][-]{subsection.2.3.1}{Sum and scalar multiples rule}{section.2.3}% 12
-\BOOKMARK [2][-]{subsection.2.3.2}{Product and quotient rules}{section.2.3}% 13
-\BOOKMARK [2][-]{subsection.2.3.3}{Chain rule}{section.2.3}% 14
-\BOOKMARK [2][-]{subsection.2.3.4}{Some rules without proofs}{section.2.3}% 15
-\BOOKMARK [1][-]{section.2.4}{Levels of differentiability}{chapter.2}% 16
-\BOOKMARK [2][-]{subsection.2.4.1}{Cn functions}{section.2.4}% 17
-\BOOKMARK [2][-]{subsection.2.4.2}{Smooth functions}{section.2.4}% 18
-\BOOKMARK [0][-]{chapter.3}{Multivariable derivatives}{}% 19
-\BOOKMARK [1][-]{section.3.1}{Detailed example}{chapter.3}% 20
-\BOOKMARK [1][-]{section.3.2}{Definition of the derivative}{chapter.3}% 21
-\BOOKMARK [1][-]{section.3.3}{Computing derivatives}{chapter.3}% 22
-\BOOKMARK [2][-]{subsection.3.3.1}{Sum and scalar multiples rule}{section.3.3}% 23
-\BOOKMARK [2][-]{subsection.3.3.2}{Chain rule}{section.3.3}% 24
-\BOOKMARK [2][-]{subsection.3.3.3}{Differentiability by components}{section.3.3}% 25
-\BOOKMARK [2][-]{subsection.3.3.4}{Partial derivatives}{section.3.3}% 26
-\BOOKMARK [2][-]{subsection.3.3.5}{Jacobian matrix}{section.3.3}% 27
-\BOOKMARK [1][-]{section.3.4}{Levels of differentiability}{chapter.3}% 28
-\BOOKMARK [2][-]{subsection.3.4.1}{Continuous differentiability}{section.3.4}% 29
-\BOOKMARK [2][-]{subsection.3.4.2}{Cn and smooth functions}{section.3.4}% 30
-\BOOKMARK [1][-]{section.3.5}{Inverse function theorem}{chapter.3}% 31
-\BOOKMARK [0][-]{chapter.4}{Manifolds}{}% 32
-\BOOKMARK [1][-]{section.4.1}{Defining Manifolds}{chapter.4}% 33
-\BOOKMARK [2][-]{subsection.4.1.1}{Charts and atlases}{section.4.1}% 34
-\BOOKMARK [2][-]{subsection.4.1.2}{Definition and examples}{section.4.1}% 35
-\BOOKMARK [1][-]{section.4.2}{Smooth functions}{chapter.4}% 36
-\BOOKMARK [2][-]{subsection.4.2.1}{Smooth real-valued functions}{section.4.2}% 37
-\BOOKMARK [2][-]{subsection.4.2.2}{Smooth functions between manifolds}{section.4.2}% 38
-\BOOKMARK [2][-]{subsection.4.2.3}{Diffeomorphisms}{section.4.2}% 39
-\BOOKMARK [0][-]{chapter.5}{Tangent Spaces}{}% 40
-\BOOKMARK [1][-]{section.5.1}{Tangent space}{chapter.5}% 41
-\BOOKMARK [2][-]{subsection.5.1.1}{Curves based at a point}{section.5.1}% 42
-\BOOKMARK [2][-]{subsection.5.1.2}{Vector space structure on the tangent space}{section.5.1}% 43
-\BOOKMARK [2][-]{subsection.5.1.3}{Derivations}{section.5.1}% 44
-\BOOKMARK [1][-]{section.5.2}{Pushing tangent vectors forward}{chapter.5}% 45
+\BOOKMARK [0][-]{Doc-Start}{Introduction}{}% 1
+\BOOKMARK [0][-]{chapter.0}{Prerequisites}{}% 2
+\BOOKMARK [1][-]{section.0.1}{Little-oh notation}{chapter.0}% 3
+\BOOKMARK [1][-]{section.0.2}{Linear algebra}{chapter.0}% 4
+\BOOKMARK [2][-]{subsection.0.2.1}{Important vector spaces}{section.0.2}% 5
+\BOOKMARK [2][-]{subsection.0.2.2}{Matrices}{section.0.2}% 6
+\BOOKMARK [1][-]{section.0.3}{Norms of linear maps}{chapter.0}% 7
+\BOOKMARK [1][-]{section.0.4}{Topological spaces}{chapter.0}% 8
+\BOOKMARK [2][-]{subsection.0.4.1}{Basics}{section.0.4}% 9
+\BOOKMARK [2][-]{subsection.0.4.2}{Hausdorff spaces}{section.0.4}% 10
+\BOOKMARK [2][-]{subsection.0.4.3}{Compact and -compact spaces}{section.0.4}% 11
+\BOOKMARK [0][-]{chapter.1}{Single variable derivatives}{}% 12
+\BOOKMARK [1][-]{section.1.1}{Two definitions of the derivative}{chapter.1}% 13
+\BOOKMARK [2][-]{subsection.1.1.1}{Slope of the tangent line}{section.1.1}% 14
+\BOOKMARK [2][-]{subsection.1.1.2}{Best linear approximation}{section.1.1}% 15
+\BOOKMARK [1][-]{section.1.2}{Rules of differentiation}{chapter.1}% 16
+\BOOKMARK [2][-]{subsection.1.2.1}{Sum and scalar multiples rule}{section.1.2}% 17
+\BOOKMARK [2][-]{subsection.1.2.2}{Product and quotient rules}{section.1.2}% 18
+\BOOKMARK [2][-]{subsection.1.2.3}{Chain rule}{section.1.2}% 19
+\BOOKMARK [2][-]{subsection.1.2.4}{Some rules without proofs}{section.1.2}% 20
+\BOOKMARK [1][-]{section.1.3}{Derivative at local extrema}{chapter.1}% 21
+\BOOKMARK [1][-]{section.1.4}{Differentiable functions}{chapter.1}% 22
+\BOOKMARK [2][-]{subsection.1.4.1}{Mean value theorem}{section.1.4}% 23
+\BOOKMARK [2][-]{subsection.1.4.2}{Consequences of the mean value theorem}{section.1.4}% 24
+\BOOKMARK [2][-]{subsection.1.4.3}{Darboux's theorem }{section.1.4}% 25
+\BOOKMARK [1][-]{section.1.5}{Levels of differentiability}{chapter.1}% 26
+\BOOKMARK [2][-]{subsection.1.5.1}{Cn functions}{section.1.5}% 27
+\BOOKMARK [2][-]{subsection.1.5.2}{Smooth functions}{section.1.5}% 28
+\BOOKMARK [0][-]{chapter.2}{Multivariable derivatives}{}% 29
+\BOOKMARK [1][-]{section.2.1}{An extended example}{chapter.2}% 30
+\BOOKMARK [2][-]{subsection.2.1.1}{Describing the graph of f}{section.2.1}% 31
+\BOOKMARK [2][-]{subsection.2.1.2}{Tangent plane at a = \(2,1\)}{section.2.1}% 32
+\BOOKMARK [2][-]{subsection.2.1.3}{dfa as an approximation}{section.2.1}% 33
+\BOOKMARK [2][-]{subsection.2.1.4}{Overview}{section.2.1}% 34
+\BOOKMARK [1][-]{section.2.2}{Definition of the derivative}{chapter.2}% 35
+\BOOKMARK [1][-]{section.2.3}{Computing derivatives}{chapter.2}% 36
+\BOOKMARK [2][-]{subsection.2.3.1}{Sum and scalar multiples rule}{section.2.3}% 37
+\BOOKMARK [2][-]{subsection.2.3.2}{Chain rule}{section.2.3}% 38
+\BOOKMARK [2][-]{subsection.2.3.3}{Differentiability by components}{section.2.3}% 39
+\BOOKMARK [2][-]{subsection.2.3.4}{Partial derivatives}{section.2.3}% 40
+\BOOKMARK [2][-]{subsection.2.3.5}{Jacobian matrix}{section.2.3}% 41
+\BOOKMARK [1][-]{section.2.4}{Levels of differentiability}{chapter.2}% 42
+\BOOKMARK [2][-]{subsection.2.4.1}{Continuous differentiability}{section.2.4}% 43
+\BOOKMARK [2][-]{subsection.2.4.2}{Smooth functions}{section.2.4}% 44
+\BOOKMARK [1][-]{section.2.5}{Inverse function theorem}{chapter.2}% 45
+\BOOKMARK [0][-]{chapter.3}{Manifolds}{}% 46
+\BOOKMARK [1][-]{section.3.1}{Definition of a manifold}{chapter.3}% 47
+\BOOKMARK [1][-]{section.3.2}{Examples}{chapter.3}% 48
+\BOOKMARK [2][-]{subsection.3.2.1}{First examples}{section.3.2}% 49
+\BOOKMARK [2][-]{subsection.3.2.2}{M\366bius strip}{section.3.2}% 50
+\BOOKMARK [2][-]{subsection.3.2.3}{More examples of manifolds}{section.3.2}% 51
+\BOOKMARK [1][-]{section.3.3}{Smooth functions}{chapter.3}% 52
+\BOOKMARK [2][-]{subsection.3.3.1}{Smooth real-valued functions}{section.3.3}% 53
+\BOOKMARK [2][-]{subsection.3.3.2}{Partial derivatives of real-valued functions}{section.3.3}% 54
+\BOOKMARK [2][-]{subsection.3.3.3}{Smooth functions between manifolds}{section.3.3}% 55
+\BOOKMARK [2][-]{subsection.3.3.4}{Diffeomorphisms}{section.3.3}% 56
+\BOOKMARK [0][-]{chapter.4}{Tangent Spaces}{}% 57
+\BOOKMARK [1][-]{section.4.1}{Tangent space}{chapter.4}% 58
+\BOOKMARK [2][-]{subsection.4.1.1}{Curves based at a point}{section.4.1}% 59
+\BOOKMARK [2][-]{subsection.4.1.2}{Vector space structure on the tangent space}{section.4.1}% 60
+\BOOKMARK [2][-]{subsection.4.1.3}{Derivations}{section.4.1}% 61
+\BOOKMARK [1][-]{section.4.2}{Pushing tangent vectors forward}{chapter.4}% 62

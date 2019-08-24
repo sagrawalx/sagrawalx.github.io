@@ -1,6 +1,61 @@
 \chapter{Multivariable derivatives}
 
-\section{Detailed example}
+In this chapter, we will study derivatives of functions $S \to \R^n$ where $S \subseteq \R^m$. We dealt with the case $m = n = 1$ in the previous chapter, starting with a very geometric idea of tangent lines to graphs. For large values of $m$ and $n$, graphs become hard to visualize and it is not so clear what ``tangent'' should mean. But there is at least one higher dimensional case when we can use some geometry to formalize what ``tangent'' should mean, which is the case $m = 2$ and $n = 1$. The graph of such a function is a surface in $\R^3$, and its ``tangent'' at a point should be a plane. We'll begin by analyzing a particular example of this situation to build up some geometric intuition, and then proceed with the abstract discussion of multivariable derivatives for general $m$ and $n$. 
+
+\section{An extended example}
+
+Let us begin with an example. Our analysis of this example will presage many of the concepts we will discuss later in the chapter. 
+The example we'll consider is the function $f : \R^2 \to \R$ defined by
+\[ f(x_1, x_2) = x_1^2 + x_2^2. \]
+
+\subsection{Describing the graph of $f$}
+
+First off, let's try to get a solid understanding of the graph of $f$. The graph $\Gamma$ is a subset of $\R^2 \times \R = \R^3$ defined by
+\[ \Gamma = \{ (x_1, x_2, y) : y = f(x_1, x_2) \} = \{ (x_1, x_2, y) : y = x_1^2  + x_2^2 \}. \]
+To visualize $\Gamma$, we will repeatedly slice $\Gamma$ along various planes. 
+
+If we consider the slice obtained by setting $x_1 = 0$, we find a parabola $y = x_2^2$. Similarly, if we consider the slice obtained by setting $x_1 = 1$, we obtain the parabola $y = 1 + x_2^2$. Fixing $x_1 = 5$, we obtain the parabola $y = 25 + x^2$. In fact, we can see that no matter what value of $x_1$ we fix, the resulting slice is always a parabola, just translated up from the origin by differing amounts (that amount being $x_1^2$). 
+
+It's also worth considering the ``level sets,'' which are the slices of $\Gamma$ obtained by fixing various values of $y$. When $y = 0$, there is just a single point $x_1 = x_2 = 0$. Fixing $y = 1$, the slice is given by $1 = x_1^2 +  x_2^2$, which is a circle of radius 1. Fixing $y = 17$, the slice is $17 = x_1^2 + x_2^2$, which is circle of radius $\sqrt{17}$. In fact, all of the level sets are circles. 
+
+Putting these slices together, we see that the graph $\Gamma$ is a ``big parabolic bowl.''
+
+\subsection{Tangent plane at $a = (2,1)$}
+
+Now that we understand what the graph of $f$ looks like, let's try to figure out what the ``tangent plane'' $T$ at a point $a = (2,1)$ will look like. Of course, it's a plane inside $\R^3$ that passes through the point $(2, 1, f(2,1)) = (2, 1, 5)$. To specify which plane it actually is, we start by describing some lines that lie on this plane. 
+
+Consider the $x_2 = 1$ slice. We know that the graph of $\Gamma$ along this slice is the parabola $y = x_1^2 + 1$. So, slicing the tangent plane $T$ along $x_2 = 1$ should yield the tangent line to this function of one variable, which we know how to compute from \cref{single-var}. The slope of this tangent line is
+\[ \left.\frac{d f(x_1, 1)}{d x_1}\right|_{x_1 = 2} = 4. \]
+This quantity is called the \emph{first partial derivative of $f$}, and will be denoted $\partial_1 f(a)$ later.  Thus the tangent line is the line parametrized by
+\[ h_1 \mapsto (2,1,5) + h_1 \cdot (1, 0, 4). \]
+Similarly, we can consider the $x_1 = 2$ slice. We know that the graph $\Gamma$ along this slice is the parabola $y = 4 + x_2^2$.The slope of the corresponding tangent line is
+\[ \partial_2 f(a) = \left.\frac{d f(2, x_2)}{dx_2}\right|_{x_2 = 1} = 2. \]
+Thus this tangent line is the line parametrized by
+\[ h_2 \mapsto (2,1,5) + h_2 \cdot (0,1,2). \]
+
+These two lines must uniquely determine the entire plane $T$. One way of describing $T$ that immediately falls out of the parametrizations we've found of the tangent lines is the plane parametrized by
+\[ \begin{bmatrix} h_1 \\ h_2 \end{bmatrix} \mapsto \begin{bmatrix} 2 \\ 1 \\ 5 \end{bmatrix} + \begin{bmatrix} h_1 \\ h_2 \\ 4h_1 + 2h_2 \end{bmatrix}. \]
+The important part of this expression is the bottom entry on the far right, the $4h_1 + 2h_2$. To see why, consider the function $\R^2 \to \R$ given by $(h_1, h_2)  \mapsto 4h_1 + 2h_2$. This is what we will call the \emph{(total) derivative} of $f$ and denote by $df_a$. Notice that $df_a$ is a linear map $\R^2 \to \R$. Moreover, its graph is a plane passing through the origin that is parallel to $T$. In other words, if we take the graph of $df_a$ and translate it over to the point $(2,1,5)$, we obtain exactly the tangent plane $T$. Speaking more loosely, the derivative $df_a : \R^2 \to \R$ records all of the ``slope-y information'' about the tangent plane $T$. 
+
+Notice moreover that the standard matrix representation $[df_a]$ of $df_a$ is \begin{equation} \label{jacobian-matrix-example} [df_a] = \begin{bmatrix} 4 & 2 \end{bmatrix} = \begin{bmatrix} \partial_1 f(a) & \partial_2 f(a) \end{bmatrix}. \end{equation}
+
+\subsection{$df_a$ as an approximation}
+
+Consider the function $\epsilon : \R^2 \to \R$ defined by
+\[ v \mapsto |f(a+v)-f(a)-df_a(v)|.  \]
+If $v = (h_1, h_2)$, we have
+\[ \epsilon(v) = \epsilon\left( \begin{bmatrix} h_1 \\ h_2 \end{bmatrix} \right) \mapsto |(2+h_1)^2 + (1+h_2)^2 - 5 - 4h_1 - 2h_2| = |h_1^2 + h_2^2| = \left|\begin{bmatrix} h_1 \\ h_2 \end{bmatrix} \right|^2 = |v|^2. \]
+Notice that $\epsilon$ gets small rapidly as $v \to 0$. More precisely, notice that
+\[ \lim_{v \to 0} \frac{\epsilon(v)}{|v|} = \lim_{v \to 0} |v| = 0, \]
+so $\epsilon = o(|v|)$ as $v \to 0$. 
+
+Since $\epsilon$ gets small rapidly, the function $v \mapsto f(a) + df_a(v)$ is a good approximation of the function $v \mapsto f(a+v)$ for small values of $v$. Said differently, letting $x = a + v$, the function $x \mapsto f(a) + df_a(x-a)$ is a good approximation of $f$ near $a$. 
+
+\subsection{Overview}
+
+In what follows, we will turn the above example on its head and \emph{define} the derivative using approximations. In other words, the derivative $df_a$ will be defined to be a linear function which yields a good approximation of $f$ near a point $a$. Then we will prove in \cref{jacobian-matrix} that the partial derivatives can be used to describe $df_a$, as we noted in \cref{jacobian-matrix-example} above. The reason for doing this is that there are some bizarre functions where partial derivatives make sense, but tangent planes do not (cf. \cref{partials-dont-imply-differentiable} below).
+
+As you may be able to tell, we'll be using linear algebra heavily in this chapter. If you need a brief refresher, check out \cref{linear-algebra}. We'll also need some facts about the operator norm; you may not have seen this before, and can refer to \cref{operator-norm} as needed. 
 
 \section{Definition of the derivative}
 
@@ -28,7 +83,7 @@ It turns out that there can exist at most one linear map that has the above prop
 \end{proof}
 
 \begin{definition}
-	Suppose $f : S \to \R^n$ is differentiable at an interior point $a \in S$. Then the \emph{derivative} of $f$ at $a$, denoted $df_a$, is the unique linear map $\R^m \to \R^n$ satisfying
+	Suppose $f : S \to \R^n$ is differentiable at an interior point $a \in S$. Then the \emph{total derivative}, or just \emph{derivative}, of $f$ at $a$, denoted $df_a$, is the unique linear map $\R^m \to \R^n$ satisfying
 	\[ |f(a+v)-f(a)-df_a(v)| = o(|v|) \text{ as } v \to 0.  \]
 \end{definition}
 
@@ -148,7 +203,7 @@ In other words, consider the function $\xi_i : \R \to \R^m$ given by $\xi_i(h) =
 
 \begin{remark} \label{gradient}
 	If $f : S \to \R$ is differentiable at an interior point $a \in S$, then the vector \[ [df_a]^T = \begin{bmatrix} \partial_1 f(a) \\ \partial_2 f(a) \\ \vdots \\ \partial_m f(a) \end{bmatrix} \in \R^m \]
-	is often called the \emph{gradient} of $f$ at $a$, denoted $\nabla f(a)$. 
+	is often called the \emph{gradient} of $f$ at $a$, and is denoted $\nabla f(a)$. 
 \end{remark}
 
 Unfortunately, the converse to \cref{differentiability-implies-partials} is \emph{not} true, as shown by \cref{partials-dont-imply-differentiable}. However, this behavior is fairly pathological; \cref{continuous-partials} below will provide a converse under a fairly mild additional hypothesis. 
@@ -183,15 +238,17 @@ Unfortunately, the converse to \cref{differentiability-implies-partials} is \emp
 Throughout, $U$ denotes an open subset of $\R^m$. 
 
 \begin{definition}
-	If a function $f : U \to \R^n$ is differentiable at every $a \in U$, then $f$ is \emph{differentiable on $U$}. Then the \emph{derivative} of $f$, denoted $df$, is the function $U \to \mathscr{L}(\R^m, \R^n)$ given by $a \mapsto df_a$. 
+	If a function $f : U \to \R^n$ is differentiable at every $a \in U$, then $f$ is \emph{differentiable on $U$}. Then the \emph{derivative} of $f$, denoted $df$, is the function $U \to \mathscr{L}(\R^m, \R^n)$ given by $a \mapsto df_a$. Given $i = 1, \dotsc, m$ and $j = 1, \dotsc n$, the \emph{$i$th partial derivative} $\partial_i f_j$ is the function $U \to \R$ defined by $a \mapsto \partial_i f_j(a)$. 
 \end{definition}
 
 \subsection{Continuous differentiability}
 
+This section is surprisingly challenging. You may need to read through it several times. My suggestion is that you skip the proofs the first time around, wrap your head around the big picture, and then fill in the details by working through the proofs. 
+
 Recall from \cref{operators-as-metric-space} that the set $\mathscr{L}(\R^m, \R^n)$ of all linear maps $\R^m \to \R^n$ is a metric space under the operator norm. We use this metric space structure to make the following definition. 
 
 \begin{definition}
-	If $f : U \to \R^n$ is a differentiable function and the derivative $df : U \to \mathscr{L}(\R^m, \R^n)$ is continuous, then $f$ is \emph{continuously differentiable}. 
+	If $f : U \to \R^n$ is a differentiable function and the derivative $df : U \to \mathscr{L}(\R^m, \R^n)$ is continuous, then $f$ is said to be \emph{continuously differentiable}. 
 \end{definition}
 
 \begin{lemma} \label{continuously-differentiable-by-components}
@@ -224,23 +281,109 @@ Recall from \cref{operators-as-metric-space} that the set $\mathscr{L}(\R^m, \R^
 	
 	The converse is the hard part of this proof. Recall from \cref{partials-dont-imply-differentiable} above that $\partial_i f$ existing for all $i$ is \emph{not} sufficient to guarantee differentiability; we will need to use the fact that $\partial_i f$ exists \emph{and is continuous} to conclude differentiability. 
 	
-	% TODO: FINISH THIS!
+	Fix $a \in U$. Let $\ell$ be the linear map $\R^m \to \R$ such that \[ [\ell] = \begin{bmatrix}
+	\partial_1f(a) & \dotsb & \partial_m f(a)
+	\end{bmatrix}. \]
+	In other words, $\ell$ is given by
+	\[ \ell(h_1, \dotsc, h_m) = h_1 \partial_1 f(a) + \dotsb + h_m \partial_m f(a). \]
+	We will show that 
+	\[ |f(a+v) - f(a) - \ell(v)| = o(|v|) \text{ as } v \to 0, \]
+	which implies that $f$ is differentiable at $a$ and that $df_a = \ell$. In other words, we will show that, for any $\epsilon > 0$, there exists a $\delta > 0$ such that, for all $v \in \R^m$ with $|v| < \delta$, we have
+	\begin{equation} \label{continuous-differentiability-desired} |f(a+v) - f(a) - \ell(v)| \leq |v|\epsilon. \end{equation}
+	
+	Let $\delta_0 > 0$ be small enough that the open ball $B(a, \delta_0)$ is contained in $U$. We will soon make it smaller to get inequality \eqref{continuous-differentiability-desired} to hold. 
+	Suppose $v = (h_1, \dotsc, h_m) \in \R^m$ with $|v| < \delta_0$. Then consider the following vectors in $\R^m$. 
+	\[ \begin{aligned} 
+	v_0 &= 0 \\
+	v_1 &= (h_1, 0, 0 \dotsc, 0, 0) \\
+	v_2 &= (h_1, h_2, 0, \dotsc, 0, 0) \\
+	&~\,\vdots \\
+	v_{m-1} &= (h_1, h_2, h_3, \dotsc, h_{m-1}, 0) \\
+	v_m &= (h_1, h_2, h_3, \dotsc, h_{m-1}, h_m) = v \end{aligned} \]
+	See \cref{continuous-differentiability-picture}. 
+	Clearly $|v_i| \leq |v|$ for all $i$. 
+	\begin{figure}
+		\begin{center}
+			\begin{tikzpicture}
+			\begin{axis}[
+			xmin=-0.1,xmax=3,
+			ymin=-0.1,ymax=3,
+			ytick={0},
+			xtick={0},
+			xticklabels={0},
+			yticklabels={0},
+			axis lines=middle,
+			axis line style=lightgray,
+			axis equal,
+			width=0.75\textwidth
+			]
+			\addplot[black,dotted,-] expression[name path=a,domain=0.5:2.5,samples=100]{1.5+sqrt(1-(x-1.5)^2)}; 
+			\addplot[black,dotted,-] expression[name path=b,domain=0.5:2.5,samples=100]{1.5-sqrt(1-(x-1.5)^2)}; 
+			\addplot[fill=gray, fill opacity=0.05
+			]
+			fill between[of=a and b,soft clip={domain=0.5:2.5}];
+			
+			
+			\node[label={235:$a$},color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:1.5,1.5) {}; 
+			\node[label={45:$a+v$},color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:2.3,1.9) {}; 
+			\node[label={315:$a+v_1$},color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:2.3,1.5) {};
+			
+			\addplot[black,-] expression[domain=1.5:2.3,samples=2]{1.5};
+			\addplot +[mark=none,black] coordinates {(2.3, 1.5) (2.3, 1.9)};
+			\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		\caption{This is a picture of an open ball of some radius $\delta_0$ around a point $a \in \R^2$. The vector $v \in \R^2$ has $|v| < \delta$, so that $a+v$ is a point inside this ball. Defining $v_1$ as in the proof of \cref{continuous-partials}, the vector $a+v_1$ is also inside this ball. Then, defining $s_1$ and $s_2$ as in the proof, the point $a + s_1e_1$ is somewhere along the horizontal line joining $a$ and $a+v_1$, and the point $a+v_1 + s_2e_2$ is somewhere on the vertical line joining $a+v_1$ and $a+v$.}  \label{continuous-differentiability-picture}
+	\end{figure}
+	
+	Notice that 
+	\[ f(a+v) - f(v) = \sum_{i = 1}^m \left( f(a+v_i) - f(a+v_{i-1}) \right). \]
+	Let us fix $i$ temporarily. Notice that $v_i = v_{i-1} + h_i e_i$, so
+	\[ f(a+v_i) - f(a+v_{i-1}) = f(a+v_{i-1}+h_ie_i) - f(a+v_{i-1}). \]
+	We now apply the mean value theorem \ref{mean-value-theorem} to the single variable function \[ h \mapsto f(a + v_{i-1} + he_i) \] on the closed interval between $0$ and $h_i$. For any such $h$, we have $|v_{i-1}+he_i| < \delta$, so the points $a+v_{i-1}+he_i$ are all contained inside the ball $B(a, \delta_0) \subseteq U$. Thus this function is well-defined and continuous. It is also differentiable on the interior of this interval: its derivative at a value $h$ is $\partial_i f(a+v_{i-1} + he_i)$, by definition of partial derivatives. The mean value theorem says that there exists $s_i$ between 0 and $h_i$ such that
+	\[ \partial_i f(a+v_{i-1} + se_i) = \frac{f(a+v_{i-1} + h_ie_i) - f(a+v_{i-1})}{h_i} = \frac{f(a+v_{i}) - f(a + v_{i-1})}{h_i}, \]
+	or, in other words,
+	\[ f(a + v_i) - f(a+v_{i-1}) = h_i \partial_i f(a+v_{i-1}se_i). \]
+	See \cref{continuous-differentiability-picture} again. Unfixing $i$, we find that
+	\[ f(a+v) - f(a) = \sum_{i = 1}^m (f(a+v_i) - f(a+v_{i-1})) = \sum_{i = 1}^m h_i \partial_i f(a+v_{i-1} + s_i e_i). \]
+	Thus
+	\[ |f(a+v) - f(a)-\ell(v)| \leq \sum_{i = 1}^m |h_i| \cdot |\partial_i(a+v_{i-1}+s_ie_i) - \partial_if(a)|. \]
+	Since $\partial_if$ is continuous, there exists $\delta_i > 0$ such that $|\partial_i(a+w) - \partial_i(a)| < \epsilon/m$ for all $|w| < \delta_i$. Let $\delta = \min\{\delta_0, \delta_1, \dotsc, \delta_m\}$. If $|v| < \delta$, then $|v_{i-1} + s_ie_i| < |v| < \delta$ for all $i$, so
+	\[ |\partial_i(a+v_{i-1} + s_ie_i) - \partial_i f(a)| < \epsilon/m, \]
+	which means that
+	\[ |f(a+v) - f(a)-\ell(v)| \leq \sum_{i = 1}^m \frac{|h_i| \epsilon}{m} \leq |v|\epsilon. \]
+	This proves that $f$ is differentiable at any point $a \in U$, which completes the hard part of this proof. 
+	
+	The final step is to show that $df : U \to \mathscr{L}(\R^m, \R)$ is continuous. This is left for you to check; see \cref{continuous-partials-details} below. 
 \end{proof}
 
-\begin{exercise}
-	If you haven't alraedy done it, do \cref{evaluation-continuous}. 
+\begin{exercise} \label{continuous-partials-details}
+	\begin{enumerate}[(a)]
+		\item Elaborate on the first sentence of the above proof. In other words, explain why proving \cref{continuous-partials} for $n = 1$ is sufficient to prove it for all $n$. 
+		\item If you haven't already done it, do \cref{evaluation-continuous}. 
+		\item Complete the proof above by showing that $df : U \to \mathscr{L}(\R^m, \R)$ is continuous. 
+	\end{enumerate}
 \end{exercise}
 
-\subsection{$C^n$ and smooth functions}
+\subsection{Smooth functions}
 
-\begin{definition}
-	For any positive integer $n$, we say that a function $f : U \to \R^n$ is $C^n$ if the partial derivatives $\partial_i f_j$ exist and are $C^{n-1}$. 
+\begin{definition} \label{smooth-multivar}
+	We make the following string of definitions. 
+	\begin{itemize}
+		\item We say that a function $f : U \to \R^n$ is $C^0$ if it is continuous. 
+		\item Inductively, for any positive integer $n$, we say that a function $f : U \to \R^n$ is $C^n$ if the partial derivatives $\partial_i f_j$ all exist and are $C^{n-1}$ functions $U \to \R$. 
+		\item Finally, we say that a function $f : U \to \R^n$ is $C^\infty$ or \emph{smooth} if it is $C^n$ for all $n$. 
+	\end{itemize}
 \end{definition}
 
 \Cref{continuous-partials} tells us that $f : U \to \R^n$ is $C^1$ if and only if it is continuously differentiable. 
 
-\begin{definition} \label{smooth-multivar}
-	We say that a function $f : U \to \R^n$ is $C^\infty$ or \emph{smooth} if it is $C^n$ for all positive integers $n$. 
-\end{definition}
+% TODO: Bump functions
 
 \section{Inverse function theorem}
+
+The following is a multivariable analog of \cref{inverse-derivative}, but it is much harder to prove. 
+
+\begin{theorem}
+	Suppose $U$ is an open subset of $\R^m$ and $f : U \to \R^n$ is continuously differentiable. Suppose further that $a \in U$ is a point such that the derivative $df_a$ is invertible. Then there exists an open neighborhood $V$ of $a$ in $U$ such that $f(V)$ is open and the restriction $f|_{V}$ of $f$ to $V$ is an bijective function $V \to f(V)$. Moreover, if $g : f(V) \to V$ is the inverse of $f|_{V}$, then $g$ is also continuously differentiable.
+\end{theorem}

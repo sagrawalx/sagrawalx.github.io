@@ -1,48 +1,65 @@
-\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}
-\contentsline {section}{\numberline {1.A}Prerequisites}{5}{section.1.1}
-\contentsline {section}{\numberline {1.B}Linear algebra notation}{5}{section.1.2}
-\contentsline {subsection}{\numberline {1.B.1}Some important vector spaces}{5}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.B.2}Matrix notation}{5}{subsection.1.2.2}
-\contentsline {section}{\numberline {1.C}Little-oh notation}{7}{section.1.3}
-\contentsline {section}{\numberline {1.D}Norms of linear maps}{8}{section.1.4}
-\contentsline {chapter}{\numberline {2}Single variable derivatives}{11}{chapter.2}
-\contentsline {section}{\numberline {2.A}Slope of tangent lines}{11}{section.2.1}
-\contentsline {section}{\numberline {2.B}Best linear approximation}{13}{section.2.2}
-\contentsline {section}{\numberline {2.C}Rules of differentiation}{15}{section.2.3}
-\contentsline {subsection}{\numberline {2.C.1}Sum and scalar multiples rule}{16}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.C.2}Product and quotient rules}{16}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.C.3}Chain rule}{17}{subsection.2.3.3}
-\contentsline {subsubsection}{\numberline {2.C.3.A}First proof}{17}{subsubsection.2.3.3.1}
-\contentsline {subsubsection}{\numberline {2.C.3.B}Second proof}{21}{subsubsection.2.3.3.2}
-\contentsline {subsubsection}{\numberline {2.C.3.C}Applications of the chain rule}{24}{subsubsection.2.3.3.3}
-\contentsline {subsection}{\numberline {2.C.4}Some rules without proofs}{24}{subsection.2.3.4}
-\contentsline {section}{\numberline {2.D}Levels of differentiability}{25}{section.2.4}
-\contentsline {subsection}{\numberline {2.D.1}$C^n$ functions}{25}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.D.2}Smooth functions}{26}{subsection.2.4.2}
-\contentsline {chapter}{\numberline {3}Multivariable derivatives}{29}{chapter.3}
-\contentsline {section}{\numberline {3.A}Detailed example}{29}{section.3.1}
-\contentsline {section}{\numberline {3.B}Definition of the derivative}{29}{section.3.2}
-\contentsline {section}{\numberline {3.C}Computing derivatives}{30}{section.3.3}
-\contentsline {subsection}{\numberline {3.C.1}Sum and scalar multiples rule}{30}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.C.2}Chain rule}{30}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.C.3}Differentiability by components}{31}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.C.4}Partial derivatives}{32}{subsection.3.3.4}
-\contentsline {subsection}{\numberline {3.C.5}Jacobian matrix}{34}{subsection.3.3.5}
-\contentsline {section}{\numberline {3.D}Levels of differentiability}{34}{section.3.4}
-\contentsline {subsection}{\numberline {3.D.1}Continuous differentiability}{34}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.D.2}$C^n$ and smooth functions}{36}{subsection.3.4.2}
-\contentsline {section}{\numberline {3.E}Inverse function theorem}{36}{section.3.5}
-\contentsline {chapter}{\numberline {4}Manifolds}{37}{chapter.4}
-\contentsline {section}{\numberline {4.A}Defining Manifolds}{37}{section.4.1}
-\contentsline {subsection}{\numberline {4.A.1}Charts and atlases}{37}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.A.2}Definition and examples}{38}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.B}Smooth functions}{40}{section.4.2}
-\contentsline {subsection}{\numberline {4.B.1}Smooth real-valued functions}{40}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.B.2}Smooth functions between manifolds}{40}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.B.3}Diffeomorphisms}{41}{subsection.4.2.3}
-\contentsline {chapter}{\numberline {5}Tangent Spaces}{43}{chapter.5}
-\contentsline {section}{\numberline {5.A}Tangent space}{43}{section.5.1}
-\contentsline {subsection}{\numberline {5.A.1}Curves based at a point}{43}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.A.2}Vector space structure on the tangent space}{43}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.A.3}Derivations}{43}{subsection.5.1.3}
-\contentsline {section}{\numberline {5.B}Pushing tangent vectors forward}{43}{section.5.2}
+\contentsline {chapter}{Introduction}{2}{Doc-Start}
+\contentsline {chapter}{\numberline {0}Prerequisites}{9}{chapter.0}
+\contentsline {section}{\numberline {0.A}Little-oh notation}{9}{section.0.1}
+\contentsline {section}{\numberline {0.B}Linear algebra}{10}{section.0.2}
+\contentsline {subsection}{\numberline {0.B.1}Important vector spaces}{10}{subsection.0.2.1}
+\contentsline {subsection}{\numberline {0.B.2}Matrices}{11}{subsection.0.2.2}
+\contentsline {section}{\numberline {0.C}Norms of linear maps}{12}{section.0.3}
+\contentsline {section}{\numberline {0.D}Topological spaces}{14}{section.0.4}
+\contentsline {subsection}{\numberline {0.D.1}Basics}{14}{subsection.0.4.1}
+\contentsline {subsection}{\numberline {0.D.2}Hausdorff spaces}{16}{subsection.0.4.2}
+\contentsline {subsection}{\numberline {0.D.3}Compact and $\sigma $-compact spaces}{16}{subsection.0.4.3}
+\contentsline {chapter}{\numberline {1}Single variable derivatives}{17}{chapter.1}
+\contentsline {section}{\numberline {1.A}Two definitions of the derivative}{17}{section.1.1}
+\contentsline {subsection}{\numberline {1.A.1}Slope of the tangent line}{17}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.A.2}Best linear approximation}{19}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.B}Rules of differentiation}{22}{section.1.2}
+\contentsline {subsection}{\numberline {1.B.1}Sum and scalar multiples rule}{22}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.B.2}Product and quotient rules}{22}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.B.3}Chain rule}{23}{subsection.1.2.3}
+\contentsline {subsubsection}{\numberline {1.B.3.A}First proof}{24}{subsubsection.1.2.3.1}
+\contentsline {subsubsection}{\numberline {1.B.3.B}Second proof}{27}{subsubsection.1.2.3.2}
+\contentsline {subsubsection}{\numberline {1.B.3.C}Applications of the chain rule}{30}{subsubsection.1.2.3.3}
+\contentsline {subsection}{\numberline {1.B.4}Some rules without proofs}{30}{subsection.1.2.4}
+\contentsline {section}{\numberline {1.C}Derivative at local extrema}{31}{section.1.3}
+\contentsline {section}{\numberline {1.D}Differentiable functions}{32}{section.1.4}
+\contentsline {subsection}{\numberline {1.D.1}Mean value theorem}{32}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.D.2}Consequences of the mean value theorem}{33}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.D.3}Darboux's theorem $\ast $}{34}{subsection.1.4.3}
+\contentsline {section}{\numberline {1.E}Levels of differentiability}{36}{section.1.5}
+\contentsline {subsection}{\numberline {1.E.1}$C^n$ functions}{36}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.E.2}Smooth functions}{38}{subsection.1.5.2}
+\contentsline {chapter}{\numberline {2}Multivariable derivatives}{45}{chapter.2}
+\contentsline {section}{\numberline {2.A}An extended example}{45}{section.2.1}
+\contentsline {subsection}{\numberline {2.A.1}Describing the graph of $f$}{45}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.A.2}Tangent plane at $a = (2,1)$}{46}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.A.3}$df_a$ as an approximation}{47}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.A.4}Overview}{47}{subsection.2.1.4}
+\contentsline {section}{\numberline {2.B}Definition of the derivative}{48}{section.2.2}
+\contentsline {section}{\numberline {2.C}Computing derivatives}{49}{section.2.3}
+\contentsline {subsection}{\numberline {2.C.1}Sum and scalar multiples rule}{49}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.C.2}Chain rule}{49}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.C.3}Differentiability by components}{50}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.C.4}Partial derivatives}{51}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.C.5}Jacobian matrix}{53}{subsection.2.3.5}
+\contentsline {section}{\numberline {2.D}Levels of differentiability}{53}{section.2.4}
+\contentsline {subsection}{\numberline {2.D.1}Continuous differentiability}{53}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.D.2}Smooth functions}{58}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.E}Inverse function theorem}{58}{section.2.5}
+\contentsline {chapter}{\numberline {3}Manifolds}{59}{chapter.3}
+\contentsline {section}{\numberline {3.A}Definition of a manifold}{59}{section.3.1}
+\contentsline {section}{\numberline {3.B}Examples}{60}{section.3.2}
+\contentsline {subsection}{\numberline {3.B.1}First examples}{60}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.B.2}M\"obius strip}{61}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.B.3}More examples of manifolds}{64}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.C}Smooth functions}{64}{section.3.3}
+\contentsline {subsection}{\numberline {3.C.1}Smooth real-valued functions}{64}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.C.2}Partial derivatives of real-valued functions}{65}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.C.3}Smooth functions between manifolds}{65}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.C.4}Diffeomorphisms}{66}{subsection.3.3.4}
+\contentsline {chapter}{\numberline {4}Tangent Spaces}{67}{chapter.4}
+\contentsline {section}{\numberline {4.A}Tangent space}{67}{section.4.1}
+\contentsline {subsection}{\numberline {4.A.1}Curves based at a point}{67}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.A.2}Vector space structure on the tangent space}{67}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.A.3}Derivations}{67}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.B}Pushing tangent vectors forward}{67}{section.4.2}
