@@ -1,3 +1,45 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{Rud76}
+
+\bibitem[Axl15]{axler}
+Sheldon Axler.
+\newblock {\em Linear algebra done right}.
+\newblock Undergraduate Texts in Mathematics. Springer, third edition, 2015.
+\newblock URL:
+  \url{https://doi-org.coloradocollege.idm.oclc.org/10.1007/978-3-319-11080-6},
+  \href {http://dx.doi.org/10.1007/978-3-319-11080-6}
+  {\path{doi:10.1007/978-3-319-11080-6}}.
+
+\bibitem[Hef19]{hefferon}
+Jim Hefferon.
+\newblock {\em Linear algebra}.
+\newblock Third edition, 2019.
+\newblock URL: \url{http://joshua.smcvt.edu/linearalgebra/}.
+
+\bibitem[PM91]{protter-morrey}
+Murray~H. Protter and Charles~B. Morrey, Jr.
+\newblock {\em A first course in real analysis}.
+\newblock Undergraduate Texts in Mathematics. Springer-Verlag, second edition,
+  1991.
+\newblock \href {http://dx.doi.org/10.1007/978-1-4419-8744-0}
+  {\path{doi:10.1007/978-1-4419-8744-0}}.
+
+\bibitem[Pug15]{pugh}
+Charles~C. Pugh.
+\newblock {\em Real mathematical analysis}.
+\newblock Undergraduate Texts in Mathematics. Springer, second edition, 2015.
+\newblock \href {http://dx.doi.org/10.1007/978-3-319-17771-7}
+  {\path{doi:10.1007/978-3-319-17771-7}}.
+
+\bibitem[Rud76]{rudin}
+Walter Rudin.
+\newblock {\em Principles of mathematical analysis}.
+\newblock McGraw-Hill Book C, third edition, 1976.
+\newblock International Series in Pure and Applied Mathematics.
+
+\bibitem[Spi05]{spivak}
+Michael Spivak.
+\newblock {\em A Comprehensive Introduction to Differential Geometry},
+  volume~I.
+\newblock Publish or Perish, Inc, third edition, 2005.
 
 \end{thebibliography}

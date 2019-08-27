@@ -94,6 +94,8 @@ The $\delta$ obtained by going through the above process then has the desired pr
 
 \section{Linear algebra} \label{linear-algebra}
 
+The following is a whirlwind reminder of some linear algebra. For more details, you are encouraged to reference a dedicated linear algebra text (eg, \cite{axler} or \cite{hefferon}). To start off, you should review the definitions of vector spaces, subspaces, linear independence, span, dimension, and linear maps. 
+
 \subsection{Important vector spaces}
 
 \begin{definition}
@@ -108,20 +110,22 @@ The $\delta$ obtained by going through the above process then has the desired pr
 	If $V$ and $W$ are both vector spaces, we write $\mathscr{L}(V, W)$ for the set of all linear maps $V \to W$. This is naturally a vector space. 
 \end{definition}
 
-\subsection{Matrices}
+\subsection{Matrix representations} \label{matrix-representations}
+
+Throughout this section, we assume that $U$, $V$, and $W$ are finite dimensional vector spaces. 
 
 \begin{definition}
-	Suppose $V$ is a finite dimensional vector space and $B = ( v_1, \dotsc, v_n )$ is a basis for $V$. Then any $v \in V$ can be written uniquely as $a_1v_1 + \dotsb + a_n v_n$ for some scalars $a_1, \dotsc, a_n \in \R$, and we define the \emph{representation of $v$ with respect to $B$}, denoted $[v]_B$, to be the column vector with $n$ entries that records the scalars $a_1, \dotsc, a_n$. In other words,
+	Suppose $B = ( v_1, \dotsc, v_n )$ is a basis for $V$. Then any $v \in V$ can be written uniquely as $a_1v_1 + \dotsb + a_n v_n$ for some scalars $a_1, \dotsc, a_n \in \R$, and we define the \emph{representation of $v$ with respect to $B$}, denoted $[v]_B$, to be the column vector with $n$ entries that records the scalars $a_1, \dotsc, a_n$. In other words,
 	\[ [v]_B = \begin{bmatrix} a_1 \\ \vdots \\ a_n \end{bmatrix}. \]
 \end{definition}
 
 \begin{lemma}
-	If $V$ is an $n$-dimensional vector space and $B = (v_1, \dotsc, v_n)$ is a basis for $V$, then the function $V \to \R^n$ given by $v \mapsto [v]_B$ is an isomorphism, with inverse given by
+	If $B = (v_1, \dotsc, v_n)$ is a basis for $V$, then the function $V \to \R^n$ given by $v \mapsto [v]_B$ is an isomorphism, with inverse given by
 	\[ \begin{bmatrix} a_1 \\ \vdots \\ a_n \end{bmatrix} \mapsto a_1 v_1 + \dotsb + a_n v_n. \]
 \end{lemma}
 
 \begin{definition}
-	Suppose $\ell : V \to W$ is a linear map between finite dimensional vector spaces. Let $B = v_1, \dotsc, v_m$ be a basis for $V$ and let $C$ be a basis for $W$. The \emph{matrix representation of $\ell$ with respect to $B$ and $C$}, denoted $[\ell]_{B,C}$, is the $n \times m$ matrix whose $i$th column of $[\ell]_{B,C}$ is $[\ell(v_i)]_C$. In other words,
+	Suppose $\ell : V \to W$ is a linear map. Let $B = v_1, \dotsc, v_m$ be a basis for $V$ and let $C$ be a basis for $W$. The \emph{matrix representation of $\ell$ with respect to $B$ and $C$}, denoted $[\ell]_{B,C}$, is the $n \times m$ matrix whose $i$th column of $[\ell]_{B,C}$ is $[\ell(v_i)]_C$. In other words,
 	\[ [\ell]_{B,C} = \begin{bmatrix} [\ell(v_1)]_C & \dotsb & [\ell(v_m)]_C \end{bmatrix}. \]
 \end{definition}
 
@@ -131,12 +135,25 @@ The $\delta$ obtained by going through the above process then has the desired pr
 \end{lemma}
 
 \begin{lemma}
-	If $\ell : U \to V$ and $\ell' :  V \to W$ are linear maps between finite dimensional vector spaces, and $A, B$ and $C$ are bases for $U, V$, and $W$, respectively, then 
+	If $\ell : U \to V$ and $\ell' :  V \to W$ are linear maps, and $A, B$ and $C$ are bases for $U, V$, and $W$, respectively, then 
 	\[ [\ell' \circ \ell]_{A,C} = [\ell']_{B,C}[\ell]_{A,B}. \]
 \end{lemma}
 
+\begin{definition}
+	If $\ell : V \to W$ is a linear map, then $\rank \ell$ is defined to be the dimension of the range of $\ell$. 
+\end{definition}
+
 \begin{lemma}
-	If $\ell : V \to W$ is a linear map between finite dimensional vector spaces and $B$ and $C$ are bases for $V$ and $W$, respectively, then the rank of the matrix $[\ell]_{B,C}$ equals the dimension of the range $\ell(V)$.
+	Let $A$ be a matrix. Then all of the following numbers are equal. 
+	\begin{enumerate}[(1)]
+		\item The dimension of the span of the columns of $A$. \item The dimension of the span of the rows of $A$. 
+		\item The size of largest minor of $A$ with nonzero determinant. 
+	\end{enumerate}
+	This integer is called the rank of $A$. 
+\end{lemma}
+
+\begin{lemma}
+	If $\ell : V \to W$ is a linear map and $B$ and $C$ are bases for $V$ and $W$, respectively, then \[ \rank \ell = \rank [\ell]_{B,C}. \]
 \end{lemma}
 
 \begin{lemma}
@@ -149,8 +166,21 @@ The $\delta$ obtained by going through the above process then has the desired pr
 
 \begin{lemma}
 	If $A$ is a $n \times m$ matrix and $\ell_A : \R^m \to \R^n$ is the linear map $\ell_A(v) = Av$, then \[ [\ell_A] = A. \]
-\end{lemma} 
+\end{lemma}
 
+\section{Product metric} 
+
+\begin{exercise} \label{product-metric}
+	Suppose $X$ and $Y$ are metric spaces with metrics $d_X$ and $d_Y$, respectively. Define a function $d : (X \times Y) \times (X \times Y) \to \R$ by 
+	\[ d((x_1,y_1),(x_2,y_2)) = \max\{ d_X(x_1,x_2), d_Y(y_1,y_2) \}. \]
+	Show that $d$ is a metric on $X \times Y$. 
+\end{exercise}
+
+\begin{exercise} \label{product-metric-l2}
+	Suppose $X$ and $Y$ are metric spaces with metrics $d_X$ and $d_Y$, respectively. Define a function $d : (X \times Y) \times (X \times Y) \to \R$ by 
+	\[ d((x_1,y_1),(x_2,y_2)) = \sqrt{ d_X(x_1,x_2)^2 + d_Y(y_1,y_2)^2 }. \]
+	Show that $d$ is a metric on $X \times Y$, and that it is equivalent to the metric from \cref{product-metric}.
+\end{exercise}
 
 \section{Norms of linear maps} \label{operator-norm}
 
@@ -158,6 +188,8 @@ The $\delta$ obtained by going through the above process then has the desired pr
 	Suppose $\ell : \R^m \to \R^n$ is a linear map. Then we define the \emph{operator norm}, or just \emph{norm}, of $\ell$, denoted $\|\ell\|$, by
 	\[ \|\ell\| = \sup\, \{ |\ell(v)| : |v| \leq 1 \}. \]
 \end{definition} 
+
+\subsection{Basic properties}
 
 \begin{exercise}
 	Suppose $\ell : \R^m \to \R^n$ is a linear map. Show that 
@@ -168,44 +200,6 @@ The $\delta$ obtained by going through the above process then has the desired pr
 \begin{exercise} \label{norm-is-hausdorff}
 	Suppose $\ell : \R^m \to \R^n$ is a linear map. Show that $\ell = 0$ if and only if $\|\ell\| = 0$. 
 \end{exercise}
-
-\begin{exercise}[Subadditivity] \label{subadditive}
-	Suppose $\ell, \ell' :  \R^m \to \R^n$ are both linear maps. Show that
-	\[ \|\ell + \ell'\| \leq \|\ell\| + \|\ell'\|. \]
-\end{exercise}
-
-\begin{definition} \label{operators-as-metric-space}
-	Let $\mathscr{L}(\R^m, \R^n)$ denote the set of all linear maps $\R^m \to \R^n$. Define the distance between $\ell, \ell' \in \mathscr{L}(\R^m, \R^n)$ by $\|\ell - \ell'\|$. It follows from \cref{norm-is-hausdorff,subadditive} that this distance function makes $\mathscr{L}(\R^m, \R^n)$ a metric space. 
-\end{definition}
-
-\begin{exercise}[``Evaluation is continuous''] \label{evaluation-continuous}
-	Suppose $v_0 \in \R^m$ is a fixed vector. Then the ``evaluate at $v_0$'' function $\mathscr{L}(\R^m, \R^n) \to \R^n$ given by $\phi \mapsto \phi(v_0)$ is continuous. \textit{Possible hint}. Since the ``evaluate at $v_0$'' function is linear, it is sufficient to check continuity at 0. 
-\end{exercise}
-
-\begin{exercise}[Submultiplicativity] \label{norm-is-submultiplicative}
-	Suppose $\ell : \R^m \to \R^n$ and $\ell' : \R^n \to \R^p$ are both linear maps. Show that \[ \|\ell' \circ \ell\| \leq \|\ell'\| \cdot \|\ell\|. \]
-	Give an example to show that this inequality can be strict. 
-\end{exercise}
-
-\begin{exercise}[``Composition is continuous''] \label{composition-continuous}
-	\begin{enumerate}[(a)]
-		\item Suppose $\ell : \R^n \to \R^p$ is a linear map. Show that the ``postcompose with $\ell$'' function $\mathscr{L}(\R^m, \R^n) \to \mathscr{L}(\R^m, \R^p)$ given by $\phi \mapsto \ell \circ \phi$ is continuous. 
-		\item Suppose $\ell : \R^m \to \R^n$ is a linear map. Show that the ``precompose with $\ell$'' function $\mathscr{L}(\R^n, \R^p) \to \mathscr{L}(\R^m, \R^p)$ given by $\phi \mapsto \phi \circ \ell$ is continuous. 
-	\end{enumerate}
-	\noindent \textit{Possible hint} (for both parts). Because both the ``postcompose with $\ell$'' and the ``precompose with $\ell$'' maps are linear, it is sufficient to show that the maps are continuous at 0. You will likely find \cref{norm-is-submultiplicative} useful. 
-\end{exercise}
-
-\begin{exercise}[``Linear functions of small functions are still small''] \label{linear-of-small-is-small}
-	Suppose $r : \R^m \to \R^n$ is a function such that $|r(v)| = o(|v|)$ as $v \to 0$. If $\ell : \R^n \to \R^p$ is linear, prove that $|\ell(r(v))| = o(|v|)$ also. 
-\end{exercise}
-
-\begin{comment}
-\begin{proof}
-Observe that
-\[ \frac{|\ell(r(v))|}{|v|} \leq \frac{\|\ell\| \cdot |r(v)|}{|v|}. \]
-Since $|r(v)| = o(|v|)$, we see that the right-hand side tends to 0 as $v \to 0$. The squeeze theorem thus guarantees that $|\ell(r(v))| = o(|v|)$ also. 
-\end{proof}
-\end{comment}
 
 \begin{lemma} \label{norm-is-realized}
 	Suppose $\ell : \R^m \to \R^n$ is a nonzero linear map. Then there exists $v_0 \in \R^m$ such that $|v_0| = 1$ and $|\ell(v_0)| = \|\ell\|$. 
@@ -220,21 +214,83 @@ Since $|r(v)| = o(|v|)$, we see that the right-hand side tends to 0 as $v \to 0$
 	which is absurd. 
 \end{proof}
 
-\begin{exercise} \label{linear-and-small}
-	Suppose $\ell : \R^m \to \R^n$ is a linear map and $|\ell(v)| = o(|v|)$ as $v \to 0$. Prove that $\ell = 0$. 
+\begin{exercise}[Subadditivity] \label{subadditive}
+	Suppose $\ell, \ell' :  \R^m \to \R^n$ are both linear maps. Show that
+	\[ \|\ell + \ell'\| \leq \|\ell\| + \|\ell'\|. \]
+	Give an example to show that this inequality can be strict. 
 \end{exercise}
 
-\begin{comment}
+\begin{exercise}[Submultiplicativity] \label{norm-is-submultiplicative}
+	Suppose $\ell : \R^m \to \R^n$ and $\ell' : \R^n \to \R^p$ are both linear maps. Show that \[ \|\ell' \circ \ell\| \leq \|\ell'\| \cdot \|\ell\|. \]
+	Give an example to show that this inequality can be strict. 
+\end{exercise}
+
+\begin{lemma} \label{linear-and-small}
+	Suppose $\ell : \R^m \to \R^n$ is a linear map and $|\ell(v)| = o(|v|)$ as $v \to 0$. Prove that $\ell = 0$. 
+\end{lemma}
+
+\begin{proof}
 The fact that $|\ell(v)| = o(|v|)$ tells us that
-\begin{equation} \label{big-sequence} \lim_{v \to 0} \frac{|\ell(v)|}{|v|} = 0, \end{equation}
-using \cref{little-o-equivalent}. Suppose for a contradiction that $\ell \neq 0$. Using \cref{norm-is-realized}, choose $v_0 \in \R^m$ such that $|v_0| = 1$ and $|\ell(v_0)| = \|\ell\|$. For scalars $c$, observe that $cv_0 \to 0$ as $c \to 0$, which means that \cref{big-sequence} implies that
+\begin{equation} \label{big-sequence} \lim_{v \to 0} \frac{|\ell(v)|}{|v|} = 0. \end{equation}
+Suppose for a contradiction that $\ell \neq 0$. Using \cref{norm-is-realized}, choose $v_0 \in \R^m$ such that $|v_0| = 1$ and $|\ell(v_0)| = \|\ell\|$. For scalars $c$, observe that $cv_0 \to 0$ as $c \to 0$, which means that \cref{big-sequence} implies that
 \[ \lim_{c \to 0} \frac{|\ell(cv_0)|}{|cv_0|} = 0.  \]
-But observe that
+But observe that, for nonzero $c$, we have
 \[ \frac{|\ell(cv_0)|}{|cv_0|} = \frac{|c\ell(v_0)|}{|cv_0|} = \|\ell\| \]
 so
 \[ 0 = \lim_{c \to 0} \frac{|\ell(cv_0)|}{|cv_0|} = \lim_{c \to 0} \|\ell\| = \|\ell\|. \]
 This contradicts \cref{norm-is-hausdorff}. 
+\end{proof}
+
+
+\begin{exercise}[``Linear functions of small functions are still small''] \label{linear-of-small-is-small}
+	Suppose $r : \R^m \to \R^n$ is a function such that $|r(v)| = o(|v|)$ as $v \to 0$. If $\ell : \R^n \to \R^p$ is linear, prove that $|\ell(r(v))| = o(|v|)$ also. 
+\end{exercise}
+
+\begin{comment}
+\begin{proof}
+Observe that
+\[ \frac{|\ell(r(v))|}{|v|} \leq \frac{\|\ell\| \cdot |r(v)|}{|v|}. \]
+Since $|r(v)| = o(|v|)$, we see that the right-hand side tends to 0 as $v \to 0$. The squeeze theorem thus guarantees that $|\ell(r(v))| = o(|v|)$ also. 
+\end{proof}
 \end{comment}
+
+\subsection{Operator norm as a metric}
+
+\begin{definition} \label{operators-as-metric-space}
+	Let $\mathscr{L}(\R^m, \R^n)$ denote the set of all linear maps $\R^m \to \R^n$. Define the distance between $\ell, \ell' \in \mathscr{L}(\R^m, \R^n)$ by $\|\ell - \ell'\|$. It follows from \cref{norm-is-hausdorff,subadditive} that this distance function makes $\mathscr{L}(\R^m, \R^n)$ a metric space. 
+\end{definition}
+
+It turns out that many natural maps are continuous with respect to this metric. 
+
+\begin{exercise}[``Evaluation is continuous''] \label{evaluation-continuous}
+	Suppose $v_0 \in \R^m$ is a fixed vector. Then the ``evaluate at $v_0$'' function $\mathscr{L}(\R^m, \R^n) \to \R^n$ given by $\phi \mapsto \phi(v_0)$ is continuous. \textit{Possible hint}. Since the ``evaluate at $v_0$'' function is linear, it is sufficient to check continuity at 0. 
+\end{exercise}
+
+In all of the following, the domain is regarded as a metric space using \cref{product-metric}. 
+
+\begin{exercise}[``Addition is continuous''] \label{addition-continuous}
+	Show that the map
+	\[ \begin{tikzcd} \mathscr{L}(\R^m, \R^n) \times \mathscr{L}(\R^m, \R^n) \ar{r} & \mathscr{L}(\R^m, \R^n) \end{tikzcd} \]
+	given by $(\ell, \ell') \mapsto \ell + \ell'$ is continuous. 
+\end{exercise}
+
+\begin{exercise}[``Scalar multiplication is continuous''] \label{scalar-multiplication-continuous}
+	Show that the map
+	\[ \begin{tikzcd} \R \times \mathscr{L}(\R^m, \R^n) \ar{r} & \mathscr{L}(\R^m, \R^n) \end{tikzcd} \]
+	given by $(\lambda, \ell) \mapsto \lambda \ell$ is continuous. 
+\end{exercise}
+
+\begin{exercise}[``Composition is continuous''] \label{composition-continuous}
+	Show that the map
+	\[ \begin{tikzcd} \mathscr{L}(\R^n, \R^p) \times \mathscr{L}(\R^m, \R^n) \ar{r} & \mathscr{L}(\R^m, \R^p) \end{tikzcd} \]
+	given by $(\ell', \ell) \mapsto \ell' \circ \ell$ is continuous.
+\end{exercise}
+
+\begin{exercise}[``Determinant is continuous'']
+	Show that the map
+	\[ \begin{tikzcd} \mathscr{L}(\R^n, \R^n) \ar{r} & \R \end{tikzcd} \]
+	given by $\ell \mapsto \det\, [\ell]$ is continuous. 
+\end{exercise}
 
 \section{Topological spaces} \label{topological-spaces}
 

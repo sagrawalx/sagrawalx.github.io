@@ -1,4 +1,4 @@
-\documentclass[letterpaper]{scrbook}
+\documentclass[bibliography=totoc,letterpaper]{scrbook}
 
 \title{Off on a Tangent}
 \subtitle{Meditations on the derivative}
@@ -44,6 +44,7 @@
 \newtheorem{example}[equation]{Example}
 \newtheorem{remark}[equation]{Remark}
 \newtheorem{exercise}[equation]{Exercise}
+\newtheorem*{caution}{Caution}
 
 \crefname{exercise}{exercise}{exercises}
 \Crefname{exercise}{Exercise}{Exercises}
@@ -55,6 +56,7 @@
 \newcommand{\bbP}{\mathbb{P}}
 \renewcommand{\O}{\mathscr{O}}
 \newcommand{\id}{\mathrm{id}}
+\DeclareMathOperator{\rank}{rank}
 
 
 \begin{document}
@@ -74,6 +76,7 @@
 	
 	\include{tangent}
 	
+	\nocite{*}
 	\bibliographystyle{alphaurl}
 	\bibliography{references}
 	

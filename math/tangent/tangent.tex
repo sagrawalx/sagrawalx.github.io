@@ -2,45 +2,133 @@
 
 \section{Tangent space}
 
+Throughout this section, we let $X$ denote a manifold and $p \in X$ a point. We also let $n := \dim_p(X)$. 
+
 \subsection{Curves based at a point}
 
 \begin{definition}
-	Let $X$ be a manifold and $P \in X$ a point. A \emph{curve in $X$ based at $P$} is a smooth function $\gamma : (-1, 1) \to X$ such that $\gamma(0) = P$. If $(U, x) \in \mathscr{A}_X$ and $P \in U$, then $x^{-1} \circ \gamma$ is a function 
+	A \emph{curve in $X$ based at $p$} is a smooth function $\gamma : (-\epsilon, \epsilon) \to X$ for some $\epsilon > 0$ such that $\gamma(0) = p$. 
 \end{definition}
 
-\begin{definition}
-	Let $X$ be a manifold and $P \in X$ a point. Two curves $\gamma_1, \gamma_2$ in $X$ based at $P$ are \emph{equivalent} if, for all $(U, x) \in \mathscr{A}_X$ such that $P  \in U$, we have \[ d(x^{-1} \circ \gamma_1)_0 = d(x^{-1} \circ \gamma_2)_0. \]
+Suppose that $(U, x) \in \mathscr{A}_X$ is a chart containing $p$ and that $\gamma : (-\epsilon, \epsilon) \to \R$ is a curve based at $p$. Since $U$ is an open subset of $X$ and $\gamma$ is continuous, the preimage $\gamma^{-1}(U)$ is an open subset of $(-\epsilon, \epsilon)$ containing 0, so there exists $0 < \epsilon' \leq \epsilon$ such that the image of the smaller interval $(-\epsilon', \epsilon)$ is entirely contained inside $U$. We let $x \circ \gamma$ denote the composite function 
+\[ \begin{tikzcd} (-\epsilon', \epsilon') \ar{r} & U \ar{r} & \R^n. \end{tikzcd} \]
+We can then take its derivative at $0$ as in \cref{multivar}. This derivative $d(x \circ \gamma)_0$ is a linear map $\R \to \R^n$, so \[ [d(x \circ \gamma)_0] = d(x \circ \gamma)_0(1) \] is a column vector in $\R^n$.
+
+\begin{definition} \label{equivalent-curves}
+	Two curves $\gamma_1, \gamma_2$ in $X$ based at $p$ are \emph{equivalent} if $d(x \circ \gamma_1)_0 = d(x \circ \gamma_2)_0$ for every chart $(U, x) \in \mathscr{A}_X$ containing $p$. 
 \end{definition}
 
 As usual, the first point of order is to check that we don't need to check all possible charts. 
 
 \begin{exercise}
-	Show that, if $\gamma_1, \gamma_2$ are two curves in $X$ based at $P$ and there exists a chart $(U, x) \in \mathscr{A}_X$ such that $P \in U$ and \[ d(x^{-1} \circ \gamma_1)_0 = d(x^{-1} \circ \gamma_2)_0, \]
+	Show that, if $\gamma_1, \gamma_2$ are two curves in $X$ based at $p$ and there exists a chart $(U, x) \in \mathscr{A}_X$ containing $p$ and \[ d(x \circ \gamma_1)_0 = d(x \circ \gamma_2)_0, \]
 	then $\gamma_1$ is equivalent to $\gamma_2$.  
 \end{exercise}
 
 \begin{definition}
-	For a manifold $X$ and a point $P \in X$, we define the \emph{tangent space of $X$ at $P$}, denoted $T_PX$, to be the set of equivalence classes of curves in $X$ based at $P$. Elements of $T_PX$ are called \emph{tangent vectors} at $P$. 
+	We define the \emph{tangent space of $X$ at $p$}, denoted $T_p X$, to be the set of equivalence classes of curves in $X$ based at $p$. Elements of $T_p X$ are called \emph{tangent vectors} at $p$. If $\gamma$ is a curve based at $p$, we will write $v_\gamma$ for the corresponding tangent vector in $T_p X$. 
 \end{definition}
 
-\subsection{Vector space structure on the tangent space}
+\subsection{Vector space structure}
+
+We will now put a vector space structure on the tangent space $T_p X$. There are a lot of details involved in the process, so we begin with a high-level overview. If we choose a chart $(U, x) \in \mathscr{A}_X$ containing $p$, there is a bijection $\sigma : T_p X \to \R^n$ (cf. \cref{tangent-chart-bijection}). This means that we can define vector space operations on $T_p X$ by ``pulling back along $\sigma$.'' More precisely, this mean the following: given $v \in T_p X$ and $\lambda \in \R$, we define
+\[ \lambda v := \sigma^{-1}(\lambda \sigma(v)), \]
+and given $v_1, v_2 \in T_p X$, we define
+\[ v_1 + v_2 := \sigma^{-1}(\sigma(v_1) + \sigma(v_2)). \]
+We can then show that these operations define the structure of a vector space on $T_p V$ by showing that all of the vector space axioms are satisfied (cf. \cref{tangent-pullback-vector-space}). 
+The final step is to show that these operations do not depend on the choice of chart $(U, x)$ (cf. \cref{tangent-chart-independent}). Thus there is a canonical, coordinate-free, vector space structure on $T_p X$. 
+
+\begin{lemma} \label{tangent-chart-bijection}
+	Suppose $(U, x) \in \mathscr{A}_X$ is a chart containing $p$. There is a well-defined bijection $\sigma : T_p X \to \R^n$ given by $v_\gamma \mapsto [d(x \circ \gamma)_0] = d(x \circ  \gamma)_0(1)$. 
+\end{lemma}
+
+\begin{proof}
+	The fact that $\sigma$ is well-defined follows immediately from \cref{equivalent-curves}. For a vector $w \in \R^n$, define $\gamma_w : (-\epsilon, \epsilon) \to X$ by \[ \gamma_w(t) = x^{-1}(x(p) + tw) \]
+	where $\epsilon$ is chosen to be small enough that $x(p) + tw \in x(U)$ for all $t \in (-\epsilon, \epsilon)$ (cf. \cref{tangent-chart-bijection-details}).  
+	Then $\gamma_w(0) = x^{-1}(x(p)) = p$, so $\gamma_w$ is a curve in $X$ based at $p$. Notice that
+	\[ (x \circ \gamma_w)(t) = x(x^{-1}(x(p)+tw)) = x(p) + tw \]
+	so $[d(x \circ \gamma_w)_0] = w$ (cf. \cref{tangent-chart-bijection-details}). It follows from this that $w \mapsto v_{\gamma_w}$ is inverse to $\sigma$, proving that $\sigma$ is bijective (cf. \cref{tangent-chart-bijection-details}). 
+\end{proof}
+
+\begin{exercise} \label{tangent-chart-bijection-details}
+	\begin{enumerate}[(a)]
+		\item Explain why there must exist $\epsilon > 0$ such that $x(p) + tw \in x(U)$ for all $t \in (-\epsilon, \epsilon)$. 
+		\item Explain why $[d(x\circ \gamma)_0] = w$. 
+		\item Explain how it follows from (b) that $w \mapsto v_{\gamma_w}$ is inverse to $\sigma$. 
+	\end{enumerate}
+\end{exercise}
+
+\begin{lemma} \label{tangent-pullback-vector-space}
+	Suppose $(U, x) \in \mathscr{A}_X$ is a chart containing $p$ and $\sigma : T_p X \to \R^n$ is the bijection of \cref{tangent-chart-bijection}. Then $T_p X$, equipped with the addition and scalar multiplication operations obtained by pulling back along $\sigma$, is a vector space. The zero element is the equivalence class of the constant curve at $p$. 
+\end{lemma}
+
+\begin{proof}
+	This follows immediately from the fact that $\R^n$ is a vector space and that $\sigma$ is bijective, but writing out all of the details is fairly tedious. To explain the idea, let's show that vector addition is commutative. For $v_1, v_2 \in T_p X$, we have
+	\[ \begin{aligned} v_1 + v_2 &= \sigma^{-1}(\sigma(v_1) + \sigma(v_2)) \\ &= \sigma^{-1}(\sigma(v_2) + \sigma(v_1)) \\ &= v_2 + v_1 \end{aligned} \]
+	where we used the definition of addition in $T_p X$ on the first and last steps, and the fact that addition in $\R^n$ is commutative for the middle step. 
+	
+	Let $\gamma$ denote the constant curve $\gamma(t) = p$ for all $t$. Then $x \circ p$ is also a constant function which always takes the value $x(p)$, so its derivative is 0. Thus, for any $v \in T_p X$, we have
+	\[ \begin{aligned} v + v_\gamma &= \sigma^{-1}(\sigma(v) + \sigma(v_\gamma)) \\ &= \sigma^{-1}(\sigma(v) + 0) \\ &= \sigma^{-1}(\sigma(v)) \\ &= v, \end{aligned} \]
+	proving that $v_\gamma$ is the zero element of $T_p X$. 
+	
+	The rest of the proof is left to you (cf. \cref{tangent-pullback-vector-space-details})
+\end{proof}
+
+\begin{exercise} \label{tangent-pullback-vector-space-details}
+	Check all of the other axioms that need to be checked to ensure that $T_p X$ is a vector space.\footnotemark
+\end{exercise}
+
+\footnotetext{During a class I took with him, George Bergman once said something along the following lines: ``If you're sure you can write the details of a proof, you probably don't need to. But if you're not sure you can formalize the details, you need to do it.'' I encourage you to apply this principle for \cref{tangent-pullback-vector-space-details}.}
+
+\begin{exercise} \label{pulling-back-makes-linear}
+	Suppose $(U, x) \in \mathscr{A}_X$ is a chart containing $p$ and $\sigma : T_p X \to \R^n$ is the bijection of \cref{tangent-chart-bijection}. If $T_p X$ is equipped with the vector space operations obtained by pulling back along $\sigma$, then $\sigma : T_p X \to \R^n$ is a linear map. Therefore, it is an isomorphism of vector spaces, and $\dim T_p X = n$. 
+\end{exercise}
+
+\begin{lemma} \label{tangent-chart-transition}
+	Suppose $(U, x), (U', x') \in \mathscr{A}_X$ are both charts containing $p$ and that $\sigma, \sigma' : T_p X \to \R^n$ are the bijections from \cref{tangent-chart-bijection} corresponding to $(U, x), (U', x')$, respectively. Then $\sigma' = d(x' \circ x)_{x(p)} \circ \sigma$, where $x' \circ x$ denotes the transition map (cf. \cref{transition-map}). 
+	\[ \begin{tikzcd} T_p X \ar{r}{\sigma} \ar[bend right]{dr}[swap]{\sigma'} & \R^n \ar{d}{d(x' \circ x^{-1})_{x(p)}} \\ & \R^n \end{tikzcd} \]
+\end{lemma}
+
+\begin{proof}
+	Let $\gamma$ be a curve in $X$ based at $p$. Then 
+	\[ x' \circ \gamma = x' \circ (x^{-1} \circ x) \circ \gamma = (x' \circ x) \circ (x \circ \gamma), \]
+	so the chain rule \ref{chain-rule} says that 
+	\[ d(x' \circ \gamma)_0 = d(x' \circ x)_{(x \circ \gamma)(0)} \circ d(x \circ \gamma)_0 = d(x' \circ x)_{x(p)} \circ d(x \circ \gamma)_0. \]
+	Evaluating at $1$, we find that
+	\[ \sigma'(v_\gamma) = d(x' \circ \gamma)_0(1) = d(x' \circ x)_{x(p)}(d(x \circ \gamma)_0(1)) = d(x' \circ x)_{x(p)}(\sigma(v_\gamma)). \]
+	Since this is true for all $\gamma$, we conclude that $\sigma' = d(x' \circ x)_{x(p)} \circ \sigma$. 
+\end{proof}
+
+\begin{exercise} \label{tangent-chart-independent}
+	Suppose $(U, x), (U', x') \in \mathscr{A}_X$ are both charts containing $p$ and that $\sigma, \sigma' : T_p X \to \R^n$ are the bijections from \cref{tangent-chart-bijection} corresponding to $(U, x), (U', x')$, respectively. Show that the vector space operations on $T_p X$ defined by pulling back along $\sigma$ are the same as those defined by pulling back along $\sigma'$. \textit{Hint}. Use \cref{tangent-chart-transition}. The key is that $d(x' \circ x^{-1})_{x(p)}$ is an invertible linear map. 
+\end{exercise}
+
+This completes our construction of a vector space structure on $T_p X$. An important observation about this is that $T_p X$ is an example of a finite dimensional vector space that does not come with any canonical basis. More precisely, this means the following. If we've choose a chart $(U, x) \in \mathscr{A}_X$ containing $p$, the bijection $\sigma : T_p X \to \R^n$ of \cref{tangent-chart-bijection} is an isomorphism of vector spaces (cf. \cref{pulling-back-makes-linear}), so $\sigma^{-1}(e_1), \dotsc, \sigma^{-1}(e_n)$ is a basis of $T_p X$. But then, if we choose a different chart $(U', x') \in \mathscr{A}_X$ containing $p$ and $\sigma'$ is the corresponding isomorphism $T_p X \to \R^n$, then $\sigma'^{-1}(e_1), \dotsc, \sigma'^{-1}(e_n)$ will in general be a different basis of $T_p X$, even though the vector space structures defined by pulling back along $\sigma$ and $\sigma'$ are the same! So, for a general manifold $X$ and point $p$, since there's no ``canonical'' choice of a chart containing $p$, there is also no ``canonical'' choice of a basis on $T_p X$. 
+
+\begin{remark}
+	Suppose $U$ is an open subset of $X$ containing $p$ regarded as an open submanifold (cf. \cref{open-submanifold}). Then a curve $\gamma$ in $U$ based at $p$ is also automatically a curve in $X$, which means there is a natural ``inclusion'' map $T_p U \to T_p X$ given by $v_\gamma \mapsto v_\gamma$. But we can ``shrink'' curves in $X$ to curves in $U$ without changing their equivalence class, so $T_p U \to T_p X$ is actually bijective. Moreover, if we choose a chart in $\mathscr{A}_U$ containing $p$, we can use this chart to define the vector space structure on both $T_p U$ and $T_p X$, so $T_p U \to T_p X$ is actually an isomorphism of vector spaces. Since this isomorphism is tautological, we sometimes write $T_p U = T_p X$. 
+\end{remark}
+
+\begin{remark}
+	There is one situation where we do have a canonical choice of a chart: $\R^n$. Namely, the identity map $\id : \R^n \to \R^n$ defines a chart. If $\gamma$ is a curve in $\R^n$ based at a point $p$, then $d(\id \circ \gamma)_0 = d\gamma_0$, so the isomorphism $\sigma : T_p \R^n \to \R^n$ is given by $\sigma(v_\gamma) = [d\gamma_0]$. We will call this the ``canonical isomorphism'' $T_p \R^n \to \R^n$, and this gives us a ``canonical basis'' on $T_p \R^n$. 
+\end{remark}
 
 \subsection{Derivations}
 
-\section{Pushing tangent vectors forward}
+\section{Pushforward}
 
-Let $f : X \to Y$ be a smooth map of manifolds and $P \in X$ a point. Given a curve $\gamma$ in $X$ based at $P$, observe that $f \circ \gamma$ is a curve in $Y$ based at $f(P)$. 
+Throughout this section, let $f : X \to Y$ be a smooth map of manifolds and $p \in X$ a point. Given a curve $\gamma$ in $X$ based at $p$, observe that $f \circ \gamma$ is a curve in $Y$ based at $f(p)$. 
 
 \begin{lemma}
-	If $f : X \to Y$ is a smooth map of manifolds, $P \in X$, and $\gamma_1$ and $\gamma_2$ are equivalent curves in $X$ based at $P$, then $f \circ \gamma_1$ and $f \circ \gamma_2$ are equivalent curves in $Y$ based at $f(P)$. 
+	If $\gamma_1$ and $\gamma_2$ are equivalent curves in $X$ based at $p$, then $f \circ \gamma_1$ and $f \circ \gamma_2$ are equivalent curves in $Y$ based at $f(p)$. 
 \end{lemma}
 
-This allows us to make the following definition, which in some sense is the ``ultimate'' generalization of derivatives. 
+This allows us to make the following definition, which is the ``ultimate'' generalization of the derivative at a point. 
 
 \begin{definition}
-	Let $f : X \to Y$ be a smooth map of manifolds. Given a tangent vector $v \in T_P X$ defined by a curve $\gamma$, we define its \emph{pushforward} $f_*v \in T_{f(P)}Y$ to be the tangent vector defined by $f \circ \gamma$. This defines a \emph{pushforward map} $f_* : T_P X \to T_{f(P)} Y$. 
+	If $\gamma$ is a curve in $X$ based at $p$, we define its \emph{pushforward} $f_*(v_\gamma) \in T_{f(p)}Y$ to be the equivalence class of the curve $f \circ \gamma$. This defines the \emph{pushforward map} $f_* : T_p X \to T_{f(p)} Y$. 
 \end{definition}
 
 \begin{proposition}
-	Let $f : X \to Y$ be a smooth map of manifolds and $P \in X$ a point. Then $f_* : T_P X \to T_{f(P)} Y$ is a linear map.
+	The pushforward map $f_* : T_p X \to T_{f(p)} Y$ is linear. 
 \end{proposition}
