@@ -1,6 +1,6 @@
-\chapter{Multivariable derivatives}
+\chapter{Multivariable derivatives} \label{multivar}
 
-In this chapter, we will study derivatives of functions $S \to \R^n$ where $S \subseteq \R^m$. We dealt with the case $m = n = 1$ in the previous chapter, starting with a very geometric idea of tangent lines to graphs. For large values of $m$ and $n$, graphs become hard to visualize and it is not so clear what ``tangent'' should mean. But there is at least one higher dimensional case when we can use some geometry to formalize what ``tangent'' should mean, which is the case $m = 2$ and $n = 1$. The graph of such a function is a surface in $\R^3$, and its ``tangent'' at a point should be a plane. We'll begin by analyzing a particular example of this situation to build up some geometric intuition, and then proceed with the abstract discussion of multivariable derivatives for general $m$ and $n$. 
+In this chapter, we will study derivatives of functions $S \to \R^n$ where $S$ is a subset of $\R^m$. We dealt with the case $m = n = 1$ in the previous chapter, starting with a very geometric idea of tangent lines to graphs. For large values of $m$ and $n$, graphs become hard to visualize and it is not so clear what ``tangent'' should mean. But there is at least one higher dimensional case when we can use some geometry to formalize what ``tangent'' should mean, which is the case $m = 2$ and $n = 1$. The graph of such a function is a surface in $\R^3$, and its ``tangent'' at a point should be a plane. We'll begin by analyzing a particular example of this situation to build up some geometric intuition, and then proceed with the abstract discussion of multivariable derivatives for general $m$ and $n$. 
 
 \section{An extended example}
 
@@ -87,11 +87,19 @@ It turns out that there can exist at most one linear map that has the above prop
 	\[ |f(a+v)-f(a)-df_a(v)| = o(|v|) \text{ as } v \to 0.  \]
 \end{definition}
 
-This definition is very difficult to compute examples from. Virtually the only concrete example that we can calculate without much effort directly from the definition is the following. 
+Few examples can be computed directly from the definition. 
 
 \begin{exercise} \label{derivative-of-linear}
-	Suppose $\ell : \R^m \to \R^n$ is a linear map. Prove that $\ell$ is differentiable at every $a \in \R^m$ and $d\ell_a = \ell$.  
+	Suppose $\ell : \R^m \to \R^n$ is a linear map. Prove that $d\ell_a = \ell$ for all $a \in \R^m$.  
 \end{exercise}
+
+\begin{exercise} \label{derivative-multiplication}
+	Let $f : \R^2 \to \R$ be the map $f(x_1,x_2) = x_1x_2$. Use the definition of the derivative to prove that
+	\[ df_{a}(h_1, h_2) = a_2h_1 + a_1 h_2 \]
+	for all $a = (a_1, a_2) \in \R^2$. 
+\end{exercise}
+
+We will develop a bit more theory in order to compute derivatives more easily. Meanwhile, we can prove the following directly from the definition. 
 
 \begin{exercise} \label{differentiable-implies-continuous}
 	If $f : S \to \R^n$ is differentiable at an interior point $a \in S$, show that $f$ must be continuous at $a$. 
@@ -113,10 +121,10 @@ This definition is very difficult to compute examples from. Virtually the only c
 
 The proof of the following is essentially the same as the second proof of the single variable chain rule given in \cref{chain-rule-single-second-proof}. Since this proof is basically a repeat, some details are omitted; you are asked to fill in the details in \cref{chain-rule-details} below. 
 
-\begin{proposition}[Chain rule] \label{chain-rule}
+\begin{theorem}[Chain rule] \label{chain-rule}
 	Suppose that $S$ and $T$ are subsets of $\R^m$ and $\R^n$, respectively, that $f : S \to T$ is differentiable at an interior point $a$, that $f(a)$ is an interior point of $T$, and that $g : T \to \R^p$ is differentiable at $f(a)$. Then the composite $g \circ f : S \to \R^p$ is also differentiable at $a$, and 
 	\[ d(g \circ f)_a = dg_{f(a)} \circ df_a. \]
-\end{proposition}
+\end{theorem}
 
 \begin{proof}
 	Define the ``error in approximation'' functions
@@ -180,11 +188,53 @@ Here we show that it's ``enough'' to consider the case $n = 1$.
 Here we focus on the case $n = 1$. In other words, we consider functions whose input is $m$ real numbers, and whose output is just a single number. 
 
 \begin{definition}
-	Suppose $f : S \to \R$ is a function and $a \in S$ is an interior point. The $i$th \emph{partial derivative} of $f$ at $a$, denoted $\partial_i f(a)$, is the limit
+	Suppose $f : S \to \R$ is a function and $a \in S$ is an interior point. The $i$th \emph{partial derivative} of $f$ at $a$, denoted \[ \partial_i f(a) \text{ or } \frac{\partial f}{\partial x_i}(a) \] is defined to be the limit
 	\[ \lim_{h \to 0} \frac{f(a+he_i) - f(a)}{h}. \]
 \end{definition}
 
-In other words, consider the function $\xi_i : \R \to \R^m$ given by $\xi_i(h) = a + he_i$. Then 0 is an interior point of $T = \xi_i^{-1}(S) \subseteq \R$, and $\partial_i f(a)$ is simply the derivative of the single variable function $f \circ \xi_i : T \to \R$ at 0. 
+You may remember from multivariable calculus that partial derivatives behave a great deal like single variable derivatives. The reason for this is the following important remark, which reinterprets the partial derivative as a single variable derivative. 
+
+\begin{remark} \label{partial-to-single}
+	Consider the function $\xi_i : \R \to \R^m$ given by $\xi_i(h) = a + he_i$. Then 0 is an interior point of $T = \xi_i^{-1}(S) \subseteq \R$, and $f \circ \xi_i$ is a single variable function $T \to \R$. Moreover, we have
+	\[ \partial_i f(a) = (f \circ \xi_i)'(0). \]
+\end{remark}
+
+\begin{example} \label{computing-partials-example}
+	Consider the function $f : \R^2 \to \R$ given by $f(x_1, x_2) = \sin(x_1x_2^2)$. Let $a = (a_1, a_2) \in \R^2$ and define $\xi_1$ as in \cref{partial-to-single}. Then
+	\[ (f \circ \xi_1)(h) = f(a_1 + h, a_2) = \sin((a_1+h)a_2^2).  \]
+	Then
+	\[ \begin{aligned} \partial_1 f(a) &= (f \circ \xi_1)'(0) \\
+	&= \left.\frac{d}{dh} \left(\sin((a_1+h)a_2^2) \right) \right|_{h = 0} \\
+	&= \left. a_2^2\cos((a_1+h)a_2^2)\right|_{h = 0} \\
+	&= a_2^2\cos(a_1a_2^2). \end{aligned}  \]
+\end{example}
+
+\begin{exercise}
+	With notation as in \cref{computing-partials-example}, compute $\partial_2 f(a)$. 
+\end{exercise}
+
+We can also use \cref{partial-to-single} to prove some partial derivative analogs of results we proved in \cref{single-var}.
+
+\begin{exercise}[Product rule for partial derivatives] \label{product-rule-partials}
+	Suppose $f, g : S \to \R$ are functions and $a \in S$ is an interior point such that $\partial_i f(a)$ and $\partial_i g(a)$ both exist. Prove that $\partial_i (fg)(a)$ also exists and that
+	\[ \partial_i (fg)(a) = \partial_i(f)(a) g(a) + f(a) \partial_i g(a). \]
+	\textit{Hint}. Use \cref{partial-to-single} and the statement of the single variable product rule \ref{product-cn-singlevar}.
+\end{exercise}
+
+\begin{exercise}[Interior extremum theorem] \label{interior-extremum-multivar}
+	Suppose $f : S \to \R$ is a function and an interior point $a \in S$ is a local extremum of $f$. Show that, if $\partial_i f(a)$ exists, then $\partial_i f(a) = 0$. \textit{Hint}. Use \cref{partial-to-single} and the single variable interior extremum theorem \ref{interior-extremum}. 
+\end{exercise}
+
+We have the same caveat to the interior extremum theorem that we had in the single variable case (cf. \cref{interior-extremum-converse-false}), except that there are even more ways for the converse to fail. 
+
+\begin{example}
+	Consider the function $f : \R^2 \to \R$ given by \[ f(x_1, x_2) = x_1^2 - x_2^2. \]
+	Let $\xi_i(h) = 0 + h e_i$ for $i = 1, 2$. Then $f \circ \xi_1$ has a minimum at 0, so $(f \circ \xi_1)'(0) = \partial_1 f(0) = 0$. Similarly, $f \circ \xi_2$ has a maximum at 0, so $(f \circ \xi_2)'(0) = \partial_2 f(0) = 0$ also. But clearly these two facts together mean that 0 cannot be a local extremum of $f$. 
+	
+	% TODO: picture
+\end{example}
+
+The main reason we care about partial derivatives is that they help us compute derivatives. Note that we will generalize this result in \cref{jacobian-matrix} below. For more about the notation $[df_a]$, see \cref{matrix-representations}.
 
 \begin{lemma} \label{differentiability-implies-partials}
 	If $f : S \to \R$ is differentiable at an interior point $a \in S$, then the $i$th partial derivative $\partial_i f(a)$ exists for all $i = 1, \dotsc m$, and the standard matrix representation $[df_a]$ of the linear map $df_a : \R^m \to \R$ is a $1 \times m$ matrix whose $i$th entry is $\partial_i f(a)$. 
@@ -206,13 +256,15 @@ In other words, consider the function $\xi_i : \R \to \R^m$ given by $\xi_i(h) =
 	is often called the \emph{gradient} of $f$ at $a$, and is denoted $\nabla f(a)$. 
 \end{remark}
 
-Unfortunately, the converse to \cref{differentiability-implies-partials} is \emph{not} true, as shown by \cref{partials-dont-imply-differentiable}. However, this behavior is fairly pathological; \cref{continuous-partials} below will provide a converse under a fairly mild additional hypothesis. 
+Now for the important caveat: unfortunately, the converse to \cref{differentiability-implies-partials} is \emph{not} true. 
 
 \begin{exercise} \label{partials-dont-imply-differentiable}
 	Consider the function $f : \R^2 \to \R$ defined as follows.
 	\[ f(x_1, x_2) = \begin{cases} \dfrac{x_1 x_2}{x_1^2 + x_2^2} &  \text{if } (x_1, x_2) \neq 0 \\ 0 & \text{if } (x_1, x_2) = 0 \end{cases} \]
 	Show that $\partial_1 f(0)$ and $\partial_2 f(0)$ both exist, but that $f$ is not even continuous at 0, so cannot be differentiable by \cref{differentiable-implies-continuous}. \textit{Hint.} Approach the origin along the line $x_1 = x_2$. 
-\end{exercise} 
+\end{exercise}
+
+This behavior is fairly pathological; \cref{continuous-partials} later on will provide a converse to \cref{differentiability-implies-partials} under a fairly mild additional hypothesis. 
 
 \subsection{Jacobian matrix}
 
@@ -222,7 +274,7 @@ Unfortunately, the converse to \cref{differentiability-implies-partials} is \emp
 	\partial_1 f_2(a) & \partial_2 f_2(a) & \dotsb & \partial_m f_2(a) \\
 	\vdots & \vdots & \ddots & \vdots \\ 
 	\partial_1 f_n(a) & \partial_2 f_n(a) & \dotsb & \partial_m f_n(a) \end{bmatrix} \]
-	Note that \cref{differentiability-implies-partials} tells us that all of these partial derivatives exist. 
+	Note that \cref{differentiable-by-components,differentiability-implies-partials} tell us that all of these partial derivatives exist. 
 \end{definition}
 
 \begin{theorem} \label{jacobian-matrix}
@@ -231,6 +283,141 @@ Unfortunately, the converse to \cref{differentiability-implies-partials} is \emp
 
 \begin{exercise}
 	Prove \cref{jacobian-matrix}. \textit{Hint.} Use \cref{differentiable-by-components,differentiability-implies-partials}. 
+\end{exercise}
+
+\subsection{Rank of a differentiable map}
+
+\begin{definition}
+	Suppose $f : S \to \R^n$ is differentiable at an interior point $a \in S$. The rank of the linear map $df_a : \R^m \to \R^n$ is also called the \emph{rank of $f$ at $a$}, denoted $\rank_a(f)$. Note that $\rank_a(f) \leq \min\{m,n\}$.
+	\begin{itemize}
+		\item If $\rank_a(f) = n$, then we say that $f$ is a \emph{submersion at $a$}. 
+		\item If $\rank_a(f) = \min\{m,n\}$, then we say that $a$ is a \emph{regular point} of $f$. 
+		\item If $\rank_a(f) < \min\{m,n\}$, then we say that $a$ is a \emph{critical point} of $f$.
+	\end{itemize}
+\end{definition}
+
+Note that, if $m \geq n$, then $f$ is a submersion at $a$ if and only if $a$ is a regular point of $f$. If $m < n$, then $f$ cannot be a submersion at any point. 
+
+\begin{caution}
+	A map $f$ being a submersion at an interior point $a \in S$ is always defined as it is above, and critical points are always defined to be the opposite of regular points. But some mathematicians use a different definition of regularity: they define a point to be regular if $\rank_a(f) = n$ (in which case, its always true that $f$ is a submersion at $a$ if and only if $a$ is a regular point of $f$). If $m \geq n$, there's no difference between these alternative definitions and our definitions. But, if $m < n$, there is a difference: these other mathematicians would say that all points are critical in this case, but that isn't true for us. So, if you see the words ``regular point'' and ``critical point'' in another text and it's possible that $m < n$, it's worth looking back to make sure you know what the author means!
+\end{caution}
+
+\begin{example} \label{polar-map}
+
+Let $f : \R^2 \to \R^2$ be the map
+\[ f(r,\theta) = (r\cos\theta, r\sin\theta). \]
+See \cref{polar-map-picture}. 
+\begin{figure}
+	\begin{center}
+		\begin{tikzpicture}
+		\begin{axis}[
+		xmin=-2,xmax=4,
+		ymin=-2,ymax=4,
+		ytick={-1.57,1.57,3.14},
+		xtick={-1,1,2,3},
+		yticklabels={$-\pi/2$,$\pi/2$, $\pi$},
+		axis lines=middle,
+		axis line style=lightgray,
+		width=0.5\textwidth,
+		xlabel={$r$},
+		ylabel={$\theta$},
+		axis equal
+		] 
+		
+		\addplot[red,thick,->] expression[domain=-1.5:3.5,samples=2]{1.57};
+		\node[color=red,draw=red,circle,fill,inner sep=2pt] at (axis cs:2,1.57) {}; 
+		
+		\addplot[blue,thick,->] expression[domain=-1.5:3.5,samples=2]{1.57/2};
+		\node[color=blue,draw=blue,circle,fill,inner sep=2pt] at (axis cs:1,1.57/2) {}; 
+		
+		\end{axis}
+		\end{tikzpicture}\hspace{1cm}
+		\begin{tikzpicture}
+		\begin{axis}[
+		xmin=-2,xmax=4,
+		ymin=-2,ymax=4,
+		ytick={-1,1,2,3},
+		xtick={-1,1,2,3},
+		axis lines=middle,
+		axis line style=lightgray,
+		width=0.5\textwidth,
+		xlabel={x},
+		ylabel={y},
+		axis equal
+		] 
+		
+		\addplot +[mark=none,red,thick,->] coordinates {(0, -1.5) (0, 3.5)};
+		\node[color=red,draw=red,circle,fill,inner sep=2pt] at (axis cs:0,2) {}; 
+		
+		\addplot[blue,thick,->] expression[domain=-1.5:3.5,samples=2]{x};
+		\node[color=blue,draw=blue,circle,fill,inner sep=2pt] at (axis cs:0.707,0.707) {}; 
+		\end{axis}
+		\end{tikzpicture}
+		
+		\mbox{}
+		
+		\begin{tikzpicture}
+		\begin{axis}[
+		xmin=-2,xmax=4,
+		ymin=-2,ymax=4,
+		ytick={-1.57,1.57,3.14},
+		xtick={-1,1,2,3},
+		yticklabels={$-\pi/2$,$\pi/2$, $\pi$},
+		axis lines=middle,
+		axis line style=lightgray,
+		width=0.5\textwidth,
+		xlabel={$r$},
+		ylabel={$\theta$},
+		axis equal
+		] 
+		
+		\addplot +[mark=none,red,thick] coordinates {(1, -1.57) (1,1.57)};
+		\node[color=red,draw=red,circle,fill,inner sep=2pt] at (axis cs:1,-1.57) {}; 
+		\node[color=red,draw=red,circle,fill,inner sep=2pt] at (axis cs:1,1.57) {}; 
+		
+		\addplot +[mark=none,blue,thick] coordinates {(2, 0) (2,1.57)};
+		\node[color=blue,draw=blue,circle,fill,inner sep=2pt] at (axis cs:2,0) {}; 
+		\node[color=white,draw=blue,circle,fill,inner sep=2pt] at (axis cs:2,1.57) {}; 
+		
+		\end{axis}
+		\end{tikzpicture}\hspace{1cm}
+		\begin{tikzpicture}
+		\begin{axis}[
+		xmin=-2,xmax=4,
+		ymin=-2,ymax=4,
+		ytick={-1,1,2,3},
+		xtick={-1,1,2,3},
+		axis lines=middle,
+		axis line style=lightgray,
+		width=0.5\textwidth,
+		xlabel={x},
+		ylabel={y},
+		axis equal
+		] 
+		
+		\addplot[red,thick] expression[domain=-1:1,samples=100]{sqrt(1-x^2)}; 
+		\addplot[red,thick] expression[domain=-1:1,samples=100]{-sqrt(1-x^2)}; 
+		\node[color=red,draw=red,circle,fill,inner sep=2pt] at (axis cs:-1,0) {}; 
+		
+		\addplot[blue,thick] expression[domain=-2:2,samples=100]{sqrt(4-x^2)}; 
+		\node[color=blue,draw=blue,circle,fill,inner sep=2pt] at (axis cs:2,0) {}; 
+		\node[color=white,draw=blue,circle,fill,inner sep=2pt] at (axis cs:-2,0) {}; 
+		\end{axis}
+		\end{tikzpicture}
+	\end{center}
+	\caption{The function $f(r, \theta) = (r\cos\theta, r\sin\theta)$ of \cref{polar-map} transforms the pictures on the right to the pictures on the left.}  \label{polar-map-picture}
+\end{figure}
+We compute partial derivatives. 
+\[ \frac{\partial f_1}{\partial r} = \cos \theta \quad \frac{\partial f_2}{\partial r} = \sin \theta \quad \frac{\partial f_1}{\partial \theta} = -r\sin \theta \quad \frac{\partial f_2}{\partial \theta} = r\cos \theta.  \]
+Thus
+\[ [df_{(r,\theta)}] = \begin{bmatrix} \cos \theta & -r \sin \theta \\ \sin \theta & r \cos \theta \end{bmatrix}. \]
+Since this is a square matrix, $df_{(r, \theta)}$ has non-maximal rank if and only if its determinant vanishes. But
+\[ \det [df_{(r, \theta)}] = r\cos^2 \theta + r\sin^2 \theta = r, \]
+so the critical locus of $f$ is the vertical line $r = 0$, and $f$ is a submersion away from this line. 
+\end{example}
+
+\begin{exercise}
+	Show that an interior point $a \in S$ is a critical point of $f : S \to \R$ if and only if $\partial_i f(a) = 0$ for all $i$. 
 \end{exercise}
 
 \section{Levels of differentiability}
@@ -243,9 +430,7 @@ Throughout, $U$ denotes an open subset of $\R^m$.
 
 \subsection{Continuous differentiability}
 
-This section is surprisingly challenging. You may need to read through it several times. My suggestion is that you skip the proofs the first time around, wrap your head around the big picture, and then fill in the details by working through the proofs. 
-
-Recall from \cref{operators-as-metric-space} that the set $\mathscr{L}(\R^m, \R^n)$ of all linear maps $\R^m \to \R^n$ is a metric space under the operator norm. We use this metric space structure to make the following definition. 
+At this point, we will need to make use of the operator norm; see \cref{operator-norm} if you have not seen this before. Under this norm, the set $\mathscr{L}(\R^m, \R^n)$ of all linear maps $\R^m \to \R^n$ can be regarded a metric space (cf. \cref{operators-as-metric-space}). 
 
 \begin{definition}
 	If $f : U \to \R^n$ is a differentiable function and the derivative $df : U \to \mathscr{L}(\R^m, \R^n)$ is continuous, then $f$ is said to be \emph{continuously differentiable}. 
@@ -265,10 +450,16 @@ Recall from \cref{operators-as-metric-space} that the set $\mathscr{L}(\R^m, \R^
 
 \begin{exercise} \label{continuously-differentiable-by-components-exercise}
 	\begin{enumerate}[(a)]
-		\item Check that the ``postcompose with $\pi_j$'' map $\mathscr{L}(\R^m, \R^n) \to \mathscr{L}(\R^m, \R)$ (ie, the one  given by $\phi \mapsto \pi_j \circ \phi$) is continuous. Alternatively, prove the more general statement given in \cref{composition-continuous} (which is not really much harder).   
+		\item Check that the ``postcompose with $\pi_j$'' map $\mathscr{L}(\R^m, \R^n) \to \mathscr{L}(\R^m, \R)$ (ie, the one  given by $\phi \mapsto \pi_j \circ \phi$) is continuous. Alternatively, prove the more general statement given in \cref{composition-continuous} and then derive this statement.   
 		\item With notation as in the latter part of the proof above, verify that $\|df_a - df_b\| < \epsilon$. 
 	\end{enumerate}
 \end{exercise}
+
+\begin{exercise}
+	Suppose $U$ is an open subset $\R^m$, that $V$ is an open subset of $\R^n$, and that $f : U \to V$ and $g : V \to \R^p$ are both continuously differentiable. Show that $g \circ f$ is also continuously differentiable. \textit{Hint}. If you have not done \cref{composition-continuous}, do it. Then combine that statement with the chain rule \ref{chain-rule}.
+\end{exercise}
+
+The proof of the following theorem is surprisingly challenging. You may need to read through it several times. 
 
 \begin{theorem} \label{continuous-partials}
 	A function $f : U \to \R^n$ is continuously differentiable if and only if the partial derivatives $\partial_i f_j : U \to \R$ exist and are continuous for all $i = 1, \dotsc, m$ and $j = 1, \dotsc, n$. 
@@ -352,9 +543,7 @@ Recall from \cref{operators-as-metric-space} that the set $\mathscr{L}(\R^m, \R^
 	\[ |\partial_i(a+v_{i-1} + s_ie_i) - \partial_i f(a)| < \epsilon/m, \]
 	which means that
 	\[ |f(a+v) - f(a)-\ell(v)| \leq \sum_{i = 1}^m \frac{|h_i| \epsilon}{m} \leq |v|\epsilon. \]
-	This proves that $f$ is differentiable at any point $a \in U$, which completes the hard part of this proof. 
-	
-	The final step is to show that $df : U \to \mathscr{L}(\R^m, \R)$ is continuous. This is left for you to check; see \cref{continuous-partials-details} below. 
+	This proves that $f$ is differentiable at any point $a \in U$, which completes the hard part of this proof. The final step is to show that $df : U \to \mathscr{L}(\R^m, \R)$ is continuous. This is left for you to check; see \cref{continuous-partials-details} below. 
 \end{proof}
 
 \begin{exercise} \label{continuous-partials-details}
@@ -365,25 +554,81 @@ Recall from \cref{operators-as-metric-space} that the set $\mathscr{L}(\R^m, \R^
 	\end{enumerate}
 \end{exercise}
 
+\begin{exercise} \label{product-rule-multivar}
+	Suppose $f, g : U \to \R$ are both continuously differentiable. Prove that $fg$ is also continuously differentiable, and that
+	\[ d(fg)_a(v) = df_a(v) g(a) + f(a) dg_a(v). \]
+	\textit{Hint}. Combine \cref{differentiability-implies-partials,product-rule-partials,continuous-partials}.
+\end{exercise}
+
+\begin{exercise}
+	Suppose $f : U \to \R^n$ is continuously differentiable. Show that the critical locus of $f$ is a closed subset of $U$.
+\end{exercise}
+
+\subsection{$C^k$ functions}
+
+\begin{definition} \label{cn-multivar}
+	We say that a function $f : U \to \R^n$ is $C^0$ if it is continuous. Then, inductively, for any positive integer $k$, we say that a function $f : U \to \R^n$ is $C^k$ if the partial derivatives $\partial_i f_j$ all exist and are $C^{k-1}$ functions $U \to \R$. 
+\end{definition}
+
+\Cref{continuous-partials} tells us that $f : U \to \R^n$ is $C^1$ if and only if it is continuously differentiable. It is clear from the definitions that a function $f : U \to \R^n$ is $C^k$ if and only if its component functions $f_j : U \to \R$ are $C^k$. 
+
+\begin{exercise}
+	Show that the set of all $C^k$ functions $U \to \R^n$ is a vector space. 
+\end{exercise}
+
+\begin{exercise}
+	Suppose $U$ is an open subset $\R^m$, that $V$ is an open subset of $\R^n$, and that $f : U \to V$ and $g : V \to \R^p$ are both $C^k$. Show that $g \circ f$ is also $C^k$. 
+\end{exercise}
+
+\begin{exercise}
+	Suppose $f, g : U \to \R$ are both $C^k$. Show that $fg$ is also $C^k$. 
+\end{exercise}
+
+\subsection{Equality of mixed partials}
+
+\begin{definition}
+	Suppose $f : U \to \R$ is $C^2$. The partial derivative $\partial_i f : U \to \R$ for any $i = 1, \dotsc, m$ is a continuously differentiable function, so its $j$th partial deriative $\partial_j( \partial_i f)$ is a continuous function $U \to \R$ for any $j = 1, \dotsc m$. We denote the function $\partial_j(\partial_i f)$ more succinctly as $\partial_{j,i} f$. 
+\end{definition}
+
+\begin{theorem}[Equality of mixed partials] \label{mixed-partials}
+	Suppose $f : U \to \R$ is $C^2$. Then, for all $i, j = 1, \dotsc, m$, we have \[ \partial_{j,i} f = \partial_{i,j} f. \] 
+\end{theorem}
+
+% TODO: incomplete
+
+\begin{remark}
+	There are many versions of this theorem. For instance, there is the version due to Peano \cite[theorem 9.41]{rudin}. It assumes that $\partial_i f$, $\partial_j f$, and $\partial_{j,i} f$ all exist, and that $\partial_{j,i} f$ is continuous; it then proves that $\partial_{i,j} f$ must also exist and be equal $\partial_{j,i} f$. The version stated above will be enough for our needs. 
+\end{remark}
+
+\begin{remark}
+	If $f : U \to \R$ is $C^2$, the \emph{Hessian} of $f$ at $a$, denoted $Hf(a)$, is the matrix of second partial derivatives. 
+	\[ Hf(a) = \begin{bmatrix} \partial_{1,1} f(a) & \partial_{1,2} f(a) & \dotsb & \partial_{1,m} f(a) \\
+	\vdots & \vdots & \ddots & \vdots \\
+	\partial_{m,1} f(a) & \partial_{m,2} f(a) & \dotsb & \partial_{m,m} f(a) \end{bmatrix} \]
+	\Cref{mixed-partials} guarantees that $Hf(a)$ is a symmetric matrix. 
+\end{remark}
+
 \subsection{Smooth functions}
 
 \begin{definition} \label{smooth-multivar}
-	We make the following string of definitions. 
-	\begin{itemize}
-		\item We say that a function $f : U \to \R^n$ is $C^0$ if it is continuous. 
-		\item Inductively, for any positive integer $n$, we say that a function $f : U \to \R^n$ is $C^n$ if the partial derivatives $\partial_i f_j$ all exist and are $C^{n-1}$ functions $U \to \R$. 
-		\item Finally, we say that a function $f : U \to \R^n$ is $C^\infty$ or \emph{smooth} if it is $C^n$ for all $n$. 
-	\end{itemize}
+	We say that a function $f : U \to \R^n$ is $C^\infty$, or \emph{infinitely differentiable}, or \emph{smooth}, if it is $C^k$ for all $k$. 
 \end{definition}
 
-\Cref{continuous-partials} tells us that $f : U \to \R^n$ is $C^1$ if and only if it is continuously differentiable. 
+In \cref{smooth-single-var}, we formulated the principle that smooth single variable functions can be tailored to almost arbitrary specifications. The same principle remains true of smooth multivariable functions, and we can often bootstrap up from the single variable case. 
 
-% TODO: Bump functions
+\begin{exercise}
+	Let $\psi : \R \to \R$ denote the bump function from \cref{canonical-bump}. Then define $\Psi : \R^m \to \R$ by
+	\[ \Psi(x_1, \dotsc, x_m) = \psi(x_1) \psi(x_2) \dotsb \psi(x_m). \]
+	Show that $\Psi$ is a bump function (ie, a smooth function with compact support). 
+\end{exercise}
 
 \section{Inverse function theorem}
 
-The following is a multivariable analog of \cref{inverse-derivative}, but it is much harder to prove. 
+Throughout, $U$ will denote an open subset of $\R^m$. The following is a multivariable analog of \cref{inverse-derivative}, but it is much harder to prove. 
 
 \begin{theorem}
-	Suppose $U$ is an open subset of $\R^m$ and $f : U \to \R^n$ is continuously differentiable. Suppose further that $a \in U$ is a point such that the derivative $df_a$ is invertible. Then there exists an open neighborhood $V$ of $a$ in $U$ such that $f(V)$ is open and the restriction $f|_{V}$ of $f$ to $V$ is an bijective function $V \to f(V)$. Moreover, if $g : f(V) \to V$ is the inverse of $f|_{V}$, then $g$ is also continuously differentiable.
+	Suppose $f : U \to \R^n$ is continuously differentiable and $a \in U$ is a point such that the derivative $df_a$ is invertible. Then $m = n$, there exists an open neighborhood $V$ of $a$ in $U$ such that $f(V)$ is open, the restriction $f|_{V}$ of $f$ to $V$ is a bijection $V \to f(V)$, and the inverse function $(f|_V)^{-1} : f(V) \to V$ is also continuously differentiable. 
 \end{theorem}
+
+% TODO: incomplete
+

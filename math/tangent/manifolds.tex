@@ -7,14 +7,14 @@ At this point, we will need to use the language of topological spaces. If you ha
 Throughout, let $X$ be a topological space.
 
 \begin{definition}
-	A \emph{chart} on $X$ is a pair $(U, x)$ consisting of an open subset $U \subseteq X$ and a function $x : U \to \R^n$ which is a homeomorphism onto an open subset of $\R^n$ for some $n$. We call the functions $x_i := \pi_i \circ x : U \to \R$ \emph{coordinate functions} on $U$ with respect to the chart $(U, x)$, and for any $P \in U$, the list of numbers $x_1(P), \dotsc, x_n(P)$ are the \emph{coordinates} of $P$ with respect to the chart $(U, x)$. 
+	A \emph{chart} on $X$ is a pair $(U, x)$ consisting of an open subset $U \subseteq X$ and a function $x : U \to \R^n$ which is a homeomorphism onto an open subset of $\R^n$ for some $n$. We call the functions $x_i := \pi_i \circ x : U \to \R$ \emph{coordinate functions} on $U$ with respect to the chart $(U, x)$, and for any $p \in U$, the list of numbers $x_1(p), \dotsc, x_n(p)$ are the \emph{coordinates} of $p$ with respect to the chart $(U, x)$. 
 \end{definition}
 
 \begin{exercise} \label{polar-representation}
-	Let $X = \R^2$ and let $U$ denote $\R^2$ minus the non-negative real axis. Let $\text{polar} : U \to \R^2$ be the function which sends a point $P$ to its polar representation $(r(P), \theta(P))$, where $r(P) = |P|$ and $\theta(P)$ is the angle in radians strictly between 0 and $2\pi$ formed between $P$ and the non-negative real axis. Show that this function is a homeomorphism onto its image. 
+	Let $X = \R^2$ and let $U$ denote $\R^2$ minus the non-negative real axis. Let $\text{polar} : U \to \R^2$ be the function which sends a point $p$ to its polar representation $(r(p), \theta(p))$, where $r(p) = |p|$ and $\theta(p)$ is the angle in radians strictly between 0 and $2\pi$ formed between $P$ and the non-negative real axis. Show that this function is a homeomorphism onto its image. 
 \end{exercise}
 
-\begin{definition}
+\begin{definition} \label{transition-map}
 	Suppose $(U, x)$ and $(V, y)$ are charts on $X$. The \emph{transition map} from $(U, x)$ to $(V, y)$ is the function $y \circ x^{-1}$. 
 	\[ \begin{tikzcd}
 	x(U \cap V) \ar{r}{x^{-1}} & U \cap V \ar{r}{y} & y(U \cap V)
@@ -25,6 +25,10 @@ Throughout, let $X$ be a topological space.
 	The two charts $(U, x)$ and $(V, y)$ on $X$ are \emph{smoothly compatible}, or just \emph{compatible}, if both of the transition maps between $(U, x)$ and $(U, y)$ are smooth. 
 \end{definition}
 
+\begin{remark}
+	One could also make a definition of \emph{$C^k$-compatibility} for any $k = 0, 1, \dotsc, \infty$, but we won't ever use this. 
+\end{remark}
+
 \begin{exercise} \label{polar-compatible-with-identity}
 	Let $\id : \R^2 \to \R^2$ denote the identity map and $\text{polar} : U \to \R^2$ the polar representation map from \cref{polar-representation}. Show that $(\R^2, \id)$ and $(U, \text{polar})$ are compatible charts. 
 \end{exercise}
@@ -33,8 +37,8 @@ Throughout, let $X$ be a topological space.
 	Show that the relation ``is compatible with'' is \emph{not} an equivalence relation on the set of all charts on $X$. \textit{Hint}. The function $\R \to \R$ given by $x \mapsto x^3$ is a smooth homeomorphism, but its inverse is not differentiable. 
 \end{exercise}
 
-\begin{exercise}
-	Suppose $(U, x)$ and $(V, y)$ are compatible charts, where $x : U \to \R^m$ and $y : V \to \R^n$, and that $U \cap V$ is nonempty. Show that $m = n$. \textit{Hint}. Pick a point $P \in U \cap V$, and consider the derivatives of $x \circ y^{-1}$ at $y(P)$ and of $y \circ x^{-1}$ at $x(P)$. 
+\begin{exercise} \label{dimension-well-defined}
+	Suppose $(U, x)$ and $(V, y)$ are compatible charts, where $x : U \to \R^m$ and $y : V \to \R^n$, and that $U \cap V$ is nonempty. Show that $m = n$. \textit{Hint}. Pick a point $p \in U \cap V$, and consider the derivatives of $x \circ y^{-1}$ at $y(p)$ and of $y \circ x^{-1}$ at $x(p)$. 
 \end{exercise}
 
 \begin{definition}
@@ -53,6 +57,16 @@ This leads us to the following definition.
 \end{definition}
 
 Of course, \cref{existence-maximal-atlas} tells us that any not-necessarily-maximal atlas on a metric space $X$ defines a manifold structure on $X$ in a canonical way. When constructing examples, it is usually useful to consider non-maximal atlases. But, when dealing with abstract manifolds, we will often find it convenient to assume that the atlas that the manifold comes equipped with is already maximal, which is the reason that the definition is made the way it is. 
+
+We can also make the following definitions.
+
+\begin{definition}
+	Suppose $X$ is a manifold and $p \in X$ is a point. By \cref{dimension-well-defined}, there is a unique integer $n$ such that, for every chart $(U, x) \in \mathscr{A}_X$ with $p \in U$, the codomain of $x$ is $\R^n$. This integer is called the \emph{dimension of $X$ at $p$}, and is denoted $\dim_p(X)$. 
+\end{definition}
+
+\begin{definition}
+	A manifold $X$ is \emph{$n$-dimensional} if $\dim_p(X) = n$ for all $p \in X$. 
+\end{definition}
 
 \section{Examples}
 
@@ -174,6 +188,8 @@ Thus $\mathscr{A} = \{(U, x), (V, y)\}$ is an atlas on the M\"obius strip $M$. L
 
 \section{Smooth functions}
 
+We will now define what it means for a function between two manifolds to be smooth. Recall that in \cref{multivar} we saw that the case when the codomain is $\R$ was the most important. The same will be true here. 
+
 \subsection{Smooth real-valued functions}
 
 \begin{definition} \label{smooth-real-valued}
@@ -181,9 +197,7 @@ Thus $\mathscr{A} = \{(U, x), (V, y)\}$ is an atlas on the M\"obius strip $M$. L
 	\[ \begin{tikzcd} x(U) \ar{r}{x^{-1}} & U \ar{r}{f} & \R \end{tikzcd} \]
 \end{definition}
 
-There are two disconcerting things about this definition. First, there is the issue that checking smoothness of a particular function seems next to impossible: the maximal atlas $\mathscr{A}_X$ will have \emph{many, many} charts, and the definition makes it seem like we need to check smoothness on each of these charts. 
-
-Thankfully, we don't need to check on all possible charts. As soon as we check smoothness on a collection of charts that cover $X$, we're done. 
+There are two disconcerting things about this definition. First, there is the issue that checking smoothness of a particular function seems next to impossible: the maximal atlas $\mathscr{A}_X$ will have \emph{many, many} charts, and the definition makes it seem like we need to check smoothness on each of these charts! Thankfully, we don't need to check on all possible charts. As soon as we check smoothness on a collection of charts that cover $X$, we're done. 
 
 \begin{lemma} \label{smooth-real-val-local}
 	Let $X$ be a manifold and $f : X \to \R$ a function. Suppose that there exists an atlas $\mathscr{A} \subseteq \mathscr{A}_X$ such that $f \circ x^{-1}$ is smooth for any $(U, x) \in \mathscr{A}$. Then $f$ is smooth. 
@@ -209,8 +223,8 @@ The second disconcerting thing is the following. Suppose $U \subseteq \R^m$ is a
 \subsection{Partial derivatives of real-valued functions}
 
 \begin{definition}
-	Let $X$ be a manifold and $(U, x) \in \mathscr{A}_X$ a chart. Recall that we then have coordinate functions $x_1, \dotsc, x_n : U \to \R$, where $x_i = \pi_i \circ x$. Given a smooth function $f : X \to \R$ and a point $P \in U$, we define the \emph{partial derivative of $f$ at $P$ with respect to $x_i$} by
-	\[ \left.\frac{df}{dx_i}\right|_P := \partial_i (f \circ x^{-1})(x(P)). \]
+	Let $X$ be a manifold and $(U, x) \in \mathscr{A}_X$ a chart. Recall that we then have coordinate functions $x_1, \dotsc, x_n : U \to \R$, where $x_i = \pi_i \circ x$. Given a smooth function $f : X \to \R$ and a point $p \in U$, we define the \emph{partial derivative of $f$ at $p$ with respect to $x_i$} by
+	\[ \left.\frac{df}{dx_i}\right|_p := \partial_i (f \circ x^{-1})(x(p)). \]
 	In other words, $df/dx_i = \partial_i(f \circ x^{-1}) \circ x$ as functions $U \to \R$.  
 \end{definition}
 
@@ -240,6 +254,18 @@ We should also note that we haven't redefined the word ``smooth'' in any conflic
 	Show that a function $f : X \to \R$ is smooth in the sense of \cref{smooth-real-valued} if and only if it is smooth in the sense of \cref{smooth-between-manifolds}.
 \end{exercise}
 
+Finally, we have the following result which tells us that the case when the codomain is $\R$ is the most important case. 
+
+\begin{proposition}
+	Suppose $f : X \to Y$ is a function between two manifolds. Then the following are equivalent. 
+	\begin{enumerate}[(a)]
+		\item $f$ is smooth. 
+		\item For every smooth function $g :  Y \to \R$, the composite $g \circ f$ is a smooth function $X \to \R$. 
+	\end{enumerate}
+\end{proposition}
+
+% TODO: incomplete
+
 \subsection{Diffeomorphisms}
 
 \begin{definition}
@@ -253,3 +279,11 @@ We should also note that we haven't redefined the word ``smooth'' in any conflic
 \begin{exercise}
 	If $X$ is a manifold and $(U, x) \in \mathscr{A}_X$, prove that $x : U \to x(U)$ is a diffeomorphism. 
 \end{exercise}
+
+\begin{exercise}
+	Suppose $f : X \to Y$ is a diffeomorphism. Show that, for any open subset $U \subseteq X$, the image $f(U)$ is open in $Y$. 
+\end{exercise}
+
+\begin{definition}
+	Suppose $X$ and $Y$ are manifolds. A function $f : X \to Y$ is a \emph{local diffeomorphism} at a point $p \in X$ if there exists an open neighborhood $U$ of $p$ such that $f|_U$ is a diffeomorphism $U \to f(U)$. 
+\end{definition}

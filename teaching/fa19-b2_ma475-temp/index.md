@@ -14,8 +14,9 @@ nonav: true
     * Office: Tutt Science 234.
 * [Course syllabus](syllabus).
 * Course materials: [Off on a Tangent](stable.pdf)
-    * I'm going to try to keep the PDF linked above stable, so that the numbering doesn't move around as we go through the course. But I'll probably be editing the notes as we go through the course: here are [the most recent version of the notes](/math/tangent/main.pdf).
+    * I'm going to be working on these notes as we go through the block, but I'll try to keep the PDF linked above quasi-stable (I won't change anything on or before the reading assignment for 3 days after today). If you want, you can also look at the most updated version of the notes [here](/math/tangent/main.pdf).
     * See [here](resources) for a longer list of potentially useful resources.
+    * See [here](gradschool) if you're going to graduate school.
 * Reading assignment submission form.
 * Self reflection form.
 
@@ -61,8 +62,8 @@ Office hours (12:30–1:30pm).
 
 <tr>
 <td rowspan="2">Wed</td>
-<td>Single variable derivatives: Properties</td>
-<td>1.C–D</td>
+<td>Single variable derivatives: Extremums and monotonicity</td>
+<td>1.C</td>
 <td></td>
 </tr>
 
@@ -77,7 +78,7 @@ Writing assignment due (11:59pm). [Prompt](/teaching/prompt.pdf).
 <tr>
 <td rowspan="2">Thu</td>
 <td>Single variable derivatives: Levels of differentiability</td>
-<td>1.E</td>
+<td>1.D</td>
 <td></td>
 </tr>
 
