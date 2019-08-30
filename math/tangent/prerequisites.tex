@@ -1,8 +1,43 @@
 \chapter{Prerequisites} \label{prerequisites}
 
+\section{Euclidean space} \label{euclidean}
+
+For any non-negative integer $n$, we write $\R^n$ to denote the set of lists of $n$ real numbers. We will sometimes write its elements as horizontal lists with commas, as in \[ (h_1, \dotsc, h_n), \] and sometimes as vertical column vectors, as in \[ \begin{bmatrix} h_1 \\ \vdots \\ h_n \end{bmatrix}.  \]
+Given $v_1, v_2 \in \R^n$, we define their sum $v_1 + v_2$ by adding the entries coordinate-wise. Given $\lambda \in \R$ and $v \in \R$, we define $\lambda v$ by multiplying each entry of $v$ by $\lambda$. For each $i = 1,  \dotsc, n$, we define the \emph{$i$th standard basis vector}, denoted $e_i$ to be the list whose $i$th entry is 1 and all other entries are 0. 
+\[ \begin{aligned} e_1 &= (1, 0, 0, \dotsc, 0, 0) \\
+e_2 &= (0, 1, 0, \dotsc, 0, 0) \\
+&\enspace \vdots \\
+e_n &= (0, 0, 0, \dotsc, 0, 1) \end{aligned} \]
+Observe that 
+\[ (h_1, \dotsc, h_n) = h_1 e_1 + h_2 e_2 + \dotsb + h_n e_n.  \]
+Also, for any $i = 1, \dotsc, n$, we let $\pi_i : \R^n \to \R$ denote the $i$th \emph{projection map}, given by 
+\[ \pi_i(h_1, \dotsc, h_n) = h_i. \]
+
+If $v = (h_1, \dotsc, h_n) \in \R^n$, its \emph{norm} $|v|$ is defined by
+\[ |v| := \sqrt{h_1^2 + \dotsb + h_n^2}. \]
+Then $|v| = 0$ if and only if $v = 0$. Moreover, we have the \emph{triangle inequality}, which says that
+\[ |v_1 + v_2| \leq |v_1| + |v_2| \]
+for all $v_1, v_2 \in \R^n$. 
+This is allows us to regard $\R^n$ as a metric space with the distance function $d(v_1, v_2) = |v_1 - v_2|$. 
+
+In fact, there is another norm on $\R^n$ which is sometimes useful. If $v = (h_1, \dotsc, h_n)$, its  \emph{max norm}, denoted $|v|_\mx$, is defined by
+\[ |v|_\mx = \max\{ |h_1|, \dotsc, |h_n| \}. \]
+It is still true that $|v|_\mx = 0$ if and only if $v = 0$, and that $|v_1 + v_2|_\mx \leq |v_1|_\mx + |v_2|_\mx$. 
+
+The following is a useful relationship between the max norm and the usual norm. 
+
+\begin{exercise} \label{max-l2}
+	For any $v \in \R^n$, show that
+	\[ |v|_\mx \leq |v| \leq \sqrt{n} |v|_\mx. \]
+\end{exercise}
+
+One consequence of \cref{max-l2} is that, if we define a metric $d_\mx$ on $\R^n$ using the max norm in place of the usual norm (ie, $d_\mx(v_1, v_2) = |v_1 - v_2|_\mx$), then $d_\mx$ is equivalent as a metric to the standard metric (cf. \cite[section 6.1]{protter-morrey} for the definition of equivalence for metrics).  
+
 \section{Little-oh notation} \label{little-oh}
 
-Throughout this section, let $X$ be a metric space and let $x_0$ be a point in $X$. 
+Suppose $X$ is a metric space\footnotemark\ and $x_0 \in X$ is a point. 
+
+\footnotetext{Even more generally, $X$ could be a topological space here. See \cref{topological-spaces}.}
 
 \begin{definition}
 	A function $g : X \setminus \{x_0\} \to \R$ is \emph{positive} if $g(x) > 0$ for all $x \in X \setminus \{x_0\}$. Similarly, $g$ is \emph{non-negative} if $g(x) \geq 0$ for all $x \in X \setminus \{x_0\}$.
@@ -35,10 +70,10 @@ Suppose $g$ is a positive function. \Cref{little-o-definition} below formulates 
 \end{exercise}
 
 \begin{exercise}
-	Let $X = \R^2$ and $x_0 = 0$. For each of the following functions $f$, determine whether or not $f(x) = o(|x|)$ as $x \to 0$. 
+	Let $X = \R^2$ and $x_0 = 0$. For each of the following functions $f$, determine whether or not $f(v) = o(|v|)$ as $x \to 0$. 
 	\begin{enumerate}[(a)]
-		\item $f(x,y) = x - y$. 
-		\item $f(x,y) = x^2 + y^2$. 
+		\item $f(h_1,h_2) = h_1 - h_2$. 
+		\item $f(h_1,h_2) = h_1^2 + h_2^2$. 
 	\end{enumerate}
 \end{exercise}
 
@@ -49,16 +84,16 @@ Suppose $g$ is a positive function. \Cref{little-o-definition} below formulates 
 \begin{exercise} \label{little-o-vector-space}
 	For a fixed positive function $g : X \setminus \{x_0\} \to \R$, prove that the set of functions $f : X \setminus \{x_0\} \to \R$ which are $o(g)$ as $x \to x_0$ is a vector space under the natural operations. In other words, verify the following three facts. 
 	\begin{enumerate}[(1)]
-		\item The zero function is $o(g(x))$. 
+		\item (``Zero is small'') The zero function is $o(g(x))$. 
 		\item (``Scalar multiples of small are still small'') If $c \in \R$ is a scalar and $f(x) = o(g(x))$, then 
 		\[ cf(x) = o(g(x)). \] 
 		\item (``Sum of smalls is still small'') If $f_1(x) = o(g(x))$ and $f_2(x) = o(g(x))$, then \[ (f_1 + f_2)(x) = o(g(x)). \]
 	\end{enumerate}
 \end{exercise}
 
-\begin{exercise} \label{little-o-multiplicative}
+\begin{comment} \label{little-o-multiplicative}
 	Suppose $f_1, f_2, g_1, g_2 : X \setminus \{x_0\} \to \R$ are functions with $g_1, g_2$ positive such that $f_1(x) = o(g_1(x))$ and $f_2(x) = o(g_2(x))$ as $x \to x_0$. Prove that $(f_1 \cdot f_2)(x) = o((g_1 \cdot g_2)(x))$. 
-\end{exercise}
+\end{comment}
 
 \begin{comment}
 \begin{exercise}
@@ -94,12 +129,12 @@ The $\delta$ obtained by going through the above process then has the desired pr
 
 \section{Linear algebra} \label{linear-algebra}
 
-The following is a whirlwind reminder of some linear algebra. For more details, you are encouraged to reference a dedicated linear algebra text (eg, \cite{axler} or \cite{hefferon}). To start off, you should review the definitions of vector spaces, subspaces, linear independence, span, dimension, and linear maps. 
+The following is a whirlwind reminder of some linear algebra, mostly intended to establish notation. For more details, you are encouraged to reference a dedicated linear algebra text (eg, \cite{axler} or \cite{hefferon}). To start off, you should review the definitions of vector spaces, subspaces, linear independence, span, dimension, and linear maps. 
 
 \subsection{Important vector spaces}
 
 \begin{definition}
-	We write $\R^n$ to denote the vector space of lists of $n$ numbers. We will sometimes write its elements as horizontal lists with commas, as in $(a_1, \dotsc, a_n)$, and sometimes as vertical column vectors, as in \[ \begin{bmatrix} a_1 \\ \vdots \\ a_n \end{bmatrix}.  \]
+	We write $\R^n$ to denote the vector space of lists of $n$ real numbers. We will sometimes write its elements as horizontal lists with commas, as in $(a_1, \dotsc, a_n)$, and sometimes as vertical column vectors, as in \[ \begin{bmatrix} a_1 \\ \vdots \\ a_n \end{bmatrix}.  \]
 \end{definition}
 
 \begin{definition}
@@ -124,7 +159,7 @@ Throughout this section, we assume that $U$, $V$, and $W$ are finite dimensional
 	\[ \begin{bmatrix} a_1 \\ \vdots \\ a_n \end{bmatrix} \mapsto a_1 v_1 + \dotsb + a_n v_n. \]
 \end{lemma}
 
-\begin{definition}
+\begin{definition} \label{matrix-representation-linear}
 	Suppose $\ell : V \to W$ is a linear map. Let $B = v_1, \dotsc, v_m$ be a basis for $V$ and let $C$ be a basis for $W$. The \emph{matrix representation of $\ell$ with respect to $B$ and $C$}, denoted $[\ell]_{B,C}$, is the $n \times m$ matrix whose $i$th column of $[\ell]_{B,C}$ is $[\ell(v_i)]_C$. In other words,
 	\[ [\ell]_{B,C} = \begin{bmatrix} [\ell(v_1)]_C & \dotsb & [\ell(v_m)]_C \end{bmatrix}. \]
 \end{definition}
@@ -160,7 +195,7 @@ Throughout this section, we assume that $U$, $V$, and $W$ are finite dimensional
 	Suppose that $V$ and $W$ are $m$- and $n$-dimensional vector spaces, respectively, and that and $B$ and $C$ are bases for $V$ and $W$, respectively. Then the function $\ell \mapsto [\ell]_{B,C}$ is an isomorphism \[ \begin{tikzcd} \mathscr{L}(V, W) \ar{r} & \mathscr{M}_{n,m}. \end{tikzcd} \] 
 \end{lemma}
 
-\begin{definition}
+\begin{definition} \label{matrix-representation-standard}
 	If $\ell : \R^m \to \R^n$ is a linear map, the \emph{standard matrix representation} of $\ell$, denoted $[\ell]$, is the matrix of $\ell$ with respect to the standard bases on $\R^m$ and $\R^n$.
 \end{definition} 
 
@@ -182,20 +217,24 @@ Throughout this section, we assume that $U$, $V$, and $W$ are finite dimensional
 	Show that $d$ is a metric on $X \times Y$, and that it is equivalent to the metric from \cref{product-metric}.
 \end{exercise}
 
-\section{Norms of linear maps} \label{operator-norm}
+\section{Operator norm} \label{operator-norm}
 
-\begin{definition}
+\subsection{Basics} \label{operator-norm-basic}
+
+\begin{definition} \label{operator-norm-definition}
 	Suppose $\ell : \R^m \to \R^n$ is a linear map. Then we define the \emph{operator norm}, or just \emph{norm}, of $\ell$, denoted $\|\ell\|$, by
 	\[ \|\ell\| = \sup\, \{ |\ell(v)| : |v| \leq 1 \}. \]
 \end{definition} 
 
-\subsection{Basic properties}
+The following gives an important reformulation of \cref{operator-norm-definition}.  
 
-\begin{exercise}
+\begin{exercise} \label{operator-norm-reformulation}
 	Suppose $\ell : \R^m \to \R^n$ is a linear map. Show that 
 	\[ \|\ell\| = \inf \, \{ \lambda \in \R : |\ell(v)| \leq \lambda |v| \text{ for all } v \in \R^m \}. \]
 	In particular, $|\ell(v)| \leq \|\ell\| \cdot |v|$ for all $v \in \R^m$. 
 \end{exercise}
+
+Here are some fundamental properties of the operator norm. 
 
 \begin{exercise} \label{norm-is-hausdorff}
 	Suppose $\ell : \R^m \to \R^n$ is a linear map. Show that $\ell = 0$ if and only if $\|\ell\| = 0$. 
@@ -226,7 +265,7 @@ Throughout this section, we assume that $U$, $V$, and $W$ are finite dimensional
 \end{exercise}
 
 \begin{lemma} \label{linear-and-small}
-	Suppose $\ell : \R^m \to \R^n$ is a linear map and $|\ell(v)| = o(|v|)$ as $v \to 0$. Prove that $\ell = 0$. 
+	Suppose $\ell : \R^m \to \R^n$ is a linear map and $|\ell(v)| = o(|v|)$ as $v \to 0$. Then $\ell = 0$. 
 \end{lemma}
 
 \begin{proof}
@@ -241,20 +280,7 @@ so
 This contradicts \cref{norm-is-hausdorff}. 
 \end{proof}
 
-
-\begin{exercise}[``Linear functions of small functions are still small''] \label{linear-of-small-is-small}
-	Suppose $r : \R^m \to \R^n$ is a function such that $|r(v)| = o(|v|)$ as $v \to 0$. If $\ell : \R^n \to \R^p$ is linear, prove that $|\ell(r(v))| = o(|v|)$ also. 
-\end{exercise}
-
-\begin{comment}
-\begin{proof}
-Observe that
-\[ \frac{|\ell(r(v))|}{|v|} \leq \frac{\|\ell\| \cdot |r(v)|}{|v|}. \]
-Since $|r(v)| = o(|v|)$, we see that the right-hand side tends to 0 as $v \to 0$. The squeeze theorem thus guarantees that $|\ell(r(v))| = o(|v|)$ also. 
-\end{proof}
-\end{comment}
-
-\subsection{Operator norm as a metric}
+\subsection{Operator norm as a metric \texorpdfstring{$\star$}{*}}
 
 \begin{definition} \label{operators-as-metric-space}
 	Let $\mathscr{L}(\R^m, \R^n)$ denote the set of all linear maps $\R^m \to \R^n$. Define the distance between $\ell, \ell' \in \mathscr{L}(\R^m, \R^n)$ by $\|\ell - \ell'\|$. It follows from \cref{norm-is-hausdorff,subadditive} that this distance function makes $\mathscr{L}(\R^m, \R^n)$ a metric space. 
@@ -332,11 +358,15 @@ We now make a few further definitions that readers are invited to compare agains
 	If $Y$ is a topological space, $\sim$ an equivalence relation on $Y$, and $X = Y/\sim$ the quotient space as in \cref{quotient-space} above, then the map $\pi : Y \to X$ which carries a point $y \in Y$ to its equivalence class is continuous. This follows immediately from the definition of the quotient topology.
 \end{example}
 
+\begin{exercise}
+	If $f : X \to Y$ and $g : Y \to Z$ are continuous functions between topological spaces, then $g \circ f$ is also continuous. 
+\end{exercise}
+
 \begin{definition}[Homeomorphisms]
 	Suppose $X$ and $Y$ are topological spaces and $f : X \to Y$ is a function. Then $f$ is a \emph{homeomorphism} if it is bijective, continuous, and $f^{-1} : Y \to X$ is continuous. More generally, $f$ is a \emph{homeomorphism onto its image} if is injective, continuous, and $f^{-1} : f(X) \to X$ is also continuous. 
 \end{definition}
 
-\begin{definition}[Subspace]
+\begin{definition}[Subspace] \label{subspace-topology}
 	If $X$ is a topological space and $S$ is a subset, then the \emph{subspace topology} on $S$ is
 	\[ \tau_S := \{ S \cap U : U \in \tau_X \}. \]
 	Further, $S$ equipped with the subspace topology is called a \emph{subspace} of $X$. 
@@ -346,9 +376,9 @@ We now make a few further definitions that readers are invited to compare agains
 	If $X$ is a topological space and $S$ is a subspace, prove that the inclusion map $i : S \to X$ is continuous. 
 \end{exercise}
 
-\subsection{Hausdorff spaces}
+\subsection{Hausdorff spaces \texorpdfstring{$\star$}{*}}
 
-\begin{definition}
+\begin{definition}[Hausdorff]
 	A topological space $X$ is \emph{Hausdorff} if, for every pair of distinct points $x, y \in X$, there exist disjoint open subsets $U$ and $V$ containing $x$ and $y$, respectively. 
 \end{definition}
 
@@ -356,11 +386,13 @@ We now make a few further definitions that readers are invited to compare agains
 	If $X$ is a metric space, the corresponding topological space as in \cref{metric-to-topological} is automatically Hausdorff. 
 \end{example}
 
+However, quotient spaces need not be Hausdorff. 
+
 \begin{exercise}
-	Quotient spaces need not be Hausdorff. For example, let $Y = \R \times \{\pm 1 \}$ inside $\R^2$, and define an equivalence relation $\sim$ by declaring that $(a, 1) \sim (a,-1)$ for all $a \neq 0$. Show that $X = Y/\sim$ is not Hausdorff. 
+	Let $Y = \R \times \{\pm 1 \}$ inside $\R^2$, and define an equivalence relation $\sim$ by declaring that $(a, 1) \sim (a,-1)$ for all $a \neq 0$. Show that $X = Y/\sim$ is not Hausdorff. 
 \end{exercise}
 
-\subsection{Compact and $\sigma$-compact spaces}
+\subsection{Compact and \texorpdfstring{$\sigma$}{sigma}-compact spaces \texorpdfstring{$\star$}{*}}
 
 \begin{definition}[Open covers]
 	An \emph{open cover} of a topological space $X$ is a collection $\mathscr{U}$ of open subsets of $X$ which cover $X$, in the sense that \[ \bigcup_{U \in \mathscr{U}} U = X. \]
@@ -371,11 +403,7 @@ We now make a few further definitions that readers are invited to compare agains
 	A topological space $X$ is \emph{compact} if every open subcover has a finite subcover. 
 \end{definition}
 
-% TODO: Figure out sigma-compact, Hausdorff, etc
-
-The following may be notions that you have not seen before in the context of metric spaces. 
-
-\begin{definition}
+\begin{definition}[$\sigma$-compact]
 	A topological space $X$ is \emph{$\sigma$-compact} if it is a countable union of compact subspaces. 
 \end{definition}
 

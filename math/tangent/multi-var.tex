@@ -1,14 +1,18 @@
 \chapter{Multivariable derivatives} \label{multivar}
 
-In this chapter, we will study derivatives of functions $S \to \R^n$ where $S$ is a subset of $\R^m$. We dealt with the case $m = n = 1$ in the previous chapter, starting with a very geometric idea of tangent lines to graphs. For large values of $m$ and $n$, graphs become hard to visualize and it is not so clear what ``tangent'' should mean. But there is at least one higher dimensional case when we can use some geometry to formalize what ``tangent'' should mean, which is the case $m = 2$ and $n = 1$. The graph of such a function is a surface in $\R^3$, and its ``tangent'' at a point should be a plane. We'll begin by analyzing a particular example of this situation to build up some geometric intuition, and then proceed with the abstract discussion of multivariable derivatives for general $m$ and $n$. 
+In this chapter, we will study derivatives of functions $S \to \R^n$ where $S$ is a subset of $\R^m$. As it turns out, the most important case is when $n = 1$. In other words, the ``multi'' in the name of this chapter (as opposed to the ``single'' in the name of the previous chapter) is really referring to the fact that we might have $m > 1$ (rather than to the fact that we might have $n > 1$). Moreover,  as it turns out, the single variable case is quite important for the multivariable case; we'll use results from \cref{single-var} frequently in this chapter. 
 
-\section{An extended example}
+We'll begin by analyzing a particular example to build up some geometric intuition in \cref{multivar-introductory-example}, and then proceed with the abstract discussion of multivariable derivatives. 
 
-Let us begin with an example. Our analysis of this example will presage many of the concepts we will discuss later in the chapter. 
-The example we'll consider is the function $f : \R^2 \to \R$ defined by
-\[ f(x_1, x_2) = x_1^2 + x_2^2. \]
+\section{Example} \label{multivar-introductory-example}
 
-\subsection{Describing the graph of $f$}
+Recall that we started off our discussion of single variable derivatives starting with a very geometric idea of tangent lines to graphs. For large values of $m$ (and $n$), graphs become hard to visualize and it is not so clear what ``tangent'' should mean. But there is at least one multivariable situation where, by exerting some strain on the three-dimensional visualization sectors of our brain, we can geometrically formalize what ``tangent'' might mean. This is the $m = 2, n = 1$ situation. The graph of such a function is a surface in $\R^3$, and its ``tangent'' at a point should be a plane. 
+
+By analyzing a specific function $f : \R^2 \to \R$,  we can get some valuable insights into multivariable derivatives; the analysis will presage many of the concepts we will discuss later in the chapter. Any function would do, but let's focus on the function $f : \R^2 \to \R$ defined by
+\[ f(x_1, x_2) = x_1^2 + x_2^2 \]
+for our analysis.  
+
+\subsection*{Describing the graph of \texorpdfstring{$f$}{f}}
 
 First off, let's try to get a solid understanding of the graph of $f$. The graph $\Gamma$ is a subset of $\R^2 \times \R = \R^3$ defined by
 \[ \Gamma = \{ (x_1, x_2, y) : y = f(x_1, x_2) \} = \{ (x_1, x_2, y) : y = x_1^2  + x_2^2 \}. \]
@@ -20,7 +24,7 @@ It's also worth considering the ``level sets,'' which are the slices of $\Gamma$
 
 Putting these slices together, we see that the graph $\Gamma$ is a ``big parabolic bowl.''
 
-\subsection{Tangent plane at $a = (2,1)$}
+\subsection*{Tangent plane at \texorpdfstring{$a = (2,1)$}{a = (2,1)}}
 
 Now that we understand what the graph of $f$ looks like, let's try to figure out what the ``tangent plane'' $T$ at a point $a = (2,1)$ will look like. Of course, it's a plane inside $\R^3$ that passes through the point $(2, 1, f(2,1)) = (2, 1, 5)$. To specify which plane it actually is, we start by describing some lines that lie on this plane. 
 
@@ -35,11 +39,14 @@ Thus this tangent line is the line parametrized by
 
 These two lines must uniquely determine the entire plane $T$. One way of describing $T$ that immediately falls out of the parametrizations we've found of the tangent lines is the plane parametrized by
 \[ \begin{bmatrix} h_1 \\ h_2 \end{bmatrix} \mapsto \begin{bmatrix} 2 \\ 1 \\ 5 \end{bmatrix} + \begin{bmatrix} h_1 \\ h_2 \\ 4h_1 + 2h_2 \end{bmatrix}. \]
-The important part of this expression is the bottom entry on the far right, the $4h_1 + 2h_2$. To see why, consider the function $\R^2 \to \R$ given by $(h_1, h_2)  \mapsto 4h_1 + 2h_2$. This is what we will call the \emph{(total) derivative} of $f$ and denote by $df_a$. Notice that $df_a$ is a linear map $\R^2 \to \R$. Moreover, its graph is a plane passing through the origin that is parallel to $T$. In other words, if we take the graph of $df_a$ and translate it over to the point $(2,1,5)$, we obtain exactly the tangent plane $T$. Speaking more loosely, the derivative $df_a : \R^2 \to \R$ records all of the ``slope-y information'' about the tangent plane $T$. 
+The important part of this expression is the bottom entry on the far right, the $4h_1 + 2h_2$. To see why, consider the function $\R^2 \to \R$ given by $(h_1, h_2)  \mapsto 4h_1 + 2h_2$. This is what we will call the \emph{(total) derivative} of $f$ and denote by $df_a$. Notice that $df_a$ is a linear map $\R^2 \to \R$. Moreover, its graph is a plane passing through the origin that is parallel to $T$. In other words, if we take the graph of $df_a$ and translate it over to the point $(2,1,5)$, we obtain exactly the tangent plane $T$. Speaking more loosely, the derivative $df_a : \R^2 \to \R$ records all of the ``slopey information'' about the tangent plane $T$. 
 
-Notice moreover that the standard matrix representation $[df_a]$ of $df_a$ is \begin{equation} \label{jacobian-matrix-example} [df_a] = \begin{bmatrix} 4 & 2 \end{bmatrix} = \begin{bmatrix} \partial_1 f(a) & \partial_2 f(a) \end{bmatrix}. \end{equation}
+Notice moreover that, if $e_1, e_2$ are the standard basis vectors of $\R^2$ (cf. \cref{euclidean}), then
+\[ \begin{aligned} df_a(e_1) &= 4 = \partial_1  f(a) \\
+df_a(e_2) &= 2 = \partial_2 f(a) \end{aligned} \]
+so the standard matrix representation $[df_a]$ (cf. \cref{matrix-representation-standard}) of the linear map $df_a$ is \begin{equation} \label{jacobian-matrix-example} [df_a] = \begin{bmatrix} 4 & 2 \end{bmatrix} = \begin{bmatrix} \partial_1 f(a) & \partial_2 f(a) \end{bmatrix}. \end{equation}
 
-\subsection{$df_a$ as an approximation}
+\subsection*{\texorpdfstring{$df_a$}{dfa} as an approximation}
 
 Consider the function $\epsilon : \R^2 \to \R$ defined by
 \[ v \mapsto |f(a+v)-f(a)-df_a(v)|.  \]
@@ -47,15 +54,15 @@ If $v = (h_1, h_2)$, we have
 \[ \epsilon(v) = \epsilon\left( \begin{bmatrix} h_1 \\ h_2 \end{bmatrix} \right) \mapsto |(2+h_1)^2 + (1+h_2)^2 - 5 - 4h_1 - 2h_2| = |h_1^2 + h_2^2| = \left|\begin{bmatrix} h_1 \\ h_2 \end{bmatrix} \right|^2 = |v|^2. \]
 Notice that $\epsilon$ gets small rapidly as $v \to 0$. More precisely, notice that
 \[ \lim_{v \to 0} \frac{\epsilon(v)}{|v|} = \lim_{v \to 0} |v| = 0, \]
-so $\epsilon = o(|v|)$ as $v \to 0$. 
-
-Since $\epsilon$ gets small rapidly, the function $v \mapsto f(a) + df_a(v)$ is a good approximation of the function $v \mapsto f(a+v)$ for small values of $v$. Said differently, letting $x = a + v$, the function $x \mapsto f(a) + df_a(x-a)$ is a good approximation of $f$ near $a$. 
+so $\epsilon = o(|v|)$ as $v \to 0$. Since $\epsilon$ gets small rapidly, the function $v \mapsto f(a) + df_a(v)$ is a good approximation of the function $v \mapsto f(a+v)$ for small values of $v$. Said differently, letting $x = a + v$, the function $x \mapsto f(a) + df_a(x-a)$ is a good approximation of $f$ near $a$. 
 
 \subsection{Overview}
 
-In what follows, we will turn the above example on its head and \emph{define} the derivative using approximations. In other words, the derivative $df_a$ will be defined to be a linear function which yields a good approximation of $f$ near a point $a$. Then we will prove in \cref{jacobian-matrix} that the partial derivatives can be used to describe $df_a$, as we noted in \cref{jacobian-matrix-example} above. The reason for doing this is that there are some bizarre functions where partial derivatives make sense, but tangent planes do not (cf. \cref{partials-dont-imply-differentiable} below).
+In what follows, we will turn the above example on its head and \emph{define} the derivative using approximations. In other words, the derivative $df_a$ will be defined to be a linear function which yields a good approximation of $f$ near a point $a$. Then we will prove in \cref{jacobian-matrix} that the partial derivatives can be used to compute the standard matrix representation $df_a$, as we noted in \cref{jacobian-matrix-example} above. 
 
-As you may be able to tell, we'll be using linear algebra heavily in this chapter. If you need a brief refresher, check out \cref{linear-algebra}. We'll also need some facts about the operator norm; you may not have seen this before, and can refer to \cref{operator-norm} as needed. 
+This might seem a bit ``backwards,'' given our analysis of the example above, but there is a good reason for doing this; it turns out that there are some bizarre functions where partial derivatives make sense, but tangent planes do not (cf. \cref{partials-dont-imply-differentiable} below).
+
+As you may be able to tell, we'll be using linear algebra heavily in this chapter. If you need a brief refresher, check out \cref{linear-algebra}. We'll also need some facts about the operator norm; I encourage you to look at \cref{operator-norm-definition} and at least skim through \cref{operator-norm-basic}. 
 
 \section{Definition of the derivative}
 
@@ -68,7 +75,7 @@ Throughout, $S$ will denote a subset of $\R^m$.
 
 It turns out that there can exist at most one linear map that has the above property. 
 
-\begin{lemma}
+\begin{lemma} \label{differentiable-unique}
 	Suppose $f : S \to \R^m$ is differentiable at an interior point $a \in S$. If $\ell$ and $\ell'$ are both linear maps $\R^m \to \R^n$ such that
 	\[ |f(a+v) - f(a) - \ell(v)| = o(|v|) \text { and } |f(a+v) - f(a) - \ell'(v)| = o(|v|) \text{ as } v \to 0, \]
 	then $\ell = \ell'$. 
@@ -82,12 +89,18 @@ It turns out that there can exist at most one linear map that has the above prop
 	Since both $|f(a+v)-f(a)-\ell(v)|$ and $|f(a+v)-f(a)-\ell'(v)|$ are $o(|v|)$, \cref{less-than-small-is-small,little-o-vector-space} imply that $|\phi(v)| = o(|v|)$ also. Then \cref{linear-and-small} implies that $\phi = 0$. 
 \end{proof}
 
+\begin{exercise}
+	Do the exercises from \cref{prerequisites} that are invoked in the proof above (\cref{less-than-small-is-small,little-o-vector-space,norm-is-hausdorff}).
+\end{exercise}
+
+\Cref{differentiable-unique} guarantees that the following definition makes sense.  
+
 \begin{definition}
 	Suppose $f : S \to \R^n$ is differentiable at an interior point $a \in S$. Then the \emph{total derivative}, or just \emph{derivative}, of $f$ at $a$, denoted $df_a$, is the unique linear map $\R^m \to \R^n$ satisfying
 	\[ |f(a+v)-f(a)-df_a(v)| = o(|v|) \text{ as } v \to 0.  \]
 \end{definition}
 
-Few examples can be computed directly from the definition. 
+We've now defined the derivative, but it's fairly difficult to use this definition in practice. There are very few examples that can be computed directly from the definition. Here are some.
 
 \begin{exercise} \label{derivative-of-linear}
 	Suppose $\ell : \R^m \to \R^n$ is a linear map. Prove that $d\ell_a = \ell$ for all $a \in \R^m$.  
@@ -97,6 +110,10 @@ Few examples can be computed directly from the definition.
 	Let $f : \R^2 \to \R$ be the map $f(x_1,x_2) = x_1x_2$. Use the definition of the derivative to prove that
 	\[ df_{a}(h_1, h_2) = a_2h_1 + a_1 h_2 \]
 	for all $a = (a_1, a_2) \in \R^2$. 
+\end{exercise}
+
+\begin{exercise} \label{constant-plus-line}
+	Suppose $v, w \in \R^n$ and $f : \R \to \R^n$ is given by $f(t) = v + tw$. Calculate $df_a$ for any $a \in \R$. What is $df_a(1)$?
 \end{exercise}
 
 We will develop a bit more theory in order to compute derivatives more easily. Meanwhile, we can prove the following directly from the definition. 
@@ -109,6 +126,8 @@ We will develop a bit more theory in order to compute derivatives more easily. M
 
 \subsection{Sum and scalar multiples rule}
 
+Note that, by taking $w = 0$ in \cref{constant-plus-line}, you have already shown that the derivative of a constant function is zero. 
+
 \begin{exercise}[Sum rule] \label{sum-rule}
 	Prove that, if $f, g : S \to \R^n$ are both differentiable at an interior point $a \in S$, then $f + g$ is also differentiable at $a$ and \[ d(f+g)_a = df_a + dg_a. \]
 \end{exercise}
@@ -119,7 +138,7 @@ We will develop a bit more theory in order to compute derivatives more easily. M
 
 \subsection{Chain rule}
 
-The proof of the following is essentially the same as the second proof of the single variable chain rule given in \cref{chain-rule-single-second-proof}. Since this proof is basically a repeat, some details are omitted; you are asked to fill in the details in \cref{chain-rule-details} below. 
+The proof of the following is essentially the same as the second proof of the single variable chain rule given in \cref{chain-rule-single-section}. Since this proof is basically a repeat, some details are omitted; you are asked to fill in the details in \cref{chain-rule-details} below. 
 
 \begin{theorem}[Chain rule] \label{chain-rule}
 	Suppose that $S$ and $T$ are subsets of $\R^m$ and $\R^n$, respectively, that $f : S \to T$ is differentiable at an interior point $a$, that $f(a)$ is an interior point of $T$, and that $g : T \to \R^p$ is differentiable at $f(a)$. Then the composite $g \circ f : S \to \R^p$ is also differentiable at $a$, and 
@@ -136,7 +155,7 @@ The proof of the following is essentially the same as the second proof of the si
 	\begin{equation} \label{rewrite-error} g(f(a+v)) - g(f(a)) - dg_{f(a)}(df_a(v)) = dg_{f(a)}(r(v)) + s(df_a(v)+r(v)). \end{equation}
 	This means that 
 	\[ |g(f(a+v)) - g(f(a)) - dg_{f(a)}(df_a(v))| \leq |dg_{f(a)}(r(v))| + |s(df_a(h)+r(v))|. \]
-	Since $dg_{f(a)}$ is linear and $|r(v)| = o(|v|)$, \cref{linear-of-small-is-small} guarantees that $|dg_{f(a)}(r(v))| = o(|h|)$ also. Thus it is sufficient to prove that $|s(df_a(v) + r(v))| = o(|v|)$. To do this, define $\eta(w) = |s(w)|/|w|$ and then notice that 
+	Since $dg_{f(a)}$ is linear and $|r(v)| = o(|v|)$, \cref{chain-rule-details} part (\ref{linear-of-small-is-small}) guarantees that $|dg_{f(a)}(r(v))| = o(|h|)$ also. Thus, by \cref{little-o-vector-space}, it is sufficient to prove that $|s(df_a(v) + r(v))| = o(|v|)$. To do this, define $\eta(w) = |s(w)|/|w|$ and then notice that 
 	\[ \begin{aligned} \frac{|s(df_a(v)+r(v))|}{|v|} &= \eta(df_a(v)+r(v)) \cdot \frac{|df_a(v) + r(v)|}{|v|} \\
 	&\leq \eta(df_a(v) + r(v)) \left( \|df_a\| + \frac{|r(v)|}{|v|} \right). \end{aligned} \]
 	We now take the limit as $h \to 0$. Using the facts that $\eta \circ (df_a + r)$ is continuous at 0 and that $|r(v)| = o(|v|)$, we obtain the result. 
@@ -145,19 +164,28 @@ The proof of the following is essentially the same as the second proof of the si
 \begin{exercise} \label{chain-rule-details}
 	\begin{enumerate}[(a)]
 		\item Prove \cref{rewrite-error}. 
-		\item If you haven't done it already, do \cref{linear-of-small-is-small}.
+		\item \label{linear-of-small-is-small} Suppose $r : \R^m \to \R^n$ is a function such that $|r(v)| = o(|v|)$ as $v \to 0$. If $\ell : \R^n \to \R^p$ is linear, prove that $|\ell(r(v))| = o(|v|)$ also.
 		\item Prove that $\eta \circ (df_a + r)$ is continuous at 0. 
 	\end{enumerate}
+
+	\begin{hint}[for part (\ref{linear-of-small-is-small})] Even though the operator norm does not appear anywhere in the statement of this exercise, you might find the concept useful. In particular, you might consider doing \cref{operator-norm-reformulation} and then using it to prove (\ref{linear-of-small-is-small}). 
+	\end{hint}
 \end{exercise}
+
+\begin{comment}
+\begin{proof}
+Observe that
+\[ \frac{|\ell(r(v))|}{|v|} \leq \frac{\|\ell\| \cdot |r(v)|}{|v|}. \]
+Since $|r(v)| = o(|v|)$, we see that the right-hand side tends to 0 as $v \to 0$. The squeeze theorem thus guarantees that $|\ell(r(v))| = o(|v|)$ also. 
+\end{proof}
+\end{comment}
 
 \subsection{Differentiability by components}
 
-Here we show that it's ``enough'' to consider the case $n = 1$. 
+Recall that we asserted at the beginning of this chapter that the ``multi'' in the name of this chapter refers to the number of inputs (rather than the number of outputs). This section is where we show that understanding the $n = 1$ case is ``enough'' to understand general $n$.
 
 \begin{definition}
-	For $j = 1, \dotsc, n$, let $\pi_j : \R^n \to \R$ denote the $j$th \emph{projection map}
-	\[ \pi_j(x_1, \dotsc, x_n) = x_j. \]
-	Then, for any function $f : S \to \R^n$, we define the $j$th \emph{component function} $f_j : S \to \R$ to be the composite $\pi_j \circ f$. 
+	For any function $f : S \to \R^n$, we define the $j$th \emph{component function} $f_j : S \to \R$ to be the composite $\pi_j \circ f$, where $\pi_j$ is the $j$th projection map (cf. \cref{euclidean}).
 \end{definition}
 
 \begin{lemma} \label{differentiable-by-components}
@@ -177,26 +205,26 @@ Here we show that it's ``enough'' to consider the case $n = 1$.
 \end{proof}
 
 \begin{exercise} \label{components-are-small-implies-small}
-	\begin{enumerate}[(a)]
-		\item For any vector $w \in \R^n$, show that \[ \displaystyle |w| \leq \sqrt{n} \max_j |\pi_j(w)|. \]
-		\item Show that, if $S$ is a neighborhood of 0 in $\R^m$ and $r :  S  \to \R^n$ is a function such that $|r_j(v)| = o(|v|)$ as $v \to 0$ for all $j = 1, \dotsc, n$, then $|r(v)| = o(|v|)$ also. \textit{Hint.} Use part (a). 
-	\end{enumerate}
+	Do \cref{max-l2}. Then use it to show that if $S$ is a neighborhood of 0 in $\R^m$ and $r :  S  \to \R^n$ is a function such that $|r_j(v)| = o(|v|)$ as $v \to 0$ for all $j = 1, \dotsc, n$, then $|r(v)| = o(|v|)$ also.
 \end{exercise}
 
 \subsection{Partial derivatives}
 
-Here we focus on the case $n = 1$. In other words, we consider functions whose input is $m$ real numbers, and whose output is just a single number. 
+We showed in the previous section that it's enough to understand the $n = 1$ case. So, in this section, we'll focus our attention on the $n = 1$ case and try to understand these derivatives better. 
 
 \begin{definition}
-	Suppose $f : S \to \R$ is a function and $a \in S$ is an interior point. The $i$th \emph{partial derivative} of $f$ at $a$, denoted \[ \partial_i f(a) \text{ or } \frac{\partial f}{\partial x_i}(a) \] is defined to be the limit
-	\[ \lim_{h \to 0} \frac{f(a+he_i) - f(a)}{h}. \]
+	Suppose $f : S \to \R$ is a function and $a \in S$ is an interior point. The $i$th \emph{partial derivative} of $f$ at $a$, denoted $\partial_i f(a)$ is defined to be the limit
+	\[ \lim_{h \to 0} \frac{f(a+he_i) - f(a)}{h}, \]
+	where $e_i$ denotes the $i$th standard basis vector (cf. \cref{euclidean}). If we're using $x$ to denote the input to $f$ and $x_i$ to denote the $i$th component of the input, $\partial_i f(a)$ is sometimes also denoted by one of the following. 
+	\[ \left. \frac{\partial f}{\partial x_i}\right|_{x = a} \quad \left.\frac{\partial}{\partial x_i} f(x)\right|_{x = a} \quad \frac{\partial f}{\partial x_i}(a) \]
 \end{definition}
 
 You may remember from multivariable calculus that partial derivatives behave a great deal like single variable derivatives. The reason for this is the following important remark, which reinterprets the partial derivative as a single variable derivative. 
 
 \begin{remark} \label{partial-to-single}
 	Consider the function $\xi_i : \R \to \R^m$ given by $\xi_i(h) = a + he_i$. Then 0 is an interior point of $T = \xi_i^{-1}(S) \subseteq \R$, and $f \circ \xi_i$ is a single variable function $T \to \R$. Moreover, we have
-	\[ \partial_i f(a) = (f \circ \xi_i)'(0). \]
+	\[ \partial_i f(a) = (f \circ \xi_i)'(0), \]
+	just by writing out the definition of both sides. 
 \end{remark}
 
 \begin{example} \label{computing-partials-example}
@@ -218,14 +246,14 @@ We can also use \cref{partial-to-single} to prove some partial derivative analog
 \begin{exercise}[Product rule for partial derivatives] \label{product-rule-partials}
 	Suppose $f, g : S \to \R$ are functions and $a \in S$ is an interior point such that $\partial_i f(a)$ and $\partial_i g(a)$ both exist. Prove that $\partial_i (fg)(a)$ also exists and that
 	\[ \partial_i (fg)(a) = \partial_i(f)(a) g(a) + f(a) \partial_i g(a). \]
-	\textit{Hint}. Use \cref{partial-to-single} and the statement of the single variable product rule \ref{product-cn-singlevar}.
+	\begin{hint} Use \cref{partial-to-single} and the statement of the single variable product rule \ref{product-cn-singlevar}. \end{hint}
 \end{exercise}
 
 \begin{exercise}[Interior extremum theorem] \label{interior-extremum-multivar}
-	Suppose $f : S \to \R$ is a function and an interior point $a \in S$ is a local extremum of $f$. Show that, if $\partial_i f(a)$ exists, then $\partial_i f(a) = 0$. \textit{Hint}. Use \cref{partial-to-single} and the single variable interior extremum theorem \ref{interior-extremum}. 
+	Suppose $f : S \to \R$ is a function and an interior point $a \in S$ is a local extremum of $f$. Show that, if $\partial_i f(a)$ exists, then $\partial_i f(a) = 0$. \begin{hint} Use \cref{partial-to-single} and the single variable interior extremum theorem \ref{interior-extremum}. \end{hint}
 \end{exercise}
 
-We have the same caveat to the interior extremum theorem that we had in the single variable case (cf. \cref{interior-extremum-converse-false}), except that there are even more ways for the converse to fail. 
+We have the same caveat to the interior extremum theorem that we had in the single variable case (cf. \cref{interior-extremum-converse-false}), except that there are now even more ways for the converse to fail. 
 
 \begin{example}
 	Consider the function $f : \R^2 \to \R$ given by \[ f(x_1, x_2) = x_1^2 - x_2^2. \]
@@ -234,7 +262,7 @@ We have the same caveat to the interior extremum theorem that we had in the sing
 	% TODO: picture
 \end{example}
 
-The main reason we care about partial derivatives is that they help us compute derivatives. Note that we will generalize this result in \cref{jacobian-matrix} below. For more about the notation $[df_a]$, see \cref{matrix-representations}.
+Now for the main result of this section: partial derivatives is that they help us compute derivatives. Note that we will generalize this result in \cref{jacobian-matrix} below. 
 
 \begin{lemma} \label{differentiability-implies-partials}
 	If $f : S \to \R$ is differentiable at an interior point $a \in S$, then the $i$th partial derivative $\partial_i f(a)$ exists for all $i = 1, \dotsc m$, and the standard matrix representation $[df_a]$ of the linear map $df_a : \R^m \to \R$ is a $1 \times m$ matrix whose $i$th entry is $\partial_i f(a)$. 
@@ -244,11 +272,17 @@ The main reason we care about partial derivatives is that they help us compute d
 \begin{proof}
 	Let $r$ be the ``error in approximation'' function
 	\[ r(v) = f(a+v) - f(a) - df_a(v), \]
-	so that $|r(v)| = o(|v|)$ as $h \to 0$. Then 
-	\[ \begin{aligned} 0 &= \lim_{h \to 0} \frac{|r(he_i)|}{|he_i|} \\
-	&= \lim_{h \to 0} \frac{|f(a+he_i)-f(a)-df_a(he_i)|}{|h|} \\
-	&= \lim_{h \to 0} \left| \frac{f(a+he_i)-f(a)}{h} - df_a(e_i) \right| \end{aligned} \]
-	which means that $d f_a(e_i) = \partial f_a(e_i)$. 
+	so that $|r(v)| = o(|v|)$ as $h \to 0$. Then
+	\[ r(he_i) = f(a+he_i) - f(a) - df_a(he_i) = f(a+he_i) - f(a) - h df_a(e_i) \]
+	by linearity of $df_a$, so
+	\[ \frac{r(he_i)}{h} = \frac{f(a+he_i) - f(a) - hdf_a(e_i)}{h} = \frac{f(a+he_i) - f(a)}{h} - df_a(e_i). \]
+	Then 
+	\[ \begin{aligned} \lim_{h \to 0} \left| \frac{f(a+he_i) - f(a)}{h} - df_a(e_i) \right| &= \lim_{h \to 0} \left| \frac{r(he_i)}{h} \right| \\&= \lim_{h \to 0} \frac{|r(he_i)|}{|h|} \\
+	&= \lim_{h \to 0} \frac{|r(he_i)|}{|he_i|} \\
+	&= 0 \end{aligned} \]
+	where we used the fact that $|r(v)| = o(|v|)$ as $v \to 0$ for the final step. This tells us that
+	\[ \partial_i f(a) = \lim_{h \to 0} \frac{f(a+he_i) - f(a)}{h} \]
+	exists and equals $df_a(e_i)$. 
 \end{proof}
 
 \begin{remark} \label{gradient}
@@ -261,7 +295,7 @@ Now for the important caveat: unfortunately, the converse to \cref{differentiabi
 \begin{exercise} \label{partials-dont-imply-differentiable}
 	Consider the function $f : \R^2 \to \R$ defined as follows.
 	\[ f(x_1, x_2) = \begin{cases} \dfrac{x_1 x_2}{x_1^2 + x_2^2} &  \text{if } (x_1, x_2) \neq 0 \\ 0 & \text{if } (x_1, x_2) = 0 \end{cases} \]
-	Show that $\partial_1 f(0)$ and $\partial_2 f(0)$ both exist, but that $f$ is not even continuous at 0, so cannot be differentiable by \cref{differentiable-implies-continuous}. \textit{Hint.} Approach the origin along the line $x_1 = x_2$. 
+	Show that $\partial_1 f(0)$ and $\partial_2 f(0)$ both exist, but that $f$ is not even continuous at 0, so cannot be differentiable (cf.  \cref{differentiable-implies-continuous}). \begin{hint} Approach the origin along the line $x_1 = x_2$. \end{hint}
 \end{exercise}
 
 This behavior is fairly pathological; \cref{continuous-partials} later on will provide a converse to \cref{differentiability-implies-partials} under a fairly mild additional hypothesis. 
@@ -282,24 +316,42 @@ This behavior is fairly pathological; \cref{continuous-partials} later on will p
 \end{theorem}
 
 \begin{exercise}
-	Prove \cref{jacobian-matrix}. \textit{Hint.} Use \cref{differentiable-by-components,differentiability-implies-partials}. 
+	Prove \cref{jacobian-matrix}. \begin{hint} Use \cref{differentiable-by-components,differentiability-implies-partials}. \end{hint}
 \end{exercise}
 
 \subsection{Rank of a differentiable map}
 
-\begin{definition}
+\begin{definition} \label{immersive-submersive-critical}
 	Suppose $f : S \to \R^n$ is differentiable at an interior point $a \in S$. The rank of the linear map $df_a : \R^m \to \R^n$ is also called the \emph{rank of $f$ at $a$}, denoted $\rank_a(f)$. Note that $\rank_a(f) \leq \min\{m,n\}$.
 	\begin{itemize}
-		\item If $\rank_a(f) = n$, then we say that $f$ is a \emph{submersion at $a$}. 
+		\item If $\rank_a(f) = m$, then we say that $f$ is \emph{immersive} at $a$. Note that this is equivalent to asking that $df_a$ be injective. 
+		\item If $\rank_a(f) = n$, then we say that $f$ is \emph{submersive at $a$}. Note that this is equivalent to asking that $df_a$ be surjective. 
+		\item If $\rank_a(f) = m = n$, then we say that $f$ is \emph{\'etale at $a$}. Note that this is equivalent to asking that $df_a$ be an isomorphism. 
 		\item If $\rank_a(f) = \min\{m,n\}$, then we say that $a$ is a \emph{regular point} of $f$. 
 		\item If $\rank_a(f) < \min\{m,n\}$, then we say that $a$ is a \emph{critical point} of $f$.
 	\end{itemize}
 \end{definition}
 
-Note that, if $m \geq n$, then $f$ is a submersion at $a$ if and only if $a$ is a regular point of $f$. If $m < n$, then $f$ cannot be a submersion at any point. 
+There are lots of relationships between these notions, depending on how $m$ compares to $n$. You should convince yourself of the following facts.  
+\begin{itemize}
+	\item If $m > n$...
+	\begin{itemize}
+		\item $f$ cannot be immersive at any point.
+		\item $a$ is a regular point of $f$ if and only if $f$ is submersive at $a$.
+	\end{itemize}
+	\item If $m < n$...
+	\begin{itemize}
+		\item $f$ cannot be submersive at any point.
+		\item $a$ is a regular point of $f$ if and only if $f$ is immersive at $a$.
+	\end{itemize}
+	\item If $m = n$...
+	\begin{itemize}
+		\item $a$ is a regular point of $f$ if and only if $f$ is immersive at $a$, if and only if $f$ is submersive at $a$, if and only if $f$ is \'etale at $a$. 
+	\end{itemize}
+\end{itemize}
 
 \begin{caution}
-	A map $f$ being a submersion at an interior point $a \in S$ is always defined as it is above, and critical points are always defined to be the opposite of regular points. But some mathematicians use a different definition of regularity: they define a point to be regular if $\rank_a(f) = n$ (in which case, its always true that $f$ is a submersion at $a$ if and only if $a$ is a regular point of $f$). If $m \geq n$, there's no difference between these alternative definitions and our definitions. But, if $m < n$, there is a difference: these other mathematicians would say that all points are critical in this case, but that isn't true for us. So, if you see the words ``regular point'' and ``critical point'' in another text and it's possible that $m < n$, it's worth looking back to make sure you know what the author means!
+	A map $f$ being immersive or submersive at an interior point $a \in S$ is always defined as it is above, and critical points are always defined to be the opposite of regular points. But some mathematicians use a different definition of regularity: they define a point to be regular if $\rank_a(f) = n$, so that, by definition, it's \emph{always} true (for all $m, n$) that $f$ is a submersion at $a$ if and only if $a$ is a regular point of $f$. If $m \geq n$, there's no difference between these alternative definitions and our definitions. But, if $m < n$, there is a difference: these other mathematicians would say that all points are critical in this case, but that isn't true for us. So, if you see the words ``regular point'' and ``critical point'' in another text and it's possible that $m < n$, it's worth looking back to make sure you know what the author means!
 \end{caution}
 
 \begin{example} \label{polar-map}
@@ -413,7 +465,7 @@ Thus
 \[ [df_{(r,\theta)}] = \begin{bmatrix} \cos \theta & -r \sin \theta \\ \sin \theta & r \cos \theta \end{bmatrix}. \]
 Since this is a square matrix, $df_{(r, \theta)}$ has non-maximal rank if and only if its determinant vanishes. But
 \[ \det [df_{(r, \theta)}] = r\cos^2 \theta + r\sin^2 \theta = r, \]
-so the critical locus of $f$ is the vertical line $r = 0$, and $f$ is a submersion away from this line. 
+so the critical locus of $f$ is the vertical line $r = 0$, and $f$ is \'etale away from this line. 
 \end{example}
 
 \begin{exercise}
@@ -428,67 +480,58 @@ Throughout, $U$ denotes an open subset of $\R^m$.
 	If a function $f : U \to \R^n$ is differentiable at every $a \in U$, then $f$ is \emph{differentiable on $U$}. Then the \emph{derivative} of $f$, denoted $df$, is the function $U \to \mathscr{L}(\R^m, \R^n)$ given by $a \mapsto df_a$. Given $i = 1, \dotsc, m$ and $j = 1, \dotsc n$, the \emph{$i$th partial derivative} $\partial_i f_j$ is the function $U \to \R$ defined by $a \mapsto \partial_i f_j(a)$. 
 \end{definition}
 
-\subsection{Continuous differentiability}
+\subsection{Zero derivatives}
 
-At this point, we will need to make use of the operator norm; see \cref{operator-norm} if you have not seen this before. Under this norm, the set $\mathscr{L}(\R^m, \R^n)$ of all linear maps $\R^m \to \R^n$ can be regarded a metric space (cf. \cref{operators-as-metric-space}). 
+Here we prove a multivariable version of \cref{deriv-zero-implies-constant}, which stated that a differentiable function must be constant if its derivative vanishes. In fact, we will use the single variable version to prove the multivariable version. 
 
-\begin{definition}
-	If $f : U \to \R^n$ is a differentiable function and the derivative $df : U \to \mathscr{L}(\R^m, \R^n)$ is continuous, then $f$ is said to be \emph{continuously differentiable}. 
-\end{definition}
-
-\begin{lemma} \label{continuously-differentiable-by-components}
-	A function $f : U \to \R^n$ is continuously differentiable if and only if the component functions $f_j : U \to \R$ are all continuously differentiable for $j = 1, \dotsc, n$. 
-\end{lemma}
+\begin{proposition} \label{deriv-zero-implies-constant-multivar}
+	Suppose $B$ is an open ball and $f : B \to \R^n$ is a differentiable function such that $df = 0$. Then $f$ is constant.  
+\end{proposition}
 
 \begin{proof}
-	We will use \cref{differentiable-by-components}, which tells us that $f$ is differentiable if and only if $f_j$ is differentiable for all $j = 1, \dotsc, n$, and moreover that $df_{j,a} = \pi_j \circ df_a$ for all $a \in U$. In other words, the following diagram commutes. 
-	\[ \begin{tikzcd} U \ar{r}{df} \ar[bend right]{dr}[swap]{df_j} & \mathscr{L}(\R^m, \R^n) \ar{d}{\pi_j \circ -} \\ & \mathscr{L}(\R^m, \R) \end{tikzcd} \]
-	You will verify in \cref{continuously-differentiable-by-components-exercise}(a) below that the map ``postcompose with $\pi_j$'' map $\pi_j \circ - : \mathscr{L}(\R^m, \R^n) \to \mathscr{L}(\R^m, \R)$ is continuous. Thus, if $f$ is continuously differentiable, then $df_j$ is the composite of the two continuous maps $df$ and $\pi_j \circ -$, so it is itself continuous. 
-	
-	Conversely, suppose that $df_j$ is continuous for all $j$. Let us show that $df$ is continuous at every $a \in U$. Suppose $\epsilon > 0$. Since $df_j$ is continuous, there exists $\delta_j > 0$ such that \[ \|df_{j,a} - df_{j,b}\| < \frac{\epsilon}{\sqrt{n}} \] for all $b \in U$ such that $|a - b| < \delta_j$. Let $\delta := \min\{\delta_1, \dotsc, \delta_n\}$. Then $\|df_a - df_b\| < \epsilon$ for all $b \in U$ such that $|a-b| < \delta$, as you will verify in \cref{continuously-differentiable-by-components-exercise}(b) below. 
+	We can assume, without loss of generality, that $n = 1$ (cf. \cref{deriv-zero-implies-constant-multivar-details}). We want to show that, for any $a,  a' \in U$, we have $f(a) = f(a')$. Consider the function $\gamma : [0,1] \to B$ given by
+	\[ \gamma(t) = ta' + (1-t)a.  \]
+	In other words, $\gamma$ is the ``straight line path'' starting at $a$ and ending at $a'$. Notice that $\gamma(t) \in B$ for all $t$ because $a$ and $a'$ are both inside $B$ and $B$ is an open ball. Also, $\gamma$ is differentiable (cf. \cref{deriv-zero-implies-constant-multivar-details}). Thus $f \circ \gamma$ is a differentiable function $[0,1] \to \R$ and 
+	\[ (f \circ \gamma)'(t) = d(f \circ \gamma)_t(1) = df_{\gamma(t)}( d\gamma_{t}(1) ) = 0 \]
+	where we used the chain rule \ref{chain-rule} at the second step, and the fact that $df = 0$ for the final step. Thus it follows from \cref{deriv-zero-implies-constant} that $f \circ \gamma$ is constant, which means that
+	\[ f(a) = f(\gamma(0)) = f(\gamma(1)) = f(a'). \qedhere \]
 \end{proof}
 
-\begin{exercise} \label{continuously-differentiable-by-components-exercise}
-	\begin{enumerate}[(a)]
-		\item Check that the ``postcompose with $\pi_j$'' map $\mathscr{L}(\R^m, \R^n) \to \mathscr{L}(\R^m, \R)$ (ie, the one  given by $\phi \mapsto \pi_j \circ \phi$) is continuous. Alternatively, prove the more general statement given in \cref{composition-continuous} and then derive this statement.   
-		\item With notation as in the latter part of the proof above, verify that $\|df_a - df_b\| < \epsilon$. 
-	\end{enumerate}
+\begin{exercise} \label{deriv-zero-implies-constant-multivar-details}
+	 \begin{enumerate}[(a)]
+	 	\item Explain why proving \cref{deriv-zero-implies-constant-multivar} for $n = 1$ implies it for general $n$. 
+	 	\item Show that the straight line path $\gamma$ defined in the proof above is differentiable. 
+	 \end{enumerate}
 \end{exercise}
 
-\begin{exercise}
-	Suppose $U$ is an open subset $\R^m$, that $V$ is an open subset of $\R^n$, and that $f : U \to V$ and $g : V \to \R^p$ are both continuously differentiable. Show that $g \circ f$ is also continuously differentiable. \textit{Hint}. If you have not done \cref{composition-continuous}, do it. Then combine that statement with the chain rule \ref{chain-rule}.
-\end{exercise}
+\subsection{Continuous differentiability}
 
-The proof of the following theorem is surprisingly challenging. You may need to read through it several times. 
+The following theorem is the promised sort-of-converse to \cref{differentiability-implies-partials}. Recall from \cref{partials-dont-imply-differentiable} above that $\partial_i f$ existing for all $i$ is \emph{not} sufficient to guarantee differentiability. But, insisting that $\partial_i f$ exist \emph{and be continuous} turns out to be enough to guarantee differentiability of $f$. The proof is harder than you might expect. 
 
 \begin{theorem} \label{continuous-partials}
-	A function $f : U \to \R^n$ is continuously differentiable if and only if the partial derivatives $\partial_i f_j : U \to \R$ exist and are continuous for all $i = 1, \dotsc, m$ and $j = 1, \dotsc, n$. 
+	Suppose $f : U \to \R$ is a function such that the partial derivatives $\partial_i f : U \to \R$ exist for all $i = 1 , \dotsc m$. If $a \in U$ is a point such that $\partial_i f$ is continuous at $a$ for all $i$, then $f$ is differentiable at $a$. 
 \end{theorem}
 
 \begin{proof}
-	Thanks to \cref{continuously-differentiable-by-components}, we can assume without loss of generality that $n = 1$. If $f$ is differentiable, then \cref{differentiability-implies-partials} tells us that $\partial_i f = df(e_i)$. In other words, the following diagram commutes.
-	\[ \begin{tikzcd} U \ar{r}{df} \ar[bend right]{dr}[swap]{\partial_i f} & \mathscr{L}(\R^m, \R) \ar{d}{\text{``evaluate at $e_i$''}} \\ & \R \end{tikzcd} \]
-	The ``evaluate at $e_i$'' map is continuous by \cref{evaluation-continuous}. If $f$ is continuously differentiable, then $df$ is continuous, so we conclude that the composite $\partial_i f$ is also continuous. 
+	If $f$ is to be differentiable at $a$, we know from \cref{jacobian-matrix} what $df_a$ needs to be in terms of the partial derivatives; so let's turn this on its head by writing down the linear map defined by the partial derivatives, and then proving that that linear map is in fact $df_a$. 
 	
-	The converse is the hard part of this proof. Recall from \cref{partials-dont-imply-differentiable} above that $\partial_i f$ existing for all $i$ is \emph{not} sufficient to guarantee differentiability; we will need to use the fact that $\partial_i f$ exists \emph{and is continuous} to conclude differentiability. 
-	
-	Fix $a \in U$. Let $\ell$ be the linear map $\R^m \to \R$ such that \[ [\ell] = \begin{bmatrix}
+	More precisely, we mean the following. Let $\ell$ be the linear map $\R^m \to \R$ such that \[ [\ell] = \begin{bmatrix}
 	\partial_1f(a) & \dotsb & \partial_m f(a)
 	\end{bmatrix}. \]
-	In other words, $\ell$ is given by
+	In other words, $\ell : \R^m \to \R$ is the linear map given by
 	\[ \ell(h_1, \dotsc, h_m) = h_1 \partial_1 f(a) + \dotsb + h_m \partial_m f(a). \]
 	We will show that 
 	\[ |f(a+v) - f(a) - \ell(v)| = o(|v|) \text{ as } v \to 0, \]
 	which implies that $f$ is differentiable at $a$ and that $df_a = \ell$. In other words, we will show that, for any $\epsilon > 0$, there exists a $\delta > 0$ such that, for all $v \in \R^m$ with $|v| < \delta$, we have
 	\begin{equation} \label{continuous-differentiability-desired} |f(a+v) - f(a) - \ell(v)| \leq |v|\epsilon. \end{equation}
 	
-	Let $\delta_0 > 0$ be small enough that the open ball $B(a, \delta_0)$ is contained in $U$. We will soon make it smaller to get inequality \eqref{continuous-differentiability-desired} to hold. 
+	Let $\delta_0 > 0$ be small enough that the open ball $B(a, \delta_0)$ is contained in $U$. We will soon make it smaller to get inequality \eqref{continuous-differentiability-desired} to hold, but for the moment it is sufficient that $B(a, \delta_0) \subseteq U$. 
 	Suppose $v = (h_1, \dotsc, h_m) \in \R^m$ with $|v| < \delta_0$. Then consider the following vectors in $\R^m$. 
 	\[ \begin{aligned} 
 	v_0 &= 0 \\
 	v_1 &= (h_1, 0, 0 \dotsc, 0, 0) \\
 	v_2 &= (h_1, h_2, 0, \dotsc, 0, 0) \\
-	&~\,\vdots \\
+	&\enspace \vdots \\
 	v_{m-1} &= (h_1, h_2, h_3, \dotsc, h_{m-1}, 0) \\
 	v_m &= (h_1, h_2, h_3, \dotsc, h_{m-1}, h_m) = v \end{aligned} \]
 	See \cref{continuous-differentiability-picture}. 
@@ -531,19 +574,127 @@ The proof of the following theorem is surprisingly challenging. You may need to 
 	\[ f(a+v) - f(v) = \sum_{i = 1}^m \left( f(a+v_i) - f(a+v_{i-1}) \right). \]
 	Let us fix $i$ temporarily. Notice that $v_i = v_{i-1} + h_i e_i$, so
 	\[ f(a+v_i) - f(a+v_{i-1}) = f(a+v_{i-1}+h_ie_i) - f(a+v_{i-1}). \]
-	We now apply the mean value theorem \ref{mean-value-theorem} to the single variable function \[ h \mapsto f(a + v_{i-1} + he_i) \] on the closed interval between $0$ and $h_i$. For any such $h$, we have $|v_{i-1}+he_i| < \delta$, so the points $a+v_{i-1}+he_i$ are all contained inside the ball $B(a, \delta_0) \subseteq U$. Thus this function is well-defined and continuous. It is also differentiable on the interior of this interval: its derivative at a value $h$ is $\partial_i f(a+v_{i-1} + he_i)$, by definition of partial derivatives. The mean value theorem says that there exists $s_i$ between 0 and $h_i$ such that
+	We now apply the mean value theorem \ref{mean-value-theorem} to the single variable function \[ h \mapsto f(a + v_{i-1} + he_i) \] on the closed interval between $0$ and $h_i$. For any such $h$, we have $|v_{i-1}+he_i| < \delta$, so the points $a+v_{i-1}+he_i$ are all contained inside the ball $B(a, \delta_0) \subseteq U$. Thus this function is well-defined. It is also differentiable: its derivative at a value $h$ is $\partial_i f(a+v_{i-1} + he_i)$, by definition of partial derivatives. The mean value theorem says that there exists $s_i$ between 0 and $h_i$ such that
 	\[ \partial_i f(a+v_{i-1} + se_i) = \frac{f(a+v_{i-1} + h_ie_i) - f(a+v_{i-1})}{h_i} = \frac{f(a+v_{i}) - f(a + v_{i-1})}{h_i}, \]
 	or, in other words,
-	\[ f(a + v_i) - f(a+v_{i-1}) = h_i \partial_i f(a+v_{i-1}se_i). \]
+	\[ f(a + v_i) - f(a+v_{i-1}) = h_i \partial_i f(a+v_{i-1} + se_i). \]
 	See \cref{continuous-differentiability-picture} again. Unfixing $i$, we find that
 	\[ f(a+v) - f(a) = \sum_{i = 1}^m (f(a+v_i) - f(a+v_{i-1})) = \sum_{i = 1}^m h_i \partial_i f(a+v_{i-1} + s_i e_i). \]
 	Thus
 	\[ |f(a+v) - f(a)-\ell(v)| \leq \sum_{i = 1}^m |h_i| \cdot |\partial_i(a+v_{i-1}+s_ie_i) - \partial_if(a)|. \]
-	Since $\partial_if$ is continuous, there exists $\delta_i > 0$ such that $|\partial_i(a+w) - \partial_i(a)| < \epsilon/m$ for all $|w| < \delta_i$. Let $\delta = \min\{\delta_0, \delta_1, \dotsc, \delta_m\}$. If $|v| < \delta$, then $|v_{i-1} + s_ie_i| < |v| < \delta$ for all $i$, so
+	Since $\partial_if$ is continuous at $a$, there exists $\delta_i > 0$ such that $|\partial_i(a+w) - \partial_i(a)| < \epsilon/m$ for all $|w| < \delta_i$. Let $\delta = \min\{\delta_0, \delta_1, \dotsc, \delta_m\}$. If $|v| < \delta$, then $|v_{i-1} + s_ie_i| < |v| < \delta$ for all $i$, so
 	\[ |\partial_i(a+v_{i-1} + s_ie_i) - \partial_i f(a)| < \epsilon/m, \]
 	which means that
 	\[ |f(a+v) - f(a)-\ell(v)| \leq \sum_{i = 1}^m \frac{|h_i| \epsilon}{m} \leq |v|\epsilon. \]
-	This proves that $f$ is differentiable at any point $a \in U$, which completes the hard part of this proof. The final step is to show that $df : U \to \mathscr{L}(\R^m, \R)$ is continuous. This is left for you to check; see \cref{continuous-partials-details} below. 
+	This proves that $f$ is differentiable at $a$. 
+\end{proof}
+
+This leads us to the following definition. 
+
+\begin{definition}
+	A function $f : U \to \R^n$ is \emph{continuously differentiable} if $\partial_i f_j : U \to \R$ exists and is continuous for all $i = 1, \dotsc, m$ and $j = 1, \dotsc n$. Such a function is automatically differentiable by \cref{continuous-partials}. 
+\end{definition}
+
+Continuously differentiable functions have lots of nice properties. 
+
+\begin{exercise}
+	Suppose $f : U \to \R^n$ is continuously differentiable. Show that the critical locus of $f$ is a closed subset of $U$.
+\end{exercise}
+
+\begin{theorem}[Inverse function theorem] \label{inverse-function-theorem}
+	Suppose $f : U \to \R^n$ is continuously differentiable and \'etale at a point $a \in U$. Then there exists an open neighborhood $V$ of $a$ inside $U$ such that $f(V)$ is an  open subset of $\R^n$, the restriction $f|_{V}$ of $f$ to $V$ is a bijection $V \to f(V)$, and the inverse $(f|_V)^{-1} : f(V) \to V$ is also continuously differentiable. 
+\end{theorem}
+
+The proof of \cref{inverse-function-theorem} is lengthy, challenging, and relegated to a starred section below. But here are some applications. 
+
+\begin{exercise} \label{etale-open}
+	Suppose $f :  U \to \R^n$ is continuously differentiably and \'etale at all points in $U$. Show that $f$ is an open map: in other words, show that, if $V$ is an open subset of $U$, then $f(V)$ is an open subset of $\R^n$. 
+\end{exercise}
+
+\begin{exercise}
+	You might recall proving at some point in a previous class that $\R^2$ and $\R$ have the same cardinality: in other words, that there exists a bijection $f : \R^2 \to \R$. Show that any such bijection cannot be continuously differentiable. 
+	
+	\begin{hint}
+		Suppose for a contradition that $f : \R^2 \to \R$ is a continuously differentiable bijection. Let $U$ be an open subset of $\R^2$ such that $\partial_1 f(x) \neq 0$ for all $x \in U$, and then consider the function $g : U \to \R^2$ given by $g(x_1, x_2) = (f(x_1, x_2), x_2)$. 
+	\end{hint}
+\end{exercise}
+
+\subsubsection*{Proof of the inverse function theorem  \texorpdfstring{$\star$}{*}}
+
+We begin with the following multivariable version of \cref{bounded-derivative}. Again, we will actually use the single variable version to prove the multivariable version. 
+
+\begin{lemma} \label{bounded-deriv-multivar}
+	Suppose $B$ is an open ball and $f : B \to \R^n$ is a differentiable function. Suppose further that there exists a constant $M$ such that $|\partial_i f_j(x)| \leq M$ for all $i = 1, \dotsc, m$ and $j = 1, \dotsc, n$. Then
+	\[ |f(b) - f(a)| \leq m\sqrt{n} M |b-a| \]
+	for all $a, b \in B$. 
+\end{lemma}
+
+\begin{proof}
+	Let us first show that it is enough to prove the lemma for $n = 1$. Indeed, if it is true for $n = 1$, then it is true for all of the component functions $f_j : B \to \R$, so
+	\[ |f_j(b) - f_j(a)| \leq mM|b-a| \]
+	for all $a, b \in B$, which means that
+	\[ |f(b) - f(a)|_\mx \leq mM|b-a|, \]
+	where $|-|_\mx$ denotes the max norm defined in \cref{euclidean}. But then
+	\[ |f(b)-f(a)| \leq \sqrt{n} |f(b)-f(a)|_\mx \leq m\sqrt{n}M |b-a|, \]
+	where we have used \cref{max-l2} for the first step. 
+	
+	So we can assume that $n = 1$. The idea of this proof is very similar to the idea we used in the proof of  \cref{continuous-partials}. Set $v = b-a$. If $v = (h_1, \dotsc, h_m)$, we define the following list of vectors. 
+	\[ \begin{aligned} 
+	v_0 &= 0 \\
+	v_1 &= (h_1, 0, 0 \dotsc, 0, 0) \\
+	v_2 &= (h_1, h_2, 0, \dotsc, 0, 0) \\
+	&\enspace \vdots \\
+	v_{m-1} &= (h_1, h_2, h_3, \dotsc, h_{m-1}, 0) \\
+	v_m &= (h_1, h_2, h_3, \dotsc, h_{m-1}, h_m) = v \end{aligned} \]
+	Then set $a_i = a + v_i$, so that $a_0 = a$ and $a_m = b$. Notice that
+	\[ f(b) - f(a) = \sum_{i = 1}^m (f(a_i ) - f(a_{i-1})) \]
+	We're now going to restrict $f$ to the zigzag path from $a$ to $b$ made by the points $a_0, \dotsc, a_m$, looking at each segment in turn, just as we did in the proof of \cref{continuous-partials}. The function
+	\[ h \mapsto f(a_{i-1} + he_i) \]
+	is a single variable function whose derivative at a point $h$ is given by $\partial_i f(a_{i-1} + he_i)$, which we know is bounded in absolute value by $M$. Since this function has the value $f(a_{i-1})$ at $h = 0$ and $f(a_i)$ at $h = h_i$, \cref{bounded-derivative} gives us the first step of the following chain. 
+	\[ |f(a_i) - f(a_{i-1})| \leq M|h_i| \leq M|v|_\mx. \]
+	But then, using \cref{max-l2}, we have
+	\[ |f(a_i) - f(a_{i-1})| \leq M|v|_\mx \leq M|v| = M|b-a| \]
+	so we have
+	\[ |f(b) - f(a)| = \left| \sum_{i = 1}^m f(a_i) - f(a_{i-1}) \right| \leq \sum_{i = 1}^m |f(a_i) - f(a_{i-1})| \leq mM|b-a|. \qedhere \]
+\end{proof}
+
+\begin{proof}[Proof of the inverse function theorem \ref{inverse-function-theorem}]
+	
+\end{proof}
+
+\subsubsection*{Continuous differentiability and the operator norm \texorpdfstring{$\star$}{*}}
+
+For this section, we will need to make substantial use of the operator norm. This might make it a bit challenging for those who have not used the operator norm before, but the results contained in this section are also not terribly important. The only reason it is included is because \cref{continuous-differentiable-partials} is aesthetically a rather satisfying statement. 
+
+\begin{lemma} \label{continuously-differentiable-by-components}
+	Suppose $f : U \to \R^n$ is differentiable. Then $df : U \to \mathscr{L}(\R^m, \R^n)$ is continuous if and only if $df_j : \mathscr{L}(\R^m, \R)$ is continuous for all $j = 1, \dotsc, n$. 
+\end{lemma}
+
+\begin{proof}
+	We will use \cref{differentiable-by-components}, which tells us that $f$ is differentiable if and only if $f_j$ is differentiable for all $j = 1, \dotsc, n$, and moreover that $df_{j,a} = \pi_j \circ df_a$ for all $a \in U$. In other words, the following diagram commutes. 
+	\[ \begin{tikzcd} U \ar{r}{df} \ar[bend right]{dr}[swap]{df_j} & \mathscr{L}(\R^m, \R^n) \ar{d}{\pi_j \circ -} \\ & \mathscr{L}(\R^m, \R) \end{tikzcd} \]
+	You will verify in \cref{continuously-differentiable-by-components-exercise}(a) below that the map ``postcompose with $\pi_j$'' map $\pi_j \circ - : \mathscr{L}(\R^m, \R^n) \to \mathscr{L}(\R^m, \R)$ is continuous. Thus, if $f$ is continuously differentiable, then $df_j$ is the composite of the two continuous maps $df$ and $\pi_j \circ -$, so it is itself continuous. 
+	
+	Conversely, suppose that $df_j$ is continuous for all $j$. Let us show that $df$ is continuous at every $a \in U$. Suppose $\epsilon > 0$. Since $df_j$ is continuous, there exists $\delta_j > 0$ such that \[ \|df_{j,a} - df_{j,b}\| < \frac{\epsilon}{\sqrt{n}} \] for all $b \in U$ such that $|a - b| < \delta_j$. Let $\delta := \min\{\delta_1, \dotsc, \delta_n\}$. Then $\|df_a - df_b\| < \epsilon$ for all $b \in U$ such that $|a-b| < \delta$, as you will verify in \cref{continuously-differentiable-by-components-exercise}(b) below. 
+\end{proof}
+
+\begin{exercise} \label{continuously-differentiable-by-components-exercise}
+	\begin{enumerate}[(a)]
+		\item Check that the ``postcompose with $\pi_j$'' map $\mathscr{L}(\R^m, \R^n) \to \mathscr{L}(\R^m, \R)$ (ie, the one  given by $\phi \mapsto \pi_j \circ \phi$) is continuous. Alternatively, prove the more general statement given in \cref{composition-continuous} and then derive this statement.   
+		\item With notation as in the latter part of the proof above, verify that $\|df_a - df_b\| < \epsilon$. 
+	\end{enumerate}
+\end{exercise}
+
+\begin{proposition} \label{continuous-differentiable-partials}
+	Suppose $f : U \to \R^n$ is differentiable. Then $f$ is continuously differentiable if and only if $df : U \to \mathscr{L}(\R^m, \R^n)$ is continuous. 
+\end{proposition}
+
+\begin{proof}
+	Thanks to \cref{continuously-differentiable-by-components}, we can assume without loss of generality that $n = 1$. If $f$ is differentiable, then \cref{differentiability-implies-partials} tells us that $\partial_i f = df(e_i)$. In other words, the following diagram commutes.
+	\[ \begin{tikzcd} U \ar{r}{df} \ar[bend right]{dr}[swap]{\partial_i f} & \mathscr{L}(\R^m, \R) \ar{d}{\text{``evaluate at $e_i$''}} \\ & \R \end{tikzcd} \]
+	The ``evaluate at $e_i$'' map is continuous by \cref{evaluation-continuous}. So, if $f$ is continuously differentiable (ie, if $df$ is continuous), then $\partial_i f$ must also be continuous, as it is the composite of two continuous functions. 
+	
+	Conversely, suppose that all of the partial derivatives $\partial_i f$ exist and are continuous. Then \cref{continuous-partials} guarantees that $f$ is differentiable. The final step is to show that $df : U \to \mathscr{L}(\R^m, \R)$ is continuous; This is left for you to check; see \cref{continuous-partials-details} below. 
 \end{proof}
 
 \begin{exercise} \label{continuous-partials-details}
@@ -554,26 +705,16 @@ The proof of the following theorem is surprisingly challenging. You may need to 
 	\end{enumerate}
 \end{exercise}
 
-\begin{exercise} \label{product-rule-multivar}
-	Suppose $f, g : U \to \R$ are both continuously differentiable. Prove that $fg$ is also continuously differentiable, and that
-	\[ d(fg)_a(v) = df_a(v) g(a) + f(a) dg_a(v). \]
-	\textit{Hint}. Combine \cref{differentiability-implies-partials,product-rule-partials,continuous-partials}.
-\end{exercise}
-
-\begin{exercise}
-	Suppose $f : U \to \R^n$ is continuously differentiable. Show that the critical locus of $f$ is a closed subset of $U$.
-\end{exercise}
-
-\subsection{$C^k$ functions}
+\subsection{\texorpdfstring{$C^k$}{Ck} functions}
 
 \begin{definition} \label{cn-multivar}
 	We say that a function $f : U \to \R^n$ is $C^0$ if it is continuous. Then, inductively, for any positive integer $k$, we say that a function $f : U \to \R^n$ is $C^k$ if the partial derivatives $\partial_i f_j$ all exist and are $C^{k-1}$ functions $U \to \R$. 
 \end{definition}
 
-\Cref{continuous-partials} tells us that $f : U \to \R^n$ is $C^1$ if and only if it is continuously differentiable. It is clear from the definitions that a function $f : U \to \R^n$ is $C^k$ if and only if its component functions $f_j : U \to \R$ are $C^k$. 
+By definition, $f : U \to \R^n$ is $C^1$ if and only if it is continuously differentiable. It is clear from the definitions that a function $f : U \to \R^n$ is $C^k$ if and only if its component functions $f_j : U \to \R$ are $C^k$. 
 
 \begin{exercise}
-	Show that the set of all $C^k$ functions $U \to \R^n$ is a vector space. 
+	Show that the set of all $C^k$ functions $U \to \R^n$ form a vector space. 
 \end{exercise}
 
 \begin{exercise}
@@ -582,6 +723,13 @@ The proof of the following theorem is surprisingly challenging. You may need to 
 
 \begin{exercise}
 	Suppose $f, g : U \to \R$ are both $C^k$. Show that $fg$ is also $C^k$. 
+\end{exercise}
+
+\begin{exercise}
+	Suppose $f : U \to \R$ is $C^k$ and $f(x) \neq 0$ for all $x \in U$. Show that $1/f$ is also $C^k$.
+	\begin{hint}
+		Note that $1/f$ is $f$ composed with the single variable inversion function. 
+	\end{hint}
 \end{exercise}
 
 \subsection{Equality of mixed partials}
@@ -621,14 +769,4 @@ In \cref{smooth-single-var}, we formulated the principle that smooth single vari
 	\[ \Psi(x_1, \dotsc, x_m) = \psi(x_1) \psi(x_2) \dotsb \psi(x_m). \]
 	Show that $\Psi$ is a bump function (ie, a smooth function with compact support). 
 \end{exercise}
-
-\section{Inverse function theorem}
-
-Throughout, $U$ will denote an open subset of $\R^m$. The following is a multivariable analog of \cref{inverse-derivative}, but it is much harder to prove. 
-
-\begin{theorem}
-	Suppose $f : U \to \R^n$ is continuously differentiable and $a \in U$ is a point such that the derivative $df_a$ is invertible. Then $m = n$, there exists an open neighborhood $V$ of $a$ in $U$ such that $f(V)$ is open, the restriction $f|_{V}$ of $f$ to $V$ is a bijection $V \to f(V)$, and the inverse function $(f|_V)^{-1} : f(V) \to V$ is also continuously differentiable. 
-\end{theorem}
-
-% TODO: incomplete
 

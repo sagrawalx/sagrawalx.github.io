@@ -8,9 +8,16 @@ nonav: true
 
 # Syllabus
 
+> For an instant we hovered upon its threshold. But the impulse, the command that had carried us thus far was not to stop here. Into it and up it we were thrust, our feet barely touching the glimmering surface...
+> <span class="blockquote-attribution">—Abraham Merritt</span>
+
 ## Overview
 
+This class is an extended meditation on just one concept: the derivative. We'll start our journey with a rigorous treatment of derivatives of single variable functions. Then we'll generalize and discuss derivatives of multivariable functions. We'll define manifolds and their tangent spaces, and finally discuss how pushing forward tangent vectors is a yet further generalization of derivatives.
+
 ## Prerequisites
+
+The two main prerequisites for this course are real analysis 1 (at the level of MA375), and linear algebra (at the level of MA220)
 
 ## Course Structure Philosophy
 

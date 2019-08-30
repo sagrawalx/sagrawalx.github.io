@@ -29,7 +29,7 @@ As usual, the first point of order is to check that we don't need to check all p
 	We define the \emph{tangent space of $X$ at $p$}, denoted $T_p X$, to be the set of equivalence classes of curves in $X$ based at $p$. Elements of $T_p X$ are called \emph{tangent vectors} at $p$. If $\gamma$ is a curve based at $p$, we will write $v_\gamma$ for the corresponding tangent vector in $T_p X$. 
 \end{definition}
 
-\subsection{Vector space structure}
+\subsection{Vector space structure} \label{tangent-vector-space}
 
 We will now put a vector space structure on the tangent space $T_p X$. There are a lot of details involved in the process, so we begin with a high-level overview. If we choose a chart $(U, x) \in \mathscr{A}_X$ containing $p$, there is a bijection $\sigma : T_p X \to \R^n$ (cf. \cref{tangent-chart-bijection}). This means that we can define vector space operations on $T_p X$ by ``pulling back along $\sigma$.'' More precisely, this mean the following: given $v \in T_p X$ and $\lambda \in \R$, we define
 \[ \lambda v := \sigma^{-1}(\lambda \sigma(v)), \]
@@ -103,32 +103,168 @@ The final step is to show that these operations do not depend on the choice of c
 	Suppose $(U, x), (U', x') \in \mathscr{A}_X$ are both charts containing $p$ and that $\sigma, \sigma' : T_p X \to \R^n$ are the bijections from \cref{tangent-chart-bijection} corresponding to $(U, x), (U', x')$, respectively. Show that the vector space operations on $T_p X$ defined by pulling back along $\sigma$ are the same as those defined by pulling back along $\sigma'$. \textit{Hint}. Use \cref{tangent-chart-transition}. The key is that $d(x' \circ x^{-1})_{x(p)}$ is an invertible linear map. 
 \end{exercise}
 
-This completes our construction of a vector space structure on $T_p X$. An important observation about this is that $T_p X$ is an example of a finite dimensional vector space that does not come with any canonical basis. More precisely, this means the following. If we've choose a chart $(U, x) \in \mathscr{A}_X$ containing $p$, the bijection $\sigma : T_p X \to \R^n$ of \cref{tangent-chart-bijection} is an isomorphism of vector spaces (cf. \cref{pulling-back-makes-linear}), so $\sigma^{-1}(e_1), \dotsc, \sigma^{-1}(e_n)$ is a basis of $T_p X$. But then, if we choose a different chart $(U', x') \in \mathscr{A}_X$ containing $p$ and $\sigma'$ is the corresponding isomorphism $T_p X \to \R^n$, then $\sigma'^{-1}(e_1), \dotsc, \sigma'^{-1}(e_n)$ will in general be a different basis of $T_p X$, even though the vector space structures defined by pulling back along $\sigma$ and $\sigma'$ are the same! So, for a general manifold $X$ and point $p$, since there's no ``canonical'' choice of a chart containing $p$, there is also no ``canonical'' choice of a basis on $T_p X$. 
+This completes our construction of a vector space structure on $T_p X$. Notice that $T_p X$ is an example of a finite dimensional vector space that does not come equipped with any canonical basis! More precisely, this means the following. If we choose a chart $(U, x) \in \mathscr{A}_X$ containing $p$, the bijection $\sigma : T_p X \to \R^n$ of \cref{tangent-chart-bijection} is an isomorphism of vector spaces (cf. \cref{pulling-back-makes-linear}), so $\sigma^{-1}(e_1), \dotsc, \sigma^{-1}(e_n)$ is a basis of $T_p X$. But then, if we choose a different chart $(U', x') \in \mathscr{A}_X$ containing $p$ and $\sigma'$ is the corresponding isomorphism $T_p X \to \R^n$, then $\sigma'^{-1}(e_1), \dotsc, \sigma'^{-1}(e_n)$ will in general be a different basis of $T_p X$, even though the vector space structures defined by pulling back along $\sigma$ and $\sigma'$ are the same! So, for a general manifold $X$ and point $p$, since there's no ``canonical'' choice of a chart containing $p$, there is also no ``canonical'' choice of a basis on $T_p X$. I strongly encourage you to work through the following exercise to make sense of this. 
 
-\begin{remark}
-	Suppose $U$ is an open subset of $X$ containing $p$ regarded as an open submanifold (cf. \cref{open-submanifold}). Then a curve $\gamma$ in $U$ based at $p$ is also automatically a curve in $X$, which means there is a natural ``inclusion'' map $T_p U \to T_p X$ given by $v_\gamma \mapsto v_\gamma$. But we can ``shrink'' curves in $X$ to curves in $U$ without changing their equivalence class, so $T_p U \to T_p X$ is actually bijective. Moreover, if we choose a chart in $\mathscr{A}_U$ containing $p$, we can use this chart to define the vector space structure on both $T_p U$ and $T_p X$, so $T_p U \to T_p X$ is actually an isomorphism of vector spaces. Since this isomorphism is tautological, we sometimes write $T_p U = T_p X$. 
+\begin{exercise}
+	Consider the unit circle $S^1$, regarded manifold using the charts $(U,x)$ and $(U',x')$ defined in  \cref{circle-projection-atlas}. Any point $p \in S^1$ can be written as $(\cos \theta, \sin \theta)$ for some $\theta \in \R$. 
+	\begin{enumerate}[(a)]
+		\item Observe that $\gamma : \R \to S^1$ given by \[ \gamma(t) = (\cos(\theta + t), \sin(\theta + t)) \] is a curve in $S^1$ based at $p$. Explain why $v_\gamma$ is a basis for $T_p S^1$. 
+		\item Suppose $p \in U$ and let $\sigma : T_p S^1 \to \R$ be the isomorphism of \cref{tangent-chart-bijection} corresponding to the chart $(U, x)$. Find $\lambda \in \R$ such that $\sigma(\lambda v_\gamma) = 1$. 
+		\item Suppose $p \in U'$ and let $\sigma' : T_p S^1 \to \R$ be the isomorphism of \cref{tangent-chart-bijection} corresponding to the chart $(U', x')$. Find $\lambda' \in \R$ such that $\sigma'(\lambda' v_\gamma) = 1$. 
+	\end{enumerate}
+	So, if $p \in U \cap U'$, we see that there are three possible bases we might choose on $T_p S^1$ ($v_\gamma$, or $\lambda v_\gamma$, or $\lambda' v_\gamma$), none of these is any more ``canonical'' than another. This is what is meant when we say that $T_p S^1$ has no canonical choice of basis. 
+\end{exercise}
+
+\begin{remark} \label{tangent-open}
+	Suppose $U$ is an open subset of $X$ containing $p$ regarded as an open submanifold (cf. \cref{open-submanifold}). A curve $\gamma$ in $U$ based at $p$ is also automatically a curve in $X$, which means there is a natural ``inclusion'' map $T_p U \to T_p X$ given by $v_\gamma \mapsto v_\gamma$. But we can ``shrink'' curves in $X$ to curves in $U$ without changing their equivalence class, so $T_p U \to T_p X$ is actually bijective. Moreover, if we choose a chart in $\mathscr{A}_U$ containing $p$, we can use this chart to define the vector space structure on both $T_p U$ and $T_p X$, so $T_p U \to T_p X$ is actually an isomorphism of vector spaces. Since this isomorphism is tautological, we sometimes write $T_p U = T_p X$. 
 \end{remark}
 
-\begin{remark}
-	There is one situation where we do have a canonical choice of a chart: $\R^n$. Namely, the identity map $\id : \R^n \to \R^n$ defines a chart. If $\gamma$ is a curve in $\R^n$ based at a point $p$, then $d(\id \circ \gamma)_0 = d\gamma_0$, so the isomorphism $\sigma : T_p \R^n \to \R^n$ is given by $\sigma(v_\gamma) = [d\gamma_0]$. We will call this the ``canonical isomorphism'' $T_p \R^n \to \R^n$, and this gives us a ``canonical basis'' on $T_p \R^n$. 
+\begin{remark} \label{tangent-euclidean}
+	There is one situation where we do have a canonical choice of a chart: $\R^n$. Namely, the identity map $\id : \R^n \to \R^n$ defines a chart. If $\gamma$ is a curve in $\R^n$ based at a point $p$, then $d(\id \circ \gamma)_0 = d\gamma_0$, so the isomorphism $\sigma : T_p \R^n \to \R^n$ is given by $\sigma(v_\gamma) = [d\gamma_0]$. We will call this the ``canonical isomorphism'' $T_p \R^n \to \R^n$, which we sometimes also write as $T_p \R^n = \R^n$. But this is fairly abusive and it's worth remembering that $T_p \R^n$ is not literally equal to $\R^n$. The former is equivalence classes of curves, the latter is column vectors, and the relationship between the two is given by taking the derivative at 0. 
 \end{remark}
 
-\subsection{Derivations}
+\subsection{Derivations \texorpdfstring{$\star$}{*}}
+
+There is another perspective on tangent vectors which is often useful, though it is decidedly less geometric at first glance. It begins with the following definition.  
+
+\begin{definition}
+	Let $X$ be a manifold and $p \in X$ a point. A \emph{derivation} on $X$ based at $p$ is a linear function $\partial : \O(X) \to \R$ such that
+	\[ \partial(fg) = \partial(f)g(p) + f(p)\partial(g). \]
+	We let $\Der_p(X)$ denote the set of all derivations on $X$ based at $p$. 
+\end{definition}
+
+The following is not very hard to prove. 
+
+\begin{exercise} \label{derivations-vector-space}
+	Show that $\Der_p(X)$ is a vector space. 
+\end{exercise}
+
+It turns out that $T_p X$ and $\Der_p(X)$ are isomorphic, as we will soon prove.
+
+\begin{remark}
+	Sometimes, people define the tangent space to be $\Der_p(X)$. It's not very geometric, but it at least makes the vector space operations on the tangent space fairly obvious (cf. \cref{derivations-vector-space}); compare this with our geometric definition of the tangent space in terms of curves, where we had to do a lot of work to regard the tangent space as a vector space (cf. \cref{tangent-vector-space}). That said, even if one defines the tangent space to be $\Der_p(X)$, it's not clear how to produce examples of derivations, or to prove that $\Der_p(X)$ is finite dimensional. One way or another, one needs to show that derivations are somehow linked to curves. This is what we do next. 
+\end{remark}
+
+\begin{definition}
+	Suppose $\gamma$ is a curve in $X$ based at $p$. If $f : X \to \R$ is a smooth function, then $f \circ \gamma$ is a single variable function $(-\epsilon, \epsilon) \to \R$. We define $\partial_\gamma : \O(X) \to \R$ by \[ \partial_\gamma(f) = (f \circ \gamma)'(0). \]
+\end{definition}
+
+\begin{lemma}
+	If $\gamma$ is a curve in $X$ based at $p$, the function $\partial_\gamma$ is a derivation. 
+\end{lemma}
+
+\begin{proof}
+	Suppose $f, g \in \O(X)$ and $\lambda \in \R$. To see that $\partial_\gamma$ is linear, we use the sum and scalar multiple rules from \cref{sum-rule-single,scalar-multiples-rule-single}. 
+	\[ \begin{aligned} \partial_\gamma(f + \lambda g) &= ((f + \lambda g)\circ \gamma)'(0) \\
+	&= ((f \circ \gamma) + \lambda (g \circ \gamma))'(0) \\
+	&= (f \circ \gamma)'(0) + \lambda (g\circ \gamma)'(0) \\
+	&= \partial_\gamma(f) + \lambda \partial_\gamma(g) \end{aligned}  \]
+	To see that it is a derivation, we use the single variable product rule \ref{product-rule}. 
+	\[ \begin{aligned} \partial_\gamma(fg) &= (fg \circ \gamma)'(0) \\
+	&= ((f \circ \gamma)(g \circ \gamma))'(0) \\
+	&= (f \circ \gamma)'(0)(g \circ \gamma)(0) + (f \circ \gamma)(0)(g \circ \gamma)'(0) \\
+	&= \partial_\gamma(f)g(p) + f(p)\partial_\gamma(g) \end{aligned} \]
+	This completes the proof. 
+\end{proof}
+
+\begin{lemma}
+	If $\gamma_1$ and $\gamma_2$ are equivalent curves in $X$ based at $p$, then $\partial_{\gamma_1} = \partial_{\gamma_2}$. 
+\end{lemma}
+
+\begin{proof}
+	Choose a chart $(U, x) \in \mathscr{A}_X$ containing $p$ and let $\gamma$ be a curve in $X$  based at $p$. Then
+	\[ \begin{aligned} \partial_{\gamma}(f) &= (f \circ \gamma)'(0) \\
+	&= d(f \circ \gamma)_0(1) \\
+	&= d(f \circ x^{-1} \circ x \circ \gamma)_0 (1) \\
+	&= d(f \circ x^{-1})_{x(p)} \left( d(x \circ \gamma)_0 (1) \right)
+	 \end{aligned} \]
+	where we used the chain rule \ref{chain-rule} at the last step. Since $\partial_\gamma(f)$ only depends on $d(x \circ \gamma)_0$, we see that equivalent curves must give rise to the same derivation. 
+\end{proof}
+
+\begin{theorem}
+	The function $T_p X \to \Der_p(X)$ given by $v_\gamma \mapsto \partial_\gamma$ is an isomorphism. 
+\end{theorem}
+
+% TODO: incomplete
+
+\begin{definition}
+	If $v \in T_p X$, we let $\partial_v$ denote the corresponding element in $\Der_p(X)$. 
+\end{definition}
+
+% TODO: directional derivatives
 
 \section{Pushforward}
 
-Throughout this section, let $f : X \to Y$ be a smooth map of manifolds and $p \in X$ a point. Given a curve $\gamma$ in $X$ based at $p$, observe that $f \circ \gamma$ is a curve in $Y$ based at $f(p)$. 
+\subsection{Defining the pushforward}
+
+Let $f : X \to Y$ be a smooth map of manifolds and $p \in X$ a point. Given a curve $\gamma$ in $X$ based at $p$, observe that $f \circ \gamma$ is a curve in $Y$ based at $f(p)$. 
 
 \begin{lemma}
-	If $\gamma_1$ and $\gamma_2$ are equivalent curves in $X$ based at $p$, then $f \circ \gamma_1$ and $f \circ \gamma_2$ are equivalent curves in $Y$ based at $f(p)$. 
+	Let $f : X \to Y$ be a smooth map of manifolds and $p \in X$ a point. If $\gamma_1$ and $\gamma_2$ are equivalent curves in $X$ based at $p$, then $f \circ \gamma_1$ and $f \circ \gamma_2$ are equivalent curves in $Y$ based at $f(p)$. 
 \end{lemma}
 
-This allows us to make the following definition, which is the ``ultimate'' generalization of the derivative at a point. 
+% TODO: incomplete
+
+This allows us to make the following definition. We will shortly see that this is the ``ultimate'' generalization of derivatives. 
 
 \begin{definition}
-	If $\gamma$ is a curve in $X$ based at $p$, we define its \emph{pushforward} $f_*(v_\gamma) \in T_{f(p)}Y$ to be the equivalence class of the curve $f \circ \gamma$. This defines the \emph{pushforward map} $f_* : T_p X \to T_{f(p)} Y$. 
+	Let $f : X \to Y$ be a smooth map of manifolds and $p \in X$ a point. If $\gamma$ is a curve in $X$ based at $p$, we define its \emph{pushforward} $f_*(v_\gamma) \in T_{f(p)}Y$ to be the equivalence class of the curve $f \circ \gamma$. This defines the \emph{pushforward map} $f_* : T_p X \to T_{f(p)} Y$. 
 \end{definition}
 
 \begin{proposition}
-	The pushforward map $f_* : T_p X \to T_{f(p)} Y$ is linear. 
+	Let $f : X \to Y$ be a smooth map of manifolds and $p \in X$ a point. The pushforward map $f_* : T_p X \to T_{f(p)} Y$ is linear. 
 \end{proposition}
+
+% TODO: incomplete
+
+The following result states that the pushforward generalizes the derivative at a point. 
+
+\begin{proposition} \label{pushforward-generalizes-derivative}
+	Let $U$ is an open subset of $\R^m$, $p \in U$ is a point, and $f : U \to \R^n$ is a smooth map. Then, using the identifications of \cref{tangent-open,tangent-euclidean}, we have $f_* = df_p$.
+	\[ \begin{tikzcd} T_p U \ar[equals]{r} \ar{d}[swap]{f_*} & T_p \R^m \ar[equals]{r} & \R^m \ar{d} \ar{d}{df_p} \\ T_{f(p)} \R^n \ar[equals]{rr} & & \R^n \end{tikzcd} \]
+\end{proposition}
+
+\begin{proof}
+	Let $\sigma$ denote the isomorphisms $T_p \R^m \to \R^m$ and $T_p \R^n \to \R^n$ of \cref{tangent-euclidean}. Suppose $\gamma$ is a curve in $U$ based at $p$. Then
+	\[  (df_p \circ \sigma)(v_\gamma) = df_p(d\gamma_0(1)) = (df_p \circ d\gamma_0)(1) = d(f \circ \gamma)_0(1), \]
+	where we used the chain rule \ref{chain-rule} for the final step. On the other hand, we also have
+	\[ (\sigma \circ f_*)(v_\gamma) = \sigma(v_{f \circ \gamma}) = d(f \circ \gamma)_0. \qedhere \]
+\end{proof}
+
+In light of \cref{pushforward-generalizes-derivative}, the following is a generalization of the chain rule. 
+
+\begin{proposition}
+	Suppose $f : X \to Y$ and $g :  Y \to Z$ are smooth maps of manifolds, and $p \in X$ is a point. Then $g_* \circ f_* = (g \circ f)_*$. 
+	\[ \begin{tikzcd} T_p X \ar{r}{f_*} \ar[bend right]{dr}[swap]{(g \circ f)_*} & T_{f(p)} Y \ar{d}{g_*} \\ & T_{g(f(p))} Z \end{tikzcd} \]
+\end{proposition}
+
+\begin{proof}
+	Suppose $\gamma$ is a curve in $X$ based at $p$. Then 
+	\[ g_*(f_*(v_\gamma)) = g_*(v_{f \circ \gamma}) = v_{g \circ f \circ \gamma} = (g \circ f)_*(v_\gamma). \qedhere \]
+\end{proof}
+
+This proof looks absurdly easy, and that's because it is. You might be wondering why the proof of this generalization of the chain rule looks so easy, while the proof of the chain rule in \cref{multivar} was significantly more work. It's because the pushforward is so abstractly defined that it's basically useless and uncomputable until we know that it actually generalizes the derivative from \cref{multivar} and therefore can be computed using techniques from \cref{multivar}. This was the content of \cref{pushforward-generalizes-derivative}, and notice that we used the chain rule \ref{chain-rule} to prove \cref{pushforward-generalizes-derivative}. 
+
+\subsection{Rank of a smooth map}
+
+In light of \cref{pushforward-generalizes-derivative}, the following generalizes \cref{immersive-submersive-critical}. 
+
+\begin{definition}
+	Suppose $f : X \to Y$ is a smooth map between manifolds and $p \in X$ is a point. The rank of the linear map $f_* : T_p X \to T_{f(p)} Y$ is also called the \emph{rank of $f$ at $p$}, denoted $\rank_p(f)$. Note that $\rank_p(f) \leq \min\{\dim_p(X),\dim_{f(p)}(Y) \}$.
+	\begin{itemize}
+		\item If $\rank_p(f) = \dim_{p} (X)$, then we say that $f$ is \emph{immsersive at $p$}. This is equivalent to requiring that $f_*$ is an injective map $T_p X \to T_p Y$.  
+		\item If $\rank_p(f) = \dim_{f(p)} (Y)$, then we say that $f$ is \emph{submersive at $p$}. This is equivalent to requiring that $f_*$ is a surjective map $T_p X \to T_p Y$. 
+		\item If $\rank_p(f) =  \dim_p(X) = \dim_{f(p)} (Y)$, then we say that $f$ is \emph{\'etale at $p$}. This is equivalent to requiring that $f_*$ is an isomorphism $T_p X \to T_p Y$. 
+		\item If $\rank_p(f) = \min\{\dim_p(X),\dim_{f(p)}(Y) \}$, then we say that $p$ is a \emph{regular point} of $f$. 
+		\item If $\rank_p(f) < \min\{\dim_p(X),\dim_{f(p)}(Y) \}$, then we say that $p$ is a \emph{critical point} of $f$.
+	\end{itemize}
+\end{definition}
+
+\begin{definition}
+	Suppose $f : X \to Y$ is a smooth map between manifolds.
+	\begin{itemize}
+		\item If $f$ is immersive at every $p \in X$, then $f$ is an \emph{immersion}. 
+		\item If $f$ is submersive at every $p \in X$, then $f$ is a \emph{submersion}. 
+		\item if $f$ is \'etale at every $p \in X$, then $f$ is \emph{\'etale}. 
+	\end{itemize}
+\end{definition}

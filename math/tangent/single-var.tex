@@ -53,7 +53,7 @@ This quantity is often called a \emph{difference quotient}. See \cref{figure-dif
 	A function $f : S \to \R$ is \emph{differentiable} at an interior point $a \in S$ if 
 	\[ \lim_{h \to 0} \frac{f(a+h) - f(a)}{h} \]
 	exists. If this limit does exist, its value is called the \emph{derivative of $f$ at $a$}. We will usually denote this derivative as $f'(a)$, but sometimes also as one of the following, where $x$ is the variable that is being used to denote the argument to $f$.  
-	\[ \left.\frac{df}{dx}\right|_{x = a}, \quad \frac{df}{dx} (a), \dotsc \] 
+	\[ \left.\frac{df}{dx}\right|_{x = a} \quad \left.\frac{d}{dx} f(x)\right|_{x = a} \quad \frac{df}{dx} (a) \] 
 \end{definition}
 
 \begin{exercise}
@@ -68,8 +68,9 @@ This quantity is often called a \emph{difference quotient}. See \cref{figure-dif
 \end{exercise}
 
 \begin{exercise}[Power rule for positive integer exponents] \label{power-rule-positive}
-	Prove that, if $f(x) = x^n$ for a positive integer $n$, then $f'(a) = na^{n-1}$. \textit{Hint.} Recall the binomial theorem, which says that
-	\[ (a+h)^n = \sum_{k = 0}^n {n \choose k} a^k h^{n-k}. \]
+	Prove that, if $f(x) = x^n$ for a positive integer $n$, then $f'(a) = na^{n-1}$. \begin{hint} Recall the binomial theorem, which says that
+	\[ (a+h)^n = \sum_{k = 0}^n \binom{n}{k} a^k h^{n-k}. \]
+	\end{hint}
 \end{exercise}
 
 \begin{exercise}[Differentiability implies continuity] \label{differentiable-implies-continuous-single}
@@ -83,6 +84,10 @@ We now make the following definition.
 \end{definition}
 
 Note that \cref{differentiable-implies-continuous-single} makes the continuity on $S^\circ$ automatic. 
+
+\begin{caution}
+	Some authors don't define what it means for a function to be differentiable on a non-open subset of $\R$ at all; some define it slightly differently than we have above. One should be cautious when talking about differentiability on a non-open subset of $\R$, because there is potential for misunderstanding. 
+\end{caution}
 
 \subsection{Best linear approximation}
 
@@ -127,7 +132,7 @@ for small values of $h$. See \cref{figure-linear-approximation}.
 	\caption{The graph of a function $f$ is depicted in black, and its tangent line $t$ at $a$ is depicted in red. Then the vertical distance $f(a+h)-f(a)$ is approximated by the vertical distance $t(a+h)-t(a)$. Since the tangent line has slope $f'(a)$, this ``rise'' can be computed as $f'(a)$ times the ``run'' (in other words, $f'(a)h$). As $h$ gets smaller, this approximation gets better.}  \label{figure-linear-approximation}
 \end{figure}
 
-Notice that the function $h \mapsto f'(a)h$ is a linear map $\R \to \R$ in the sense of linear algebra. One way to interpret the following result is that the function $h \mapsto f'(a)h$ is the \emph{only} linear map that is a good approximation to $h \mapsto f(a+h)-f(a)$. The precise statement of the result uses little-oh notation; if you have not seen this notation before, see \cref{little-oh}.
+Notice that the function $h \mapsto f'(a)h$ is a linear map $\R \to \R$ in the sense of linear algebra. One way to interpret the following result is that the function $h \mapsto f'(a)h$ is the \emph{only} linear map that is a good approximation to $h \mapsto f(a+h)-f(a)$. The precise statement of the result uses little-oh notation; if you have not seen this notation before, see \cref{little-o-definition}.
 
 \begin{proposition} \label{unique-linear-single-var}
 	A function $f : S \to \R$ is differentiable at an interior point $a \in S$ if and only if there exists a linear map $\ell : \R \to \R$ such that
@@ -211,9 +216,10 @@ As a first example of an application of this idea, here is a weak version of L'H
 \begin{exercise}[L'H\^opital's rule, weak version] \label{weak-lhopital}
 	Suppose $f, g : S \to \R$ are differentiable at an interior point $a \in S$, that $f(a) = g(a) = 0$, and that $g'(a) \neq 0$. Show that
 	\[ \lim_{x \to a} \frac{f(x)}{g(x)} = \frac{f'(a)}{g'(a)}. \]
-	\textit{Hint}. If $x = a+h$, we have
+	\begin{hint} If $x = a+h$, we have
 	\[ f(x) = f(a+h) = f(a) + df_a(h) + r(h) = f'(a)h + r(h), \]
-	where $r$ is the ``error in approximation'' function for $f$ as in \cref{error-in-approximation}. 
+	where $r$ is the ``error in approximation'' function for $f$, as defined in \cref{error-in-approximation}. 
+	\end{hint}
 \end{exercise}
 
 \section{Rules of differentiation}
@@ -222,11 +228,13 @@ The goal in this section is to prove the rules for differentiation that one norm
 
 \subsection{Sum and scalar multiples rule}
 
-The following can be proved using either the definition of the derivative \ref{single-var-derivative-definition} or the equivalent ``best linear approximation'' characterization of \cref{unique-linear-single-var}. My suggestion is that you try both methods for these exercises. When you use \cref{unique-linear-single-var}, you may find \cref{little-o-vector-space} useful. 
+The following can be proved using either the definition of the derivative \ref{single-var-derivative-definition} or the equivalent ``best linear approximation'' characterization of \cref{unique-linear-single-var}. My suggestion is that you try both methods for these exercises. 
 
 \begin{exercise}[Constant functions rule] \label{constant-deriv-zero}
 	Prove that, if $f : S \to \R$ is constant (ie, there exists a real number $c$ such that $f(x) = c$ for all $x \in S$), then $f'(a) = 0$ for all interior points $a \in S$. 
 \end{exercise}
+
+When you use \cref{unique-linear-single-var} to prove the following, you may find it useful to have done \cref{little-o-vector-space}. 
 
 \begin{exercise}[Sum rule] \label{sum-rule-single}
 	Prove that, if $f, g : S \to \R$ are both differentiable at an interior point $a \in U$, then $f + g$ is also differentiable at $a$ and \[ (f+g)'(a) = f'(a) + g'(a). \]
@@ -248,7 +256,8 @@ The following can be proved using either the definition of the derivative \ref{s
 	\[ \begin{aligned} \frac{(fg)(a+h)-(fg)(a)}{h} &= \frac{f(a+h)g(a+h) - f(a)g(a)}{h} \\ 
 	&= \frac{f(a+h)g(a+h) {\color{blue}-f(a)g(a+h) + f(a)g(a+h)} - f(a)g(a)}{h} \\
 	&= \frac{f(a+h)g(a+h) - f(a)g(a+h)}{h} + \frac{f(a)g(a+h) - f(a)g(a)}{h} \\
-	&= \frac{f(a+h) - f(a)}{h} \cdot g(a+h) + f(a) \cdot \frac{g(a+h) - g(a)}{h}. \end{aligned} \]
+	&= \frac{f(a+h) - f(a)}{h} \cdot g(a+h) + f(a) \cdot \frac{g(a+h) - g(a)}{h}, \end{aligned} \]
+	where the cross term and its negative is indicated in blue. 
 	Taking the limit as $h \to 0$ yields the result. 
 \end{proof}
 
@@ -267,8 +276,9 @@ The following can be proved using either the definition of the derivative \ref{s
 \begin{exercise}[Quotient rule] \label{quotient-rule}
 	Suppose $f, g : S \to \R$ are both differentiable at an interior point $a \in U$, and that $g(a) \neq 0$. Prove that $f/g$ is also differentiable at $a$ and 
 	\[ (f/g)'(a) = \frac{f'(a)g(a) - f(a)g'(a)}{g(a)^2}. \] 
-	\textit{Hint.} Observe that \[ \frac{(f/g)(a+h)-(f/g)(a)}{h} = \frac{\frac{f(a+h)}{g(a+h)} - \frac{f(a)}{g(a)} }{h}. \]
+	\begin{hint} Observe that \[ \frac{(f/g)(a+h)-(f/g)(a)}{h} = \frac{\frac{f(a+h)}{g(a+h)} - \frac{f(a)}{g(a)} }{h}. \]
 	Multiply both the numerator and denominator by $g(a+h)g(a)$ to clear the denominators inside the numerator, and then introduce the cross term $f(a)g(a)$. Be sure to notice at what point you use \cref{differentiable-implies-continuous-single}.
+	\end{hint}
 \end{exercise}
 
 \begin{comment}
@@ -282,10 +292,12 @@ The following can be proved using either the definition of the derivative \ref{s
 \end{comment}
 
 \begin{exercise}[Power rule for integer exponents] \label{power-rule-integer}
-	Extend the result of \cref{power-rule-positive} to arbitrary integer exponents. \textit{Hint.} Use the quotient rule for negative integers. The exponent zero is a special but easy case; deal with it separately. 
+	Extend the result of \cref{power-rule-positive} to arbitrary integer exponents. 
+	\begin{hint} Use the quotient rule for negative integers. The exponent zero is a special but easy case; deal with it separately. 
+	\end{hint}
 \end{exercise}
 
-\subsection{Chain rule}
+\subsection{Chain rule} \label{chain-rule-single-section}
 
 \begin{proposition}[Chain rule] \label{chain-rule-single}
 	Suppose that $S$ and $T$ are both subsets of $\R$, that $f : S \to T$ is differentiable at an interior point $a$, that $f(a)$ is an interior point of $T$, and that $g : T \to \R$ is differentiable at $f(a)$. Then the composite $g \circ f : S \to \R$ is also differentiable at $a$, and 
@@ -294,7 +306,7 @@ The following can be proved using either the definition of the derivative \ref{s
 
 Let us discuss two different (but similar) proofs of this important result. 
 
-\subsubsection{First proof} \label{chain-rule-single-first-proof}
+\subsubsection*{First proof}
 
 The first proof uses the definition of the derivative \ref{single-var-derivative-definition}, but there is a subtle technicality involved; so, let us discuss it informally first before diving into the formal proof.  
 
@@ -407,14 +419,16 @@ This leads us to our first proof of the chain rule.
 \end{proof}
 	
 \begin{exercise} \label{chain-rule-single-first-proof-details}
-	Verify the missing details in the above proof. Specifically, check the following. 
+	Verify the following facts used in the proof above.
 	\begin{enumerate}[(a)]
 		\item Prove that $\epsilon$ is continuous at 0.
-		\item Prove \cref{alternative-to-multiplicative-cross-term}. \textit{Hint.} As suggested by our analysis before the proof of the chain rule, split up your proof of \cref{alternative-to-multiplicative-cross-term} into two cases: when $f(a+h) \neq f(a)$, and when $f(a+h) = f(a)$. 
+		\item Prove \cref{alternative-to-multiplicative-cross-term}. 
 	\end{enumerate}
+\begin{hint} You might split up your proof of \cref{alternative-to-multiplicative-cross-term} into two cases: when $f(a+h) \neq f(a)$, and when $f(a+h) = f(a)$. 
+\end{hint}
 \end{exercise}
 
-\subsubsection{Second proof} \label{chain-rule-single-second-proof}
+\subsubsection*{Second proof}
 
 Our second proof of the chain rule will use the ``best linear approximation'' interpretation of derivatives provided by \cref{unique-linear-single-var}. 
 
@@ -496,13 +510,15 @@ Notice that in the first proof, the trick to overcoming the technicality was def
 
 \subsection{Some rules without proofs}
 
-In this section, we discuss differentiation of some common ``transcendental functions.'' First off, here is the most general statement of the power rule, but you should note that \cref{power-rule-fractional} already covers the most common and most important cases. 
+In this section, we discuss differentiation of some common ``transcendental functions,'' but without complete proofs. The proofs are omitted because they would involve long-ish detours away from the intended object of meditation: the derivative.
+
+First off, here is the most general statement of the power rule, but you should note that \cref{power-rule-fractional} already covers the most common and most important cases. 
 
 \begin{proposition}[Power rule for real exponents] \label{power-rule-general}
-	If $r$ is any real number and $f : [0, \infty) \to \R$ is the function $f(x) = x^r$, then $f$ is differentiable and $f'(x) = rx^{r-1}$. 
+	If $r$ is any real number and $f : (0, \infty) \to \R$ is the function $f(x) = x^r$, then $f$ is differentiable and $f'(x) = rx^{r-1}$. 
 \end{proposition}
 
-The first step in proving this result is giving a rigorous construction of the real numbers and then rigorously defining what $x^r$ even means for non-rational exponents $r$. This would be a long detour, so it is omitted. In fact, once we've done this, it turns out the power rule for arbitrary real exponents is actually a relatively straightforward \emph{consequence} of \cref{power-rule-fractional}. 
+Proving this result requires having a rigorous definition of what $x^r$ even means for irrational exponents $r$. This would be a long detour, so it is omitted. In fact, once we have a sufficiently rigorous definition of $x^r$ for irrational $r$, it turns out that \cref{power-rule-general} is actually a relatively straightforward \emph{consequence} of \cref{power-rule-fractional}. 
 
 Next up, here is a fact about differentiating power series. The proof is omitted because it is rather technical. 
 
@@ -528,10 +544,10 @@ All three of these power series have infinite radius of convergence, so the foll
 \end{enumerate} 
 
 \begin{remark}
-	Defining the exponential, sine, and cosine functions using power series is mathematically fine, but there are numerous facts about these functions that are not clear from the power series, and one needs to prove these facts separately. For example, it's useful knowing that, if $e := \exp(1)$, then $\exp(x) = e^x$. This fact which is not immediately clear from the power series definition and needs to be proved; we won't prove it here, but you should feel free to use it. It's also useful to know that sines and cosines have something to do with trigonometry. Again, we won't prove these facts, but you should feel free to use them. 
+	Defining the exponential, sine, and cosine functions using power series is mathematically fine, but there are numerous facts about these functions that are not clear from the power series, and one needs to prove these facts separately. For example, it's useful knowing that, if $e := \exp(1)$, then $\exp(x) = e^x$. This fact is not immediately clear from the power series definition; it requires some proof, and we won't prove it here, but you should feel free to use it. It's obviously also useful to know that sines and cosines have something to do with trigonometry. Again, this is not clear from the power series definition; they require some proof, and we won't prove these facts, but you should feel free to use them. 
 \end{remark}
 
-From this, we can derive the derivative of the logarithm.
+We can now compute the derivative of the logarithm.
 
 \begin{exercise}
 	If $f(x) = \ln(x)$, show that $f'(x) = 1/x$. 
@@ -562,15 +578,17 @@ We first recall the following definition.
 The following is a key property of derivatives that you probably remember from calculus. 
 
 \begin{exercise}[Interior extremum theorem] \label{interior-extremum}
-	Suppose an interior point $a \in S$ is a local extremum of a function $f : S \to \R$. If $f$ is differentiable at $a$, prove that $f'(a) = 0$. \textit{Hint}. Consider the following function (cf. the first proof of the chain rule in \cref{chain-rule-single-first-proof}).
+	Suppose an interior point $a \in S$ is a local extremum of a function $f : S \to \R$. If $f$ is differentiable at $a$, prove that $f'(a) = 0$.
+	\begin{hint} Consider the following function (which we've seen before, during the first proof of the chain rule in \cref{chain-rule-single-section}).
 	\[ \sigma(h) = \begin{cases} \dfrac{f(a+h)-f(a)}{h} & \text{if } h \neq 0 \\ f'(a) & \text{if } h = 0 \end{cases} \]
 	Since $f$ is differentiable at $x = a$, we know that $\sigma$ is continuous at $h = 0$. If $a$ is a local minimum, what can you say about the values of $\sigma$ for nonzero values of $h$? What about if $a$ is a local maximum?
+	\end{hint}
 \end{exercise}
 
-But the reader is reminded that the converse to the interior extremum theorem \ref{interior-extremum} is not true. 
+But remember, the converse to the interior extremum theorem \ref{interior-extremum} is \emph{not} true. 
 
 \begin{exercise} \label{interior-extremum-converse-false}
-	Give an example of a function $f : \R to \R$ where $f'(0) = 0$, but $f$ does not have a local extremum at 0. 
+	Give an example of a function $f : \R \to \R$ where $f'(0) = 0$, but $f$ does not have a local extremum at 0. 
 \end{exercise}
 
 \subsection{Mean value theorem}
@@ -578,7 +596,8 @@ But the reader is reminded that the converse to the interior extremum theorem \r
 The mean value theorem \ref{mean-value-theorem} is an extremely important foundational result; it comes up often during proofs. Rolle's theorem \ref{rolles-theorem} is a special case of the mean value theorem, but the general case can be derived from this special case. 
 
 \begin{exercise}[Rolle's theorem] \label{rolles-theorem}
-	Suppose $a < b$ and let $f : [a, b] \to \R$ be a differentiable function. If $f(a) = f(b) = 0$, prove that there exists $c \in (a, b)$ such that $f'(c) = 0$. \textit{Hint}. Any function must fall into at least one of the following three cases: (i) $f$ is constantly zero, (ii) $f$ takes on positive values somewhere on $[a, b]$, and (iii) $f$ takes on negative values somewhere on $[a, b]$. Deal with the first case using \cref{constant-deriv-zero}, and the latter two cases using the extreme value theorem\footnotemark\ together with \cref{interior-extremum}. 
+	Suppose $a < b$ and let $f : [a, b] \to \R$ be a differentiable function. If $f(a) = f(b) = 0$, prove that there exists $c \in (a, b)$ such that $f'(c) = 0$. \begin{hint} Any function must fall into at least one of the following three cases: (i) $f$ is constantly zero, (ii) $f$ takes on positive values somewhere on $[a, b]$, and (iii) $f$ takes on negative values somewhere on $[a, b]$. Deal with the first case using \cref{constant-deriv-zero}, and the latter two cases using the extreme value theorem\footnotemark\ together with \cref{interior-extremum}. 
+	\end{hint}
 \end{exercise}
 
 \footnotetext{The \emph{extreme value theorem} says that if $K$ is a compact metric space and $f : K \to \R$ is continuous, then $f$ achieves its global maximum and its global minimum somewhere on $K$ (cf. \cite[theorems 3.17 and 6.30]{protter-morrey}).}
@@ -586,7 +605,7 @@ The mean value theorem \ref{mean-value-theorem} is an extremely important founda
 \begin{exercise}[Mean value theorem] \label{mean-value-theorem}
 	Suppose $a < b$ and let $f : [a, b] \to \R$ be a differentiable function. Prove that there exists $c \in (a, b)$ such that
 	\[ f'(c) = \frac{f(b) - f(a)}{b-a}. \]
-	\textit{Hint}. Let $\ell$ be the secant line passing through $(a, f(a))$ and $(b, f(b))$. Then consider the function $g = f - \ell$. See \cref{subtracting-the-secant}. 
+	\begin{hint} Let $\ell$ be the secant line passing through $(a, f(a))$ and $(b, f(b))$. Then consider the function $g = f - \ell$. See \cref{subtracting-the-secant}. 
 	\begin{figure}
 		\begin{center}
 			\begin{tikzpicture}
@@ -643,16 +662,23 @@ The mean value theorem \ref{mean-value-theorem} is an extremely important founda
 		\end{center}
 		\caption{On the left is depicted the graph of a function $f$ and the secant line $\ell$. Subtracting $\ell$ from the picture on the left yields the picture on the right. }  \label{subtracting-the-secant}
 	\end{figure}
-	Then $g(a) = g(b) = 0$, so we can apply Rolle's theorem \ref{rolles-theorem} to $g$. 
+	Then $g(a) = g(b) = 0$, so we can apply Rolle's theorem \ref{rolles-theorem} to $g$.
+	\end{hint} 
+\end{exercise}
+
+Here is the first of many, many consequences of the mean value theorem. 
+
+\begin{exercise} \label{bounded-derivative}
+	Suppose $I$ is an open interval and $f : I \to \R$ is a differentiable function such that there exists a number $M$ such that $|f'(x)| \leq M$ for all $x \in I$. Show that $|f(b) - f(a)| \leq M|b-a|$ for all $a, b \in I$. 
 \end{exercise}
 
 \subsection{Derivatives and monotonicity}
 
 Here is a standard property of derivatives from calculus; the proof follows quickly from the mean value theorem. 
 
-\begin{lemma} \label{deriv-zero-implies-constant}
-	Suppose $I$ is an open interval and that $f : I \to \R$ is differentiable. If $f' = 0$, then $f$ is constant. 
-\end{lemma}
+\begin{proposition} \label{deriv-zero-implies-constant}
+	Suppose $I$ is an interval and that $f : I \to \R$ is differentiable. If $f' = 0$, then $f$ is constant. 
+\end{proposition}
 
 \begin{proof}
 	Suppose we have $a < b$ are two distinct points in $I$. Since $f$ is differentiable on $I$ and $[a,b] \subseteq I$, we know in particular that $f$ is also differentiable on $[a,b]$, so the mean value theorem applies: there exists a point $c \in (a,b)$ such that
@@ -676,25 +702,25 @@ Further, $f$ is \emph{monotonic} if it is either increasing or decreasing, and \
 The following standard property of differentiable functions again follows quickly from the mean value theorem. 
 
 \begin{exercise} \label{deriv-increasing-decreasing}
-	Suppose $I$ is an open interval and that $f : I \to \R$ is differentiable. Prove the following four statements. 
+	Suppose $I$ is an interval and that $f : I \to \R$ is differentiable. Prove the following four statements. 
 	\begin{enumerate}[(a)]
 		\item If $f' \geq 0$, then $f$ is increasing. 
 		\item If $f' > 0$, then $f$ is strictly increasing. 
 		\item If $f' \leq 0$, then $f$ is decreasing. 
 		\item If $f' < 0$, then $f$ is strictly decreasing. 
 	\end{enumerate} 
-	\textit{Hint}. For all four, imitate the proof of \cref{deriv-zero-implies-constant}. 
+	\begin{hint} For all four, imitate the proof of \cref{deriv-zero-implies-constant}. \end{hint}
 \end{exercise}
 
-\subsection{Darboux's theorem $\ast$}
+\subsection{Darboux's theorem \texorpdfstring{$\star$}{*}}
 
-Darboux's theorem is not commonly discussed in elementary calculus, nor is it strictly necessary for what follows. But it is an interesting fact about derivatives, and is sometimes useful to know. Before getting to the statement of the theorem, it is convenient to make the following definition. 
+Darboux's theorem is not commonly discussed in elementary calculus, nor is it strictly necessary for what follows. But it is an interesting fact about derivatives, and is sometimes useful to know. Roughly, the theorem says that derivatives are ``close'' to being continuous. Before getting to the precise statement of the theorem, we make the following definition. 
 
 \begin{definition}
 	Suppose $I$ is an interval and $f : I \to \R$ is a function. Then $f$ \emph{has the intermediate value property} if, for every $a < b$ in $I$ and every $y \in \R$ strictly between $f(a)$ and $f(b)$, there exists $x \in (a, b)$ such that $f(x) = y$. 
 \end{definition}
 
-The intermediate value theorem asserts that every continuous function has the intermediate value property. Simple examples of discontinuous functions don't have the intermediate value property (cf. \cref{removable-jump-ivp} below). But, it turns out that some discontinuous functions do have the intermediate value property (cf. \cref{discontinuous-ivp} below). 
+Using this vocabulary, the intermediate value theorem asserts that every continuous function has the intermediate value property \cite[theorem 3.3]{protter-morrey}. Simple examples of discontinuous functions don't have the intermediate value property (cf. \cref{removable-jump-ivp} below). But, it turns out that some discontinuous functions do have the intermediate value property (cf. \cref{discontinuous-ivp} below). 
 
 \begin{exercise} \label{removable-jump-ivp}
 	Let $I$ be an interval and $f : I \to \R$ a function. 
@@ -712,10 +738,11 @@ The intermediate value theorem asserts that every continuous function has the in
 \begin{exercise} \label{discontinuous-ivp}
 	Show that the function $f : \R \to \R$ defined by
 	\[ f(x) = \begin{cases} \sin(1/x) & \text{if } x \neq 0 \\ 0 & \text{if } x = 0 \end{cases} \]
-	is discontinuous at $x = 0$ but has the intermediate value property. \textit{Hint}. First show that for any non-degenerate interval $I$ containing 0, we have $f(I) = [-1,1]$. Then explain how this implies the intermediate value property. 
+	is discontinuous at $x = 0$ but has the intermediate value property. \begin{hint} First show that for any non-degenerate interval $I$ containing 0, we have $f(I) = [-1,1]$. Then explain how this implies the intermediate value property. 
+	\end{hint}
 \end{exercise}
 
-We know that the derivative $f'$ of a differentiable function $f$ need not be continuous (cf. \cref{power-times-sine}). Darboux's theorem asserts that, even though $f'$ might not be continuous, it must still have the intermediate value property! This means, for example, that derivatives cannot have removable or jump discontinuities (cf. \cref{removable-jump-ivp}). 
+We know that the derivative $f'$ of a differentiable function $f$ need not be continuous (cf. \cref{power-times-sine}). Darboux's theorem asserts that, even though $f'$ might not be continuous, it must still have the intermediate value property! This means, for example, that derivatives cannot have removable or jump discontinuities, since we saw in  \cref{removable-jump-ivp} that functions with these kinds of discontinuities do not have the intermediate value property. 
 
 \begin{theorem}[Darboux] \label{darboux}
 	Suppose $I$ is an open interval and $f : I \to \R$ is differentiable. Then $f'$ has the intermediate value property. 
@@ -796,11 +823,17 @@ We know that the derivative $f'$ of a differentiable function $f$ need not be co
 	In case (ii), we instead let $c$ be the \emph{maximum} of $g$ on $[a,b]$, and argue similarly to show that $c$ must be an interior point. 
 \end{proof}
 
+Here is an example application. 
+
+\begin{exercise}
+	Suppose $I$ is an open interval and $f : I \to \R$ is a differentiable function such that $f'(x) \neq 0$ for all $x \in I$. Show that $f$ is strictly monotonic. 
+\end{exercise}
+
 \section{Levels of differentiability} 
 
-\subsection{$C^k$ functions}
+\subsection{\texorpdfstring{$C^k$}{Ck} functions}
 
-\begin{definition}
+\begin{definition} \label{continuously-differentiable-singlevar}
 	Suppose $U$ is an open subset of $\R$ and $f : U \to \R$ is differentiable. If the derivative $f' : U \to \R$ is also continuous, then $f$ is said to be \emph{continuously differentiable}. 
 \end{definition}
 
@@ -809,7 +842,7 @@ We know that the derivative $f'$ of a differentiable function $f$ need not be co
 	\begin{itemize}
 		\item $f$ is $C^0$ if it is continuous. 
 		\item $f$ is $C^1$ if it is continuously differentiable. 
-		\item $f$ is $C^2$ if the derivative $f'$ is $C^1$. In other words, this means that the derivative of the derivative $(f')'$, denoted $f''$ or $f^{(2)}$ and called the \emph{second derivative}, exists and is continuous. 
+		\item $f$ is $C^2$ if it is differentiable and the derivative $f'$ is $C^1$. In other words, this means that the derivative of the derivative $(f')'$, typically denoted $f''$ or $f^{(2)}$ and called the \emph{second derivative}, exists and is continuous. 
 		\item In general, for any positive integer $k$, we say that $f$ is $C^k$ if $f'$ exists and is $C^{k-1}$. This means that the \emph{$k$th derivative} $f^{(k)} = (f^{(k-1)})'$ exists and is continuous.
 	\end{itemize}
 \end{definition}
@@ -820,11 +853,11 @@ We know that the derivative $f'$ of a differentiable function $f$ need not be co
 
 \begin{exercise}[General Leibniz Rule] \label{product-cn-singlevar}
 	Suppose that $f, g : U \to \R$ are $C^k$ functions. Prove that the product $fg$ is also $C^k$, and that
-	\[ (fg)^{(k)} = \sum_{i = 0}^k {k \choose i} f^{(i)} g^{(k-i)}. \]
+	\[ (fg)^{(k)} = \sum_{i = 0}^k \binom{k}{i} f^{(i)} g^{(k-i)}. \]
 \end{exercise}
 
 \begin{exercise} \label{composite-cn-singlevar}
-	Show that the composite of two $C^k$ functions is also $C^k$. \textit{Hint}. Induct on $k$. The base case $k = 0$ is clear. For the inductive step, use the chain rule \ref{chain-rule-single} and the first part of \cref{product-cn-singlevar}. 
+	Show that the composite of two $C^k$ functions is also $C^k$. \begin{hint} Use induction on $k$. The base case $k = 0$ is clear. For the inductive step, use the chain rule \ref{chain-rule-single} and \cref{product-cn-singlevar}. \end{hint}
 \end{exercise}
 
 Observe that we have an infinite chain of implications
@@ -834,7 +867,7 @@ The following exercise shows that all of these implications are strict; in other
 \begin{exercise}
 	For every non-negative integer $k$, let 
 	\[ f_k(x) = x^k|x|. \]
-	Prove that $f_k$ is $C^k$ but not $C^{k+1}$. \textit{Hint.} First prove that $f_{k+1}' = (k+2)f_k$. 
+	Prove that $f_k$ is $C^k$ but not $C^{k+1}$. \begin{hint} First prove that $f_{k+1}' = (k+2)f_k$. \end{hint}
 \end{exercise}
 
 \subsection{Smooth functions} \label{smooth-single-var}
@@ -906,11 +939,11 @@ Our next example of a slightly strange smooth function is the following one, whi
 	\[ \lim_{x \to 0^+} \frac{e^{-1/x}}{x^m} = 0 \]
 	for any non-negative integer $m$, which follows immediately from \cref{exponential-polynomial} by making the substitution $u = 1/x$.
 	
-	In your calculus class, you probably remember proving \cref{exponential-polynomial} using L'H\^{o}pital's rule. We haven't proved  L'H\^{o}pital's rule (except for the weak version in \cref{weak-lhopital}, which is only enough to calculate \cref{exponential-polynomial} for $m = 1$), but you can find proofs of L'H\^opital's rule in many places (eg, \cite[theorem 4.15]{protter-morrey}, \cite[theorem 5.13]{rudin}, or even \href{https://en.wikipedia.org/wiki/L\%27hopital\%27s_rule}{Wikipedia}). The proof is a clever application of the mean value theorem \ref{mean-value-theorem}. 
+	You probably remember proving \cref{exponential-polynomial} using L'H\^{o}pital's rule in your calculus class. We haven't proved  L'H\^{o}pital's rule (except for the weak version in \cref{weak-lhopital}, which you can check is not enough to prove \cref{exponential-polynomial}), but you can find proofs of L'H\^opital's rule in many places (eg, \cite[theorem 4.15]{protter-morrey}, \cite[theorem 5.13]{rudin}, or even \href{https://en.wikipedia.org/wiki/L\%27hopital\%27s_rule}{Wikipedia}). The proof is a clever application of the mean value theorem \ref{mean-value-theorem}. 
 	
 	An alternative proof of \cref{exponential-polynomial} uses the power series definition of the exponential function. The idea is to notice that
 	\[ \frac{e^u}{u^m} = \frac{1}{u^m} + \dotsb + \frac{1}{(m-1)!u} + \sum_{k = 0}^\infty \frac{u^k}{(m+k)!} \]
-	As $u \to \infty$, the first few summands all tend to 0, and the series at the end tends to $\infty$. \Cref{exponential-polynomial} follows from this. Details are omitted, but you should be able to work them out yourself if you're interested.
+	As $u \to \infty$, the first few summands all tend to 0, and the series at the end tends to $\infty$. \Cref{exponential-polynomial} follows from this; details are omitted, but you should be able to work them out yourself if you're interested.
 \end{remark} 
 
 \begin{exercise} \label{infinitely-flat}
@@ -995,7 +1028,7 @@ Next up, we have ``bump functions.'' Recall that the ``support'' of a function $
 \end{exercise}
 
 \begin{exercise}
-	Let $F$ be a closed subset of $\R$. Construct a smooth function which is zero on $F$ and nonzero outside of $F$. \textit{Hint}. Recall that the complement of $F$ is a countable union of disjoint open intervals (cf. \cite[theorem 6.17]{protter-morrey}). 
+	Let $F$ be a closed subset of $\R$. Construct a smooth function which is zero on $F$ and nonzero outside of $F$. \begin{hint} Recall that the complement of $F$ is a countable disjoint union of open intervals (cf. \cite[theorem 6.17]{protter-morrey}). \end{hint}
 \end{exercise}
 
 \begin{comment}
@@ -1023,6 +1056,7 @@ In the following two examples, we will have to invoke the fundamental theorem of
 \end{example}
 
 \begin{exercise} \label{constant-compact-zero-outside-neighborhood}
-	Let $I = [a, b]$ be a compact interval in $\R$ and let $U$ be an open subset containing $I$. Prove that there exists a bump function $f : \R \to \R$ such that $f(x) = 1$ for all $x \in K$ and $f(x) = 0$ for all $x \notin U$. \textit{Hint.} The characteristic function \[ \chi_I(x) = \begin{cases} 1 & \text{if } x \in I \\ 0 & \text{if } x \notin I \end{cases} \]
-	is close to having all of the properties we want, but it's not smooth (it's clearly not even continuous). Since $U$ is open, there exist $a' < a$ and $b' > b$ such that $I := [a', b'] \subseteq U$. Modify $\chi_I$ on the intervals $[a', a]$ and $[b, b']$ to obtain the desired function. Use inspiration from the function $\eta$ of \cref{integral-canonical-bump}.
+	Let $I = [a, b]$ be a compact interval in $\R$ and let $U$ be an open subset containing $I$. Prove that there exists a bump function $f : \R \to \R$ such that $f(x) = 1$ for all $x \in K$ and $f(x) = 0$ for all $x \notin U$. \begin{hint} 
+	The characteristic function \[ \chi_I(x) = \begin{cases} 1 & \text{if } x \in I \\ 0 & \text{if } x \notin I \end{cases} \]
+	is close to having all of the properties we want, but it's not smooth (it's clearly not even continuous). Since $U$ is open, there exist $a' < a$ and $b' > b$ such that $I := [a', b'] \subseteq U$. Modify $\chi_I$ on the intervals $[a', a]$ and $[b, b']$ to obtain the desired function. Use inspiration from the function $\eta$ of \cref{integral-canonical-bump}. \end{hint}
 \end{exercise}

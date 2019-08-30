@@ -83,49 +83,58 @@ We can also make the following definitions.
 \begin{exercise}[The circle $S^1$] \label{circle-projection-atlas}
 	Let $S^1$ denote the set of points in $\R^2$ along the unit circle. In other words,
 	\[ S^1 = \{ (x, y) \in \R^2 : x^2 + y^2 = 1 \}. \]
-	To regard $S^1$ as a topological space, we do what you might expect: we first restrict the euclidean metric on $\R^2$ to $S^1$, and then we forget this restricted metric and just remember the resulting topology as in \cref{metric-to-topological}. 
-	
-	Given a point $P \in S^1 \setminus \{(0,1)\}$, the \emph{projection of $P$ from $(0,1)$ onto $\R \times \{-1\}$}, which we will denote $\pi_1(P)$, is defined as the point of intersection between the line $y = -1$ and the line passing through $P$ and $(0,1)$. See \cref{circle-projection}. Similarly, for $P \in S^1 \setminus \{(0,-1)\}$, we can define the projection of $P$ from $(0,-1)$ onto $\R \times \{1\}$, denoted $\pi_2(P)$. Show that $\pi_1$ and $\pi_2$ together define an atlas on $S^1$. 
+	\begin{enumerate}[(a)]
+		\item There are two ways you might think to regard $S^1$ as a topological space. First, you might restrict the euclidean metric on $\R^2$ to $S^1$, so that $S^1$ becomes a metric space, and then you can forget this restricted metric and just remember the resulting topology as in \cref{metric-to-topological}. Alternatively, you can first forget the metric on $\R^2$ and regard it as a topological space as in \cref{metric-to-topological}, and then regard $S^1$ as a subspace of $\R^2$ (cf. \cref{subspace-topology}). Show that you end up with the same topology on $S^1$ in both cases. 
+		
+		\item Let $U = S^1 \setminus \{(0,1)\}$. For $p \in S^1$, let $x(p)$ denote the $x$-coordinate of the point where the line $y = -1$ intersects the line passing through $(0,1)$ and $p$. See \cref{circle-projection}. If $p = (a, b)$, find a formula for $x(p)$ in terms of $a$ and $b$. 
+		
+		\begin{figure}
+			\begin{center}
+				\begin{tikzpicture}
+				\begin{axis}[
+				xmin=-1.5,xmax=1.5,
+				ymin=-1.3,ymax=1.3,
+				ytick={-1,1},
+				xtick={-1,1},
+				xticklabels={},
+				yticklabels={},
+				axis lines=middle,
+				axis line style=lightgray,
+				width=0.75\textwidth,
+				axis equal
+				]
+				
+				\addplot[black,style=thick,-] expression[domain=-1:1,samples=100]{sqrt(1-x^2)}; 
+				\addplot[black,style=thick,-] expression[domain=-1:1,samples=100]{-sqrt(1-x^2)};
+				
+				
+				\addplot[red,<->] expression[domain=-0.1:0.95,samples=2]{-2.414*x+1}; 
+				
+				
+				\addplot[black,<->] expression[domain=-1.5:1.5,samples=2]{-1};
+				
+				\node[label={85:{$(0,1)$}},color=white,draw=black,circle,fill,inner sep=2pt] at (axis cs:0,1) {}; 
+				\node[label={0:{$p$}},color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:0.707,-0.707) {}; 
+				\node[color=red,draw=red,circle,fill,inner sep=2pt] at (axis cs:0.8285,-1) {}; 
+				
+				\end{axis}
+				\end{tikzpicture}
+			\end{center}
+			\caption{Given a point $p \in U = S^1 \setminus \{(0,1)\}$, we draw a line connecting $p$ to $(0,1)$, indicated in red. The point where that line intersects the line $y = -1$ (in black) is sometimes called the \emph{projection of $p$ from $(0,1)$ onto $\R \times \{-1\}$}. The $x$-coordinate of this point is $x(p)$.}  \label{circle-projection}
+		\end{figure}
+		
+		\item Show that $x : U \to \R$ is a homeomorphism. Thus $(U, x)$ is a chart on $S^1$. \textit{Hint}. Use geometry to write down a formula for the inverse function to $x$. 
+		
+		\item Let $U' = S^1 \setminus \{(0,-1)\}$. For $p \in V$, let $x'(p)$ denote the $x$-coordinate of the point where the line $y = 1$ intersects the line passing through $(0,-1)$ and $p$. Show that $x' : U' \to \R$ is also a homeomorphism. 
+		
+		\item Show that $(U, x)$ and $(U', x')$ are compatible charts.
+	\end{enumerate}
+	Thus $\mathscr{A} = \{(U, x), (U', x')\}$ is an atlas on $S^1$. Extending $\mathscr{A}$ to a maximal atlas, we have defined a manifold structure on $S^1$. It is evidently a 1-dimensional manifold. 
 \end{exercise}
 
 \begin{exercise}[The $n$-sphere $S^n$] \label{sphere-projection-atlas}
 	Let $S^n$ denote the set of points in $\R^{n+1}$ of norm 1. Generalize \cref{circle-projection-atlas} and show that ``projection from the north pole'' and ``projection from the south pole'' define an atlas on $S^n$. 
 \end{exercise}
-
-
-\begin{figure}
-	\begin{center}
-		\begin{tikzpicture}
-		\begin{axis}[
-		xmin=-1.5,xmax=1.5,
-		ymin=-1.3,ymax=1.3,
-		ytick={-1,1},
-		xtick={-1,1},
-		xticklabels={},
-		yticklabels={},
-		axis lines=middle,
-		axis line style=lightgray,
-		width=0.75\textwidth
-		]
-		
-		\addplot[black,style=thick,-] expression[domain=-1:1,samples=100]{sqrt(1-x^2)}; 
-		\addplot[black,style=thick,-] expression[domain=-1:1,samples=100]{-sqrt(1-x^2)};
-		
-		
-		\addplot[red,<->] expression[domain=-0.1:0.95,samples=2]{-2.414*x+1}; 
-		
-		
-		\addplot[lightgray,dashed] expression[domain=-1.5:1.5,samples=2]{-1};
-		
-		\node[label={85:{$(0,1)$}},color=white,draw=black,circle,fill,inner sep=2pt] at (axis cs:0,1) {}; 
-		\node[label={0:{$P$}},color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:0.707,-0.707) {}; 
-		\node[label={260:{$\pi_1(P)$}},color=red,draw=red,circle,fill,inner sep=2pt] at (axis cs:0.8285,-1) {}; 
-		
-		\end{axis}
-		\end{tikzpicture}
-	\end{center}
-	\caption{Given a point $P$ on $S^1 \setminus \{(0,1)\}$, we draw a line connecting $P$ to $(0,1)$. The point where that line intersects the line $\R \times \{-1\}$ is the \emph{projection of $P$ from $(0,1)$ onto $\R \times \{-1\}$}, denoted $\pi_1(P)$. }  \label{circle-projection}
-\end{figure}
 
 \begin{exercise}[Open submanifolds] \label{open-submanifold}
 	Let $X$ be a manifold and $U \subseteq X$ an open subset. Show that \[ \mathscr{A}_U = \{ (V,x) \in \mathscr{A}_X : V \subseteq U \} \]
@@ -172,7 +181,7 @@ The second chart is a bit harder to describe mathematically, but the intuitive i
 
 Thus $\mathscr{A} = \{(U, x), (V, y)\}$ is an atlas on the M\"obius strip $M$. Letting $\mathscr{A}_M$ denote the corresponding maximal atlas, we obtain the structure of a manifold on $M$.
 
-\subsection{More examples of manifolds}
+\subsection{More examples}
 
 \begin{exercise}[Torus] \label{torus}
 	Let $B$ denote the box $[0,1] \times [0,1]$ inside $\R^2$ and define the equivalence relation $\sim$ by $(a,0) \sim (a,1)$ and $(0,b) \sim (1,b)$ for all $a, b \in [0,1]$. The \emph{torus} $T$ is defined to be the quotient $B/\sim$. Describe an atlas on $T$. 
@@ -219,6 +228,22 @@ The second disconcerting thing is the following. Suppose $U \subseteq \R^m$ is a
 \begin{exercise}
 	Suppose $U \subseteq \R^m$ is an open subset and $f : U \to \R$ is a function. Show that $f$ is smooth in the sense of \cref{smooth-multivar} if and only if it is smooth in the sense of \cref{smooth-real-valued}. \textit{Hint}. You might find \cref{smooth-real-val-local} useful. 
 \end{exercise}
+
+\begin{definition}
+	If $X$ is a manifold, we write $\O(X)$ for the set of smooth functions $X \to \R$. 
+\end{definition}
+
+\begin{exercise}
+	Show that $\O(X)$ is a vector space. 
+\end{exercise}
+
+\begin{exercise}
+	If $f, g \in \O(X)$, show that $fg \in \O(X)$ also. 
+\end{exercise}
+
+\begin{proposition}
+	Suppose $K$ is a compact subset of $X$ and $U$ is an open neighborhood of $K$. Then there exists a smooth function $f : X \to [0,1]$ such that $f(x) = 1$ for all $x \in K$ and $f(x) = 0$ for all $x \notin U$. 
+\end{proposition}
 
 \subsection{Partial derivatives of real-valued functions}
 
