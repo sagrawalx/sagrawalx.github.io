@@ -4,9 +4,7 @@
 Sheldon Axler.
 \newblock {\em Linear algebra done right}.
 \newblock Undergraduate Texts in Mathematics. Springer, third edition, 2015.
-\newblock URL:
-  \url{https://doi-org.coloradocollege.idm.oclc.org/10.1007/978-3-319-11080-6},
-  \href {http://dx.doi.org/10.1007/978-3-319-11080-6}
+\newblock \href {http://dx.doi.org/10.1007/978-3-319-11080-6}
   {\path{doi:10.1007/978-3-319-11080-6}}.
 
 \bibitem[Hef19]{hefferon}
@@ -35,6 +33,11 @@ Walter Rudin.
 \newblock {\em Principles of mathematical analysis}.
 \newblock McGraw-Hill Book C, third edition, 1976.
 \newblock International Series in Pure and Applied Mathematics.
+
+\bibitem[Spi65]{spivak_calculus}
+Michael Spivak.
+\newblock {\em Calculus on manifolds}.
+\newblock W. A. Benjamin, Inc., 1965.
 
 \bibitem[Spi05]{spivak}
 Michael Spivak.

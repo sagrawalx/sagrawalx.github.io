@@ -1,4 +1,4 @@
-\documentclass[bibliography=totoc,letterpaper]{scrbook}
+\documentclass[bibliography=totoc,letterpaper,numbers=noenddot]{scrbook}
 
 \title{Off on a Tangent}
 \subtitle{Meditations on the derivative}
@@ -21,22 +21,22 @@
 \usepackage{amsthm}
 \usepackage[noabbrev]{cleveref}
 
-\numberwithin{equation}{chapter}
+\numberwithin{equation}{section}
 \setcounter{chapter}{-1}
 \setcounter{secnumdepth}{4}
-\renewcommand{\thesection}{\thechapter.\Alph{section}}
-\renewcommand{\thesubsubsection}{\thesubsection.\Alph{subsubsection}}
-
 
 \makeatletter
 \let\c@figure\c@equation
 \let\c@table\c@equation
 \makeatother
 
+% \renewcommand{\thesection}{\thechapter.\Alph{section}}
+\renewcommand{\thesubsection}{\thesection.\Alph{subsection}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+
 \newtheorem{theorem}[equation]{Theorem}
 \newtheorem{lemma}[equation]{Lemma}
 \newtheorem{proposition}[equation]{Proposition}
-\newtheorem{conjecture}[equation]{Conjecture}
 \newtheorem{corollary}[equation]{Corollary}
 
 \theoremstyle{definition}
@@ -44,20 +44,22 @@
 \newtheorem{example}[equation]{Example}
 \newtheorem{remark}[equation]{Remark}
 \newtheorem{exercise}[equation]{Exercise}
+
+\theoremstyle{remark}
+\newtheorem*{hint}{Possible hint}
 \newtheorem*{caution}{Caution}
+\newtheorem*{proofsketch}{Proof sketch}
 
 \crefname{exercise}{exercise}{exercises}
 \Crefname{exercise}{Exercise}{Exercises}
-
-\theoremstyle{remark}
-\newtheorem*{proofsketch}{Proof sketch}
 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\bbP}{\mathbb{P}}
 \renewcommand{\O}{\mathscr{O}}
 \newcommand{\id}{\mathrm{id}}
 \DeclareMathOperator{\rank}{rank}
-
+\DeclareMathOperator{\Der}{Der}
+\newcommand{\mx}{\mathrm{max}}
 
 \begin{document}
 	\maketitle
