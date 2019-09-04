@@ -12,7 +12,7 @@ Throughout this section, we let $X$ denote a manifold and $p \in X$ a point. We 
 
 Suppose that $(U, x) \in \mathscr{A}_X$ is a chart containing $p$ and that $\gamma : (-\epsilon, \epsilon) \to \R$ is a curve based at $p$. Since $U$ is an open subset of $X$ and $\gamma$ is continuous, the preimage $\gamma^{-1}(U)$ is an open subset of $(-\epsilon, \epsilon)$ containing 0, so there exists $0 < \epsilon' \leq \epsilon$ such that the image of the smaller interval $(-\epsilon', \epsilon)$ is entirely contained inside $U$. We let $x \circ \gamma$ denote the composite function 
 \[ \begin{tikzcd} (-\epsilon', \epsilon') \ar{r} & U \ar{r} & \R^n. \end{tikzcd} \]
-We can then take its derivative at $0$ as in \cref{multivar}. This derivative $d(x \circ \gamma)_0$ is a linear map $\R \to \R^n$, so \[ [d(x \circ \gamma)_0] = d(x \circ \gamma)_0(1) \] is a column vector in $\R^n$.
+We can then take its derivative at $0$ as in \cref{multivar}. This derivative $d(x \circ \gamma)_0$ is a linear map $\R \to \R^n$, so its matrix representation \[ (x \circ \gamma)'(0) \] is a column vector in $\R^n$.
 
 \begin{definition} \label{equivalent-curves}
 	Two curves $\gamma_1, \gamma_2$ in $X$ based at $p$ are \emph{equivalent} if $d(x \circ \gamma_1)_0 = d(x \circ \gamma_2)_0$ for every chart $(U, x) \in \mathscr{A}_X$ containing $p$. 
@@ -100,7 +100,10 @@ The final step is to show that these operations do not depend on the choice of c
 \end{proof}
 
 \begin{exercise} \label{tangent-chart-independent}
-	Suppose $(U, x), (U', x') \in \mathscr{A}_X$ are both charts containing $p$ and that $\sigma, \sigma' : T_p X \to \R^n$ are the bijections from \cref{tangent-chart-bijection} corresponding to $(U, x), (U', x')$, respectively. Show that the vector space operations on $T_p X$ defined by pulling back along $\sigma$ are the same as those defined by pulling back along $\sigma'$. \textit{Hint}. Use \cref{tangent-chart-transition}. The key is that $d(x' \circ x^{-1})_{x(p)}$ is an invertible linear map. 
+	Suppose $(U, x), (U', x') \in \mathscr{A}_X$ are both charts containing $p$ and that $\sigma, \sigma' : T_p X \to \R^n$ are the bijections from \cref{tangent-chart-bijection} corresponding to $(U, x), (U', x')$, respectively. Show that the vector space operations on $T_p X$ defined by pulling back along $\sigma$ are the same as those defined by pulling back along $\sigma'$. 
+	\begin{hint} 
+		Use \cref{tangent-chart-transition}. The key is that $d(x' \circ x^{-1})_{x(p)}$ is an invertible linear map. 
+	\end{hint}
 \end{exercise}
 
 This completes our construction of a vector space structure on $T_p X$. Notice that $T_p X$ is an example of a finite dimensional vector space that does not come equipped with any canonical basis! More precisely, this means the following. If we choose a chart $(U, x) \in \mathscr{A}_X$ containing $p$, the bijection $\sigma : T_p X \to \R^n$ of \cref{tangent-chart-bijection} is an isomorphism of vector spaces (cf. \cref{pulling-back-makes-linear}), so $\sigma^{-1}(e_1), \dotsc, \sigma^{-1}(e_n)$ is a basis of $T_p X$. But then, if we choose a different chart $(U', x') \in \mathscr{A}_X$ containing $p$ and $\sigma'$ is the corresponding isomorphism $T_p X \to \R^n$, then $\sigma'^{-1}(e_1), \dotsc, \sigma'^{-1}(e_n)$ will in general be a different basis of $T_p X$, even though the vector space structures defined by pulling back along $\sigma$ and $\sigma'$ are the same! So, for a general manifold $X$ and point $p$, since there's no ``canonical'' choice of a chart containing $p$, there is also no ``canonical'' choice of a basis on $T_p X$. I strongly encourage you to work through the following exercise to make sense of this. 
