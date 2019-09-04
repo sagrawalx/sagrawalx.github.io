@@ -1,4 +1,4 @@
-\begin{thebibliography}{Rud76}
+\begin{thebibliography}{GVL13}
 
 \bibitem[Axl15]{axler}
 Sheldon Axler.
@@ -6,6 +6,12 @@ Sheldon Axler.
 \newblock Undergraduate Texts in Mathematics. Springer, third edition, 2015.
 \newblock \href {http://dx.doi.org/10.1007/978-3-319-11080-6}
   {\path{doi:10.1007/978-3-319-11080-6}}.
+
+\bibitem[GVL13]{golub}
+Gene~H. Golub and Charles~F. Van~Loan.
+\newblock {\em Matrix computations}.
+\newblock Johns Hopkins Studies in the Mathematical Sciences. Johns Hopkins
+  University Press, fourth edition, 2013.
 
 \bibitem[Hef19]{hefferon}
 Jim Hefferon.
