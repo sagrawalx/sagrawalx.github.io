@@ -15,45 +15,45 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: references.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--empty publisher in hefferon
-You've used 8 entries,
+You've used 9 entries,
             3274 wiz_defined-function locations,
-            729 strings with 6398 characters,
-and the built_in function-call counts, 3415 in all, are:
-= -- 354
-> -- 94
+            735 strings with 6557 characters,
+and the built_in function-call counts, 3851 in all, are:
+= -- 397
+> -- 114
 < -- 7
-+ -- 26
-- -- 24
-* -- 162
-:= -- 524
-add.period$ -- 33
-call.type$ -- 8
-change.case$ -- 41
-chr.to.int$ -- 8
-cite$ -- 9
-duplicate$ -- 128
-empty$ -- 328
-format.name$ -- 38
-if$ -- 870
++ -- 32
+- -- 30
+* -- 181
+:= -- 591
+add.period$ -- 37
+call.type$ -- 9
+change.case$ -- 46
+chr.to.int$ -- 9
+cite$ -- 10
+duplicate$ -- 143
+empty$ -- 367
+format.name$ -- 45
+if$ -- 979
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 16
-newline$ -- 48
-num.names$ -- 24
-pop$ -- 85
+missing$ -- 18
+newline$ -- 54
+num.names$ -- 27
+pop$ -- 97
 preamble$ -- 1
-purify$ -- 50
+purify$ -- 57
 quote$ -- 0
-skip$ -- 269
+skip$ -- 302
 stack$ -- 0
-substring$ -- 58
-swap$ -- 15
+substring$ -- 65
+swap$ -- 16
 text.length$ -- 7
 text.prefix$ -- 6
 top$ -- 0
-type$ -- 32
+type$ -- 36
 warning$ -- 1
-while$ -- 18
-width$ -- 11
-write$ -- 119
+while$ -- 21
+width$ -- 12
+write$ -- 133
 (There was 1 warning)

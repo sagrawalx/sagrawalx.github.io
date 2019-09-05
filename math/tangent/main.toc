@@ -1,19 +1,19 @@
 \contentsline {chapter}{Introduction}{2}{Doc-Start}
-\contentsline {chapter}{\numberline {0}Prerequisites}{9}{chapter.0}
-\contentsline {section}{\numberline {0.1}Product metric}{9}{section.0.1}
-\contentsline {section}{\numberline {0.2}Norms on vector spaces}{9}{section.0.2}
-\contentsline {subsection}{\numberline {0.2.A}Norms induce metrics}{10}{subsection.0.2.1}
-\contentsline {subsection}{\numberline {0.2.B}Equivalence of norms}{10}{subsection.0.2.2}
-\contentsline {subsection}{\numberline {0.2.C}Norms on finite dimensional vector spaces}{10}{subsection.0.2.3}
-\contentsline {section}{\numberline {0.3}Euclidean space}{12}{section.0.3}
-\contentsline {subsection}{\numberline {0.3.A}Linear structure on $\mathbb {R}^n$}{12}{subsection.0.3.1}
-\contentsline {subsection}{\numberline {0.3.B}Norms on $\mathbb {R}^n$}{13}{subsection.0.3.2}
-\contentsline {section}{\numberline {0.4}Little-oh notation}{13}{section.0.4}
-\contentsline {section}{\numberline {0.5}Matrices}{15}{section.0.5}
-\contentsline {subsection}{\numberline {0.5.A}Matrix representations}{15}{subsection.0.5.1}
-\contentsline {subsection}{\numberline {0.5.B}Matrix norm}{17}{subsection.0.5.2}
-\contentsline {section}{\numberline {0.6}Operator norm}{18}{section.0.6}
-\contentsline {subsection}{\numberline {0.6.A}Basics}{18}{subsection.0.6.1}
+\contentsline {chapter}{\numberline {0}Preliminaries}{9}{chapter.0}
+\contentsline {section}{\numberline {0.1}Little-oh notation}{9}{section.0.1}
+\contentsline {section}{\numberline {0.2}Product metric}{10}{section.0.2}
+\contentsline {section}{\numberline {0.3}Norms on vector spaces}{11}{section.0.3}
+\contentsline {subsection}{\numberline {0.3.A}Norms induce metrics}{11}{subsection.0.3.1}
+\contentsline {subsection}{\numberline {0.3.B}Equivalence of norms}{11}{subsection.0.3.2}
+\contentsline {subsection}{\numberline {0.3.C}Norms on finite dimensional vector spaces}{12}{subsection.0.3.3}
+\contentsline {section}{\numberline {0.4}Euclidean space}{13}{section.0.4}
+\contentsline {subsection}{\numberline {0.4.A}Linear structure on $\mathbb {R}^n$}{13}{subsection.0.4.1}
+\contentsline {subsection}{\numberline {0.4.B}Norms on $\mathbb {R}^n$}{14}{subsection.0.4.2}
+\contentsline {section}{\numberline {0.5}Matrices}{14}{section.0.5}
+\contentsline {subsection}{\numberline {0.5.A}Matrix representations of linear maps}{15}{subsection.0.5.1}
+\contentsline {subsection}{\numberline {0.5.B}Matrix norm}{16}{subsection.0.5.2}
+\contentsline {section}{\numberline {0.6}Operator norm}{17}{section.0.6}
+\contentsline {subsection}{\numberline {0.6.A}Basics}{17}{subsection.0.6.1}
 \contentsline {subsection}{\numberline {0.6.B}Operator norm as a metric $\star $}{19}{subsection.0.6.2}
 \contentsline {section}{\numberline {0.7}Topological spaces}{20}{section.0.7}
 \contentsline {subsection}{\numberline {0.7.A}Basics}{20}{subsection.0.7.1}
@@ -31,46 +31,47 @@
 \contentsline {subsection}{\numberline {1.2.D}Some rules without proofs}{40}{subsection.1.2.4}
 \contentsline {section}{\numberline {1.3}Derivatives, extremums, and monotonicity}{42}{section.1.3}
 \contentsline {subsection}{\numberline {1.3.A}Derivatives and local extremums}{42}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.B}Mean value theorem}{42}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.B}Mean value theorem}{43}{subsection.1.3.2}
 \contentsline {subsection}{\numberline {1.3.C}Derivatives and monotonicity}{44}{subsection.1.3.3}
 \contentsline {subsection}{\numberline {1.3.D}Darboux's theorem $\star $}{45}{subsection.1.3.4}
-\contentsline {section}{\numberline {1.4}Levels of differentiability}{47}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.A}$C^k$ functions}{47}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.B}Smooth functions}{48}{subsection.1.4.2}
-\contentsline {chapter}{\numberline {2}Multivariable derivatives}{55}{chapter.2}
-\contentsline {section}{\numberline {2.1}Example}{55}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.A}Overview}{58}{subsection.2.1.1}
-\contentsline {section}{\numberline {2.2}Definition of the derivative}{58}{section.2.2}
-\contentsline {section}{\numberline {2.3}Computing derivatives}{60}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.A}Sum and scalar multiples rule}{60}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.B}Chain rule}{60}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.C}Differentiability by components}{61}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.D}Partial derivatives}{62}{subsection.2.3.4}
-\contentsline {subsection}{\numberline {2.3.E}Jacobian matrix}{65}{subsection.2.3.5}
-\contentsline {subsection}{\numberline {2.3.F}Rank of a differentiable map}{66}{subsection.2.3.6}
-\contentsline {section}{\numberline {2.4}Levels of differentiability}{69}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.A}Vanishing derivative}{69}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.B}Continuous differentiability}{70}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.C}$C^k$ functions}{82}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.D}Equality of mixed partials}{83}{subsection.2.4.4}
-\contentsline {subsection}{\numberline {2.4.E}Smooth functions}{83}{subsection.2.4.5}
-\contentsline {chapter}{\numberline {3}Manifolds}{85}{chapter.3}
-\contentsline {section}{\numberline {3.1}Definition of a manifold}{85}{section.3.1}
-\contentsline {section}{\numberline {3.2}Examples}{87}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.A}First examples}{87}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.B}M\"obius strip}{90}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.C}More examples}{91}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Smooth functions}{91}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.A}Smooth real-valued functions}{91}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.B}Partial derivatives of real-valued functions}{93}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.C}Smooth functions between manifolds}{93}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.D}Diffeomorphisms}{94}{subsection.3.3.4}
-\contentsline {chapter}{\numberline {4}Tangent Spaces}{95}{chapter.4}
-\contentsline {section}{\numberline {4.1}Tangent space}{95}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.A}Curves based at a point}{95}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.B}Vector space structure}{96}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.C}Derivations $\star $}{100}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}Pushforward}{101}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.A}Defining the pushforward}{101}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.B}Rank of a smooth map}{103}{subsection.4.2.2}
-\contentsline {chapter}{\nonumberline Bibliography}{105}{chapter*.15}
+\contentsline {section}{\numberline {1.4}Levels of differentiability}{48}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.A}Continuous differentiability}{48}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.B}$C^k$ functions}{48}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.C}Smooth functions}{50}{subsection.1.4.3}
+\contentsline {chapter}{\numberline {2}Multivariable derivatives}{57}{chapter.2}
+\contentsline {section}{\numberline {2.1}Example}{57}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.A}Overview}{60}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2}Definition of the derivative}{60}{section.2.2}
+\contentsline {section}{\numberline {2.3}Computing derivatives}{62}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.A}Sum and scalar multiples rule}{62}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.B}Chain rule}{62}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.C}Differentiability by components}{63}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.D}Partial derivatives}{64}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.E}Jacobian matrix}{67}{subsection.2.3.5}
+\contentsline {subsection}{\numberline {2.3.F}Rank of a differentiable map}{68}{subsection.2.3.6}
+\contentsline {section}{\numberline {2.4}Levels of differentiability}{71}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.A}Vanishing derivative}{71}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.B}Continuous differentiability}{72}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.C}$C^k$ functions}{84}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.D}Equality of mixed partials}{85}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.E}Smooth functions}{85}{subsection.2.4.5}
+\contentsline {chapter}{\numberline {3}Manifolds}{87}{chapter.3}
+\contentsline {section}{\numberline {3.1}Definition of a manifold}{87}{section.3.1}
+\contentsline {section}{\numberline {3.2}Examples}{89}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.A}First examples}{89}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.B}M\"obius strip}{92}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.C}More examples}{93}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Smooth functions}{93}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.A}Smooth real-valued functions}{93}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.B}Partial derivatives of real-valued functions}{95}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.C}Smooth functions between manifolds}{95}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.D}Diffeomorphisms}{96}{subsection.3.3.4}
+\contentsline {chapter}{\numberline {4}Tangent Spaces}{97}{chapter.4}
+\contentsline {section}{\numberline {4.1}Tangent space}{97}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.A}Curves based at a point}{97}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.B}Vector space structure}{98}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.C}Derivations $\star $}{102}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Pushforward}{103}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.A}Defining the pushforward}{103}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.B}Rank of a smooth map}{105}{subsection.4.2.2}
+\contentsline {chapter}{\nonumberline Bibliography}{107}{chapter*.17}

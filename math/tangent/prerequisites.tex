@@ -1,6 +1,95 @@
-\chapter{Prerequisites} \label{prerequisites}
+\chapter{Preliminaries} \label{prerequisites}
 
-You should consult a dedicated linear algebra textbook to review the definitions of vector spaces, subspaces, linear independence, span, dimension, and linear maps. You should also consult an analysis textbook to review the definitions of metric spaces, equivalence of metrics, open subsets, closed subsets, continuous maps, compactness, connectedness, etc. 
+The sections in this chapter cover some ideas relating to point-set topology and linear algebra that will be invoked in the main part of the text. Some sections are merely intended to establish notation; others cover topics that you may not have encountered before. I encourage skipping this chapter, and referring back to it only when you need to. 
+
+You should consult a dedicated linear algebra textbook to review the definitions of vector spaces, subspaces, linear independence, span, dimension, linear maps, matrices, matrix multiplication, determinants, and minors. You should also consult an analysis textbook to review the definitions of metric spaces, equivalence of metrics, open subsets, closed subsets, continuous maps, compactness, and connectedness.
+
+\section{Little-oh notation} \label{little-oh}
+
+Suppose $X$ is a metric space\footnotemark\ and $x_0 \in X$ is a point. 
+
+\footnotetext{Even more generally, $X$ could be a topological space here. See \cref{topological-spaces}.}
+
+\begin{definition}
+	A function $g : X \setminus \{x_0\} \to \R$ is \emph{positive} if $g(x) > 0$ for all $x \in X \setminus \{x_0\}$. Similarly, $g$ is \emph{non-negative} if $g(x) \geq 0$ for all $x \in X \setminus \{x_0\}$.
+\end{definition}
+
+Suppose $g$ is a positive function. \Cref{little-o-definition} below formulates what it means for a non-negative function $f : X \setminus \{x_0\} \to \R$ to be ``little-oh of $g$ as $x$ tends to $x_0$.'' Intuitively, this condition means that $f$ is \emph{much smaller} than $g$ near $x_0$. 
+
+\begin{definition} \label{little-o-definition}
+	A function $f : X \setminus \{x_0\} \to \R$ is \emph{little-oh of $g$ as $x$ tends to $x_0$}, written \[ f(x) = o(g(x)) \text{ as } x \to x_0 \] 
+	if, for every $\epsilon > 0$, there exists an open neighborhood $U$ of $x_0$ such that $f(x) \leq \epsilon g(x)$ for all $x \in U \setminus \{x_0\}$. Equivalently, this means that 
+	\[ \lim_{x \to x_0} \frac{|f(x)|}{g(x)} = 0. \]
+	When $x_0$ can be inferred from context, we write simply $f = o(g)$. 
+\end{definition} 
+
+\begin{remark}
+	It's worth noting that the use of the symbol ``$=$'' above is mathematically abusive. The left-hand side of the ``$=$'' is a function and the right-hand side is a property of functions; of course, a function cannot literally be equal to a property. Rather, the ``$=$'' is being used here to mean that the function on the left-hand side \emph{has} the property described on the right-hand side. As annoying as it is, this abuse of notation is fairly standard, so it's probably best to just get used to it. 
+\end{remark}
+
+\begin{exercise} \label{little-o-equivalent-exercise}
+	Prove that the two conditions in \cref{little-o-definition} are in fact equivalent. 
+\end{exercise}
+
+\begin{exercise}
+	Let $X = \R$ and $x_0 = 0$. For each of the functions $f$ and $g$ described below, sketch graphs of $f$ and $g$ and then determine whether or not $f = o(g)$ as $x \to 0$.
+	\begin{enumerate}[(a)]
+		\item $f(x) = x$ and $g(x) = x^2$. 
+		\item $f(x) = x$ and $g(x) = |x|$. 
+		\item $f(x) = x^2$ and $g(x) = |x|$. 
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise} \label{little-o-vector-space}
+	For a fixed positive function $g : X \setminus \{x_0\} \to \R$, prove that the set of functions $f : X \setminus \{x_0\} \to \R$ which are $o(g)$ as $x \to x_0$ is a vector space under the natural operations. In other words, verify the following three facts. 
+	\begin{enumerate}[(1)]
+		\item (``Zero is small'') The zero function is $o(g(x))$. 
+		\item (``Scalar multiples of small are still small'') If $c \in \R$ is a scalar and $f(x) = o(g(x))$, then 
+		\[ cf(x) = o(g(x)). \] 
+		\item (``Sum of smalls is still small'') If $f_1(x) = o(g(x))$ and $f_2(x) = o(g(x))$, then \[ (f_1 + f_2)(x) = o(g(x)). \]
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[``Smaller than small is still small''] \label{less-than-small-is-small}
+	Suppose $f_1, f_2 : X \setminus \{x_0\} \to \R$ are functions such that $|f_1(x)| \leq |f_2(x)|$ for all $x$ in a punctured neighborhood of $x_0$, and $f_2(x) = o(g(x))$ as $x \to x_0$. Then $f_1(x) = o(g(x))$ also. 
+\end{exercise}
+
+\begin{comment} 	
+\begin{exercise} \label{little-o-multiplicative}
+Suppose $f_1, f_2, g_1, g_2 : X \setminus \{x_0\} \to \R$ are functions with $g_1, g_2$ positive such that $f_1(x) = o(g_1(x))$ and $f_2(x) = o(g_2(x))$ as $x \to x_0$. Prove that $(f_1 \cdot f_2)(x) = o((g_1 \cdot g_2)(x))$.
+\end{exercise} 
+
+\begin{exercise}
+Suppose $f : X \to \R$ is continuous at $x_0$ and $f(x_0) = 0$, and that $f = o(g)$ as $x \to  x_0$ for some function $g : X \setminus\{x_0\} \to \R$. Suppose further that $s : \R \to \R$ is a function such that $s = o(|r|)$ as $r \to 0$. Then $s \circ f = o(g)$ as $x \to x_0$. 
+\end{exercise}
+
+\begin{proof}
+Suppose $\epsilon > 0$. We want to find an open neighborhood $U$ of $x_0$ such that
+\[ |s(f(x))| \leq \epsilon|t(g(x))| \]
+for $x \in U$. 
+
+Since $s$ is $o(t)$ as $r \to 0$, we know that for any $\epsilon_1 > 0$ there exists $\delta_1 > 0$ such that $|r| < \delta_1$ implies that
+\[ \begin{aligned} |s(r)| \leq \epsilon_1|t(r)|. \end{aligned} \] 
+Since $f(x_0) = 0$ and $f$ is continuous at $x_0$, there exists a neighborhood $U_1$ of $x_0$ such that
+\[ |f(x)| < \delta_1  \]
+for all $x \in U_1$. This means that for $x \in U_1$, we have
+\[ |s(f(x))| \leq \epsilon_1|t(f(x))|. \]
+Since $f = o(g)$ as $x \to x_0$, for any $\epsilon_2 > 0$ there is another neighborhood $U_2$ of $x_0$ such that $|f(x)| \leq \epsilon_2 |g(x)|$. This means that
+\[ |s(f(x))| \leq \epsilon_1 \epsilon_2 |g(x)|. \]
+
+there then exists $\delta_2 > 0$ such that $|h| < \delta$ implies that $|df_a(h) + r(h)| < \delta_1$. Then for $|h| < \delta_2$, we have
+\[ |s(df_a(h) + r(h)| \leq \epsilon_1 |df_a(h) + r(h)| 
+\leq \epsilon_1|f'(a)||h| + \epsilon_1|r(h)| \]
+Since $r$ is $o(|h|)$, for any $\epsilon_2 > 0$ there exists $\delta_3 > 0$ such that $|h| < \delta_3$ implies that $|r(h)| \leq \epsilon_2 |h|$. Let $\delta = \min\{\delta_2, \delta_3\}$. Then for $|h| < \delta$, we can continue the above chain of inequalities to obtain the following.  
+\[ |s(df_a(h) + r(h)| \leq \epsilon_1|f'(a)||h| + \epsilon_1 \epsilon_2|h| = \epsilon_1(|f'(a)| + \epsilon_2)|h| \]
+So we let $\epsilon_2 = 1$ and then let 
+\[ \epsilon_1 = \frac{\epsilon}{|f'(a)| + 1}. \]
+The $\delta$ obtained by going through the above process then has the desired property.
+\end{proof}
+\end{comment}
+
+% TODO: exercise about composition? i'm not sure how to formuulate the correct statement though
+
 
 \section{Product metric} \label{product-metric}
 
@@ -131,101 +220,6 @@ Unless explicitly specified otherwise, we regard $\R^n$ as a metric space with t
 
 On the other hand, we could also endow $\R^n$ with the max norm (cf. \cref{max-norm}) with respect to the standard basis. We denote this norm by $|-|_\mx$. Explicitly, if $v = (h_1, \dotsc, h_n) \in \R^n$, we have
 \[ |v|_\mx = \max\{ |h_1|, \dotsc, |h_n| \}. \]
-This also defines a norm in the sense of \cref{norm-definition}. 
-
-\section{Little-oh notation} \label{little-oh}
-
-Suppose $X$ is a metric space\footnotemark\ and $x_0 \in X$ is a point. 
-
-\footnotetext{Even more generally, $X$ could be a topological space here. See \cref{topological-spaces}.}
-
-\begin{definition}
-	A function $g : X \setminus \{x_0\} \to \R$ is \emph{positive} if $g(x) > 0$ for all $x \in X \setminus \{x_0\}$. Similarly, $g$ is \emph{non-negative} if $g(x) \geq 0$ for all $x \in X \setminus \{x_0\}$.
-\end{definition}
-
-Suppose $g$ is a positive function. \Cref{little-o-definition} below formulates what it means for a non-negative function $f : X \setminus \{x_0\} \to \R$ to be ``little-oh of $g$ as $x$ tends to $x_0$.'' Intuitively, this condition means that $f$ is \emph{much smaller} than $g$ near $x_0$. 
-
-\begin{definition} \label{little-o-definition}
-	A function $f : X \setminus \{x_0\} \to \R$ is \emph{little-oh of $g$ as $x$ tends to $x_0$}, written \[ f(x) = o(g(x)) \text{ as } x \to x_0 \] 
-	if, for every $\epsilon > 0$, there exists an open neighborhood $U$ of $x_0$ such that $f(x) \leq \epsilon g(x)$ for all $x \in U \setminus \{x_0\}$. Equivalently, this means that 
-	\[ \lim_{x \to x_0} \frac{|f(x)|}{g(x)} = 0. \]
-	When $x_0$ can be inferred from context, we write simply $f = o(g)$. 
-\end{definition} 
-
-\begin{remark}
-	It's worth noting that the use of the symbol ``$=$'' above is mathematically abusive. The left-hand side of the ``$=$'' is a function and the right-hand side is a property of functions; of course, a function cannot literally be equal to a property. Rather, the ``$=$'' is being used here to mean that the function on the left-hand side \emph{has} the property described on the right-hand side. As annoying as it is, this abuse of notation is fairly standard, so it's probably best to just get used to it. 
-\end{remark}
-
-\begin{exercise} \label{little-o-equivalent-exercise}
-	Prove that the two conditions in \cref{little-o-definition} are in fact equivalent. 
-\end{exercise}
-
-\begin{exercise}
-	Let $X = \R$ and $x_0 = 0$. For each of the functions $f$ and $g$ described below, sketch graphs of $f$ and $g$ and then determine whether or not $f = o(g)$ as $x \to 0$.
-	\begin{enumerate}[(a)]
-		\item $f(x) = x$ and $g(x) = x^2$. 
-		\item $f(x) = x$ and $g(x) = |x|$. 
-		\item $f(x) = x^2$ and $g(x) = |x|$. 
-	\end{enumerate}
-\end{exercise}
-
-\begin{exercise}
-	Let $X = \R^2$ and $x_0 = 0$. For each of the following functions $f$, determine whether or not $f(v) = o(|v|)$ as $x \to 0$. 
-	\begin{enumerate}[(a)]
-		\item $f(h_1,h_2) = h_1 - h_2$. 
-		\item $f(h_1,h_2) = h_1^2 + h_2^2$. 
-	\end{enumerate}
-\end{exercise}
-
-\begin{exercise} \label{little-o-vector-space}
-	For a fixed positive function $g : X \setminus \{x_0\} \to \R$, prove that the set of functions $f : X \setminus \{x_0\} \to \R$ which are $o(g)$ as $x \to x_0$ is a vector space under the natural operations. In other words, verify the following three facts. 
-	\begin{enumerate}[(1)]
-		\item (``Zero is small'') The zero function is $o(g(x))$. 
-		\item (``Scalar multiples of small are still small'') If $c \in \R$ is a scalar and $f(x) = o(g(x))$, then 
-		\[ cf(x) = o(g(x)). \] 
-		\item (``Sum of smalls is still small'') If $f_1(x) = o(g(x))$ and $f_2(x) = o(g(x))$, then \[ (f_1 + f_2)(x) = o(g(x)). \]
-	\end{enumerate}
-\end{exercise}
-
-\begin{exercise}[``Smaller than small is still small''] \label{less-than-small-is-small}
-	Suppose $f_1, f_2 : X \setminus \{x_0\} \to \R$ are functions such that $|f_1(x)| \leq |f_2(x)|$ for all $x$ in a punctured neighborhood of $x_0$, and $f_2(x) = o(g(x))$ as $x \to x_0$. Then $f_1(x) = o(g(x))$ also. 
-\end{exercise}
-
-\begin{comment} 	
-\begin{exercise} \label{little-o-multiplicative}
-Suppose $f_1, f_2, g_1, g_2 : X \setminus \{x_0\} \to \R$ are functions with $g_1, g_2$ positive such that $f_1(x) = o(g_1(x))$ and $f_2(x) = o(g_2(x))$ as $x \to x_0$. Prove that $(f_1 \cdot f_2)(x) = o((g_1 \cdot g_2)(x))$.
-\end{exercise} 
-
-\begin{exercise}
-Suppose $f : X \to \R$ is continuous at $x_0$ and $f(x_0) = 0$, and that $f = o(g)$ as $x \to  x_0$ for some function $g : X \setminus\{x_0\} \to \R$. Suppose further that $s : \R \to \R$ is a function such that $s = o(|r|)$ as $r \to 0$. Then $s \circ f = o(g)$ as $x \to x_0$. 
-\end{exercise}
-
-\begin{proof}
-Suppose $\epsilon > 0$. We want to find an open neighborhood $U$ of $x_0$ such that
-\[ |s(f(x))| \leq \epsilon|t(g(x))| \]
-for $x \in U$. 
-
-Since $s$ is $o(t)$ as $r \to 0$, we know that for any $\epsilon_1 > 0$ there exists $\delta_1 > 0$ such that $|r| < \delta_1$ implies that
-\[ \begin{aligned} |s(r)| \leq \epsilon_1|t(r)|. \end{aligned} \] 
-Since $f(x_0) = 0$ and $f$ is continuous at $x_0$, there exists a neighborhood $U_1$ of $x_0$ such that
-\[ |f(x)| < \delta_1  \]
-for all $x \in U_1$. This means that for $x \in U_1$, we have
-\[ |s(f(x))| \leq \epsilon_1|t(f(x))|. \]
-Since $f = o(g)$ as $x \to x_0$, for any $\epsilon_2 > 0$ there is another neighborhood $U_2$ of $x_0$ such that $|f(x)| \leq \epsilon_2 |g(x)|$. This means that
-\[ |s(f(x))| \leq \epsilon_1 \epsilon_2 |g(x)|. \]
-
-there then exists $\delta_2 > 0$ such that $|h| < \delta$ implies that $|df_a(h) + r(h)| < \delta_1$. Then for $|h| < \delta_2$, we have
-\[ |s(df_a(h) + r(h)| \leq \epsilon_1 |df_a(h) + r(h)| 
-\leq \epsilon_1|f'(a)||h| + \epsilon_1|r(h)| \]
-Since $r$ is $o(|h|)$, for any $\epsilon_2 > 0$ there exists $\delta_3 > 0$ such that $|h| < \delta_3$ implies that $|r(h)| \leq \epsilon_2 |h|$. Let $\delta = \min\{\delta_2, \delta_3\}$. Then for $|h| < \delta$, we can continue the above chain of inequalities to obtain the following.  
-\[ |s(df_a(h) + r(h)| \leq \epsilon_1|f'(a)||h| + \epsilon_1 \epsilon_2|h| = \epsilon_1(|f'(a)| + \epsilon_2)|h| \]
-So we let $\epsilon_2 = 1$ and then let 
-\[ \epsilon_1 = \frac{\epsilon}{|f'(a)| + 1}. \]
-The $\delta$ obtained by going through the above process then has the desired property.
-\end{proof}
-\end{comment}
-
-% TODO: exercise about composition? i'm not sure how to formuulate the correct statement though
 
 \section{Matrices}
 
@@ -248,7 +242,7 @@ The following is a whirlwind review of some facts about matrices, mostly intende
 	This integer is called the \emph{rank} of $A$, and is denoted $\rank(A)$. 
 \end{lemma}
 
-\subsection{Matrix representations} \label{matrix-representations}
+\subsection{Matrix representations of linear maps} \label{matrix-representations}
 
 \begin{definition}
 	If $V$ and $W$ are both vector spaces, we write $\mathscr{L}(V, W)$ for the set of all linear maps $V \to W$. This is naturally a vector space. 
@@ -307,9 +301,7 @@ Throughout the rest of this section, we assume that $U$, $V$, and $W$ are finite
 
 \subsection{Matrix norm} \label{matrix-norm}
 
-Observe that $\mathscr{M}_{n \times m}$ is a finite dimensional vector space. In fact, $\dim \mathscr{M}_{n \times m} = mn$. If $E_{j,i}$ denotes the matrix whose $(j,i)$-entry is 1 and all other entries are 0 for $i = 1, \dotsc, m$ and $j = 1, \dotsc, n$, then the list of all of these $mn$ matrices forms a basis for $\mathscr{M}_{n \times m}$. 
-
-We can use this basis to define a $L^2$ and max norm on $\mathscr{M}_{n \times m}$, as in \cref{l2-norm,max-norm}. Explicitly, if $A$ is a $n \times m$ matrix whose $(j,i)$-entry is $a_{j,i}$, we have the following. 
+Observe that $\mathscr{M}_{n \times m}$ is a finite dimensional vector space. If $E_{j,i}$ denotes the matrix whose $(j,i)$-entry is 1 and all other entries are 0 for $i = 1, \dotsc, m$ and $j = 1, \dotsc, n$, then the list of all of these $mn$ matrices forms a basis for $\mathscr{M}_{n \times m}$. We can use this basis to define a $L^2$ and max norm on $\mathscr{M}_{n \times m}$, as in \cref{l2-norm,max-norm}. Explicitly, if $A$ is a $n \times m$ matrix whose $(j,i)$-entry is $a_{j,i}$, we have the following. 
 \[ \begin{aligned} \|A\| &= \sqrt{ \sum_{j,i} a_{j,i}^2 } \\
 \|A\|_\mx &= \max_{j,i} |a_{j,i}| \end{aligned}  \]
 We know from \cref{max-l2} that these two norms are equivalent. All of the following statements are independent of which norm on $\mathscr{M}_{n \times m}$ we have in mind. 
@@ -327,9 +319,7 @@ We know from \cref{max-l2} that these two norms are equivalent. All of the follo
 \end{corollary}
 
 \begin{proof}
-	Since $\det : \mathscr{M}_{n \times n} \to \R$ is continuous, and $\R \setminus \{0\}$ is an open subset of the codomain, we see that
-	\[ \GL_n = \text{det}^{-1}(\R \setminus \{0\}) \]
-	must be open in $\mathscr{M}_{n \times n}$. 
+	Since $\det : \mathscr{M}_{n \times n} \to \R$ is continuous, and $\R \setminus \{0\}$ is an open subset of the codomain, we see that $\GL_n = \text{det}^{-1}(\R \setminus \{0\})$ must be open in $\mathscr{M}_{n \times n}$. 
 \end{proof}
 
 \begin{lemma} \label{inversion-homeomorphism}
@@ -339,7 +329,7 @@ We know from \cref{max-l2} that these two norms are equivalent. All of the follo
 \begin{proof}
 	This function is its own inverse, so it is sufficient to show that $A \mapsto A^{-1}$ is continuous. But \[ A^{-1} = \det(A)^{-1} \adj(A), \]
 	where $\adj(A)$ denotes the adjugate matrix of $A$. 
-	We know that $\det{A}$ is a polynomial in the entries of $A$. Each entry of $\adj(A)$ is a minor of $A$ and is therefore also a polynomial in the entries of $A$. The lemma follows. 
+	We know that $\det(A)$ is a polynomial in the entries of $A$. Each entry of $\adj(A)$ is a minor of $A$ and is therefore also a polynomial in the entries of $A$. The lemma follows. 
 \end{proof}
 
 \section{Operator norm} \label{operator-norm}

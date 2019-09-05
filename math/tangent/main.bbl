@@ -7,6 +7,12 @@ Sheldon Axler.
 \newblock \href {http://dx.doi.org/10.1007/978-3-319-11080-6}
   {\path{doi:10.1007/978-3-319-11080-6}}.
 
+\bibitem[GO03]{counterexamples}
+Bernard~R. Gelbaum and John M.~H. Olmsted.
+\newblock {\em Counterexamples in analysis}.
+\newblock Dover Publications, Inc., 2003.
+\newblock Corrected reprint of the second (1965) edition.
+
 \bibitem[GVL13]{golub}
 Gene~H. Golub and Charles~F. Van~Loan.
 \newblock {\em Matrix computations}.
