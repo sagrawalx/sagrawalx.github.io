@@ -522,17 +522,17 @@ Proving this result requires having a rigorous definition of what $x^r$ even mea
 
 Next up, here is a fact about differentiating power series. The proof is omitted because it is rather technical. 
 
-\begin{proposition} \label{differentiating-power-series}
+\begin{theorem} \label{differentiating-power-series}
 	Suppose the power series $\sum_{n = 0}^\infty a_n x^n$
-	has radius of convergence $R$. Then the function $f : (-R, R) \to \R$ given by
+	has a nonzero radius of convergence $R$. Then the function $f : (-R, R) \to \R$ given by
 	\[ f(x) = \sum_{n = 0}^\infty a_n x^n \]
 	is differentiable and
 	\[ f'(x) = \sum_{n = 0}^\infty na_n x^{n-1}. \]
 	Moreover, the radius of convergence of the power series $\sum_{n = 0}^\infty na_n x^{n-1}$
 	is also $R$. 
-\end{proposition}
+\end{theorem}
 
-The exponential, sine and cosine functions are usually defined using power series. More precisely, we have the following. 
+The exponential, sine, and cosine functions are usually defined using power series. 
 \[ \begin{aligned} \exp(x) &= \sum_{n = 0}^\infty \frac{x^n}{n!} \\
 \cos(x) &= \sum_{n = 0}^\infty \frac{(-1)^n x^{2n}}{(2n)!} \\
 \sin(x) &= \sum_{n = 0}^\infty \frac{(-1)^n x^{2n+1}}{(2n+1)!} \end{aligned} \]
@@ -544,7 +544,7 @@ All three of these power series have infinite radius of convergence, so the foll
 \end{enumerate} 
 
 \begin{remark}
-	Defining the exponential, sine, and cosine functions using power series is mathematically fine, but there are numerous facts about these functions that are not clear from the power series, and one needs to prove these facts separately. For example, it's useful knowing that, if $e := \exp(1)$, then $\exp(x) = e^x$. This fact is not immediately clear from the power series definition; it requires some proof, and we won't prove it here, but you should feel free to use it. It's obviously also useful to know that sines and cosines have something to do with trigonometry. Again, this is not clear from the power series definition; they require some proof, and we won't prove these facts, but you should feel free to use them. 
+	Defining the exponential, sine, and cosine functions using power series is mathematically fine, but there are numerous facts about these functions that are not clear from the power series, and one needs to prove these facts separately. For example, it's useful knowing that, if $e := \exp(1)$, then $\exp(x) = e^x$. This fact is not immediately clear from the power series definition; it requires some proof, and we won't prove it here, but you should feel free to use it. It's obviously also useful to know that sines and cosines have something to do with trigonometry. Again, this is not clear from the power series definition; it requires some proof, and we won't prove it, but you should feel free to use it. 
 \end{remark}
 
 We can now compute the derivative of the logarithm.
@@ -554,7 +554,7 @@ We can now compute the derivative of the logarithm.
 	\begin{hint} The natural logarithm $\ln : (0, \infty) \to \R$ is the inverse of the exponential function. \end{hint}
 \end{exercise}
 
-Here is some further practice with differentiation of transcendental functions. 
+Here is some further practice with differentiation of transcendental functions. This exercise is the first of a series; the function $\sin(1/x)$ and variants can be used to construct a whole host of examples of bizarre functions. 
 
 \begin{exercise} \label{power-times-sine}
 	\begin{enumerate}[(a)]
@@ -589,6 +589,18 @@ But remember, the converse to the interior extremum theorem \ref{interior-extrem
 
 \begin{exercise} \label{interior-extremum-converse-false}
 	Give an example of a function $f : \R \to \R$ where $f'(0) = 0$, but $f$ does not have a local extremum at 0. 
+\end{exercise}
+
+Another caveat to \cref{interior-extremum} is that, even if $f$ has a local extremum at a point, it need not be that the derivative ``changes sign'' at that point. This is another example of the pathological behavior that can be exhibited by functions involving $\sin(1/x)$. 
+
+\begin{exercise} \label{extremum-no-sign-change}
+	Consider the function $f : \R \to \R$ given by 
+	\[ f(x) = \begin{cases} x^4 \left( 2 + \sin(1/x) \right) & \text{if } x \neq 0 \\ 0 & \text{if } x = 0. \end{cases} \]
+	\begin{enumerate}[(a)]
+		\item Show that $f$ has an absolute minimum at 0. 
+		\item Show that $f$ is differentiable and calculate the derivative $f'$. 
+		\item Show that, on every open interval of the form $(a, 0)$ or $(0, b)$, the derivative $f'$ takes on both positive and negative values. 
+	\end{enumerate}
 \end{exercise}
 
 \subsection{Mean value theorem}
@@ -712,15 +724,26 @@ The following standard property of differentiable functions again follows quickl
 	\begin{hint} For all four, imitate the proof of \cref{deriv-zero-implies-constant}. \end{hint}
 \end{exercise}
 
-\subsection{Darboux's theorem \texorpdfstring{$\star$}{*}}
+And again, there are pathologies involving monotonicity than can be exhibited by functions involving $\sin(1/x)$. 
 
-Darboux's theorem is not commonly discussed in elementary calculus, nor is it strictly necessary for what follows. But it is an interesting fact about derivatives, and is sometimes useful to know. Roughly, the theorem says that derivatives are ``close'' to being continuous. Before getting to the precise statement of the theorem, we make the following definition. 
+\begin{exercise} \label{positive-not-monotonic}
+	Let $f : \R \to \R$ denote the function
+	\[ f(x) = \begin{cases} x + 2x^2 \sin(1/x) & \text{if } x > 0 \\ 0 & \text{if } x = 0. \end{cases} \]
+	\begin{enumerate}[(a)]
+		\item Show that $f$ is differentiable and calculate $f'$. In particular, show that $f'(0) = 1$. 
+		\item Show that $f$ is not monotonic on any open interval containing 0.  
+	\end{enumerate}
+\end{exercise}
+
+\subsection{Darboux's theorem \texorpdfstring{$\star$}{*}} \label{darboux-section}
+
+Darboux's theorem is not commonly discussed in elementary calculus, nor is it strictly necessary for what follows. But it is an interesting fact about derivatives, and is sometimes useful to know. Roughly, the theorem says that derivatives are ``close'' to being continuous, but in a slightly strange way. Before getting to the precise statement of the theorem, we make the following definition. 
 
 \begin{definition}
 	Suppose $I$ is an interval and $f : I \to \R$ is a function. Then $f$ \emph{has the intermediate value property} if, for every $a < b$ in $I$ and every $y \in \R$ strictly between $f(a)$ and $f(b)$, there exists $x \in (a, b)$ such that $f(x) = y$. 
 \end{definition}
 
-Using this vocabulary, the intermediate value theorem asserts that every continuous function has the intermediate value property \cite[theorem 3.3]{protter-morrey}. Simple examples of discontinuous functions don't have the intermediate value property (cf. \cref{removable-jump-ivp} below). But, it turns out that some discontinuous functions do have the intermediate value property (cf. \cref{discontinuous-ivp} below). 
+Using this vocabulary, the intermediate value theorem asserts that every continuous function has the intermediate value property \cite[theorem 3.3]{protter-morrey}. Simple examples of discontinuous functions don't have the intermediate value property (cf. \cref{removable-jump-ivp} below). But, it turns out that some fairly bizarre discontinuous functions do have the intermediate value property (cf. \cref{discontinuous-ivp} below). 
 
 \begin{exercise} \label{removable-jump-ivp}
 	Let $I$ be an interval and $f : I \to \R$ a function. 
@@ -831,11 +854,29 @@ Here is an example application.
 
 \section{Levels of differentiability} 
 
-\subsection{\texorpdfstring{$C^k$}{Ck} functions}
+\subsection{Continuous differentiability}
+
+We saw in \cref{darboux-section} that the derivative of a differentiable function is always ``close'' to being continuous, though in a slightly bizarre way. Insisting that the derivative actually be continuous is often useful for ruling out pathological behavior. 
 
 \begin{definition} \label{continuously-differentiable-singlevar}
 	Suppose $U$ is an open subset of $\R$ and $f : U \to \R$ is differentiable. If the derivative $f' : U \to \R$ is also continuous, then $f$ is said to be \emph{continuously differentiable}. 
 \end{definition}
+
+For example, we saw in \cref{positive-not-monotonic} that there is a differentiable function whose derivative is positive at a point, but which is not monotonic on any interval containing that point. That cannot happen with continuously differentiable functions. 
+
+\begin{example}
+	Suppose $f : U \to \R$ is continuously differentiable, and $a \in U$ is a point such that $f'(a) > 0$. Show that there exists an open interval containing $a$ on which $f$ is strictly increasing. 
+\end{example}
+
+\subsection{\texorpdfstring{$C^k$}{Ck} functions}
+
+Unfortunately, insisting that the derivative of a function be continuous does not rule out all possible bizarre behavior. For example, in \cref{extremum-no-sign-change}, we saw a differentiable function $f$ with an absolute minimum at a point, but the derivative does not ``change sign'' at that point. In fact, that function is also continuously differentiable (cf. \cref{extremum-no-sign-change-continued}), so merely insisting on continuous differentiability does not quite manage to rule out that kind of pathological behavior. However, as it turns out, the derivative of $f'$, called the ``second derivative'' of $f$ and denoted $f''$, turns out \emph{not} to be continuous (cf. \cref{extremum-no-sign-change-continued}). 
+
+\begin{exercise} \label{extremum-no-sign-change-continued}
+	Let $f : \R \to \R$ be the function from \cref{extremum-no-sign-change}. Show that $f'$ is differentiable, but that $f''$ is not continuous. 
+\end{exercise}
+
+This suggests the following inductive chain of definitions. 
 
 \begin{definition} \label{cn-single-var}
 	Let $U$ be an open subset of $\R$ and $f : U \to \R$ a function. We make the following string of definitions. 
@@ -872,13 +913,19 @@ The following exercise shows that all of these implications are strict; in other
 
 \subsection{Smooth functions} \label{smooth-single-var}
 
+Insisting that a function be $C^k$ for larger and larger values of $k$ rules out more and more pathological behavior. This suggests the following. 
+
 \begin{definition}
-	A function $f : U \to \R$ is said to be $C^\infty$, or \emph{infinitely differentiable}, or \emph{smooth}, if it is in $C^k$ for all $k$. 
+	A function $f : U \to \R$ is said to be $C^\infty$, or \emph{infinitely differentiable}, or \emph{smooth}, if it is $C^k$ for all $k$. 
 \end{definition}
 
 It's a little annoying that there are three different words that all mean the same thing, but that's just how it is; all three are commonly used in the mathematical literature, so it's best to get used to all of them. We'll usually use the word ``smooth.'' It follows immediately from \cref{sums-scalars-cn-singlevar,product-cn-singlevar,composite-cn-singlevar} that sums, scalar multiples, products, and composites of smooth functions are also smooth. 
 
-An important principle is that we can tailor smooth functions to almost arbitrary specifications. Our first example of this principle is the following smooth bijection $(-1,1) \to \R$ whose inverse is also smooth. A smooth bijection with a smooth inverse is also called a ``diffeomorphism.''
+\subsubsection*{Diffeomorphisms}
+
+The class of smooth functions is very well-behaved. On the one hand, smoothness rules out lots of pathological behavior, like the behavior that we saw in \cref{positive-not-monotonic,extremum-no-sign-change,extremum-no-sign-change-continued} with $\sin(1/x)$-type functions. On the other hand, there is a vast array of smooth functions; we can tailor smooth functions to almost arbitrary specifications. 
+
+Our first example of this principle is the following smooth bijection $(-1,1) \to \R$ whose inverse is also smooth. A smooth bijection with a smooth inverse is also called a ``diffeomorphism.'' Roughly, the fact that there exists diffeomorphism $(-1,1) \to \R$ ``smoothly stretch out'' $(-1,1)$ to all of $\R$, and also ``smoothly shrink'' all of $\R$ down to $(-1,1)$. 
 
 \begin{example} \label{interval-to-line}
 	Consider the function $f : (-1,1) \to \R$ defined by \[ f(x) = \frac{x}{1-x^2}. \]
@@ -926,11 +973,21 @@ An important principle is that we can tailor smooth functions to almost arbitrar
 	We now prove by induction that $f^{-1}$ is $C^k$ for all integers $k$. For the base case, we know from above that it is $C^0$ (in fact, we even know more: we know that $f^{-1}$ is even differentiable, but all we need to know for the base case is that it is continuous). Suppose inductively that $f^{-1}$ is $C^k$ for some non-negative integer $k$. Then, as we saw above, $(f^{-1})'$ is the composite of $f^{-1}$, $f'$, and inversion. The latter two are smooth, so in particular are $C^k$. By the inductive hypothesis, we know that $f^{-1}$ is $C^k$. Thus $(f^{-1})'$, being the composite of three $C^k$ functions, is also $C^k$ by \cref{composite-cn-singlevar}. This means that $f^{-1}$ is $C^{k+1}$, which completes the induction. 
 \end{proof}
 
-\begin{exercise}
-	For any $a < b$, construct a diffeomorphism $f : (a, b) \to \R$.
+Of course, there's nothing special about the open interval $(-1,1)$. In fact, we can construct a diffeomorphism between any pair of open intervals!
+
+\begin{exercise} \label{open-intervals-diffeomorphic}
+	\begin{enumerate}[(a)]
+		\item For real numbers $a < b$, construct a diffeomorphism $f : (a, b) \to \R$.
+		\item Show that the exponential function is a diffeomorphism $\R \to (0, \infty)$. 
+		\item Construct a diffeomorphism $\R \to (a, \infty)$ for any real number $a$. 
+		\item Construct a diffeomorphism $\R \to (-\infty, a)$ for any real number $a$. 
+		\item If $I$ and $I'$ are both open intervals, show that there exists a diffeomorphism $f : I \to I'$. 
+	\end{enumerate}
 \end{exercise}
 
-Our next example of a slightly strange smooth function is the following one, which gets ``infinitely flat'' at 0 but is not constantly equal to 0. 
+\subsubsection*{Infinitely flat functions, bump functions, and bridging functions}
+
+We next discuss an example of a smooth function which gets ``infinitely flat'' at 0, but is not constantly equal to 0. But first, a preliminary remark. 
 
 \begin{remark} \label{exponential-limit}
 	Here is a fact that you might recognize:
@@ -990,7 +1047,7 @@ Our next example of a slightly strange smooth function is the following one, whi
 
 Next up, we have ``bump functions.'' Recall that the ``support'' of a function $f : U \to \R$ is the closure of the set $\{ x \in U : f(x) \neq 0 \}$. A ``bump function'' is a smooth function whose support is compact. 
 
-\begin{exercise} \label{canonical-bump}
+\begin{example} \label{canonical-bump}
 	Consider the function $\psi : \R \to \R$ given by the following. 
 	\[ \psi(x) = \begin{cases} e^{-1/(1-x^2)} & \text{if } x \in (-1,1) \\ 0 & \text{otherwise}. \end{cases} \]
 	See \cref{canonical-bump-graph} for its graph. 
@@ -1020,8 +1077,8 @@ Next up, we have ``bump functions.'' Recall that the ``support'' of a function $
 		\end{center}
 		\caption{The graph of the function $\psi$ from \cref{canonical-bump}.}  \label{canonical-bump-graph}
 	\end{figure}
-	Check that $\psi$ is the composite of the ``infinitely flat'' function from \cref{infinitely-flat} and the polynomial $p(x) = 1-x^2$. Conclude that $\psi$ is a bump function whose support is $[-1,1]$.
-\end{exercise}
+	It is clear from the definition of $\psi$ that the support of $\psi$ is the closed interval $[-1,1]$. Moreover, observe that, if $f$ is the ``infinitely flat'' function from \cref{infinitely-flat} and $p : \R \to \R$ is the polynomial $p(x) = 1-x^2$, then $\psi = f \circ p$. Thus $\psi$ is smooth. 
+\end{example}
 
 \begin{exercise}
 	For any $a < b$ in $\R$, construct a bump function whose support is $[a,b]$. 
@@ -1031,21 +1088,9 @@ Next up, we have ``bump functions.'' Recall that the ``support'' of a function $
 	Let $F$ be a closed subset of $\R$. Construct a smooth function which is zero on $F$ and nonzero outside of $F$. \begin{hint} Recall that the complement of $F$ is a countable disjoint union of open intervals (cf. \cite[theorem 6.17]{protter-morrey}). \end{hint}
 \end{exercise}
 
-\begin{comment}
-The next example to consider is the so-called Gaussian function. 
+Next up, we'll discuss an example of a ``bridging function.'' It will be constant on $(-\infty, -1]$, and also constant on $[1, \infty)$, but the values on these two intervals is different; and on $(-1,1)$, the function ``smoothly bridges the gap'' between the two values. 
 
-\begin{example}[Gaussian function] \label{gaussian}
-	Consider the function $\psi : \R \to \R$ defined by \[ \psi(x) = e^{-x^2}, \]
-	called the \emph{Gaussian function}. As the composite of the smooth function $x \mapsto e^x$ with the smooth function $x \mapsto -x^2$, this function is also smooth. Observe that $\psi$ has the property that
-	\[ \lim_{x \to \pm \infty} \psi(x) = 0. \]
-	We can also calculate that $\psi'(x) = -2xe^{-x^2}$, and then using l'H\^opital's rule (which we haven't proved), we can show that
-	\[ \lim_{x \to \pm \infty} \psi'(x) = 0. \]
-	A more difficult property of $\psi$ is that
-	\[ \int_{-\infty}^\infty \psi(t)\, dt = \sqrt{\pi}. \]
-\end{example}
-\end{comment}
-
-In the following two examples, we will have to invoke the fundamental theorem of calculus, even though we have not proved it (or even defined integrals, for that matter). If you're unhappy with using things you haven't proved, you can find rigorous discussions of integration in many places (eg, \cite[chapter 5]{protter-morrey}, \cite[chapter 6]{rudin}, etc).
+In discussing this example, we will invoke the fundamental theorem of calculus, even though we have not proved it (or even defined integrals, for that matter). If you're unhappy with using things you haven't proved, you can find rigorous discussions of integration in many places (eg, \cite[chapter 5]{protter-morrey}, \cite[chapter 6]{rudin}, etc). Alternatively, you might also be interested in \cite[chapter 3, example 12]{counterexamples}, which gives an example of a ``bridging function'' that involves no integrals. 
 
 \begin{example} \label{integral-canonical-bump}
 	Let $\psi$ be the bump function from \cref{canonical-bump}, and then consider 
@@ -1056,7 +1101,7 @@ In the following two examples, we will have to invoke the fundamental theorem of
 \end{example}
 
 \begin{exercise} \label{constant-compact-zero-outside-neighborhood}
-	Let $I = [a, b]$ be a compact interval in $\R$ and let $U$ be an open subset containing $I$. Prove that there exists a bump function $f : \R \to \R$ such that $f(x) = 1$ for all $x \in K$ and $f(x) = 0$ for all $x \notin U$. \begin{hint} 
+	For $a < b$ in $\R$, let $I = [a, b]$ and let $U$ be an open subset containing $I$. Prove that there exists a bump function $f : \R \to \R$ such that $f(x) = 1$ for all $x \in K$ and $f(x) = 0$ for all $x \notin U$. \begin{hint} 
 	The characteristic function \[ \chi_I(x) = \begin{cases} 1 & \text{if } x \in I \\ 0 & \text{if } x \notin I \end{cases} \]
-	is close to having all of the properties we want, but it's not smooth (it's clearly not even continuous). Since $U$ is open, there exist $a' < a$ and $b' > b$ such that $I := [a', b'] \subseteq U$. Modify $\chi_I$ on the intervals $[a', a]$ and $[b, b']$ to obtain the desired function. Use inspiration from the function $\eta$ of \cref{integral-canonical-bump}. \end{hint}
+	is close to having all of the properties we want, but it's not smooth; it's clearly not even continuous. Use bridging functions to modify $\chi_I$ and bridge the discontinuities. \end{hint}
 \end{exercise}
