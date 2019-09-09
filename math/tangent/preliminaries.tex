@@ -1,4 +1,4 @@
-\chapter{Preliminaries} \label{prerequisites}
+\chapter{Preliminaries} \label{prelims}
 
 The sections in this chapter cover some ideas relating to point-set topology and linear algebra that will be invoked in the main part of the text. Some sections are merely intended to establish notation; others cover topics that you may not have encountered before. I encourage skipping this chapter, and referring back to it only when you need to. 
 
@@ -88,26 +88,23 @@ The $\delta$ obtained by going through the above process then has the desired pr
 \end{proof}
 \end{comment}
 
-% TODO: exercise about composition? i'm not sure how to formuulate the correct statement though
-
-
 \section{Product metric} \label{product-metric}
 
 \begin{exercise}
 	Suppose $X$ and $Y$ are metric spaces with metrics $d_X$ and $d_Y$, respectively. Define a function $d : (X \times Y) \times (X \times Y) \to \R$ by 
 	\[ d((x_1,y_1),(x_2,y_2)) = \max\{ d_X(x_1,x_2), d_Y(y_1,y_2) \}. \]
-	Show that $d$ is a metric on $X \times Y$. 
+	Show that $d$ is a metric on $X \times Y$. \index{product!product metric}
 \end{exercise}
 
 \begin{exercise}
 	Suppose $X$ and $Y$ are metric spaces with metrics $d_X$ and $d_Y$, respectively. Define a function $d : (X \times Y) \times (X \times Y) \to \R$ by 
 	\[ d((x_1,y_1),(x_2,y_2)) = \sqrt{ d_X(x_1,x_2)^2 + d_Y(y_1,y_2)^2 }. \]
-	Show that $d$ is a metric on $X \times Y$, and that it is equivalent to the metric from \cref{product-metric}.
+	Show that $d$ is a metric on $X \times Y$, and that it is equivalent to the metric from \cref{product-metric}.\index{product!product metric} 
 \end{exercise}
 
 \section{Norms on vector spaces}
 
-\begin{definition} \label{norm-definition}
+\begin{definition} \label{norm-definition} \index{norm}
 	Let $V$ be a vector space. A \emph{norm} $\|-\|$ on $V$ is a function $V \to \R$ satisfying the following two axioms. 
 	\begin{enumerate}[(N1)]
 		\item $|v| \geq 0$.
@@ -124,16 +121,16 @@ The $\delta$ obtained by going through the above process then has the desired pr
 \end{exercise}
 
 \begin{exercise} \label{addition-continuous}
-	Suppose $|-|$ is a norm on a vector space $V$. Show that the function $V \times V \to V$ given by $(v, w) \mapsto v+w$ is continuous, where $V \times V$ is regarded as a metric space via one of the metrics defined in \cref{product-metric}. 
+	Suppose $|-|$ is a norm on a vector space $V$. Show that the function $V \times V \to V$ given by $(v, w) \mapsto v+w$ is continuous, where $V \times V$ is regarded as a metric space via one of the metrics defined in \cref{product-metric}.\index{product!product metric}  
 \end{exercise}
 
 \begin{exercise} \label{scalar-multiplication-continuous}
-	Suppose $\|-\|$ is a norm on a vector space $V$. Show that the function $\R \times V \to V$ given by $(\lambda, v) \mapsto \lambda v$ is continuous, where $\R \times V$ is regarded as a metric space via one of the metrics defined in \cref{product-metric}. 
+	Suppose $\|-\|$ is a norm on a vector space $V$. Show that the function $\R \times V \to V$ given by $(\lambda, v) \mapsto \lambda v$ is continuous, where $\R \times V$ is regarded as a metric space via one of the metrics defined in \cref{product-metric}.\index{product!product metric} 
 \end{exercise}
 
 \subsection{Equivalence of norms}
 
-\begin{definition} \label{norm-equivalence-definition}
+\begin{definition} \label{norm-equivalence-definition} \index{equivalence!of norms}
 	Two norms $|-|$ and $|-|'$ on a vector space $V$ are \emph{equivalent} if there exist nonzero constants $C_1$ and $C_2$ such that
 	\[ C_1 |v| \leq |v|' \leq C_2 |v| \]
 	for all $v \in V$. 
@@ -151,8 +148,8 @@ The $\delta$ obtained by going through the above process then has the desired pr
 
 If $V$ is a finite dimensional vector space, we can construct a number of norms on $V$ by choosing a basis. Of these, two are of key importance. 
 
-\begin{example} \label{l2-norm}
-	Suppose $V$ is a finite dimensional vector space, and $v_1, \dotsc, v_n$ is a basis for $V$. The \emph{$L^2$-norm} on $V$ with respect to this basis is defined by
+\begin{example} \label{l2-norm} \index{l2 norm@$L^2$ norm}
+	Suppose $V$ is a finite dimensional vector space, and $v_1, \dotsc, v_n$ is a basis for $V$. The \emph{$L^2$ norm} on $V$ with respect to this basis is defined by
 	\[ |a_1v_1 + \dotsb + a_n v_n| = \sqrt{a_1^2 + \dotsb + a_n^2}, \]
 	where $a_1, \dotsc, a_n \in \R$. 
 	Axioms (N1) through (N3) are straightforward to verify. For the triangle inequality (N4), suppose $v = a_1 v_1 + \dotsb + a_n v_n$ and $w = b_1 v_1 + \dotsb +  b_n v_n$. Then
@@ -163,11 +160,11 @@ If $V$ is a finite dimensional vector space, we can construct a number of norms 
 	where we have used the Cauchy-Schwarz inequality\footnotemark\ for the third step. Taking square roots yields (N4). 
 \end{example} 
 
-\footnotetext{The \emph{Cauchy-Schwarz inequality} states that
+\footnotetext{The \emph{Cauchy-Schwarz inequality}\index{cauchy schwarz inequality@Cauchy-Schwarz inequality} states that
 \[ (a_1 b_1  + \dotsb + a_n b_n)^2 \leq (a_1^2 + \dotsb + a_n^2) (b_1^2 + \dotsb + b_n^2) \]
 for all $a_1, \dotsc, a_n, b_1, \dotsc, b_n \in \R$. For a proof, see \cite[theorem 6.1]{protter-morrey}, for instance.}
 
-\begin{example} \label{max-norm}
+\begin{example} \label{max-norm} \index{max norm} \index{linfinity norm@$L^\infty$ norm|see {max norm}}
 	Suppose $V$ is a finite dimensional vector space, and $v_1, \dotsc, v_n$ is a basis for $V$. The \emph{$L^\infty$-norm}, or the \emph{max norm}, on $V$ with respect to this basis is defined by
 	\[ |a_1v_1 + \dotsb + a_n v_n|_\mx = \max \{ |a_1|, \dotsc, |a_n| \}. \]
 	Axioms (N1) through (N3) are straightforward to verify. For the triangle inequality (N4), suppose $v = a_1 v_1 + \dotsb + a_n v_n$ and $w = b_1 v_1 + \dotsb +  b_n v_n$. Then
@@ -188,18 +185,19 @@ The following states that these two norms are actually equivalent.
 In fact, here is vast generalization of \cref{max-l2}. 
 
 \begin{theorem} \label{finite-dim-norm}
-	If $V$ is a finite dimensional vector space, all norms on $V$ are equivalent.
+	If $V$ is a finite dimensional vector space, all norms on $V$ are equivalent.\index{equivalence!of norms}
 \end{theorem}
 
 \section{Euclidean space} \label{euclidean}
 
 For any non-negative integer $n$, we write $\R^n$ to denote the set of lists of $n$ real numbers. We will sometimes write its elements as horizontal lists of numbers separated by commas, as in \[ (h_1, \dotsc, h_n), \] and sometimes as vertical column of numbers, as in \[ \begin{bmatrix} h_1 \\ \vdots \\ h_n \end{bmatrix}.  \]
+The set $\R^n$ is also called \emph{$n$-dimensional euclidean space}.\index{euclidean space}
 
 \subsection{Linear structure on \texorpdfstring{$\R^n$}{Rn}}
 
 Given $v_1, v_2 \in \R^n$, we define their sum $v_1 + v_2$ by adding the entries coordinate-wise. Given $\lambda \in \R$ and $v \in \R$, we define $\lambda v$ by multiplying each entry of $v$ by $\lambda$. This endows $\R^n$ with the structure of a vector space. 
 
-For each $i = 1,  \dotsc, n$, we define the \emph{$i$th standard basis vector}, denoted $e_i$, to be the list whose $i$th entry is 1 and all other entries are 0. 
+For each $i = 1,  \dotsc, n$, we define the \emph{$i$th standard basis vector},\index{standard basis} denoted $e_i$, to be the list whose $i$th entry is 1 and all other entries are 0. 
 \[ \begin{aligned} e_1 &= (1, 0, 0, \dotsc, 0, 0) \\
 e_2 &= (0, 1, 0, \dotsc, 0, 0) \\
 &\enspace \vdots \\
@@ -208,28 +206,46 @@ Observe that
 \[ (h_1, \dotsc, h_n) = h_1 e_1 + h_2 e_2 + \dotsb + h_n e_n.  \]
 Thus the list $e_1, \dotsc, e_n$ is a basis for $\R^n$. 
 
-For any $i = 1, \dotsc, n$, we let $\pi_i : \R^n \to \R$ denote the $i$th \emph{projection map}, given by 
+For any $i = 1, \dotsc, n$, we let $\pi_i : \R^n \to \R$ denote the $i$th \emph{projection map},\index{projection map} given by 
 \[ \pi_i(h_1, \dotsc, h_n) = h_i. \]
 This is a linear map. 
 
 \subsection{Norms on \texorpdfstring{$\R^n$}{Rn}}
 
-The $L^2$-norm (cf. \cref{l2-norm}) with respect to the standard basis $e_1, \dotsc, e_n$ of $\R^n$ is the usual norm we use on $\R^n$. Explicitly, if $v = (h_1, \dotsc, h_n) \in \R^n$, we define
+The $L^2$ norm (cf. \cref{l2-norm}) with respect to the standard basis $e_1, \dotsc, e_n$ of $\R^n$ is the usual norm we use on $\R^n$. Explicitly, if $v = (h_1, \dotsc, h_n) \in \R^n$, we define
 \[ |v| := \sqrt{h_1^2 + \dotsb + h_n^2}. \]
+This norm is sometimes also called the \emph{euclidean norm} or the \emph{standard norm} on $\R^n$.\index{l2 norm@$L^2$ norm} \index{euclidean norm|see {l2 norm@$L^2$ norm}} 
 Unless explicitly specified otherwise, we regard $\R^n$ as a metric space with the metric induced by this norm (cf. \cref{norm-induces-metric}). 
 
-On the other hand, we could also endow $\R^n$ with the max norm (cf. \cref{max-norm}) with respect to the standard basis. We denote this norm by $|-|_\mx$. Explicitly, if $v = (h_1, \dotsc, h_n) \in \R^n$, we have
+On the other hand, we could also endow $\R^n$ with the max norm (cf. \cref{max-norm}) with respect to the standard basis. We denote this norm by $|-|_\mx$.\index{max norm} Explicitly, if $v = (h_1, \dotsc, h_n) \in \R^n$, we have
 \[ |v|_\mx = \max\{ |h_1|, \dotsc, |h_n| \}. \]
+
+\subsection{Sup norm on \texorpdfstring{$\R^n$}{Rn}-valued functions}
+
+Let $X$ be a set and consider the set of functions $X \to \R^n$. This set is naturally a vector space under pointwise operations: if $f, g : X \to \R^n$, then
+\[ (f+g)(x)= f(x) + g(x) \]
+and if $\lambda \in \R$, then
+\[ (\lambda f)(x) = \lambda f(x). \]
+
+\begin{definition}
+	If $X$ is a set, we define the \emph{sup norm} of a function $f : X \to \R$, denoted $\|f\|_\spn$, by
+	\[ \|f\|_{\spn,X} = \sup_{x \in X} |f(x)|. \]
+	If $X$ can be inferred from context, we also write simply $\|f\|_\spn$. We say that $f$ is \emph{bounded} if $\|f\|_{\spn} < \infty$. 
+\end{definition}
+
+\begin{exercise}
+	Show that $\|-\|_\spn$ is a norm on the vector space of bounded\footnotemark\ functions $X \to \R^n$.
+\end{exercise}
 
 \section{Matrices}
 
 The following is a whirlwind review of some facts about matrices, mostly intended to establish notation. The reader is expected to remember definitions of matrix multiplication, determinants, and minors. Few proofs are included in this section; for more details, you are encouraged to reference a dedicated linear algebra text.
 
-\begin{definition}
-	We write $\mathscr{M}_{n,m}$ for the set of all $n \times m$ matrices (ie, the matrices with $n$ rows and $m$ columns). This is naturally a vector space, where addition and scalar multiplication are defined entrywise.  
+\begin{definition} \index{mnm@$\mathscr{M}_{n \times m}$}
+	We write $\mathscr{M}_{n \times m}$ for the set of all $n \times m$ matrices (ie, the matrices with $n$ rows and $m$ columns). This is naturally a vector space, where addition and scalar multiplication are defined entrywise.  
 \end{definition}
 
-\begin{definition}
+\begin{definition} \index{gln@$\GL_n$}
 	Let $\GL_n$ denote the subset of $\mathscr{M}_{n \times n}$ consisting of invertible $n \times n$ matrices.
 \end{definition}
 
@@ -239,22 +255,22 @@ The following is a whirlwind review of some facts about matrices, mostly intende
 		\item The dimension of the span of the columns of $A$. \item The dimension of the span of the rows of $A$. 
 		\item The size of largest nonzero minor of $A$. 
 	\end{enumerate}
-	This integer is called the \emph{rank} of $A$, and is denoted $\rank(A)$. 
+	This integer is called the \emph{rank} of $A$, and is denoted $\rank(A)$.\index{rank!of a matrix} 
 \end{lemma}
 
 \subsection{Matrix representations of linear maps} \label{matrix-representations}
 
-\begin{definition}
+\begin{definition} \index{lvw@$\mathscr{L}(V,W)$}
 	If $V$ and $W$ are both vector spaces, we write $\mathscr{L}(V, W)$ for the set of all linear maps $V \to W$. This is naturally a vector space. 
 \end{definition}
 
-\begin{definition}
+\begin{definition} \index{glv@$\GL(V)$}
 	If $V$ is a vector space, let $\GL(V)$ denote the set of invertible linear maps $V \to V$, regarded as a subset of $\mathscr{L}(V,V)$. 
 \end{definition}
 
 Throughout the rest of this section, we assume that $U$, $V$, and $W$ are finite dimensional vector spaces. 
 
-\begin{definition}
+\begin{definition} \index{representation!of a vector}
 	Suppose $B$ denotes a basis $v_1, \dotsc, v_n$ for $V$. Then any $v \in V$ can be written uniquely as $a_1v_1 + \dotsb + a_n v_n$ for some scalars $a_1, \dotsc, a_n \in \R$, and we define the \emph{representation of $v$ with respect to $B$}, denoted $[v]_B$, to be the column vector with $n$ entries that records the scalars $a_1, \dotsc, a_n$. In other words,
 	\[ [v]_B = \begin{bmatrix} a_1 \\ \vdots \\ a_n \end{bmatrix}. \]
 \end{definition}
@@ -264,7 +280,7 @@ Throughout the rest of this section, we assume that $U$, $V$, and $W$ are finite
 	\[ \begin{bmatrix} a_1 \\ \vdots \\ a_n \end{bmatrix} \mapsto a_1 v_1 + \dotsb + a_n v_n. \]
 \end{lemma}
 
-\begin{definition} \label{matrix-representation-linear}
+\begin{definition} \label{matrix-representation-linear} \index{representation!of a linear map}
 	Suppose $\ell : V \to W$ is a linear map. Let $B$ and $C$ denote bases $v_1, \dotsc, v_m$ and $w_1, \dotsc, w_n$ for $V$ and $W$, respectively. The \emph{matrix representation of $\ell$ with respect to $B$ and $C$}, denoted $[\ell]_{B,C}$, is the $n \times m$ matrix whose $i$th column of $[\ell]_{B,C}$ is $[\ell(v_i)]_C$. In other words,
 	\[ [\ell]_{B,C} = \begin{bmatrix} [\ell(v_1)]_C & \dotsb & [\ell(v_m)]_C \end{bmatrix}. \]
 \end{definition}
@@ -284,14 +300,14 @@ Throughout the rest of this section, we assume that $U$, $V$, and $W$ are finite
 \end{lemma}
 
 \begin{definition}
-	If $\ell : V \to W$ is a linear map, then the \emph{rank} of $\ell$, denoted $\rank(\ell)$ is defined to be the dimension of the range of $\ell$. 
+	If $\ell : V \to W$ is a linear map, then the \emph{rank} of $\ell$, denoted $\rank(\ell)$ is defined to be the dimension of the range of $\ell$.\index{rank!of a linear map} 
 \end{definition}
 
 \begin{lemma}
 	If $\ell : V \to W$ is a linear map and $B$ and $C$ are bases for $V$ and $W$, respectively, then \[ \rank (\ell) = \rank [\ell]_{B,C}. \]
 \end{lemma}
 
-\begin{definition} \label{matrix-representation-standard}
+\begin{definition} \label{matrix-representation-standard} \index{representation!standard matrix representation} \index{standard matrix representation|see {representation, standard matrix representation}}
 	If $\ell : \R^m \to \R^n$ is a linear map, the \emph{standard matrix representation} of $\ell$, denoted $[\ell]$, is the matrix of $\ell$ with respect to the standard bases on $\R^m$ and $\R^n$.
 \end{definition} 
 
@@ -301,7 +317,7 @@ Throughout the rest of this section, we assume that $U$, $V$, and $W$ are finite
 
 \subsection{Matrix norm} \label{matrix-norm}
 
-Observe that $\mathscr{M}_{n \times m}$ is a finite dimensional vector space. If $E_{j,i}$ denotes the matrix whose $(j,i)$-entry is 1 and all other entries are 0 for $i = 1, \dotsc, m$ and $j = 1, \dotsc, n$, then the list of all of these $mn$ matrices forms a basis for $\mathscr{M}_{n \times m}$. We can use this basis to define a $L^2$ and max norm on $\mathscr{M}_{n \times m}$, as in \cref{l2-norm,max-norm}. Explicitly, if $A$ is a $n \times m$ matrix whose $(j,i)$-entry is $a_{j,i}$, we have the following. 
+Observe that $\mathscr{M}_{n \times m}$ is a finite dimensional vector space. If $E_{j,i}$ denotes the matrix whose $(j,i)$-entry is 1 and all other entries are 0 for $i = 1, \dotsc, m$ and $j = 1, \dotsc, n$, then the list of all of these $mn$ matrices forms a basis for $\mathscr{M}_{n \times m}$. We can use this basis to define a $L^2$ and max norm on $\mathscr{M}_{n \times m}$, as in \cref{l2-norm,max-norm}.\index{l2 norm@$L^2$ norm} \index{max norm} Explicitly, if $A$ is a $n \times m$ matrix whose $(j,i)$-entry is $a_{j,i}$, we have the following. 
 \[ \begin{aligned} \|A\| &= \sqrt{ \sum_{j,i} a_{j,i}^2 } \\
 \|A\|_\mx &= \max_{j,i} |a_{j,i}| \end{aligned}  \]
 We know from \cref{max-l2} that these two norms are equivalent. All of the following statements are independent of which norm on $\mathscr{M}_{n \times m}$ we have in mind. 
@@ -311,10 +327,10 @@ We know from \cref{max-l2} that these two norms are equivalent. All of the follo
 \end{lemma}
 
 \begin{proof}
-	Determinants can be computed using cofactor expansions, so $\det A$ is a polynomial in the entries of $A$.
+	Determinants can be computed using cofactor expansions,\index{cofactor expansion} so $\det A$ is a polynomial in the entries of $A$.
 \end{proof}
 
-\begin{corollary} \label{gln-open}
+\begin{corollary} \label{gln-open} \index{gln@$\GL_n$}
 	$\GL_n$ is an open subset of $\mathscr{M}_{n \times n}$.
 \end{corollary}
 
@@ -322,21 +338,32 @@ We know from \cref{max-l2} that these two norms are equivalent. All of the follo
 	Since $\det : \mathscr{M}_{n \times n} \to \R$ is continuous, and $\R \setminus \{0\}$ is an open subset of the codomain, we see that $\GL_n = \text{det}^{-1}(\R \setminus \{0\})$ must be open in $\mathscr{M}_{n \times n}$. 
 \end{proof}
 
-\begin{lemma} \label{inversion-homeomorphism}
-	The function $\GL_n \to \GL_n$ given by $A \mapsto A^{-1}$ is a homeomorphism. 
+\begin{lemma} \label{matrix-inversion-homeomorphism} \index{gln@$GL_n$} \index{homeomorphism}
+	The function $\GL_n \to \GL_n$ given by $A \mapsto A^{-1}$ is a homeomorphism.\index{homeomorphism} 
 \end{lemma}
 
 \begin{proof}
 	This function is its own inverse, so it is sufficient to show that $A \mapsto A^{-1}$ is continuous. But \[ A^{-1} = \det(A)^{-1} \adj(A), \]
-	where $\adj(A)$ denotes the adjugate matrix of $A$. 
-	We know that $\det(A)$ is a polynomial in the entries of $A$. Each entry of $\adj(A)$ is a minor of $A$ and is therefore also a polynomial in the entries of $A$. The lemma follows. 
+	where $\adj(A)$ denotes the adjugate matrix of $A$.\index{adjugate matrix} 
+	We know that $\det(A)$ is a polynomial in the entries of $A$. Each entry of $\adj(A)$ is a minor\index{minor} of $A$ and is therefore also a polynomial in the entries of $A$. The lemma follows. 
+\end{proof}
+
+The following generalizes \cref{gln-open}.
+
+\begin{lemma}
+	Suppose $k \leq \min\{m,n\}$ and let $Z = \{ A \in \mathscr{M}_{n \times m} : \rank(A) < k \}$. 
+	Then $Z$ is a closed subset of $\mathscr{M}_{n \times m}$. 
+\end{lemma}
+
+\begin{proof}
+	Saying $\rank(A) < k$ is equivalent to insisting that all $k \times k$ minors of $A$ vanish.\index{minor} Each $k \times k$ minor is a polynomial in the entries of $A$, so the zero set of any particular $k \times k$ minor is a closed subset of $\mathscr{M}_{n \times m}$. We then take the intersection of the closed subsets corresponding to all possible $k \times  k$ minors, and recall the fact that intersections of closed subsets must be closed.
 \end{proof}
 
 \section{Operator norm} \label{operator-norm}
 
 \subsection{Basics} \label{operator-norm-basic}
 
-\begin{definition} \label{operator-norm-definition}
+\begin{definition} \label{operator-norm-definition} \index{operator norm}
 	Suppose $\ell : \R^m \to \R^n$ is a linear map. The \emph{operator norm} of $\ell$, denoted $\|\ell\|$, is defined to be
 	\[ \|\ell\| = \sup\, \{ |\ell(v)| : |v| \leq 1 \}. \]
 \end{definition} 
@@ -392,7 +419,7 @@ Since the operator norm is a norm by \cref{operator-norm-is-norm}, we can regard
 	Suppose $v_0 \in \R^m$ is a fixed vector. Then the ``evaluate at $v_0$'' function $\mathscr{L}(\R^m, \R^n) \to \R^n$ given by $\ell \mapsto \ell(v_0)$ is continuous. \begin{hint} Since the ``evaluate at $v_0$'' function is linear, it is sufficient to check continuity at 0. \end{hint}
 \end{exercise}
 
-\begin{exercise}[Submultiplicativity] \label{operator-norm-submultiplicative}
+\begin{exercise}[Submultiplicativity] \label{operator-norm-submultiplicative} \index{submultiplicativity}
 	Suppose $\ell : \R^m \to \R^n$ and $\ell' : \R^n \to \R^p$ are both linear maps. Show that \[ \|\ell' \circ \ell\| \leq \|\ell'\| \cdot \|\ell\|. \]
 	Give an example to show that this inequality can be strict. 
 \end{exercise}
@@ -400,11 +427,11 @@ Since the operator norm is a norm by \cref{operator-norm-is-norm}, we can regard
 \begin{exercise}[``Composition is continuous''] \label{composition-continuous}
 	Show that the map
 	\[ \begin{tikzcd} \mathscr{L}(\R^n, \R^p) \times \mathscr{L}(\R^m, \R^n) \ar{r} & \mathscr{L}(\R^m, \R^p) \end{tikzcd} \]
-	given by $(\ell', \ell) \mapsto \ell' \circ \ell$ is continuous.
+	given by $(\ell', \ell) \mapsto \ell' \circ \ell$ is continuous.\index{product!product metric} 
 \end{exercise}
 
 \begin{exercise}
-	Suppose $\ell : \R^m \to \R^n$ is linear and $A = [\ell]$ is its standard matrix representation. Prove the following. 
+	Suppose $\ell : \R^m \to \R^n$ is linear and $A = [\ell]$ is its standard matrix representation.\index{representation!standard matrix representation} Prove the following. 
 	\begin{enumerate}[(a)]
 		\item $\|\ell\| \leq \|A\| \leq \sqrt{n} \|\ell\|$. 
 		\item $\|A \|_\mx \leq \|\ell\| \leq \sqrt{mn} \|A\|_\mx$. 
@@ -413,14 +440,14 @@ Since the operator norm is a norm by \cref{operator-norm-is-norm}, we can regard
 
 % \cite[section 2.3.2]{golub}
 
-\begin{exercise} \label{matrix-to-maps-homeomorphism}
+\begin{exercise} \label{matrix-to-maps-homeomorphism} \index{homeomorphism}
 	Show that the isomorphism $\mathscr{L}(\R^m, \R^n) \to \mathscr{M}_{n \times m}$ of \cref{matrix-rep-isomorphism}, given by $\ell \mapsto [\ell]$, is a homeomorphism. 
 \end{exercise}
 
-Under the homeomorphism $\mathscr{L}(\R^n, \R^n) \to \mathscr{M}_{n \times n}$ of \cref{matrix-to-maps-homeomorphism}, the set $\GL(\R^n)$ of invertible linear maps $\R^n \to \R^n$ corresponds to the set $\GL_n$ of invertible $n \times n$ matrices; since $\GL_n$ is an open subset of $\mathscr{M}_{n \times n}$ by  \cref{gln-open}, we conclude that $\GL(\R^n)$ is an open subset of $\mathscr{L}(\R^n, \R^n)$. Similarly, the following is a consequence of combining \cref{inversion-homeomorphism,matrix-to-maps-homeomorphism}. 
+Under the homeomorphism\index{homeomorphism} $\mathscr{L}(\R^n, \R^n) \to \mathscr{M}_{n \times n}$ of \cref{matrix-to-maps-homeomorphism}, the set $\GL(\R^n)$ of invertible linear maps $\R^n \to \R^n$ corresponds to the set $\GL_n$ of invertible $n \times n$ matrices; since $\GL_n$ is an open subset of $\mathscr{M}_{n \times n}$ by  \cref{gln-open}, we conclude that $\GL(\R^n)$ is an open subset of $\mathscr{L}(\R^n, \R^n)$. Similarly, the following is a consequence of combining \cref{matrix-inversion-homeomorphism,matrix-to-maps-homeomorphism}. 
 
-\begin{exercise} \label{inversion-homeomorphism-maps}
-	Show that the map $\GL(\R^n) \to \GL(\R^n)$ given by $\ell \mapsto  \ell^{-1}$ is a homeomorphism. 
+\begin{exercise} \label{linear-map-inversion-homeomorphism} \index{homeomorphism}
+	Show that the map $\GL(\R^n) \to \GL(\R^n)$ given by $\ell \mapsto  \ell^{-1}$ is a homeomorphism.\index{glv@$\GL(V)$} 
 \end{exercise}
 
 \section{Topological spaces} \label{topological-spaces}
@@ -429,7 +456,7 @@ This is a bare-bones introduction to topological spaces, intended for readers wh
 
 \subsection{Basics} \label{topological-spaces-basics}
 
-\begin{definition}
+\begin{definition} \index{topology} \index{topological space} \index{open!open subset}
 	Let $X$ be a set. A \emph{topology} on $X$ is a set $\tau_X$ of subsets of $X$, called \emph{open subsets}, which satisfy the following axioms.
 	\begin{enumerate}[(T1)]
 		\item $\emptyset$ and $X$ are both open subsets. 
@@ -445,25 +472,25 @@ Topological spaces come up throughout mathematics, and in general can be very ve
 	If $X$ is a metric space, the collection of subsets of $X$ that are open with respect to the metric defines a topology on $X$. Thus, every metric space can be regarded as a topological space in a natural way. It's worth noticing that this process of regarding a metric space as a topological space ``forgets information,'' since equivalent metrics on a set will define the same topology. 
 \end{example}
 
-\begin{example}[Quotient spaces] \label{quotient-space}
+\begin{example}[Quotient spaces] \label{quotient-space} \index{quotient space}
 	Suppose $Y$ is any topological space (for instance, one that comes from a metric space), and let $\sim$ be an equivalence relation on $Y$. For an element $y \in Y$, let $[y]$ denote its equivalence class, and let $X = Y/\sim$ denote the set of all equivalence classes. There is a natural function $\pi : Y \to X$ given by sending a point $y \in Y$ to its equivalence class $[y]$. We define a topology on $X$, called the \emph{quotient topology}, by declaring a subset $U \subseteq X$ to be open if and only if its preimage \[ \pi^{-1}(U) = \{ y \in Y : [y] \in U \} \] is open in $Y$. 
 \end{example}
 
-\begin{example}[Product spaces] \label{product-space}
+\begin{example}[Product spaces] \label{product-space} \index{product!product topology}
 	Suppose $X$ and $Y$ are topological spaces. We define a topology $\tau$ on the cartesian product $X \times Y$ by declaring a subset $U$ to be open if it is a union of sets of the form $V \times W$ where $U$ and $V$ are open subsets of $X$ and $Y$, respectively. This is called the \emph{product topology} on $X \times Y$. 
 \end{example}
 
-\begin{example} \label{finite-dim-canonical-topology}
+\begin{example} \label{finite-dim-canonical-topology} \index{canonical topology}
 	Suppose $V$ is a finite dimensional vector space. Then all norms on $V$ are equivalent by \cref{finite-dim-norm}, so they all define the same topology on $V$ by \cref{metric-to-topological,equivalent-norm-equivalent-metric}. This topology is called the \emph{canonical topology} on $V$. Unless explicitly specified otherwise, we will always regard finite dimensional vector spaces as topological spaces using the canonical topology. 
 \end{example}
 
 We now make a few further definitions that readers are invited to compare against the definitions they are familiar with from their experience with metric spaces. 
 
-\begin{definition}[Closed subsets]
+\begin{definition}[Closed subsets] \index{closed}
 	If $X$ is a topological space, a subset $F$ is \emph{closed} if its complement $U$ is \emph{open}. 
 \end{definition}
 
-\begin{definition}[Continuous functions]
+\begin{definition}[Continuous functions] \index{continuous}
 	If $X$ and $Y$ are topological spaces, a function $f : X \to Y$ is \emph{continuous} if $f^{-1}(U)$ is an open subset of $X$ whenever $U$ is an open subset of $Y$. 
 \end{definition}
 
@@ -476,18 +503,18 @@ We now make a few further definitions that readers are invited to compare agains
 \end{exercise}
 
 \begin{example}
-	If $V$ is a finite dimensional vector space, then the addition map $V \times V \to V$ and the scalar multiplication map $\R \times V \to V$ are continuous functions (using the product topology of \cref{product-space} on the domains). This statement is precisely the same as \cref{addition-continuous,scalar-multiplication-continuous}. 
+	If $V$ is a finite dimensional vector space, then the addition map $V \times V \to V$ and the scalar multiplication map $\R \times V \to V$ are continuous functions (using the product topology of \cref{product-space} on the domains). This statement is precisely the same as \cref{addition-continuous,scalar-multiplication-continuous}.\index{canonical topology}
 \end{example}
 
-\begin{example}
+\begin{example} \index{canonical topology}
 	Suppose $\ell : V \to W$ is a linear map between two finite dimensional vector spaces. Then $\ell$ is automatically continuous. 
 \end{example}
 
-\begin{definition}[Homeomorphisms]
+\begin{definition}[Homeomorphisms] \index{homeomorphism} \index{homeomorphism!homeomorphism onto its image}
 	Suppose $X$ and $Y$ are topological spaces and $f : X \to Y$ is a function. Then $f$ is a \emph{homeomorphism} if it is bijective, continuous, and $f^{-1} : Y \to X$ is continuous. More generally, $f$ is a \emph{homeomorphism onto its image} if is injective, continuous, and $f^{-1} : f(X) \to X$ is also continuous. 
 \end{definition}
 
-\begin{definition}[Subspace] \label{subspace-topology}
+\begin{definition}[Subspace] \label{subspace-topology} \index{subspace} \index{subspace!subspace topology}
 	If $X$ is a topological space and $S$ is a subset, then the \emph{subspace topology} on $S$ is
 	\[ \tau_S := \{ S \cap U : U \in \tau_X \}. \]
 	Further, $S$ equipped with the subspace topology is called a \emph{subspace} of $X$. 
@@ -499,7 +526,7 @@ We now make a few further definitions that readers are invited to compare agains
 
 \subsection{Hausdorff spaces \texorpdfstring{$\star$}{*}}
 
-\begin{definition}[Hausdorff]
+\begin{definition}[Hausdorff] \index{hausdorff@Hausdorff}
 	A topological space $X$ is \emph{Hausdorff} if, for every pair of distinct points $x, y \in X$, there exist disjoint open subsets $U$ and $V$ containing $x$ and $y$, respectively. 
 \end{definition}
 
@@ -515,16 +542,16 @@ However, quotient spaces need not be Hausdorff.
 
 \subsection{Compact and \texorpdfstring{$\sigma$}{sigma}-compact spaces \texorpdfstring{$\star$}{*}}
 
-\begin{definition}[Open covers]
+\begin{definition}[Open covers] \index{open cover} \index{open cover!subcover} \index{subcover|see {open cover, subcover}}
 	An \emph{open cover} of a topological space $X$ is a collection $\mathscr{U}$ of open subsets of $X$ which cover $X$, in the sense that \[ \bigcup_{U \in \mathscr{U}} U = X. \]
 	A \emph{subcover} of $\mathscr{U}$ is a subset $\mathscr{U}' \subseteq  \mathscr{U}$ which is itself an open cover. 
 \end{definition}
 
-\begin{definition}[Compact]
+\begin{definition}[Compact] \index{compact}
 	A topological space $X$ is \emph{compact} if every open subcover has a finite subcover. 
 \end{definition}
 
-\begin{definition}[$\sigma$-compact]
+\begin{definition}[$\sigma$-compact] \index{sigma compact@$\sigma$-compact}
 	A topological space $X$ is \emph{$\sigma$-compact} if it is a countable union of compact subspaces. 
 \end{definition}
 

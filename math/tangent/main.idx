@@ -1,0 +1,249 @@
+\indexentry{product!product metric|hyperpage}{11}
+\indexentry{product!product metric|hyperpage}{11}
+\indexentry{norm|hyperpage}{11}
+\indexentry{product!product metric|hyperpage}{12}
+\indexentry{product!product metric|hyperpage}{12}
+\indexentry{equivalence!of norms|hyperpage}{12}
+\indexentry{l2 norm@$L^2$ norm|hyperpage}{12}
+\indexentry{max norm|hyperpage}{13}
+\indexentry{linfinity norm@$L^\infty$ norm|hyperindexformat{\see {max norm}}}{13}
+\indexentry{cauchy schwarz inequality@Cauchy-Schwarz inequality|hyperpage}{13}
+\indexentry{equivalence!of norms|hyperpage}{14}
+\indexentry{euclidean space|hyperpage}{14}
+\indexentry{standard basis|hyperpage}{14}
+\indexentry{projection map|hyperpage}{15}
+\indexentry{l2 norm@$L^2$ norm|hyperpage}{15}
+\indexentry{euclidean norm|hyperindexformat{\see {l2 norm@$L^2$ norm}}}{15}
+\indexentry{max norm|hyperpage}{15}
+\indexentry{mnm@$\mathscr{M}_{n \times m}$|hyperpage}{16}
+\indexentry{gln@$\GL_n$|hyperpage}{16}
+\indexentry{rank!of a matrix|hyperpage}{16}
+\indexentry{lvw@$\mathscr{L}(V,W)$|hyperpage}{16}
+\indexentry{glv@$\GL(V)$|hyperpage}{16}
+\indexentry{representation!of a vector|hyperpage}{17}
+\indexentry{representation!of a linear map|hyperpage}{17}
+\indexentry{rank!of a linear map|hyperpage}{18}
+\indexentry{representation!standard matrix representation|hyperpage}{18}
+\indexentry{standard matrix representation|hyperindexformat{\see {representation, standard matrix representation}}}{18}
+\indexentry{l2 norm@$L^2$ norm|hyperpage}{18}
+\indexentry{max norm|hyperpage}{18}
+\indexentry{cofactor expansion|hyperpage}{18}
+\indexentry{gln@$\GL_n$|hyperpage}{18}
+\indexentry{gln@$GL_n$|hyperpage}{19}
+\indexentry{homeomorphism|hyperpage}{19}
+\indexentry{homeomorphism|hyperpage}{19}
+\indexentry{adjugate matrix|hyperpage}{19}
+\indexentry{minor|hyperpage}{19}
+\indexentry{minor|hyperpage}{19}
+\indexentry{operator norm|hyperpage}{19}
+\indexentry{submultiplicativity|hyperpage}{21}
+\indexentry{product!product metric|hyperpage}{21}
+\indexentry{representation!standard matrix representation|hyperpage}{21}
+\indexentry{homeomorphism|hyperpage}{22}
+\indexentry{homeomorphism|hyperpage}{22}
+\indexentry{homeomorphism|hyperpage}{22}
+\indexentry{glv@$\GL(V)$|hyperpage}{22}
+\indexentry{topology|hyperpage}{22}
+\indexentry{topological space|hyperpage}{22}
+\indexentry{open!open subset|hyperpage}{22}
+\indexentry{quotient space|hyperpage}{23}
+\indexentry{product!product topology|hyperpage}{23}
+\indexentry{canonical topology|hyperpage}{23}
+\indexentry{closed|hyperpage}{23}
+\indexentry{continuous|hyperpage}{23}
+\indexentry{canonical topology|hyperpage}{24}
+\indexentry{canonical topology|hyperpage}{24}
+\indexentry{homeomorphism|hyperpage}{24}
+\indexentry{homeomorphism!homeomorphism onto its image|hyperpage}{24}
+\indexentry{subspace|hyperpage}{24}
+\indexentry{subspace!subspace topology|hyperpage}{24}
+\indexentry{hausdorff@Hausdorff|hyperpage}{24}
+\indexentry{open cover|hyperpage}{25}
+\indexentry{open cover!subcover|hyperpage}{25}
+\indexentry{subcover|hyperindexformat{\see {open cover, subcover}}}{25}
+\indexentry{compact|hyperpage}{25}
+\indexentry{sigma compact@$\sigma$-compact|hyperpage}{25}
+\indexentry{difference quotient|hyperpage}{27}
+\indexentry{differentiable!differentiable at a point|hyperpage}{27}
+\indexentry{derivative!derivative at a point|hyperpage}{27}
+\indexentry{power rule|hyperpage}{29}
+\indexentry{differentiable|hyperpage}{29}
+\indexentry{derivative|hyperpage}{29}
+\indexentry{linear approximation|hyperpage}{30}
+\indexentry{error in approximation function@``error in approximation'' function|hyperpage}{32}
+\indexentry{lhopitals rule@L'H\^opital's rule|hyperpage}{34}
+\indexentry{constant function|hyperpage}{34}
+\indexentry{sum rule|hyperpage}{35}
+\indexentry{scalar multiples rule|hyperpage}{35}
+\indexentry{product rule|hyperpage}{35}
+\indexentry{quotient rule|hyperpage}{36}
+\indexentry{power rule|hyperpage}{36}
+\indexentry{chain rule|hyperpage}{36}
+\indexentry{inverse function|hyperpage}{36}
+\indexentry{error in approximation function@``error in approximation'' function|hyperpage}{41}
+\indexentry{extremum!local extremum|hyperpage}{43}
+\indexentry{extremum!local maximum|hyperpage}{43}
+\indexentry{extremum!local minimum|hyperpage}{43}
+\indexentry{extremum!absolute maximum|hyperpage}{43}
+\indexentry{extremum!absolute minimum|hyperpage}{43}
+\indexentry{extremum!absolute extremum|hyperpage}{43}
+\indexentry{extremum!interior extremum theorem|hyperpage}{43}
+\indexentry{interior extremum theorem|hyperindexformat{\see {extremum}}}{43}
+\indexentry{extremum!local extremum|hyperpage}{44}
+\indexentry{power rule|hyperpage}{44}
+\indexentry{power series|hyperpage}{44}
+\indexentry{extremum!absolute minimum|hyperpage}{46}
+\indexentry{mean value theorem!rolles theorem@Rolle's theorem|hyperpage}{46}
+\indexentry{rolles theorem@Rolle's theorem|hyperindexformat{\see {mean value theorem}}}{46}
+\indexentry{mean value theorem|hyperpage}{47}
+\indexentry{constant function|hyperpage}{47}
+\indexentry{mean value theorem|hyperpage}{47}
+\indexentry{extremum!extreme value theorem|hyperpage}{47}
+\indexentry{extreme value theorem|hyperindexformat{\see {extremum}}}{47}
+\indexentry{monotone|hyperpage}{48}
+\indexentry{monotone!increasing|hyperpage}{48}
+\indexentry{monotone!decreasing|hyperpage}{48}
+\indexentry{monotone!strictly monotone|hyperpage}{48}
+\indexentry{monotone!strictly increasing|hyperpage}{48}
+\indexentry{monotone!strictly decreasing|hyperpage}{48}
+\indexentry{open!open map|hyperpage}{48}
+\indexentry{monotone|hyperpage}{48}
+\indexentry{monotone!increasing|hyperpage}{49}
+\indexentry{monotone!decreasing|hyperpage}{49}
+\indexentry{monotone!strictly monotone|hyperpage}{49}
+\indexentry{monotone!strictly increasing|hyperpage}{49}
+\indexentry{monotone!strictly decreasing|hyperpage}{49}
+\indexentry{monotone|hyperpage}{49}
+\indexentry{intermediate value property|hyperpage}{49}
+\indexentry{Darboux function|hyperindexformat{\see {intermediate value property}}}{49}
+\indexentry{intermediate value theorem|hyperpage}{50}
+\indexentry{discontinuity!removable discontinuity|hyperpage}{50}
+\indexentry{discontinuity!jump discontinuity|hyperpage}{50}
+\indexentry{darbouxs theorem@Darboux's theorem|hyperpage}{51}
+\indexentry{intermediate value property|hyperpage}{51}
+\indexentry{extremum!extreme value theorem|hyperpage}{51}
+\indexentry{extremum!interior extremum theorem|hyperpage}{51}
+\indexentry{monotone!strictly monotone|hyperpage}{52}
+\indexentry{power rule|hyperpage}{53}
+\indexentry{continuously differentiable|hyperpage}{56}
+\indexentry{critical point!critical locus|hyperpage}{57}
+\indexentry{ck@$C^k$|hyperpage}{57}
+\indexentry{inverse function|hyperpage}{58}
+\indexentry{smooth|hyperpage}{62}
+\indexentry{Cinfinity@$C^\infty$|hyperindexformat{\see {smooth}}}{62}
+\indexentry{infinitely differentiable|hyperindexformat{\see {smooth}}}{62}
+\indexentry{diffeomorphism|hyperpage}{62}
+\indexentry{monotone!strictly increasing|hyperpage}{63}
+\indexentry{intermediate value theorem|hyperpage}{63}
+\indexentry{diffeomorphism|hyperpage}{63}
+\indexentry{infinitely flat functions@``infinitely flat'' functions|hyperpage}{64}
+\indexentry{lhopitals rule@L'H\^opital's rule|hyperpage}{64}
+\indexentry{bump function|hyperpage}{66}
+\indexentry{support|hyperpage}{66}
+\indexentry{infinitely flat function@``infinitely flat'' function|hyperpage}{67}
+\indexentry{bridge function@``bridge'' function|hyperpage}{68}
+\indexentry{fundamental theorem of calculus|hyperpage}{68}
+\indexentry{bridge function@``bridge'' function|hyperpage}{68}
+\indexentry{differentiable!differentiable at a point|hyperpage}{73}
+\indexentry{derivative!derivative at a point|hyperpage}{73}
+\indexentry{total derivative|hyperindexformat{\see {derivative}}}{73}
+\indexentry{differential|hyperindexformat{\see {derivative}}}{73}
+\indexentry{sum rule|hyperpage}{74}
+\indexentry{scalar multiples rule|hyperpage}{74}
+\indexentry{chain rule|hyperpage}{75}
+\indexentry{error in approximation function@``error in approximation'' function|hyperpage}{75}
+\indexentry{operator norm|hyperpage}{76}
+\indexentry{component function|hyperpage}{76}
+\indexentry{projection map|hyperpage}{76}
+\indexentry{product rule|hyperpage}{77}
+\indexentry{quotient rule|hyperpage}{78}
+\indexentry{partial derivative|hyperpage}{78}
+\indexentry{product rule|hyperpage}{79}
+\indexentry{quotient rule|hyperpage}{79}
+\indexentry{extremum!interior extremum theorem|hyperpage}{80}
+\indexentry{gradient|hyperpage}{82}
+\indexentry{jacobian matrix|hyperpage}{82}
+\indexentry{rank!of a differentiable function|hyperpage}{83}
+\indexentry{immersive|hyperpage}{83}
+\indexentry{submersive|hyperpage}{83}
+\indexentry{etale@\'etale|hyperpage}{83}
+\indexentry{regular point|hyperpage}{84}
+\indexentry{critical point|hyperpage}{84}
+\indexentry{critical point!critical locus|hyperpage}{86}
+\indexentry{cusp|hyperpage}{86}
+\indexentry{critical point|hyperpage}{87}
+\indexentry{differentiable|hyperpage}{88}
+\indexentry{derivative|hyperpage}{88}
+\indexentry{constant function|hyperpage}{88}
+\indexentry{mean value theorem|hyperpage}{91}
+\indexentry{mean value theorem|hyperpage}{91}
+\indexentry{continuously differentiable|hyperpage}{92}
+\indexentry{inverse function|hyperpage}{92}
+\indexentry{inverse function!inverse function theorem|hyperpage}{92}
+\indexentry{etale@\'etale|hyperpage}{92}
+\indexentry{etale@\'etale|hyperpage}{93}
+\indexentry{open!open map|hyperpage}{93}
+\indexentry{extremum!extreme value theorem|hyperpage}{96}
+\indexentry{extremum!extreme value theorem|hyperpage}{97}
+\indexentry{extremum!interior extremum theorem|hyperpage}{97}
+\indexentry{homeomorphism|hyperpage}{97}
+\indexentry{operator norm|hyperpage}{100}
+\indexentry{ck@$C^k$|hyperpage}{102}
+\indexentry{mixed partials|hyperpage}{103}
+\indexentry{mixed partials!equality of mixed partials|hyperpage}{103}
+\indexentry{mean value theorem|hyperpage}{104}
+\indexentry{mean value theorem|hyperpage}{104}
+\indexentry{hessian|hyperpage}{105}
+\indexentry{multi-index|hyperpage}{106}
+\indexentry{smooth|hyperpage}{106}
+\indexentry{bump function|hyperpage}{106}
+\indexentry{topological space|hyperpage}{107}
+\indexentry{chart|hyperpage}{107}
+\indexentry{homeomorphism!homeomorphism onto its image|hyperpage}{107}
+\indexentry{coordinates|hyperpage}{107}
+\indexentry{transition function|hyperpage}{107}
+\indexentry{compatibile|hyperpage}{107}
+\indexentry{atlas|hyperpage}{108}
+\indexentry{atlas!maximal atlas|hyperpage}{108}
+\indexentry{maximal atlas|hyperindexformat{\see {atlas, maximal atlas}}}{108}
+\indexentry{atlas!maximal atlas|hyperpage}{108}
+\indexentry{manifold|hyperpage}{108}
+\indexentry{smooth manifold|hyperindexformat{\see {manifold}}}{108}
+\indexentry{dimension!of a manifold|hyperpage}{109}
+\indexentry{s1@$S^1$|hyperindexformat{\see {circle}}}{109}
+\indexentry{circle|hyperpage}{109}
+\indexentry{subspace|hyperpage}{109}
+\indexentry{homeomorphism|hyperpage}{109}
+\indexentry{sn@$S^n$|hyperindexformat{\see {$n$-sphere}}}{111}
+\indexentry{n-sphere@$n$-sphere|hyperpage}{111}
+\indexentry{mnm@$\mathscr{M}_{n \times m}$|hyperpage}{111}
+\indexentry{canonical topology|hyperpage}{111}
+\indexentry{homeomorphism|hyperpage}{111}
+\indexentry{mobius strip@M\"obius strip|hyperpage}{112}
+\indexentry{homeomorphism!homeomorphism onto its image|hyperpage}{113}
+\indexentry{torus|hyperpage}{113}
+\indexentry{projective line|hyperpage}{113}
+\indexentry{p1@$\bbP^1$|hyperindexformat{\see {projective line}}}{113}
+\indexentry{projective plane|hyperpage}{113}
+\indexentry{p2@$\bbP^2$|hyperindexformat{\see {projective plane}}}{113}
+\indexentry{smooth|hyperpage}{114}
+\indexentry{partial derivative|hyperpage}{115}
+\indexentry{smooth|hyperpage}{115}
+\indexentry{diffeomorphism|hyperpage}{117}
+\indexentry{local diffeomorphism|hyperindexformat{\see {diffeomorphism, local diffeomorphism}}}{117}
+\indexentry{diffeomorphism!local diffeomorphism|hyperpage}{117}
+\indexentry{curve|hyperpage}{119}
+\indexentry{equivalence!of curves|hyperpage}{119}
+\indexentry{tangent space|hyperpage}{120}
+\indexentry{circle|hyperpage}{123}
+\indexentry{derivation|hyperpage}{124}
+\indexentry{pushforward|hyperpage}{126}
+\indexentry{rank!of a smooth map|hyperpage}{128}
+\indexentry{immersive|hyperpage}{128}
+\indexentry{submersive|hyperpage}{128}
+\indexentry{etale@\'etale|hyperpage}{128}
+\indexentry{regular point|hyperpage}{128}
+\indexentry{critical point|hyperpage}{128}
+\indexentry{immersion|hyperpage}{128}
+\indexentry{submersion|hyperpage}{128}
+\indexentry{etale@\'etale|hyperpage}{128}

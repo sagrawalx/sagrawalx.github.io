@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
 A level-1 auxiliary file: introduction.aux
-A level-1 auxiliary file: prerequisites.aux
+A level-1 auxiliary file: preliminaries.aux
 A level-1 auxiliary file: single-var.aux
 A level-1 auxiliary file: multi-var.aux
 A level-1 auxiliary file: manifolds.aux
@@ -15,45 +15,45 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: references.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--empty publisher in hefferon
-You've used 9 entries,
+You've used 10 entries,
             3274 wiz_defined-function locations,
-            735 strings with 6557 characters,
-and the built_in function-call counts, 3851 in all, are:
-= -- 397
-> -- 114
-< -- 7
-+ -- 32
-- -- 30
-* -- 181
-:= -- 591
-add.period$ -- 37
-call.type$ -- 9
-change.case$ -- 46
-chr.to.int$ -- 9
-cite$ -- 10
-duplicate$ -- 143
-empty$ -- 367
-format.name$ -- 45
-if$ -- 979
+            743 strings with 6671 characters,
+and the built_in function-call counts, 4345 in all, are:
+= -- 452
+> -- 124
+< -- 8
++ -- 34
+- -- 32
+* -- 214
+:= -- 660
+add.period$ -- 41
+call.type$ -- 10
+change.case$ -- 51
+chr.to.int$ -- 10
+cite$ -- 11
+duplicate$ -- 158
+empty$ -- 413
+format.name$ -- 49
+if$ -- 1101
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 18
-newline$ -- 54
-num.names$ -- 27
-pop$ -- 97
+missing$ -- 19
+newline$ -- 60
+num.names$ -- 30
+pop$ -- 103
 preamble$ -- 1
-purify$ -- 57
+purify$ -- 63
 quote$ -- 0
-skip$ -- 302
+skip$ -- 337
 stack$ -- 0
-substring$ -- 65
-swap$ -- 16
-text.length$ -- 7
-text.prefix$ -- 6
+substring$ -- 97
+swap$ -- 19
+text.length$ -- 8
+text.prefix$ -- 7
 top$ -- 0
-type$ -- 36
+type$ -- 44
 warning$ -- 1
-while$ -- 21
-width$ -- 12
-write$ -- 133
+while$ -- 25
+width$ -- 14
+write$ -- 148
 (There was 1 warning)

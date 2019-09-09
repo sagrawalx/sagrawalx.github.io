@@ -33,6 +33,13 @@ Murray~H. Protter and Charles~B. Morrey, Jr.
 \newblock \href {http://dx.doi.org/10.1007/978-1-4419-8744-0}
   {\path{doi:10.1007/978-1-4419-8744-0}}.
 
+\bibitem[Pom07]{pompeiu}
+Dimitrie~D. Pompeiu.
+\newblock Sur les fonctions d\'{e}riv\'{e}es.
+\newblock {\em Mathematische Annalen}, 63(3):326--332, 1907.
+\newblock \href {http://dx.doi.org/10.1007/BF01449201}
+  {\path{doi:10.1007/BF01449201}}.
+
 \bibitem[Pug15]{pugh}
 Charles~C. Pugh.
 \newblock {\em Real mathematical analysis}.
