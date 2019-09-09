@@ -6,15 +6,15 @@ Throughout this section, we let $X$ denote a manifold and $p \in X$ a point. We 
 
 \subsection{Curves based at a point}
 
-\begin{definition}
+\begin{definition} \index{curve}
 	A \emph{curve in $X$ based at $p$} is a smooth function $\gamma : (-\epsilon, \epsilon) \to X$ for some $\epsilon > 0$ such that $\gamma(0) = p$. 
 \end{definition}
 
 Suppose that $(U, x) \in \mathscr{A}_X$ is a chart containing $p$ and that $\gamma : (-\epsilon, \epsilon) \to \R$ is a curve based at $p$. Since $U$ is an open subset of $X$ and $\gamma$ is continuous, the preimage $\gamma^{-1}(U)$ is an open subset of $(-\epsilon, \epsilon)$ containing 0, so there exists $0 < \epsilon' \leq \epsilon$ such that the image of the smaller interval $(-\epsilon', \epsilon)$ is entirely contained inside $U$. We let $x \circ \gamma$ denote the composite function 
 \[ \begin{tikzcd} (-\epsilon', \epsilon') \ar{r} & U \ar{r} & \R^n. \end{tikzcd} \]
-We can then take its derivative at $0$ as in \cref{multivar}. This derivative $d(x \circ \gamma)_0$ is a linear map $\R \to \R^n$, so its matrix representation \[ (x \circ \gamma)'(0) \] is a column vector in $\R^n$.
+We can then take its derivative at $0$ as in \cref{multi}. This derivative $d(x \circ \gamma)_0$ is a linear map $\R \to \R^n$, so its matrix representation \[ (x \circ \gamma)'(0) \] is a column vector in $\R^n$.
 
-\begin{definition} \label{equivalent-curves}
+\begin{definition} \label{equivalent-curves} \index{equivalence!of curves}
 	Two curves $\gamma_1, \gamma_2$ in $X$ based at $p$ are \emph{equivalent} if $d(x \circ \gamma_1)_0 = d(x \circ \gamma_2)_0$ for every chart $(U, x) \in \mathscr{A}_X$ containing $p$. 
 \end{definition}
 
@@ -25,7 +25,7 @@ As usual, the first point of order is to check that we don't need to check all p
 	then $\gamma_1$ is equivalent to $\gamma_2$.  
 \end{exercise}
 
-\begin{definition}
+\begin{definition} \index{tangent space}
 	We define the \emph{tangent space of $X$ at $p$}, denoted $T_p X$, to be the set of equivalence classes of curves in $X$ based at $p$. Elements of $T_p X$ are called \emph{tangent vectors} at $p$. If $\gamma$ is a curve based at $p$, we will write $v_\gamma$ for the corresponding tangent vector in $T_p X$. 
 \end{definition}
 
@@ -109,7 +109,7 @@ The final step is to show that these operations do not depend on the choice of c
 This completes our construction of a vector space structure on $T_p X$. Notice that $T_p X$ is an example of a finite dimensional vector space that does not come equipped with any canonical basis! More precisely, this means the following. If we choose a chart $(U, x) \in \mathscr{A}_X$ containing $p$, the bijection $\sigma : T_p X \to \R^n$ of \cref{tangent-chart-bijection} is an isomorphism of vector spaces (cf. \cref{pulling-back-makes-linear}), so $\sigma^{-1}(e_1), \dotsc, \sigma^{-1}(e_n)$ is a basis of $T_p X$. But then, if we choose a different chart $(U', x') \in \mathscr{A}_X$ containing $p$ and $\sigma'$ is the corresponding isomorphism $T_p X \to \R^n$, then $\sigma'^{-1}(e_1), \dotsc, \sigma'^{-1}(e_n)$ will in general be a different basis of $T_p X$, even though the vector space structures defined by pulling back along $\sigma$ and $\sigma'$ are the same! So, for a general manifold $X$ and point $p$, since there's no ``canonical'' choice of a chart containing $p$, there is also no ``canonical'' choice of a basis on $T_p X$. I strongly encourage you to work through the following exercise to make sense of this. 
 
 \begin{exercise}
-	Consider the unit circle $S^1$, regarded manifold using the charts $(U,x)$ and $(U',x')$ defined in  \cref{circle-projection-atlas}. Any point $p \in S^1$ can be written as $(\cos \theta, \sin \theta)$ for some $\theta \in \R$. 
+	Consider the unit circle $S^1$,\index{circle} regarded manifold using the charts $(U,x)$ and $(U',x')$ defined in  \cref{circle-projection-atlas}. Any point $p \in S^1$ can be written as $(\cos \theta, \sin \theta)$ for some $\theta \in \R$. 
 	\begin{enumerate}[(a)]
 		\item Observe that $\gamma : \R \to S^1$ given by \[ \gamma(t) = (\cos(\theta + t), \sin(\theta + t)) \] is a curve in $S^1$ based at $p$. Explain why $v_\gamma$ is a basis for $T_p S^1$. 
 		\item Suppose $p \in U$ and let $\sigma : T_p S^1 \to \R$ be the isomorphism of \cref{tangent-chart-bijection} corresponding to the chart $(U, x)$. Find $\lambda \in \R$ such that $\sigma(\lambda v_\gamma) = 1$. 
@@ -130,7 +130,7 @@ This completes our construction of a vector space structure on $T_p X$. Notice t
 
 There is another perspective on tangent vectors which is often useful, though it is decidedly less geometric at first glance. It begins with the following definition.  
 
-\begin{definition}
+\begin{definition} \index{derivation}
 	Let $X$ be a manifold and $p \in X$ a point. A \emph{derivation} on $X$ based at $p$ is a linear function $\partial : \O(X) \to \R$ such that
 	\[ \partial(fg) = \partial(f)g(p) + f(p)\partial(g). \]
 	We let $\Der_p(X)$ denote the set of all derivations on $X$ based at $p$. 
@@ -162,7 +162,7 @@ It turns out that $T_p X$ and $\Der_p(X)$ are isomorphic, as we will soon prove.
 	&= ((f \circ \gamma) + \lambda (g \circ \gamma))'(0) \\
 	&= (f \circ \gamma)'(0) + \lambda (g\circ \gamma)'(0) \\
 	&= \partial_\gamma(f) + \lambda \partial_\gamma(g) \end{aligned}  \]
-	To see that it is a derivation, we use the single variable product rule \ref{product-rule}. 
+	To see that it is a derivation, we use the single variable product rule \ref{product-rule-single}. 
 	\[ \begin{aligned} \partial_\gamma(fg) &= (fg \circ \gamma)'(0) \\
 	&= ((f \circ \gamma)(g \circ \gamma))'(0) \\
 	&= (f \circ \gamma)'(0)(g \circ \gamma)(0) + (f \circ \gamma)(0)(g \circ \gamma)'(0) \\
@@ -198,7 +198,7 @@ It turns out that $T_p X$ and $\Der_p(X)$ are isomorphic, as we will soon prove.
 
 \section{Pushforward}
 
-\subsection{Defining the pushforward}
+\subsection{Definition of the pushforward}
 
 Let $f : X \to Y$ be a smooth map of manifolds and $p \in X$ a point. Given a curve $\gamma$ in $X$ based at $p$, observe that $f \circ \gamma$ is a curve in $Y$ based at $f(p)$. 
 
@@ -210,7 +210,7 @@ Let $f : X \to Y$ be a smooth map of manifolds and $p \in X$ a point. Given a cu
 
 This allows us to make the following definition. We will shortly see that this is the ``ultimate'' generalization of derivatives. 
 
-\begin{definition}
+\begin{definition} \index{pushforward}
 	Let $f : X \to Y$ be a smooth map of manifolds and $p \in X$ a point. If $\gamma$ is a curve in $X$ based at $p$, we define its \emph{pushforward} $f_*(v_\gamma) \in T_{f(p)}Y$ to be the equivalence class of the curve $f \circ \gamma$. This defines the \emph{pushforward map} $f_* : T_p X \to T_{f(p)} Y$. 
 \end{definition}
 
@@ -234,6 +234,10 @@ The following result states that the pushforward generalizes the derivative at a
 	\[ (\sigma \circ f_*)(v_\gamma) = \sigma(v_{f \circ \gamma}) = d(f \circ \gamma)_0. \qedhere \]
 \end{proof}
 
+\begin{remark}
+	Sometimes, the map $f_* : T_p X \to T_p Y$ is denoted $df_p$, similar to the notation we were using in \cref{multi}. This creates no conflicts, thanks to \cref{pushforward-generalizes-derivative}.
+\end{remark}
+
 In light of \cref{pushforward-generalizes-derivative}, the following is a generalization of the chain rule. 
 
 \begin{proposition}
@@ -242,32 +246,32 @@ In light of \cref{pushforward-generalizes-derivative}, the following is a genera
 \end{proposition}
 
 \begin{proof}
-	Suppose $\gamma$ is a curve in $X$ based at $p$. Then 
+	If $\gamma$ is a curve in $X$ based at $p$, then 
 	\[ g_*(f_*(v_\gamma)) = g_*(v_{f \circ \gamma}) = v_{g \circ f \circ \gamma} = (g \circ f)_*(v_\gamma). \qedhere \]
 \end{proof}
 
-This proof looks absurdly easy, and that's because it is. You might be wondering why the proof of this generalization of the chain rule looks so easy, while the proof of the chain rule in \cref{multivar} was significantly more work. It's because the pushforward is so abstractly defined that it's basically useless and uncomputable until we know that it actually generalizes the derivative from \cref{multivar} and therefore can be computed using techniques from \cref{multivar}. This was the content of \cref{pushforward-generalizes-derivative}, and notice that we used the chain rule \ref{chain-rule} to prove \cref{pushforward-generalizes-derivative}. 
+This proof looks absurdly easy, and that's because it is. You might be wondering why the proof of this generalization of the chain rule looks so easy, while the proof of the chain rule in \cref{multi} was significantly more work. It's because the pushforward is so abstractly defined that it's basically useless and uncomputable until we know that it actually generalizes the derivative from \cref{multi} and therefore can be computed using techniques from \cref{multi}. This was the content of \cref{pushforward-generalizes-derivative}, and notice that we used the chain rule \ref{chain-rule} to prove \cref{pushforward-generalizes-derivative}. 
 
 \subsection{Rank of a smooth map}
 
 In light of \cref{pushforward-generalizes-derivative}, the following generalizes \cref{immersive-submersive-critical}. 
 
-\begin{definition}
+\begin{definition} \index{rank!of a smooth map}
 	Suppose $f : X \to Y$ is a smooth map between manifolds and $p \in X$ is a point. The rank of the linear map $f_* : T_p X \to T_{f(p)} Y$ is also called the \emph{rank of $f$ at $p$}, denoted $\rank_p(f)$. Note that $\rank_p(f) \leq \min\{\dim_p(X),\dim_{f(p)}(Y) \}$.
 	\begin{itemize}
-		\item If $\rank_p(f) = \dim_{p} (X)$, then we say that $f$ is \emph{immsersive at $p$}. This is equivalent to requiring that $f_*$ is an injective map $T_p X \to T_p Y$.  
-		\item If $\rank_p(f) = \dim_{f(p)} (Y)$, then we say that $f$ is \emph{submersive at $p$}. This is equivalent to requiring that $f_*$ is a surjective map $T_p X \to T_p Y$. 
-		\item If $\rank_p(f) =  \dim_p(X) = \dim_{f(p)} (Y)$, then we say that $f$ is \emph{\'etale at $p$}. This is equivalent to requiring that $f_*$ is an isomorphism $T_p X \to T_p Y$. 
-		\item If $\rank_p(f) = \min\{\dim_p(X),\dim_{f(p)}(Y) \}$, then we say that $p$ is a \emph{regular point} of $f$. 
-		\item If $\rank_p(f) < \min\{\dim_p(X),\dim_{f(p)}(Y) \}$, then we say that $p$ is a \emph{critical point} of $f$.
+		\item If $\rank_p(f) = \dim_{p} (X)$, then we say that $f$ is \emph{immsersive at $p$}.\index{immersive} This is equivalent to requiring that $f_*$ is an injective map $T_p X \to T_p Y$.  
+		\item If $\rank_p(f) = \dim_{f(p)} (Y)$, then we say that $f$ is \emph{submersive at $p$}.\index{submersive} This is equivalent to requiring that $f_*$ is a surjective map $T_p X \to T_p Y$. 
+		\item If $\rank_p(f) =  \dim_p(X) = \dim_{f(p)} (Y)$, then we say that $f$ is \emph{\'etale at $p$}.\index{etale@\'etale} This is equivalent to requiring that $f_*$ is an isomorphism $T_p X \to T_p Y$. 
+		\item If $\rank_p(f) = \min\{\dim_p(X),\dim_{f(p)}(Y) \}$, then we say that $p$ is a \emph{regular point} of $f$.\index{regular point} 
+		\item If $\rank_p(f) < \min\{\dim_p(X),\dim_{f(p)}(Y) \}$, then we say that $p$ is a \emph{critical point} of $f$.\index{critical point}
 	\end{itemize}
 \end{definition}
 
 \begin{definition}
 	Suppose $f : X \to Y$ is a smooth map between manifolds.
 	\begin{itemize}
-		\item If $f$ is immersive at every $p \in X$, then $f$ is an \emph{immersion}. 
-		\item If $f$ is submersive at every $p \in X$, then $f$ is a \emph{submersion}. 
-		\item if $f$ is \'etale at every $p \in X$, then $f$ is \emph{\'etale}. 
+		\item If $f$ is immersive at every $p \in X$, then $f$ is an \emph{immersion}.\index{immersion} 
+		\item If $f$ is submersive at every $p \in X$, then $f$ is a \emph{submersion}.\index{submersion} 
+		\item if $f$ is \'etale at every $p \in X$, then $f$ is \emph{\'etale}.\index{etale@\'etale} 
 	\end{itemize}
 \end{definition}

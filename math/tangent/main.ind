@@ -1,0 +1,229 @@
+\begin{theindex}
+
+  \item adjugate matrix, \hyperpage{19}
+  \item atlas, \hyperpage{108}
+    \subitem maximal atlas, \hyperpage{108}
+
+  \indexspace
+
+  \item ``bridge'' function, \hyperpage{68}
+  \item bump function, \hyperpage{66}, \hyperpage{105}
+
+  \indexspace
+
+  \item canonical topology, \hyperpage{23, 24}, \hyperpage{111}
+  \item Cauchy-Schwarz inequality, \hyperpage{13}
+  \item chain rule, \hyperpage{36}, \hyperpage{75}
+  \item chart, \hyperpage{107}
+  \item $C^\infty$, \hyperindexformat{\see {smooth}}{62}
+  \item circle, \hyperpage{109}, \hyperpage{123}
+  \item $C^k$, \hyperpage{57}, \hyperpage{101}
+  \item closed, \hyperpage{23}
+  \item cofactor expansion, \hyperpage{18}
+  \item compact, \hyperpage{25}
+  \item compatibile, \hyperpage{107}
+  \item component function, \hyperpage{76}
+  \item constant function, \hyperpage{34}, \hyperpage{47}, 
+		\hyperpage{86}
+  \item continuous, \hyperpage{23}
+  \item continuously differentiable, \hyperpage{56}, \hyperpage{91}
+  \item coordinates, \hyperpage{107}
+  \item critical point, \hyperpage{84}, \hyperpage{86}, \hyperpage{128}
+    \subitem critical locus, \hyperpage{57}, \hyperpage{86}
+  \item curve, \hyperpage{119}
+
+  \indexspace
+
+  \item Darboux function, 
+		\hyperindexformat{\see {intermediate value property}}{49}
+  \item Darboux's theorem, \hyperpage{51}
+  \item derivation, \hyperpage{124}
+  \item derivative, \hyperpage{29}, \hyperpage{86}
+    \subitem derivative at a point, \hyperpage{27}, \hyperpage{73}
+  \item diffeomorphism, \hyperpage{62, 63}, \hyperpage{117}
+    \subitem local diffeomorphism, \hyperpage{117}
+  \item difference quotient, \hyperpage{27}
+  \item differentiable, \hyperpage{29}, \hyperpage{86}
+    \subitem differentiable at a point, \hyperpage{27}, \hyperpage{73}
+  \item differential, \hyperindexformat{\see {derivative}}{73}
+  \item dimension
+    \subitem of a manifold, \hyperpage{109}
+  \item discontinuity
+    \subitem jump discontinuity, \hyperpage{50}
+    \subitem removable discontinuity, \hyperpage{50}
+
+  \indexspace
+
+  \item equivalence
+    \subitem of curves, \hyperpage{119}
+    \subitem of norms, \hyperpage{12}, \hyperpage{14}
+  \item ``error in approximation'' function, \hyperpage{32}, 
+		\hyperpage{41}, \hyperpage{75}
+  \item \'etale, \hyperpage{83}, \hyperpage{91, 92}, \hyperpage{128}
+  \item euclidean space, \hyperpage{14}
+  \item extreme value theorem, \hyperindexformat{\see {extremum}}{47}
+  \item extremum
+    \subitem absolute extremum, \hyperpage{43}
+    \subitem absolute maximum, \hyperpage{43}
+    \subitem absolute minimum, \hyperpage{43}, \hyperpage{46}
+    \subitem extreme value theorem, \hyperpage{47}, \hyperpage{51}, 
+		\hyperpage{96, 97}
+    \subitem interior extremum theorem, \hyperpage{43}, \hyperpage{51}, 
+		\hyperpage{80}, \hyperpage{97}
+    \subitem local extremum, \hyperpage{43, 44}
+    \subitem local maximum, \hyperpage{43}
+    \subitem local minimum, \hyperpage{43}
+
+  \indexspace
+
+  \item fundamental theorem of calculus, \hyperpage{68}
+
+  \indexspace
+
+  \item $GL_n$, \hyperpage{18}
+  \item $\GL_n$, \hyperpage{16}, \hyperpage{18}
+  \item $\GL(V)$, \hyperpage{16}, \hyperpage{22}
+  \item gradient, \hyperpage{82}
+
+  \indexspace
+
+  \item Hausdorff, \hyperpage{24}
+  \item hessian, \hyperpage{104}
+  \item homeomorphism, \hyperpage{18}, \hyperpage{21, 22}, 
+		\hyperpage{24}, \hyperpage{97}, \hyperpage{109}, 
+		\hyperpage{111}
+    \subitem homeomorphism onto its image, \hyperpage{24}, 
+		\hyperpage{107}, \hyperpage{113}
+
+  \indexspace
+
+  \item immersion, \hyperpage{128}
+  \item immersive, \hyperpage{83}, \hyperpage{127}
+  \item infinitely differentiable, \hyperindexformat{\see {smooth}}{62}
+  \item ``infinitely flat'' function, \hyperpage{67}
+  \item ``infinitely flat'' functions, \hyperpage{64}
+  \item interior extremum theorem, 
+		\hyperindexformat{\see {extremum}}{43}
+  \item intermediate value property, \hyperpage{49}, \hyperpage{51}
+  \item intermediate value theorem, \hyperpage{50}, \hyperpage{63}
+  \item inverse function, \hyperpage{36}, \hyperpage{58}, 
+		\hyperpage{91}
+    \subitem inverse function theorem, \hyperpage{91}
+
+  \indexspace
+
+  \item jacobian matrix, \hyperpage{82}
+
+  \indexspace
+
+  \item $L^2$ norm, \hyperpage{12}, \hyperpage{15}, \hyperpage{18}
+  \item L'H\^opital's rule, \hyperpage{34}, \hyperpage{64}
+  \item linear approximation, \hyperpage{30}
+  \item $L^\infty$ norm, \hyperindexformat{\see {max norm}}{13}
+  \item local diffeomorphism, 
+		\hyperindexformat{\see {diffeomorphism, local diffeomorphism}}{117}
+  \item $\mathscr{L}(V,W)$, \hyperpage{16}
+
+  \indexspace
+
+  \item manifold, \hyperpage{108}
+  \item max norm, \hyperpage{13}, \hyperpage{15}, \hyperpage{18}
+  \item maximal atlas, 
+		\hyperindexformat{\see {atlas, maximal atlas}}{108}
+  \item mean value theorem, \hyperpage{47}, \hyperpage{90}, 
+		\hyperpage{103, 104}
+    \subitem Rolle's theorem, \hyperpage{46}
+  \item minor, \hyperpage{19}
+  \item mixed partials, \hyperpage{102}
+    \subitem equality of mixed partials, \hyperpage{102}
+  \item $\mathscr{M}_{n \times m}$, \hyperpage{16}, \hyperpage{111}
+  \item M\"obius strip, \hyperpage{112}
+  \item monotone, \hyperpage{48, 49}
+    \subitem decreasing, \hyperpage{48, 49}
+    \subitem increasing, \hyperpage{48, 49}
+    \subitem strictly decreasing, \hyperpage{48, 49}
+    \subitem strictly increasing, \hyperpage{48, 49}, \hyperpage{63}
+    \subitem strictly monotone, \hyperpage{48, 49}, \hyperpage{52}
+
+  \indexspace
+
+  \item $n$-sphere, \hyperpage{111}
+  \item norm, \hyperpage{11}
+
+  \indexspace
+
+  \item open
+    \subitem open map, \hyperpage{48}, \hyperpage{92}
+    \subitem open subset, \hyperpage{22}
+  \item open cover, \hyperpage{25}
+    \subitem subcover, \hyperpage{25}
+  \item operator norm, \hyperpage{19}, \hyperpage{76}, \hyperpage{99}
+
+  \indexspace
+
+  \item $\bbP^1$, \hyperindexformat{\see {projective line}}{113}
+  \item $\bbP^2$, \hyperindexformat{\see {projective plane}}{113}
+  \item partial derivative, \hyperpage{78}, \hyperpage{115}
+  \item power rule, \hyperpage{29}, \hyperpage{36}, \hyperpage{44}, 
+		\hyperpage{53}
+  \item power series, \hyperpage{44}
+  \item product
+    \subitem product metric, \hyperpage{11, 12}, \hyperpage{21}
+    \subitem product topology, \hyperpage{23}
+  \item product rule, \hyperpage{35}, \hyperpage{77}, \hyperpage{79}
+  \item projection map, \hyperpage{15}, \hyperpage{76}
+  \item projective line, \hyperpage{113}
+  \item projective plane, \hyperpage{113}
+  \item pushforward, \hyperpage{126}
+
+  \indexspace
+
+  \item quotient rule, \hyperpage{36}, \hyperpage{78, 79}
+  \item quotient space, \hyperpage{23}
+
+  \indexspace
+
+  \item rank
+    \subitem of a differentiable function, \hyperpage{83}
+    \subitem of a linear map, \hyperpage{18}
+    \subitem of a matrix, \hyperpage{16}
+    \subitem of a smooth map, \hyperpage{127}
+  \item regular point, \hyperpage{83}, \hyperpage{128}
+  \item representation
+    \subitem of a linear map, \hyperpage{17}
+    \subitem of a vector, \hyperpage{16}
+    \subitem standard matrix representation, \hyperpage{18}, 
+		\hyperpage{21}
+  \item Rolle's theorem, 
+		\hyperindexformat{\see {mean value theorem}}{46}
+
+  \indexspace
+
+  \item $S^1$, \hyperindexformat{\see {circle}}{109}
+  \item scalar multiples rule, \hyperpage{35}, \hyperpage{74}
+  \item $\sigma$-compact, \hyperpage{25}
+  \item smooth, \hyperpage{62}, \hyperpage{105}, \hyperpage{114, 115}
+  \item smooth manifold, \hyperindexformat{\see {manifold}}{108}
+  \item $S^n$, \hyperindexformat{\see {$n$-sphere}}{111}
+  \item standard basis, \hyperpage{14}
+  \item standard matrix representation, 
+		\hyperindexformat{\see {representation, standard matrix representation}}{18}
+  \item subcover, \hyperindexformat{\see {open cover, subcover}}{25}
+  \item submersion, \hyperpage{128}
+  \item submersive, \hyperpage{83}, \hyperpage{127}
+  \item submultiplicativity, \hyperpage{21}
+  \item subspace, \hyperpage{24}, \hyperpage{109}
+    \subitem subspace topology, \hyperpage{24}
+  \item sum rule, \hyperpage{35}, \hyperpage{74}
+  \item support, \hyperpage{66}
+
+  \indexspace
+
+  \item tangent space, \hyperpage{120}
+  \item topological space, \hyperpage{22}, \hyperpage{107}
+  \item topology, \hyperpage{22}
+  \item torus, \hyperpage{113}
+  \item total derivative, \hyperindexformat{\see {derivative}}{73}
+  \item transition function, \hyperpage{107}
+
+\end{theindex}

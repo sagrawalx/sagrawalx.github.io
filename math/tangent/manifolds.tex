@@ -4,24 +4,24 @@ At this point, we will need to use the language of topological spaces. If you ha
 
 \section{Definition of a manifold}
 
-Throughout, let $X$ be a topological space.
+Throughout, let $X$ be a topological space.\index{topological space}
 
-\begin{definition}[Chart]
-	A \emph{chart} on $X$ is a pair $(U, x)$ consisting of an open subset $U \subseteq X$ and a function $x : U \to \R^n$ which is a homeomorphism onto an open subset of $\R^n$ for some $n$. We call the functions $x_i := \pi_i \circ x : U \to \R$ \emph{coordinate functions} on $U$ with respect to the chart $(U, x)$, and for any $p \in U$, the list of numbers $x_1(p), \dotsc, x_n(p)$ are the \emph{coordinates} of $p$ with respect to the chart $(U, x)$. 
+\begin{definition}[Chart] \index{chart}
+	A \emph{chart} on $X$ is a pair $(U, x)$ consisting of an open subset $U \subseteq X$ and a function $x : U \to \R^n$ which is a homeomorphism onto an open subset of $\R^n$ for some $n$.\index{homeomorphism!homeomorphism onto its image} We call the functions $x_i := \pi_i \circ x : U \to \R$ \emph{coordinate functions} on $U$ with respect to the chart $(U, x)$, and for any $p \in U$, the list of numbers $x_1(p), \dotsc, x_n(p)$ are the \emph{coordinates} of $p$ with respect to the chart $(U, x)$.\index{coordinates} 
 \end{definition}
 
 \begin{exercise} \label{polar-representation}
 	Let $X = \R^2$ and let $U$ denote $\R^2$ minus the non-negative real axis. Let $\text{polar} : U \to \R^2$ be the function which sends a point $p$ to its polar representation $(r(p), \theta(p))$, where $r(p) = |p|$ and $\theta(p)$ is the angle in radians strictly between 0 and $2\pi$ formed between $P$ and the non-negative real axis. Show that this function is a homeomorphism onto its image. 
 \end{exercise}
 
-\begin{definition} \label{transition-map}
-	Suppose $(U, x)$ and $(V, y)$ are charts on $X$. The \emph{transition map} from $(U, x)$ to $(V, y)$ is the function $y \circ x^{-1}$. 
+\begin{definition} \label{transition-map} \index{transition function}
+	Suppose $(U, x)$ and $(V, y)$ are charts on $X$. The \emph{transition function} from $(U, x)$ to $(V, y)$ is the function $y \circ x^{-1}$. 
 	\[ \begin{tikzcd}
 	x(U \cap V) \ar{r}{x^{-1}} & U \cap V \ar{r}{y} & y(U \cap V)
 	\end{tikzcd} \]
 \end{definition}
 
-\begin{definition}[Compatibility of charts]
+\begin{definition}[Compatibility of charts] \index{compatibile}
 	The two charts $(U, x)$ and $(V, y)$ on $X$ are \emph{smoothly compatible}, or just \emph{compatible}, if both of the transition maps between $(U, x)$ and $(U, y)$ are smooth. 
 \end{definition}
 
@@ -47,13 +47,13 @@ Throughout, let $X$ be a topological space.
 	\end{hint}
 \end{exercise}
 
-\begin{definition}[Atlas]
+\begin{definition}[Atlas] \index{atlas} \index{atlas!maximal atlas} \index{maximal atlas|see {atlas, maximal atlas}}
 	An \emph{atlas} on $X$ is a collection $\mathscr{A}$ of charts such that covers $X$. In other words, \[ \bigcup_{(U, x) \in \mathscr{A}} U = X. \]
 	An atlas is \emph{maximal} if there is no strictly larger atlas containing it.
 \end{definition}
 
 \begin{exercise}[Maximal atlases] \label{existence-maximal-atlas}
-	Prove that every atlas $\mathscr{A}$ is contained in a unique maximal atlas. 
+	Prove that every atlas $\mathscr{A}$ is contained in a unique maximal atlas.\index{atlas!maximal atlas} 
 	\begin{hint}
 		Let $\mathscr{A}'$ be the set of all charts that are compatible with all of the charts in $\mathscr{A}$. Prove that $\mathscr{A}'$ is an atlas (caution: keep \cref{compatibility-not-equivalence-relation} in mind). Then prove that it is maximal, and that it is the only maximal atlas containing $\mathscr{A}$. 
 	\end{hint}
@@ -61,7 +61,7 @@ Throughout, let $X$ be a topological space.
 
 This leads us to the following definition.
 
-\begin{definition}[Manifold]
+\begin{definition}[Manifold] \index{manifold} \index{smooth manifold|see {manifold}}
 	A \emph{smooth manifold}, or just a \emph{manifold}, is a pair $(X, \mathscr{A}_X)$ where $X$ is a topological space and $\mathscr{A}_X$ is a maximal atlas. Often, write simply ``$X$'' in place of the pair $(X, \mathscr{A}_X)$, and sometimes $\mathscr{A}_X$ is called the ``manifold structure on $X$.''
 \end{definition}
 
@@ -69,7 +69,7 @@ Of course, \cref{existence-maximal-atlas} tells us that any not-necessarily-maxi
 
 We can also make the following definition.
 
-\begin{definition}[Dimension]
+\begin{definition}[Dimension] \index{dimension!of a manifold}
 	Suppose $X$ is a manifold and $p \in X$ is a point. By \cref{dimension-well-defined}, there is a unique integer $n$ such that, for every chart $(U, x) \in \mathscr{A}_X$ with $p \in U$, the codomain of $x$ is $\R^n$. This integer is called the \emph{dimension of $X$ at $p$}, and is denoted $\dim_p(X)$. We say that $X$ is \emph{$n$-dimensional} if $\dim_p(X) = n$ for all $p \in X$.
 \end{definition}
 
@@ -78,18 +78,18 @@ We can also make the following definition.
 \subsection{First examples}
 
 \begin{example} \label{natural-euclidean-atlas}
-	The single chart $(\R^n, \id)$, where $\id : \R^n \to \R^n$ is the identity map, defines an atlas on $\R^n$. We can extend this to a maximal atlas by \cref{existence-maximal-atlas}, called the \emph{euclidean atlas} on $\R^n$. Unless explicitly specified otherwise, we always regard $\R^n$ as a manifold by equipping it with the euclidean atlas. By \cref{polar-compatible-with-identity}, the polar representation chart $(U, \text{polar})$ is an element of the euclidean atlas. 
+	The single chart $(\R^n, \id)$, where $\id : \R^n \to \R^n$ is the identity map, defines an atlas on $\R^n$. We can extend this to a maximal atlas, called the \emph{euclidean atlas} on $\R^n$. Unless explicitly specified otherwise, we always regard $\R^n$ as a manifold by equipping it with the euclidean atlas. By \cref{polar-compatible-with-identity}, the polar representation chart $(U, \text{polar})$ is an element of the euclidean atlas. 
 \end{example}
 
 \begin{exercise}
 	The single chart $(\R, f)$ where $f : \R \to \R$ is the function $f(x) = x^3$ is an atlas on $\R$. Show that the corresponding maximal atlas is \emph{not} the euclidean atlas. 
 \end{exercise}
 
-\begin{exercise}[The circle $S^1$] \label{circle-projection-atlas}
+\begin{exercise}[The circle $S^1$] \index{s1@$S^1$|see {circle}} \index{circle} \label{circle-projection-atlas}
 	Let $S^1$ denote the set of points in $\R^2$ along the unit circle. In other words,
 	\[ S^1 = \{ (x, y) \in \R^2 : x^2 + y^2 = 1 \}. \]
 	\begin{enumerate}[(a)]
-		\item There are two ways you might think to regard $S^1$ as a topological space. First, you might restrict the euclidean metric on $\R^2$ to $S^1$, so that $S^1$ becomes a metric space, and then you can forget this restricted metric and just remember the resulting topology as in \cref{metric-to-topological}. Alternatively, you can first forget the metric on $\R^2$ and regard it as a topological space as in \cref{metric-to-topological}, and then regard $S^1$ as a subspace of $\R^2$ (cf. \cref{subspace-topology}). Show that you end up with the same topology on $S^1$ in both cases. 
+		\item There are two ways you might think to regard $S^1$ as a topological space. First, you might restrict the euclidean metric on $\R^2$ to $S^1$, so that $S^1$ becomes a metric space, and then you can forget this restricted metric and just remember the resulting topology as in \cref{metric-to-topological}. Alternatively, you can first forget the metric on $\R^2$ and regard it as a topological space as in \cref{metric-to-topological}, and then regard $S^1$ as a subspace of $\R^2$ (cf. \cref{subspace-topology}).\index{subspace} Show that you end up with the same topology on $S^1$ in both cases. 
 		
 		\item Let $U = S^1 \setminus \{(0,1)\}$. For $p \in S^1$, let $x(p)$ denote the $x$-coordinate of the point where the line $y = -1$ intersects the line passing through $(0,1)$ and $p$. See \cref{circle-projection}. If $p = (a, b)$, find a formula for $x(p)$ in terms of $a$ and $b$. 
 		
@@ -128,7 +128,7 @@ We can also make the following definition.
 			\caption{Given a point $p \in U = S^1 \setminus \{(0,1)\}$, we draw a line connecting $p$ to $(0,1)$, indicated in red. The point where that line intersects the line $y = -1$ (in black) is sometimes called the \emph{projection of $p$ from $(0,1)$ onto $\R \times \{-1\}$}. The $x$-coordinate of this point is $x(p)$.}  \label{circle-projection}
 		\end{figure}
 		
-		\item Show that $x : U \to \R$ is a homeomorphism. Thus $(U, x)$ is a chart on $S^1$. 
+		\item Show that $x : U \to \R$ is a homeomorphism.\index{homeomorphism} Thus $(U, x)$ is a chart on $S^1$. 
 		\begin{hint} 
 			Use geometry to write down a formula for the inverse function to $x$. 
 		\end{hint}
@@ -140,14 +140,14 @@ We can also make the following definition.
 	Thus $\mathscr{A} = \{(U, x), (U', x')\}$ is an atlas on $S^1$. Extending $\mathscr{A}$ to a maximal atlas, we have defined a manifold structure on $S^1$. It is evidently a 1-dimensional manifold. 
 \end{exercise}
 
-\begin{exercise}[The $n$-sphere $S^n$] \label{sphere-projection-atlas}
+\begin{exercise}[The $n$-sphere $S^n$] \label{sphere-projection-atlas} \index{sn@$S^n$|see {$n$-sphere}} \index{n-sphere@$n$-sphere}
 	Let $S^n$ denote the set of points in $\R^{n+1}$ of norm 1. Generalize \cref{circle-projection-atlas} and show that ``projection from the north pole'' and ``projection from the south pole'' define an atlas on $S^n$. 
 \end{exercise}
 
 \begin{example}[Matrices]
-	There is an isomorphism of vector spaces $x : \mathscr{M}_{n \times m} \to \R^{mn}$ where, if $A \in \mathscr{M}_{n \times m}$ has entries $a_{i,j}$, then
+	There is an isomorphism of vector spaces $x : \mathscr{M}_{n \times m} \to \R^{mn}$\index{mnm@$\mathscr{M}_{n \times m}$} where, if $A \in \mathscr{M}_{n \times m}$ has entries $a_{i,j}$, then
 	\[ x(A) = \begin{bmatrix} a_{1,1} \\ a_{1,2} \\ \vdots \\ a_{1,m} \\ a_{2,1} \\ \vdots \\ a_{n,m} \end{bmatrix}. \]
-	We regard $\mathscr{M}_{n \times m}$ as a topological space using the matrix norms defined in \cref{matrix-norm}, then $x$ is a homeomorphism by definition. In other words, the single chart $(\mathscr{M}_{n \times m}, x)$ is an atlas on $\mathscr{M}_{n \times m}$. Extending it to a maximal atlas using \cref{existence-maximal-atlas}, we see that we can regard $\mathscr{M}_{n,m}$ as a manifold. It is $mn$-dimensional. 
+	If we endow $\mathscr{M}_{n \times m}$ with the canonical topology,\index{canonical topology} then $x$ is automatically a homeomorphism.\index{homeomorphism} In other words, the single chart $(\mathscr{M}_{n \times m}, x)$ is an atlas on $\mathscr{M}_{n \times m}$. Extending it to a maximal atlas using \cref{existence-maximal-atlas}, we see that we can regard $\mathscr{M}_{n,m}$ as a manifold. It is $mn$-dimensional. 
 \end{example}
 
 \begin{exercise}[Open submanifolds] \label{open-submanifold}
@@ -169,7 +169,7 @@ Let $B$ denote the box $[0,1] \times (0,1)$ inside $\R^2$, and define an equival
 	Check that $\sim$ is an equivalence relation. 
 \end{exercise}
 
-The \emph{M\"obius strip} is the set of equivalence classes $M := B/\sim$. In other words, we take the box $[0,1] \times (0,1)$ and ``glue'' its left and right edges, with a twist. If you've ever made a M\"obius strip out of paper, you should be able to see that we've formalized exactly that same process. We regard $M$ as a topological space using the quotient topology, as in \cref{quotient-space}. 
+The \emph{M\"obius strip}\index{mobius strip@M\"obius strip} is the set of equivalence classes $M := B/\sim$. In other words, we take the box $[0,1] \times (0,1)$ and ``glue'' its left and right edges, with a twist. If you've ever made a M\"obius strip out of paper, you should be able to see that we've formalized exactly that same process. We regard $M$ as a topological space using the quotient topology, as in \cref{quotient-space}. 
 
 To give $X$ the structure of a manifold, we will now produce an atlas on $X$. It will consist of two charts. The first chart is easy to describe. Let \[ U = \{ [a, b] \in M : a \neq 0, 1 \} \] 
 and let $x : U \to \R^2$ be the function $x([a,b]) = (a, b)$.
@@ -186,7 +186,7 @@ The second chart is a bit harder to describe mathematically, but the intuitive i
 \[ y([a,b]) = \begin{cases} (a, b) & \text{if } a < 1/2 \\ (a-1, 1-b) & \text{if } a > 1/2 \end{cases} \]
 
 \begin{exercise}
-	Show that $y : V \to \R^2$ is well-defined and that it is a homeomorphism onto its image. 
+	Show that $y : V \to \R^2$ is well-defined and that it is a homeomorphism onto its image.\index{homeomorphism!homeomorphism onto its image} 
 \end{exercise}
 
 \begin{exercise}
@@ -197,25 +197,25 @@ Thus $\mathscr{A} = \{(U, x), (V, y)\}$ is an atlas on the M\"obius strip $M$. L
 
 \subsection{More examples}
 
-\begin{exercise}[Torus] \label{torus}
+\begin{exercise}[Torus] \label{torus} \index{torus}
 	Let $B$ denote the box $[0,1] \times [0,1]$ inside $\R^2$ and define the equivalence relation $\sim$ by $(a,0) \sim (a,1)$ and $(0,b) \sim (1,b)$ for all $a, b \in [0,1]$. The \emph{torus} $T$ is defined to be the quotient $B/\sim$. Describe an atlas on $T$. 
 \end{exercise}
 
-\begin{exercise}[Projective line] \label{rp1}
+\begin{exercise}[Projective line] \label{rp1} \index{projective line} \index{p1@$\bbP^1$|see {projective line}}
 	Let $S^1$ denote the circle as in \cref{circle-projection-atlas}. Define an equivalence relation $\sim$ on $S^1$ which identifies antipodal points; in other words, every point on $S^1$ is declared to be equivalent to the point that is diametrically opposite it. The \emph{projective line} $\bbP^1$ is defined to be the quotient $S^1/\sim$. Describe an atlas on $\bbP^1$. 
 \end{exercise}
 
-\begin{exercise}[Projective plane] \label{rp2}
+\begin{exercise}[Projective plane] \label{rp2} \index{projective plane} \index{p2@$\bbP^2$|see {projective plane}}
 	Let $S^2$ denote the 2-sphere as in \cref{sphere-projection-atlas}. Define an equivalence relation $\sim$ on $S^2$ which identifies antipodal points; in other words, every point on $S^2$ is declared to be equivalent to the point that is diametrically opposite it. The \emph{projective plane} $\bbP^2$ is defined to be the quotient $S^2/\sim$. Describe an atlas on $\bbP^2$. 
 \end{exercise}
 
 \section{Smooth functions}
 
-We will now define what it means for a function between two manifolds to be smooth. Recall that in \cref{multivar} we saw that the case when the codomain is $\R$ was the most important. The same will be true here. 
+We will now define what it means for a function between two manifolds to be smooth. Recall that in \cref{multi} we saw that the case when the codomain is $\R$ was the most important. The same will be true here. 
 
 \subsection{Smooth real-valued functions}
 
-\begin{definition}[Smooth real-valued function] \label{smooth-real-valued}
+\begin{definition}[Smooth real-valued function] \label{smooth-real-valued} \index{smooth}
 	Let $X$ be a manifold. A function $f : X \to \R$ is said to be \emph{smooth} if, for any chart $(U, x) \in \mathscr{A}_X$, the function $f \circ x^{-1}$ is smooth.
 	\[ \begin{tikzcd} x(U) \ar{r}{x^{-1}} & U \ar{r}{f} & \R \end{tikzcd} \]
 \end{definition}
@@ -264,7 +264,7 @@ The second disconcerting thing is the following. Suppose $U \subseteq \R^m$ is a
 
 \subsection{Partial derivatives of real-valued functions}
 
-\begin{definition}[Partial derivatives]
+\begin{definition}[Partial derivatives] \index{partial derivative}
 	Let $X$ be a manifold and $(U, x) \in \mathscr{A}_X$ a chart. Recall that we then have coordinate functions $x_1, \dotsc, x_n : U \to \R$, where $x_i = \pi_i \circ x$. Given a smooth function $f : X \to \R$ and a point $p \in U$, we define the \emph{partial derivative of $f$ at $p$ with respect to $x_i$} by
 	\[ \left.\frac{df}{dx_i}\right|_p := \partial_i (f \circ x^{-1})(x(p)). \]
 	In other words, $df/dx_i = \partial_i(f \circ x^{-1}) \circ x$ as functions $U \to \R$.  
@@ -272,7 +272,7 @@ The second disconcerting thing is the following. Suppose $U \subseteq \R^m$ is a
 
 \subsection{Smooth functions between manifolds}
 
-\begin{definition}[Smoothness] \label{smooth-between-manifolds}
+\begin{definition}[Smoothness] \label{smooth-between-manifolds} \index{smooth}
 	Suppose $X$ and $Y$ are manifolds and $f : X \to Y$ is a function. Then $f$ is \emph{smooth} if, for every chart $(V, y) \in \mathscr{A}_Y$ and every chart $(U, x) \in \mathscr{A}_X$ such that $f(U) \subseteq V$, the function $y \circ f \circ x^{-1} : x(U) \to y(V)$ is smooth. 
 	\[ \begin{tikzcd} X \ar{rr}{f} && Y \\ 
 	U \ar{rr}{f} \ar[hookrightarrow]{u} \ar{d}[swap]{x} &&  V \ar[hookrightarrow]{u} \ar{d}{y} \\ 
@@ -310,7 +310,7 @@ Finally, we have the following result which tells us that the case when the codo
 
 \subsection{Diffeomorphisms}
 
-\begin{definition}[Diffeomorphism]
+\begin{definition}[Diffeomorphism] \index{diffeomorphism}
 	Suppose $X$ and $Y$ are manifolds. A function $f : X \to Y$ is a \emph{diffeomorphism} if it is smooth, bijective, and the inverse function $f^{-1} : Y \to X$ is also smooth. If there exists a diffeomorphism $f : X \to Y$, then $X$ and $Y$ are \emph{diffeomorphic}. 
 \end{definition}
 
@@ -326,6 +326,6 @@ Finally, we have the following result which tells us that the case when the codo
 	Suppose $f : X \to Y$ is a diffeomorphism. Show that, for any open subset $U \subseteq X$, the image $f(U)$ is open in $Y$. 
 \end{exercise}
 
-\begin{definition}[Local diffeomorphism]
+\begin{definition}[Local diffeomorphism] \index{local diffeomorphism|see {diffeomorphism, local diffeomorphism}} \index{diffeomorphism!local diffeomorphism}
 	Suppose $X$ and $Y$ are manifolds. A function $f : X \to Y$ is a \emph{local diffeomorphism} at a point $p \in X$ if there exists an open neighborhood $U$ of $p$ such that $f|_U$ is a diffeomorphism $U \to f(U)$. 
 \end{definition}

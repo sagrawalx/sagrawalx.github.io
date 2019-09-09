@@ -1,4 +1,4 @@
-\documentclass[bibliography=totoc,letterpaper,numbers=noenddot]{scrbook}
+\documentclass[bibliography=totoc,index=totoc,letterpaper,numbers=noenddot]{scrbook}
 
 \title{Off on a Tangent}
 \subtitle{Meditations on the derivative}
@@ -9,13 +9,20 @@
 \usepackage{newpxtext, bbold, amsmath, amssymb}
 \usepackage[euler-digits,euler-hat-accent]{eulervm}
 \usepackage[mathscr]{euscript}
-\linespread{1.2}
+
+\usepackage{setspace}
+\setstretch{1.25}
+\usepackage[titles]{tocloft}
+\cftsetpnumwidth{2em}
+\raggedbottom
+\recalctypearea
 
 % Miscellaneous
-\usepackage{enumerate, tikz-cd, color, cancel, microtype, verbatim, pgfplots}
+\usepackage{enumerate, tikz-cd, color, cancel, microtype, verbatim, pgfplots, makeidx}
 \usepgfplotslibrary{fillbetween}
 \pgfplotsset{compat=1.15}
-\usepackage[colorlinks=true]{hyperref}
+\usepackage[colorlinks=true,hypertexnames=false]{hyperref}
+\makeindex
 
 % Numbering and environments
 \usepackage{amsthm}
@@ -54,14 +61,18 @@
 \Crefname{exercise}{Exercise}{Exercises}
 
 \newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
 \newcommand{\bbP}{\mathbb{P}}
 \renewcommand{\O}{\mathscr{O}}
 \newcommand{\id}{\mathrm{id}}
 \DeclareMathOperator{\rank}{rank}
 \DeclareMathOperator{\Der}{Der}
 \newcommand{\mx}{\mathrm{max}}
+\newcommand{\spn}{\mathrm{sup}}
 \DeclareMathOperator{\GL}{GL}
 \DeclareMathOperator{\adj}{adj}
+
+\newcommand{\starred}{\texorpdfstring{$\star$}{*}}
 
 \begin{document}
 	\maketitle
@@ -70,11 +81,11 @@
 	
 	\tableofcontents
 	
-	\include{prerequisites}
+	\include{preliminaries}
 	
-	\include{single-var}
+	\include{single}
 	
-	\include{multi-var}
+	\include{multi}
 	
 	\include{manifolds}
 	
@@ -83,5 +94,7 @@
 	\nocite{*}
 	\bibliographystyle{alphaurl}
 	\bibliography{references}
+	
+	\printindex
 	
 \end{document}
