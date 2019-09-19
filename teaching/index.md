@@ -5,7 +5,7 @@ permalink: teaching/
 
 # Currently Teaching
 
-*  Fall 2019, Block 2. [MA375 - Real Analysis II](fa19-b2_ma475).
+*  Fall 2019, Block 2. [MA475 - Real Analysis II](fa19-b2_ma475).
 
 # Previously Taught
 
