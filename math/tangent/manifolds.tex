@@ -1,49 +1,47 @@
 \chapter{Manifolds}
 
-At this point, we will need to use the language of topological spaces. If you have seen metric spaces but not topological spaces, you should look over \cref{topological-spaces-basics} at this point.
+Manifolds allow us to formalize the idea of geometry without having to make a choice of coordinates. The idea, roughly speaking, is to have a space and then remember \emph{all possible} choice of coordinates on that space! 
+
+At this point, we will need to use the language of topological spaces. If you have seen metric spaces but not topological spaces, you should look over \cref{topological-spaces-basics} briefly (in particular, at least at  \cref{topological-space-definition,metric-to-topological,continuous-definition,open-map-definition,homeomorphism-definition}).
 
 \section{Definition of a manifold}
 
 Throughout, let $X$ be a topological space.\index{topological space}
 
 \begin{definition}[Chart] \index{chart}
-	A \emph{chart} on $X$ is a pair $(U, x)$ consisting of an open subset $U \subseteq X$ and a function $x : U \to \R^n$ which is a homeomorphism onto an open subset of $\R^n$ for some $n$.\index{homeomorphism!homeomorphism onto its image} We call the functions $x_i := \pi_i \circ x : U \to \R$ \emph{coordinate functions} on $U$ with respect to the chart $(U, x)$, and for any $p \in U$, the list of numbers $x_1(p), \dotsc, x_n(p)$ are the \emph{coordinates} of $p$ with respect to the chart $(U, x)$.\index{coordinates} 
+	A \emph{chart} on $X$ is a pair $(U, x)$ consisting of an open subset $U \subseteq X$ and a continuous, open\index{open!open map}, and injective function $x : U \to \R^n$ for some $n$. If $p \in X$, we say that the chart $(U,x)$ \emph{contains} $p$ if $p \in U$. Also, we call the functions $x_i := \pi_i \circ x : U \to \R$ \emph{coordinate functions} on $U$ with respect to the chart $(U, x)$, and for any $p \in U$, the list of numbers $x_1(p), \dotsc, x_n(p)$ are called the \emph{coordinates} of $p$ with respect to the chart $(U, x)$.\index{coordinates} 
 \end{definition}
 
 \begin{exercise} \label{polar-representation}
-	Let $X = \R^2$ and let $U$ denote $\R^2$ minus the non-negative real axis. Let $\text{polar} : U \to \R^2$ be the function which sends a point $p$ to its polar representation $(r(p), \theta(p))$, where $r(p) = |p|$ and $\theta(p)$ is the angle in radians strictly between 0 and $2\pi$ formed between $P$ and the non-negative real axis. Show that this function is a homeomorphism onto its image. 
+	Let $X = \R^2$ and let $U$ denote $\R^2$ minus the non-negative real axis. Let $\text{polar} : U \to \R^2$ be the function which sends a point $p$ to its polar representation $(r(p), \theta(p))$, where $r(p) = |p|$ and $\theta(p)$ is the angle in radians strictly between 0 and $2\pi$ formed between $P$ and the non-negative real axis. Show that $(U, \text{polar})$ is a chart. 
 \end{exercise}
 
-\begin{definition} \label{transition-map} \index{transition function}
-	Suppose $(U, x)$ and $(V, y)$ are charts on $X$. The \emph{transition function} from $(U, x)$ to $(V, y)$ is the function $y \circ x^{-1}$. 
+\begin{definition}[Transition function] \label{transition-map} \index{transition function}
+	Suppose $(U, x)$ and $(U, x')$ are charts on $X$. The \emph{transition function} from $(U, x)$ to $(U, x')$ is the function $x' \circ x^{-1}$. 
 	\[ \begin{tikzcd}
-	x(U \cap V) \ar{r}{x^{-1}} & U \cap V \ar{r}{y} & y(U \cap V)
+	x(U \cap V) \ar{r}{x^{-1}} & U \cap V \ar{r}{x'} & x'(U \cap V)
 	\end{tikzcd} \]
 \end{definition}
 
-\begin{definition}[Compatibility of charts] \index{compatibile}
-	The two charts $(U, x)$ and $(V, y)$ on $X$ are \emph{smoothly compatible}, or just \emph{compatible}, if both of the transition maps between $(U, x)$ and $(U, y)$ are smooth. 
+\begin{definition}[Compatibility of charts] \index{compatibile} \label{compatibility}
+	The two charts $(U, x)$ and $(U', x')$ on $X$ are \emph{smoothly compatible}, or just \emph{compatible}, if both of the transition maps between $(U, x)$ and $(U', x')$ are smooth. 
 \end{definition}
-
-\begin{remark}
-	One could also make a definition of \emph{$C^k$-compatibility} for any $k = 0, 1, \dotsc, \infty$, but we won't ever use this. 
-\end{remark}
 
 \begin{exercise} \label{polar-compatible-with-identity}
 	Let $\id : \R^2 \to \R^2$ denote the identity map and $\text{polar} : U \to \R^2$ the polar representation map from \cref{polar-representation}. Show that $(\R^2, \id)$ and $(U, \text{polar})$ are compatible charts. 
 \end{exercise}
 
 \begin{exercise} \label{compatibility-not-equivalence-relation}
-	Show that the relation ``is compatible with'' is \emph{not} an equivalence relation on the set of all charts on $X$. 
+	Show that the relation ``is compatible with'' is \emph{not} an equivalence relation on the set of all charts. 
 	\begin{hint}
 		The function $\R \to \R$ given by $x \mapsto x^3$ is a smooth homeomorphism, but its inverse is not differentiable. 
 	\end{hint}
 \end{exercise}
 
 \begin{exercise} \label{dimension-well-defined}
-	Suppose $(U, x)$ and $(V, y)$ are compatible charts, where $x : U \to \R^m$ and $y : V \to \R^n$, and that $U \cap V$ is nonempty. Show that $m = n$. 
+	Suppose $(U, x)$ and $(U', x')$ are compatible charts, where $x : U \to \R^m$ and $x' : U' \to \R^n$, and that $U \cap U'$ is nonempty. Show that $m = n$. 
 	\begin{hint}
-		Pick a point $p \in U \cap V$, and consider the derivatives of $x \circ y^{-1}$ at $y(p)$ and of $y \circ x^{-1}$ at $x(p)$. 
+		Pick a point $p \in U \cap V$, and consider the derivatives of $x' \circ x^{-1}$ at $x(p)$ and of $x \circ x'^{-1}$ at $x'(p)$. 
 	\end{hint}
 \end{exercise}
 
@@ -52,7 +50,7 @@ Throughout, let $X$ be a topological space.\index{topological space}
 	An atlas is \emph{maximal} if there is no strictly larger atlas containing it.
 \end{definition}
 
-\begin{exercise}[Maximal atlases] \label{existence-maximal-atlas}
+\begin{exercise}[Existence and uniqueness of maximal atlases] \label{existence-maximal-atlas}
 	Prove that every atlas $\mathscr{A}$ is contained in a unique maximal atlas.\index{atlas!maximal atlas} 
 	\begin{hint}
 		Let $\mathscr{A}'$ be the set of all charts that are compatible with all of the charts in $\mathscr{A}$. Prove that $\mathscr{A}'$ is an atlas (caution: keep \cref{compatibility-not-equivalence-relation} in mind). Then prove that it is maximal, and that it is the only maximal atlas containing $\mathscr{A}$. 
@@ -70,8 +68,12 @@ Of course, \cref{existence-maximal-atlas} tells us that any not-necessarily-maxi
 We can also make the following definition.
 
 \begin{definition}[Dimension] \index{dimension!of a manifold}
-	Suppose $X$ is a manifold and $p \in X$ is a point. By \cref{dimension-well-defined}, there is a unique integer $n$ such that, for every chart $(U, x) \in \mathscr{A}_X$ with $p \in U$, the codomain of $x$ is $\R^n$. This integer is called the \emph{dimension of $X$ at $p$}, and is denoted $\dim_p(X)$. We say that $X$ is \emph{$n$-dimensional} if $\dim_p(X) = n$ for all $p \in X$.
+	Suppose $X$ is a manifold and $p \in X$ is a point. By \cref{dimension-well-defined}, there is a unique integer $n$ such that, for every chart $(U, x) \in \mathscr{A}_X$ containing $p$, the codomain of the function $x$ is $\R^n$. This integer is called the \emph{dimension of $X$ at $p$}, and is denoted $\dim_p(X)$. We say that $X$ is \emph{$n$-dimensional} if $\dim_p(X) = n$ for all $p \in X$.
 \end{definition}
+
+\begin{unimportantremark}
+	For any $k = 1, 2, \dotsc, \infty$, we could define charts to be \emph{$C^k$-compatible} if the transition functions between them are $C^k$, rather than smooth as in \cref{compatibility}. This would lead to a definition of \emph{$C^k$-manifolds}. In these notes, we'll just stick to the $k = \infty$ case. This is by far the most interesting.  
+\end{unimportantremark}
 
 \section{Examples}
 
@@ -87,9 +89,9 @@ We can also make the following definition.
 
 \begin{exercise}[The circle $S^1$] \index{s1@$S^1$|see {circle}} \index{circle} \label{circle-projection-atlas}
 	Let $S^1$ denote the set of points in $\R^2$ along the unit circle. In other words,
-	\[ S^1 = \{ (x, y) \in \R^2 : x^2 + y^2 = 1 \}. \]
+	\[ S^1 = \{ (a, b) \in \R^2 : a^2 + b^2 = 1 \}. \]
 	\begin{enumerate}[(a)]
-		\item There are two ways you might think to regard $S^1$ as a topological space. First, you might restrict the euclidean metric on $\R^2$ to $S^1$, so that $S^1$ becomes a metric space, and then you can forget this restricted metric and just remember the resulting topology as in \cref{metric-to-topological}. Alternatively, you can first forget the metric on $\R^2$ and regard it as a topological space as in \cref{metric-to-topological}, and then regard $S^1$ as a subspace of $\R^2$ (cf. \cref{subspace-topology}).\index{subspace} Show that you end up with the same topology on $S^1$ in both cases. 
+		\item Do \cref{metric-subspace}. This shows that both ways that we might think to regard $S^1$ as a topological space are actually the same. 
 		
 		\item Let $U = S^1 \setminus \{(0,1)\}$. For $p \in S^1$, let $x(p)$ denote the $x$-coordinate of the point where the line $y = -1$ intersects the line passing through $(0,1)$ and $p$. See \cref{circle-projection}. If $p = (a, b)$, find a formula for $x(p)$ in terms of $a$ and $b$. 
 		
@@ -133,11 +135,14 @@ We can also make the following definition.
 			Use geometry to write down a formula for the inverse function to $x$. 
 		\end{hint}
 		
-		\item Let $U' = S^1 \setminus \{(0,-1)\}$. For $p \in V$, let $x'(p)$ denote the $x$-coordinate of the point where the line $y = 1$ intersects the line passing through $(0,-1)$ and $p$. Show that $x' : U' \to \R$ is also a homeomorphism. 
+		\item Let $U' = S^1 \setminus \{(0,-1)\}$. For $p \in U'$, let $x'(p)$ denote the $x$-coordinate of the point where the line $y = 1$ intersects the line passing through $(0,-1)$ and $p$. Show that $x' : U' \to \R$ is also a homeomorphism. 
 		
-		\item Show that $(U, x)$ and $(U', x')$ are compatible charts.
+		\item Show that $(U, x)$ and $(U', x')$ are compatible charts. Thus $\mathscr{A} = \{(U, x), (U', x')\}$ is an atlas on $S^1$. Extending $\mathscr{A}$ to a maximal atlas $\mathscr{A}_{S^1}$, we have defined a manifold structure on $S^1$.
+		
+		\item Let $V = \{ (a,b) \in S^1 : a > 0 \}$ be the ``right half of the circle.'' If $y : V \to \R$ is the function $y(a,b) = b$, show that $(V,y)$ is a chart and that it is compatible with the charts in the atlas $\mathscr{A}$ above. Thus $(V,y) \in \mathscr{A}_{S^1}$. 
+		
+		\item Can you think of any other charts in the maximal atlas $\mathscr{A}_{S^1}$, besides the three discussed above? 
 	\end{enumerate}
-	Thus $\mathscr{A} = \{(U, x), (U', x')\}$ is an atlas on $S^1$. Extending $\mathscr{A}$ to a maximal atlas, we have defined a manifold structure on $S^1$. It is evidently a 1-dimensional manifold. 
 \end{exercise}
 
 \begin{exercise}[The $n$-sphere $S^n$] \label{sphere-projection-atlas} \index{sn@$S^n$|see {$n$-sphere}} \index{n-sphere@$n$-sphere}
@@ -147,8 +152,20 @@ We can also make the following definition.
 \begin{example}[Matrices]
 	There is an isomorphism of vector spaces $x : \mathscr{M}_{n \times m} \to \R^{mn}$\index{mnm@$\mathscr{M}_{n \times m}$} where, if $A \in \mathscr{M}_{n \times m}$ has entries $a_{i,j}$, then
 	\[ x(A) = \begin{bmatrix} a_{1,1} \\ a_{1,2} \\ \vdots \\ a_{1,m} \\ a_{2,1} \\ \vdots \\ a_{n,m} \end{bmatrix}. \]
-	If we endow $\mathscr{M}_{n \times m}$ with the canonical topology,\index{canonical topology} then $x$ is automatically a homeomorphism.\index{homeomorphism} In other words, the single chart $(\mathscr{M}_{n \times m}, x)$ is an atlas on $\mathscr{M}_{n \times m}$. Extending it to a maximal atlas using \cref{existence-maximal-atlas}, we see that we can regard $\mathscr{M}_{n,m}$ as a manifold. It is $mn$-dimensional. 
+	If we endow $\mathscr{M}_{n \times m}$ with the canonical topology,\index{canonical topology} then $x$ is automatically a homeomorphism by \cref{linear-isomorphism-homeomorphism}.\index{homeomorphism} In other words, the single chart $(\mathscr{M}_{n \times m}, x)$ is an atlas on $\mathscr{M}_{n \times m}$. Extending it to a maximal atlas using \cref{existence-maximal-atlas}, we see that we can regard $\mathscr{M}_{n,m}$ as a manifold. It is $mn$-dimensional. The same process allows us to regard \emph{any} finite dimensional vector space (not just $\mathscr{M}_{n \times m}$) as a manifold.  
 \end{example}
+
+\begin{exercise}[Graphs]
+	Suppose $U$ is an open subset of $\R^m$ and $f : U \to \R^n$ is a continuous function. 
+	\begin{enumerate}
+		\item There are two ways we might think to regard $U \times \R^n$ as a topological space. One way is to use the product topology \ref{product-space}. The second way is to regard $U \times \R^n$ as a subset of $\R^m \times \R^n = \R^{m+n}$ and then give $U \times \R^n$ the subspace topology \ref{subspace-topology}. Show that these two topologies are the same. 
+		
+		\item Let
+		\[ \Gamma = \{ (x,y) \in U \times \R^n : f(x) = y \} \]
+		be the graph of $f$, regarded as a subspace of $U \times \R^n$. Show that the function $\pi : \Gamma \to \R^m$ given by $\pi(x,y) = x$ is continuous, injective, and open. 
+	\end{enumerate}
+	The single chart $(\Gamma, \pi)$ defines an atlas $\Gamma$. Extending this to a maximal atlas, we can regard $\Gamma$ as a manifold. 
+\end{exercise}
 
 \begin{exercise}[Open submanifolds] \label{open-submanifold}
 	Let $X$ be a manifold and $U \subseteq X$ an open subset. Show that \[ \mathscr{A}_U = \{ (V,x) \in \mathscr{A}_X : V \subseteq U \} \]
@@ -220,7 +237,7 @@ We will now define what it means for a function between two manifolds to be smoo
 	\[ \begin{tikzcd} x(U) \ar{r}{x^{-1}} & U \ar{r}{f} & \R \end{tikzcd} \]
 \end{definition}
 
-There are two disconcerting things about this definition. First, there is the issue that checking smoothness of a particular function seems next to impossible: the maximal atlas $\mathscr{A}_X$ will have \emph{many, many} charts, and the definition makes it seem like we need to check smoothness on each of these charts! Thankfully, we don't need to check on all possible charts. As soon as we check smoothness on a collection of charts that cover $X$, we're done. 
+There are two disconcerting things about this definition. First, there is the issue that checking smoothness of a particular function seems next to impossible: the maximal atlas $\mathscr{A}_X$ will have \emph{many, many} charts, some that we may not even know about, and the definition makes it seem like we need to check smoothness on all of them! Thankfully, we don't need to check on all possible charts. As soon as we check smoothness on any atlas, even if it's not maximal, we're done. 
 
 \begin{lemma} \label{smooth-real-val-local}
 	Let $X$ be a manifold and $f : X \to \R$ a function. Suppose that there exists an atlas $\mathscr{A} \subseteq \mathscr{A}_X$ such that $f \circ x^{-1}$ is smooth for any $(U, x) \in \mathscr{A}$. Then $f$ is smooth. 
@@ -237,10 +254,10 @@ There are two disconcerting things about this definition. First, there is the is
 	Since $f \circ y^{-1}$ is smooth when restricted to each the open subset $y(U \cap V)$ for all $(U, x) \in \mathscr{A}$, we conclude that $f \circ y^{-1}$ must be smooth on all of $y(V)$.
 \end{proof}
 
-The second disconcerting thing is the following. Suppose $U \subseteq \R^m$ is an open subset and $f : U \to \R$ is a function. On the one hand, we defined what it means for $f$ to be smooth back in \cref{smooth-multivar}. On the other hand, we can regard $U$ as an open submanifold of $\R^n$ (cf. \cref{open-submanifold}) and then \cref{smooth-real-valued} gives us another definition of what it means to be smooth. A priori, it could be that these definitions conflict. Thankfully, they do not. 
+The second disconcerting thing is the following. Suppose $U \subseteq \R^m$ is an open subset and $f : U \to \R$ is a function. On the one hand, we defined what it means for $f$ to be smooth back in \cref{smooth-multi}. On the other hand, we can regard $U$ as an open submanifold of $\R^n$ (cf. \cref{open-submanifold}) and then \cref{smooth-real-valued} gives us a definition of what it means to be smooth. A priori, it could be that these definitions conflict. Thankfully, they do not. 
 
 \begin{exercise}
-	Suppose $U \subseteq \R^m$ is an open subset and $f : U \to \R$ is a function. Show that $f$ is smooth in the sense of \cref{smooth-multivar} if and only if it is smooth in the sense of \cref{smooth-real-valued}. 
+	Suppose $U \subseteq \R^m$ is an open subset and $f : U \to \R$ is a function. Show that $f$ is smooth in the sense of \cref{smooth-multi} if and only if it is smooth in the sense of \cref{smooth-real-valued}. 
 	\begin{hint}
 		You might find \cref{smooth-real-val-local} useful. 
 	\end{hint}
@@ -250,27 +267,33 @@ The second disconcerting thing is the following. Suppose $U \subseteq \R^m$ is a
 	If $X$ is a manifold, we write $\O(X)$ for the set of smooth functions $X \to \R$. 
 \end{definition}
 
-\begin{exercise}
-	Show that $\O(X)$ is a vector space. 
+Here is the standard set of stability properties we would want. 
+
+\begin{exercise} \label{smooth-stable-manifold}
+	\begin{enumerate}[(a)]
+		\item Show that $\O(X)$ is a vector space. 
+		\item If $f, g \in \O(X)$, show that $fg \in \O(X)$ also. 
+		\item If $f \in \O(X)$ and $f(x) \neq 0$ for all $x$, show that $1/f \in \O(X)$ also. 
+	\end{enumerate}
 \end{exercise}
 
-\begin{exercise}
-	If $f, g \in \O(X)$, show that $fg \in \O(X)$ also. 
-\end{exercise}
+\subsubsection*{Bump functions}
+
+We now prove that there is a preponderance of bump functions on manifolds. 
 
 \begin{proposition}
-	Suppose $K$ is a compact subset of $X$ and $U$ is an open neighborhood of $K$. Then there exists a smooth function $f : X \to [0,1]$ such that $f(x) = 1$ for all $x \in K$ and $f(x) = 0$ for all $x \notin U$. 
+	Suppose $K$ is a compact subset of $X$ and $U$ is an open neighborhood of $K$. Then there exists a smooth function $f : X \to \R$ such that $f(x) \in [0,1]$ for all $x \in \R$, $f(x) = 1$ for all $x \in K$, and $f(x) = 0$ for all $x \notin U$. 
 \end{proposition}
 
-\subsection{Partial derivatives of real-valued functions}
+\begin{proof}
+	For each $p \in K$, let $(V, x)$ be a chart containing $p$. By shrinking $V$, we can assume that $\bar{V} \subseteq U$. 
+\end{proof}
 
-\begin{definition}[Partial derivatives] \index{partial derivative}
-	Let $X$ be a manifold and $(U, x) \in \mathscr{A}_X$ a chart. Recall that we then have coordinate functions $x_1, \dotsc, x_n : U \to \R$, where $x_i = \pi_i \circ x$. Given a smooth function $f : X \to \R$ and a point $p \in U$, we define the \emph{partial derivative of $f$ at $p$ with respect to $x_i$} by
-	\[ \left.\frac{df}{dx_i}\right|_p := \partial_i (f \circ x^{-1})(x(p)). \]
-	In other words, $df/dx_i = \partial_i(f \circ x^{-1}) \circ x$ as functions $U \to \R$.  
-\end{definition}
+% TODO: partitions of unity
 
 \subsection{Smooth functions between manifolds}
+
+Here is a definition that looks a bit terrifying on the face of it. 
 
 \begin{definition}[Smoothness] \label{smooth-between-manifolds} \index{smooth}
 	Suppose $X$ and $Y$ are manifolds and $f : X \to Y$ is a function. Then $f$ is \emph{smooth} if, for every chart $(V, y) \in \mathscr{A}_Y$ and every chart $(U, x) \in \mathscr{A}_X$ such that $f(U) \subseteq V$, the function $y \circ f \circ x^{-1} : x(U) \to y(V)$ is smooth. 
@@ -289,7 +312,7 @@ Once again, we don't need to check all possible charts. The precise statement is
 We should also note that we haven't redefined the word ``smooth'' in any conflicting ways. More precisely, we have the following two exercises. 
 
 \begin{exercise}
-	If $U \subseteq \R^m$ is an open subset and $f : U \to \R^n$ is a function, show that $f$ is smooth in the sense of \cref{smooth-multivar} if and only if it is smooth in the sense of \cref{smooth-between-manifolds}.
+	If $U \subseteq \R^m$ is an open subset and $f : U \to \R^n$ is a function, show that $f$ is smooth in the sense of \cref{smooth-multi} if and only if it is smooth in the sense of \cref{smooth-between-manifolds}.
 \end{exercise}
 
 \begin{exercise}
@@ -307,6 +330,8 @@ Finally, we have the following result which tells us that the case when the codo
 \end{proposition}
 
 % TODO: incomplete
+
+\subsection{Paths}
 
 \subsection{Diffeomorphisms}
 
@@ -329,3 +354,5 @@ Finally, we have the following result which tells us that the case when the codo
 \begin{definition}[Local diffeomorphism] \index{local diffeomorphism|see {diffeomorphism, local diffeomorphism}} \index{diffeomorphism!local diffeomorphism}
 	Suppose $X$ and $Y$ are manifolds. A function $f : X \to Y$ is a \emph{local diffeomorphism} at a point $p \in X$ if there exists an open neighborhood $U$ of $p$ such that $f|_U$ is a diffeomorphism $U \to f(U)$. 
 \end{definition}
+
+% TODO: paths

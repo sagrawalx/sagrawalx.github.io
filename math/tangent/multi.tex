@@ -1,8 +1,8 @@
 \chapter{Multivariable derivatives} \label{multi}
 
-In this chapter, we will study derivatives of functions $S \to \R^n$ where $S$ is a subset of $\R^m$. As it turns out, the most important case is when $n = 1$. In other words, the ``multi'' in the name of this chapter (as opposed to the ``single'' in the name of the previous chapter) is really referring to the fact that we might have $m > 1$ (rather than to the fact that we might have $n > 1$). Moreover,  the single variable case is actually quite important for the multivariable case; we'll often use results from \cref{single} to prove their multivariable counterparts. 
+In this chapter, we will study derivatives of functions $S \to \R^n$ where $S$ is a subset of $\R^m$ and $m$ and $n$ are arbitrary positive integers. As it turns out, the most important case is when $n = 1$. In other words, the ``multi'' in the name of this chapter (as opposed to the ``single'' in the name of the previous chapter) is really referring to the fact that we might have multiple \emph{inputs} (ie, $m > 1$), rather than to the fact that we might have multiple outputs (ie, $n > 1$). Moreover,  the single variable case is actually quite important for the multivariable case; we'll often use results from \cref{single} to prove their multivariable counterparts. 
 
-We'll begin by analyzing a particular example to build up some geometric intuition in \cref{multi-introductory-example}, and then proceed with the abstract discussion of multivariable derivatives. 
+We'll begin by analyzing a particular example to build up some geometric intuition in \cref{multi-introductory-example}, before proceeding with the abstract discussion of multivariable derivatives. 
 
 \section{Example} \label{multi-introductory-example}
 
@@ -16,30 +16,211 @@ for our analysis.
 
 First off, let's try to get a solid understanding of the graph of $f$. The graph $\Gamma$ is a subset of $\R^2 \times \R = \R^3$ defined by
 \[ \Gamma = \{ (x, y, z) : z = f(x, y) \} = \{ (x, y, z) : z = x^2  + y^2 \}. \]
-To visualize $\Gamma$, we will repeatedly slice $\Gamma$ along various planes. 
+It's a little hard to visualize in three dimensions immediately, so we will start by looking at two-dimensional slices of $\Gamma$, until we've seen enough slices that we have a sense of the three-dimensional geometry. 
 
-If we consider the slice obtained by setting $x = 0$, we find a parabola $z = y^2$. Similarly, if we consider the slice obtained by setting $x = 1$, we obtain the parabola $z = 1 + y^2$. Fixing $x = 5$, we obtain the parabola $z = 25 + y^2$. In fact, we can see that no matter what value of $x$ we fix, the resulting slice is always a parabola, just translated up from the origin by differing amounts (that amount being $x^2$). 
+If we consider the ``vertical'' slice obtained by setting $x = 0$, we find a parabola $z = y^2$. Similarly, if we consider the slice obtained by setting $x = 1$, we obtain the parabola $z = 1 + y^2$. Fixing $x = 5$, we obtain the parabola $z = 25 + y^2$. In fact, we can see that no matter what value of $x$ we fix, the resulting slice is always a parabola, just translated up from the origin by differing amounts; see \cref{multi-introductory-example-slices}. 
 
-It's also worth considering the ``level sets,'' which are the slices of $\Gamma$ obtained by fixing various values of $z$. When $z = 0$, there is just the single point $x = y = 0$, ie, the origin. Fixing $z = 1$, the slice is given by $1 = x^2 +  y^2$, which is a circle of radius 1. Fixing $z = 17$, the slice is $17 = x^2 + y^2$, which is circle of radius $\sqrt{17}$. In fact, all of the level sets are circles. 
+\begin{figure}[ht]
+	\begin{center}
+		\begin{tikzpicture}
+		\begin{axis}[
+		xmin=-4.1,xmax=4.1,
+		ymin=-1.1,ymax=12.1,
+		xtick={0},
+		ytick={2,4,6,8,10},
+		yticklabels={},
+		axis lines=middle,
+		axis line style=lightgray,
+		width=0.4\textwidth,
+		xlabel={$y$},
+		ylabel={$z$},
+		]
+		\addplot[black,style=thick,<->] expression[domain=-3.4:3.4,samples=25]{x^2}; 
+		
+		\end{axis}
+		\end{tikzpicture}
+		\begin{tikzpicture}
+		\begin{axis}[
+		xmin=-4.1,xmax=4.1,
+		ymin=-1.1,ymax=12.1,
+		xtick={0},
+		ytick={2,4,6,8,10},
+		yticklabels={},
+		axis lines=middle,
+		axis line style=lightgray,
+		width=0.4\textwidth,
+		xlabel={$y$},
+		ylabel={$z$},
+		]
+		\addplot[black,style=thick,<->] expression[domain=-3.25:3.25,samples=25]{x^2+1}; 
+		
+		\end{axis}
+		\end{tikzpicture}
+		\begin{tikzpicture}
+		\begin{axis}[
+		xmin=-4.1,xmax=4.1,
+		ymin=-1.1,ymax=12.1,
+		xtick={0},
+		ytick={2,4,6,8,10},
+		yticklabels={},
+		axis lines=middle,
+		axis line style=lightgray,
+		width=0.4\textwidth,
+		xlabel={$y$},
+		ylabel={$z$},
+		]
+		\addplot[black,style=thick,<->] expression[domain=-2.75:2.75,samples=25]{x^2+4}; 
+		
+		\end{axis}
+		\end{tikzpicture}
+	\end{center}
+	\caption{Here are three vertical slices of the graph of the function $f(x,y) = x^2 + y^2$. From left to right, they are the $x = 0, x = 1$, and $x = 2$ slices, respectively.} \label{multi-introductory-example-slices}
+\end{figure}
 
-Putting these slices together, we see that the graph $\Gamma$ is a ``big parabolic bowl.''
+Slicing ``vertically in the other direction'' gives similar results. If we fix $y = 0$, we end up with the parabola $z = x^2$, and if we fix $y = 2$, we end up with the parabola $z = x^2 + 4$. 
+
+It's also worth considering the ``level sets,'' ie, the ``horizontal'' slices of $\Gamma$ obtained by fixing various values of $z$. When $z = 0$, there is just the single point $x = y = 0$, ie, the origin. Fixing $z = 1$, the slice is given by $1 = x^2 +  y^2$, which is a circle of radius 1. Fixing $z = 17$, the slice is $17 = x^2 + y^2$, which is circle of radius $\sqrt{17}$. In fact, all of the level sets are circles, and these circles form a sort of ``topographic map'' style picture of the graph of $f$. See \cref{multi-introductory-example-level-sets}. 
+
+\begin{figure}[ht]
+	\begin{center}
+		\begin{tikzpicture}
+		\begin{axis}[
+		xmin=-3.5,xmax=3.5,
+		ymin=-3.5,ymax=3.5,
+		xtick={0},
+		ytick={0},
+		xticklabels={},
+		yticklabels={},
+		axis lines=middle,
+		axis line style=lightgray,
+		width=0.75\textwidth,
+		axis equal,
+		xlabel={$x$},
+		ylabel={$y$},
+		]
+		\node[color=black,draw=black,circle,fill,inner sep=1pt] at (axis cs:0,0) {};
+		
+		\addplot[black,style=thick,-] expression[domain=-1:1,samples=100]{sqrt(1-x^2)};
+		\addplot[black,style=thick,-] expression[domain=-1:1,samples=100]{-sqrt(1-x^2)}; 
+		
+		\addplot[gray,-] expression[domain=-sqrt(2):sqrt(2),samples=100]{sqrt(2-x^2)};
+		\addplot[gray,-] expression[domain=-sqrt(2):sqrt(2),samples=100]{-sqrt(2-x^2)}; 
+		
+		\addplot[gray,-] expression[domain=-sqrt(3):sqrt(3),samples=100]{sqrt(3-x^2)};
+		\addplot[gray,-] expression[domain=-sqrt(3):sqrt(3),samples=100]{-sqrt(3-x^2)}; 
+		
+		\addplot[black,style=thick,-] expression[domain=-2:2,samples=100]{sqrt(4-x^2)};
+		\addplot[black,style=thick,-] expression[domain=-2:2,samples=100]{-sqrt(4-x^2)}; 
+		
+		\addplot[gray,-] expression[domain=-sqrt(5):sqrt(5),samples=100]{sqrt(5-x^2)};
+		\addplot[gray,-] expression[domain=-sqrt(5):sqrt(5),samples=100]{-sqrt(5-x^2)}; 
+		
+		\addplot[gray,-] expression[domain=-sqrt(6):sqrt(6),samples=100]{sqrt(6-x^2)};
+		\addplot[gray,-] expression[domain=-sqrt(6):sqrt(6),samples=100]{-sqrt(6-x^2)}; 
+		
+		\addplot[gray,-] expression[domain=-sqrt(7):sqrt(7),samples=100]{sqrt(7-x^2)};
+		\addplot[gray,-] expression[domain=-sqrt(7):sqrt(7),samples=100]{-sqrt(7-x^2)}; 
+		
+		\addplot[gray,-] expression[domain=-sqrt(8):sqrt(8),samples=100]{sqrt(8-x^2)};
+		\addplot[gray,-] expression[domain=-sqrt(8):sqrt(8),samples=100]{-sqrt(8-x^2)}; 
+		
+		\addplot[black,style=thick,-] expression[domain=-3:3,samples=100]{sqrt(9-x^2)};
+		\addplot[black,style=thick,-] expression[domain=-3:3,samples=100]{-sqrt(9-x^2)}; 
+		 
+		\end{axis}
+		\end{tikzpicture}
+	\end{center}
+	\caption{Here is a ``topographic map'' style picture of the function $f(x,y) = x^2 + y^2$. Each circle is a level set of $f$. The innermost circle is the set of points such that $f(x,y) = 1$ (this is a circle of radius 1). The next circle from the inside (drawn in gray) is the set of points such that $f(x,y) = 2$ (this is a circle of radius $\sqrt{2}$). In general, the $k$th circle from the inside is the set of points such that $f(x,y) = k$. It is a circle of radius $\sqrt{k}$, and the circles where $\sqrt{k}$ is an integer are drawn in black rather than gray. The fact that the circles get ``closer together'' as $k$ increases is an indication that the function grows more and more rapidly as we get further from the origin. } \label{multi-introductory-example-level-sets}
+\end{figure}
+
+
+Stitching all of these two-dimensional slices together in our minds, we can see that the graph of $f$ is a ``big parabolic bowl'' inside $\R^3$. See \cref{multi-introductory-example-graph}. 
+
+\begin{figure}[ht]
+	\begin{center}
+		\begin{tikzpicture}
+		\begin{axis}[
+		view={120}{15},
+		axis lines=middle,
+		xlabel={$x$},
+		xtick={0},
+		xmin=-3.1,xmax=3.1,
+		ylabel={$y$},
+		ytick={0},
+		ymin=-3.1,ymax=3.1,
+		zlabel={$z$},
+		ztick={0},
+		zmin=0,zmax=20,
+		width=0.9\textwidth,
+		axis line style=lightgray,
+		]
+		\addplot3[mesh,samples=50,domain=-3:3,colormap/Reds]{x^2+y^2}; 
+		\end{axis}
+		\end{tikzpicture}
+	\end{center}
+	\caption{The graph of the function  $f(x,y) = x^2 + y^2$. ``Vertical'' slices (ie, slices along planes that are parallel to either the $xz$-plane or the $yz$-plane) are parabolas. ``Horizontal slices'' (ie, slices along planes parallel to the $xy$-plane) are circles.} \label{multi-introductory-example-graph}
+\end{figure}
 
 \subsection*{Tangent plane at \texorpdfstring{$a = (2,1)$}{a = (2,1)}}
 
 Now that we understand what the graph of $f$ looks like, let's try to figure out what the ``tangent plane'' $T$ at a point $a = (2,1)$ will look like. Of course, it's a plane inside $\R^3$ that passes through the point $(2, 1, f(2,1)) = (2, 1, 5)$. To specify which plane it actually is, we start by describing some lines that lie on this plane. 
 
-Consider the $y = 1$ slice. We know that the graph of $\Gamma$ along this slice is the parabola $z = x^2 + 1$. So, slicing the tangent plane $T$ along $y = 1$ should yield the tangent line to this function of one variable, which we know how to compute from \cref{single}. The slope of this tangent line is
+Consider the $y = 1$ slice of $\Gamma$, which is a vertical slice containing the point $a$. We know that the graph of $\Gamma$ along this slice is the parabola $z = x^2 + 1$. So, slicing the tangent plane $T$ along $y = 1$ should yield the tangent line to this function of one variable, which we know how to compute from \cref{single}. The slope of this tangent line is
 \[ \left.\frac{d }{d x} f(x, 1) \right|_{x = 2} = 4. \]
-This quantity is called a \emph{partial derivative of $f$}, and will be denoted $(\partial f/\partial x)(a)$.  Thus the tangent line is the line parametrized by
+This quantity is called a \emph{partial derivative of $f$ at $a$}, and will be denoted $(\partial f/\partial x)(a)$.  Thus the tangent line is the line parametrized by
 \[ h \mapsto (2,1,5) + h \cdot (1, 0, 4). \]
-Similarly, we can consider the $x = 2$ slice. We know that the graph $\Gamma$ along this slice is the parabola $z = 4 + y^2$.The slope of the corresponding tangent line is
+
+Similarly, we can consider the $x = 2$ slice, which is another vertical slice containing $a$. We know that the graph $\Gamma$ along this slice is the parabola $z = 4 + y^2$.The slope of the corresponding tangent line is
 \[ \frac{\partial f}{\partial y}(a) = \left.\frac{d f(2, y)}{dy}\right|_{y = 1} = 2. \]
 Thus this tangent line is the line parametrized by
 \[ k \mapsto (2,1,5) + k \cdot (0,1,2). \]
+See \cref{multi-introductory-example-graph-tangent-lines}.
 
-These two lines must uniquely determine the entire plane $T$. One way of describing $T$ that immediately falls out of the parametrizations we've found of the tangent lines is the plane parametrized by
+\begin{figure}[ht]
+	\begin{center}
+		\begin{tikzpicture}
+		\begin{axis}[
+		view={120}{15},
+		axis lines=middle,
+		xlabel={$x$},
+		xtick={0},
+		xmin=-3.1,xmax=3.1,
+		ylabel={$y$},
+		ytick={0},
+		ymin=-3.1,ymax=3.1,
+		zlabel={$z$},
+		ztick={0},
+		zmin=0,zmax=20,
+		width=0.9\textwidth,
+		axis line style=lightgray,
+		]
+		\addplot3[mesh,samples=50,domain=-3:3,colormap/Reds,opacity=0.25]{x^2+y^2}; 
+		\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:2,1,5) {};
+		
+		\addplot3[variable=t,domain=0:2,color=black,thick,->] (2+t,1,5+4*t);
+		\addplot3[variable=t,domain=0:1,color=black] (2+t,1,5);
+		\addplot3[variable=t,domain=0:1,color=black] (3,1,5+4*t);
+		\node[color=black,draw=black,circle,fill,inner sep=0.5pt] at (axis cs:3,1,5) {};
+		\node[color=black,draw=black,circle,fill,inner sep=0.5pt] at (axis cs:3,1,6) {};
+		\node[color=black,draw=black,circle,fill,inner sep=0.5pt] at (axis cs:3,1,7) {};
+		\node[color=black,draw=black,circle,fill,inner sep=0.5pt] at (axis cs:3,1,8) {};
+		
+		\addplot3[variable=t,domain=0:2,color=black,thick,->] (2,1+t,5+2*t);
+		\addplot3[variable=t,domain=0:1,color=black] (2,1+t,5);
+		\addplot3[variable=t,domain=0:1,color=black] (2,2,5+2*t);
+		\node[color=black,draw=black,circle,fill,inner sep=0.5pt] at (axis cs:2,2,5) {};
+		\node[color=black,draw=black,circle,fill,inner sep=0.5pt] at (axis cs:2,2,6) {};
+		\end{axis}
+		\end{tikzpicture}
+	\end{center}
+	\caption{The graph of the function  $f(x,y) = x^2 + y^2$, together with the point $(a, f(a)) = (2,1,5)$ and two of its tangent lines: one parallel to the $xz$-plane, and the other parallel to the $yz$-plane.} \label{multi-introductory-example-graph-tangent-lines}
+\end{figure}
+
+These two tangent lines uniquely determine the entire tangent plane $T$ (ie, $T$ is the plane containing these two lines). One way of describing $T$ that immediately falls out of the parametrizations we've found of the tangent lines is the plane parametrized by
 \[ \begin{bmatrix} h \\ k \end{bmatrix} \mapsto \begin{bmatrix} 2 \\ 1 \\ 5 \end{bmatrix} + \begin{bmatrix} h \\ k \\ 4h + 2k \end{bmatrix}. \]
-The important part of this expression is the bottom entry on the far right, the $4h + 2k$. To see why, consider the function $\R^2 \to \R$ given by $(h, k)  \mapsto 4h + 2k$. This is what we will call the \emph{(total) derivative} of $f$ and denote by $df_a$. Notice that $df_a$ is a linear map $\R^2 \to \R$. Moreover, its graph is a plane passing through the origin that is parallel to $T$. In other words, if we take the graph of $df_a$ and translate it over to the point $(2,1,5)$, we obtain exactly the tangent plane $T$. Speaking more loosely, the derivative $df_a : \R^2 \to \R$ records all of the ``slopey information'' about the tangent plane $T$. 
+The important part of this expression is the bottom entry on the far right, the $4h + 2k$. The function $\R^2 \to \R$ given by $(h, k)  \mapsto 4h + 2k$ is what we will call the \emph{(total) derivative} of $f$ and denote by $df_a$. 
+
+Notice that $df_a$ is a linear map $\R^2 \to \R$. Moreover, its graph is a plane passing through the origin that is parallel to $T$. In other words, if we take the graph of $df_a$ and translate it over to the point $(2,1,5)$, we obtain exactly the tangent plane $T$. Speaking more loosely, the derivative $df_a : \R^2 \to \R$ records all of the ``slopey information'' about the tangent plane $T$. 
 
 Notice moreover that, if $e_1, e_2$ are the standard basis vectors of $\R^2$ (cf. \cref{euclidean}), then
 \[ \begin{aligned} df_a(e_1) &= 4 = \frac{\partial f}{\partial x}(a) \\
@@ -49,20 +230,20 @@ so the standard matrix representation $[df_a]$ (cf. \cref{matrix-representation-
 \subsection*{\texorpdfstring{$df_a$}{dfa} as an approximation}
 
 Consider the function $\epsilon : \R^2 \to \R$ defined by
-\[ v \mapsto |f(a+v)-f(a)-df_a(v)|.  \]
-If $v = (h, k)$, we have
-\[ \epsilon(v) = \epsilon\left( \begin{bmatrix} h \\ k \end{bmatrix} \right) \mapsto |(2+h)^2 + (1+k)^2 - 5 - 4h - 2k| = |h^2 + k^2| = \left|\begin{bmatrix} h \\ k \end{bmatrix} \right|^2 = |v|^2. \]
-Notice that $\epsilon$ gets small rapidly as $v \to 0$. More precisely, notice that
-\[ \lim_{v \to 0} \frac{\epsilon(v)}{|v|} = \lim_{v \to 0} |v| = 0, \]
-so $\epsilon = o(|v|)$ as $v \to 0$. Since $\epsilon$ gets small rapidly, we can say that the function $v \mapsto f(a) + df_a(v)$ is a good approximation of the function $v \mapsto f(a+v)$ for small values of $v$. Said differently, letting $x = a + v$, the function $x \mapsto f(a) + df_a(x-a)$ is a good approximation of $f$ near $a$. 
+\[ (h,k) \mapsto |f(a+(h,k))-f(a)-df_a(h,k)|.  \]
+Then
+\[ \epsilon(h,k) = |(2+h)^2 + (1+k)^2 - 5 - 4h - 2k| = |h^2 + k^2| = |(h,k)|^2. \]
+Notice that $\epsilon$ gets small rapidly as $(h,k) \to 0$. More precisely, notice that
+\[ \lim_{(h,k) \to 0} \frac{\epsilon(h,k)}{|(h,k)|} = \lim_{(h,k) \to 0} |(h,k)| = 0, \]
+so $\epsilon(h,k) = o(|(h,k)|)$ as $(h,k) \to 0$. Since $\epsilon$ gets small rapidly, we can say that the function $(h,k) \mapsto f(a) + df_a(h,k)$ is a good approximation of the function $(h,k) \mapsto f(a+(h,k))$ for small vectors $(h,k)$. Said differently, letting $x = a + (h,k)$, the function $x \mapsto f(a) + df_a(x-a)$ is a good approximation of $f$ near $a$. 
 
-\subsection{Overview}
+\subsection*{Overview}
 
-In what follows, we will turn the above example on its head and \emph{define} the derivative using approximations. In other words, the derivative $df_a$ will be defined to be a linear function which yields a good approximation of $f$ near a point $a$. Then we will prove in \cref{jacobian-matrix} that the partial derivatives can be used to compute the standard matrix representation $df_a$, as we noted in \cref{jacobian-matrix-example} above. 
+In what follows, we will turn the above example on its head and \emph{define} the derivative using approximations. In other words, the derivative $df_a$ will be defined to be a linear function which yields a good approximation of $f$ near a point $a$, and then we will prove in \cref{jacobian-matrix} that partial derivatives (ie, derivatives along various ``slices'') can be used to compute the standard matrix representation of the derivative. 
 
-This might seem a bit ``backwards,'' given our analysis of the example above, but there is a good reason for doing this; it turns out that there are some bizarre functions where partial derivatives make sense, but tangent planes do not (cf. \cref{partials-dont-imply-differentiable} below).
+This might seem a bit ``backwards'' given our analysis of the example above, but there is a good reason for doing this; it turns out that there are some bizarre functions where partial derivatives make sense, but tangent planes do not (cf. \cref{partials-dont-imply-differentiable,directionals-dont-imply-differentiable}).
 
-As you may be able to tell, we'll be using linear algebra heavily in this chapter. We'll also need some facts about the operator norm; I encourage you to at least skim through \cref{operator-norm-basic}. 
+As you may be able to tell, we'll be using linear algebra heavily in this chapter. We'll also need some facts about the operator norm; I encourage you to at least skim through \cref{operator-norm-basic} before proceeding. 
 
 \section{Definition of the derivative}
 
@@ -101,7 +282,7 @@ It turns out that there can exist at most one linear map that has the above prop
 	Sometimes $df_a$ is also called the \emph{total derivative} or the \emph{differential} of $f$ at $a$. 
 \end{definition}
 
-We've now defined the derivative, but it's fairly difficult to use this definition in practice. There are very few examples that can be computed directly from the definition. Here are some.
+We've now defined the derivative, but it's fairly difficult to use this definition in practice. There are only a few examples that can be computed directly from this definition. Here are some.
 
 \begin{exercise} \label{derivative-of-linear}
 	Suppose $\ell : \R^m \to \R^n$ is a linear map. Prove that $d\ell_a = \ell$ for all $a \in \R^m$.  
@@ -121,6 +302,41 @@ We will develop a bit more theory in order to compute derivatives more easily. M
 
 \begin{exercise} \label{differentiable-implies-continuous}
 	If $f : S \to \R^n$ is differentiable at an interior point $a \in S$, show that $f$ must be continuous at $a$. 
+\end{exercise}
+
+Of course, the converse to \cref{differentiable-implies-continuous} is false. We've seen single variable examples; here is a multivariable example. 
+
+\begin{exercise} \label{continuous-not-differentiable}
+	Consider the function $f : \R^2 \to \R$ given by \[ f(x,y) = \sqrt{|xy|}. \]
+	See \cref{sqrt-x-y-graph}. Show that $f$ is continuous at the origin, but that it is not differentiable at the origin. 
+	\begin{hint}
+		If $f$ were differentiable at the origin, then there would exist $a, b \in \R$ such that 
+		\[ \lim_{(h,k) \to 0} \frac{|f(h,k) - ah -  bk|}{|(h,k)|} = 0. \]
+		Think about what happens with this limit when you approach the origin along the line $k = 0$, along the line $h = 0$, and along the line $h = k$.
+	\end{hint}
+	\begin{figure}[ht]
+		\begin{center}
+			\begin{tikzpicture}
+			\begin{axis}[
+			view={120}{15},
+			axis lines=middle,
+			xlabel={$x$},
+			xtick={0},
+			xmin=-5,xmax=5,
+			ylabel={$y$},
+			ytick={0},
+			ymin=-5,ymax=5,
+			zlabel={$z$},
+			ztick={0},
+			zmin=0,zmax=5,
+			width=0.9\textwidth,
+			]
+			\addplot3[mesh, colormap/Reds, samples=50, domain=-4:4]{sqrt(abs(x*y))};
+			\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		\caption{The graph of the function  $f(x,y) = \sqrt{|xy|}$. The graph has four ``leaves,'' which look a bit like the ``leaves'' of the Sydney Opera House, or of the Lotus Temple in New Delhi.} \label{sqrt-x-y-graph}
+	\end{figure}
 \end{exercise}
 
 \section{Computing derivatives}
@@ -156,16 +372,20 @@ The proof of the following is essentially the same as the second proof of the si
 	\[ |g(f(a+h)) - g(f(a)) - dg_{f(a)}(df_a(h))| \leq |dg_{f(a)}(r(h))| + |s(df_a(h)+r(h))|. \]
 	Since $dg_{f(a)}$ is linear and $|r(h)| = o(|h|)$, \cref{chain-rule-details} guarantees that $|dg_{f(a)}(r(h))| = o(|h|)$ also. Thus, by \cref{little-o-vector-space}, it is sufficient to prove that $|s(df_a(h) + r(h))| = o(|h|)$. To do this, define $\eta(k) = |s(k)|/|k|$ and then notice that 
 	\[ \begin{aligned} \frac{|s(df_a(h)+r(h))|}{|h|} &= \eta(df_a(h)+r(h)) \cdot \frac{|df_a(h) + r(h)|}{|h|} \\
-	&\leq \eta(df_a(h) + r(h)) \left( \|df_a\| + \frac{|r(h)|}{|h|} \right). \end{aligned} \]
+	&\leq \eta(df_a(h) + r(h)) \left( \|df_a\| + \frac{|r(h)|}{|h|} \right) \end{aligned} \]
+	where we have used \cref{operator-norm-reformulation} for the inequality.
 	We now take the limit as $h \to 0$. Using the facts that $\eta \circ (df_a + r)$ is continuous at 0 and that $|r(h)| = o(|h|)$, we obtain the result. 
 \end{proof}
 
 \begin{exercise} \label{chain-rule-details}
 	\begin{enumerate}[(a)]
 		\item Prove \cref{rewrite-error}. 
+		
+		\item Do \cref{operator-norm-reformulation} if you haven't already. 
+		
 		\item \label{linear-of-small-is-small} Suppose $r : \R^m \to \R^n$ is a function such that $|r(h)| = o(|h|)$ as $h \to 0$. If $\ell : \R^n \to \R^p$ is linear, prove that $|\ell(r(h))| = o(|h|)$ also.
 		
-		\begin{hint} Even though the operator norm\index{operator norm} does not appear anywhere in the statement of this exercise, you might find the concept useful. In particular, you might consider doing \cref{operator-norm-reformulation} and then using it to prove (\ref{linear-of-small-is-small}). 
+		\begin{hint} Even though the operator norm\index{operator norm} does not appear anywhere in the statement of this exercise, you might find the concept useful (especially \cref{operator-norm-reformulation}). 
 		\end{hint}
 		
 		\item Prove that $\eta \circ (df_a + r)$ is continuous at 0. 
@@ -214,9 +434,9 @@ Recall that we asserted at the beginning of this chapter that the ``multi'' in t
 
 \subsection{Product and quotient rules}
 
-We showed in the previous section that it's enough to understand the $n = 1$ case. So in this section and the next, we'll focus our attention on the $n = 1$ case and try to understand this better. Note that, when $n = 1$, we have more operations available to us; we can multiply and divide such functions. 
+We showed in the previous section that it's enough to understand the $n = 1$ case, ie, the case of real-valued (rather than $\R^n$-valued) functions. So in this section and the next, we'll focus our attention on real-valued functions. 
 
-So let's start off by establishing product and quotient rules. As it turns out, we can actually derive these using the multivariable chain rule \ref{chain-rule}!
+Note that we can combine real-valued functions in more ways than the ones we've already discussed; specifically, we can multiply and divide them. As in \cref{single}, we have product and quotient rules to deal with this. As it turns out, we can actually derive these using the multivariable chain rule \ref{chain-rule}!
 
 \begin{proposition}[Product rule] \label{product-rule} \index{product rule}
 	Suppose $f, g : S \to \R$ are both differentiable at an interior point $a \in S$. Then $fg$ is also differentiable at $a$ and
@@ -235,7 +455,7 @@ So let's start off by establishing product and quotient rules. As it turns out, 
 	where we have used the calculation from \cref{derivative-of-multiplication} for the final step. 
 \end{proof}
 
-\begin{exercise} \label{one-over-rule}
+\begin{exercise} \label{reciprocal-rule}
 	Suppose $f : S \to \R$ is differentiable at an interior point $a \in S$ and that $f(a) \neq 0$. Show that $1/f$ is also differentiable at $a$, and
 	\[ d(1/f)_a = -\frac{df_a}{f(a)^2}.  \]
 	\begin{hint}
@@ -247,34 +467,36 @@ So let's start off by establishing product and quotient rules. As it turns out, 
 	Suppose $f, g : S \to \R$ is differentiable at an interior point $a \in S$ and that $g(a) \neq 0$. Show that $f/g$ is also differentiable at $a$, and that
 	\[ d(f/g)_a = \frac{g(a)df_a - f(a)dg_a}{g(a)^2}. \]
 	\begin{hint}
-		Combine \cref{one-over-rule,product-rule}. 
+		Combine \cref{reciprocal-rule,product-rule}. 
 	\end{hint}
 \end{exercise}
 
-\subsection{Partial derivatives}
+\subsection{Directional and partial derivatives}
 
-\begin{definition}[Partial derivatives] \index{partial derivative}
-	Suppose $f : S \to \R$ is a function and $a \in S$ is an interior point. The \emph{$i$th partial derivative of $f$ at $a$}, denoted $\partial_i f(a)$, is defined to be the limit
-	\[ \lim_{s \to 0} \frac{f(a+se_i) - f(a)}{s}, \]
-	where $e_i$ denotes the $i$th standard basis vector (cf. \cref{euclidean}). If we're using $x$ to denote the input to $f$ and $x_i$ to denote the $i$th component of the input, $\partial_i f(a)$ is sometimes also denoted by one of the following. 
+We now formalize the ``slicing'' we did in \cref{multi-introductory-example}. 
+
+\begin{definition}[Directional derivatives] \index{directional derivative} \index{partial derivative}
+	Suppose $f : S \to \R$ is a function, $a \in S$ is an interior point, and $h \in \R^m$ is a vector. The \emph{directional derivative of $f$ at $a$ with respect to $h$}, denoted $\partial_h f(a)$, is defined to be the limit
+	\[ \lim_{t \to 0} \frac{f(a+th) - f(a)}{t}. \]
+	If $h = e_i$ is the $i$th standard basis vector (cf. \cref{euclidean}), then this is called the \emph{$i$th partial derivative of $f$ at $a$} and denoted $\partial_i f(a)$ (instead of $\partial_{e_i} f(a)$). If we're using $x$ to denote the input to $f$ and $x_i$ to denote the $i$th component of the input, $\partial_i f(a)$ is sometimes also denoted by one of the following. 
 	\[ f_{x_i}(a) \quad \left. \frac{\partial f}{\partial x_i}\right|_{x = a} \quad \left.\frac{\partial}{\partial x_i} f(x)\right|_{x = a} \quad \frac{\partial f}{\partial x_i}(a) \]
 \end{definition}
 
-You may remember from multivariable calculus that partial derivatives behave a great deal like single variable derivatives. The reason for this is the following important remark, which reinterprets the partial derivative as a single variable derivative. 
+You may remember from multivariable calculus that partial derivatives behave a great deal like single variable derivatives. The reason for this is the following important remark, which reinterprets a directional derivative as a single variable derivative. 
 
-\begin{remark} \label{partial-to-single}
-	Consider the function $\xi_i : \R \to \R^m$ given by $\xi_i(s) = a + se_i$. Then 0 is an interior point of $T = \xi_i^{-1}(S) \subseteq \R$, and $f \circ \xi_i$ is a single variable function $T \to \R$. Moreover, we have
-	\[ \partial_i f(a) = (f \circ \xi_i)'(0), \]
-	just by writing out the definition of both sides. 
+\begin{remark} \label{directional-to-single}
+	For $a \in S$ an interior point and $h \in \R^m$, consider the function $\xi : \R \to \R^m$ given by $\xi(t) = a + th$. This is the ``line through $a$ in the direction of the vector $h$.'' Note that $0 = \xi^{-1}(a)$ is an interior point of $\xi^{-1}(S)$ since $a$ is a interior point of $S$. If $f : S \to \R$ is a function, then $f \circ \xi$ is a single variable function $\xi^{-1}(S) \to \R$, and we have
+	\[ \partial_h f(a) = (f \circ \xi)'(0), \]
+	just by writing out the definition of both sides. A bit more geometrically, $f \circ \xi$ can be thought of as the restriction of $f$ to the line passing through $a$ in the direction of $h$. This is a single variable function, and the derivative of this single variable function at 0 is the directional derivative of $f$ at $a$ with respect to $h$. 
 \end{remark}
 
 \begin{example} \label{computing-partials-example}
-	Consider the function $f : \R^2 \to \R$ given by $f(x, y) = \sin(xy^2)$. Fix $(a, b) \in \R^2$ and define $\xi : \R \to \R^2$ by $\xi(s) = (a + s, b)$, as in \cref{partial-to-single}. Then
-	\[ (f \circ \xi)(s) = f(a + s, b) = \sin((a+s)b^2).  \]
+	Consider the function $f : \R^2 \to \R$ given by $f(x, y) = \sin(xy^2)$. Fix $(a, b) \in \R^2$ and define $\xi : \R \to \R^2$ by $\xi(t) = (a + t, b)$. In other words, $\xi$ is the line through $(a, b)$ in the direction of the vector $(1,0)$, as in \cref{directional-to-single}. Then
+	\[ (f \circ \xi)(t) = f(a + t, b) = \sin((a+t)b^2).  \]
 	Then
 	\[ \begin{aligned} \frac{\partial f}{\partial x}(a, b) &= (f \circ \xi)'(0) \\
-	&= \left.\frac{d}{ds} \left(\sin((a+s)b^2) \right) \right|_{s = 0} \\
-	&= \left. b^2\cos((a+s)b^2)\right|_{s = 0} \\
+	&= \left.\frac{d}{dt} \left(\sin((a+t)b^2) \right) \right|_{t = 0} \\
+	&= \left. b^2\cos((a+t)b^2)\right|_{t = 0} \\
 	&= b^2\cos(ab^2). \end{aligned}  \]
 \end{example}
 
@@ -282,83 +504,217 @@ You may remember from multivariable calculus that partial derivatives behave a g
 	With notation as in \cref{computing-partials-example}, compute $(\partial f/\partial y)(a, b)$. 
 \end{exercise}
 
-We can also use \cref{partial-to-single} to prove some partial derivative analogs of results we proved in \cref{single}.
-
-\begin{exercise}[Product rule for partial derivatives] \label{product-rule-partials} \index{product rule}
-	Suppose $f, g : S \to \R$ are functions and $a \in S$ is an interior point such that $\partial_i f(a)$ and $\partial_i g(a)$ both exist. Prove that $\partial_i (fg)(a)$ also exists and that
-	\[ \partial_i (fg)(a) = g(a)\partial_i(f)(a) + f(a) \partial_i g(a). \]
-	\begin{hint} Use \cref{partial-to-single} and the single variable product rule \ref{product-rule-single}. \end{hint}
+\begin{exercise} \label{basic-directional-derivative-properties}
+	Suppose $f : S \to \R$ is a function and $a \in S$ is an interior point. Prove the following. 
+	\begin{enumerate}[(a)]
+		\item $\partial_0 f(a) = 0$.  
+		\item If $\partial_h f(a)$ exists for some $h \in \R^m$, then $\partial_{\lambda h} f(a)$ also exists for all $\lambda \in \R$ and \[ \partial_{\lambda h} f(a) = \lambda \partial_h f(a). \] 
+	\end{enumerate}
 \end{exercise}
 
-\begin{exercise}[Quotient rule for partial derivatives] \label{quotient-rule-partials} \index{quotient rule}
-	Suppose $f, g : S \to \R$ are functions and $a \in S$ is an interior point such that $g(a) \neq 0$ and $\partial_i f(a)$ and $\partial_i g(a)$ both exist. Show that $\partial_i(f/g)(a)$ also exists and 
-	\[ \partial_i(f/g)(a) = \frac{g(a)\partial_i f(a) - f(a)\partial_i g(a)}{g(a)^2}. \]
-	\begin{hint} Use \cref{partial-to-single} and the single variable quotient rule \ref{quotient-rule-single}. \end{hint} 
+We can use \cref{directional-to-single} to prove some directional derivative analogs of results we proved in \cref{single}.
+
+\begin{exercise}[Product rule for directional derivatives] \label{product-rule-directional} \index{product rule}
+	Suppose $f, g : S \to \R$ are functions, $a \in S$ is an interior point, and $h \in \R^m$ is a vector such that $\partial_h f(a)$ and $\partial_h g(a)$ both exist. Prove that $\partial_h (fg)(a)$ also exists and that
+	\[ \partial_h (fg)(a) = g(a)\partial_h(f)(a) + f(a) \partial_h g(a). \]
+	\begin{hint} 
+		Use \cref{directional-to-single} and the single variable product rule \ref{product-rule-single}.
+	\end{hint}
 \end{exercise}
 
-\begin{exercise}[Interior extremum theorem for partial derivatives] \label{interior-extremum-partials} \index{extremum!interior extremum theorem}
-	Suppose $f : S \to \R$ is a function and an interior point $a \in S$ is a local extremum of $f$. Show that, if $\partial_i f(a)$ exists, then $\partial_i f(a) = 0$. \begin{hint} Use \cref{partial-to-single} and the single variable interior extremum theorem \ref{interior-extremum}. \end{hint}
+\begin{exercise}[Quotient rule for directional derivatives] \label{quotient-rule-directional} \index{quotient rule}
+	Suppose $f, g : S \to \R$ are functions, $a \in S$ is an interior point such that $g(a) \neq 0$ and $\partial_h f(a)$ and $\partial_h g(a)$ both exist for some $h \in \R^m$. Show that $\partial_h(f/g)(a)$ also exists and 
+	\[ \partial_h(f/g)(a) = \frac{g(a)\partial_h f(a) - f(a)\partial_h g(a)}{g(a)^2}. \]
+	\begin{hint} Use \cref{directional-to-single} and the single variable quotient rule \ref{quotient-rule-single}. \end{hint} 
 \end{exercise}
 
-As we noted in \cref{single}, the single variable interior extremum theorem \ref{interior-extremum} is false (cf. \cref{interior-extremum-converse-false}). The same is true for the interior extremum theorem for partial derivatives \ref{interior-extremum-partials}, except that there are now even more ways for the converse to fail. Here are two examples to illustrate this.  
+\begin{exercise}[Interior extremum theorem for directional derivatives] \label{interior-extremum-directional} \index{extremum!interior extremum theorem}
+	Suppose $f : S \to \R$ is a function and an interior point $a \in S$ is a local extremum of $f$. Show that, if $\partial_h f(a)$ exists for some $h \in \R^m$, then $\partial_h f(a) = 0$. 
+	\begin{hint} Use \cref{directional-to-single} and the single variable interior extremum theorem \ref{interior-extremum}. \end{hint}
+\end{exercise}
 
-\begin{example}
+Just as the converse to the single variable interior extremum theorem \ref{interior-extremum} is false (cf. \cref{interior-extremum-converse-false}), so too is the converse to the interior extremum theorem for directional derivatives \ref{interior-extremum-directional}, except that there are now even more ways for the converse to fail. Here are two examples to illustrate this.  
+
+\begin{example} \label{saddle}
 	Consider the function $f : \R^2 \to \R$ given by \[ f(x, y) = x^2 - y^2. \]
-	Let $\xi(s) = 0 + se_1 = (s, 0)$ and $\eta(s) = 0 + se_2 = (0, s)$. Then $f \circ \xi$ has a minimum at 0, so $(f \circ \xi)'(0) = (\partial f)/(\partial x)(0) = 0$. Similarly, $f \circ \eta$ has a maximum at 0, so $(f \circ \eta)'(0) = (\partial f)/(\partial y)(0) = 0$ also. But clearly these two facts together mean that 0 cannot be a local extremum of $f$. 
-	
-	% TODO: picture
+	Let $\xi(t) = 0 + te_1 = (t, 0)$. Then $f \circ \xi$ has a minimum at 0, so $(f \circ \xi)'(0) = (\partial f)/(\partial x)(0) = 0$. Similarly, if $\xi(t) = 0 + te_2 = (0, t)$, then $f \circ \xi$ has a maximum at 0, so $(f \circ \xi)'(0) = (\partial f)/(\partial y)(0) = 0$ also. But clearly these two facts together mean that 0 cannot be a local extremum of $f$. See \cref{saddle-graph}. This kind of a point is sometimes called a ``saddle.''\index{saddle}
+	\begin{figure}[ht]
+		\begin{center}
+			\begin{tikzpicture}
+			\begin{axis}[
+			view={120}{15},
+			axis lines=middle,
+			xlabel={$x$},
+			xtick={0},
+			xmin=-5,xmax=5,
+			ylabel={$y$},
+			ytick={0},
+			ymin=-5,ymax=5,
+			zlabel={$z$},
+			ztick={0},
+			zmin=-20,zmax=20,
+			width=0.9\textwidth,
+			]
+			\addplot3[mesh,samples=50,domain=-4:4,
+			colormap/Reds]{x^2-y^2};
+			\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		\caption{The graph of the function  $f(x,y) = x^2 - y^2$. Vertical slices along planes parallel to the $xz$-plane are downwards facing parabolas, while those along planes parallel to the $yz$-plane are upwards facing parabolas.} \label{saddle-graph}
+	\end{figure}
 \end{example}
 
-\begin{exercise}
+\begin{exercise} \label{all-directionals-vanish-but-not-extremum}
 	Consider the function $f : \R^2 \to \R$ given by 
 	\[ f(x, y) = (y- x^2)(y - 3x^2). \]
+	See \cref{all-directionals-vanish-but-not-extremum-graph} for the graph of $f$. 
+	\begin{figure}[ht]
+		\begin{center}
+			\begin{tikzpicture}
+			\begin{axis}[
+			view={120}{15},
+			axis lines=middle,
+			xlabel={$x$},
+			xtick={0},
+			xmin=-1,xmax=1,
+			ylabel={$y$},
+			ytick={0},
+			ymin=-1,ymax=1,
+			zlabel={$z$},
+			ztick={0},
+			zmin=-2,zmax=10,
+			width=0.9\textwidth,
+			]
+			\addplot3[mesh,samples=50,domain=-1:1,
+			colormap/Reds]{(y- x^2)*(y - 3*x^2)};
+			\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		\caption{The graph of the function  $f(x,y) = (y- x^2)(y - 3x^2)$.} \label{all-directionals-vanish-but-not-extremum-graph}
+	\end{figure}
 	\begin{enumerate}[(a)]
-		\item Show that the origin is \emph{not} a local extremum of $f$. \begin{hint} Consider the values of $f$ on points of the form $(0,b)$ and $(a, 2a^2)$ near the origin. \end{hint}
-		\item Show that $f$ restricted to the $x$-axis does have an absolute minimum at the origin. 
-		\item Show that $f$ restricted to the $y$-axis also has an absolute minimum at the origin. 
-		\item Show that $f$ restricted to an arbitrary line through the origin has an absolute minimum at the origin.
+		\item Show that the origin is \emph{not} a local extremum of $f$. \begin{hint} Consider the values of $f$ on points of the form $(0,b)$ and $(a, 2a^2)$ near the origin. You might consider identifying where these points are on the graph depicted in \cref{all-directionals-vanish-but-not-extremum-graph} to get a more visual sense of what's going on. \end{hint}
+		\item Show that $f$ has an absolute minimum when restricted to an arbitrary line through the origin. Conclude that $\partial_h f(a) = 0$ for all $h \in \R^2$. 
 	\end{enumerate}
-
-	% TODO: picture
 \end{exercise}
 
-Now for the main result of this section: partial derivatives is that they help us compute derivatives. Note that we will generalize this result in \cref{jacobian-matrix} below. 
+Now for the main result of this section: partial derivatives help us compute derivatives. Note that we will generalize this result slightly in \cref{jacobian-matrix} below. 
 
-\begin{proposition} \label{differentiable-implies-partials}
-	If $f : S \to \R$ is differentiable at an interior point $a \in S$, then the $i$th partial derivative $\partial_i f(a)$ exists for all $i = 1, \dotsc m$, and the standard matrix representation $[df_a]$ of the linear map $df_a : \R^m \to \R$ is a $1 \times m$ matrix whose $i$th entry is $\partial_i f(a)$. 
+\begin{proposition} \label{differentiable-implies-directionals}
+	If $f : S \to \R$ is differentiable at an interior point $a \in S$ and $h \in \R^m$, then \[ df_a(h) = \partial_h f(a). \]
+	Thus, the standard matrix representation $[df_a]$ of the linear map $df_a : \R^m \to \R$ is a $1 \times m$ matrix whose $i$th entry is $\partial_i f(a)$. 
 	\[ [df_a] = \begin{bmatrix} \partial_1 f(a) & \partial_2 f(a) & \dotsb & \partial_m f(a) \end{bmatrix} \]
 \end{proposition}
 
 \begin{proof}
-	Let $r$ be the ``error in approximation'' function
-	\[ r(h) = f(a+h) - f(a) - df_a(h), \]
-	so that $|r(h)| = o(|h|)$ as $h \to 0$. Letting $h = se_i$, we see that
-	\[ r(se_i) = f(a+se_i) - f(a) - df_a(se_i) = f(a+se_i) - f(a) - s df_a(e_i) \]
+	If $h = 0$, we know that $\partial_0 f(a) = 0$ by \cref{basic-directional-derivative-properties} and that $df_a(0) = 0$ since $df_a$ is linear, so we are done. Thus we can assume that $h$ is nonzero. Let $r$ be the ``error in approximation'' function
+	\[ r(k) = f(a+k) - f(a) - df_a(k), \]
+	so that $|r(k)| = o(|k|)$ as $k \to 0$. Letting $k = th$, we see that
+	\[ r(th) = f(a+th) - f(a) - df_a(th) = f(a+th) - f(a) - t df_a(h) \]
 	by linearity of $df_a$, so
-	\[ \frac{r(se_i)}{s} = \frac{f(a+se_i) - f(a) - sdf_a(e_i)}{s} = \frac{f(a+se_i) - f(a)}{s} - df_a(e_i). \]
+	\[ \frac{r(th)}{t} = \frac{f(a+th) - f(a) - tdf_a(h)}{t} = \frac{f(a+th) - f(a)}{t} - df_a(h). \]
 	Then 
-	\[ \begin{aligned} \lim_{s \to 0} \left| \frac{f(a+se_i) - f(a)}{s} - df_a(e_i) \right| &= \lim_{s \to 0} \left| \frac{r(se_i)}{s} \right| \\&= \lim_{s \to 0} \frac{|r(se_i)|}{|s|} \\
-	&= \lim_{s \to 0} \frac{|r(se_i)|}{|se_i|} \\
-	&= 0 \end{aligned} \]
-	where we used the fact that $|r(h)| = o(|h|)$ as $h \to 0$ for the final step. This tells us that
-	\[ \partial_i f(a) = \lim_{s \to 0} \frac{f(a+se_i) - f(a)}{s} \]
-	exists and equals $df_a(e_i)$. 
+	\[\lim_{t \to 0} \left| \frac{f(a+th) - f(a)}{t} - df_a(h) \right| 
+	= \lim_{t \to 0} \frac{|r(th)|}{|t|} = \lim_{t \to 0} \frac{|r(th)|}{|th|} \cdot |h| = 0 \]
+	where we used the fact that $|r(k)| = o(|k|)$ as $k \to 0$ for the last step. This tells us that $\partial_h f(a)$ exists and equals $df_a(h)$. In particular, applying this with $h = e_i$, we see that $df_a(e_i) = \partial_i f(a)$, which yields the standard matrix representation.  
 \end{proof}
 
 \begin{remark} \label{gradient}
-	If $f : S \to \R$ is differentiable at an interior point $a \in S$, then the vector \[ [df_a]^T = \begin{bmatrix} \partial_1 f(a) \\ \partial_2 f(a) \\ \vdots \\ \partial_m f(a) \end{bmatrix} \in \R^m \]
-	is often called the \emph{gradient} of $f$ at $a$, and is denoted $\nabla f(a)$.\index{gradient} 
+	If $f : S \to \R$ is differentiable at an interior point $a \in S$, the column vector \[ [df_a]^T = \begin{bmatrix} \partial_1 f(a) \\ \partial_2 f(a) \\ \vdots \\ \partial_m f(a) \end{bmatrix} \in \R^m \]
+	is often called the \emph{gradient}\index{gradient}  of $f$ at $a$, and is denoted $\nabla f(a)$. If $h \in \R^m$ is any vector, then 
+	\[ [df_a(h)] = [df_a]h = [df_a]^T \cdot h = \nabla f(a) \cdot h, \]
+	where the $\cdot$ denotes the dot product. 
 \end{remark}
 
-Now for the important caveat: unfortunately, the converse to \cref{differentiable-implies-partials} is \emph{not} true. 
+Now for the important caveat: unfortunately, the converse to \cref{differentiable-implies-directionals} is \emph{not} true: the existence of all partial derivatives is not sufficient to guarantee differentiability. In fact, even the existence of all \emph{directional} derivatives is not sufficient to guarantee differentiability. 
 
 \begin{exercise} \label{partials-dont-imply-differentiable}
 	Consider the function $f : \R^2 \to \R$ defined as follows.
 	\[ f(x, y) = \begin{cases} \dfrac{x y}{x^2 + y^2} &  \text{if } (x, y) \neq 0 \\ 0 & \text{if } (x, y) = 0 \end{cases} \]
-	Show that the partial derivatives of $f$ exist at the origin, but that $f$ is not even continuous at the origin (so it cannot be differentiable, by \cref{differentiable-implies-continuous}). \begin{hint} Approach the origin along the line $x = y$. \end{hint}
+	Show that the partial derivatives of $f$ with respect to $x$ and $y$ both exist at the origin, but that $f$ is not even continuous at the origin (so it cannot be differentiable, by \cref{differentiable-implies-continuous}). 
+	\begin{hint} Approach the origin along the line $x = y$. See \cref{partials-dont-imply-differentiable-graph}. \end{hint}
+	\begin{figure}[ht]
+		\begin{center}
+			\begin{tikzpicture}
+			\begin{axis}[
+			view={120}{15},
+			axis lines=middle,
+			xlabel={$x$},
+			xtick={0},
+			xmin=-1,xmax=1,
+			ylabel={$y$},
+			ytick={0},
+			ymin=-1,ymax=1,
+			zlabel={$z$},
+			ztick={0},
+			zmin=-0.5,zmax=0.75,
+			width=0.6\textwidth,
+			]
+			\addplot3[mesh,samples=50,domain=-1:1,
+			colormap/Reds]{x*y/(x^2+y^2)};
+			\end{axis}
+			\end{tikzpicture}
+			\begin{tikzpicture}
+			\begin{axis}[
+			view={60}{15},
+			axis lines=middle,
+			xlabel={$x$},
+			xtick={0},
+			xmin=-1,xmax=1,
+			ylabel={$y$},
+			ytick={0},
+			ymin=-1,ymax=1,
+			zlabel={$z$},
+			ztick={0},
+			zmin=-0.5,zmax=0.75,
+			width=0.6\textwidth,
+			]
+			\addplot3[mesh,samples=50,domain=-1:1,
+			colormap/Reds]{x*y/(x^2+y^2)};
+			\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		\caption{Two views of the graph of the function $f$ from \cref{partials-dont-imply-differentiable}. The one on the left is obtained from the one on the right by a 90$^\circ$ rotation counterclockwise around the $z$-axis.} \label{partials-dont-imply-differentiable-graph}
+	\end{figure}
 \end{exercise}
 
-Thankfully, this phenomenon is fairly pathological; \cref{continuous-partials} will provide a converse to \cref{differentiable-implies-partials} under fairly mild additional hypotheses. 
+\begin{exercise} \label{directionals-dont-imply-differentiable}
+	Consider the function $f : \R^2 \to \R$ given by
+	\[ f(x,y) = \begin{cases} \dfrac{x^3}{x^2 +y^2} & \text{if } (x, y) \neq 0 \\ 0 & \text{if } (x,y) = 0. \end{cases} \]
+	See \cref{directionals-dont-imply-differentiable-graph}.
+	\begin{figure}[ht]
+		\begin{center}
+			\begin{tikzpicture}
+			\begin{axis}[
+			view={120}{15},
+			axis lines=middle,
+			xlabel={$x$},
+			xtick={0},
+			xmin=-1,xmax=1,
+			ylabel={$y$},
+			ytick={0},
+			ymin=-1,ymax=1,
+			zlabel={$z$},
+			ztick={0},
+			zmin=-0.5,zmax=0.75,
+			width=0.9\textwidth,
+			]
+			\addplot3[mesh,samples=50,domain=-1:1,
+			colormap/Reds]{x^3/(x^2+y^2)};
+			\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		\caption{The graph of the function  $f$ from \cref{directionals-dont-imply-differentiable}.} \label{directionals-dont-imply-differentiable-graph}
+	\end{figure} 
+	Show that $f$ is continuous and that $\partial_h f(0)$ exists for all nonzero $h \in \R^2$, but that $f$ is not differentiable at the origin. 
+	\begin{hint}
+		To show that $f$ is not differentiable at the origin, suppose it were differentiable, and then find a vector $h \in \R^2$ such that 
+		\[ [df_0]h \neq \partial_h f(0), \]
+		which contradicts \cref{differentiable-implies-directionals}. 
+	\end{hint}
+\end{exercise}
+
+Thankfully, this phenomenon is fairly pathological; \cref{continuous-partials} will provide a converse to \cref{differentiable-implies-directionals} under fairly mild additional hypotheses. 
 
 \subsection{Jacobian matrix}
 
@@ -368,24 +724,25 @@ Thankfully, this phenomenon is fairly pathological; \cref{continuous-partials} w
 	\partial_1 f_2(a) & \partial_2 f_2(a) & \dotsb & \partial_m f_2(a) \\
 	\vdots & \vdots & \ddots & \vdots \\ 
 	\partial_1 f_n(a) & \partial_2 f_n(a) & \dotsb & \partial_m f_n(a) \end{bmatrix} \]
-	Note that \cref{differentiable-by-components,differentiable-implies-partials} tell us that all of these partial derivatives exist. 
+	Note that \cref{differentiable-by-components,differentiable-implies-directionals} tell us that all of these partial derivatives exist. 
 \end{definition}
 
 \begin{theorem} \label{jacobian-matrix}
-	If $f : S \to \R^m$ is differentiable at an interior point $a \in S$, then $[df_a] = f'(a)$. 
+	If $f : S \to \R^n$ is differentiable at an interior point $a \in S$, then \[ df_a(h) = \begin{bmatrix} \partial_h f_1(a) \\ \cdots \\ \partial_h f_n(a) \end{bmatrix}. \]
+	In particular, $[df_a] = f'(a)$. 
 \end{theorem}
 
 \begin{exercise}
-	Prove \cref{jacobian-matrix}. \begin{hint} Use \cref{differentiable-by-components,differentiable-implies-partials}. \end{hint}
+	Prove \cref{jacobian-matrix}. \begin{hint} Use \cref{differentiable-by-components,differentiable-implies-directionals}. \end{hint}
 \end{exercise}
 
-Using \cref{jacobian-matrix}, many of the rules for differentiation we've seen acquire forms we may be more familiar with from single variable calculus. For example, since composition of linear maps corresponds to multiplication of the corresponding matrix representations, the chain rule \ref{chain-rule} states that 
+Using \cref{jacobian-matrix}, many of the rules for differentiation we've seen acquire can be rewritten in forms that you might be more familiar with from single variable calculus. For example, since composition of linear maps corresponds to multiplication of the corresponding matrix representations, the chain rule \ref{chain-rule} states that 
 \[ (g \circ f)'(a) = [d(g \circ f)_a] = [dg_{f(a)} \circ df_a] = [dg_{f(a)}] [df_a] = g'(f(a)) f'(a). \]
-Though the equality $(g \circ f)'(a) = g'(f(a)) f'(a)$ looks superficially identical to the equality from the single variable chain rule \ref{chain-rule-single}, it's worth noticing that the terms in this multivariable version are \emph{matrices}. In particular, this means that that order of the multiplication $g'(f(a))f'(a)$ cannot be interchanged, whereas this was a non-issue in the single variable case. 
+Though the equality $(g \circ f)'(a) = g'(f(a)) f'(a)$ looks superficially identical to the equality from the single variable chain rule \ref{chain-rule-single}, it's worth noticing that the terms in this multivariable version are \emph{matrices}. In particular, this means that that order of the multiplication $g'(f(a))f'(a)$ cannot be interchanged (this was a non-issue in the single variable case). 
 
 Similarly, the matrix version of the multivariable product rule \ref{product-rule} states that 
-\[ (fg)'(a) = g(a)f'(a) + g(a)f'(a), \]
-which again looks superficially identical to the single variable product rule \ref{product-rule-single}.  
+\[ (fg)'(a) = g(a)f'(a) + f(a)g'(a), \]
+which again looks superficially identical to the single variable product rule \ref{product-rule-single}, but again, it is worth noting that $g(a)$ and $f(a)$ are scalars, whereas $f'(a)$ and $g'(a)$ are matrices. 
 
 \subsection{Rank of a differentiable map}
 
@@ -422,11 +779,13 @@ There are lots of relationships between these notions, depending on how $m$ comp
 	A map $f$ being immersive or submersive at an interior point $a \in S$ is always defined as it is above, and critical points are always defined to be the opposite of regular points. But some mathematicians use a different definition of regularity: they define a point to be regular if $\rank_a(f) = n$, so that, by definition, it's \emph{always} true (for all $m, n$) that $f$ is a submersion at $a$ if and only if $a$ is a regular point of $f$. If $m \geq n$, there's no difference between these alternative definitions and our definitions. But, if $m < n$, there is a difference: these other mathematicians would say that all points are critical in this case, but that isn't true for us. So, if you see the words ``regular point'' and ``critical point'' in another text and it's possible that $m < n$, it's worth looking back to make sure you know what the author means!
 \end{caution}
 
+\begin{unimportantremark}
+	While we're on the topic of terminology, it may be worth mentioning that the word ``\'etale'' is not commonly used in real analysis differential geometry; in fact, as far as I'm aware, there is no word in these fields that means that the derivative is invertible. But the word ``\'etale'' is used in algebraic geometry to mean that the derivative is invertible, so I decided to import this word from algebraic geometry. That said, if you do go on to study algebraic geometry at some point, it's worth noting the algebraic geometry words corresponding to ``immersive'' and ``submersive'' are ``unramified'' and ``smooth,'' respectively. This usage of ``smooth'' in algebraic geometry is unrelated to the real analysis and differential geometry usage of smooth. 
+\end{unimportantremark}
+
 \begin{example} \label{polar-map}
 
-Let $f : \R^2 \to \R^2$ be the map
-\[ f(r,\theta) = (r\cos\theta, r\sin\theta). \]
-See \cref{polar-map-picture}. 
+Let $f : \R^2 \to \R^2$ be the map $f(r,\theta) = (r\cos\theta, r\sin\theta)$. See \cref{polar-map-picture}. 
 \begin{figure}
 	\begin{center}
 		\begin{tikzpicture}
@@ -447,8 +806,8 @@ See \cref{polar-map-picture}.
 		\addplot[red,thick,->] expression[domain=-1.5:3.5,samples=2]{1.57};
 		\node[color=red,draw=red,circle,fill,inner sep=2pt] at (axis cs:2,1.57) {}; 
 		
-		\addplot[blue,thick,->] expression[domain=-1.5:3.5,samples=2]{1.57/2};
-		\node[color=blue,draw=blue,circle,fill,inner sep=2pt] at (axis cs:1,1.57/2) {}; 
+		\addplot[black,thick,->] expression[domain=-1.5:3.5,samples=2]{1.57/2};
+		\node[color=black,draw=blue,circle,fill,inner sep=2pt] at (axis cs:1,1.57/2) {}; 
 		
 		\end{axis}
 		\end{tikzpicture}\hspace{1cm}
@@ -469,8 +828,8 @@ See \cref{polar-map-picture}.
 		\addplot +[mark=none,red,thick,->] coordinates {(0, -1.5) (0, 3.5)};
 		\node[color=red,draw=red,circle,fill,inner sep=2pt] at (axis cs:0,2) {}; 
 		
-		\addplot[blue,thick,->] expression[domain=-1.5:3.5,samples=2]{x};
-		\node[color=blue,draw=blue,circle,fill,inner sep=2pt] at (axis cs:0.707,0.707) {}; 
+		\addplot[black,thick,->] expression[domain=-1.5:3.5,samples=2]{x};
+		\node[color=black,draw=blue,circle,fill,inner sep=2pt] at (axis cs:0.707,0.707) {}; 
 		\end{axis}
 		\end{tikzpicture}
 		
@@ -495,9 +854,9 @@ See \cref{polar-map-picture}.
 		\node[color=red,draw=red,circle,fill,inner sep=2pt] at (axis cs:1,-1.57) {}; 
 		\node[color=red,draw=red,circle,fill,inner sep=2pt] at (axis cs:1,1.57) {}; 
 		
-		\addplot +[mark=none,blue,thick] coordinates {(2, 0) (2,1.57)};
-		\node[color=blue,draw=blue,circle,fill,inner sep=2pt] at (axis cs:2,0) {}; 
-		\node[color=white,draw=blue,circle,fill,inner sep=2pt] at (axis cs:2,1.57) {}; 
+		\addplot +[mark=none,black,thick] coordinates {(2, 0) (2,1.57)};
+		\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:2,0) {}; 
+		\node[color=white,draw=black,circle,fill,inner sep=2pt] at (axis cs:2,1.57) {}; 
 		
 		\end{axis}
 		\end{tikzpicture}\hspace{1cm}
@@ -519,14 +878,15 @@ See \cref{polar-map-picture}.
 		\addplot[red,thick] expression[domain=-1:1,samples=100]{-sqrt(1-x^2)}; 
 		\node[color=red,draw=red,circle,fill,inner sep=2pt] at (axis cs:-1,0) {}; 
 		
-		\addplot[blue,thick] expression[domain=-2:2,samples=100]{sqrt(4-x^2)}; 
-		\node[color=blue,draw=blue,circle,fill,inner sep=2pt] at (axis cs:2,0) {}; 
-		\node[color=white,draw=blue,circle,fill,inner sep=2pt] at (axis cs:-2,0) {}; 
+		\addplot[black,thick] expression[domain=-2:2,samples=100]{sqrt(4-x^2)}; 
+		\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:2,0) {}; 
+		\node[color=white,draw=black,circle,fill,inner sep=2pt] at (axis cs:-2,0) {}; 
 		\end{axis}
 		\end{tikzpicture}
 	\end{center}
 	\caption{The function $f(r, \theta) = (r\cos\theta, r\sin\theta)$ of \cref{polar-map} transforms the pictures on the right to the pictures on the left.}  \label{polar-map-picture}
 \end{figure}
+
 We compute partial derivatives. 
 \[ \frac{\partial f_1}{\partial r} = \cos \theta \quad \frac{\partial f_2}{\partial r} = \sin \theta \quad \frac{\partial f_1}{\partial \theta} = -r\sin \theta \quad \frac{\partial f_2}{\partial \theta} = r\cos \theta.  \]
 Thus
@@ -536,10 +896,10 @@ Since this is a square matrix, $df_{(r, \theta)}$ has non-maximal rank if and on
 so the critical locus\index{critical point!critical locus} (ie, the set of all critical points) of $f$ is the vertical line $r = 0$, and $f$ is \'etale away from this line. 
 \end{example}
 
-\begin{exercise} \label{cusp}
+\begin{exercise}[Parametrization of a cusp] \label{cusp}
 	Consider the function $f : \R \to \R^2$ defined by
 	\[ f(x) = (x^2, x^3). \]
-	See \cref{cusp-graph} for a picture of the image of $f$. 
+	See \cref{cusp-graph} for a picture of the image of $f$. The ``pointy'' part at the origin is sometimes called a cusp\index{cusp}.
 	\begin{figure}
 			\begin{center}
 			\begin{tikzpicture}
@@ -555,7 +915,7 @@ so the critical locus\index{critical point!critical locus} (ie, the set of all c
 			width=0.75\textwidth
 			]
 			\addplot[black,style=thick,->] expression[domain=0:1.5,samples=50]{ sqrt(x^3) };
-			\addplot[black,style=thick,->] expression[domain=0:1.5,samples=50]{ -sqrt(x^3) }; 
+			\addplot[black,style=thick,-] expression[domain=0:1.5,samples=50]{ -sqrt(x^3) }; 
 			\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:0,0) {}; 
 			
 			\end{axis}
@@ -563,15 +923,14 @@ so the critical locus\index{critical point!critical locus} (ie, the set of all c
 		\end{center}
 	\caption{The image of the function $f(x) = (x^2, x^3)$. The origin is $f(0)$.}  \label{cusp-graph}
 	\end{figure}
-	Calculate $f'(x)$ for all $x \in \R$. Then show that 0 is a critical point of $f$, and that $f$ is immersive away from 0.
-	Loosely speaking, the fact that 0 is a critical point of $f$ corresponds geometrically to the fact that $f(0)$ is a ``pointy'' cusp\index{cusp}. 
+	Calculate $f'(a)$ for all $a \in \R$. Then show that 0 is a critical point of $f$, and that $f$ is immersive away from 0.
 \end{exercise}
 
 
-\begin{exercise} \label{node}
+\begin{exercise}[Parametrization of a node] \label{node}
 	Consider the function $f : \R \to \R^2$ defined by
 	\[ f(x) = (x^2-1, x^3-x). \]
-	See \cref{node-graph} for a picture of the image of $f$. 
+	See \cref{node-graph} for a picture of the image of $f$. The self-intersecting part at the origin is called a node\index{node}. 
 	\begin{figure}
 		\begin{center}
 			\begin{tikzpicture}
@@ -587,7 +946,7 @@ so the critical locus\index{critical point!critical locus} (ie, the set of all c
 			width=0.75\textwidth
 			]
 			\addplot[black,style=thick,->] expression[domain=-1:0.9,samples=500]{ sqrt(x^2*(x+1)) };
-			\addplot[black,style=thick,->] expression[domain=-1:0.9,samples=500]{ - sqrt(x^2*(x+1)) }; 
+			\addplot[black,style=thick,-] expression[domain=-1:0.9,samples=500]{ - sqrt(x^2*(x+1)) }; 
 			\node[label={$f(\pm1)$},color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:0,0) {}; 
 			\node[label={120:$f(0)$},color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:-1,0) {}; 
 			
@@ -596,20 +955,32 @@ so the critical locus\index{critical point!critical locus} (ie, the set of all c
 		\end{center}
 		\caption{The image of the function $f(x) = (x^2-1, x^3-x)$. We have $f(0) = (-1,0)$ and $f(\pm 1) = (0,0)$.}  \label{node-graph}
 	\end{figure}
-	Calculate $f'(x)$ for all $x \in \R$, and show that $f$ is immersive everywhere.
+	Calculate $f'(a)$ for all $a \in \R$, and show that $f$ is immersive everywhere.
 \end{exercise}
 
 \begin{exercise}
 	Show that an interior point $a \in S$ is a critical point\index{critical point} of $f : S \to \R$ if and only if $\partial_i f(a) = 0$ for all $i$. 
 \end{exercise}
 
-\section{Levels of differentiability}
+\begin{exercise} \label{sphere-fibration}
+	Let $f : \R^3 \to \R$ be the function
+	\[ f(x,y,z) = x^2 + y^2 + z^2 \]
+	Calculate $f'(a)$ for all $a \in \R^3$, and find all critical points of $f$. Also, describe the level sets of $f$. In other words, for fixed $r \in \R$, describe the set of all $a \in \R^3$ such that $f(a) = r$. 
+\end{exercise}
 
-Throughout this section, $U$ denotes an open subset of $\R^m$.
+\begin{exercise}
+	Find the critical points of the function $f : \R^3 \to \R^2$ given by \[ f(x,y,z) = (xy, z). \]
+\end{exercise}
 
-\subsection{Differentiable functions} 
+\begin{exercise}
+	Find the critical points of the function $f : \R^3 \to \R^2$ given by \[ f(x,y,z) = (x+y^2, y+z^2). \]
+\end{exercise}
 
-\begin{definition}[Differentiability] \index{differentiable} \index{derivative}
+\section{Differentiable functions}
+
+Throughout this section, $U$ denotes an open subset of $\R^m$. In this section, we'll discuss functions that are differentiable at every point in $U$. 
+
+\begin{definition} \index{differentiable} \index{derivative}
 	A function $f : U \to \R^n$ is \emph{differentiable} if it is differentiable at every $a \in U$. The \emph{derivative} of $f$, denoted $df$, is the function $U \to \mathscr{L}(\R^m, \R^n)$ given by $a \mapsto df_a$. Sometimes the function $df$ is also called the \emph{total derivative} or the \emph{differential} of $f$. 
 \end{definition}
 
@@ -618,7 +989,9 @@ Throughout this section, $U$ denotes an open subset of $\R^m$.
 	\[ f_{x_i} \quad \frac{\partial f}{\partial x_i} \]
 \end{definition}
 
-Here is a multivariable generalization of \cref{constant-iff-derivative-zero-single}. In fact, we will use te single variable version to prove this multivariable version. 
+\subsection{Vanishing derivatives}
+
+Here is a multivariable generalization of \cref{constant-iff-derivative-zero-single}. In fact, we will use the single variable version to prove this multivariable version. 
 
 \begin{proposition} \label{constant-iff-derivative-zero}
 	Suppose $B$ is an open ball and $f : B \to \R^n$ is a differentiable function. Then $df = 0$ if and only if $f$ is constant\index{constant function}.  
@@ -640,11 +1013,251 @@ Here is a multivariable generalization of \cref{constant-iff-derivative-zero-sin
 	\end{enumerate}
 \end{exercise}
 
+In fact, it's not necessary that the domain be an open ball in order for the conclusion of \cref{constant-iff-derivative-zero} to be true. Before getting to the general statement, here is a useful intuition-building exercise. 
+
+\begin{exercise}
+	Let $U$ denote $\R^2$ minus the non-negative $x$-axis. In other words,
+	\[ U = \R^2 \setminus \{ (x, 0) \in \R^2 : x \geq 0 \}. \]
+	Suppose $f : U \to \R$ is a differentiable function such that $df = 0$. Show that $f$ is constant. 
+	\begin{hint}
+		In the proof of \cref{constant-iff-derivative-zero}, we used the fact that any pair of points in an open ball could be joined by a straight line path that stayed entirely within the open ball. It's not true that any pair of points in $U$ can be joined by a straight line path that stays entirely within $U$. But any pair of points in $U$ \emph{can} be joined by \emph{two} straight line paths...
+	\end{hint}
+\end{exercise}
+
+\begin{exercise} \label{constant-iff-derivative-zero-connected}
+	Let $U$ be a connected\footnotemark\ open subset of $\R^m$.
+	\begin{enumerate}[(a)]
+		\item Show that, for any $a, b \in U$, there exists a finite sequence of points \[ a = a_0, a_1, \dotsc, a_k = b \] such that the image of the straight line path between $a_i$ and $a_{i+1}$ is entirely contained in $U$ for all $i$. 
+		
+		\begin{hint}
+			For $a \in U$, consider the set $S$ of all points $a' \in U$ such that there exists a finite sequence of points $a = a_0, a_1, \dotsc, a_k = a'$ such that the image of the straight line path connecting $a_i$ to $a_{i+1}$ is entirely contained in $U$ for all $i$. Show that $S$ is open, and also that the complement of $S$ is open. Since $U$ is connected and $S$ is nonempty, it must be that the complement of $S$ is empty.  
+		\end{hint}
+		
+		\item If $f : U \to \R^n$ is differentiable, show that $df = 0$ if and only if $f$ is constant. 
+	\end{enumerate}
+\end{exercise}
+
+\footnotetext{Recall that a metric space $X$ is \emph{connected}\index{connected} if it cannot be written as the union of two disjoint open subsets.}
+
+\subsection{Bounded derivative}
+
+Here is a multivariable version of \cref{bounded-derivative}. Again, we will actually use the single variable version to prove the multivariable version. 
+
+\begin{proposition} \label{bounded-derivative-multi}
+	Suppose $B$ is an open ball and $f : B \to \R^n$ is a differentiable function. Suppose further that there exists a constant $M$ such that $\|df_x\| \leq M$ for all $x \in B$. Then
+	\[ |f(b) - f(a)| \leq \sqrt{n} M |b-a| \]
+	for all $a, b \in B$. 
+\end{proposition}
+
+\begin{proof}
+	Let us suppose first that $n = 1$. If $a = b$, there is nothing to do, so we can assume that $a \neq b$. Let \[ h = \frac{b-a}{|b-a|}, \]
+	ie, $h$ is the vector pointing from $a$ towards $b$ normalized to unit length. Consider the function $\xi(t) = a + th$ as in \cref{directional-to-single}. Then
+	\[ (f \circ \xi)'(t) = \partial_h f(a + th) = df_{a + th}(h)  \]
+	by \cref{jacobian-matrix}, which means that 
+	\[ |(f \circ \xi)'(t)| = |df_{a + th}(h)| \leq \|df_{a + th}\| |h| \leq M|h| = M, \]
+	where we used the fact that $h$ has unit length for the final step. Notice that $\xi(0) = a$ and $\xi(|b-a|) =  b$, so by applying \cref{bounded-derivative} to $f \circ \xi$, we see that 
+	\[ |f(b) - f(a)| \leq M||b-a| - 0| = M|b-a|.  \]
+	This proves the statement for $n = 1$, and using this we can now prove the statement for general $n$. Note that $df_{j,a} = \pi_j \circ df_a$ and $\|\pi_j\| = 1$ so \[ \|df_{j,a}\| \leq \|\pi_j\| \|df_a\| \leq M \]
+	by \cref{operator-norm-submultiplicative}. Applying \cref{bounded-derivative-multi} to the component functions $f_j$, so 
+	\[ |f_j(b) - f_j(a)| \leq M|b-a| \]
+	for all $a, b \in B$ and all $j = 1, \dotsc, n$, which means that
+	\[ |f(b) - f(a)|_\mx \leq M|b-a|, \]
+	where $|-|_\mx$ denotes the max norm (cf.  \cref{euclidean}). But then
+	\[ |f(b)-f(a)| \leq \sqrt{n} |f(b)-f(a)|_\mx \leq \sqrt{n}M |b-a|, \]
+	where we have used \cref{max-l2} for the first step.
+\end{proof}
+
+\begin{exercise}
+	\begin{enumerate}[(a)]
+		\item The statement of the \cref{bounded-derivative-multi} requires that the domain of $f$ is an open ball. Where in the proof is this used?
+		\item Prove that $\|\pi_j\| = 1$. 
+		\item If you haven't already done it, do \cref{operator-norm-submultiplicative}. 
+	\end{enumerate} 
+\end{exercise}
+
+\begin{comment}
+	Let us first show that it is enough to prove the lemma for $n = 1$. Indeed, if it is true for $n = 1$, then it is true for all of the component functions $f_j : B \to \R$, so
+	\[ |f_j(b) - f_j(a)| \leq mM|b-a| \]
+	for all $a, b \in B$, which means that
+	\[ |f(b) - f(a)|_\mx \leq mM|b-a|, \]
+	where $|-|_\mx$ denotes the max norm defined in \cref{euclidean}. But then
+	\[ |f(b)-f(a)| \leq \sqrt{n} |f(b)-f(a)|_\mx \leq m\sqrt{n}M |b-a|, \]
+	where we have used \cref{max-l2} for the first step. 
+	
+	So we can assume that $n = 1$. Set $h = b-a = (h_1, \dotsc, h_m)$, and then define the following list of vectors. 
+	\[ \begin{aligned} 
+	a_0 &= a \\
+	a_1 &= a + (h_1, 0, 0 \dotsc, 0, 0) \\
+	a_2 &= a + (h_1, h_2, 0, \dotsc, 0, 0) \\
+	&\enspace \vdots \\
+	a_{m-1} &= (a_1, a_2, a_3, \dotsc, a_{m-1}, 0) \\
+	a_m &= (a_1, a_2, a_3, \dotsc, a_{m-1}, a_m) = b \end{aligned} \]
+	Notice that
+	\[ f(b) - f(a) = \sum_{i = 1}^m (f(a_i ) - f(a_{i-1})) \]
+	We're now going to restrict $f$ to the zigzag path from $a$ to $b$ made by the points $a_0, \dotsc, a_m$, looking at each segment in turn. The function
+	\[ t \mapsto f(a_{i-1} + te_i) \]
+	is a single variable function whose derivative at a point $t$ is given by $\partial_i f(a_{i-1} + te_i)$, which we know is bounded in absolute value by $M$. Since this function has the value $f(a_{i-1})$ at $t = 0$ and $f(a_i)$ at $t = s_i$, \cref{bounded-derivative} gives us the first step of the following chain. 
+	\[ |f(a_i) - f(a_{i-1})| \leq M|h_i|. \]
+	But then, using \cref{max-l2}, we have
+	\[ |f(a_i) - f(a_{i-1})| \leq M|h_i| \leq M|h|_\mx \leq M|h| = M|b-a| \]
+	so we have
+	\[ |f(b) - f(a)| = \left| \sum_{i = 1}^m f(a_i) - f(a_{i-1}) \right| \leq \sum_{i = 1}^m |f(a_i) - f(a_{i-1})| \leq mM|b-a|. \qedhere \]
+\end{comment}
+
+\subsection{Inverse function theorem}
+
+The inverse function theorem is an extremely important foundational result. It comes up frequently in real analysis and differential geometry, and has inspired significant developments in algebraic geometry and number theory. 
+
+\begin{definition}
+	A function $f : U \to \R^n$ is \emph{\'etale} if it is differentiable and \'etale at every $a \in U$. 
+\end{definition}
+
+\begin{theorem}[Inverse function theorem] \label{inverse-function-theorem}
+	Suppose $f : U \to \R^n$ is \'etale. Then $f$ is open. Moreover, for every $a \in U$, there exists an open neighborhood $V$ of $a$ such that $f|_V$ is injective, the inverse function $(f|_V)^{-1}$ is differentiable, and
+	\[ d((f|_V)^{-1})_y = (df_{(f|_V)^{-1}(y)})^{-1} \]
+	for all $y  \in f(V)$. 
+\end{theorem}
+
+The proof will require an extremely lengthy discussion. For the time being, let us content ourselves with thinking about the statement of the theorem. 
+
+First off, the statement invites comparison with the single variable version we established in  \cref{inverse-function-theorem-single}. If $U$ is an open subset of $\R$, then $f : U \to \R$ is \'etale if and only if it is differentiable and $f'(x)$ never vanishes, so the hypotheses of the theorem above and the single variable version match up exactly. The multivariable version above asserts that $f$ must be open and ``locally injective.'' On the other hand, the single variable version asserts that $f$ is strictly monotone; and we've seen that strict monotonicity implies that $f$ is open and injective (cf. \cref{strictly-monotone-iff-injective,strictly-monotone-implies-open}). The assertion on the differentiability of the inverse and the formula for the derivative of the inverse match up exactly.  
+
+Thus, the single variable version is a stronger statement (when it applies) because it guarantees full injectivity everywhere on the domain, whereas the multivariable version above only guarantees ``local injectivity'' near every point of the domain. This is the only difference between the two statements, and here is an example to show that we cannot expect full injectivity in the multivariable setting.  
+
+\begin{exercise} \label{locally-injective-not-injective}
+	Consider the function $f : \R^2 \to \R^2$ given by 
+	\[ f(x,y) = (e^x \cos y, e^x \sin y). \]
+	\begin{enumerate}[(a)]
+		\item Compute $df$ and verify that $f$ is \'etale. 
+		\item Show that $f$ is \emph{not} injective. In fact, for any point $(a,b) \in \R^2$, show that there exist infinitely many other points in the domain with the same image as $(a,b)$.
+		\item Find an open neighborhood $V$ of the origin such that $f|_V$ is injective. 
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+	Recall the function $f(x) = x + 2x^2 \sin(1/x)$ that we saw in \cref{positive-not-monotone}. As we've seen, $f'(0) = 1$ but $f$ is not monotone (hence not injective, by \cref{strictly-monotone-iff-injective}) on any open neighborhood of $0$. Explain why this does not violate the inverse function theorem. In other words, show that $f$ is not \'etale on any open neighborhood of 0.
+\end{exercise}
+
+\subsection{Proof of the inverse function theorem \starred}
+
+This section is devoted to the proof of the inverse function theorem \ref{inverse-function-theorem}. It's a long and arduous proof.
+
+\subsubsection*{Differentiability of the local inverse}
+
+As it turns out, once a local inverse has been constructed, proving that it is differentiable is not terribly difficult. The proof of this part is similar in spirit to the single variable version (cf. the proof of \cref{inverse-function-theorem-single}).
+
+\begin{proposition} \label{inverse-differentiable}
+	Suppose $f : U \to \R^n$ is differentiable, open, and injective. Then $f^{-1}$ is differentiable and \[ d(f^{-1})_y = (df_{f^{-1}(y)})^{-1} \] for all $y \in f(U)$. 
+\end{proposition}
+
+\begin{proof}
+	Fix $x \in U$ and $y = f(x)$. Let
+	\[ s(k) = f^{-1}(y + k) - f^{-1}(k) - df_x^{-1}(k). \]
+	We want to show that $|s(k)| = o(|k|)$ as $k \to 0$. In fact, since $df_x$ is an invertible linear map, it is sufficient to show that $|df_x(s(k))| = o(|k|)$ (cf. \cref{chain-rule-details} part  (\ref{linear-of-small-is-small})). 
+	
+	Define \[ h(k) = f^{-1}(y + k) - f^{-1}(y). \]
+	Since $f$ is injective, we see that $h(k) = 0$ if and only if $k = 0$. Moreover, $f^{-1}$ is continuous since $f$ is open, which implies that $h$ is also continuous. Now by rewriting $s$ in terms of $h$, we have the following. 
+	\[ \begin{aligned} 
+	s(k) &= h(k) - df_x^{-1}(k) \\
+	df_x(s(k)) &= df_x(h(k)) - k \\
+	&= df_x(h(k)) - y + k + y \\
+	&= df_x(h(k)) - f(x+h(k)) + f(x). \end{aligned} \]
+	In other words, if we consider the ``error in approximation'' function
+	\[ r(h) = f(x+h) - f(x) - df_x(h), \]
+	then
+	\[ df_x(s(k)) = -r(h(k)) \]
+	for all $k$. This means that, for all $k \neq 0$, we have
+	\[ \frac{|df_x(s(k))|}{|k|} = \frac{|r(h(k))|}{|k|} = \frac{|r(h(k))|}{|h(k)|} \cdot \frac{|h(k)|}{|k|} \]
+	where we have used the fact that $h(k) \neq 0$ since $k \neq 0$. Now, since $|r(h)| = o(|h|)$ as $h \to 0$ and since the function $h$ is continuous at $k = 0$, we have that 
+	\[ \lim_{k \to 0} \frac{|r(h(k))|}{|h(k)|} = 0. \]
+	Thus it is sufficient to show that there exists a constant $M$ such that $|h(k)| \leq M|k|$ for all sufficiently small values of $k$.
+	
+	Since $|r(h)| = o(|h|)$ as $h \to 0$, there exists $\delta > 0$ such that $|r(h)| \leq |h|$ for all $|h| < \delta$. Then we have 
+	\[ \begin{aligned} |h| &\geq |r(h)| = |f(x+h) - f(x) - df_x(h)| \\ &\geq |df_x(h)| - |f(x+h) - f(a)| \\
+	&\geq \frac{|h|}{\|df_x^{-1}\|} - |f(x+h)-f(x)| \end{aligned} \]
+	where we have used \cref{operator-norm-inverse} for the final step. After rearranging, this becomes
+	\[ |h| \leq \left(\frac{1}{\|df_x^{-1}\|} - 1\right)^{-1} |f(x+h) - f(x)|. \] 
+	Set
+	\[ M = \left(\frac{1}{\|df_x^{-1}\|} - 1\right)^{-1}. \]
+	Now if $h = h(k)$, we have $f(x+h(k)) - f(x) = k$, so the last inequality displayed above reads
+	\[ |h(k)| \leq M |f(x+h(k)) - f(x)| = M|k|. \qedhere \]
+\end{proof}
+
+\subsubsection*{Reductions}
+
+For the remainder of this proof, $f : U \to \R^n$ will denote an \'etale map. In particular, this means that $m = n$, ie, that $U$ is an open subset of $\R^n$. We'll closely follow  \href{https://terrytao.wordpress.com/2011/09/12/the-inverse-function-theorem-for-everywhere-differentiable-maps/#more-5298}{Terry Tao's exposition} of Saint Raymond's proof \cite{saint-raymond}. Let's begin by making a couple of helpful definitions. 
+
+\begin{definition}
+	For any point $a \in U$, we make the following definitions. 
+	\begin{itemize}
+		\item We say that $f$ is \emph{locally injective at $a$} if there exists an open neighborhood $V$ of $a$ such that $f|_V$ is injective. 
+		\item We say that $f$ is \emph{locally surjective at $a$} if $f(a)$ is an interior point of $f(V)$ for every neighborhood $V$ of $a$. 
+	\end{itemize}
+\end{definition}
+
+\begin{exercise}
+	Show that $f$ is open if and only if $f$ is locally surjective at every $a \in U$. 
+\end{exercise}
+
+In other words, to prove the inverse function theorem, we want to show that $f$ is locally injective and locally surjective at every point $a \in U$. We can replace $f$ with the function $x \mapsto f(x+a)$ in order to assume that $a = 0$. Then, we can replace $f$ with the function $x \mapsto f(x) - f(0)$ in order to assume that $f(0) = 0$. Finally, since $df_0$ is invertible, we can replace $f$ with $df_0^{-1} \circ f$ in order to assume that $df_0 = \id$. 
+
+\begin{exercise} \label{wlog-inverse-function-theorem}
+	Check that you understand the ``we can assume''s in the previous paragraph. More precisely, suppose $a \in U$, $\ell : \R^n \to \R^n$ is a linear map, $\alpha_0 \in \R^n$, and $\alpha : \R^n \to \R^n$ is the function \[ \alpha(x) = \ell(x) + \alpha_0. \]
+	Prove the following facts. 
+	\begin{enumerate}[(a)]
+		\item Show that $\alpha$ is bijective, and calculate $d\alpha$ and $d\alpha^{-1}$. 
+		\item Let $\tilde{f} = \alpha \circ f$. 
+		\begin{itemize}
+			\item Show that $f$ is \'etale if and only if $\tilde{f}$ is \'etale. 
+			\item Show that $f$ is locally injective at $a$ if and only if $\tilde{f}$ is locally injective at $a$. 
+			\item Show that $f$ is locally surjective at $a$ if and only if $\tilde{f}$ is locally surjective at $a$.
+		\end{itemize}  
+		\item Let $\tilde{f} : \alpha^{-1}(U) \to \R^n$ be the composite $\tilde{f} = f \circ \alpha$. 
+			\begin{itemize}
+				\item Show that $f$ is \'etale if and only if $\tilde{f}$ is \'etale. 
+				\item Show that $f$ is locally injective at $a$ if and only if $\tilde{f}$ is locally injective at $\alpha^{-1}(a)$. 
+				\item Show that $f$ is locally surjective at $a$ if and only if $\tilde{f}$ is locally surjective at $\alpha^{-1}(a)$.
+			\end{itemize} 
+		\item Figure out what $\ell$ and $\alpha_0$ are for each of the ``we can assume''s of the previous paragraph. 
+	\end{enumerate}
+\end{exercise}
+
+In other words, we want to show that, if $f$ is an \'etale map such that $f(0) = 0$ and $df_0 = \id$, then $f$ is locally injective and locally surjective at 0. Local surjectivity is easier; local injectivity is very, very difficult. 
+
+\subsubsection*{Local surjectivity}
+
+Since $f(0) = 0$ and $df_0 = \id$, we have $|f(h) - h| = o(|h|)$ as $h \to 0$ by the definition of the derivative, so there exists $\delta > 0$ such that 
+\begin{equation} \label{inverse-function-theorem-eqn1} |f(h)-h| \leq |h|/2 \end{equation}
+for all $|h| < \delta$. Replacing $f$ with the function $x \mapsto f(x/\delta)$, we can assume without loss of generality that $\delta = 1$ (cf. \cref{wlog-inverse-function-theorem}). 
+
+We now claim that for all $0 < r < 1$, we have
+\begin{equation} \label{inverse-function-theorem-locally-surjective} B(0,r/3) \subseteq f(B(0,r)). \end{equation}
+Suppose $y \in B(0, r/3)$ and consider the function $\sigma : \overline{B}(0,r) \to \R$ given by $\sigma(x) = |f(x)-y|$. Since $\overline{B}(0,r)$ is compact, this function must attain its minimum at a point $x \in \overline{B}(0,r)$. 
+
+In fact, we must have $x \in B(0,r)$. Suppose for a contradiction that $|x| = r$. Then by \cref{inverse-function-theorem-eqn1} we would have
+\[ r/2 \geq |f(x)-x| \geq ||x| - |f(x)|| = r - |f(x)| > 2r/3, \]
+which is evidently contradiction. In other words, $x$ is an interior point of the domain of $\sigma$. 
+
+Now we prove that we must have $f(x) = y$. Suppose for a contradiction that $f(x) \neq y$. Then the euclidean norm function $|-| : \R^n \to \R$ is differentiable at $f(x) - y$, which means that $\sigma$ is differentiable at $x$ by the chain rule \cref{chain-rule}, and
+\[ d\sigma_x = d(|-|)_{f(x)-y} \circ df_x. \]
+Since the interior point $x$ is the absolute minimum of $\sigma$, the interior extremum theorem \ref{interior-extremum-directional} and \cref{jacobian-matrix} tell us that $d\sigma_x = 0$, which means that $df_x(\R^n) \subseteq \ker(d(|-|)_{f(x)-y})$. This is a contradiction: since $df_x$ is invertible, we have $\dim df_x(\R^n) = n$, whereas $\dim(\ker(d(|-|)_{f(x)-y})) = n-1$ by the rank-nullity theorem. 
+
+We have now proved \cref{inverse-function-theorem-locally-surjective}. Notice that this implies that $f$ is locally surjective at 0. Indeed, any open neighborhood $V$ of 0 contains an open ball of the form $B(0,r)$ for $0 < r < 1$, and then \[ f(V) \supseteq f(B(0,r)) \supseteq B(0,r/3), \] so $f(0) = 0$ is an interior point of $f(V)$. 
+
+\subsubsection*{Local injectivity}
+	
+{\color{red} INCOMPLETE}
+% TODO: incomplete
+
+\section{\texorpdfstring{$C^k$}{Ck} hierarchy}
+
+Throughout this section, $U$ denotes an open subset of $\R^m$.
+
 \subsection{Continuous differentiability}
 
 \subsubsection*{Continuity of partials}
 
-The following theorem is the promised sort-of-converse to \cref{differentiable-implies-partials}. Recall from \cref{partials-dont-imply-differentiable} above that $\partial_i f$ existing for all $i$ is \emph{not} sufficient to guarantee differentiability. But, insisting that $\partial_i f$ exist \emph{and be continuous} turns out to be enough to guarantee differentiability of $f$. The proof is harder than you might expect. 
+The following theorem is the promised sort-of-converse to \cref{differentiable-implies-directionals}. Recall from \cref{partials-dont-imply-differentiable} above that $\partial_i f$ existing for all $i$ is \emph{not} sufficient to guarantee differentiability. But, insisting that $\partial_i f$ exist \emph{and be continuous} turns out to be enough to guarantee differentiability of $f$. The proof is harder than you might expect. 
 
 \begin{theorem} \label{continuous-partials}
 	Suppose $f : U \to \R$ is a function such that the partial derivatives $\partial_i f : U \to \R$ exist for all $i = 1 , \dotsc m$. If $a \in U$ is a point such that $\partial_i f$ is continuous at $a$ for all $i$, then $f$ is differentiable at $a$. 
@@ -734,7 +1347,13 @@ The following theorem is the promised sort-of-converse to \cref{differentiable-i
 	We say that $f$ is \emph{continuously differentiable} if $\partial_i f_j : U \to \R$ is continuous for all $i = 1, \dotsc, m$ and $j = 1, \dotsc, n$. \Cref{continuous-partials} guarantees that such a function is, in particular, differentiable. 
 \end{definition}
 
-Before proceeding with a discussion of properties of continuously differentiable functions, it is useful to have a non-example in mind. Here is a multivariable version of \cref{power-times-sine}. 
+As we saw in the single variable case, continuously differentiable functions have lots of nice properties. For example, recall the calculation we did in \cref{polar-map} showing that the critical locus was a line inside $\R^2$, which is a closed subset. This fact is a special case of the following multivariable version of \cref{critical-locus-closed-singlevar}.
+
+\begin{exercise} \label{critical-locus-closed}
+	Suppose $f : U \to \R^n$ is continuously differentiable. Show that the ``critical locus'' of $f$ (ie, the set of all critical points of $f$) is a closed subset of $U$.
+\end{exercise}
+
+Here is a multivariable version of the differentiable-but-not-continuously-differentiable function from \cref{power-times-sine}. 
 
 \begin{exercise}
 	Let $f : \R^2 \to \R$ denote the following function.
@@ -745,70 +1364,17 @@ Before proceeding with a discussion of properties of continuously differentiable
 	Show that $f$ is differentiable, but not continuously differentiable. 
 \end{exercise}
 
-As we saw in the single variable case, continuously differentiable functions have lots of nice properties. For example, recall the calculation we did in \cref{polar-map} showing that the critical locus was a line inside $\R^2$. Here is a generalization of this observation. This also generalizes \cref{critical-locus-closed-singlevar}.
-
-\begin{exercise} \label{critical-locus-closed}
-	Suppose $f : U \to \R^n$ is continuously differentiable. Show that the ``critical locus'' of $f$ (ie, the set of all critical points of $f$) is a closed subset of $U$.
-\end{exercise}
-
-Another important property of continuously differentiable functions is the following.
-
-\begin{theorem}[Inverse function theorem] \label{inverse-function-theorem} \index{inverse function} \index{inverse function!inverse function theorem}
-	Suppose $f : U \to \R^n$ is continuously differentiable, and suppose that $f$ is \'etale\index{etale@\'etale} at a point $a \in U$. Then there exists an open neighborhood $V$ of $a$ inside $U$ such that the restriction $f|_{V}$ of $f$ to $V$ is injective, $f(V)$ is an open subset of $\R^n$, and the inverse function $(f|_V)^{-1} : f(V) \to V$ is continuously differentiable. 
-\end{theorem}
-
-Note that, if $f$ is \'etale at $a$, then $df_a : \R^m \to \R^n$ is an isomorphism, so we must have $m = n$. The inverse function theorem can be regarded as a multivariable version of \cref{inverse-derivative}, but its proof is much more difficult. We defer the proof to a starred section below. Here are some applications. 
-
-\begin{exercise} \label{etale-implies-open}
-	Suppose $f :  U \to \R^n$ is continuously differentiably and \'etale\index{etale@\'etale} at all points in $U$. Show that $f$ is an open map\index{open!open map} (in other words, show that, if $V$ is an open subset of $U$, then $f(V)$ is an open subset of $\R^n$). 
-\end{exercise}
-
 \begin{exercise} \label{no-continously-differentiable-bijection}
 	You might recall proving at some point in a previous class that $\R^2$ and $\R$ have the same cardinality: in other words, that there exists a bijection $f : \R^2 \to \R$. Show that any such bijection cannot be continuously differentiable. 
 	
 	\begin{hint}
-		Suppose for a contradition that $f : \R^2 \to \R$ is a continuously differentiable bijection. Let $U$ be an open subset of $\R^2$ such that $\partial_1 f(x) \neq 0$ for all $x \in U$, and then consider the function $g : U \to \R^2$ given by $g(x_1, x_2) = (f(x_1, x_2), x_2)$. 
+		Suppose for a contradiction that $f : \R^2 \to \R$ is a continuously differentiable bijection.  Let $U$ be an open subset of $\R^2$ such that $\partial_1 f(x) \neq 0$ for all $x \in U$, and then consider the function $g : U \to \R^2$ given by $g(x_1, x_2) = (f(x_1, x_2), x_2)$. 
 	\end{hint}
 \end{exercise}
 
-\subsubsection*{Proof of the inverse function theorem \starred}
+\begin{comment}
 
-There are many proofs of the inverse function theorem, but none of them are particularly easy. The proof we give here is the one from \cite[chapter 2]{spivak_calculus}. It begins with the following multivariable version of \cref{bounded-derivative} (and again, we will actually use the single variable version to prove the multivariable version). 
-
-\begin{lemma} \label{bounded-derivative-multi}
-	Suppose $B$ is an open ball and $f : B \to \R^n$ is a differentiable function. Suppose further that there exists a constant $M$ such that $|\partial_i f_j(x)| \leq M$ for all $i = 1, \dotsc, m$ and $j = 1, \dotsc, n$. Then
-	\[ |f(b) - f(a)| \leq m\sqrt{n} M |b-a| \]
-	for all $a, b \in B$. 
-\end{lemma}
-
-\begin{proof}
-	Let us first show that it is enough to prove the lemma for $n = 1$. Indeed, if it is true for $n = 1$, then it is true for all of the component functions $f_j : B \to \R$, so
-	\[ |f_j(b) - f_j(a)| \leq mM|b-a| \]
-	for all $a, b \in B$, which means that
-	\[ |f(b) - f(a)|_\mx \leq mM|b-a|, \]
-	where $|-|_\mx$ denotes the max norm defined in \cref{euclidean}. But then
-	\[ |f(b)-f(a)| \leq \sqrt{n} |f(b)-f(a)|_\mx \leq m\sqrt{n}M |b-a|, \]
-	where we have used \cref{max-l2} for the first step. 
-	
-	So we can assume that $n = 1$. The idea of this proof is very similar to the idea we used in the proof of  \cref{continuous-partials}. Set $h = b-a = (h_1, \dotsc, h_m)$, and then define the following list of vectors. 
-	\[ \begin{aligned} 
-	a_0 &= a \\
-	a_1 &= a + (h_1, 0, 0 \dotsc, 0, 0) \\
-	a_2 &= a + (h_1, h_2, 0, \dotsc, 0, 0) \\
-	&\enspace \vdots \\
-	a_{m-1} &= (a_1, a_2, a_3, \dotsc, a_{m-1}, 0) \\
-	a_m &= (a_1, a_2, a_3, \dotsc, a_{m-1}, a_m) = b \end{aligned} \]
-	Notice that
-	\[ f(b) - f(a) = \sum_{i = 1}^m (f(a_i ) - f(a_{i-1})) \]
-	We're now going to restrict $f$ to the zigzag path from $a$ to $b$ made by the points $a_0, \dotsc, a_m$, looking at each segment in turn, just as we did in the proof of \cref{continuous-partials}. The function
-	\[ t \mapsto f(a_{i-1} + te_i) \]
-	is a single variable function whose derivative at a point $t$ is given by $\partial_i f(a_{i-1} + te_i)$, which we know is bounded in absolute value by $M$. Since this function has the value $f(a_{i-1})$ at $t = 0$ and $f(a_i)$ at $t = s_i$, \cref{bounded-derivative} gives us the first step of the following chain. 
-	\[ |f(a_i) - f(a_{i-1})| \leq M|h_i|. \]
-	But then, using \cref{max-l2}, we have
-	\[ |f(a_i) - f(a_{i-1})| \leq M|h_i| \leq M|h|_\mx \leq M|h| = M|b-a| \]
-	so we have
-	\[ |f(b) - f(a)| = \left| \sum_{i = 1}^m f(a_i) - f(a_{i-1}) \right| \leq \sum_{i = 1}^m |f(a_i) - f(a_{i-1})| \leq mM|b-a|. \qedhere \]
-\end{proof}
+There are many proofs of the inverse function theorem, but none of them are particularly easy. The proof we give here is the one from \cite[chapter 2]{spivak_calculus}. 
 
 % TODO: FIX NOTATION
 
@@ -871,7 +1437,7 @@ There are many proofs of the inverse function theorem, but none of them are part
 	\[ g(x) = |y - f(x)|^2 \geq d^2 \]
 	whereas
 	\[ g(a) = |y - f(a)|^2 < d^2/4, \]
-	so $g(a) < g(x)$, which contradicts the fact that $x$ is the minimum of $g$. Thus $x \in \bar{B} \setminus \partial B = B$. By the interior extremum theorem \ref{interior-extremum-partials}\index{extremum!interior extremum theorem}, we know that
+	so $g(a) < g(x)$, which contradicts the fact that $x$ is the minimum of $g$. Thus $x \in \bar{B} \setminus \partial B = B$. By the interior extremum theorem \ref{interior-extremum-directional}\index{extremum!interior extremum theorem}, we know that
 	\[ 0 = \partial_i g(x) = \sum_{j = 1}^n 2(\pi_j(y) - f_j(x)) \partial_i f_j(x) = \pi_i \left( 2 f'(x)^T (y - f(x)) \right) \]
 	for all $i$. Here, $f'(x)^T$ denotes the transpose of the Jacobian matrix. This means that $f'(x)^T(y - f(x)) = 0$. Now recall that $df_x$ is an invertible linear map using property (2). Thus $f'(x)$ is an invertible matrix, so $f'(x)^T$ is also an invertible matrix, so we must have $y - f(x) = 0$. In other words, $y = f(x)$. This proves the existence assertion of the claim.
 	
@@ -936,17 +1502,16 @@ There are many proofs of the inverse function theorem, but none of them are part
 		\[ \inf\{ d(a,x) : x \in K \} > 0. \]
 	\end{enumerate}
 \end{exercise}
+\end{comment}
 
-\begin{lemma} \label{c1-stable-inversion-weak}
-	Suppose $f : U \to \R^n$ is continuously differentiable, injective, and that $f(U)$ is open in $\R^n$. If $f^{-1} : f(U) \to U$ is differentiable, then it is continuously differentiable. 
-\end{lemma} 
+\begin{proposition} \label{c1-stable-inversion}
+	Suppose $f : U \to \R^n$ is continuously differentiable, open, and injective. Then $f^{-1}$ is also continuously differentiable. 
+\end{proposition} 
 
 \begin{proof}
-	Since $f^{-1} \circ f = \id$, we have  
-	\[ \id = d(\id)_x = d(f^{-1} \circ f)_x = d(f^{-1})_{f(x)} df_x \]
-	for all $x \in U$, where we used \cref{derivative-of-linear} for the first step and the chain rule \cref{chain-rule} for the last. This implies, in particular, that $df_x$ is an invertible linear map. Said differently, for any $y \in f(U)$, we have
-	\[ d(f^{-1})_y = (df_{f^{-1}(y)})^{-1}. \]
-	Taking standard matrix representations, we get
+	We know from \cref{inverse-differentiable} that $f^{-1}$ is differentiable and that  
+	\[ d(f^{-1})_y = (df_{f^{-1}(y)})^{-1} \]
+	for all $y \in U$. Taking standard matrix representations, we get
 	\[ [d(f^{-1})_y] = [(df_{f^{-1}(y)})^{-1}] = [df_{f^{-1}(y)}]^{-1}.  \]
 	By \cref{jacobian-matrix}, the $(j,i)$-entry on the left hand side is $\partial_i (f^{-1})_j(y)$, so this equality says that $\partial_i (f^{-1})_j : f(U) \to \R$ is equal to the following composite. 
 	\[ \begin{tikzcd} f(U) \ar{r}{f^{-1}} & U \ar{rr}{x \mapsto [df_x]} & & \GL_n \ar{rr}{A \mapsto A^{-1}} & & \GL_n \ar{rr}{(j,i)-\text{entry}} & & \R \end{tikzcd} \]
@@ -954,9 +1519,9 @@ There are many proofs of the inverse function theorem, but none of them are part
 	\cref{differentiable-implies-continuous,matrix-inversion-homeomorphism}), so we conclude that $\partial_i (f^{-1})_j$ is continuous.  
 \end{proof}
 
-\subsubsection*{Continuous differentiability via the operator norm \starred}
+\subsubsection*{Continuous differentiability and continuity of the derivative \starred}
 
-For this section, we will need to make substantial use of the operator norm.\index{operator norm} This might make it a bit challenging for those who have not used the operator norm before, but the results contained in this section are also not terribly important. The only reason it is included is because \cref{continuously-differentiable} is aesthetically a rather satisfying statement. 
+For this section, we will need to make substantial use of the continuity properties of the operator norm.\index{operator norm} This might make it a bit challenging for those who have not used the operator norm before, but the results contained in this section are also not terribly important. The only reason this section is included is because \cref{continuously-differentiable} is aesthetically a rather satisfying statement which can sometimes streamline proofs. 
 
 \begin{lemma} \label{continuously-differentiable-by-components}
 	Suppose $f : U \to \R^n$ is differentiable. Then $df : U \to \mathscr{L}(\R^m, \R^n)$ is continuous if and only if $df_j : \mathscr{L}(\R^m, \R)$ is continuous for all $j = 1, \dotsc, n$. 
@@ -982,11 +1547,9 @@ For this section, we will need to make substantial use of the operator norm.\ind
 \end{proposition}
 
 \begin{proof}
-	Thanks to \cref{continuously-differentiable-by-components}, we can assume without loss of generality that $n = 1$. If $f$ is differentiable, then \cref{differentiable-implies-partials} tells us that $\partial_i f = df(e_i)$. In other words, the following diagram commutes.
+	Thanks to \cref{continuously-differentiable-by-components}, we can assume without loss of generality that $n = 1$. If $f$ is differentiable, then \cref{differentiable-implies-directionals} tells us that $\partial_i f = df(e_i)$. In other words, the following diagram commutes.
 	\[ \begin{tikzcd} U \ar{r}{df} \ar[bend right]{dr}[swap]{\partial_i f} & \mathscr{L}(\R^m, \R) \ar{d}{\text{``evaluate at $e_i$''}} \\ & \R \end{tikzcd} \]
-	The ``evaluate at $e_i$'' map is continuous by \cref{evaluation-continuous}. So, if $f$ is continuously differentiable (ie, if $df$ is continuous), then $\partial_i f$ must also be continuous, as it is the composite of two continuous functions. 
-	
-	Conversely, suppose that all of the partial derivatives $\partial_i f$ exist and are continuous. Then \cref{continuous-partials} guarantees that $f$ is differentiable. The final step is to show that $df : U \to \mathscr{L}(\R^m, \R)$ is continuous; This is left for you to check; see \cref{continuously-differentiable-details} below. 
+	The ``evaluate at $e_i$'' map is continuous by \cref{evaluation-continuous}. So, if $df$ is continuous, then $\partial_i f$ must also be continuous, as it is the composite of two continuous functions. The converse is left as an exercise; see \cref{continuously-differentiable-details} below. 
 \end{proof}
 
 \begin{exercise} \label{continuously-differentiable-details}
@@ -998,11 +1561,11 @@ For this section, we will need to make substantial use of the operator norm.\ind
 \end{exercise}
 
 \begin{remark}
-	This reformulation of continuous differentiability is often convenient in proofs. For example, in the proof of \cref{c1-stable-inversion-weak}, we calculated that
+	This reformulation of continuous differentiability is often convenient in proofs. For example, in the proof of \cref{c1-stable-inversion}, we calculated that
 	\[ d(f^{-1})_y = (df_{f^{-1}(y)})^{-1}. \]
 	This says that the $d(f^{-1}) = \text{inversion} \circ df \circ f^{-1}$. 
 	\[ \begin{tikzcd} f(U) \ar{d}[swap]{f^{-1}} \ar{r}{d(f^{-1})} & \GL(\R^n) \\ U \ar{r}{df} & \GL(\R^n) \ar{u}[swap]{\text{inversion}}  \end{tikzcd} \]
-	We know that $f^{-1}$ is continuous by \cref{differentiable-implies-continuous}, that $df$ is continuous by \cref{continuously-differentiable}, and inversion is continuous by \cref{linear-map-inversion-homeomorphism}. Thus $d(f^{-1})$ is continuous, so \cref{continuously-differentiable} says that $f^{-1}$ is continuously differentiable. 
+	We know that $f^{-1}$ is continuous; $df$ is continuous by \cref{continuously-differentiable}, and inversion is continuous by \cref{linear-map-inversion-homeomorphism}. Thus $d(f^{-1})$ is continuous, so \cref{continuously-differentiable} implies that $f^{-1}$ is continuously differentiable. 
 \end{remark}
 
 \subsection{\texorpdfstring{$C^k$}{Ck} functions}
@@ -1033,9 +1596,9 @@ By definition, $f : U \to \R^n$ is $C^1$ if and only if it is continuously diffe
 \end{exercise}
 
 \begin{exercise} \label{ck-stable-inversion}
-	Suppose $f : U \to \R^n$ is a $C^k$ injection for some $k \geq 1$ and that $f$ is \'etale at every $a \in U$. Show that $f^{-1} : f(U) \to \R^n$ is also $C^k$. 
+	Suppose $f : U \to \R^n$ is \'etale, injective, and $C^k$ for some $k \geq 1$. Show that $f^{-1}$ is also $C^k$. 
 	\begin{hint}
-		This is a multivariable version of \cref{ck-stable-inversion-single}, and can be proved by using a similar induction. Some ingredients you might think about combining are the inverse function theorem \ref{inverse-function-theorem} and  \cref{c1-stable-inversion-weak,matrix-inversion-homeomorphism} (and their proofs). 
+		This is a multivariable version of \cref{ck-stable-inversion-single}, and can be proved by using a similar induction. Some ingredients you might think about combining are the inverse function theorem \ref{inverse-function-theorem} and  \cref{c1-stable-inversion,matrix-inversion-homeomorphism} (and their proofs). 
 	\end{hint}
 \end{exercise}
 
@@ -1052,31 +1615,31 @@ By definition, $f : U \to \R^n$ is $C^1$ if and only if it is continuously diffe
 
 \begin{proof}
 	Observe that
-	\[ \begin{aligned} \partial_{j,i} f(a) &= \lim_{h_j \to 0} \frac{\partial_i f(a + h_j e_j) - \partial_i f(a)}{h_j} \\
-	&= \lim_{h_j \to 0} \frac{ \displaystyle \lim_{h_i \to 0} \frac{f(a + h_i e_i + h_j e_j) - f(a + h_j e_j)}{h_i} - \lim_{h_i \to  0} \frac{f(a + h_i e_i) - f(a)}{h_i} }{h_j} \\
-	&= \lim_{h_j \to 0} \lim_{h_i \to 0} \frac{f(a + h_i e_i + h_j e_j) - f(a+h_i e_i) - f(a + h_j e_j) + f(a)}{h_i h_j}. \end{aligned} \]
+	\[ \begin{aligned} \partial_{j,i} f(a) &= \lim_{t_j \to 0} \frac{\partial_i f(a + t_j e_j) - \partial_i f(a)}{t_j} \\
+	&= \lim_{t_j \to 0} \frac{ \displaystyle \lim_{t_i \to 0} \frac{f(a + h_i e_i + t_j e_j) - f(a + t_j e_j)}{t_i} - \lim_{t_i \to  0} \frac{f(a + t_i e_i) - f(a)}{t_i} }{t_j} \\
+	&= \lim_{t_j \to 0} \lim_{t_i \to 0} \frac{f(a + t_i e_i + t_j e_j) - f(a+t_i e_i) - f(a + t_j e_j) + f(a)}{t_i t_j}. \end{aligned} \]
 	Notice that, if we unwind the definition of $\partial_{i,j} f(a)$ in the same way, we end up taking a double limit of the same expression, but the order of the limits is interchanged. In other words, if we define
-	\[ \sigma(h_i, h_j) = \frac{f(a + h_i e_i + h_j e_j) - f(a+h_i e_i) - f(a + h_j e_j) + f(a)}{h_i h_j},  \]
+	\[ \sigma(t_i, t_j) = \frac{f(a + t_i e_i + t_j e_j) - f(a+t_i e_i) - f(a + t_j e_j) + f(a)}{t_i t_j},  \]
 	then
-	\[ \partial_{j,i} f(a) = \lim_{h_j \to 0} \lim_{h_i \to 0} \sigma(h_i, h_j) \quad \text{ whereas } \quad \partial_{i,j}f(a) = \lim_{h_i \to 0} \lim_{h_j \to 0} \sigma(h_i, h_j). \]
+	\[ \partial_{j,i} f(a) = \lim_{t_j \to 0} \lim_{t_i \to 0} \sigma(t_i, t_j) \quad \text{ whereas } \quad \partial_{i,j}f(a) = \lim_{t_i \to 0} \lim_{t_j \to 0} \sigma(t_i, t_j). \]
 	So, to prove the theorem, it is sufficient to prove that
-	\[ \partial_{j,i} f(a) = \lim_{h \to 0} \sigma(h,h). \]
+	\[ \partial_{j,i} f(a) = \lim_{h \to 0} \sigma(t,t). \]
 	
-	Fix a nonzero real number $h$ and consider the function
-	\[ \alpha(t) = f(a + te_i + he_j) - f(a + te_i). \]
+	Fix a nonzero real number $t$ and consider the function
+	\[ \alpha(s) = f(a + se_i + te_j) - f(a + se_i). \]
 	Notice that
-	\[ \sigma(h,h) = \frac{\alpha(h)-\alpha(0)}{h^2}. \]
-	Observe that $\alpha$ is differentiable, with \[ \alpha'(t) = \partial_i f(a + te_i + he_j) - \partial_i f(a + te_i). \]
-	Applying the mean value theorem \ref{mean-value-theorem}\index{mean value theorem} to $\alpha$ on the closed interval between 0 and $h$, there exists $\xi_i(h)$, strictly between 0 and $h$, such that
-	\[ \sigma(h,h) = \frac{\alpha(h) - \alpha(0)}{h^2} = \frac{\alpha'(\xi_i(h))}{h} = \frac{\partial_i f(a + \xi_i(h) e_i + he_j) - \partial_i f(a + \xi_i e_i)}{h}. \]
+	\[ \sigma(t,t) = \frac{\alpha(t)-\alpha(0)}{t^2} \]
+	and that $\alpha$ is differentiable with \[ \alpha'(s) = \partial_i f(a + se_i + te_j) - \partial_i f(a + se_i). \]
+	Applying the mean value theorem \ref{mean-value-theorem}\index{mean value theorem} to $\alpha$ on the closed interval between 0 and $h$, there exists $\xi_i(t)$, strictly between 0 and $t$, such that
+	\[ \sigma(t,t) = \frac{\alpha(t) - \alpha(0)}{t^2} = \frac{\alpha'(\xi_i(t))}{t} = \frac{\partial_i f(a + \xi_i(t) e_i + te_j) - \partial_i f(a + \xi_i(t) e_i)}{t}. \]
 	Now consider the function 
-	\[ \beta(t) = \partial_i f(a + \xi_i(h) e_i + te_j). \]
+	\[ \beta(s) = \partial_i f(a + \xi_i(t) e_i + se_j). \]
 	Then $\beta$ is differentiable with
-	\[ \beta'(t) = \partial_{j,i} f(a + \xi_i e_i + te_j), \]
-	so, applying the mean value theorem \ref{mean-value-theorem}\index{mean value theorem} to $\beta$ on the closed interval between 0 and $h$, we find that there exists $\xi_j(h)$, strictly between 0 and $h$, such that
-	\[ \sigma(h,h) = \frac{\beta(h) - \beta(0)}{h} = \beta'(\xi_j(h)) = \partial_{j,i} f(a + \xi_i(h) e_i + \xi_j(h) e_j). \]
-	Now notice that, since both $\xi_i(h)$ and $\xi_j(h)$ are between 0 and $h$, we have $\xi_i(h), \xi_j(h) \to 0$ as $h \to 0$. Since $\partial_{j,i} f$ is continuous at $a$, we have
-	\[ \lim_{h \to 0} \sigma(h,h) = \lim_{h \to 0} \partial_{j,i} f (a + \xi_i(h)e_i + \xi_j(h)e_j) = \partial_{j,i} f(a). \qedhere \]
+	\[ \beta'(s) = \partial_{j,i} f(a + \xi_i(t) e_i + se_j), \]
+	so, applying the mean value theorem \ref{mean-value-theorem}\index{mean value theorem} to $\beta$ on the closed interval between 0 and $h$, we find that there exists $\xi_j(t)$, strictly between 0 and $t$, such that
+	\[ \sigma(t,t) = \frac{\beta(t) - \beta(0)}{t} = \beta'(\xi_j(t)) = \partial_{j,i} f(a + \xi_i(t) e_i + \xi_j(t) e_j). \]
+	Now notice that, since both $\xi_i(t)$ and $\xi_j(t)$ are between 0 and $h$, we have $\xi_i(t), \xi_j(t) \to 0$ as $h \to 0$. Since $\partial_{j,i} f$ is continuous at $a$, we have
+	\[ \lim_{t \to 0} \sigma(t,t) = \lim_{t \to 0} \partial_{j,i} f (a + \xi_i(t)e_i + \xi_j(t)e_j) = \partial_{j,i} f(a). \qedhere \]
 \end{proof}
 
 \begin{remark}
@@ -1102,9 +1665,9 @@ There are many versions of this theorem, all with slightly different hypotheses.
 
 \subsection{Taylor's theorem \starred} 
 
-The main difficulty in the multivariable Taylor's theorem is notation. Let us first discuss some notational conventions to make the statement of Taylor's theorem more convenient. 
+The main difficulty in the multivariable Taylor's theorem is notation. Let us first discuss some notational conventions to make the statement of Taylor's theorem more readable. 
 
-\begin{definition}[Multi-index] \index{multi-index} \label{multi-index}
+\begin{definition}[Multi-index notation] \index{multi-index} \label{multi-index}
 	A \emph{multi-index} is an $m$-tuple $\alpha = (\alpha_1, \dotsc, \alpha_m)$ where $\alpha_i$ is a non-negative integer. For such a multi-index, we define the following. 
 	\[ \begin{aligned} |\alpha| &= \alpha_1 + \alpha_2 + \dotsb + \alpha_n \\ \alpha! &= \alpha_1! \alpha_2! \dotsb \alpha_m ! \end{aligned} \]
 	If $x = (x_1, \dotsc, x_m) \in \R^m$, we define
@@ -1114,9 +1677,14 @@ The main difficulty in the multivariable Taylor's theorem is notation. Let us fi
 \end{definition}
 
 \begin{theorem}[Taylor] \label{taylor}
-	Suppose $f : U \to \R$ is $C^k$. Then there exists a unique polynomial $p_k$ of degree $k$ in $m$ variables, called the \emph{degree $k$ Taylor polynomial of $f$ at $a$}, such that $|f(a+h) - p_k(h)| = o(|h|^k)$. Moreover, we have
-	\begin{equation} \label{taylor-polynomial} p_k(v) = \sum_{|\alpha| \leq k} \frac{\partial^\alpha f(a)}{\alpha!} h^\alpha. \end{equation}
+	Suppose $f : U \to \R$ is $C^k$ and $a \in U$. Then there exists a unique polynomial $p_k$ of degree $k$ in $m$ variables, called the \emph{degree $k$ Taylor polynomial of $f$ at $a$}, such that $|f(a+h) - p_k(h)| = o(|h|^k)$ as $h \to 0$. Moreover, we have
+	\begin{equation} \label{taylor-polynomial} p_k(h) = \sum_{|\alpha| \leq k} \frac{\partial^\alpha f(a)}{\alpha!} h^\alpha. \end{equation}
 \end{theorem}
+
+\begin{proof}
+	Replace $U$ with an open ball around $a$, and fix $h$ such that $a + h \in U$. Consider the function $\gamma(t) = a + th$, which is clearly $C^k$. Then $g = f \circ \gamma$ is a single variable $C^k$ function, so 
+	\[ g(1) = \sum_{i = 0}^k \frac{g^{(i)}(0)}{i!} + r(1) \]
+\end{proof}
 
 % TODO: incomplete
 
@@ -1126,11 +1694,56 @@ The main difficulty in the multivariable Taylor's theorem is notation. Let us fi
 	We say that a function $f : U \to \R^n$ is $C^\infty$, or \emph{infinitely differentiable}, or \emph{smooth}, if it is $C^k$ for all $k$. 
 \end{definition}
 
-In \cref{smooth-single}, we formulated the principle that smooth single variable functions can be tailored to almost arbitrary specifications. The same principle remains true of smooth multivariable functions, and we can often bootstrap up from the single variable case. Here is one example. 
+In \cref{smooth-single}, we formulated the principle that smooth single variable functions can be tailored to almost arbitrary specifications. The same principle remains true of smooth multivariable functions, and we can often bootstrap up from the single variable case. Here are some examples. 
+
+\subsubsection*{Bump functions}
 
 \begin{exercise}
-	Let $\psi : \R \to \R$ denote the bump function from \cref{canonical-bump}. Then define $\Psi : \R^m \to \R$ by
+	Let $\psi : \R \to \R$ denote the single variable bump function from \cref{canonical-bump}. Then define $\Psi : \R^m \to \R$ by
 	\[ \Psi(x_1, \dotsc, x_m) = \psi(x_1) \psi(x_2) \dotsb \psi(x_m). \]
 	Show that $\Psi$ is a bump function (ie, a smooth function with compact support).\index{bump function} 
 \end{exercise}
 
+\subsubsection*{Paths}
+
+\begin{definition}[Paths]
+	Given $a, b \in \R^m$, a \emph{path} starting at $a$ and ending at $b$ is a continuous function $\gamma : [0, 1] \to \R^m$ such that $\gamma(0) = a$ and $\gamma(1) = b$. 
+	\begin{itemize}
+		\item We say that $\gamma$ is \emph{smooth} if it is the restriction to $[0,1]$ of a smooth function $(-\epsilon, 1+\epsilon) \to \R^m$ for some $\epsilon > 0$. 
+		\item We say that $\gamma$ is \emph{inside} or \emph{contained in} an open set $U$ if $\gamma(t) \in U$ for all $t \in [0,1]$.
+	\end{itemize}
+\end{definition}
+
+For example, if $a, b \in \R^m$, we have seen the straight line path $\gamma(t) = (1-t)a + tb$ which starts at $a$ and ends at $b$ several times (eg, the proof of \cref{constant-iff-derivative-zero}). It is smooth. 
+
+\begin{exercise}[Slowing down smooth paths] \label{slowing-down-paths}
+	Suppose $\gamma$ is a smooth path in $\R^m$. Show that there exists a smooth path $\gamma_{\text{slow-start}}$ with the same start and end as $\gamma$ and the same image as $\gamma$, such that 
+	\[ \gamma_{\text{slow-start}}^{(k)}(0) = 0 \]
+	for all $k \geq 1$. Then show that there also exists a smooth path $\gamma_{\text{slow-stop}}$ with the same start and end as $\gamma$ and the same image as $\gamma$, such that 
+	\[ \gamma_{\text{slow-stop}}^{(k)}(1) = 0 \]
+	for all $k \geq 1$. 
+	\begin{hint}
+		To slow down the start of the path, modify the ``infinitely flat'' function of  \cref{infinitely-flat} to find a function $f : \R \to \R$ such that $f^{(k)}(0) = 0$ for all $k \geq 0$ and $f(1) = 1$, and then consider $\gamma_{\text{slow-start}} = \gamma \circ f$. 
+	\end{hint}
+\end{exercise}
+
+\begin{definition}[Concatentation of paths] \label{concatenation-paths}
+	If $\gamma_1$ and $\gamma_2$ are paths in $\R^m$ and $\gamma_2$ starts where $\gamma_1$ ends, we define their \emph{concatenation} $\gamma_1 \star \gamma_2 : [0,1] \to \R^m$ as follows.
+	\[ (\gamma_1 \star \gamma_2)(t) = \begin{cases} \gamma_1(2t) & \text{if } t \leq 1/2 \\ \gamma_2(2t-1) & \text{if } t > 1/2 \end{cases} \]
+	In other words, $\gamma_1 \star \gamma_2$ ``travels along $\gamma_1$ at twice the speed,'' and then ``travels along $\gamma_2$ at twice the speed.''
+\end{definition}
+
+Observe that if $\gamma_1$ and $\gamma_2$ are both inside $U$, then $\gamma_1 \star \gamma_2$ is also inside $U$. However, even if $\gamma_1 \star \gamma_2$ are both smooth, their concatenation need not be. To concatenate smoothly, we can use the following. 
+
+\begin{exercise}[Smooth concatenation] \label{smooth-concatenation-paths}
+	Suppose $\gamma_1$ and $\gamma_2$ are smooth paths in $\R^m$ and $\gamma_2$ starts where $\gamma_1$ ends. Using the notation of \cref{slowing-down-paths,concatenation-paths}, show that
+	\[ \gamma = \gamma_{1,\text{slow-stop}} \star \gamma_{2,\text{slow-start}} \]
+	is smooth. 
+\end{exercise}
+
+\begin{exercise} \label{smoothly-path-connected}
+	Suppose $U$ is a connected open subset of $\R^m$. Show that, for any pair of points $a, b \in U$, there exists a smooth path inside $U$ starting at $a$ and ending at $b$. 
+	\begin{hint}
+		Use \cref{smooth-concatenation-paths} and the first part of \cref{constant-iff-derivative-zero-connected}. 
+	\end{hint}
+\end{exercise}

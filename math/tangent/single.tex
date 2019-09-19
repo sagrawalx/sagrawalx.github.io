@@ -1,18 +1,18 @@
 \chapter{Single variable derivatives} \label{single}
 
-The goal in this chapter is to formalize derivatives of functions whose input is a single real number and whose output is also a single real number. 
+The goal in this chapter is to formalize derivatives of functions whose input is a single real number and whose output is also a single real number. Probably many aspects of this theory will be familiar to you from your first exposure to single variable calculus. While there will likely be more formality here than is typical of introductory calculus courses, I strongly encourage you to use the intuition you developed during your calculus course as you go through this chapter. 
 
 \section{Two definitions of the derivative}
 
 \subsection{Slope of the tangent line}
 
-Let $S$ be a subset of $\R$ and $a \in S$ an interior point. We would like to define the tangent line to the graph of a function $f : S \to \R$ at $a$. We know intuitively what ``tangent line'' should mean: a line that ``just barely touches'' the graph of $f$ at the point $(a, f(a))$. But it's not immediately clear how to formalize this intuition.  
+Let $S$ be a subset of $\R$ and $a \in S$ an interior point. We would like to define the tangent line to the graph of a function $f : S \to \R$ at $a$. Intuitively, the ``tangent line'' should be a line that ``just barely touches'' the graph of $f$ at the point $(a, f(a))$. But it's not immediately clear how to formalize this intuitive definition.  
 
-One approach to formalization is to notice that our intuitive idea of ``tangent line'' can be approximated by secant lines, and secant lines can be formalized without ambiguity. More precisely, for small values of $h$, the point $a+h$ is close to $a$ and still in $S$ since $a$ is an interior point of $S$. The slope of the secant line passing through the two points $(a, f(a))$ and $(a+h, f(a+h))$ is computed by the quantity
-\[ \frac{f(a+h)-f(a)}{h}. \]
-This quantity is often called a \emph{difference quotient}\index{difference quotient}. See \cref{figure-difference-quotient} for a geometric explanation of this difference quotient. By letting $h \to 0$, we get closer and closer to what we intuitively understand to be the slope of the tangent line. 
+One approach to formalization begins with noticing that this intuitive ``tangent line'' can be approximated by secant lines, and secant lines can be formalized without ambiguity. More precisely, for small values of $h$, the point $a+h$ is close to $a$ and still in $S$ since $a$ is an interior point of $S$. The slope of the secant line passing through the two points $(a, f(a))$ and $(a+h, f(a+h))$ is computed by the quantity
+\[ \frac{f(a+h)-f(a)}{h}, \]
+since the ``rise'' is $f(a+h)-f(a)$, and the ``run'' is $(a+h)-a = h$. This quantity is often called a \emph{difference quotient}\index{difference quotient}. See \cref{figure-difference-quotient}. 
 
-\begin{figure}
+\begin{figure}[ht]
 	\begin{center}
 	\begin{tikzpicture}
 	\begin{axis}[
@@ -49,11 +49,13 @@ This quantity is often called a \emph{difference quotient}\index{difference quot
 \caption{The graph of a function $f$ is depicted in black. The secant line passing through the two points $(a, f(a))$ and $(a+h, f(a+h))$ is depicted in red. The ``run'' between these points, is $h$. The ``rise'' between these points is $f(a+h)-f(a)$. Thus the slope of the secant line, computed as ``rise over run,'' is precisely the difference quotient $(f(a+h)-f(a))/h$.}  \label{figure-difference-quotient}
 \end{figure}
 
+As $h$ gets smaller and smaller, the secant line becomes a better and better approximation of our intuitive idea of the ``tangent line'' at $a$. So, we \emph{define} the slope of the tangent line to be the limit of the slopes of the secant lines. 
+
 \begin{definition} \label{derivative-definition-single} \index{differentiable!differentiable at a point} \index{derivative!derivative at a point}
 	A function $f : S \to \R$ is \emph{differentiable} at an interior point $a \in S$ if 
 	\[ \lim_{h \to 0} \frac{f(a+h) - f(a)}{h} \]
 	exists. If this limit does exist, its value is called the \emph{derivative of $f$ at $a$}. We will usually denote this derivative as $f'(a)$, but sometimes also as one of the following, where $x$ is the variable that is being used to denote the argument to $f$.  
-	\[ \left.\frac{df}{dx}\right|_{x = a} \quad \left.\frac{d}{dx} f(x)\right|_{x = a} \quad \frac{df}{dx} (a) \] 
+	\[ \left.\frac{df}{dx}\right|_{x = a} \quad \frac{df}{dx} (a) \quad \left.\frac{d}{dx} f(x)\right|_{x = a} \] 
 \end{definition}
 
 \begin{exercise}
@@ -73,31 +75,65 @@ This quantity is often called a \emph{difference quotient}\index{difference quot
 	\end{hint}
 \end{exercise}
 
-\begin{exercise}[Differentiability implies continuity] \label{differentiable-implies-continuous-single}
-	Prove that if $f : S \to \R$ is differentiable at an interior point $a \in U$, then $f$ is also continuous at $a$. 
+\begin{exercise}[Constant functions rule] \label{constant-implies-derivative-zero-single}
+	Prove that, if $f : S \to \R$ is \emph{constant}\index{constant function} (ie, there exists a real number $c$ such that $f(x) = c$ for all $x \in S$), then $f'(a) = 0$ for all interior points $a \in S$. 
 \end{exercise}
 
+\begin{exercise}[Differentiability implies continuity] \label{differentiable-implies-continuous-single}
+	Prove that if $f : S \to \R$ is differentiable at an interior point $a \in S$, then $f$ is also continuous at $a$. 
+\end{exercise}
+
+\begin{exercise}
+	Suppose $f : S \to \R$ is a function and $a \in S$ is an interior point. 
+	\begin{enumerate}[(a)]
+		\item If $f$ is differentiable at $a$, must it be the case that
+		\[ f'(a) = \lim_{h \to 0} \frac{f(a+h)-f(a-h)}{2h} ? \]
+		\item If 
+		\[ \lim_{h \to 0} \frac{f(a+h)-f(a-h)}{2h} \]
+		exists, must it be the case that $f$ is differentiable at $a$?
+		\item What if we assume that 
+		\[ \lim_{h \to 0} \frac{f(a+h)-f(a-h)}{2h} \]
+		exists \emph{and} that $f$ is continuous at $a$? 
+	\end{enumerate}
+\end{exercise}
+
+Occasionally, it's useful to talk about differentiability from just one side. 
+
+\begin{definition}[One-sided differentiability]
+	Suppose $f : S \to \R$ is a function and $a \in S$ is an interior point. Then $f$ is \emph{left differentiable at $a$} if 
+	\[ \lim_{h \to 0^-} \frac{f(a+h)-f(a)}{h} \]
+	exists, and then the value of this limit is called the \emph{left derivative} of $f$ at $a$. Similarly, $f$ is \emph{right differentiable at $a$} if 
+	\[ \lim_{h \to 0^+} \frac{f(a+h)-f(a)}{h} \]
+	exists, and then the value of this limit is called the \emph{right derivative} of $f$ at $a$.
+\end{definition}
+
+\begin{exercise}
+	Suppose $r \neq s$ are two distinct real numbers and let $f : \R \to \R$ be the function
+	\[ f(x) = \begin{cases} rx & \text{if } x \geq 0 \\ sx & \text{if } x < 0 \end{cases}. \]
+	Show that $f$ is not differentiable at $0$, but that it is both left differentiable and right differentiable at 0. 
+\end{exercise}
+
+It's also useful to talk about differentiability not just at a single point, but everywhere on the domain. 
 
 \begin{definition} \index{differentiable} \index{derivative}
-	We say that a function $f : S \to \R$ is \emph{differentiable} if $f$ is continuous on $S$ and differentiable at every interior point of $S$. Letting $S^\circ$ denote the interior of $S$, the function $S^\circ \to \R$ defined by $a \mapsto f'(a)$ is called the \emph{derivative} of $f$. We will usually denote this function by $f'$, but occasionally we will also use the notation \[ \frac{df}{dx}, \] where $x$ is the variable that is being used to denote the argument to $f$. 
-	Note that \cref{differentiable-implies-continuous-single} makes the continuity on $S^\circ$ automatic. 
+	A function $f : S \to \R$ is \emph{differentiable} if it is continuous, and it is differentiable at every interior point of $S$. Letting $S^\circ$ denote the interior of $S$, the function $S^\circ \to \R$ defined by $a \mapsto f'(a)$ is called the \emph{derivative} of $f$. We will usually denote this function by $f'$, but will sometimes also use one of the following, where $x$ is the variable that is being used to denote the argument to $f$. \[ \frac{df}{dx} \quad \frac{d}{dx} f(x) \] 
 \end{definition}
 
 \begin{caution}
-	Other authors may define differentiability on a non-open subset slightly differently, so you should be cautious when reading other texts and you see assertions about a function on a non-open subset of $\R$ being differentiable. The definition we have given will be convenient for our purposes, but because of the potential for misunderstanding, we will apply it sparingly for non-open subsets. Specifically, we will only use this definition either when the domain is open, or when it is an interval.\footnotemark
+	Some authors define differentiability on a non-open subset slightly differently, so you should be cautious when you're reading other texts and see assertions about a function on a non-open subset of $\R$ being ``differentiable.'' Because of the potential for misunderstanding, we'll apply the above definition sparingly for non-open subsets. Specifically, we will only use this definition either when $S$ is open, or when it is an interval.\footnote{By \emph{interval}\index{interval}, we mean an uncountable connected subset of $\R$. This means that intervals can be open, closed, or half-open; and they can be bounded or unbounded.}
 \end{caution}
 
-\footnotetext{By \text{interval}, we mean an uncountable connected subset of $\R$. This means that intervals can be open, closed, or half-open; and they can be bounded or unbounded.}
 
 \subsection{Best linear approximation}
 
-Before proceeding further, we reinterpret the definition of the derivative in a way that will be better suited to generalization to the multivariable setting. Suppose a function $f : S \to \R$ is differentiable at an interior point $a \in S$. The tangent line to the graph at the point $(a, f(a))$ is the graph of the function
+Let's now reinterpret the definition of the derivative in a way that will be better suited to generalization to the multivariable setting in \cref{multi}. 
+
+Suppose a function $f : S \to \R$ is differentiable at an interior point $a \in S$. As we saw in the previous section, the tangent line to the graph at the point $(a, f(a))$ is a line with slope $f'(a)$ passing through the point $(a, f(a))$. In other words, it is the graph of the function $t : \R \to \R$ given by
 \[ t(x) = f'(a)(x-a) + f(a). \]
-Since this function $t$ is ``close'' to $f$ near $a$, we should have that
+Since $t$ is ``close'' to $f$ near $a$, we should have that
 \[ f(a+h)-f(a) \approx t(a+h) - t(a) = f'(a)h \]
 for small values of $h$. See \cref{figure-linear-approximation}. 
-
-\begin{figure}
+\begin{figure}[ht]
 	\begin{center}
 		\begin{tikzpicture}
 		\begin{axis}[
@@ -129,10 +165,10 @@ for small values of $h$. See \cref{figure-linear-approximation}.
 		\end{axis}
 		\end{tikzpicture}
 	\end{center}
-	\caption{The graph of a function $f$ is depicted in black, and its tangent line $t$ at $a$ is depicted in red. Then the vertical distance $f(a+h)-f(a)$ is approximated by the vertical distance $t(a+h)-t(a)$. Since the tangent line has slope $f'(a)$, this ``rise'' can be computed as $f'(a)$ times the ``run'' (in other words, $f'(a)h$). As $h$ gets smaller, this approximation gets better.}  \label{figure-linear-approximation}
+	\caption{The graph of a function $f$ is depicted in black, and its tangent line $t$ at $a$ is depicted in red. Then the vertical distance $f(a+h)-f(a)$ is approximated by the vertical distance $t(a+h)-t(a)$. Since the tangent line has slope $f'(a)$, this ``rise'' can be computed as $f'(a)$ times the ``run'' (in other words, $f'(a)h$). As $h$ gets smaller, this approximation of $f(a+h) - f(a)$ gets better.}  \label{figure-linear-approximation}
 \end{figure}
 
-Notice that the function $h \mapsto f'(a)h$ is a linear map $\R \to \R$ (in the sense of linear algebra). One way to interpret the following result is that the function $h \mapsto f'(a)h$ is the \emph{only} linear map that is a good approximation\index{linear approximation} to $h \mapsto f(a+h)-f(a)$. The precise statement of the result uses little-oh notation; if you have not seen this notation before, see \cref{little-o-definition}.
+Notice that the function $h \mapsto f'(a)h$ is a linear map $\R \to \R$, in the sense of linear algebra. The following result says that the function $h \mapsto f'(a)h$ is the \emph{only} linear map that is a good approximation\index{linear approximation} to $h \mapsto f(a+h)-f(a)$. The statement uses little-oh notation; if you have not seen this before, take a look at \cref{little-o-definition}.
 
 \begin{proposition} \label{differential-unique-single}
 	A function $f : S \to \R$ is differentiable at an interior point $a \in S$ if and only if there exists a linear map $\ell : \R \to \R$ such that
@@ -145,24 +181,24 @@ Notice that the function $h \mapsto f'(a)h$ is a linear map $\R \to \R$ (in the 
 	Let $\ell$ be a linear map $\ell(h) = ch$, where $c$ is some scalar. Observe that
 	\[ \begin{aligned} \frac{|f(a+h)-f(a)-\ell(h)|}{|h|} &= \left| \frac{f(a+h)-f(a) - ch}{h} \right| \\
 	&= \left| \frac{f(a+h)-f(a)}{h} - c \right|. \end{aligned} \]
-	This leads to the following sequence of ``if and only if'' statements. 
+	This leads us to the following sequence of ``if and only if'' statements. 
 	\[ \begin{aligned} |f(a+h)-f(a)-\ell(h)| = o(|h|) &\iff \lim_{h \to 0} \frac{|f(a+h)-f(a)-\ell(h)|}{|h|} = 0 \\
 	&\iff \lim_{h \to 0} \left| \frac{f(a+h)-f(a)}{h} - c \right| = 0 \\
 	&\iff \lim_{h \to 0} \left( \frac{f(a+h)-f(a)}{h} - c \right) = 0 \\
 	&\iff \lim_{h \to 0} \frac{f(a+h)-f(a)}{h} = c \end{aligned} \]
-	The statement of the proposition follows. 
+	The result follows. 
 \end{proof}
 
 \begin{definition}
-	If $f : S \to \R$ is differentiable at an interior point $a \in U$, we define $df_a : \R \to \R$ to be the linear map $df_a(h) = f'(a)h$. 
+	If $f : S \to \R$ is differentiable at an interior point $a \in U$, we define $df_a : \R \to \R$ to be the linear map $df_a(h) = f'(a)h$. The function $df_a$ is sometimes called the \emph{total derivative} or the \emph{differential of $f$ at $a$}. 
 \end{definition}
 
-In other words, $df_a$ is the only good linear approximation to the function \[ h \mapsto f(a+h)-f(a). \] Being the \emph{only good} linear approximation, it is also the \emph{best} linear approximation, whence the name of this section.
+Thus \cref{differential-unique-single} says that $df_a$ is the only good linear approximation to the function \[ h \mapsto f(a+h)-f(a). \] Being the \emph{only good} linear approximation, it is also the \emph{best} linear approximation, whence the name of this section.
 
-The following is an important idea that we will come up frequently in proofs. 
+The following is an important version of this same idea that comes up frequently in proofs. 
 
 \begin{remark}[``Error in approximation'' function] \label{error-in-approximation}
-	Suppose $f : S \to \R$ is differentiable at an interior point $a \in S$. For sufficiently small values of $h$, we can define the ``error in approximation'' function\index{error in approximation function@``error in approximation'' function}
+	Suppose $f : S \to \R$ is differentiable at an interior point $a \in S$. For sufficiently small values of $h$, we can define a ``error in approximation'' function\index{error in approximation function@``error in approximation'' function} $r$ by
 	\[ r(h) = f(a+h) - f(a) - df_a(h). \]
 	See \cref{figure-error-in-approximation}. 
 	\begin{figure}
@@ -205,13 +241,11 @@ The following is an important idea that we will come up frequently in proofs.
 	\end{figure}
 	Rearranging the definition of $r$, we have
 	\[ f(a+h) = f(a) + df_a(h) + r(h). \]
-	This equation just says that $f(a+h)$ is the sum of the value of the linear approximation (which is $f(a) + df_a(h)$) and the error (which is $r(h)$). 
-	
-	Notice that $r(0) = 0$. Moreover, since $f$ is differentiable and therefore continuous at $a$ by \cref{differentiable-implies-continuous-single}, we can see that $r$ is continuous at 0. Finally, $r$ is ``small.'' More precisely, we know that $|r(h)| = o(|h|)$ as $h \to 0$ by the discussion above, which means that
-	\[ \lim_{h \to 0} \left| \frac{r(h)}{h} \right| = 0 \quad \implies \quad \lim_{h \to 0} \frac{r(h)}{h} = 0. \]
+	This equation just says that $f(a+h)$ is the sum of the value of the tangent line (which is $f(a) + df_a(h)$) and the error (which is $r(h)$). Notice that $r(0) = 0$. Moreover, $f$ is differentiable hence continuous at $a$ (cf. \cref{differentiable-implies-continuous-single}), so $r$ is also  continuous at 0. Finally, $r$ is ``small.'' More precisely, we know from \cref{differential-unique-single} that $|r(h)| = o(|h|)$ as $h \to 0$, which means that
+	\[ \lim_{h \to 0} \frac{r(h)}{h} = 0. \]
 \end{remark} 
 
-As a first example of an application of this idea, here is a weak version of l'H\^opital's rule\index{lhopitals rule@L'H\^opital's rule}. 
+The following weak version of l'H\^opital's rule\index{lhopitals rule@L'H\^opital's rule} is an application of this idea. 
 
 \begin{exercise}[L'H\^opital's rule, weak version] \label{weak-lhopital}
 	Suppose $f, g : S \to \R$ are differentiable at an interior point $a \in S$, that $f(a) = g(a) = 0$, and that $g'(a) \neq 0$. Show that
@@ -224,17 +258,12 @@ As a first example of an application of this idea, here is a weak version of l'H
 
 \section{Computing derivatives}
 
-The goal in this section is to prove a few of the basic rules of differentiation that one normally encounters in an introductory calculus course. 
+In this section, we'll prove some of the basic rules of differentiation that one normally encounters in an introductory calculus course. 
 
 \subsection{Sum and scalar multiples rule}
 
-The following can be proved using either the definition of the derivative \ref{derivative-definition-single} or the equivalent ``best linear approximation'' characterization of \cref{differential-unique-single}. My suggestion is that you try both methods for these exercises. 
-
-\begin{exercise}[Constant functions rule] \label{constant-implies-derivative-zero-single}
-	Prove that, if $f : S \to \R$ is \emph{constant}\index{constant function} (ie, there exists a real number $c$ such that $f(x) = c$ for all $x \in S$), then $f'(a) = 0$ for all interior points $a \in S$. 
-\end{exercise}
-
-When you use \cref{differential-unique-single} to prove the following, you may find it useful to have done \cref{little-o-vector-space}. 
+The following results can be proved using either the definition of the derivative \ref{derivative-definition-single} or the ``best linear approximation'' characterization of \cref{differential-unique-single}. I strongly encourage you to try both methods for these exercises. 
+When you use \cref{differential-unique-single}, you may find it useful to have done \cref{little-o-vector-space}. 
 
 \begin{exercise}[Sum rule] \label{sum-rule-single} \index{sum rule}
 	Prove that, if $f, g : S \to \R$ are both differentiable at an interior point $a \in U$, then $f + g$ is also differentiable at $a$ and \[ (f+g)'(a) = f'(a) + g'(a). \]
@@ -293,7 +322,7 @@ When you use \cref{differential-unique-single} to prove the following, you may f
 
 \begin{exercise}[Power rule for integer exponents] \label{power-rule-integer} \index{power rule}
 	Extend the result of \cref{power-rule-positive} to arbitrary integer exponents. 
-	\begin{hint} Use the quotient rule for negative integers. The exponent zero is a special but easy case; deal with it separately. 
+	\begin{hint} Use the quotient rule for negative integers. The exponent zero is a special but easy case (cf. \cref{constant-implies-derivative-zero-single}).  
 	\end{hint}
 \end{exercise}
 
@@ -307,7 +336,7 @@ When you use \cref{differential-unique-single} to prove the following, you may f
 We will discuss two different (but similar) proofs of this important result. But first, here is an application. We will later prove a better version of this result (cf. \cref{inverse-function-theorem-single}). 
 
 \begin{exercise}[Derivatives of inverses] \label{inverse-derivative} \index{inverse function}
-	Suppose $f : S \to \R$ is injective, differentiable at an interior point $a \in S$, and that $b = f(a)$ is an interior point of $T$. Show that, if the inverse $f^{-1} : f(S) \to \R$ is differentiable at $b$, then 
+	Suppose $f : S \to \R$ is injective, differentiable at an interior point $a \in S$, and that $b = f(a)$ is an interior point of $f(S)$. Show that, if the inverse $f^{-1} : f(S) \to \R$ is differentiable at $b$, then 
 	\[ (f^{-1})'(b) = \frac{1}{f'(f^{-1}(b))}. \]
 \end{exercise}
 
@@ -315,7 +344,7 @@ We will discuss two different (but similar) proofs of this important result. But
 
 The first proof uses the definition of the derivative \cref{derivative-definition-single}, but there is a subtle technicality involved; so, let us discuss it informally first before diving into the formal proof.  
 
-The idea involved is again a clever rewriting of difference quotients. Again, we introduce a cross term, which in this is $f(a+h) - f(a)$. But this time we introduce this cross term ``multiplicatively'' rather than ``additively.'' More precsiely, we have
+The idea involved is again a clever rewriting of difference quotients. We introduce a cross term, which in this case is $f(a+h) - f(a)$. But this time we introduce this cross term ``multiplicatively'' rather than ``additively.'' More precsiely, we have
 \[ \begin{aligned} \frac{(g \circ f)(a+h) - (g \circ f)(a)}{h} &= \frac{g(f(a+h)) - g(f(a))}{h} \\ &= \frac{g(f(a+h)) - g(f(a))}{f(a+h)-f(a)} \cdot \frac{f(a+h)-f(a)}{h}. \end{aligned} \]
 The difference quotient on the right is precisely $f'(a)$. Thus, it would be sufficient to prove  
 \begin{equation} \label{wrong-conjecture} \lim_{h \to 0} \frac{g(f(a+h)) - g(f(a))}{f(a+h)-f(a)} = g'(f(a)). \end{equation}
@@ -325,7 +354,7 @@ for small values of $h$. Taking the limit as $h \to 0$ on the right-hand side yi
 
 The problem is that \cref{wrong-conjecture} isn't true. Issues arise when $f(a+h) = f(a)$ for arbitrarily small values of $h$, which leads to an infinite sequence of divisions by 0. 
 
-\begin{example}
+\begin{example} \label{wrong-conjecture-counterexample}
 	Let \[ f(x) = \begin{cases} x^2\sin(1/x) & \text{if } x \neq 0 \\ 0 & \text{if } x = 0 \end{cases} \] and let $g(x) = x^2$. Observe that $g'(f(0)) = 0$. You will show later (in \cref{power-times-sine}) that $f$ is in fact differentiable at 0, so these functions do satisfy the hypothesis of the chain rule. However, the limit as $h \to 0$ of
 	\[ \frac{g(f(a+h)) - g(f(a))}{f(a+h)-f(a)} = \frac{(h^2\sin(1/h))^2}{h^2\sin(1/h)} \]
 	does not exist. For example, the sequence $h_k = 1/k\pi$ converges to 0 as $k \to \infty$, but the expression above is undefined along this sequence. 
@@ -335,12 +364,11 @@ We will get around the kind of issue that is described by the above example by c
 \begin{equation} \label{weird-difference-quotient} \frac{g(f(a+h)) - g(f(a))}{f(a+h)-f(a)}. \end{equation}
 Observe that, when $f(a+h)\neq f(a)$, then this expression is precisely the difference quotient that calculates the slope of the secant line passing through $(f(a), g(f(a))$ and $(f(a+h), g(f(a+h))$. When $f(a+h) = f(a)$, this secant line doesn't make sense; but what does make sense is the tangent line! So we'll remove the undefinedness of expression \eqref{weird-difference-quotient} by extending it so that it takes the value $g'(f(a))$ whenever $f(a+h) = f(a)$. 
 
-This leads us to our first proof of the chain rule. 
-
 \begin{proof}[First proof of the chain rule]
-	Consider the function $\epsilon$ defined for small values of $h$ by $\epsilon(h) = f(a+h)-f(a)$. See \cref{value-difference-chain-rule}. You will verify in \cref{chain-rule-details} below that $\epsilon$ is continuous at 0. 
+	Consider the function $\epsilon$ defined for small values of $h$ by \[ \epsilon(h) = f(a+h)-f(a). \]
+	See \cref{value-difference-chain-rule}. You will verify in \cref{chain-rule-details} below that $\epsilon$ is continuous at 0. 
 	
-	\begin{figure}
+	\begin{figure}[t]
 		\begin{center}
 			\begin{tikzpicture}
 			\begin{axis}[
@@ -377,9 +405,9 @@ This leads us to our first proof of the chain rule.
 
 	Next, define a function $\sigma$ by the following.  
 	\[ \sigma(k) = \begin{cases} \dfrac{g(f(a)+k) - g(f(a))}{k} & \text{if } k \neq 0 \\ g'(f(a)) & \text{if } k = 0 \end{cases} \]
-	In other words, $\sigma$ is the function that, on some small nonzero input $k$, outputs the slope of the secant line connecting the two points on the graph of $g$ where $x = f(a)$ and $x = f(a) + k$. See \cref{slope-function-chain-rule}. It follows from the definition of the derivative of $g$ at $f(a)$ that the function $\sigma$ is continuous at 0. 
+	In other words, $\sigma$ is the function that, on some small nonzero input $k$, outputs the slope of the secant line connecting the two points $(f(a), g(f(a))$ and $(f(a)+k, g(f(a)+k))$. See \cref{slope-function-chain-rule}. It follows from the definition of the derivative of $g$ at $f(a)$ that the function $\sigma$ is continuous at 0. 
 	
-	\begin{figure}
+	\begin{figure}[t]
 		\begin{center}
 			\begin{tikzpicture}
 			\begin{axis}[
@@ -414,9 +442,9 @@ This leads us to our first proof of the chain rule.
 	\end{figure}
 	
 	
-	Observe that
+	You will verify in \cref{chain-rule-details} below that
 	\begin{equation} \label{alternative-to-multiplicative-cross-term} \frac{(g \circ f)(a+h) - (g \circ f)(a)}{h} = \sigma(\epsilon(h)) \cdot \frac{f(a+h)-f(a)}{h} \end{equation}
-	for all small values of $h$, as you will verify in \cref{chain-rule-details} below. Thus
+	for all small values of $h$. Thus
 	\[ \begin{aligned} \lim_{h \to 0} \frac{(g \circ f)(a+h) - (g \circ f)(a)}{h} &= \lim_{h \to 0} \sigma (\epsilon(h)) \cdot \frac{f(a+h)-f(a)}{h} \\ 
 	&\stackrel{(*)}{=} \sigma (\epsilon(0)) f'(a) \\
 	&= g'(f(a)) f'(a) \end{aligned}  \]
@@ -471,7 +499,7 @@ We'll deal with this problem in essentially the same way as before: namely, we e
 so that it is also defined when $f(a+h) = f(a)$. 
 
 \begin{proof}[Second proof of the chain rule, continued]
-	Define $\eta(k) = s(k)/k$ for nonzero $k$. If we set $\eta(0) = 0$, the fact that $s(k) = o(|k|)$ implies that $\eta$ is continuous at 0. Then 
+	Define $\eta(k) = s(k)/k$ for nonzero $k$. If we set $\eta(0) = 0$, the fact that $s(k) = o(|k|)$ as $k \to 0$ implies that $\eta$ is continuous at 0. Then $s(k) = \eta(k)k$ for all $k$. Applying this with $k = df_a(h) + r(h)$, we see that
 	\[ \begin{aligned} \frac{|s(df_a(h)+r(h))|}{|h|} &= \frac{|\eta(df_a(h)+r(h))| \cdot |df_a(h)+r(h)|}{|h|} \\
 	&\leq |\eta(df_a(h)+r(h))| \cdot \left( |f'(a)| + \frac{|r(h)|}{|h|} \right). \end{aligned} \]
 	Observe that $r$ and therefore $df_a + r$ is continuous at $0$ (cf. \cref{error-in-approximation}). Moreover, we have just seen that $\eta$ is continuous at $(df_a + r)(0) = 0$. Thus the composite $\eta \circ (df_a + r)$ is also continuous at 0. Thus
@@ -532,12 +560,14 @@ The following is a key property of derivatives that you probably remember from c
 But remember, the converse to the interior extremum theorem \ref{interior-extremum} is \emph{not} true. 
 
 \begin{exercise} \label{interior-extremum-converse-false}
-	Give an example of a function $f : \R \to \R$ where $f'(0) = 0$, but $f$ does not have a local extremum at 0.\index{extremum!local extremum} 
+	Give an example of a function $f : \R \to \R$ such that $f'(0) = 0$, but $f$ does not have a local extremum at 0.\index{extremum!local extremum} 
 \end{exercise}
 
 \subsection{Non-rational functions} \label{non-rational}
 
-Using the rules we've developed so far, we can differentiate any rational function (ie, a quotient of a polynomial by a polynomial). In this section, we will simply state some facts about differentiation of other types of functions one frequently encounters. We will prove most of these a bit later; we are stating them now so that we can discuss a richer repertoire of examples as we go along.
+Using the rules we've developed so far, we can differentiate any rational function (ie, a quotient of a polynomial by a polynomial). In this section, we will simply state some facts about differentiation of other types of functions one frequently encounters. We will prove most of these a bit later; we are stating them now so that we can discuss a richer repertoire of examples as we go along. We've already seen the need for a richer repertoire of examples in \cref{wrong-conjecture-counterexample}. 
+
+\subsubsection*{Power rule}
 
 First off, here is the most general statement of the power rule.
 
@@ -547,11 +577,13 @@ First off, here is the most general statement of the power rule.
 
 We will prove this for \emph{rational} exponents in \cref{power-rule-fractional}. We won't prove it in full generality, because that would require a long tangential discussion of what $x^r$ even means for irrational $r$. Actually, once we have a sufficiently rigorous definition of $x^r$ for irrational $r$, it turns out that \cref{power-rule-general} is actually a relatively straightforward \emph{consequence} of \cref{power-rule-fractional}. 
 
+\subsubsection*{Exponential, sine, and cosine functions}
+
 Next up, we have the exponential, sine, and cosine functions. These are usually defined by their power series\index{power series}, as follows. 
 \begin{equation} \label{exp-sin-cos-power-series} \begin{aligned} \exp(x) &= \sum_{n = 0}^\infty \frac{x^n}{n!} \\
 \cos(x) &= \sum_{n = 0}^\infty \frac{(-1)^n x^{2n}}{(2n)!} \\
 \sin(x) &= \sum_{n = 0}^\infty \frac{(-1)^n x^{2n+1}}{(2n+1)!} \end{aligned} \end{equation}
-We'll prove that power series can be differentiated term-by-term in \cref{differentiating-power-series}. This allows us to prove the following standard facts. 
+We'll prove that power series can be differentiated term-by-term in \cref{differentiating-power-series}. This yields the following standard facts. 
 \begin{enumerate}[(1)]
 	\item If $f(x) = \exp(x)$, then $f'(x) = \exp(x)$. 
 	\item If $f(x) = \sin(x)$, then $f'(x) = \cos(x)$. 
@@ -559,10 +591,22 @@ We'll prove that power series can be differentiated term-by-term in \cref{differ
 \end{enumerate} 
 
 \begin{remark}
-	Defining the exponential, sine, and cosine functions using power series is mathematically fine, but there are numerous facts about these functions that are not clear from the power series, and one needs to prove these facts separately. For example, it's useful knowing that, if $e := \exp(1)$, then $\exp(x) = e^x$. This fact is not immediately clear from the power series definition; it requires some proof, and we won't prove it here, but you should feel free to use it. It's obviously also useful to know that sines and cosines have something to do with trigonometry. Again, this is not clear from the power series definition; it requires some proof, and we won't prove it, but you should feel free to use it. 
+	Defining the exponential, sine, and cosine functions using power series is mathematically sound, but there are numerous facts about these functions that are not clear from the power series, and one needs to prove these facts separately. For example, it's useful knowing that, if $e := \exp(1)$, then $\exp(x) = e^x$. This fact is not immediately clear from the power series definition; it requires some proof, and we won't prove it here, but you should feel free to use it. It's obviously also useful to know that sines and cosines have something to do with trigonometry. Again, this is not clear from the power series definition; it requires some proof, and we won't prove it, but you should feel free to use it. 
 \end{remark}
 
-Let's now discuss some examples using these functions. Specifically, let's think about functions involving $\sin(1/x)$. As we will see, these functions exhibit a wild variety of pathological behavior. 
+\subsubsection*{Examples}
+
+Let's now discuss some examples using these functions. 
+
+\begin{exercise}
+	Let $f, g : (0,\infty) \to \R$ be the functions given by 
+	\[ f(x) = \frac{\sin(x)}{x} \quad \text{and} \quad g(x) = \frac{\sin(x^2)}{x}. \]
+	Show that $f$ and $g$ are both differentiable, and that 
+	\[ \lim_{x \to \infty} f(x) = 0 = \lim_{x \to \infty} g(x). \] Then show that 
+	\[ \lim_{x \to \infty} f'(x) = 0 \quad \text{but} \quad \lim_{x \to \infty} g'(x) \text{ does not exist}. \]
+\end{exercise}
+
+The following two examples both involve the expression $\sin(1/x)$. As we will see, functions involving this expression exhibit a wild variety of interesting pathological behavior. 
 
 \begin{exercise} \label{power-times-sine}
 	\begin{enumerate}[(a)]
@@ -595,7 +639,7 @@ The following example, again involving $\sin(1/x)$, illustrates a caveat to the 
 
 \section{Differentiable functions}
 
-In this section, we'll discuss functions which are differentiable not just at a point, but on an entire interval.
+In this section, we'll discuss some properties of functions which are differentiable along an entire interval.
 
 \subsection{Mean value theorem}
 
@@ -690,7 +734,8 @@ We can use the mean value theorem to prove the following ``if and only if upgrad
 Here is another consequence, which says roughly that functions with bounded derivative cannot grow too fast.  
 
 \begin{exercise} \label{bounded-derivative}
-	Suppose $I$ is an open interval and $f : I \to \R$ is a differentiable function such that there exists a number $M$ such that $|f'(x)| \leq M$ for all $x \in I$. Show that $|f(b) - f(a)| \leq M|b-a|$ for all $a, b \in I$. 
+	Suppose $I$ is an open interval and $f : I \to \R$ is a differentiable function such that there exists a number $M$ such that $|f'(x)| \leq M$ for all $x \in I$. Show that $|f(b) - f(a)| \leq M|b-a|$ for all $a, b \in I$.\footnotemark
+	\footnotetext{Using the vocabulary of \cref{sup-norm}, this result can be rephrased by saying that, if $f'$ is bounded, then $|f(b) - f(a)| \leq \|f'\|_\spn |b-a|$.}
 \end{exercise}
 
 \subsection{Monotonicity}
@@ -708,12 +753,16 @@ Recall the following definition.
 Further, $f$ is \emph{monotone} if it is either increasing or decreasing, and \emph{strictly monotone} if it is either strictly increasing or strictly decreasing. 
 \end{definition}
 
-Here is an important property of strictly monotone continuous functions. 
+Here are some important properties of strictly monotone continuous functions that you may recognize from an earlier analysis course. 
 
-\begin{exercise} \label{continuous-strictly-monotone-open}
-	Prove that, if $I$ is an open interval and $f : I \to \R$ is continuous and strictly monotone, then $f(I)$ is also an open interval. Conclude that $f$ is an open map\index{open!open map} (ie, that the image under $f$ of any open subset of the domain is open).
+\begin{exercise} \label{strictly-monotone-iff-injective}
+	Suppose $I$ is an interval and $f : I \to \R$ is continuous. Prove that $f$ is injective if and only if $f$ is strictly monotone. 
+\end{exercise}
+
+\begin{exercise} \label{strictly-monotone-implies-open}
+	Prove that, if $I$ is an open interval and $f : I \to \R$ is continuous and strictly monotone, then $f(I)$ is also an open interval. Conclude that $f$ is an open map\index{open!open map} (ie, that the image of any open subset of the domain is an open subset of $\R$).
 	\begin{hint}
-		Suppose $f$ is strictly increasing. If $I = (a, b)$, define $c = \lim_{x \to a^+} f(x)$ and $d = \lim_{x \to b^-} f(x)$ and use the intermediate value theorem to prove that $f(I) = (c, d)$. Then deal with the case when $f$ is strictly decreasing. 
+		Suppose $f$ is strictly increasing and $I = (a, b)$. Define $c = \lim_{x \to a^+} f(x)$ and $d = \lim_{x \to b^-} f(x)$ and use the intermediate value theorem to prove that $f(I) = (c, d)$. Then deal with the case when $f$ is strictly decreasing. 
 	\end{hint}
 \end{exercise}
 
@@ -872,13 +921,13 @@ Here is an example application.
 \subsection{Inverse function theorem}
 
 \begin{theorem} \label{inverse-function-theorem-single}
-	Suppose that $I$ is an open interval, that $f : I \to \R$ is differentiable, and that $f'(x) \neq 0$ for all $x \in I$. Then $f$ is open, the inverse function $f^{-1} : f(I) \to \R$ is differentiable, and 
+	Suppose that $I$ is an open interval, that $f : I \to \R$ is differentiable, and that $f'(x) \neq 0$ for all $x \in I$. Then $f$ is strictly monotone, the inverse function $f^{-1} : f(I) \to \R$ is differentiable, and 
 	\[ f^{-1}(y) = \frac{1}{f'(f^{-1}(y))} \]
 	for all $y \in f(I)$. 
 \end{theorem}
 
 \begin{proof}
-	\Cref{nonzero-derivative-implies-strictly-monotone} tells us that $f$ is strictly monotone, so \cref{continuous-strictly-monotone-open} tells us that $f$ is an open map and that $f(I)$ is an open interval. In particular, this means that $f^{-1}$ is continuous. To see that it is differentiable, fix $y \in f(I)$ and let $x = f^{-1}(y)$. For each $k$, define \[ h(k) = f^{-1}(y + k) - f^{-1}(y). \]
+	\Cref{nonzero-derivative-implies-strictly-monotone} tells us that $f$ is strictly monotone, so \cref{strictly-monotone-implies-open} tells us that $f$ is an open map and that $f(I)$ is an open interval. In particular, this means that $f^{-1}$ is continuous. To see that it is differentiable, fix $y \in f(I)$ and let $x = f^{-1}(y)$. For each $k$, define \[ h(k) = f^{-1}(y + k) - f^{-1}(y). \]
 	Rearranging, this is equivalent to all of the following. 
 	\[ \begin{aligned} f^{-1}(y + k) &= f^{-1}(y) + h(k) \\
 	f^{-1}(y + k) &= x + h(k) \\
@@ -925,7 +974,7 @@ Derivatives interact somewhat strangely with limits. Here are some examples to i
 In fact, to get well-behaved interacted between limits and derivatives, what we really need is uniform convergence \emph{of the derivatives}. 
 
 \begin{theorem} \label{differentiation-uniform-limit}
-	Suppose $U$ is an open subset and $f_n : U \to \R$ is a differentiable function for each $n = 0, \dotsc$ such that $\lim f_n = f$ pointwise. If the derivatives $f_n'$ converge uniformly on compact subsets of $U$, then $f$ is differentiable and $\lim f_n' = f'$. 
+	Suppose $U$ is an open subset and $f_n : U \to \R$ is a differentiable function for each $n = 0, 1, \dotsc$ such that $\lim f_n = f$ pointwise. If the derivatives $f_n'$ converge uniformly on compact subsets of $U$, then $f$ is differentiable and $\lim f_n' = f'$. 
 \end{theorem}
 
 \begin{proof}
@@ -1018,7 +1067,7 @@ This section is just for fun: we'll discuss many bizarre examples of differentia
 \end{example}
 \end{comment}
 
-\section{Levels of differentiability} 
+\section{\texorpdfstring{$C^k$}{Ck} hierarchy} 
 
 \subsection{Continuous differentiability}
 
@@ -1028,7 +1077,7 @@ We saw in \cref{darboux-section} that the derivative of a differentiable functio
 	Suppose $U$ is an open subset of $\R$ and $f : U \to \R$ is differentiable. If the derivative $f' : U \to \R$ is also continuous, then $f$ is said to be \emph{continuously differentiable}.\index{continuously differentiable} 
 \end{definition}
 
-For example, we saw in \cref{positive-not-monotone} that there is a differentiable function whose derivative is positive at a point, but which is not monotone on any interval containing that point. This is rather bizarre behavior, and it cannot happen with continuously differentiable functions. 
+For example, we saw in \cref{positive-not-monotone} that $f(x) = x + 2x^2\sin(1/x)$ defined a differentiable function $f : \R \to \R$ such that $f'(0) = 0$, but which is not monotone on any interval containing that point. This is rather bizarre behavior, and it cannot happen with continuously differentiable functions. 
 
 \begin{exercise} \label{nonzero-derivative-at-point-implies-monotone-in-neighborhood}
 	Suppose $f : U \to \R$ is continuously differentiable, and $a \in U$ is a point such that $f'(a) \neq 0$. Show that there exists an open interval containing $a$ on which $f$ is strictly monotone. 
@@ -1046,7 +1095,7 @@ To appreciate the following fact, it's worth noting the following: for any open 
 	\end{enumerate}
 \end{exercise}
 
-Unfortunately, insisting that the derivative of a function be continuous does not rule out all possible bizarre behavior. For example, in \cref{extremum-no-sign-change}, we saw a differentiable function $f$ with an absolute minimum at a point, but the derivative doesn't just simply ``change sign'' at that point. In fact, it turns out that function is also continuously differentiable (cf. \cref{extremum-no-sign-change-continued}), so merely insisting on continuous differentiability does not quite manage to rule out that kind of pathological behavior. However, as it turns out, the derivative of $f'$ (called the ``second derivative'' of $f$, and denoted $f''$), turns out \emph{not} to be continuous. 
+Unfortunately, insisting that the derivative of a function be continuous does not rule out all possible bizarre behavior. For example, in \cref{extremum-no-sign-change}, we saw that $f(x) = x^4 \left( 2 + \sin(1/x) \right)$ defined a differentiable function $f$ with an absolute minimum at 0, but the derivative doesn't just simply ``change sign'' at 0. In fact, it turns out that function is also continuously differentiable (cf. \cref{extremum-no-sign-change-continued}), so merely insisting on continuous differentiability does not quite manage to rule out that kind of pathological behavior. However, as it turns out, the derivative of $f'$ (called the ``second derivative'' of $f$, and denoted $f''$), turns out \emph{not} to be continuous. 
 
 \begin{exercise} \label{extremum-no-sign-change-continued}
 	Let $f : \R \to \R$ be the function from \cref{extremum-no-sign-change}. Show that $f'$ is differentiable, but that $f''$ is not continuous. 
@@ -1107,7 +1156,7 @@ Observe that we have an infinite chain of implications
 The following exercise shows that all of these implications are strict; in other words, for every $k$, there exists a $C^k$ function which is not $C^{k+1}$.
 
 \begin{exercise}
-	For every non-negative integer $k$, let 
+	For any non-negative integer $k$, let 
 	\[ f_k(x) = x^k|x|. \]
 	Prove that $f_k$ is $C^k$ but not $C^{k+1}$. \begin{hint} First prove that $f_{k+1}' = (k+2)f_k$. \end{hint}
 \end{exercise}
@@ -1141,7 +1190,7 @@ The following exercise shows that all of these implications are strict; in other
 	In this case, we have $h < h_1 < h_2 < \dotsb < h_{k-1} < 0$. This proves that $|r(h)| = o(|h|^k)$.
 	
 	To prove that $p_k$ is unique, suppose $q$ is any polynomial of degree at most $k$ such that $|f(a+h) -q(h)| = o(|h|^k)$. Then 
-	\[ |p_k(h) - q(h)| = |p_k(h) - f(a+h) + f(a+h) - q(h)| \leq |f(a+h) - p_k(h)| + |f(a+h) - q(h)| \] 
+	\[ |p_k(h) - q(h)| \leq |f(a+h) - p_k(h)| + |f(a+h) - q(h)| \] 
 	so \cref{little-o-vector-space,less-than-small-is-small} imply that $|p_k(h) -  q(h)| = o(|h|^k)$. But $p_k - q$ is a polynomial of degree at most $k$, and a nonzero polynomial of degree at most $k$ cannot be $o(|h|^k)$ as $h \to 0$. So we must have $p_k = q$.
 \end{proof}
 
@@ -1149,7 +1198,7 @@ The following exercise shows that all of these implications are strict; in other
 	It's worth remarking that Taylor's theorem does not use the fact that $f^{(k)}$ is continuous; it merely requires that $f^{(k)}$ exists, ie, that $f$ is \emph{$k$ times differentiable}. This is evident in the proof above. 
 \end{remark}
 
-We can now return to our discussion of the pathology exhibited by \cref{extremum-no-sign-change,extremum-no-sign-change-continued}, and prove that such pathologies cannot occur under some hypotheses. We prepare for this discussion with the following lemma. 
+We can now return to our discussion of the pathology exhibited by the function $f(x) = x^4 \left( 2 + \sin(1/x) \right)$ from \cref{extremum-no-sign-change,extremum-no-sign-change-continued}, and prove that such pathologies cannot occur under some hypotheses. We prepare for this discussion with the following lemma. 
 
 \begin{lemma} \label{eventual-nonvanishing-derivative}
 	Suppose $f : U \to \R$ is $C^k$ for some $k \geq 1$, that 
@@ -1270,8 +1319,31 @@ We next discuss an example of a smooth function which gets ``infinitely flat'' a
 	Consider the function $f : \R \to \R$ defined as follows.
 	\[ f(x) = \begin{cases} e^{-1/x} & \text{if } x > 0 \\ 0 & \text{if } x \leq 0 \end{cases} \]
 	See \cref{infinitely-flat-graph}. 
+	\begin{figure}[ht]
+		\begin{center}
+			\begin{tikzpicture}
+			\begin{axis}[
+			xmin=-1,xmax=2,
+			ymin=-0.1,ymax=0.75,
+			ytick={0},
+			xtick={0},
+			xticklabels={},
+			yticklabels={},
+			axis lines=middle,
+			axis line style=lightgray,
+			width=0.75\textwidth
+			]
+			
+			
+			\addplot[black,style=thick,->] expression[domain=0.001:1.9,samples=100]{exp(-1/x)};
+			\addplot[black,style=thick,<-] expression[domain=-0.9:0,samples=2]{0};
+			\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		\caption{The graph of the function $f$ from \cref{infinitely-flat} that is ``infinitely flat'' at 0.}  \label{infinitely-flat-graph}
+	\end{figure}
 	\begin{enumerate}[(a)]
-		\item Use \cref{exponential-limit} to show, using the definition of the derivative \cref{derivative-definition-single}, that $f'(0) = 0$.
+		\item Use \cref{exponential-limit} to show that $f'(0) = 0$.
 		\item Check that
 		\[ f'(x) = \begin{cases} \dfrac{e^{-1/x}}{x^2} & \text{if } x > 0 \\ 0 & \text{if } x \leq 0. \end{cases} \]
 		You've already computed $f'(0)$. You can compute formulas for the derivative $f'(x)$ for $x > 0$ and for $x < 0$ using the usual rules for differentiation.
@@ -1285,31 +1357,6 @@ We next discuss an example of a smooth function which gets ``infinitely flat'' a
 	Thus $f$ is an example of a smooth function that is ``infinitely flat'' at $x = 0$, in the sense that $f^{(k)}(x) = 0$ for all $k$, but is not constantly equal to 0. 
 \end{exercise}
 
-
-\begin{figure}
-	\begin{center}
-		\begin{tikzpicture}
-		\begin{axis}[
-		xmin=-1,xmax=2,
-		ymin=-0.25,ymax=1.1,
-		ytick={1},
-		xtick={-1,1},
-		xticklabels={$-1$,1},
-		yticklabels={1},
-		axis lines=middle,
-		axis line style=lightgray,
-		width=0.75\textwidth
-		]
-		
-		
-		\addplot[black,style=thick,->] expression[domain=0.001:1.9,samples=100]{exp(-1/x)};
-		\addplot[black,style=thick,<-] expression[domain=-0.9:0,samples=2]{0};
-		\end{axis}
-		\end{tikzpicture}
-	\end{center}
-	\caption{The graph of a function that is ``infinitely flat'' at 0.}  \label{infinitely-flat-graph}
-\end{figure}
-
 \subsubsection*{Bump functions}
 
 Next up, we have ``bump functions.''\index{bump function} Recall that the ``support''\index{support} of a function $f : U \to \R$ is the closure of the set $\{ x \in U : f(x) \neq 0 \}$. A \emph{bump function} is a smooth function with compact support. 
@@ -1317,13 +1364,14 @@ Next up, we have ``bump functions.''\index{bump function} Recall that the ``supp
 \begin{example} \label{canonical-bump}
 	Consider the function $\psi : \R \to \R$ given by the following. 
 	\[ \psi(x) = \begin{cases} e^{-1/(1-x^2)} & \text{if } x \in (-1,1) \\ 0 & \text{otherwise}. \end{cases} \]
-	See \cref{canonical-bump-graph} for its graph. 
-	\begin{figure}
+	See \cref{canonical-bump-graph}. 
+	It is clear from the definition of $\psi$ that the support of $\psi$ is the closed interval $[-1,1]$. Moreover, observe that, if $f$ is the ``infinitely flat'' function\index{infinitely flat function@``infinitely flat'' function} from \cref{infinitely-flat} and $p : \R \to \R$ is the polynomial $p(x) = 1-x^2$, then $\psi = f \circ p$. Thus $\psi$ is smooth. 
+	\begin{figure}[ht]
 		\begin{center}
 			\begin{tikzpicture}
 			\begin{axis}[
 			xmin=-1.5,xmax=1.5,
-			ymin=-0.1,ymax=0.5,
+			ymin=-0.05,ymax=0.4,
 			ytick={0},
 			xtick={-1,1},
 			xticklabels={$-1$,1},
@@ -1344,7 +1392,6 @@ Next up, we have ``bump functions.''\index{bump function} Recall that the ``supp
 		\end{center}
 		\caption{The graph of the function $\psi$ from \cref{canonical-bump}.}  \label{canonical-bump-graph}
 	\end{figure}
-	It is clear from the definition of $\psi$ that the support of $\psi$ is the closed interval $[-1,1]$. Moreover, observe that, if $f$ is the ``infinitely flat'' function\index{infinitely flat function@``infinitely flat'' function} from \cref{infinitely-flat} and $p : \R \to \R$ is the polynomial $p(x) = 1-x^2$, then $\psi = f \circ p$. Thus $\psi$ is smooth. 
 \end{example}
 
 \begin{exercise}
@@ -1359,14 +1406,14 @@ Next up, we have ``bump functions.''\index{bump function} Recall that the ``supp
 
 Next up, we'll discuss an example of a ``bridge'' function.\index{bridge function@``bridge'' function} It will be constant on $(-\infty, -1]$, and also constant on $[1, \infty)$, but the values on these two intervals is different; and on $(-1,1)$, the function ``smoothly bridges the gap'' between the two values. 
 
-In discussing this example, we will invoke the fundamental theorem of calculus,\index{fundamental theorem of calculus} even though we have not proved it (or even defined integrals, for that matter). If you're unhappy with using things you haven't proved, you can find rigorous discussions of integration in many places (eg, \cite[chapter 5]{protter-morrey}, \cite[chapter 6]{rudin}, etc). Alternatively, you might also be interested in \cite[chapter 3, example 12]{counterexamples}, which gives an example of a ``bridging function'' that involves no integrals. 
+In discussing this example, we will invoke the fundamental theorem of calculus,\index{fundamental theorem of calculus} even though we have not proved it (or even defined integrals, for that matter). If you're unhappy with using things you haven't proved, you can find rigorous discussions of integration in many places (eg, \cite[chapter 5]{protter-morrey}, \cite[chapter 6]{rudin}, etc). Alternatively, you might also be interested in \cite[chapter 3, example 12]{counterexamples}, which gives an example of a ``bridging function'' that involves no integrals (but does involve a double exponential). 
 
-\begin{example} \label{integral-canonical-bump}
+\begin{example} \label{bridge-function}
 	Let $\psi$ be the bump function from \cref{canonical-bump}, and then consider 
 	\[ \eta(x) = \int_{-1}^x \psi(t)\, dt. \]
 	Then 
 	\[ \eta'(x) = \frac{d}{dx} \int_{-1}^x \psi(t)\, dt = \psi(x) \]
-	by the fundamental theorem of calculus. Thus $\eta$ is smooth, since $\eta' = \psi$ is smooth. Note moreover that $\eta$ is increasing, since $\eta' = \psi \geq 0$. Finally, it is clear from the geometric interpretation of integrals as ``area under the curve'' that $\eta$ is constantly 0 for all $x \leq -1$ and that it is constantly $\eta(1)$ for all $x \geq 1$. 
+	by the fundamental theorem of calculus. Thus $\eta$ is smooth, since $\eta' = \psi$ is smooth. Note moreover that $\eta$ is increasing, since $\eta' = \psi \geq 0$. Finally, it is clear from the geometric interpretation of integrals as ``area under the curve'' that $\eta$ is constantly equal to 0 for all $x \leq -1$ and that it is constantly equal to $\eta(1)$ for all $x \geq 1$. 
 \end{example}
 
 \begin{exercise} \label{constant-compact-zero-outside-neighborhood}
