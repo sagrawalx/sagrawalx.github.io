@@ -173,7 +173,7 @@ If $V$ is a finite dimensional vector space, we can construct a number of norms 
 
 \footnotetext{The \emph{Cauchy-Schwarz inequality}\index{cauchy schwarz inequality@Cauchy-Schwarz inequality} states that
 \[ (a_1 b_1  + \dotsb + a_n b_n)^2 \leq (a_1^2 + \dotsb + a_n^2) (b_1^2 + \dotsb + b_n^2) \]
-for all $a_1, \dotsc, a_n, b_1, \dotsc, b_n \in \R$. In other words, ``the square of the sum of the products is at most the product of the sum of the squares.'' Using the dot product, this can be phrased more succinctly as $|v \cdot w|^2 \leq |v|^2 |w|^2$ for all $v, w \in \R^n$. For a proof, see \cite[theorem 6.1]{protter-morrey}, for instance.}
+for all $a_1, \dotsc, a_n, b_1, \dotsc, b_n \in \R$. In other words, ``the square of the sum of the products is at most the product of the sums of the squares.'' Using the dot product, this can be phrased more succinctly as $|v \cdot w|^2 \leq |v|^2 |w|^2$ for all $v, w \in \R^n$. For a proof, see \cite[theorem 6.1]{protter-morrey}, for instance.}
 
 \begin{example} \label{max-norm} \index{max norm} \index{linfinity norm@$L^\infty$ norm|see {max norm}}
 	Suppose $V$ is a finite dimensional vector space, and $v_1, \dotsc, v_n$ is a basis for $V$. The \emph{$L^\infty$-norm}, or the \emph{max norm}, on $V$ with respect to this basis is defined by
@@ -207,9 +207,9 @@ and if $\lambda \in \R$, then
 \[ (\lambda f)(x) = \lambda f(x). \]
 
 \begin{definition} \label{sup-norm}
-	If $X$ is a set, we define the \emph{sup norm} of a function $f : X \to \R$, denoted $\|f\|_\spn$, by
-	\[ \|f\|_{\spn,X} = \sup_{x \in X} |f(x)|. \]
-	If $X$ can be inferred from context, we also write simply $\|f\|_\spn$. We say that $f$ is \emph{bounded} if $\|f\|_{\spn} < \infty$. 
+	If $X$ is a set, we define the \emph{sup norm} of a function $f : X \to \R$, denoted either $\|f\|_{\spn,X}$ or just $\|f\|_{\spn}$ when $X$ can be inferred from context, by
+	\[ \|f\|_{\spn} = \sup_{x \in X} |f(x)|. \]
+	We say that $f$ is \emph{bounded} if $\|f\|_{\spn} < \infty$. 
 \end{definition}
 
 \begin{exercise}
@@ -248,13 +248,13 @@ This is a linear map.
 
 \subsection{Norms on \texorpdfstring{$\R^n$}{Rn}}
 
-The $L^2$ norm (cf. \cref{l2-norm}) with respect to the standard basis $e_1, \dotsc, e_n$ of $\R^n$ is the usual norm we use on $\R^n$. Explicitly, if $v = (h_1, \dotsc, h_n) \in \R^n$, we define
-\[ |v| := \sqrt{h_1^2 + \dotsb + h_n^2}. \]
+The $L^2$ norm (cf. \cref{l2-norm}) with respect to the standard basis $e_1, \dotsc, e_n$ of $\R^n$ is the usual norm we use on $\R^n$. Explicitly, if $h = (h_1, \dotsc, h_n) \in \R^n$, we define
+\[ |h| := \sqrt{h_1^2 + \dotsb + h_n^2}. \]
 This norm is sometimes also called the \emph{euclidean norm} or the \emph{standard norm} on $\R^n$.\index{l2 norm@$L^2$ norm} \index{euclidean norm|see {l2 norm@$L^2$ norm}} 
 Unless explicitly specified otherwise, we regard $\R^n$ as a metric space with the metric induced by this norm (cf. \cref{norm-induces-metric}). 
 
-On the other hand, we could also endow $\R^n$ with the max norm (cf. \cref{max-norm}) with respect to the standard basis. We denote this norm by $|-|_\mx$.\index{max norm} Explicitly, if $v = (h_1, \dotsc, h_n) \in \R^n$, we have
-\[ |v|_\mx = \max\{ |h_1|, \dotsc, |h_n| \}. \]
+On the other hand, we could also endow $\R^n$ with the max norm (cf. \cref{max-norm}) with respect to the standard basis. We denote this norm by $|-|_\mx$.\index{max norm} Explicitly, if $h = (h_1, \dotsc, h_n) \in \R^n$, we have
+\[ |h|_\mx = \max\{ |h_1|, \dotsc, |h_n| \}. \]
 
 \section{Matrices}
 
@@ -370,8 +370,8 @@ We know from \cref{max-l2} that these two norms are equivalent. All of the follo
 The following generalizes \cref{gln-open}.
 
 \begin{lemma}
-	Suppose $k \leq \min\{m,n\}$ and let $Z = \{ A \in \mathscr{M}_{n \times m} : \rank(A) < k \}$. 
-	Then $Z$ is a closed subset of $\mathscr{M}_{n \times m}$. 
+	Suppose $k \leq \min\{m,n\}$. Then \[ Z = \{ A \in \mathscr{M}_{n \times m} : \rank(A) < k \} \]
+	is a closed subset of $\mathscr{M}_{n \times m}$. 
 \end{lemma}
 
 \begin{proof}
@@ -433,7 +433,7 @@ This contradicts \cref{operator-norm-is-norm}.
 \begin{exercise} \label{operator-norm-inverse}
 	If $\ell : \R^n \to \R^n$ is an invertible linear map, show that
 	\[ |\ell(v)| \geq \frac{|v|}{\|\ell^{-1}\|} \]
-	for all $v \in \R^n$. 
+	for all $v \in \R^n$. Conclude that $\|\ell\| \geq \|\ell^{-1}\|^{-1}$. 
 \end{exercise}
 
 \begin{exercise}[Submultiplicativity] \label{operator-norm-submultiplicative} \index{submultiplicativity}
@@ -443,7 +443,7 @@ This contradicts \cref{operator-norm-is-norm}.
 
 \subsection{Operator norm as a metric \texorpdfstring{$\star$}{*}}
 
-Since the operator norm is a norm by \cref{operator-norm-is-norm}, we can regard $\mathscr{L}(\R^m, \R^n)$ as a metric space by \cref{norm-induces-metric}. It turns out that many natural maps are continuous when we do this. For example, we have already seen that addition and scalar multiplication are continuous in \cref{addition-continuous,scalar-multiplication-continuous}. 
+Since the operator norm is a norm by \cref{operator-norm-is-norm}, we can regard $\mathscr{L}(\R^m, \R^n)$ as a metric space by \cref{norm-induces-metric}. It turns out that many natural maps are continuous when we do this. 
 
 \begin{exercise}[``Evaluation is continuous''] \label{evaluation-continuous}
 	Suppose $v_0 \in \R^m$ is a fixed vector. Then the ``evaluate at $v_0$'' function $\mathscr{L}(\R^m, \R^n) \to \R^n$ given by $\ell \mapsto \ell(v_0)$ is continuous. \begin{hint} Since the ``evaluate at $v_0$'' function is linear, it is sufficient to check continuity at 0. \end{hint}

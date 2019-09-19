@@ -96,7 +96,7 @@ Writing assignment due (11:59pm). [Prompt](/teaching/prompt.pdf).
 <td rowspan="2">Fri</td>
 <td>Single variable: $C^k$ hierarchy</td>
 <td>Read: 1.4  
-Do: 2, 8, 11, 24</td>
+Do: 2, 8, 11, 26</td>
 <td>
 </td>
 </tr>
