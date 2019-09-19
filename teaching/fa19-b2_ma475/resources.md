@@ -33,3 +33,7 @@ And you might consider using the following to supplement your readings on manifo
     * This was also listed above. Chapters 4 and 5 cover manifolds, though only manifolds that live inside $\mathbb{R}^n$. Chapter 6 talks about tangent spaces, but its interspersed with things about multilinear algebra that we won't be discussing.
 * Spivak. *A Comprehensive Introduction to Differential Geometry.* Volume 1, 3rd Edition.
     * Chapters 1, 3, and 5 overlap significantly with the latter part of our class. If I had to pick one more topic out of this book to include in our course, it would be Chapter 5, "Vector fields and differential equations."
+* Tu. *An Introduction to Manifolds.* 2nd Edition.
+    * Sections 1–2, 5–9, and 11–13 are the parts that overlap with our course, but this book contains much, much more information than we'll be discussing. Section 14 overlaps with chapter 5 of Spivak's book cited above.
+
+You may also find Serre's talk "[How to Write Mathematics Badly](https://www.youtube.com/watch?v=tJZpdXWm4Gg)" useful for improving your proof writing. 

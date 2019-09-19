@@ -21,7 +21,7 @@ The final product you'll be working towards will have two parts:
     * By "original exposition," I mean that you don't need to prove a whole new theorem, but everything should be written up in your own words.
     * Pictures are always a great idea.
     * You should also cite references that you used.
-    * If you want to do something involving doing some programming, that would be great! Talk to me and we'll figure what parts of the above "requirements" make sense for what you have in mind.
+    * If you want to do something involving applications and "at least one theorem and its proof" doesn't really make sense for what you have in mind, that's perfectly fine! Just talk to me first and we'll figure what does make sense for what you have in mind.
     * Send the document to me as a PDF before the start of class on the last day of class (fourth Wednesday).
 2. A presentation to share the highlights of the topic with the rest of the class.
     * It should take 10-15 minutes.
@@ -30,13 +30,13 @@ The final product you'll be working towards will have two parts:
     * You could do slides ("Beamer" is the TeX way of doing slides), or you could give a chalk talk. Or whatever is appropriate for what you have in mind. Feel free to be creative!
     * You'll present during class on the last day of class (fourth Wednesday).
 
-For both of these, your intended audience is one of your classmates outside of your group: someone who's familiar with topics we've discussed in our class and has taken all of the prerequisite classes, but not necessarily anything more than that.
+For both of these, your intended audience is one of your classmates outside of your group: someone who's familiar with topics we've discussed in our class and has taken all of the prerequisite classes (eg, MA375 and MA220), but not necessarily anything more than that.
 
 There will be two deadlines related to the project before the last day. They will show up on the [course calendar](index). Here's what you need to have done by each of the deadlines.
 
-* Proposal deadline: Nothing fancy required. Form your group (2-3 people) and pick out a topic. Then one person in your group should send me an email by the deadline saying who's in the group and what you'll be working on.
+* Proposal deadline: Nothing fancy is required. Just form your group (of 2-3 people), pick out a topic, and then one person in your group should send me an email by the deadline saying who's in the group and what you'll be working on. I'll want different groups to working on different topics, so I may suggest some re-organizing.
 
-* Draft deadline: I'd like to see a a draft of the document. It doesn't need to be complete, of course. It might just contain some of the basic definitions and theorem statements, perhaps an example or a picture. I'm mostly looking for an indication that you've started thinking about your project in earnest.
+* Draft deadline: I'd like to see a a draft of the document. It doesn't need to be complete, of course. It might just contain some of the basic definitions and theorem statements, perhaps an example or a picture. I'm mostly looking for an indication that you've started thinking about your project topic in earnest.
 
 ## Grading
 
@@ -50,16 +50,20 @@ Your project score will be based on the following criteria.
 
 There are *many* possibilities! I encourage you to be creative. I only ask that it not be something that we've spent time discussing as a class.
 
-If you're struggling to find things, here's a short list of things that I think might make interesting projects. I'll keep adding to this list as I think of more.
+If you're struggling to find things, here's a short list of things that I think might make interesting projects. If you'd like my help finding references for you to look at for any of these topics, just ask! I'll keep adding to this list as I think of more.
 
-* Power rule for arbitrary exponents (this would need to include a rigorous construction of the real numbers)
-* L'Hôpital's rule
-* Differentiation of power series
-* Implicit function theorem
-* Constant rank theorem
-* Morse's lemma
-* Fundamental theorem of calculus
-* Exotic manifold structures (eg, exotic $\mathbb{R}^4$s, or exotic spheres)
-* Hairy ball theorem
-
-If you'd like my help finding references for you to look at for any of these, just let me know!
+* Single variable calculus
+    * Power rule for arbitrary exponents (including a rigorous construction of the real numbers)
+    * Volterra's construction (of a differentiable function $f$ such that $f'$ is continuous on an arbitrary dense $G_\delta$ set)
+    * Pompeiu's construction (of a non-constant differentiable function $f$ such that $f' = 0$ on a dense subset of the domain)
+    * L'Hôpital's rule
+    * Mean value forms of the remainder in Taylor's theorem (Lagrange form, Cauchy form)
+    * Fundamental theorem of calculus (including a rigorous construction of the Riemann integral)
+* Multivariable calculus
+    * Implicit function theorem
+    * Morse's lemma
+    * Constant rank theorem
+* Manifolds
+    * Exotic manifold structures (eg, exotic $\mathbb{R}^4$s, or exotic spheres)
+    * Regular level set theorem (sometimes also called the preimage theorem, or the submersion theorem, ...)
+    * Hairy ball theorem

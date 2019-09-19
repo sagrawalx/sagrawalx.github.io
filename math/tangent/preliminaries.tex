@@ -18,7 +18,7 @@ Suppose $g$ is a positive function. \Cref{little-o-definition} below formulates 
 
 \begin{definition} \label{little-o-definition}
 	A function $f : X \setminus \{x_0\} \to \R$ is \emph{little-oh of $g$ as $x$ tends to $x_0$}, written \[ f(x) = o(g(x)) \text{ as } x \to x_0 \] 
-	if, for every $\epsilon > 0$, there exists an open neighborhood $U$ of $x_0$ such that $f(x) \leq \epsilon g(x)$ for all $x \in U \setminus \{x_0\}$. Equivalently, this means that 
+	if, for every $\epsilon > 0$, there exists an open neighborhood $U$ of $x_0$ such that $|f(x)| \leq \epsilon g(x)$ for all $x \in U \setminus \{x_0\}$. Equivalently, this means that 
 	\[ \lim_{x \to x_0} \frac{|f(x)|}{g(x)} = 0. \]
 	When $x_0$ can be inferred from context, we write simply $f = o(g)$. 
 \end{definition} 
@@ -125,7 +125,18 @@ The $\delta$ obtained by going through the above process then has the desired pr
 \end{exercise}
 
 \begin{exercise} \label{scalar-multiplication-continuous}
-	Suppose $\|-\|$ is a norm on a vector space $V$. Show that the function $\R \times V \to V$ given by $(\lambda, v) \mapsto \lambda v$ is continuous, where $\R \times V$ is regarded as a metric space via one of the metrics defined in \cref{product-metric}.\index{product!product metric} 
+	Suppose $|-|$ is a norm on a vector space $V$. Show that the function $\R \times V \to V$ given by $(\lambda, v) \mapsto \lambda v$ is continuous, where $\R \times V$ is regarded as a metric space via one of the metrics defined in \cref{product-metric}.\index{product!product metric} 
+\end{exercise}
+
+\begin{exercise} \label{bounded-continuous}
+	Suppose $|-|$ is a norm on a vector space $V$ and $|-|'$ is a norm on a vector space $W$ and $\ell : V \to W$ is a linear map. Then the following are equivalent. 
+	\begin{enumerate}[(a)]
+		\item $\ell$ is continuous.
+		\item There exists a constant $M > 0$ such that $|\ell(v)|' \leq M|v|$ for all $v \in V$. 
+	\end{enumerate}
+	\begin{hint}
+		The harder direction is (a) implies (b). For this direction, since $\ell$ is continuous at 0, there exists $\delta > 0$ such that $|\ell(v) - \ell(0)|' \leq 1$ whenever $|v-0| \leq \delta$. Then note that for any nonzero vector $v \in V$, the vector $\delta v/|v|$ is within $\delta$ of 0, so the above inequality applies. 
+	\end{hint}
 \end{exercise}
 
 \subsection{Equivalence of norms}
@@ -162,7 +173,7 @@ If $V$ is a finite dimensional vector space, we can construct a number of norms 
 
 \footnotetext{The \emph{Cauchy-Schwarz inequality}\index{cauchy schwarz inequality@Cauchy-Schwarz inequality} states that
 \[ (a_1 b_1  + \dotsb + a_n b_n)^2 \leq (a_1^2 + \dotsb + a_n^2) (b_1^2 + \dotsb + b_n^2) \]
-for all $a_1, \dotsc, a_n, b_1, \dotsc, b_n \in \R$. For a proof, see \cite[theorem 6.1]{protter-morrey}, for instance.}
+for all $a_1, \dotsc, a_n, b_1, \dotsc, b_n \in \R$. In other words, ``the square of the sum of the products is at most the product of the sum of the squares.'' Using the dot product, this can be phrased more succinctly as $|v \cdot w|^2 \leq |v|^2 |w|^2$ for all $v, w \in \R^n$. For a proof, see \cite[theorem 6.1]{protter-morrey}, for instance.}
 
 \begin{example} \label{max-norm} \index{max norm} \index{linfinity norm@$L^\infty$ norm|see {max norm}}
 	Suppose $V$ is a finite dimensional vector space, and $v_1, \dotsc, v_n$ is a basis for $V$. The \emph{$L^\infty$-norm}, or the \emph{max norm}, on $V$ with respect to this basis is defined by
@@ -187,6 +198,31 @@ In fact, here is vast generalization of \cref{max-l2}.
 \begin{theorem} \label{finite-dim-norm}
 	If $V$ is a finite dimensional vector space, all norms on $V$ are equivalent.\index{equivalence!of norms}
 \end{theorem}
+
+\subsection{Sup norm on real-valued functions}
+
+Let $X$ be a set and consider the set of functions $X \to \R$. This set is naturally a vector space under pointwise operations: if $f, g : X \to \R$, then
+\[ (f+g)(x)= f(x) + g(x) \]
+and if $\lambda \in \R$, then
+\[ (\lambda f)(x) = \lambda f(x). \]
+
+\begin{definition} \label{sup-norm}
+	If $X$ is a set, we define the \emph{sup norm} of a function $f : X \to \R$, denoted $\|f\|_\spn$, by
+	\[ \|f\|_{\spn,X} = \sup_{x \in X} |f(x)|. \]
+	If $X$ can be inferred from context, we also write simply $\|f\|_\spn$. We say that $f$ is \emph{bounded} if $\|f\|_{\spn} < \infty$. 
+\end{definition}
+
+\begin{exercise}
+	Show that $\|-\|_\spn$ is a norm on the vector space of bounded functions $X \to \R$.
+\end{exercise}
+
+\begin{definition}[Uniform convergence]
+	A sequence of functions $f_n : X \to \R$ \emph{converges uniformly} to a function $f : X \to \R$ if, for every $\epsilon > 0$, there exists $N$ such that $\|f_n - f\|_\spn < \epsilon$ for all $n \geq N$. 
+\end{definition}
+
+\begin{definition}[Uniformly Cauchy sequences]
+	A sequence of functions $f_n : X \to \R$ is \emph{uniformly Cauchy} if, for every $\epsilon > 0$, there exists $N$ such that $\|f_m - f_n\|_\spn < \epsilon$ for all $m, n \geq N$. 
+\end{definition}
 
 \section{Euclidean space} \label{euclidean}
 
@@ -219,23 +255,6 @@ Unless explicitly specified otherwise, we regard $\R^n$ as a metric space with t
 
 On the other hand, we could also endow $\R^n$ with the max norm (cf. \cref{max-norm}) with respect to the standard basis. We denote this norm by $|-|_\mx$.\index{max norm} Explicitly, if $v = (h_1, \dotsc, h_n) \in \R^n$, we have
 \[ |v|_\mx = \max\{ |h_1|, \dotsc, |h_n| \}. \]
-
-\subsection{Sup norm on \texorpdfstring{$\R^n$}{Rn}-valued functions}
-
-Let $X$ be a set and consider the set of functions $X \to \R^n$. This set is naturally a vector space under pointwise operations: if $f, g : X \to \R^n$, then
-\[ (f+g)(x)= f(x) + g(x) \]
-and if $\lambda \in \R$, then
-\[ (\lambda f)(x) = \lambda f(x). \]
-
-\begin{definition}
-	If $X$ is a set, we define the \emph{sup norm} of a function $f : X \to \R$, denoted $\|f\|_\spn$, by
-	\[ \|f\|_{\spn,X} = \sup_{x \in X} |f(x)|. \]
-	If $X$ can be inferred from context, we also write simply $\|f\|_\spn$. We say that $f$ is \emph{bounded} if $\|f\|_{\spn} < \infty$. 
-\end{definition}
-
-\begin{exercise}
-	Show that $\|-\|_\spn$ is a norm on the vector space of bounded\footnotemark\ functions $X \to \R^n$.
-\end{exercise}
 
 \section{Matrices}
 
@@ -338,7 +357,7 @@ We know from \cref{max-l2} that these two norms are equivalent. All of the follo
 	Since $\det : \mathscr{M}_{n \times n} \to \R$ is continuous, and $\R \setminus \{0\}$ is an open subset of the codomain, we see that $\GL_n = \text{det}^{-1}(\R \setminus \{0\})$ must be open in $\mathscr{M}_{n \times n}$. 
 \end{proof}
 
-\begin{lemma} \label{matrix-inversion-homeomorphism} \index{gln@$GL_n$} \index{homeomorphism}
+\begin{lemma} \label{matrix-inversion-homeomorphism} \index{gln@$\GL_n$} \index{homeomorphism}
 	The function $\GL_n \to \GL_n$ given by $A \mapsto A^{-1}$ is a homeomorphism.\index{homeomorphism} 
 \end{lemma}
 
@@ -411,17 +430,23 @@ so
 This contradicts \cref{operator-norm-is-norm}. 
 \end{proof}
 
+\begin{exercise} \label{operator-norm-inverse}
+	If $\ell : \R^n \to \R^n$ is an invertible linear map, show that
+	\[ |\ell(v)| \geq \frac{|v|}{\|\ell^{-1}\|} \]
+	for all $v \in \R^n$. 
+\end{exercise}
+
+\begin{exercise}[Submultiplicativity] \label{operator-norm-submultiplicative} \index{submultiplicativity}
+	Suppose $\ell : \R^m \to \R^n$ and $\ell' : \R^n \to \R^p$ are both linear maps. Show that \[ \|\ell' \circ \ell\| \leq \|\ell'\| \cdot \|\ell\|. \]
+	Give an example to show that this inequality can be strict. 
+\end{exercise}
+
 \subsection{Operator norm as a metric \texorpdfstring{$\star$}{*}}
 
 Since the operator norm is a norm by \cref{operator-norm-is-norm}, we can regard $\mathscr{L}(\R^m, \R^n)$ as a metric space by \cref{norm-induces-metric}. It turns out that many natural maps are continuous when we do this. For example, we have already seen that addition and scalar multiplication are continuous in \cref{addition-continuous,scalar-multiplication-continuous}. 
 
 \begin{exercise}[``Evaluation is continuous''] \label{evaluation-continuous}
 	Suppose $v_0 \in \R^m$ is a fixed vector. Then the ``evaluate at $v_0$'' function $\mathscr{L}(\R^m, \R^n) \to \R^n$ given by $\ell \mapsto \ell(v_0)$ is continuous. \begin{hint} Since the ``evaluate at $v_0$'' function is linear, it is sufficient to check continuity at 0. \end{hint}
-\end{exercise}
-
-\begin{exercise}[Submultiplicativity] \label{operator-norm-submultiplicative} \index{submultiplicativity}
-	Suppose $\ell : \R^m \to \R^n$ and $\ell' : \R^n \to \R^p$ are both linear maps. Show that \[ \|\ell' \circ \ell\| \leq \|\ell'\| \cdot \|\ell\|. \]
-	Give an example to show that this inequality can be strict. 
 \end{exercise}
 
 \begin{exercise}[``Composition is continuous''] \label{composition-continuous}
@@ -456,73 +481,119 @@ This is a bare-bones introduction to topological spaces, intended for readers wh
 
 \subsection{Basics} \label{topological-spaces-basics}
 
-\begin{definition} \index{topology} \index{topological space} \index{open!open subset}
-	Let $X$ be a set. A \emph{topology} on $X$ is a set $\tau_X$ of subsets of $X$, called \emph{open subsets}, which satisfy the following axioms.
+\begin{definition} \label{topological-space-definition} \index{topology} \index{topological space} \index{open!open subset}
+	Let $X$ be a set. A \emph{topology} on $X$ is a set $\tau_X$ of subsets of $X$, called \emph{open} subsets, which satisfy the following axioms.
 	\begin{enumerate}[(T1)]
 		\item $\emptyset$ and $X$ are both open subsets. 
 		\item The union of an arbitrary collection of open subsets is open. 
 		\item The intersection of a finite collection of open subsets is open. 
 	\end{enumerate}
-	A pair $(X, \tau_X)$ consisting of a set $X$ and a topology $\tau$ on $X$ is called a \emph{topological space}. Often, we write simply ``$X$'' in place of the pair $(X, \tau_X)$. 
+	Also, a subset $F$ such that $X \setminus F$ is open is called a \emph{closed} subset of $X$. A pair $(X, \tau_X)$ consisting of a set $X$ and a topology $\tau$ on $X$ is called a \emph{topological space}. Often, we write simply ``$X$'' in place of the pair $(X, \tau_X)$. 
 \end{definition}
 
-Topological spaces come up throughout mathematics, and in general can be very very bizarre. We will not delve into the general theory of topological spaces, and won't see any of these bizarre examples. Instead, you are encouraged to content yourself with the following examples. 
+\subsubsection*{Examples}
+
+Topological spaces come up throughout mathematics, and in general can be very very bizarre. We will not delve into the general theory of topological spaces, and won't see any of these bizarre examples. Instead, you are encouraged to content yourself with the following examples and constructions. 
+
+Here are two examples we've already seen. 
 
 \begin{example}[Metric spaces] \label{metric-to-topological}
 	If $X$ is a metric space, the collection of subsets of $X$ that are open with respect to the metric defines a topology on $X$. Thus, every metric space can be regarded as a topological space in a natural way. It's worth noticing that this process of regarding a metric space as a topological space ``forgets information,'' since equivalent metrics on a set will define the same topology. 
-\end{example}
-
-\begin{example}[Quotient spaces] \label{quotient-space} \index{quotient space}
-	Suppose $Y$ is any topological space (for instance, one that comes from a metric space), and let $\sim$ be an equivalence relation on $Y$. For an element $y \in Y$, let $[y]$ denote its equivalence class, and let $X = Y/\sim$ denote the set of all equivalence classes. There is a natural function $\pi : Y \to X$ given by sending a point $y \in Y$ to its equivalence class $[y]$. We define a topology on $X$, called the \emph{quotient topology}, by declaring a subset $U \subseteq X$ to be open if and only if its preimage \[ \pi^{-1}(U) = \{ y \in Y : [y] \in U \} \] is open in $Y$. 
-\end{example}
-
-\begin{example}[Product spaces] \label{product-space} \index{product!product topology}
-	Suppose $X$ and $Y$ are topological spaces. We define a topology $\tau$ on the cartesian product $X \times Y$ by declaring a subset $U$ to be open if it is a union of sets of the form $V \times W$ where $U$ and $V$ are open subsets of $X$ and $Y$, respectively. This is called the \emph{product topology} on $X \times Y$. 
 \end{example}
 
 \begin{example} \label{finite-dim-canonical-topology} \index{canonical topology}
 	Suppose $V$ is a finite dimensional vector space. Then all norms on $V$ are equivalent by \cref{finite-dim-norm}, so they all define the same topology on $V$ by \cref{metric-to-topological,equivalent-norm-equivalent-metric}. This topology is called the \emph{canonical topology} on $V$. Unless explicitly specified otherwise, we will always regard finite dimensional vector spaces as topological spaces using the canonical topology. 
 \end{example}
 
-We now make a few further definitions that readers are invited to compare against the definitions they are familiar with from their experience with metric spaces. 
+Here are a few ways of producing new topological spaces out of ones we already have. 
 
-\begin{definition}[Closed subsets] \index{closed}
-	If $X$ is a topological space, a subset $F$ is \emph{closed} if its complement $U$ is \emph{open}. 
-\end{definition}
+\begin{example}[Subspace] \label{subspace-topology} \index{subspace} \index{subspace!subspace topology}
+	If $X$ is a topological space and $S$ is a subset, then the \emph{subspace topology} on $S$ is
+	\[ \tau_S := \{ S \cap U : U \in \tau_X \}. \]
+	Further, $S$ equipped with the subspace topology is called a \emph{subspace} of $X$. 
+\end{example}
 
-\begin{definition}[Continuous functions] \index{continuous}
+\begin{example}[Product spaces] \label{product-space} \index{product!product topology}
+	Suppose $X$ and $Y$ are topological spaces. We define a topology $\tau$ on the cartesian product $X \times Y$ by declaring a subset $U$ to be open if it is a union of sets of the form $V \times W$ where $U$ and $V$ are open subsets of $X$ and $Y$, respectively. This is called the \emph{product topology} on $X \times Y$. 
+\end{example}
+
+\begin{example}[Quotient spaces] \label{quotient-space} \index{quotient space}
+	Suppose $Y$ is any topological space, and let $\sim$ be an equivalence relation on $Y$. For an element $y \in Y$, let $[y]$ denote its equivalence class, and let $X = Y/\sim$ denote the set of all equivalence classes. There is a natural function $\pi : Y \to X$ given by sending a point $y \in Y$ to its equivalence class $[y]$. We define a topology on $X$, called the \emph{quotient topology}, by declaring a subset $U \subseteq X$ to be open if and only if its preimage \[ \pi^{-1}(U) = \{ y \in Y : [y] \in U \} \] is open in $Y$. 
+\end{example}
+
+And here is how subspaces and product spaces interact with metric spaces and finite dimensional vector spaces. 
+
+\begin{exercise} \label{metric-subspace}
+	Suppose $X$ is a metric space and $S$ is a subset. We can then regard $X$ as a topological space as in \cref{metric-to-topological} and then we have a subspace topology $\tau_1$ on $S$. On the other hand, we can restrict the metric on $X$ to a metric on $S$ to regard $S$ itself as a metric space, and then forget the metric and just remember the topology $\tau_2$ on $S$ as in \cref{metric-to-topological}. Show that $\tau_1 = \tau_2$. 
+\end{exercise}
+
+\begin{exercise}
+	Suppose $V$ is a finite dimensional vector space and $U$ is a subspace. If we regard $V$ as a topological space with the canonical topology of \cref{finite-dim-canonical-topology}, we can then give $U$ the subspace topology $\tau_1$. On the other hand, we can also regard $U$ as a vector space in its own right and give $U$ the canonical topology $\tau_2$. Show that $\tau_1 = \tau_2$.  
+\end{exercise}
+
+\subsubsection*{Continuous functions}
+
+\begin{definition}[Continuous functions] \label{continuous-definition} \index{continuous}
 	If $X$ and $Y$ are topological spaces, a function $f : X \to Y$ is \emph{continuous} if $f^{-1}(U)$ is an open subset of $X$ whenever $U$ is an open subset of $Y$. 
 \end{definition}
 
-\begin{example}
-	If $Y$ is a topological space, $\sim$ an equivalence relation on $Y$, and $X = Y/\sim$ the quotient space as in \cref{quotient-space} above, then the map $\pi : Y \to X$ which carries a point $y \in Y$ to its equivalence class is continuous. This follows immediately from the definition of the quotient topology.
-\end{example}
+Continuous functions are stable under composition. 
 
 \begin{exercise}
 	If $f : X \to Y$ and $g : Y \to Z$ are continuous functions between topological spaces, then $g \circ f$ is also continuous. 
 \end{exercise}
 
+The constructions we discussed above come equipped with associated continuous maps. 
+\begin{itemize}
+	\item If $X$ is a topological space and $S$ is a subspace, the inclusion map $i : S \to X$ is continuous. 
+	\item Suppose $X$ and $Y$ are topological spaces. Then the maps $\pi_X : X \times Y \to X$ given by $\pi_X(x,y) = x$ and $\pi_Y : X \times Y \to Y$ given by $\pi_Y(x,y) = y$ are both continuous. 
+	\item If $Y$ is a topological space, $\sim$ an equivalence relation on $Y$, and $X = Y/\sim$ the quotient space as in \cref{quotient-space} above, then the map $\pi : Y \to X$ which carries a point $y \in Y$ to its equivalence class is continuous.
+\end{itemize}
+
+The canonical topology\index{canonical topology} on a finite dimensional vector space we discussed in \cref{finite-dim-canonical-topology} above also has some nice continuity properties. 
+
 \begin{example}
-	If $V$ is a finite dimensional vector space, then the addition map $V \times V \to V$ and the scalar multiplication map $\R \times V \to V$ are continuous functions (using the product topology of \cref{product-space} on the domains). This statement is precisely the same as \cref{addition-continuous,scalar-multiplication-continuous}.\index{canonical topology}
+	If $V$ is a finite dimensional vector space, then the addition map $V \times V \to V$ and the scalar multiplication map $\R \times V \to V$ are continuous functions (where $V$ has the canonical topology\index{canonical topology} and $V \times V$ and $\R \times V$ have the product topologies \ref{product-space}). This statement is precisely the same as \cref{addition-continuous,scalar-multiplication-continuous}.
 \end{example}
 
-\begin{example} \index{canonical topology}
-	Suppose $\ell : V \to W$ is a linear map between two finite dimensional vector spaces. Then $\ell$ is automatically continuous. 
-\end{example}
 
-\begin{definition}[Homeomorphisms] \index{homeomorphism} \index{homeomorphism!homeomorphism onto its image}
-	Suppose $X$ and $Y$ are topological spaces and $f : X \to Y$ is a function. Then $f$ is a \emph{homeomorphism} if it is bijective, continuous, and $f^{-1} : Y \to X$ is continuous. More generally, $f$ is a \emph{homeomorphism onto its image} if is injective, continuous, and $f^{-1} : f(X) \to X$ is also continuous. 
+\begin{lemma} \label{linear-continuous}
+	Suppose $\ell : V \to W$ is a linear map between two finite dimensional vector spaces. Then $\ell$ is automatically continuous (with respect to the canonical topologies\index{canonical topology} on $V$ and $W$). 
+\end{lemma}
+
+\begin{proof}
+	Choose a basis $w_1, \dotsc, w_r$ for $\ell(V)$, and extend it to a basis $w_1, \dotsc, w_n$ for $W$. For each $w_1, \dotsc, w_r$, choose vectors $v_1, \dotsc, v_r$ such that $\ell(v_i) = w_i$. Linear independence of $w_1, \dotsc, w_r$ guarantees linear independence of $v_1, \dotsc, v_r$. Choose a basis $v_{r+1}, \dotsc, v_m$ for the null space $\ker(\ell)$. Then $v_1, \dotsc, v_r, v_{r+1}, \dotsc, v_m$ is a basis for $V$ (exercise). Now consider the max norms with respect to the bases $v_1, \dotsc, v_m$ on $V$ and $w_1, \dotsc, w_n$ on $W$, as in \cref{max-norm}. If $v = a_1 v_1 + \dotsb + a_n v_m$, we have 
+	\[ |\ell(v)|_\mx = |a_1w_1 + \dotsb + a_r w_r| = \max\{ |a_1|, \dotsc, |a_r| \} \leq \max\{ |a_1|, \dotsc, |a_n|\} =  |v|_\mx \]
+	so \cref{bounded-continuous} tells us that $\ell$ is continuous with respect to the max norm. Since the topologies determined by the max norms on $V$ and $W$ are precisely the canonical topologies (cf. \cref{finite-dim-canonical-topology}), we are done.  
+\end{proof}
+
+\subsubsection*{Open maps and homeomorphisms}
+
+\begin{definition}[Open map] \index{open!open map} \label{open-map-definition}
+	Suppose $X$ and $Y$ are topological spaces and $f : X \to Y$ is a function. Then $f$ is \emph{open} if $f(U)$ is an open subset of $Y$ whenever $U$ is an open subset of $X$. 
 \end{definition}
 
-\begin{definition}[Subspace] \label{subspace-topology} \index{subspace} \index{subspace!subspace topology}
-	If $X$ is a topological space and $S$ is a subset, then the \emph{subspace topology} on $S$ is
-	\[ \tau_S := \{ S \cap U : U \in \tau_X \}. \]
-	Further, $S$ equipped with the subspace topology is called a \emph{subspace} of $X$. 
+\begin{definition}[Homeomorphisms] \index{homeomorphism} \index{homeomorphism!homeomorphism onto its image} \label{homeomorphism-definition}
+	Suppose $X$ and $Y$ are topological spaces and $f : X \to Y$ is a function. Then $f$ is a \emph{homeomorphism} if it is bijective, continuous, and $f^{-1} : Y \to X$ is continuous. More generally, $f$ is a \emph{homeomorphism onto its image} if is injective, continuous, and $f^{-1} : f(X) \to X$ is continuous (where $f(X)$ is regarded as a topological spaces with the subspace topology \ref{subspace-topology} that it inherits from $Y$). 
 \end{definition}
+
+Here is how these two notions are related to one another. 
+
+\begin{exercise} \label{opens-and-homeomorphisms}
+	Suppose $f : X \to Y$ is injective and continuous. 
+	\begin{enumerate}[(a)]
+		\item Suppose $f$ is open. Show that $f$ is a homeomorphism onto its image. 
+		\item Suppose $f : X \to Y$ is a homeomorphism onto its image and that $f(X)$ is an open subset of $Y$. Show that $f$ is open. 
+	\end{enumerate}
+\end{exercise}
 
 \begin{exercise}
-	If $X$ is a topological space and $S$ is a subspace, prove that the inclusion map $i : S \to X$ is continuous. 
+	Let $f : \R \to \R^2$ be the function $f(x) = (x,0)$. Show that $f$ is \emph{not} open, but that it \emph{is} a homeomorphism onto its image. 
 \end{exercise}
+
+\begin{example} \label{linear-isomorphism-homeomorphism}
+	Suppose $\ell : V \to W$ is an isomorphism of finite dimensional vector spaces. Then $\ell$ is continuous by \cref{linear-continuous}. But $\ell^{-1} : W \to V$ is also linear and hence continuous (again, by \cref{linear-continuous}), so $\ell$ is a homeomorphism. 
+\end{example}
 
 \subsection{Hausdorff spaces \texorpdfstring{$\star$}{*}}
 

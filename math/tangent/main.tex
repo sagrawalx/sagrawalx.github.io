@@ -17,11 +17,20 @@
 \raggedbottom
 \recalctypearea
 
-% Miscellaneous
-\usepackage{enumerate, tikz-cd, color, cancel, microtype, verbatim, pgfplots, makeidx}
+% Pgfplots
+\usepackage{pgfplots}
 \usepgfplotslibrary{fillbetween}
 \pgfplotsset{compat=1.15}
+\usepgfplotslibrary{colorbrewer}
+\usepgfplotslibrary{external}
+\AtBeginEnvironment{tikzcd}{\tikzexternaldisable}
+\AtEndEnvironment{tikzcd}{\tikzexternalenable}
+\tikzexternalize[prefix=figures/]
+
+% Miscellaneous
+\usepackage{makeidx, enumerate, toolbox, tikz-cd, color, cancel, microtype, verbatim}
 \usepackage[colorlinks=true,hypertexnames=false]{hyperref}
+\hypersetup{linkcolor=red}
 \makeindex
 
 % Numbering and environments
@@ -56,6 +65,7 @@
 \newtheorem*{hint}{Possible hint}
 \newtheorem*{caution}{Caution}
 \newtheorem*{proofsketch}{Proof sketch}
+\newtheorem*{unimportantremark}{Unimportant remark}
 
 \crefname{exercise}{exercise}{exercises}
 \Crefname{exercise}{Exercise}{Exercises}

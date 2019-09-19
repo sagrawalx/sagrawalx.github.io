@@ -1,4 +1,4 @@
-\begin{thebibliography}{GVL13}
+\begin{thebibliography}{GMM13}
 
 \bibitem[Axl15]{axler}
 Sheldon Axler.
@@ -6,6 +6,13 @@ Sheldon Axler.
 \newblock Undergraduate Texts in Mathematics. Springer, third edition, 2015.
 \newblock \href {http://dx.doi.org/10.1007/978-3-319-11080-6}
   {\path{doi:10.1007/978-3-319-11080-6}}.
+
+\bibitem[GMM13]{gadea}
+Pedro~M. Gadea, Jaime Mu\~{n}oz Masqu\'{e}, and Ihor~V. Mykytyuk.
+\newblock {\em Analysis and algebra on differentiable manifolds}.
+\newblock Problem Books in Mathematics. Springer, second edition, 2013.
+\newblock \href {http://dx.doi.org/10.1007/978-94-007-5952-7}
+  {\path{doi:10.1007/978-94-007-5952-7}}.
 
 \bibitem[GO03]{counterexamples}
 Bernard~R. Gelbaum and John M.~H. Olmsted.
@@ -63,5 +70,13 @@ Michael Spivak.
 \newblock {\em A Comprehensive Introduction to Differential Geometry},
   volume~I.
 \newblock Publish or Perish, Inc, third edition, 2005.
+
+\bibitem[SR02]{saint-raymond}
+Jean Saint~Raymond.
+\newblock Local inversion for differentiable functions and the {D}arboux
+  property.
+\newblock {\em Mathematika}, 49(1-2):141--158 (2004), 2002.
+\newblock \href {http://dx.doi.org/10.1112/S0025579300016132}
+  {\path{doi:10.1112/S0025579300016132}}.
 
 \end{thebibliography}

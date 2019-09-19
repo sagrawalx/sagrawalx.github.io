@@ -211,7 +211,7 @@ Let $f : X \to Y$ be a smooth map of manifolds and $p \in X$ a point. Given a cu
 This allows us to make the following definition. We will shortly see that this is the ``ultimate'' generalization of derivatives. 
 
 \begin{definition} \index{pushforward}
-	Let $f : X \to Y$ be a smooth map of manifolds and $p \in X$ a point. If $\gamma$ is a curve in $X$ based at $p$, we define its \emph{pushforward} $f_*(v_\gamma) \in T_{f(p)}Y$ to be the equivalence class of the curve $f \circ \gamma$. This defines the \emph{pushforward map} $f_* : T_p X \to T_{f(p)} Y$. 
+	Let $f : X \to Y$ be a smooth map of manifolds and $p \in X$ a point. If $\gamma$ is a curve in $X$ based at $p$, we define its \emph{pushforward} $f_{*,p}(v_\gamma) \in T_{f(p)}Y$ to be the equivalence class of the curve $f \circ \gamma$. This defines the \emph{pushforward map} $f_{*,p} : T_p X \to T_{f(p)} Y$. If $p$ is clear from context, we also write just $f_*$ instead of $f_{*,p}$. 
 \end{definition}
 
 \begin{proposition}
@@ -275,3 +275,7 @@ In light of \cref{pushforward-generalizes-derivative}, the following generalizes
 		\item if $f$ is \'etale at every $p \in X$, then $f$ is \emph{\'etale}.\index{etale@\'etale} 
 	\end{itemize}
 \end{definition}
+
+\begin{exercise}
+	Find the critical points of the map $f : S^2 \to \R^2$ given by $f(x,y,z) = (xy, z)$. 
+\end{exercise}

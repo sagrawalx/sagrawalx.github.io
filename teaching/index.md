@@ -5,12 +5,13 @@ permalink: teaching/
 
 # Currently Teaching
 
-*  Fall 2019, Block 1. [MA375 - Real Analysis I](fa19-b1_ma375). Office hours only.
+*  Fall 2019, Block 2. [MA375 - Real Analysis II](fa19-b2_ma475).
 
 # Previously Taught
 
 ## Colorado College
 
+*  Fall 2019, Block 1. [MA375 - Real Analysis I](fa19-b1_ma375). Office hours only.
 * Spring 2019, Block 8. [MA220 - Linear Algebra](sp19-b8_ma220).
 * Spring 2019, Block 6. [MA126 - Calculus 1](sp19-b6_ma126).
 * Spring 2019, Block 5. [MA315 - Ordinary Differential Equations](sp19-b5_ma315).
