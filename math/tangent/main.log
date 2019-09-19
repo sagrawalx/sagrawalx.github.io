@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  19 SEP 2019 13:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  19 SEP 2019 16:01
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1305,14 +1305,14 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 [53]
 ===== Image 'figures/main-figure7' is up-to-date. ======
 ===== Image 'figures/main-figure8' is up-to-date. ======
-[54 <./figures/main-figure7.pdf> <./figures/main-figure8.pdf>] [55] [56]
+[54] [55 <./figures/main-figure7.pdf> <./figures/main-figure8.pdf>] [56]
 [57] [58] [59] [60] [61]
 ===== Image 'figures/main-figure9' is up-to-date. ======
 ===== Image 'figures/main-figure10' is up-to-date. ======
 ===== Image 'figures/main-figure11' is up-to-date. ======
 ===== Image 'figures/main-figure12' is up-to-date. ======
-[62 <./figures/main-figure9.pdf> <./figures/main-figure10.pdf> <./figures/main-
-figure11.pdf> <./figures/main-figure12.pdf>] [63] [64] [65] [66]
+[62] [63 <./figures/main-figure9.pdf> <./figures/main-figure10.pdf> <./figures/
+main-figure11.pdf> <./figures/main-figure12.pdf>] [64] [65] [66]
 ===== Image 'figures/main-figure13' is up-to-date. ======
 [67 <./figures/main-figure13.pdf>] [68]
 ===== Image 'figures/main-figure14' is up-to-date. ======
@@ -1421,13 +1421,13 @@ chapter without number
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 110.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 110.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7F4E76D4F7B31C1BFC120F82458F6A8F;5953.
+(rerunfilecheck)             Checksum: 6AEE9A85BC8ED90F975F755631769CA8;5953.
  ) 
 Here is how much of TeX's memory you used:
- 39122 strings out of 492982
- 929184 string characters out of 6134895
- 1307280 words of memory out of 5000000
- 40973 multiletter control sequences out of 15000+600000
+ 39129 strings out of 492982
+ 929266 string characters out of 6134895
+ 1307367 words of memory out of 5000000
+ 40975 multiletter control sequences out of 15000+600000
  102084 words of font info for 228 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,15n,119p,8815b,1043s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1454,10 +1454,10 @@ onts/symbols/msam7.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qhvb.pfb><
 /type1/public/newpx/zplb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 newpx/zplr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplri.pf
 b>
-Output written on main.pdf (149 pages, 1323691 bytes).
+Output written on main.pdf (149 pages, 1325700 bytes).
 PDF statistics:
- 2789 PDF objects out of 2984 (max. 8388607)
- 2549 compressed objects within 26 object streams
- 771 named destinations out of 1000 (max. 500000)
+ 2797 PDF objects out of 2984 (max. 8388607)
+ 2557 compressed objects within 26 object streams
+ 776 named destinations out of 1000 (max. 500000)
  24433 words of extra memory for PDF output out of 24883 (max. 10000000)
 
