@@ -731,7 +731,7 @@ We can use the mean value theorem to prove the following ``if and only if upgrad
 	But $f'(c) = 0$ by assumption, so $f(a) = f(b)$. 
 \end{proof}
 
-Here is another consequence, which says roughly that functions with bounded derivative cannot grow too fast.  
+Here is another consequence, which says roughly that functions with bounded derivative cannot change too fast.  
 
 \begin{exercise} \label{bounded-derivative}
 	Suppose $I$ is an open interval and $f : I \to \R$ is a differentiable function such that there exists a number $M$ such that $|f'(x)| \leq M$ for all $x \in I$. Show that $|f(b) - f(a)| \leq M|b-a|$ for all $a, b \in I$.\footnotemark
@@ -927,7 +927,7 @@ Here is an example application.
 \end{theorem}
 
 \begin{proof}
-	\Cref{nonzero-derivative-implies-strictly-monotone} tells us that $f$ is strictly monotone, so \cref{strictly-monotone-implies-open} tells us that $f$ is an open map and that $f(I)$ is an open interval. In particular, this means that $f^{-1}$ is continuous. To see that it is differentiable, fix $y \in f(I)$ and let $x = f^{-1}(y)$. For each $k$, define \[ h(k) = f^{-1}(y + k) - f^{-1}(y). \]
+	\Cref{nonzero-derivative-implies-strictly-monotone} tells us that $f$ is strictly monotone, so \cref{strictly-monotone-implies-open} tells us that $f$ is an open map and that $f(I)$ is an open interval. In particular, $f$ being open means that $f^{-1}$ is continuous. To see that it is differentiable, fix $y \in f(I)$ and let $x = f^{-1}(y)$. For each $k$, define \[ h(k) = f^{-1}(y + k) - f^{-1}(y). \]
 	Rearranging, this is equivalent to all of the following. 
 	\[ \begin{aligned} f^{-1}(y + k) &= f^{-1}(y) + h(k) \\
 	f^{-1}(y + k) &= x + h(k) \\
@@ -1083,7 +1083,7 @@ For example, we saw in \cref{positive-not-monotone} that $f(x) = x + 2x^2\sin(1/
 	Suppose $f : U \to \R$ is continuously differentiable, and $a \in U$ is a point such that $f'(a) \neq 0$. Show that there exists an open interval containing $a$ on which $f$ is strictly monotone. 
 \end{exercise}
 
-To appreciate the following fact, it's worth noting the following: for any open interval $I$, there exist differentiable functions $f : I \to \R$ such that $f'(x) = 0$ for all $x \in I \cap \Q$, but $f$ is \emph{not} constant (and $f'$ does \emph{not} constantly vanish)! These extremely bizarre functions were first found by Pompeiu \cite{pompeiu}. This pathological behavior is also ruled out by insisting that the derivative be continuous. 
+To appreciate the following fact, it's worth noting the following: for any open interval $I$, there exist differentiable functions $f : I \to \R$ such that $f'(x) = 0$ for all $x \in I \cap \Q$, but $f$ is \emph{not} constant! These extremely bizarre functions were first found by Pompeiu \cite{pompeiu}. This pathological behavior is also ruled out by insisting that the derivative be continuous. 
 
 \begin{exercise} \label{critical-locus-closed-singlevar}
 	Suppose $f : U \to \R$ is continuously differentiable. 
@@ -1091,7 +1091,7 @@ To appreciate the following fact, it's worth noting the following: for any open 
 		\item The \emph{critical locus}\index{critical point!critical locus} of $f$ is the set
 		\[ Z = \{ x \in U : f'(x) = 0 \}. \]
 		Show that $Z$ is a closed subset of $U$.
-		\item Conclude that, if $f'(x) = 0$ for all $x \in U \cap \Q$, then $f'(x) = 0$ for all $x \in U$.   
+		\item Conclude that, if $f'(x) = 0$ for all $x \in U \cap \Q$, then $f$ is constant.   
 	\end{enumerate}
 \end{exercise}
 
@@ -1139,9 +1139,9 @@ First up, let's prove that all reasonable ways of combining functions in a parti
 	\end{hint}
 \end{exercise}
 
-\begin{lemma} \label{ck-stable-inversion-single}
+\begin{proposition} \label{ck-stable-inversion-single}
 	Suppose $I$ is an open interval, $f : I \to \R$ is $C^k$ injection for some $k \geq 1$, and that $f'(x) \neq 0$ for all $x \in I$. Then $f^{-1} : f(I) \to U$ is also $C^k$. \index{inverse function}
-\end{lemma}
+\end{proposition}
 
 \begin{proof}
 	Since $f'$ is nonzero on $I$, we know from \cref{inverse-function-theorem-single} that $f^{-1}$ is differentiable and that
@@ -1151,14 +1151,86 @@ First up, let's prove that all reasonable ways of combining functions in a parti
 	We will inductively prove that $f^{-1}$ is $C^r$ for all $0 \leq r \leq k$. Certainly $f^{-1}$ is $C^0$ (ie, continuous), since it is even differentiable, as we saw above. Inductively, suppose $f^{-1}$ is $C^r$ for some $0 \leq r < k$. We know that $f$ is $C^k$ and therefore $C^r$, and also that $x \mapsto 1/x$ is $C^r$ (cf. \cref{ck-stable-reciprocal-single}), so $(f^{-1})'$ is the composite of three $C^r$ functions. Thus \cref{ck-stable-composite-single} tells us that $(f^{-1})'$ is $C^r$, which shows that $f^{-1}$ is $C^{r+1}$. This completes the induction.  
 \end{proof}
 
-Observe that we have an infinite chain of implications
+Observe that \cref{differentiable-implies-continuous-single} tells us that we have an infinite chain of implications
 \[ \dotsb \implies C^3 \implies C^2 \implies C^1 \implies C^0. \]
-The following exercise shows that all of these implications are strict; in other words, for every $k$, there exists a $C^k$ function which is not $C^{k+1}$.
+The following shows that all of these implications are strict; in other words, for every $k$, there exists a $C^k$ function which is not $C^{k+1}$.
 
 \begin{exercise}
 	For any non-negative integer $k$, let 
 	\[ f_k(x) = x^k|x|. \]
-	Prove that $f_k$ is $C^k$ but not $C^{k+1}$. \begin{hint} First prove that $f_{k+1}' = (k+2)f_k$. \end{hint}
+	See \cref{power-times-absolute-value-graphs}. Prove that $f_k$ is $C^k$, but the $(k+1)$st derivative $f^{(k+1)}$ does not exist. \begin{hint} First prove that $f_{k+1}' = (k+2)f_k$. \end{hint}
+	
+	\begin{figure}[ht]
+		\begin{center}
+			\begin{tikzpicture}
+			\begin{axis}[
+			xmin=-1.1,xmax=1.1,
+			ymin=-1.1,ymax=1.1,
+			xtick={0},
+			ytick={0},
+			axis lines=middle,
+			axis line style=lightgray,
+			width=0.33\textwidth,
+			axis equal
+			]
+			\addplot[black,style=thick,<->] expression[domain=-1:1,samples=3]{abs(x)}; 
+			
+			\end{axis}
+			\end{tikzpicture}
+			\begin{tikzpicture}
+			\begin{axis}[
+			xmin=-1.1,xmax=1.1,
+			ymin=-1.1,ymax=1.1,
+			xtick={0},
+			ytick={0},
+			axis lines=middle,
+			axis line style=lightgray,
+			width=0.33\textwidth,
+			axis equal
+			]
+			\addplot[black,style=thick,<->] expression[domain=-1:1,samples=50]{x*abs(x)}; 
+			
+			\end{axis}
+			\end{tikzpicture}
+			\begin{tikzpicture}
+			\begin{axis}[
+			xmin=-1.1,xmax=1.1,
+			ymin=-1.1,ymax=1.1,
+			xtick={0},
+			ytick={0},
+			axis lines=middle,
+			axis line style=lightgray,
+			width=0.33\textwidth,
+			axis equal
+			]
+			\addplot[black,style=thick,<->] expression[domain=-1:1,samples=50]{x^2*abs(x)}; 
+			
+			\end{axis}
+			\end{tikzpicture}
+			\begin{tikzpicture}
+			\begin{axis}[
+			xmin=-1.1,xmax=1.1,
+			ymin=-1.1,ymax=1.1,
+			xtick={0},
+			ytick={0},
+			axis lines=middle,
+			axis line style=lightgray,
+			width=0.33\textwidth,
+			axis equal
+			]
+			\addplot[black,style=thick,<->] expression[domain=-1:1,samples=50]{x^3*abs(x)}; 
+			
+			\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		\caption{Graphs of the functions $f_k(x) = x^k|x|$ for $k = 0, 1, 2, 3$.} \label{power-times-absolute-value-graphs}
+	\end{figure}
+\end{exercise}
+
+\begin{exercise}
+	For any positive integer $k$, let $f_k : \R \to \R$ be the function given by
+	\[ f_k(x) = \begin{cases} x^{k+1} \sin(1/x) &  \text{if } x \neq 0 \\ 0 & \text{if } x = 0. \end{cases} \]
+	Show that the $k$th derivative $f^{(k)}$ exists, but it is not continuous. 
 \end{exercise}
 
 \subsection{Taylor's theorem \starred}
@@ -1274,7 +1346,7 @@ Our first example of this principle is the following smooth bijection $(-1,1) \t
 		yticklabels={},
 		axis lines=middle,
 		axis line style=lightgray,
-		width=0.75\textwidth
+		width=0.5\textwidth
 		]
 		
 		
@@ -1331,7 +1403,7 @@ We next discuss an example of a smooth function which gets ``infinitely flat'' a
 			yticklabels={},
 			axis lines=middle,
 			axis line style=lightgray,
-			width=0.75\textwidth
+			width=0.5\textwidth
 			]
 			
 			
@@ -1378,7 +1450,7 @@ Next up, we have ``bump functions.''\index{bump function} Recall that the ``supp
 			yticklabels={},
 			axis lines=middle,
 			axis line style=lightgray,
-			width=0.75\textwidth
+			width=0.5\textwidth
 			]
 			
 			

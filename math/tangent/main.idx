@@ -35,7 +35,7 @@
 \indexentry{adjugate matrix|hyperpage}{19}
 \indexentry{minor|hyperpage}{19}
 \indexentry{minor|hyperpage}{19}
-\indexentry{operator norm|hyperpage}{19}
+\indexentry{operator norm|hyperpage}{20}
 \indexentry{submultiplicativity|hyperpage}{21}
 \indexentry{product!product metric|hyperpage}{22}
 \indexentry{representation!standard matrix representation|hyperpage}{22}
@@ -43,9 +43,9 @@
 \indexentry{homeomorphism|hyperpage}{22}
 \indexentry{homeomorphism|hyperpage}{22}
 \indexentry{glv@$\GL(V)$|hyperpage}{22}
-\indexentry{topology|hyperpage}{22}
-\indexentry{topological space|hyperpage}{22}
-\indexentry{open!open subset|hyperpage}{22}
+\indexentry{topology|hyperpage}{23}
+\indexentry{topological space|hyperpage}{23}
+\indexentry{open!open subset|hyperpage}{23}
 \indexentry{canonical topology|hyperpage}{23}
 \indexentry{subspace|hyperpage}{23}
 \indexentry{subspace!subspace topology|hyperpage}{23}
@@ -55,13 +55,13 @@
 \indexentry{canonical topology|hyperpage}{25}
 \indexentry{canonical topology|hyperpage}{25}
 \indexentry{canonical topology|hyperpage}{25}
-\indexentry{open!open map|hyperpage}{25}
+\indexentry{open!open map|hyperpage}{26}
 \indexentry{homeomorphism|hyperpage}{26}
 \indexentry{homeomorphism!homeomorphism onto its image|hyperpage}{26}
 \indexentry{hausdorff@Hausdorff|hyperpage}{26}
-\indexentry{open cover|hyperpage}{26}
-\indexentry{open cover!subcover|hyperpage}{26}
-\indexentry{subcover|hyperindexformat{\see {open cover, subcover}}}{26}
+\indexentry{open cover|hyperpage}{27}
+\indexentry{open cover!subcover|hyperpage}{27}
+\indexentry{subcover|hyperindexformat{\see {open cover, subcover}}}{27}
 \indexentry{compact|hyperpage}{27}
 \indexentry{sigma compact@$\sigma$-compact|hyperpage}{27}
 \indexentry{difference quotient|hyperpage}{29}
@@ -131,21 +131,21 @@
 \indexentry{critical point!critical locus|hyperpage}{60}
 \indexentry{ck@$C^k$|hyperpage}{60}
 \indexentry{inverse function|hyperpage}{61}
-\indexentry{smooth|hyperpage}{65}
-\indexentry{Cinfinity@$C^\infty$|hyperindexformat{\see {smooth}}}{65}
-\indexentry{infinitely differentiable|hyperindexformat{\see {smooth}}}{65}
+\indexentry{smooth|hyperpage}{66}
+\indexentry{Cinfinity@$C^\infty$|hyperindexformat{\see {smooth}}}{66}
+\indexentry{infinitely differentiable|hyperindexformat{\see {smooth}}}{66}
 \indexentry{diffeomorphism|hyperpage}{66}
-\indexentry{monotone!strictly increasing|hyperpage}{66}
-\indexentry{intermediate value theorem|hyperpage}{66}
-\indexentry{diffeomorphism|hyperpage}{66}
-\indexentry{infinitely flat functions@``infinitely flat'' functions|hyperpage}{67}
+\indexentry{monotone!strictly increasing|hyperpage}{67}
+\indexentry{intermediate value theorem|hyperpage}{67}
+\indexentry{diffeomorphism|hyperpage}{68}
+\indexentry{infinitely flat functions@``infinitely flat'' functions|hyperpage}{68}
 \indexentry{lhopitals rule@L'H\^opital's rule|hyperpage}{68}
-\indexentry{bump function|hyperpage}{69}
-\indexentry{support|hyperpage}{69}
+\indexentry{bump function|hyperpage}{70}
+\indexentry{support|hyperpage}{70}
 \indexentry{infinitely flat function@``infinitely flat'' function|hyperpage}{70}
-\indexentry{bridge function@``bridge'' function|hyperpage}{71}
+\indexentry{bridge function@``bridge'' function|hyperpage}{70}
 \indexentry{fundamental theorem of calculus|hyperpage}{71}
-\indexentry{bridge function@``bridge'' function|hyperpage}{71}
+\indexentry{bridge function@``bridge'' function|hyperpage}{72}
 \indexentry{differentiable!differentiable at a point|hyperpage}{79}
 \indexentry{derivative!derivative at a point|hyperpage}{80}
 \indexentry{total derivative|hyperindexformat{\see {derivative}}}{80}

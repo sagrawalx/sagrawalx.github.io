@@ -1,10 +1,10 @@
 \chapter{Multivariable derivatives} \label{multi}
 
-In this chapter, we will study derivatives of functions $S \to \R^n$ where $S$ is a subset of $\R^m$ and $m$ and $n$ are arbitrary positive integers. As it turns out, the most important case is when $n = 1$. In other words, the ``multi'' in the name of this chapter (as opposed to the ``single'' in the name of the previous chapter) is really referring to the fact that we might have multiple \emph{inputs} (ie, $m > 1$), rather than to the fact that we might have multiple outputs (ie, $n > 1$). Moreover,  the single variable case is actually quite important for the multivariable case; we'll often use results from \cref{single} to prove their multivariable counterparts. 
+In this chapter, we will study derivatives of functions $S \to \R^n$ where $S$ is a subset of $\R^m$ and $m$ and $n$ are arbitrary positive integers. As it turns out, the most important case is when $n = 1$. In other words, the ``multi'' in the name of this chapter (as opposed to the ``single'' in the name of the previous chapter) is really referring to the fact that we might have multiple \emph{inputs} (ie, $m > 1$), rather than to the fact that we might have multiple outputs (ie, $n > 1$). The single variable case is actually quite important for the multivariable case; we'll often use results from \cref{single} to prove their multivariable counterparts. 
 
 We'll begin by analyzing a particular example to build up some geometric intuition in \cref{multi-introductory-example}, before proceeding with the abstract discussion of multivariable derivatives. 
 
-\section{Example} \label{multi-introductory-example}
+\section{Introductory example} \label{multi-introductory-example}
 
 Recall that we started off our discussion of single variable derivatives starting with a very geometric idea of tangent lines to graphs. For large values of $m$ (and $n$), graphs become hard to visualize and it is not so clear what ``tangent'' should mean. But there is at least one multivariable situation where, by exerting some strain on the three-dimensional visualization sectors of our brain, we can geometrically formalize what ``tangent'' might mean. This is the $m = 2, n = 1$ situation. The graph of such a function is a surface in $\R^3$, and its ``tangent'' at a point should be a plane. 
 
@@ -152,7 +152,6 @@ Stitching all of these two-dimensional slices together in our minds, we can see 
 		ztick={0},
 		zmin=0,zmax=20,
 		width=0.9\textwidth,
-		axis line style=lightgray,
 		]
 		\addplot3[mesh,samples=50,domain=-3:3,colormap/Reds]{x^2+y^2}; 
 		\end{axis}
@@ -218,7 +217,7 @@ See \cref{multi-introductory-example-graph-tangent-lines}.
 
 These two tangent lines uniquely determine the entire tangent plane $T$ (ie, $T$ is the plane containing these two lines). One way of describing $T$ that immediately falls out of the parametrizations we've found of the tangent lines is the plane parametrized by
 \[ \begin{bmatrix} h \\ k \end{bmatrix} \mapsto \begin{bmatrix} 2 \\ 1 \\ 5 \end{bmatrix} + \begin{bmatrix} h \\ k \\ 4h + 2k \end{bmatrix}. \]
-The important part of this expression is the bottom entry on the far right, the $4h + 2k$. The function $\R^2 \to \R$ given by $(h, k)  \mapsto 4h + 2k$ is what we will call the \emph{(total) derivative} of $f$ and denote by $df_a$. 
+The important part of this expression is the bottom entry on the far right, the $4h + 2k$. The function $\R^2 \to \R$ given by $(h, k)  \mapsto 4h + 2k$ is what we will call the \emph{total derivative} of $f$ and denote by $df_a$. 
 
 Notice that $df_a$ is a linear map $\R^2 \to \R$. Moreover, its graph is a plane passing through the origin that is parallel to $T$. In other words, if we take the graph of $df_a$ and translate it over to the point $(2,1,5)$, we obtain exactly the tangent plane $T$. Speaking more loosely, the derivative $df_a : \R^2 \to \R$ records all of the ``slopey information'' about the tangent plane $T$. 
 
@@ -254,7 +253,7 @@ Throughout, $S$ will denote a subset of $\R^m$.
 	\[ |f(a+h)-f(a)-\ell(h)| = o(|h|) \text{ as } h \to 0. \]
 \end{definition}
 
-It turns out that there can exist at most one linear map that has the above property. 
+It turns out that there exists at most one linear map that has the above property. 
 
 \begin{lemma} \label{differential-unique}
 	Suppose $f : S \to \R^m$ is differentiable at an interior point $a \in S$. If $\ell$ and $\ell'$ are both linear maps $\R^m \to \R^n$ such that
@@ -277,9 +276,9 @@ It turns out that there can exist at most one linear map that has the above prop
 \Cref{differential-unique} guarantees that the following definition makes sense.  
 
 \begin{definition}[Derivative at a point] \index{derivative!derivative at a point} \index{total derivative|see {derivative}} \index{differential|see {derivative}}
-	Suppose $f : S \to \R^n$ is differentiable at an interior point $a \in S$. Then the \emph{derivative of $f$ at $a$}, denoted $df_a$, is the unique linear map $\R^m \to \R^n$ satisfying
+	Suppose $f : S \to \R^n$ is differentiable at an interior point $a \in S$. Then the \emph{total derivative of $f$ at $a$}, denoted $df_a$, is the unique linear map $\R^m \to \R^n$ satisfying
 	\[ |f(a+v)-f(a)-df_a(h)| = o(|h|) \text{ as } h \to 0.  \]
-	Sometimes $df_a$ is also called the \emph{total derivative} or the \emph{differential} of $f$ at $a$. 
+	Sometimes $df_a$ is also called the \emph{differential} of $f$ at $a$. 
 \end{definition}
 
 We've now defined the derivative, but it's fairly difficult to use this definition in practice. There are only a few examples that can be computed directly from this definition. Here are some.
@@ -478,7 +477,7 @@ We now formalize the ``slicing'' we did in \cref{multi-introductory-example}.
 \begin{definition}[Directional derivatives] \index{directional derivative} \index{partial derivative}
 	Suppose $f : S \to \R$ is a function, $a \in S$ is an interior point, and $h \in \R^m$ is a vector. The \emph{directional derivative of $f$ at $a$ with respect to $h$}, denoted $\partial_h f(a)$, is defined to be the limit
 	\[ \lim_{t \to 0} \frac{f(a+th) - f(a)}{t}. \]
-	If $h = e_i$ is the $i$th standard basis vector (cf. \cref{euclidean}), then this is called the \emph{$i$th partial derivative of $f$ at $a$} and denoted $\partial_i f(a)$ (instead of $\partial_{e_i} f(a)$). If we're using $x$ to denote the input to $f$ and $x_i$ to denote the $i$th component of the input, $\partial_i f(a)$ is sometimes also denoted by one of the following. 
+	If $h = e_i$ is the $i$th standard basis vector (cf. \cref{euclidean}), then this is called the \emph{$i$th partial derivative of $f$ at $a$} and denoted $\partial_i f(a)$ (instead of $\partial_{e_i} f(a)$). If we're using $x_i$ to denote the $i$th component of the input of $f$, then $\partial_i f(a)$ is sometimes also denoted by one of the following. 
 	\[ f_{x_i}(a) \quad \left. \frac{\partial f}{\partial x_i}\right|_{x = a} \quad \left.\frac{\partial}{\partial x_i} f(x)\right|_{x = a} \quad \frac{\partial f}{\partial x_i}(a) \]
 \end{definition}
 
@@ -602,7 +601,7 @@ Now for the main result of this section: partial derivatives help us compute der
 
 \begin{proposition} \label{differentiable-implies-directionals}
 	If $f : S \to \R$ is differentiable at an interior point $a \in S$ and $h \in \R^m$, then \[ df_a(h) = \partial_h f(a). \]
-	Thus, the standard matrix representation $[df_a]$ of the linear map $df_a : \R^m \to \R$ is a $1 \times m$ matrix whose $i$th entry is $\partial_i f(a)$. 
+	Thus, the standard matrix representation $[df_a]$ of the total derivative $df_a : \R^m \to \R$ is a $1 \times m$ matrix whose $i$th entry is the $i$th partial derivative $\partial_i f(a)$. 
 	\[ [df_a] = \begin{bmatrix} \partial_1 f(a) & \partial_2 f(a) & \dotsb & \partial_m f(a) \end{bmatrix} \]
 \end{proposition}
 
@@ -632,13 +631,14 @@ Now for the important caveat: unfortunately, the converse to \cref{differentiabl
 	Consider the function $f : \R^2 \to \R$ defined as follows.
 	\[ f(x, y) = \begin{cases} \dfrac{x y}{x^2 + y^2} &  \text{if } (x, y) \neq 0 \\ 0 & \text{if } (x, y) = 0 \end{cases} \]
 	Show that the partial derivatives of $f$ with respect to $x$ and $y$ both exist at the origin, but that $f$ is not even continuous at the origin (so it cannot be differentiable, by \cref{differentiable-implies-continuous}). 
-	\begin{hint} Approach the origin along the line $x = y$. See \cref{partials-dont-imply-differentiable-graph}. \end{hint}
+	\begin{hint} Approach the origin along the line $y = rx$ for some nonzero $r$. See \cref{partials-dont-imply-differentiable-graph}. \end{hint}
 	\begin{figure}[ht]
 		\begin{center}
 			\begin{tikzpicture}
 			\begin{axis}[
 			view={120}{15},
 			axis lines=middle,
+			axis line style=black,
 			xlabel={$x$},
 			xtick={0},
 			xmin=-1,xmax=1,
@@ -651,13 +651,14 @@ Now for the important caveat: unfortunately, the converse to \cref{differentiabl
 			width=0.6\textwidth,
 			]
 			\addplot3[mesh,samples=50,domain=-1:1,
-			colormap/Reds]{x*y/(x^2+y^2)};
+			colormap/Reds,opacity=0.5]{x*y/(x^2+y^2)};
 			\end{axis}
 			\end{tikzpicture}
 			\begin{tikzpicture}
 			\begin{axis}[
 			view={60}{15},
 			axis lines=middle,
+			axis line style=black,
 			xlabel={$x$},
 			xtick={0},
 			xmin=-1,xmax=1,
@@ -670,7 +671,7 @@ Now for the important caveat: unfortunately, the converse to \cref{differentiabl
 			width=0.6\textwidth,
 			]
 			\addplot3[mesh,samples=50,domain=-1:1,
-			colormap/Reds]{x*y/(x^2+y^2)};
+			colormap/Reds,opacity=0.5]{x*y/(x^2+y^2)};
 			\end{axis}
 			\end{tikzpicture}
 		\end{center}
@@ -736,7 +737,7 @@ Thankfully, this phenomenon is fairly pathological; \cref{continuous-partials} w
 	Prove \cref{jacobian-matrix}. \begin{hint} Use \cref{differentiable-by-components,differentiable-implies-directionals}. \end{hint}
 \end{exercise}
 
-Using \cref{jacobian-matrix}, many of the rules for differentiation we've seen acquire can be rewritten in forms that you might be more familiar with from single variable calculus. For example, since composition of linear maps corresponds to multiplication of the corresponding matrix representations, the chain rule \ref{chain-rule} states that 
+Using \cref{jacobian-matrix}, many of the rules for differentiation we've seen can be rewritten in forms that you might be more familiar with from single variable calculus. For example, since composition of linear maps corresponds to multiplication of the corresponding matrix representations, the chain rule \ref{chain-rule} states that 
 \[ (g \circ f)'(a) = [d(g \circ f)_a] = [dg_{f(a)} \circ df_a] = [dg_{f(a)}] [df_a] = g'(f(a)) f'(a). \]
 Though the equality $(g \circ f)'(a) = g'(f(a)) f'(a)$ looks superficially identical to the equality from the single variable chain rule \ref{chain-rule-single}, it's worth noticing that the terms in this multivariable version are \emph{matrices}. In particular, this means that that order of the multiplication $g'(f(a))f'(a)$ cannot be interchanged (this was a non-issue in the single variable case). 
 
@@ -780,7 +781,7 @@ There are lots of relationships between these notions, depending on how $m$ comp
 \end{caution}
 
 \begin{unimportantremark}
-	While we're on the topic of terminology, it may be worth mentioning that the word ``\'etale'' is not commonly used in real analysis differential geometry; in fact, as far as I'm aware, there is no word in these fields that means that the derivative is invertible. But the word ``\'etale'' is used in algebraic geometry to mean that the derivative is invertible, so I decided to import this word from algebraic geometry. That said, if you do go on to study algebraic geometry at some point, it's worth noting the algebraic geometry words corresponding to ``immersive'' and ``submersive'' are ``unramified'' and ``smooth,'' respectively. This usage of ``smooth'' in algebraic geometry is unrelated to the real analysis and differential geometry usage of smooth. 
+	While we're on the topic of terminology, it may be worth mentioning that the word ``\'etale'' is not commonly used in real analysis or in differential geometry; in fact, as far as I'm aware, there is no word in these fields that means that the derivative is invertible. But the word ``\'etale'' is used in algebraic geometry to mean that the derivative is invertible, so I decided to import this word from algebraic geometry. That said, if you do go on to study algebraic geometry at some point, it's worth noting the algebraic geometry words corresponding to ``immersive'' and ``submersive'' are ``unramified'' and ``smooth,'' respectively. This usage of ``smooth'' in algebraic geometry is unrelated to the real analysis and differential geometry usage of smooth. 
 \end{unimportantremark}
 
 \begin{example} \label{polar-map}
@@ -923,7 +924,7 @@ so the critical locus\index{critical point!critical locus} (ie, the set of all c
 		\end{center}
 	\caption{The image of the function $f(x) = (x^2, x^3)$. The origin is $f(0)$.}  \label{cusp-graph}
 	\end{figure}
-	Calculate $f'(a)$ for all $a \in \R$. Then show that 0 is a critical point of $f$, and that $f$ is immersive away from 0.
+	Calculate $f'(a)$ for all $a \in \R$. Show that 0 is a critical point of $f$, and that $f$ is immersive away from 0.
 \end{exercise}
 
 
@@ -981,11 +982,11 @@ so the critical locus\index{critical point!critical locus} (ie, the set of all c
 Throughout this section, $U$ denotes an open subset of $\R^m$. In this section, we'll discuss functions that are differentiable at every point in $U$. 
 
 \begin{definition} \index{differentiable} \index{derivative}
-	A function $f : U \to \R^n$ is \emph{differentiable} if it is differentiable at every $a \in U$. The \emph{derivative} of $f$, denoted $df$, is the function $U \to \mathscr{L}(\R^m, \R^n)$ given by $a \mapsto df_a$. Sometimes the function $df$ is also called the \emph{total derivative} or the \emph{differential} of $f$. 
+	A function $f : U \to \R^n$ is \emph{differentiable} if it is differentiable at every $a \in U$. The \emph{total derivative} of $f$, denoted $df$, is the function $U \to \mathscr{L}(\R^m, \R^n)$ given by $a \mapsto df_a$. Sometimes the function $df$ is also called the \emph{differential} of $f$. 
 \end{definition}
 
 \begin{definition}
-	If $f : U \to \R^n$ is differentiable, the \emph{$i$th partial derivative} of $f$, denoted $\partial_i f$, is the function $a \mapsto \partial_i f(a)$. If we're using $x$ to denote the input to $f$ and $x_i$ to denote the $i$th component of the input, $\partial_i f(a)$ is sometimes also denoted by one of the following. 
+	If $f : U \to \R$ and $h \in \R^m$ is a vector such that $\partial_h f(a)$ exists for all $a \in U$, then the \emph{directional derivative} of $f$ with respect to $h$ is the function $\partial_h f$ given by $a \mapsto \partial_h f(a)$. When $h = e_i$ is one of the standard basis vectors, this function is called the \emph{$i$th partial derivative} of $f$ and is denoted $\partial_i f$. If we're using the variable $x_i$ to denote the $i$th component of the input of $f$, then $\partial_i f$ is sometimes also denoted by one of the following. 
 	\[ f_{x_i} \quad \frac{\partial f}{\partial x_i} \]
 \end{definition}
 
@@ -998,7 +999,7 @@ Here is a multivariable generalization of \cref{constant-iff-derivative-zero-sin
 \end{proposition}
 
 \begin{proof}
-	Taking $w = 0$ in \cref{derivative-of-line} shows that, if $f$ is constant, then $df = 0$. We can assume, without loss of generality, that $n = 1$ (cf. \cref{constant-iff-derivative-zero-details}). We want to show that, for any $a,  b \in U$, we have $f(a) = f(b)$. Consider the function $\gamma : [0,1] \to B$ given by
+	Taking $w = 0$ in \cref{derivative-of-line} shows that, if $f$ is constant, then $df = 0$. For the converse, we can assume without loss of generality that $n = 1$ (cf. \cref{constant-iff-derivative-zero-details}). We want to show that, for any $a,  b \in B$, we have $f(a) = f(b)$. Consider the function $\gamma : [0,1] \to B$ given by
 	\[ \gamma(t) = tb + (1-t)a.  \]
 	In other words, $\gamma$ is the ``straight line path'' that starts at $a$ and ends at $b$. Notice that $\gamma(t) \in B$ for all $t$ because $a$ and $b$ are both inside $B$ and $B$ is an open ball. Also, $\gamma$ is differentiable (cf. \cref{constant-iff-derivative-zero-details}). Thus $f \circ \gamma$ is a differentiable function $[0,1] \to \R$ and 
 	\[ (f \circ \gamma)'(t) = f'(\gamma(t)) \gamma'(t) = 0 \]
@@ -1260,7 +1261,7 @@ Throughout this section, $U$ denotes an open subset of $\R^m$.
 The following theorem is the promised sort-of-converse to \cref{differentiable-implies-directionals}. Recall from \cref{partials-dont-imply-differentiable} above that $\partial_i f$ existing for all $i$ is \emph{not} sufficient to guarantee differentiability. But, insisting that $\partial_i f$ exist \emph{and be continuous} turns out to be enough to guarantee differentiability of $f$. The proof is harder than you might expect. 
 
 \begin{theorem} \label{continuous-partials}
-	Suppose $f : U \to \R$ is a function such that the partial derivatives $\partial_i f : U \to \R$ exist for all $i = 1 , \dotsc m$. If $a \in U$ is a point such that $\partial_i f$ is continuous at $a$ for all $i$, then $f$ is differentiable at $a$. 
+	Suppose $f : U \to \R$ is a function such that the $i$th partial derivative $\partial_i f : U \to \R$ exists for all $i = 1 , \dotsc m$. If $a \in U$ is a point such that $\partial_i f$ is continuous at $a$ for all $i$, then $f$ is differentiable at $a$. 
 \end{theorem}
 
 \begin{proof}[Proof \starred]
