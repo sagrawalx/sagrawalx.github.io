@@ -57,6 +57,7 @@ nonav: true
 ## Primary instructor
 
 * Colorado College
+    * Real Analysis 2 (Fall 2019, Block 2).
     * Linear Algebra (Spring 2019, Block 8).
     * Calculus 1 (Spring 2019, Block 6).
     * Ordinary Differential Equations (Spring 2019, Block 5).
@@ -94,8 +95,8 @@ nonav: true
 
 ## Mentor
 
-* Senior thesis with Kadin Mangalik (2019–2020).
-* Faculty student collaborative research with Cinea Jenkins (Summer 2019).
+* Senior thesis with Kadin Mangalik (2019–2020). Topic: Sums of cubes over $\mathbb{F}_p$.
+* Faculty student collaborative research with Cinea Jenkins (Summer 2019). Topic: Hodge polygons of F-crystals.
 * Senior thesis with Zhaopeng Li (2018–2019). Topic: Sums of cubes over $\mathbb{F}_p$.
 * Directed reading program with Frank Dai (Fall 2017). Topic: Class field theory.
 * Directed reading program with Alice Zhao (Fall 2014). Topic: Elliptic curves.
@@ -120,7 +121,7 @@ nonav: true
 
 # Professional service
 
-* Constributor to Stacks Project
+* Contributor to Stacks Project
 * Reviewer for zbMATH
 
 # Languages
