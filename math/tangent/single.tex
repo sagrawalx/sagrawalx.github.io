@@ -731,16 +731,31 @@ We can use the mean value theorem to prove the following ``if and only if upgrad
 	But $f'(c) = 0$ by assumption, so $f(a) = f(b)$. 
 \end{proof}
 
-Here is another consequence, which says roughly that functions with bounded derivative cannot change too fast.  
+Here are some more consequences. 
 
 \begin{exercise} \label{bounded-derivative}
 	Suppose $I$ is an open interval and $f : I \to \R$ is a differentiable function such that there exists a number $M$ such that $|f'(x)| \leq M$ for all $x \in I$. Show that $|f(b) - f(a)| \leq M|b-a|$ for all $a, b \in I$.\footnotemark
 	\footnotetext{Using the vocabulary of \cref{sup-norm}, this result can be rephrased by saying that, if $f'$ is bounded, then $|f(b) - f(a)| \leq \|f'\|_\spn |b-a|$.}
 \end{exercise}
 
+\begin{exercise}[Fixed points] \label{fixed-points}
+	Suppose $f : \R \to \R$ is a function. A \emph{fixed point} of $f$ is a point $\xi$ such that $f(\xi) = \xi$. 
+	\begin{enumerate}[(a)]
+		\item Suppose $f$ is differentiable and $f'(x) \neq 1$ for all $x \in \R$. Prove that $f$ has at most one fixed point. 
+		\item Suppose $f$ is differentiable and there exists a constant $M < 1$ such that $|f'(x)| \leq M$ for all $x \in \R$.\footnote{Using the vocabulary of \cref{sup-norm}, this hypothesis can be rephrased by saying that $\|f'\|_\spn < 1$.}\ Show that $f$ has a unique fixed point.  
+		
+		\begin{hint}
+			Pick any $x_0 \in \R$, and then inductively define $x_{n+1} = f(x_n)$ for all $n$. Prove inductively that $|x_{n+1} - x_n| \leq M^n|x_1 - x_0|$ for all $n$. Deduce that the sequence $x_0, x_1, x_2, \dotsc$ is Cauchy, and let $\xi = \lim x_n$. Then show that $\xi$ is a fixed point of $f$. 
+		\end{hint}
+	
+		\item Suppose $f(x) = x + 1/(1 + \exp(x))$.
+		Show that $f$ has no fixed points, and that $f$ is differentiable with $0 < f'(x) < 1$ for all $x \in \R$. Explain why this does not contradict part (b). 
+	\end{enumerate}
+\end{exercise}
+
 \subsection{Monotonicity}
 
-Recall the following definition. 
+We begin by recalling the following definition. 
 
 \begin{definition} \index{monotone} \index{monotone!increasing} \index{monotone!decreasing} \index{monotone!strictly monotone} \index{monotone!strictly increasing} \index{monotone!strictly decreasing} 
 	Suppose $f : S \to \R$ is a function and $x, y \in S$. 
@@ -753,7 +768,7 @@ Recall the following definition.
 Further, $f$ is \emph{monotone} if it is either increasing or decreasing, and \emph{strictly monotone} if it is either strictly increasing or strictly decreasing. 
 \end{definition}
 
-Here are some important properties of strictly monotone continuous functions that you may recognize from an earlier analysis course. 
+Here are some important properties of strictly monotone continuous functions.
 
 \begin{exercise} \label{strictly-monotone-iff-injective}
 	Suppose $I$ is an interval and $f : I \to \R$ is continuous. Prove that $f$ is injective if and only if $f$ is strictly monotone. 
@@ -1025,7 +1040,7 @@ This theorem lets us prove that we can differentiate power series term-by-term.
 \end{exercise}
 
 \begin{comment}
-\subsection{Bizarre differentiable functions \starred}
+%TODO: Bizarre differentiable functions \starred
 
 This section is just for fun: we'll discuss many bizarre examples of differentiable functions. We'll start off with the following variant of a function we saw in \cref{power-times-sine}. 
 
@@ -1098,7 +1113,7 @@ To appreciate the following fact, it's worth noting the following: for any open 
 Unfortunately, insisting that the derivative of a function be continuous does not rule out all possible bizarre behavior. For example, in \cref{extremum-no-sign-change}, we saw that $f(x) = x^4 \left( 2 + \sin(1/x) \right)$ defined a differentiable function $f$ with an absolute minimum at 0, but the derivative doesn't just simply ``change sign'' at 0. In fact, it turns out that function is also continuously differentiable (cf. \cref{extremum-no-sign-change-continued}), so merely insisting on continuous differentiability does not quite manage to rule out that kind of pathological behavior. However, as it turns out, the derivative of $f'$ (called the ``second derivative'' of $f$, and denoted $f''$), turns out \emph{not} to be continuous. 
 
 \begin{exercise} \label{extremum-no-sign-change-continued}
-	Let $f : \R \to \R$ be the function from \cref{extremum-no-sign-change}. Show that $f'$ is differentiable, but that $f''$ is not continuous. 
+	Let $f : \R \to \R$ be the function from \cref{extremum-no-sign-change}. Show that $f'$ is differentiable (so, in particular, $f$ is continuously differentiable), but that $f''$ is not continuous. 
 \end{exercise}
 
 This leads us to thinking about iterated derivatives. 
@@ -1299,7 +1314,7 @@ We can now return to our discussion of the pathology exhibited by the function $
 	Let $f : \R \to \R$ be the function of \cref{extremum-no-sign-change,extremum-no-sign-change-continued}. Then $f$ is twice differentiable and $f'(0) = f''(0) = 0$, but it is not thrice differentiable at 0. In other words, it doesn't eventually have a nonzero derivative at 0, so we're not able to apply \cref{extremum-sign-change}. 
 \end{example}
 
-% TODO: remainder form
+% TODO: Remainder form
 
 \subsection{Smooth functions} \label{smooth-single}
 
@@ -1493,3 +1508,5 @@ In discussing this example, we will invoke the fundamental theorem of calculus,\
 	The characteristic function \[ \chi_I(x) = \begin{cases} 1 & \text{if } x \in I \\ 0 & \text{if } x \notin I \end{cases} \]
 	is close to having all of the properties we want, but it's not smooth; it's clearly not even continuous. ``Bridge'' the discontinuities.\index{bridge function@``bridge'' function} \end{hint}
 \end{exercise}
+
+%TODO: Newton's method

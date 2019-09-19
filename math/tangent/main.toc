@@ -32,55 +32,55 @@
 \contentsline {subsection}{\numberline {1.2.E}Non-rational functions}{46}{subsection.195}
 \contentsline {section}{\numberline {1.3}Differentiable functions}{49}{section.214}
 \contentsline {subsection}{\numberline {1.3.A}Mean value theorem}{49}{subsection.215}
-\contentsline {subsection}{\numberline {1.3.B}Monotonicity}{51}{subsection.223}
-\contentsline {subsection}{\numberline {1.3.C}Darboux's theorem $\star $}{52}{subsection.237}
-\contentsline {subsection}{\numberline {1.3.D}Inverse function theorem}{55}{subsection.247}
-\contentsline {subsection}{\numberline {1.3.E}Uniform limits $\star $}{56}{subsection.251}
-\contentsline {section}{\numberline {1.4}$C^k$ hierarchy}{59}{section.264}
-\contentsline {subsection}{\numberline {1.4.A}Continuous differentiability}{59}{subsection.265}
-\contentsline {subsection}{\numberline {1.4.B}$C^k$ functions}{60}{subsection.272}
-\contentsline {subsection}{\numberline {1.4.C}Taylor's theorem $\star $}{63}{subsection.282}
-\contentsline {subsection}{\numberline {1.4.D}Smooth functions}{66}{subsection.289}
-\contentsline {chapter}{\numberline {2}Multivariable derivatives}{73}{chapter.317}
-\contentsline {section}{\numberline {2.1}Introductory example}{73}{section.318}
-\contentsline {section}{\numberline {2.2}Definition of the derivative}{79}{section.328}
-\contentsline {section}{\numberline {2.3}Computing derivatives}{82}{section.339}
-\contentsline {subsection}{\numberline {2.3.A}Sum and scalar multiples rule}{82}{subsection.340}
-\contentsline {subsection}{\numberline {2.3.B}Chain rule}{82}{subsection.343}
-\contentsline {subsection}{\numberline {2.3.C}Differentiability by components}{83}{subsection.351}
-\contentsline {subsection}{\numberline {2.3.D}Product and quotient rules}{84}{subsection.356}
-\contentsline {subsection}{\numberline {2.3.E}Directional and partial derivatives}{86}{subsection.360}
-\contentsline {subsection}{\numberline {2.3.F}Jacobian matrix}{92}{subsection.383}
-\contentsline {subsection}{\numberline {2.3.G}Rank of a differentiable map}{94}{subsection.387}
-\contentsline {section}{\numberline {2.4}Differentiable functions}{99}{section.399}
-\contentsline {subsection}{\numberline {2.4.A}Vanishing derivatives}{99}{subsection.402}
-\contentsline {subsection}{\numberline {2.4.B}Bounded derivative}{101}{subsection.412}
-\contentsline {subsection}{\numberline {2.4.C}Inverse function theorem}{102}{subsection.418}
-\contentsline {subsection}{\numberline {2.4.D}Proof of the inverse function theorem $\star $}{104}{subsection.426}
-\contentsline {section}{\numberline {2.5}$C^k$ hierarchy}{108}{section.441}
-\contentsline {subsection}{\numberline {2.5.A}Continuous differentiability}{108}{subsection.442}
-\contentsline {subsection}{\numberline {2.5.B}$C^k$ functions}{115}{subsection.464}
-\contentsline {subsection}{\numberline {2.5.C}Equality of mixed partials $\star $}{116}{subsection.471}
-\contentsline {subsection}{\numberline {2.5.D}Taylor's theorem $\star $}{118}{subsection.479}
-\contentsline {subsection}{\numberline {2.5.E}Smooth functions}{119}{subsection.483}
-\contentsline {chapter}{\numberline {3}Manifolds}{123}{chapter.493}
-\contentsline {section}{\numberline {3.1}Definition of a manifold}{123}{section.494}
-\contentsline {section}{\numberline {3.2}Examples}{125}{section.506}
-\contentsline {subsection}{\numberline {3.2.A}First examples}{125}{subsection.507}
-\contentsline {subsection}{\numberline {3.2.B}M\"obius strip}{128}{subsection.526}
-\contentsline {subsection}{\numberline {3.2.C}More examples}{129}{subsection.531}
-\contentsline {section}{\numberline {3.3}Smooth functions}{130}{section.535}
-\contentsline {subsection}{\numberline {3.3.A}Smooth real-valued functions}{130}{subsection.536}
-\contentsline {subsection}{\numberline {3.3.B}Smooth functions between manifolds}{132}{subsection.547}
-\contentsline {subsection}{\numberline {3.3.C}Paths}{133}{subsection.555}
-\contentsline {subsection}{\numberline {3.3.D}Diffeomorphisms}{133}{subsection.556}
-\contentsline {chapter}{\numberline {4}Tangent Spaces}{135}{chapter.562}
-\contentsline {section}{\numberline {4.1}Tangent space}{135}{section.563}
-\contentsline {subsection}{\numberline {4.1.A}Curves based at a point}{135}{subsection.564}
-\contentsline {subsection}{\numberline {4.1.B}Vector space structure}{136}{subsection.569}
-\contentsline {subsection}{\numberline {4.1.C}Derivations $\star $}{140}{subsection.587}
-\contentsline {section}{\numberline {4.2}Pushforward}{142}{section.596}
-\contentsline {subsection}{\numberline {4.2.A}Definition of the pushforward}{142}{subsection.597}
-\contentsline {subsection}{\numberline {4.2.B}Rank of a smooth map}{144}{subsection.604}
-\contentsline {chapter}{\nonumberline Bibliography}{145}{chapter*.608}
-\contentsline {chapter}{\nonumberline Index}{147}{chapter*.609}
+\contentsline {subsection}{\numberline {1.3.B}Monotonicity}{51}{subsection.228}
+\contentsline {subsection}{\numberline {1.3.C}Darboux's theorem $\star $}{53}{subsection.242}
+\contentsline {subsection}{\numberline {1.3.D}Inverse function theorem}{55}{subsection.252}
+\contentsline {subsection}{\numberline {1.3.E}Uniform limits $\star $}{56}{subsection.256}
+\contentsline {section}{\numberline {1.4}$C^k$ hierarchy}{59}{section.269}
+\contentsline {subsection}{\numberline {1.4.A}Continuous differentiability}{59}{subsection.270}
+\contentsline {subsection}{\numberline {1.4.B}$C^k$ functions}{61}{subsection.277}
+\contentsline {subsection}{\numberline {1.4.C}Taylor's theorem $\star $}{63}{subsection.287}
+\contentsline {subsection}{\numberline {1.4.D}Smooth functions}{66}{subsection.294}
+\contentsline {chapter}{\numberline {2}Multivariable derivatives}{73}{chapter.322}
+\contentsline {section}{\numberline {2.1}Introductory example}{73}{section.323}
+\contentsline {section}{\numberline {2.2}Definition of the derivative}{79}{section.333}
+\contentsline {section}{\numberline {2.3}Computing derivatives}{82}{section.344}
+\contentsline {subsection}{\numberline {2.3.A}Sum and scalar multiples rule}{82}{subsection.345}
+\contentsline {subsection}{\numberline {2.3.B}Chain rule}{82}{subsection.348}
+\contentsline {subsection}{\numberline {2.3.C}Differentiability by components}{83}{subsection.356}
+\contentsline {subsection}{\numberline {2.3.D}Product and quotient rules}{84}{subsection.361}
+\contentsline {subsection}{\numberline {2.3.E}Directional and partial derivatives}{86}{subsection.365}
+\contentsline {subsection}{\numberline {2.3.F}Jacobian matrix}{92}{subsection.388}
+\contentsline {subsection}{\numberline {2.3.G}Rank of a differentiable map}{94}{subsection.392}
+\contentsline {section}{\numberline {2.4}Differentiable functions}{99}{section.404}
+\contentsline {subsection}{\numberline {2.4.A}Vanishing derivatives}{99}{subsection.407}
+\contentsline {subsection}{\numberline {2.4.B}Bounded derivative}{101}{subsection.417}
+\contentsline {subsection}{\numberline {2.4.C}Inverse function theorem}{102}{subsection.423}
+\contentsline {subsection}{\numberline {2.4.D}Proof of the inverse function theorem $\star $}{104}{subsection.431}
+\contentsline {section}{\numberline {2.5}$C^k$ hierarchy}{108}{section.446}
+\contentsline {subsection}{\numberline {2.5.A}Continuous differentiability}{108}{subsection.447}
+\contentsline {subsection}{\numberline {2.5.B}$C^k$ functions}{115}{subsection.469}
+\contentsline {subsection}{\numberline {2.5.C}Equality of mixed partials $\star $}{116}{subsection.476}
+\contentsline {subsection}{\numberline {2.5.D}Taylor's theorem $\star $}{118}{subsection.484}
+\contentsline {subsection}{\numberline {2.5.E}Smooth functions}{119}{subsection.488}
+\contentsline {chapter}{\numberline {3}Manifolds}{123}{chapter.498}
+\contentsline {section}{\numberline {3.1}Definition of a manifold}{123}{section.499}
+\contentsline {section}{\numberline {3.2}Examples}{125}{section.511}
+\contentsline {subsection}{\numberline {3.2.A}First examples}{125}{subsection.512}
+\contentsline {subsection}{\numberline {3.2.B}M\"obius strip}{128}{subsection.531}
+\contentsline {subsection}{\numberline {3.2.C}More examples}{129}{subsection.536}
+\contentsline {section}{\numberline {3.3}Smooth functions}{130}{section.540}
+\contentsline {subsection}{\numberline {3.3.A}Smooth real-valued functions}{130}{subsection.541}
+\contentsline {subsection}{\numberline {3.3.B}Smooth functions between manifolds}{132}{subsection.552}
+\contentsline {subsection}{\numberline {3.3.C}Paths}{133}{subsection.560}
+\contentsline {subsection}{\numberline {3.3.D}Diffeomorphisms}{133}{subsection.561}
+\contentsline {chapter}{\numberline {4}Tangent Spaces}{135}{chapter.567}
+\contentsline {section}{\numberline {4.1}Tangent space}{135}{section.568}
+\contentsline {subsection}{\numberline {4.1.A}Curves based at a point}{135}{subsection.569}
+\contentsline {subsection}{\numberline {4.1.B}Vector space structure}{136}{subsection.574}
+\contentsline {subsection}{\numberline {4.1.C}Derivations $\star $}{140}{subsection.592}
+\contentsline {section}{\numberline {4.2}Pushforward}{142}{section.601}
+\contentsline {subsection}{\numberline {4.2.A}Definition of the pushforward}{142}{subsection.602}
+\contentsline {subsection}{\numberline {4.2.B}Rank of a smooth map}{144}{subsection.609}
+\contentsline {chapter}{\nonumberline Bibliography}{145}{chapter*.613}
+\contentsline {chapter}{\nonumberline Index}{147}{chapter*.614}

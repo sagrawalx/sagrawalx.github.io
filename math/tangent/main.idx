@@ -108,14 +108,14 @@
 \indexentry{monotone!strictly monotone|hyperpage}{51}
 \indexentry{monotone!strictly increasing|hyperpage}{51}
 \indexentry{monotone!strictly decreasing|hyperpage}{51}
-\indexentry{open!open map|hyperpage}{51}
+\indexentry{open!open map|hyperpage}{52}
 \indexentry{monotone|hyperpage}{52}
 \indexentry{monotone!increasing|hyperpage}{52}
 \indexentry{monotone!decreasing|hyperpage}{52}
 \indexentry{monotone!strictly monotone|hyperpage}{52}
 \indexentry{monotone!strictly increasing|hyperpage}{52}
 \indexentry{monotone!strictly decreasing|hyperpage}{52}
-\indexentry{monotone|hyperpage}{52}
+\indexentry{monotone|hyperpage}{53}
 \indexentry{intermediate value property|hyperpage}{53}
 \indexentry{intermediate value theorem|hyperpage}{53}
 \indexentry{discontinuity!removable discontinuity|hyperpage}{53}
@@ -129,8 +129,8 @@
 \indexentry{power rule|hyperpage}{56}
 \indexentry{continuously differentiable|hyperpage}{59}
 \indexentry{critical point!critical locus|hyperpage}{60}
-\indexentry{ck@$C^k$|hyperpage}{60}
-\indexentry{inverse function|hyperpage}{61}
+\indexentry{ck@$C^k$|hyperpage}{61}
+\indexentry{inverse function|hyperpage}{62}
 \indexentry{smooth|hyperpage}{66}
 \indexentry{Cinfinity@$C^\infty$|hyperindexformat{\see {smooth}}}{66}
 \indexentry{infinitely differentiable|hyperindexformat{\see {smooth}}}{66}

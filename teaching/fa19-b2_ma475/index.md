@@ -80,7 +80,7 @@ Office hours (1–2pm).
 <td rowspan="2">Thu</td>
 <td>Single variable: Differentiable functions</td>
 <td>Read: 1.3  
-Do: 5, 9, 11, 18</td>
+Do: 5, 10, 12, 19</td>
 <td></td>
 </tr>
 
@@ -96,7 +96,7 @@ Writing assignment due (11:59pm). [Prompt](/teaching/prompt.pdf).
 <td rowspan="2">Fri</td>
 <td>Single variable: $C^k$ hierarchy</td>
 <td>Read: 1.4  
-Do: 2, 8, 11, 26</td>
+Do: 2, 7, 11, 26</td>
 <td>
 </td>
 </tr>
