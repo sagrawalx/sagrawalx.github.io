@@ -33,6 +33,10 @@
 \hypersetup{linkcolor=red}
 \makeindex
 
+\usepackage[style=alphabetic]{biblatex}
+\addbibresource{references.bib}
+\nocite{*}
+
 % Numbering and environments
 \usepackage{amsthm}
 \usepackage[noabbrev]{cleveref}
@@ -101,9 +105,7 @@
 	
 	\include{tangent}
 	
-	\nocite{*}
-	\bibliographystyle{alphaurl}
-	\bibliography{references}
+	\printbibliography
 	
 	\printindex
 	

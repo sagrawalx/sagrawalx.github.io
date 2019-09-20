@@ -1250,13 +1250,15 @@ The following shows that all of these implications are strict; in other words, f
 
 \subsection{Taylor's theorem \starred}
 
+Taylor's theorem gives us a way of approximating a $C^k$ function by a polynomial of at most degree $k$. When $k = 1$, the theorem says nothing more than \cref{differential-unique-single}.
+
 \begin{theorem}[Taylor] \label{taylor-single}
-	Suppose $f : U \to \R$ is $C^k$ for some positive integer $k$ and $a \in U$. Then there exists a unique polynomial $p_k$ at most $k$, called the \emph{degree $k$ Taylor polynomial of $f$ at $a$}, such that $|f(a+h) - p_k(h)| = o(|h|^k)$ as $h \to 0$. Moreover, we have
+	Suppose $I$ is an open interval, $f : I \to \R$ is $C^k$ for some non-negative integer $k$, and $a \in I$. Then there exists a unique polynomial $p_k$ at most $k$, called the \emph{degree $k$ Taylor polynomial of $f$ at $a$}, such that $|f(a+h) - p_k(h)| = o(|h|^k)$ as $h \to 0$. Moreover, we have
 	\begin{equation} \label{taylor-polynomial-single} p_k(h) = f(a) + f'(a)h + \frac{f''(a)}{2!}h^2 + \frac{f^{(3)}(a)}{3!} h^3 + \dotsb + \frac{f^{(k)}(a)}{k!} h^k. \end{equation}
 \end{theorem}
 
 \begin{proof}
-	Let $p_k(h)$ be defined as \cref{taylor-polynomial-single} and set $r(h) = f(a+h) - p_k(h)$. Observe that $r$ is $C^k$ by \cref{ck-stable-sum-scalar-single}. By direct calculation, we have $r^{(i)}(0) = 0$ for all $i = 0, 1, \dotsc, k$. 
+	Let $p_k(h)$ be defined as \cref{taylor-polynomial-single} and set $r(h) = f(a+h) - p_k(h)$. Observe that $r$ is $C^k$ by \cref{ck-stable-sum-scalar-single}. By direct calculation, we have $r^{(i)}(0) = 0$ for all $i = 0, 1, \dotsc, k$. If $k = 0$, then the fact that $|r(h)| = o(1)$ follows from the continuity (ie, $C^0$-ness) of $r$ and the fact that $r(0) = 0$; so we can assume for the rest of the proof that $k \geq 1$. 
 	
 	Suppose $h > 0$. By iterating the mean value theorem, we have
 	\[ \begin{aligned} r(h) &= r(h) - r(0) \\
@@ -1288,8 +1290,8 @@ The following shows that all of these implications are strict; in other words, f
 We can now return to our discussion of the pathology exhibited by the function $f(x) = x^4 \left( 2 + \sin(1/x) \right)$ from \cref{extremum-no-sign-change,extremum-no-sign-change-continued}, and prove that such pathologies cannot occur under some hypotheses. We prepare for this discussion with the following lemma. 
 
 \begin{lemma} \label{eventual-nonvanishing-derivative}
-	Suppose $f : U \to \R$ is $C^k$ for some $k \geq 1$, that 
-	\[ f(a) = f'(a) = f^{(2)}(a) = \dotsb = f^{(k-1)}(a) = 0, \] and $f^{(k)}(a) > 0$. Then there exists an $\epsilon > 0$ such that $f$ is positive on $(a, a+\epsilon)$, and on $(a-\epsilon, a)$, $f$ is positive if $k$ is even and negative if $k$ is odd. If $f^{(k)}(a) < 0$, then all instances of ``positive'' in the conclusion get replaced by ``negative'' and vice versa. 
+	Suppose $I$ is an open interval, $f : I \to \R$ is $C^k$ for some positive integer $k$, that 
+	\[ f(a) = f'(a) = f^{(2)}(a) = \dotsb = f^{(k-1)}(a) = 0, \] and that $f^{(k)}(a) > 0$. Then there exists an $\epsilon > 0$ such that $f$ is positive on $(a, a+\epsilon)$, and on $(a-\epsilon, a)$, $f$ is positive if $k$ is even and negative if $k$ is odd. Moreover, if $f^{(k)}(a) < 0$, then all instances of ``positive'' in the conclusion get replaced by ``negative'' and vice versa. 
 \end{lemma}
 
 \begin{proof}
@@ -1314,7 +1316,26 @@ We can now return to our discussion of the pathology exhibited by the function $
 	Let $f : \R \to \R$ be the function of \cref{extremum-no-sign-change,extremum-no-sign-change-continued}. Then $f$ is twice differentiable and $f'(0) = f''(0) = 0$, but it is not thrice differentiable at 0. In other words, it doesn't eventually have a nonzero derivative at 0, so we're not able to apply \cref{extremum-sign-change}. 
 \end{example}
 
-% TODO: Remainder form
+The difference $f(a+h) - p_k(h)$ is often called a ``remainder,''\index{remainder} since it's what's left over after we approximate $f$ by its Taylor polynomial. It turns out that if $f$ is $C^{k+1}$, we can use the mean value theorem to express this remainder in terms of the $(k+1)$st derivative. 
+
+\begin{theorem}[Taylor's theorem with remainder, Lagrange form] \label{taylor-single-remainder-lagrange}
+	Suppose $I$ is an open interval, $f : I \to \R$ is $C^{k+1}$ for some non-negative integer $k$ and $a \in U$. Then for any $h$ such that $a+h \in I$, there exists $\xi$ between $a$ and $a+h$ such that 
+	\[ f(a+h) - p_k(h) = \frac{f^{(k+1)}(\xi)}{(k+1)!}h^{k+1}, \]
+	where $p_k$ is the degree $k$ Taylor polynomial of $f$ at $a$. 
+\end{theorem}
+
+\begin{proof}
+	When $k = 0$, we have $p_0(h) = f(a)$ and the statement follows immediately from the mean value theorem \ref{mean-value-theorem}. So we can assume that $k \geq 1$. Let $r(h) = f(a+h) - p_k(h)$. Fix $h > 0$ and consider the function
+	\[ g(t) = r(t) - \frac{r(h)}{h^{k+1}} t^{k+1}.  \]
+	Plugging in $t = h$, we see that $g(h) = 0$. As we noted in the proof of Taylor's theorem \ref{taylor}, we have $r^{(i)}(0) = 0$ for $i = 0, 1, \dotsc, k$, from which it follows that $g^{(i)}(0) = 0$ for $i = 0, 1, \dotsc, k$. Moreover, we have \[ g^{(k+1)}(t) = f^{(k+1)}(t) - \frac{(k+1)!r(h)}{h^{k+1}},  \]
+	because $p_k$ is a polynomial of degree at most $k$, which means that its $(k+1)$st derivative vanishes. 
+	
+	Since $g(0) = g(h) = 0$, Rolle's theorem \ref{rolles-theorem} tells us that there exists $h_1$ between $0$ and $h$ such that $g'(h_1) = 0$. Since $g'(0) = g'(h_1) = 0$, Rolle's theorem again gives us $h_2$ between $0$ and $h_2$ such that $g^{(2)}(h_2) = 0$. Inductively, we find a sequence $0 < h_{k+1} < h_k < h_{k-1} < \dotsb < h_1 < h$ such that $g^{(i)}(h_i) = 0$ for all $i = 0, \dotsc, k, k+1$. Letting $\xi = h_{k+1}$, we find that 
+	\[ 0 = g^{(k+1)}(\xi) = f^{(k+1)}(\xi) - \frac{(k+1)!r(h)}{h^{k+1}}, \]
+	and rearranging this equation yields precisely
+	\[ f(a+h) - p_k(h) = r(h) = \frac{f^{(k+1)}(\xi)}{(k+1)!}h^{k+1}. \]
+	The proof when $h < 0$ is analogous. 
+\end{proof}
 
 \subsection{Smooth functions} \label{smooth-single}
 
