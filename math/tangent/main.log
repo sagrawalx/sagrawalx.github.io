@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  19 SEP 2019 16:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  20 SEP 2019 16:28
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1018,6 +1018,214 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 
 
 Writing index file main.idx
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2017/12/19 v3.10 programmable bibliographies (PK/JW/AB)
+
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count145
+
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+\@xs@message=\write5
+\integerpart=\count146
+\decimalpart=\count147
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+\c@tabx@nest=\count148
+\c@listtotal=\count149
+\c@listcount=\count150
+\c@liststart=\count151
+\c@liststop=\count152
+\c@citecount=\count153
+\c@citetotal=\count154
+\c@multicitecount=\count155
+\c@multicitetotal=\count156
+\c@instcount=\count157
+\c@maxnames=\count158
+\c@minnames=\count159
+\c@maxitems=\count160
+\c@minitems=\count161
+\c@citecounter=\count162
+\c@savedcitecounter=\count163
+\c@uniquelist=\count164
+\c@uniquename=\count165
+\c@refsection=\count166
+\c@refsegment=\count167
+\c@maxextratitle=\count168
+\c@maxextratitleyear=\count169
+\c@maxextradate=\count170
+\c@maxextraalpha=\count171
+\c@abbrvpenalty=\count172
+\c@highnamepenalty=\count173
+\c@lownamepenalty=\count174
+\c@maxparens=\count175
+\c@parenlevel=\count176
+\blx@tempcnta=\count177
+\blx@tempcntb=\count178
+\blx@tempcntc=\count179
+\blx@maxsection=\count180
+\blx@maxsegment@0=\count181
+\blx@notetype=\count182
+\blx@parenlevel@text=\count183
+\blx@parenlevel@foot=\count184
+\blx@sectionciteorder@0=\count185
+\labelnumberwidth=\skip95
+\labelalphawidth=\skip96
+\biblabelsep=\skip97
+\bibitemsep=\skip98
+\bibnamesep=\skip99
+\bibinitsep=\skip100
+\bibparsep=\skip101
+\bibhang=\skip102
+\blx@bcfin=\read3
+\blx@bcfout=\write6
+\c@mincomprange=\count186
+\c@maxcomprange=\count187
+\c@mincompwidth=\count188
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'alphabetic.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count189
+\c@savedafterword=\count190
+\c@annotator=\count191
+\c@savedannotator=\count192
+\c@author=\count193
+\c@savedauthor=\count194
+\c@bookauthor=\count195
+\c@savedbookauthor=\count196
+\c@commentator=\count197
+\c@savedcommentator=\count198
+\c@editor=\count199
+\c@savededitor=\count266
+\c@editora=\count267
+\c@savededitora=\count268
+\c@editorb=\count269
+\c@savededitorb=\count270
+\c@editorc=\count271
+\c@savededitorc=\count272
+\c@foreword=\count273
+\c@savedforeword=\count274
+\c@holder=\count275
+\c@savedholder=\count276
+\c@introduction=\count277
+\c@savedintroduction=\count278
+\c@namea=\count279
+\c@savednamea=\count280
+\c@nameb=\count281
+\c@savednameb=\count282
+\c@namec=\count283
+\c@savednamec=\count284
+\c@translator=\count285
+\c@savedtranslator=\count286
+\c@shortauthor=\count287
+\c@savedshortauthor=\count288
+\c@shorteditor=\count289
+\c@savedshorteditor=\count290
+\c@labelname=\count291
+\c@savedlabelname=\count292
+\c@institution=\count293
+\c@savedinstitution=\count294
+\c@lista=\count295
+\c@savedlista=\count296
+\c@listb=\count297
+\c@savedlistb=\count298
+\c@listc=\count299
+\c@savedlistc=\count300
+\c@listd=\count301
+\c@savedlistd=\count302
+\c@liste=\count303
+\c@savedliste=\count304
+\c@listf=\count305
+\c@savedlistf=\count306
+\c@location=\count307
+\c@savedlocation=\count308
+\c@organization=\count309
+\c@savedorganization=\count310
+\c@origlocation=\count311
+\c@savedoriglocation=\count312
+\c@origpublisher=\count313
+\c@savedorigpublisher=\count314
+\c@publisher=\count315
+\c@savedpublisher=\count316
+\c@language=\count317
+\c@savedlanguage=\count318
+\c@origlanguage=\count319
+\c@savedoriglanguage=\count320
+\c@pageref=\count321
+\c@savedpageref=\count322
+\shorthandwidth=\skip103
+\shortjournalwidth=\skip104
+\shortserieswidth=\skip105
+\shorttitlewidth=\skip106
+\shortauthorwidth=\skip107
+\shorteditorwidth=\skip108
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2017/12/19 v3.10 biblatex compatibility (PK/JW/AB)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2017/12/19 v3.10 biblatex compatibility (PK/JW/AB)
+\c@textcitecount=\count323
+\c@textcitetotal=\count324
+\c@textcitemaxnames=\count325
+\c@biburlnumpenalty=\count326
+\c@biburlucpenalty=\count327
+\c@biburllcpenalty=\count328
+\c@smartand=\count329
+)
+Package biblatex Info: Trying to load bibliography style 'alphabetic'...
+Package biblatex Info: ... file 'alphabetic.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/alphabetic.bbx
+File: alphabetic.bbx 2017/12/19 v3.10 biblatex bibliography style (PK/JW/AB)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2017/12/19 v3.10 biblatex bibliography style (PK/JW/AB)
+\c@bbx:relatedcount=\count330
+\c@bbx:relatedtotal=\count331
+))
+Package biblatex Info: Trying to load citation style 'alphabetic'...
+Package biblatex Info: ... file 'alphabetic.cbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/alphabetic.cbx
+File: alphabetic.cbx 2017/12/19 v3.10 biblatex citation style (PK/JW/AB)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+))
 (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2017/10/31 v2.20.4
 \thm@style=\toks42
@@ -1025,9 +1233,9 @@ Package: amsthm 2017/10/31 v2.20.4
 \thm@headfont=\toks44
 \thm@notefont=\toks45
 \thm@headpunct=\toks46
-\thm@preskip=\skip95
-\thm@postskip=\skip96
-\thm@headsep=\skip97
+\thm@preskip=\skip109
+\thm@postskip=\skip110
+\thm@headsep=\skip111
 \dth@everypar=\toks47
 )
 (/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty
@@ -1045,47 +1253,56 @@ LaTeX Info: Redefining \labelcref on input line 2301.
 LaTeX Info: Redefining \labelcpageref on input line 2301.
 Package cleveref Info: `amsthm' support loaded on input line 2957.
 Package cleveref Info: no abbreviation of names on input line 7783.
-) (./main.aux
+)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2017/12/19 v3.10 biblatex localization (PK/JW/AB)
+)
+\@quotelevel=\count332
+\@quotereset=\count333
+ (./main.aux
 (./introduction.aux) (./preliminaries.aux) (./single.aux) (./multi.aux)
 (./manifolds.aux) (./tangent.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 87.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 91.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-\c@mv@tabular=\count145
-\c@mv@boldtabular=\count146
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+\c@mv@tabular=\count334
+\c@mv@boldtabular=\count335
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count147
+\scratchcounter=\count336
 \scratchdimen=\dimen183
 \scratchbox=\box43
-\nofMPsegments=\count148
-\nofMParguments=\count149
+\nofMPsegments=\count337
+\nofMParguments=\count338
 \everyMPshowfont=\toks48
-\MPscratchCnt=\count150
+\MPscratchCnt=\count339
 \MPscratchDim=\dimen184
-\MPnumerator=\count151
-\makeMPintoPDFobject=\count152
+\MPnumerator=\count340
+\makeMPintoPDFobject=\count341
 \everyMPtoPDFconversion=\toks49
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1108,7 +1325,7 @@ ABD: EveryShipout initializing macros
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.15}).
 
-LaTeX Info: Redefining \microtypecontext on input line 87.
+LaTeX Info: Redefining \microtypecontext on input line 91.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1122,7 +1339,7 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
 \AtBeginShipoutBox=\box44
-Package hyperref Info: Link coloring ON on input line 87.
+Package hyperref Info: Link coloring ON on input line 91.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1130,45 +1347,57 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count153
+\c@section@level=\count342
 )
-LaTeX Info: Redefining \ref on input line 87.
-LaTeX Info: Redefining \pageref on input line 87.
-LaTeX Info: Redefining \nameref on input line 87.
+LaTeX Info: Redefining \ref on input line 91.
+LaTeX Info: Redefining \pageref on input line 91.
+LaTeX Info: Redefining \nameref on input line 91.
 
 (./main.out) (./main.out)
-\@outlinefile=\write5
-\openout5 = `main.out'.
+\@outlinefile=\write7
+\openout7 = `main.out'.
 
-LaTeX Font Info:    Try loading font information for T1+qhv on input line 89.
- (/usr/share/texmf/tex/latex/tex-gyre/t1qhv.fd
+Package biblatex Info: No input encoding detected.
+(biblatex)             Assuming 'ascii'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'ascii'.
+\openout6 = `main.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'main.bbl' found.
+ (./main.bbl)
+Package biblatex Info: Reference section=0 on input line 91.
+Package biblatex Info: Reference segment=0 on input line 91.
+LaTeX Font Info:    Try loading font information for T1+qhv on input line 93.
+
+(/usr/share/texmf/tex/latex/tex-gyre/t1qhv.fd
 File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
 )
 LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 10.29301pt on input line 89.
+(Font)              scaled to size 10.29301pt on input line 93.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `qhv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/qhv/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/qhv/b/n' tried instead on input line 89.
+(Font)              Font shape `T1/qhv/b/n' tried instead on input line 93.
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 10.29301pt on input line 89.
+(Font)              scaled to size 10.29301pt on input line 93.
 LaTeX Font Info:    Font shape `T1/qhv/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/qhv/b/n' tried instead on input line 89.
+(Font)              Font shape `T1/qhv/b/n' tried instead on input line 93.
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 19.49565pt on input line 89.
+(Font)              scaled to size 19.49565pt on input line 93.
 LaTeX Font Info:    Font shape `T1/qhv/bx/n' in size <12> not available
-(Font)              Font shape `T1/qhv/b/n' tried instead on input line 89.
+(Font)              Font shape `T1/qhv/b/n' tried instead on input line 93.
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 11.28003pt on input line 89.
+(Font)              scaled to size 11.28003pt on input line 93.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 89.
+(Font)              scaled to size 14.4pt on input line 93.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 89.
+(Font)              scaled to size 10.0pt on input line 93.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 7.0pt on input line 89.
-LaTeX Font Info:    Try loading font information for U+zeur on input line 89.
+(Font)              scaled to size 7.0pt on input line 93.
+LaTeX Font Info:    Try loading font information for U+zeur on input line 93.
 
 (/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeur.fd
 File: uzeur.fd 2005/01/11 v4.0 (WaS)
@@ -1176,7 +1405,7 @@ File: uzeur.fd 2005/01/11 v4.0 (WaS)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-eur.cfg
 File: mt-eur.cfg 2006/07/31 v1.1 microtype config. file: AMS Euler Roman (RS)
 )
-LaTeX Font Info:    Try loading font information for U+zeus on input line 89.
+LaTeX Font Info:    Try loading font information for U+zeus on input line 93.
 
 (/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeus.fd
 File: uzeus.fd 2005/01/11 v4.0 (WaS)
@@ -1184,7 +1413,7 @@ File: uzeus.fd 2005/01/11 v4.0 (WaS)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-eus.cfg
 File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
 )
-LaTeX Font Info:    Try loading font information for U+zeuex on input line 89.
+LaTeX Font Info:    Try loading font information for U+zeuex on input line 93.
 
 (/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeuex.fd
 File: uzeuex.fd 2005/01/11 v4.0 (WaS)
@@ -1221,23 +1450,23 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 (Font)              scaled to size 10.95pt on input line 15.
  [3])
 LaTeX Font Info:    Font shape `T1/zpltlf/m/sl' will be
-(Font)              scaled to size 10.95pt on input line 90.
+(Font)              scaled to size 10.95pt on input line 94.
  [4]
-Package tocbasic Info: character protrusion at toc deactivated on input line 92
+Package tocbasic Info: character protrusion at toc deactivated on input line 96
 .
  (./main.toc
 LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 1.
+(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 3.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 10.95pt on input line 1.
+(Font)              scaled to size 10.95pt on input line 3.
 
 [5
 
 
 
 ] [6])
-\tf@toc=\write6
-\openout6 = `main.toc'.
+\tf@toc=\write8
+\openout8 = `main.toc'.
 
  [7]
 \openout2 = `preliminaries.aux'.
@@ -1257,22 +1486,22 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 (Font)              scaled to size 9.0pt on input line 176.
  [13] [14]
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 232.
+(Font)              scaled to size 12.0pt on input line 234.
  [15]
-LaTeX Font Info:    Try loading font information for U+eus on input line 264.
+LaTeX Font Info:    Try loading font information for U+eus on input line 266.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 ) [16] [17] [18]
 [19] [20] [21] [22] [23] [24]
 LaTeX Font Info:    Try loading font information for TS1+zpltlf on input line 5
-48.
+50.
 
 (/usr/share/texlive/texmf-dist/tex/latex/newpx/ts1zpltlf.fd
 File: ts1zpltlf.fd 2015/01/18 v1.0 fd file for TS1/zpltlf
 )
 LaTeX Font Info:    Font shape `TS1/zpltlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 548.
+(Font)              scaled to size 10.95pt on input line 550.
  [25] [26])
 [27]
 \openout2 = `single.aux'.
@@ -1312,152 +1541,156 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 ===== Image 'figures/main-figure11' is up-to-date. ======
 ===== Image 'figures/main-figure12' is up-to-date. ======
 [62] [63 <./figures/main-figure9.pdf> <./figures/main-figure10.pdf> <./figures/
-main-figure11.pdf> <./figures/main-figure12.pdf>] [64] [65] [66]
+main-figure11.pdf> <./figures/main-figure12.pdf>] [64] [65] [66] [67]
 ===== Image 'figures/main-figure13' is up-to-date. ======
-[67 <./figures/main-figure13.pdf>] [68]
+[68] [69 <./figures/main-figure13.pdf>]
 ===== Image 'figures/main-figure14' is up-to-date. ======
-[69 <./figures/main-figure14.pdf>]
+[70 <./figures/main-figure14.pdf>]
 ===== Image 'figures/main-figure15' is up-to-date. ======
-[70] [71 <./figures/main-figure15.pdf>]) [72]
+[71] [72 <./figures/main-figure15.pdf>]) [73]
 \openout2 = `multi.aux'.
 
- (./multi.tex
-chapter 2.
-[73
+ (./multi.tex [74
 
 
 
 
 ]
+chapter 2.
+[75]
 ===== Image 'figures/main-figure16' is up-to-date. ======
 ===== Image 'figures/main-figure17' is up-to-date. ======
 ===== Image 'figures/main-figure18' is up-to-date. ======
 ===== Image 'figures/main-figure19' is up-to-date. ======
 ===== Image 'figures/main-figure20' is up-to-date. ======
-[74 <./figures/main-figure16.pdf> <./figures/main-figure17.pdf> <./figures/main
--figure18.pdf>] [75 <./figures/main-figure19.pdf>] [76 <./figures/main-figure20
+[76 <./figures/main-figure16.pdf> <./figures/main-figure17.pdf> <./figures/main
+-figure18.pdf>] [77 <./figures/main-figure19.pdf>] [78 <./figures/main-figure20
 .pdf>]
 ===== Image 'figures/main-figure21' is up-to-date. ======
-[77 <./figures/main-figure21.pdf>] [78] [79] [80]
+[79 <./figures/main-figure21.pdf>] [80] [81] [82]
 ===== Image 'figures/main-figure22' is up-to-date. ======
-[81 <./figures/main-figure22.pdf>] [82] [83] [84] [85] [86] [87]
+[83 <./figures/main-figure22.pdf>] [84] [85] [86] [87] [88] [89]
 ===== Image 'figures/main-figure23' is up-to-date. ======
 ===== Image 'figures/main-figure24' is up-to-date. ======
-[88] [89 <./figures/main-figure23.pdf>] [90 <./figures/main-figure24.pdf>]
+[90] [91 <./figures/main-figure23.pdf>] [92 <./figures/main-figure24.pdf>]
 ===== Image 'figures/main-figure25' is up-to-date. ======
 ===== Image 'figures/main-figure26' is up-to-date. ======
 ===== Image 'figures/main-figure27' is up-to-date. ======
-[91] [92 <./figures/main-figure25.pdf> <./figures/main-figure26.pdf>] [93 <./fi
-gures/main-figure27.pdf>] [94]
+[93] [94 <./figures/main-figure25.pdf> <./figures/main-figure26.pdf>] [95 <./fi
+gures/main-figure27.pdf>] [96]
 ===== Image 'figures/main-figure28' is up-to-date. ======
 ===== Image 'figures/main-figure29' is up-to-date. ======
 ===== Image 'figures/main-figure30' is up-to-date. ======
 ===== Image 'figures/main-figure31' is up-to-date. ======
-[95] [96 <./figures/main-figure28.pdf> <./figures/main-figure29.pdf> <./figures
+[97] [98 <./figures/main-figure28.pdf> <./figures/main-figure29.pdf> <./figures
 /main-figure30.pdf> <./figures/main-figure31.pdf>]
 ===== Image 'figures/main-figure32' is up-to-date. ======
-[97 <./figures/main-figure32.pdf>]
+[99 <./figures/main-figure32.pdf>]
 ===== Image 'figures/main-figure33' is up-to-date. ======
-[98 <./figures/main-figure33.pdf>] [99] [100] [101] [102] [103] [104] [105]
-[106] [107] [108]
+[100 <./figures/main-figure33.pdf>] [101] [102] [103] [104] [105] [106]
+[107] [108] [109] [110] [111] [112]
 ===== Image 'figures/main-figure34' is up-to-date. ======
-[109] [110 <./figures/main-figure34.pdf>] [111] [112] [113] [114] [115]
-[116] [117] [118] [119] [120]) [121]
+[113 <./figures/main-figure34.pdf>] [114] [115] [116] [117] [118] [119]
+[120] [121] [122] [123] [124] [125] [126] [127] [128] [129]) [130]
 \openout2 = `manifolds.aux'.
 
- (./manifolds.tex [122
 
-
-
-
-]
+(./manifolds.tex
 chapter 3.
-[123] [124] [125]
+[131
+
+
+
+
+] [132] [133]
 ===== Image 'figures/main-figure35' is up-to-date. ======
-[126 <./figures/main-figure35.pdf>] [127] [128] [129] [130] [131] [132])
-[133]
+[134 <./figures/main-figure35.pdf>] [135] [136] [137] [138] [139] [140])
+[141]
 \openout2 = `tangent.aux'.
 
- (./tangent.tex [134
+ (./tangent.tex [142
 
 
 
 
 ]
 chapter 4.
-[135] [136] [137] [138] [139] [140] [141] [142] [143]) [144] (./main.bbl
+[143] [144] [145] [146] [147] [148] [149] [150] [151]) [152]
 chapter without number
-LaTeX Font Info:    Try loading font information for T1+npxtt on input line 8.
+LaTeX Font Info:    Font shape `T1/zpltlf/m/sc' will be
+(Font)              scaled to size 10.95pt on input line 108.
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/zpltlf/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Try loading font information for T1+npxtt on input line 108
+.
 (/usr/share/texlive/texmf-dist/tex/latex/newpx/t1npxtt.fd
 File: t1npxtt.fd 2000/12/14 v1.0
 )
 LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
-(Font)              scaled to size 10.95pt on input line 8.
+(Font)              scaled to size 10.95pt on input line 108.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `npxtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-Overfull \hbox (0.70586pt too wide) in paragraph at lines 44--49
-[]\T1/zpltlf/m/n/10.95 (-20) Dimitrie D. Pompeiu.  Sur les fonctions dérivées. 
- \T1/zpltlf/m/it/10.95 (-20) Mathematische Annalen\T1/zpltlf/m/n/10.95 (-20) , 
-63(3):326--
- []
-
-[145
+ [153
 
 
 
-]) (./main.ind [146]
+] (./main.ind
+[154]
 chapter without number
-[147
+[155
 
 
 
 
 
-] [148] [149]) (./main.aux (./introduction.aux) (./preliminaries.aux)
+] [156] [157]) (./main.aux (./introduction.aux) (./preliminaries.aux)
 (./single.aux) (./multi.aux) (./manifolds.aux) (./tangent.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 110.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 110.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 112.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 112.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6AEE9A85BC8ED90F975F755631769CA8;5953.
+(rerunfilecheck)             Checksum: E9AA5502FF1BC9DA90D9BEA2A8DCA127;5953.
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
  ) 
 Here is how much of TeX's memory you used:
- 39129 strings out of 492982
- 929266 string characters out of 6134895
- 1307367 words of memory out of 5000000
- 40975 multiletter control sequences out of 15000+600000
- 102084 words of font info for 228 fonts, out of 8000000 for 9000
+ 45508 strings out of 492982
+ 1050009 string characters out of 6134895
+ 1767898 words of memory out of 5000000
+ 47268 multiletter control sequences out of 15000+600000
+ 105976 words of font info for 235 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,15n,119p,8815b,1043s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/share/texlive/texm
-f-dist/fonts/enc/dvips/newtx/ntx-ecth-tlf.enc}{/usr/share/texlive/texmf-dist/fo
-nts/enc/dvips/newtx/ntx-ec-tlf.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q
--ec.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/euler/euex10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/euler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/euler/eurm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/euler/eusm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/euler/eusm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/symbols/msam7.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qhvb.pfb><
-/usr/share/texmf/fonts/type1/public/tex-gyre/qplr.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/newpx/zplb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-newpx/zplr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplri.pf
-b>
-Output written on main.pdf (149 pages, 1325700 bytes).
+ 73i,15n,119p,8815b,1375s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-sc.enc}{/usr/
+share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/share/texlive/texmf-dist/f
+onts/enc/dvips/newtx/ntx-ecth-tlf.enc}{/usr/share/texlive/texmf-dist/fonts/enc/
+dvips/newtx/ntx-ec-tlf.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec.enc}
+</usr/share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/euler/euex10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/euler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/euler/eurm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/euler/eusm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/euler/eusm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sy
+mbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sym
+bols/msam7.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qhvb.pfb></usr/sha
+re/texmf/fonts/type1/public/tex-gyre/qplr.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/newpx/zplb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zp
+lr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
+Output written on main.pdf (157 pages, 1358990 bytes).
 PDF statistics:
- 2797 PDF objects out of 2984 (max. 8388607)
- 2557 compressed objects within 26 object streams
- 776 named destinations out of 1000 (max. 500000)
- 24433 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 2895 PDF objects out of 2984 (max. 8388607)
+ 2646 compressed objects within 27 object streams
+ 799 named destinations out of 1000 (max. 500000)
+ 26481 words of extra memory for PDF output out of 29859 (max. 10000000)
 

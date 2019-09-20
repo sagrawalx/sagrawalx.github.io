@@ -56,9 +56,8 @@ If you're struggling to find things, here's a short list of things that I think 
     * Power rule for arbitrary exponents (including a rigorous construction of the real numbers)
     * Volterra's construction (of a differentiable function $f$ such that $f'$ is continuous on an arbitrary dense $G_\delta$ set)
     * Pompeiu's construction (of a non-constant differentiable function $f$ such that $f' = 0$ on a dense subset of the domain)
-    * Newton's method
+    * Newton's method (or other algorithms in numerical analysis)
     * L'Hôpital's rule
-    * Mean value forms of the remainder in Taylor's theorem (Lagrange form, Cauchy form)
     * Fundamental theorem of calculus (including a rigorous construction of the Riemann integral)
 * Multivariable calculus
     * Implicit function theorem
