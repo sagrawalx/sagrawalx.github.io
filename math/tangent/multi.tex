@@ -1722,12 +1722,12 @@ In \cref{smooth-single}, we formulated the principle that smooth single variable
 
 \subsubsection*{Bump functions}
 
-Recall that a ``bump function''\index{bump function} is a smooth function with compact support. We can use single variable bump functions to construct multivariable bump functions. 
+Recall the definition of support in \cref{support}. Just like in the single variable setting, a ``bump function''\index{bump function} is a smooth function with compact support. In fact, we can use single variable bump functions to construct multivariable bump functions. 
 
 \begin{exercise} \label{multivariable-bump-square-support}
 	Let $\psi : \R \to \R$ denote the single variable bump function from \cref{canonical-bump}. Then define $\Psi : \R^m \to \R$ by
 	\[ \Psi(x_1, \dotsc, x_m) = \psi(x_1) \psi(x_2) \dotsb \psi(x_m). \]
-	See \cref{multivariable-bump-square-support-graph}. Show that $\Psi$ is a bump function with support $[-1,1]^m$. 
+	See \cref{multivariable-bump-square-support-graph}. Show that $\Psi$ is a bump function supported on the hypercube $[-1,1]^m$. 
 	\begin{figure}[ht]
 		\begin{center}
 			\begin{tikzpicture}
@@ -1756,16 +1756,16 @@ Recall that a ``bump function''\index{bump function} is a smooth function with c
 \begin{exercise} \label{multivariable-bump-round-support}
 	Let $\psi : \R \to \R$ denote the single variable bump function from \cref{canonical-bump}. Then define $\Psi : \R^m \to \R$ by
 	\[ \Psi(x_1, \dotsc, x_m) = \psi(x_1^2 + \dotsb + x_m^2). \]
-	Show that $\Psi$ is a bump function with support $\overline{B}(0,1)$.  
+	Show that $\Psi$ is a bump function supported on the closed unit ball $\bar{B}(0,1)$.  
 \end{exercise}
 
-\subsubsection*{Paths}
+\subsubsection*{Paths} \label{paths-multi}
 
 \begin{definition}[Paths]
 	Given $a, b \in \R^m$, a \emph{path} starting at $a$ and ending at $b$ is a continuous function $\gamma : [0, 1] \to \R^m$ such that $\gamma(0) = a$ and $\gamma(1) = b$. 
 	\begin{itemize}
-		\item We say that $\gamma$ is \emph{smooth} if it is the restriction to $[0,1]$ of a smooth function $(-\epsilon, 1+\epsilon) \to \R^m$ for some $\epsilon > 0$. 
-		\item We say that $\gamma$ is \emph{inside} or \emph{contained in} an open set $U$ if $\gamma(t) \in U$ for all $t \in [0,1]$.
+		\item We say that $\gamma$ is \emph{smooth} if it is the restriction to $[0,1]$ of a smooth function $(-\epsilon, 1+\epsilon) \to \R^m$ for some $\epsilon > 0$. This means that we can talk about the iterated derivatives $\gamma^{(k)}(t)$ not just for $t \in (0,1)$, but also for $t = 0, 1$. 
+		\item We say that $\gamma$ is \emph{inside} or \emph{contained in} an open subset $U$ of $\R^m$ if $\gamma(t) \in U$ for all $t \in [0,1]$.
 	\end{itemize}
 \end{definition}
 

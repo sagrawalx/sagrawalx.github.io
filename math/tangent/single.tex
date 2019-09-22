@@ -536,18 +536,23 @@ Notice that in the first proof, the trick to overcoming the technicality was def
 We first recall the following definitions. 
 
 \begin{definition} \index{extremum!local extremum} \index{extremum!local maximum} \index{extremum!local minimum} \index{extremum!absolute maximum} \index{extremum!absolute minimum} \index{extremum!absolute extremum}
-	Supppose $X$ is a metric space and $f : X \to \R$ is a function. Suppose $a \in X$. 
+	Supppose $X$ is a set, $f : X \to \R$ is a function, and $a \in X$. 
 	\begin{itemize}
-		\item $a$ is a \emph{local maximum} of $f$ if there exists a neighborhood $U$ of $a$ in $X$ such that $f(x) \leq f(a)$ for all $x \in U$. 
-		\item $a$ is a \emph{local minimum} of $f$ if there exists a neighborhood $U$ of $a$ in $X$ such that $f(x) \geq f(a)$ for all $x \in U$. 
-		\item $a$ is a \emph{local extremum} if it is either a local maximum or a local minimum.
 		\item $a$ is an \emph{absolute maximum}, or just \emph{maximum}, of $f$ if $f(x) \leq f(a)$ for all $x \in X$. 
 		\item $a$ is an \emph{absolute minimum}, or just \emph{minimum}, of $f$ if $f(x) \geq f(a)$ for all $x \in X$. 
 		\item $a$ is a \emph{absolute extremum} or just \emph{extremum}, if it is either an absolute maximum or an absolute minimum.
 	\end{itemize}
+	If $X$ is a metric space\footnotemark, we can also make the following definitions. 
+	\begin{itemize}
+		\item $a$ is a \emph{local maximum} of $f$ if there exists a neighborhood $U$ of $a$ in $X$ such that $f(x) \leq f(a)$ for all $x \in U$. 
+		\item $a$ is a \emph{local minimum} of $f$ if there exists a neighborhood $U$ of $a$ in $X$ such that $f(x) \geq f(a)$ for all $x \in U$. 
+		\item $a$ is a \emph{local extremum} if it is either a local maximum or a local minimum.
+	\end{itemize}
 \end{definition}
 
-The following is a key property of derivatives that you probably remember from calculus. 
+\footnotetext{For the definition of local extremums, $X$ could also be a topological space.}
+
+The following is a key property of derivatives that you probably remember using frequently when you were first exposed to calculus. 
 
 \begin{exercise}[Interior extremum theorem] \label{interior-extremum} \index{extremum!interior extremum theorem} \index{interior extremum theorem|see {extremum}}
 	Suppose an interior point $a \in S$ is a local extremum of a function $f : S \to \R$. If $f$ is differentiable at $a$, prove that $f'(a) = 0$.
@@ -1505,7 +1510,16 @@ We next discuss an example of a smooth function which gets ``infinitely flat'' a
 
 \subsubsection*{Bump functions}
 
-Next up, we have ``bump functions.''\index{bump function} Recall that the ``support''\index{support} of a function $f : U \to \R$ is the closure of the set $\{ x \in U : f(x) \neq 0 \}$. A \emph{bump function} is a smooth function with compact support. 
+Next up, we have ``bump functions.''\index{bump function} We begin with the following definition. 
+
+\begin{definition}[Support of a real-valued function] \index{support} \label{support}
+	Suppose $X$ is a metric space\footnotemark\ and $f : X \to \R$ is a function. The \emph{support} of $f$, denoted $\supp(f)$, is the closure of the set of points where $f$ is nonzero. In other words, 
+	\[ \supp(f) = \overline{\{ x \in X : f(x) \neq 0 \}}. \]
+\end{definition}
+
+\footnotetext{For the definition of support, $X$ could more generally be a topological space.}
+
+A ``bump function'' is a smooth function with compact support. 
 
 \begin{example} \label{canonical-bump}
 	Consider the function $\psi : \R \to \R$ given by the following. 
