@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  22 SEP 2019 07:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  22 SEP 2019 08:51
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1687,97 +1687,111 @@ A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
 LaTeX Warning: Reference `slope-function-chain-rule' on page 1 undefined on inp
-ut line 408.
+ut line 409.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
 LaTeX Warning: Reference `chain-rule-details' on page 1 undefined on input line
- 445.
+ 446.
 
 
 LaTeX Warning: Reference `alternative-to-multiplicative-cross-term' on page 1 u
-ndefined on input line 458.
+ndefined on input line 459.
 
 
 LaTeX Warning: Reference `alternative-to-multiplicative-cross-term' on page 1 u
-ndefined on input line 460.
+ndefined on input line 461.
 
 
 LaTeX Warning: Reference `differential-unique-single' on page 1 undefined on in
-put line 466.
+put line 467.
 
 
 LaTeX Warning: Reference `differential-unique-single' on page 1 undefined on in
-put line 469.
+put line 470.
 
 
 LaTeX Warning: Reference `error-in-approximation' on page 1 undefined on input 
-line 471.
+line 472.
 
 
 LaTeX Warning: Reference `error-in-approximation' on page 1 undefined on input 
-line 505.
+line 506.
 
 
 LaTeX Warning: Reference `chain-rule-single-section' on page 1 undefined on inp
-ut line 554.
+ut line 555.
 
 
 LaTeX Warning: Reference `interior-extremum' on page 41 undefined on input line
- 560.
+ 561.
 
 
 LaTeX Warning: Reference `wrong-conjecture-counterexample' on page 1 undefined 
-on input line 568.
+on input line 569.
 
 
 LaTeX Warning: Reference `power-rule-fractional' on page 1 undefined on input l
-ine 578.
+ine 579.
 
 
 LaTeX Warning: Reference `power-rule-general' on page 1 undefined on input line
- 578.
+ 579.
 
 
 LaTeX Warning: Reference `power-rule-fractional' on page 1 undefined on input l
-ine 578.
+ine 579.
 
 
 LaTeX Warning: Reference `differentiating-power-series' on page 1 undefined on 
-input line 586.
+input line 587.
 
 
 LaTeX Warning: Reference `interior-extremum' on page 1 undefined on input line 
-628.
+629.
 
 
 LaTeX Warning: Reference `mean-value-theorem' on page 44 undefined on input lin
-e 646.
+e 647.
 
 
-LaTeX Warning: Reference `rolles-theorem' on page 44 undefined on input line 64
-8.
+LaTeX Warning: Reference `mean-value-theorem-picture' on page 1 undefined on in
+put line 647.
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+LaTeX Warning: Reference `mean-value-theorem' on page 45 undefined on input lin
+e 683.
+
+
+LaTeX Warning: Reference `mean-value-theorem' on page 45 undefined on input lin
+e 683.
+
+
+LaTeX Warning: Reference `rolles-theorem' on page 45 undefined on input line 68
+6.
 
 
 LaTeX Warning: Reference `constant-implies-derivative-zero-single' on page 1 un
-defined on input line 651.
+defined on input line 689.
 
 
 LaTeX Warning: Reference `interior-extremum' on page 1 undefined on input line 
-651.
+689.
 
 
-LaTeX Warning: Citation 'protter-morrey' on page 45 undefined on input line 655
+LaTeX Warning: Citation 'protter-morrey' on page 45 undefined on input line 693
 .
 
 
 LaTeX Warning: Reference `subtracting-the-secant' on page 1 undefined on input 
-line 660.
+line 698.
 
 
-LaTeX Warning: Reference `rolles-theorem' on page 45 undefined on input line 66
-1.
+LaTeX Warning: Reference `rolles-theorem' on page 45 undefined on input line 69
+9.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
@@ -1785,155 +1799,155 @@ A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
 LaTeX Warning: Reference `constant-implies-derivative-zero-single' on page 1 un
-defined on input line 722.
+defined on input line 760.
 
 
 LaTeX Warning: Reference `constant-implies-derivative-zero-single' on page 1 un
-defined on input line 729.
+defined on input line 767.
 
 
-LaTeX Warning: Reference `sup-norm' on page 1 undefined on input line 738.
+LaTeX Warning: Reference `sup-norm' on page 1 undefined on input line 776.
 
 
-LaTeX Warning: Reference `sup-norm' on page 1 undefined on input line 745.
+LaTeX Warning: Reference `sup-norm' on page 1 undefined on input line 783.
 
 
 LaTeX Warning: Reference `constant-iff-derivative-zero-single' on page 1 undefi
-ned on input line 784.
+ned on input line 822.
 
 
 LaTeX Warning: Reference `strictly-monotone-derivative' on page 1 undefined on 
-input line 802.
+input line 840.
 
 
-LaTeX Warning: Citation 'protter-morrey' on page 48 undefined on input line 827
+LaTeX Warning: Citation 'protter-morrey' on page 48 undefined on input line 865
 .
 
 
 LaTeX Warning: Reference `removable-jump-ivp' on page 1 undefined on input line
- 827.
+ 865.
 
 
 LaTeX Warning: Reference `discontinuous-ivp' on page 1 undefined on input line 
-827.
+865.
 
 
 LaTeX Warning: Reference `power-times-sine' on page 1 undefined on input line 8
-45.
+83.
 
 
 LaTeX Warning: Reference `power-times-sine' on page 1 undefined on input line 8
-49.
+87.
 
 
 LaTeX Warning: Reference `removable-jump-ivp' on page 1 undefined on input line
- 849.
+ 887.
 
 
 LaTeX Warning: Reference `mean-value-theorem' on page 49 undefined on input lin
-e 856.
+e 894.
 
 
 LaTeX Warning: Reference `subtracting-a-line' on page 1 undefined on input line
- 858.
+ 896.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-LaTeX Warning: Reference `interior-extremum' on page 49 undefined on input line
- 919.
+LaTeX Warning: Reference `interior-extremum' on page 50 undefined on input line
+ 957.
 
 
 LaTeX Warning: Reference `nonzero-derivative-implies-strictly-monotone' on page
- 1 undefined on input line 945.
+ 1 undefined on input line 983.
 
 
 LaTeX Warning: Reference `strictly-monotone-implies-open' on page 1 undefined o
-n input line 945.
+n input line 983.
 
 
 LaTeX Warning: Reference `power-rule-integer' on page 1 undefined on input line
- 958.
+ 996.
 
 
 LaTeX Warning: Reference `chain-rule-single-section' on page 1 undefined on inp
-ut line 996.
+ut line 1034.
 
 
-LaTeX Warning: Citation 'rudin' on page 53 undefined on input line 1011.
+LaTeX Warning: Citation 'rudin' on page 53 undefined on input line 1049.
 
 
 LaTeX Warning: Reference `differentiating-power-series' on page 1 undefined on 
-input line 1029.
+input line 1067.
 
 
 LaTeX Warning: Reference `differentiation-uniform-limit' on page 1 undefined on
- input line 1029.
+ input line 1067.
 
 
 LaTeX Warning: Reference `exp-sin-cos-power-series' on page 1 undefined on inpu
-t line 1039.
+t line 1077.
 
 
-LaTeX Warning: Reference `non-rational' on page 1 undefined on input line 1039.
+LaTeX Warning: Reference `non-rational' on page 1 undefined on input line 1077.
 
 
 
-LaTeX Warning: Reference `darboux-section' on page 1 undefined on input line 10
-89.
+LaTeX Warning: Reference `darboux-section' on page 1 undefined on input line 11
+27.
 
 
 LaTeX Warning: Reference `positive-not-monotone' on page 1 undefined on input l
-ine 1095.
+ine 1133.
 
 
-LaTeX Warning: Citation 'pompeiu' on page 55 undefined on input line 1101.
+LaTeX Warning: Citation 'pompeiu' on page 55 undefined on input line 1139.
 
 
 LaTeX Warning: Reference `extremum-no-sign-change' on page 1 undefined on input
- line 1113.
+ line 1151.
 
 
 LaTeX Warning: Reference `extremum-no-sign-change-continued' on page 1 undefine
-d on input line 1113.
+d on input line 1151.
 
 
 LaTeX Warning: Reference `extremum-no-sign-change' on page 1 undefined on input
- line 1116.
+ line 1154.
 
 
-LaTeX Warning: Reference `chain-rule-single' on page 56 undefined on input line
- 1147.
+LaTeX Warning: Reference `chain-rule-single' on page 57 undefined on input line
+ 1185.
 
 
 LaTeX Warning: Reference `ck-stable-product-single' on page 1 undefined on inpu
-t line 1147.
+t line 1185.
 
 
 LaTeX Warning: Reference `ck-stable-composite-single' on page 1 undefined on in
-put line 1153.
+put line 1191.
 
 
 LaTeX Warning: Reference `inverse-function-theorem-single' on page 1 undefined 
-on input line 1162.
+on input line 1200.
 
 
 LaTeX Warning: Reference `ck-stable-reciprocal-single' on page 1 undefined on i
-nput line 1166.
+nput line 1204.
 
 
 LaTeX Warning: Reference `ck-stable-composite-single' on page 1 undefined on in
-put line 1166.
+put line 1204.
 
 
 LaTeX Warning: Reference `differentiable-implies-continuous-single' on page 1 u
-ndefined on input line 1169.
+ndefined on input line 1207.
 
 
 LaTeX Warning: Reference `power-times-absolute-value-graphs' on page 1 undefine
-d on input line 1176.
+d on input line 1214.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
@@ -1945,222 +1959,222 @@ A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
 LaTeX Warning: Reference `differential-unique-single' on page 1 undefined on in
-put line 1253.
+put line 1291.
 
 
 LaTeX Warning: Reference `taylor-polynomial-single' on page 1 undefined on inpu
-t line 1261.
+t line 1299.
 
 
 LaTeX Warning: Reference `ck-stable-sum-scalar-single' on page 1 undefined on i
-nput line 1261.
+nput line 1299.
 
 
 LaTeX Warning: Reference `less-than-small-is-small' on page 1 undefined on inpu
-t line 1283.
+t line 1321.
 
 
 LaTeX Warning: Reference `little-o-vector-space' on page 1 undefined on input l
-ine 1283.
+ine 1321.
 
 
 LaTeX Warning: Reference `extremum-no-sign-change-continued' on page 1 undefine
-d on input line 1290.
+d on input line 1328.
 
 
 LaTeX Warning: Reference `extremum-no-sign-change' on page 1 undefined on input
- line 1290.
+ line 1328.
 
 
-LaTeX Warning: Reference `taylor-single' on page 60 undefined on input line 129
-8.
+LaTeX Warning: Reference `taylor-single' on page 60 undefined on input line 133
+6.
 
 
 LaTeX Warning: Reference `eventual-nonvanishing-derivative' on page 1 undefined
- on input line 1311.
+ on input line 1349.
 
 
 LaTeX Warning: Reference `strictly-monotone-derivative' on page 1 undefined on 
-input line 1311.
+input line 1349.
 
 
 LaTeX Warning: Reference `extremum-no-sign-change-continued' on page 1 undefine
-d on input line 1316.
+d on input line 1354.
 
 
 LaTeX Warning: Reference `extremum-no-sign-change' on page 1 undefined on input
- line 1316.
+ line 1354.
 
 
 LaTeX Warning: Reference `extremum-sign-change' on page 1 undefined on input li
-ne 1316.
+ne 1354.
 
 
 LaTeX Warning: Reference `mean-value-theorem' on page 61 undefined on input lin
-e 1328.
+e 1366.
 
 
-LaTeX Warning: Reference `taylor' on page 61 undefined on input line 1330.
+LaTeX Warning: Reference `taylor' on page 61 undefined on input line 1368.
 
 
 LaTeX Warning: Reference `rolles-theorem' on page 61 undefined on input line 13
-33.
+71.
 
 
 LaTeX Warning: Reference `ck-stable-inversion-single' on page 1 undefined on in
-put line 1350.
+put line 1388.
 
 
 LaTeX Warning: Reference `ck-stable-composite-single' on page 1 undefined on in
-put line 1350.
+put line 1388.
 
 
 LaTeX Warning: Reference `ck-stable-reciprocal-single' on page 1 undefined on i
-nput line 1350.
+nput line 1388.
 
 
 LaTeX Warning: Reference `ck-stable-product-single' on page 1 undefined on inpu
-t line 1350.
+t line 1388.
 
 
 LaTeX Warning: Reference `ck-stable-sum-scalar-single' on page 1 undefined on i
-nput line 1350.
+nput line 1388.
 
 
 LaTeX Warning: Reference `positive-not-monotone' on page 1 undefined on input l
-ine 1352.
+ine 1390.
 
 
 LaTeX Warning: Reference `nonzero-derivative-at-point-implies-monotone-in-neigh
-borhood' on page 1 undefined on input line 1352.
+borhood' on page 1 undefined on input line 1390.
 
 
 LaTeX Warning: Reference `extremum-no-sign-change-final' on page 1 undefined on
- input line 1352.
+ input line 1390.
 
 
 LaTeX Warning: Reference `extremum-no-sign-change' on page 1 undefined on input
- line 1352.
+ line 1390.
 
 
 LaTeX Warning: Reference `extremum-no-sign-change' on page 1 undefined on input
- line 1352.
+ line 1390.
 
 
 LaTeX Warning: Reference `extremum-sign-change' on page 1 undefined on input li
-ne 1352.
+ne 1390.
 
 
 LaTeX Warning: Reference `interval-to-line-graph' on page 1 undefined on input 
-line 1362.
+line 1400.
 
 
 LaTeX Warning: Reference `strictly-monotone-derivative' on page 1 undefined on 
-input line 1365.
+input line 1403.
 
 
 LaTeX Warning: Reference `ck-stable-inversion-single' on page 1 undefined on in
-put line 1367.
+put line 1405.
 
 
 LaTeX Warning: Reference `ck-stable-inversion-single' on page 1 undefined on in
-put line 1369.
+put line 1407.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
 LaTeX Warning: Reference `exponential-polynomial' on page 1 undefined on input 
-line 1417.
+line 1455.
 
 
 LaTeX Warning: Reference `exponential-polynomial' on page 1 undefined on input 
-line 1419.
+line 1457.
 
 
-LaTeX Warning: Reference `weak-lhopital' on page 1 undefined on input line 1419
+LaTeX Warning: Reference `weak-lhopital' on page 1 undefined on input line 1457
 .
 
 
 LaTeX Warning: Reference `exponential-polynomial' on page 1 undefined on input 
-line 1419.
+line 1457.
 
 
-LaTeX Warning: Citation 'protter-morrey' on page 64 undefined on input line 141
-9.
-
-
-LaTeX Warning: Citation 'rudin' on page 64 undefined on input line 1419.
-
-
-LaTeX Warning: Reference `mean-value-theorem' on page 64 undefined on input lin
-e 1419.
-
-
-LaTeX Warning: Reference `exponential-polynomial' on page 1 undefined on input 
-line 1421.
-
-
-LaTeX Warning: Reference `exponential-polynomial' on page 1 undefined on input 
-line 1423.
-
-
-LaTeX Warning: Reference `infinitely-flat-graph' on page 1 undefined on input l
-ine 1429.
-
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-
-LaTeX Warning: Reference `infinitely-flat' on page 1 undefined on input line 14
-51.
-
-
-LaTeX Warning: Reference `infinitely-flat' on page 1 undefined on input line 14
-51.
-
-
-LaTeX Warning: Reference `exponential-limit' on page 1 undefined on input line 
-1454.
-
-
-LaTeX Warning: Reference `exponential-limit' on page 1 undefined on input line 
-1458.
-
-
-LaTeX Warning: Reference `canonical-bump-graph' on page 1 undefined on input li
-ne 1475.
-
-
-LaTeX Warning: Reference `infinitely-flat' on page 1 undefined on input line 14
-76.
-
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-
-LaTeX Warning: Reference `canonical-bump' on page 1 undefined on input line 150
-1.
-
-
-LaTeX Warning: Reference `canonical-bump' on page 1 undefined on input line 150
-1.
-
-
-LaTeX Warning: Citation 'protter-morrey' on page 66 undefined on input line 151
-0.
-
-
-LaTeX Warning: Citation 'protter-morrey' on page 66 undefined on input line 151
+LaTeX Warning: Citation 'protter-morrey' on page 64 undefined on input line 145
 7.
 
 
-LaTeX Warning: Citation 'rudin' on page 66 undefined on input line 1517.
+LaTeX Warning: Citation 'rudin' on page 64 undefined on input line 1457.
+
+
+LaTeX Warning: Reference `mean-value-theorem' on page 64 undefined on input lin
+e 1457.
+
+
+LaTeX Warning: Reference `exponential-polynomial' on page 1 undefined on input 
+line 1459.
+
+
+LaTeX Warning: Reference `exponential-polynomial' on page 1 undefined on input 
+line 1461.
+
+
+LaTeX Warning: Reference `infinitely-flat-graph' on page 1 undefined on input l
+ine 1467.
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+LaTeX Warning: Reference `infinitely-flat' on page 1 undefined on input line 14
+89.
+
+
+LaTeX Warning: Reference `infinitely-flat' on page 1 undefined on input line 14
+89.
+
+
+LaTeX Warning: Reference `exponential-limit' on page 1 undefined on input line 
+1492.
+
+
+LaTeX Warning: Reference `exponential-limit' on page 1 undefined on input line 
+1496.
+
+
+LaTeX Warning: Reference `canonical-bump-graph' on page 1 undefined on input li
+ne 1513.
+
+
+LaTeX Warning: Reference `infinitely-flat' on page 1 undefined on input line 15
+14.
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+LaTeX Warning: Reference `canonical-bump' on page 1 undefined on input line 153
+9.
+
+
+LaTeX Warning: Reference `canonical-bump' on page 1 undefined on input line 153
+9.
+
+
+LaTeX Warning: Citation 'protter-morrey' on page 66 undefined on input line 154
+8.
+
+
+LaTeX Warning: Citation 'protter-morrey' on page 66 undefined on input line 155
+5.
+
+
+LaTeX Warning: Citation 'rudin' on page 66 undefined on input line 1555.
 
 
 LaTeX Warning: Citation 'counterexamples' on page 66 undefined on input line 15
-17.
+55.
 
 
-LaTeX Warning: Reference `canonical-bump' on page 1 undefined on input line 152
-0.
+LaTeX Warning: Reference `canonical-bump' on page 1 undefined on input line 155
+8.
 
 ) (./multi.tex
 chapter 2.
@@ -2530,8 +2544,6 @@ LaTeX Warning: Reference `polar-map-picture' on page 1 undefined on input line
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
 \openout4 = `figures/stable-figure30.dpth'.
 
 [88
@@ -2540,6 +2552,8 @@ isable this.
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
@@ -3471,19 +3485,21 @@ Package logreq Info: Writing requests to 'figures/stable-figure30.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44550 strings out of 492982
- 1042557 string characters out of 6134895
- 1733271 words of memory out of 5000000
- 47224 multiletter control sequences out of 15000+600000
+ 44588 strings out of 492982
+ 1043399 string characters out of 6134895
+ 1733272 words of memory out of 5000000
+ 47262 multiletter control sequences out of 15000+600000
  98600 words of font info for 200 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,15n,119p,8853b,2343s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb>
-Output written on figures/stable-figure30.pdf (1 page, 7892 bytes).
+ 75i,15n,119p,8853b,2473s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}</usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/newpx/zplr.pfb>
+Output written on figures/stable-figure30.pdf (1 page, 22348 bytes).
 PDF statistics:
- 33 PDF objects out of 1000 (max. 8388607)
- 14 compressed objects within 1 object stream
+ 38 PDF objects out of 1000 (max. 8388607)
+ 18 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  25613 words of extra memory for PDF output out of 29859 (max. 10000000)
 

@@ -80,7 +80,7 @@ Office hours (1–2pm).
 <td rowspan="2">Thu</td>
 <td>Single variable: Differentiable functions</td>
 <td>Read: 1.3  
-Do: 5, 10, 12, 19</td>
+Do: 6, 11, 13, 20</td>
 <td></td>
 </tr>
 
