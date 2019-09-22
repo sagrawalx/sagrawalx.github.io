@@ -2,14 +2,14 @@
 
 Manifolds allow us to formalize the idea of geometry without having to make a choice of coordinates. The idea, roughly speaking, is to have a space and then remember \emph{all possible} choice of coordinates on that space! 
 
-At this point, we will need to use the language of topological spaces. If you have seen metric spaces but not topological spaces, you should look over \cref{topological-spaces-basics} briefly (in particular, at least at  \cref{topological-space-definition,metric-to-topological,continuous-definition,open-map-definition,homeomorphism-definition}).
+At this point, we will need to use the language of topological spaces. If you have seen metric spaces but not topological spaces, you should look over \cref{topological-spaces-basics} briefly (in particular, at least \cref{topological-space-definition,metric-to-topological,continuous-definition,open-map-definition,homeomorphism-definition}).
 
 \section{Definition of a manifold}
 
 Throughout, let $X$ be a topological space.\index{topological space}
 
 \begin{definition}[Chart] \index{chart}
-	A \emph{chart} on $X$ is a pair $(U, x)$ consisting of an open subset $U \subseteq X$ and a continuous, open\index{open!open map}, and injective function $x : U \to \R^n$ for some $n$. If $p \in X$, we say that the chart $(U,x)$ \emph{contains} $p$ if $p \in U$. Also, we call the functions $x_i := \pi_i \circ x : U \to \R$ \emph{coordinate functions} on $U$ with respect to the chart $(U, x)$, and for any $p \in U$, the list of numbers $x_1(p), \dotsc, x_n(p)$ are called the \emph{coordinates} of $p$ with respect to the chart $(U, x)$.\index{coordinates} 
+	A \emph{chart} on $X$ is a pair $(U, x)$ consisting of an open subset $U \subseteq X$ and a continuous, open\index{open!open map}, and injective function $x : U \to \R^n$ for some $n$. We call the integer $n$ the \emph{dimension} of $(U,x)$, and write $\dim (U,x)$ to denote it. If $p \in X$, we say that the chart $(U,x)$ \emph{contains} $p$ if $p \in U$. Also, we call the functions $x_i := \pi_i \circ x : U \to \R$ \emph{coordinate functions} on $U$ with respect to the chart $(U, x)$, and for any $p \in U$, the list of numbers $x_1(p), \dotsc, x_n(p)$ are called the \emph{coordinates} of $p$ with respect to the chart $(U, x)$.\index{coordinates} 
 \end{definition}
 
 \begin{exercise} \label{polar-representation}
@@ -39,7 +39,7 @@ Throughout, let $X$ be a topological space.\index{topological space}
 \end{exercise}
 
 \begin{exercise} \label{dimension-well-defined}
-	Suppose $(U, x)$ and $(U', x')$ are compatible charts, where $x : U \to \R^m$ and $x' : U' \to \R^n$, and that $U \cap U'$ is nonempty. Show that $m = n$. 
+	Suppose $(U, x)$ and $(U', x')$ are compatible charts and that $U \cap U'$ is nonempty. Show that $\dim(U,x) = \dim(U',x')$. 
 	\begin{hint}
 		Pick a point $p \in U \cap V$, and consider the derivatives of $x' \circ x^{-1}$ at $x(p)$ and of $x \circ x'^{-1}$ at $x'(p)$. 
 	\end{hint}
@@ -68,11 +68,11 @@ Of course, \cref{existence-maximal-atlas} tells us that any not-necessarily-maxi
 We can also make the following definition.
 
 \begin{definition}[Dimension] \index{dimension!of a manifold}
-	Suppose $X$ is a manifold and $p \in X$ is a point. By \cref{dimension-well-defined}, there is a unique integer $n$ such that, for every chart $(U, x) \in \mathscr{A}_X$ containing $p$, the codomain of the function $x$ is $\R^n$. This integer is called the \emph{dimension of $X$ at $p$}, and is denoted $\dim_p(X)$. We say that $X$ is \emph{$n$-dimensional} if $\dim_p(X) = n$ for all $p \in X$.
+	Suppose $X$ is a manifold and $p \in X$ is a point. By \cref{dimension-well-defined}, there is a unique integer $n$ such that $\dim(U,x) = n$ for every chart $(U, x) \in \mathscr{A}_X$ containing $p$. This integer is called the \emph{dimension of $X$ at $p$}, and is denoted $\dim_p(X)$. We say that $X$ is \emph{$n$-dimensional} if $\dim_p(X) = n$ for all $p \in X$.
 \end{definition}
 
 \begin{unimportantremark}
-	For any $k = 1, 2, \dotsc, \infty$, we could define charts to be \emph{$C^k$-compatible} if the transition functions between them are $C^k$, rather than smooth as in \cref{compatibility}. This would lead to a definition of \emph{$C^k$-manifolds}. In these notes, we'll just stick to the $k = \infty$ case. This is by far the most interesting.  
+	For any $k = 0, 1, 2, \dotsc, \infty$, we could define charts to be \emph{$C^k$-compatible} by requiring that the transition functions between them are $C^k$ (rather than smooth, as in \cref{compatibility}). This would lead to a definition of \emph{$C^k$-manifolds}. In these notes, we'll just stick to the $k = \infty$ case. This is by far the most interesting.  
 \end{unimportantremark}
 
 \section{Examples}
@@ -84,7 +84,11 @@ We can also make the following definition.
 \end{example}
 
 \begin{exercise}
-	The single chart $(\R, f)$ where $f : \R \to \R$ is the function $f(x) = x^3$ is an atlas on $\R$. Show that the corresponding maximal atlas is \emph{not} the euclidean atlas. 
+	Let $f : \R \to \R$ be the function $f(x) = x^3$. Note that $f$ is smooth and strictly increasing (hence injective and open, by \cref{strictly-monotone-iff-injective,strictly-monotone-implies-open}). Show that $(\R, f)$ is \emph{not} a member of the euclidean atlas on $\R$. 
+\end{exercise}
+
+\begin{exercise} \label{euclidean-chart-characterization}
+	Suppose $U$ is an open subset of $\R^n$ and $f : U \to \R^n$ is a function. Show that the pair $(U, f)$ is a chart in the euclidean atlas on $\R^n$ if and only if $f$ is smooth, injective, and \'etale.
 \end{exercise}
 
 \begin{exercise}[The circle $S^1$] \index{s1@$S^1$|see {circle}} \index{circle} \label{circle-projection-atlas}
@@ -155,9 +159,9 @@ We can also make the following definition.
 	If we endow $\mathscr{M}_{n \times m}$ with the canonical topology,\index{canonical topology} then $x$ is automatically a homeomorphism by \cref{linear-isomorphism-homeomorphism}.\index{homeomorphism} In other words, the single chart $(\mathscr{M}_{n \times m}, x)$ is an atlas on $\mathscr{M}_{n \times m}$. Extending it to a maximal atlas using \cref{existence-maximal-atlas}, we see that we can regard $\mathscr{M}_{n,m}$ as a manifold. It is $mn$-dimensional. The same process allows us to regard \emph{any} finite dimensional vector space (not just $\mathscr{M}_{n \times m}$) as a manifold.  
 \end{example}
 
-\begin{exercise}[Graphs]
+\begin{exercise}[Graphs] \label{graphs-continuous}
 	Suppose $U$ is an open subset of $\R^m$ and $f : U \to \R^n$ is a continuous function. 
-	\begin{enumerate}
+	\begin{enumerate}[(a)]
 		\item There are two ways we might think to regard $U \times \R^n$ as a topological space. One way is to use the product topology \ref{product-space}. The second way is to regard $U \times \R^n$ as a subset of $\R^m \times \R^n = \R^{m+n}$ and then give $U \times \R^n$ the subspace topology \ref{subspace-topology}. Show that these two topologies are the same. 
 		
 		\item Let
@@ -178,32 +182,114 @@ We can also make the following definition.
 
 \subsection{M\"obius strip}
 
-Let $B$ denote the box $[0,1] \times (0,1)$ inside $\R^2$, and define an equivalence relation $\sim$ on $B$ by declaring $(0, b) \sim (1, 1-b)$ for all $b \in (0,1)$. We will denote the equivalence class of a point $(a, b) \in B$ as $[a, b]$. 
+Let $B$ denote the box $[0,1] \times (0,1)$ inside $\R^2$, and let $\sim$ be the equivalence relation on $B$ where $(a,b) \sim (a',b')$ if we either have $a = a'$ and $b = b'$, or else we have $a = 0$, $a' = 1$, and $b' = 1-b$. See \cref{mobius-box}. We will denote the equivalence class of a point $(a, b) \in B$ as $[a, b]$. 
 
-% TODO: PICTURE
+\begin{figure}
+	\begin{center}
+	\begin{tikzpicture}
+	\begin{axis}[
+	xmin=-0.1,xmax=1.1,
+	ymin=-0.1,ymax=1.1,
+	ytick={1},
+	xtick={1},
+	xticklabels={1},
+	yticklabels={1},
+	axis lines=middle,
+	axis line style=lightgray,
+	axis equal,
+	width=0.6\textwidth
+	]
+	
+	\addplot[black, opacity=0.2, domain=0:1, samples=2] {0.25};
+	\addplot[black, opacity=0.2, domain=0:1, samples=2] {0.75};
+	
+	\foreach \n in {1, ..., 9}
+		\addplot +[mark=none, black, solid, opacity=0.2] coordinates {(0.1*\n, 0) (0.1*\n, 1)};
+	
+	\addplot[black, dashed, name path=top, domain=0:1, samples=2] {0};
+	\addplot[black, dashed, name path=bottom, domain=0:1, samples=2] {1};
+	\addplot [fill=red, fill opacity=0.1] 
+	fill between[of=top and bottom];
+	
+	
+	\addplot[red, thick, domain=0:1, samples=2, opacity=0.5] {0.5};
+	\addplot +[mark=none, solid, thick, black] coordinates {(0, 0) (0, 1)};
+	\addplot +[mark=none, solid, thick, black] coordinates {(1, 0) (1, 1)};
+	
+	\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:0,0.25) {}; 
+	\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:1,0.75) {}; 
+	\end{axis}
+	\end{tikzpicture}
+	
+	\vspace{5em}
+	
+	
+	\caption{Above is a picture of the box $B = [0,1] \times (0,1)$ and the equivalence relation $\sim$ described above. Geometrically, this equivalence relation identifies the vertical black line on the left of the box with the vertical black line on the right of the box, but ``with a twist.'' For example, the point $(0,1/4)$ on the left is identified with the point $(1,3/4)$ on the right. If we pick up the box and actually glue together the edges as indicated by the equivalence relation, we end up with the M\"obius strip as pictured below.} \label{mobius-box}
+	
+	\vspace{5em}
+	
+	\begin{tikzpicture}
+	\begin{axis}[
+	hide axis,
+	view={40}{40},
+	width=\textwidth]
+	
+	\addplot3 [surf,
+	red,
+	opacity=0.1,
+	faceted color=black,
+	point meta=x,
+	samples=40,
+	samples y=5,
+	z buffer=sort,
+	domain=0:360,
+	y domain=-0.5:0.5
+	] (
+	{(1+0.5*y*cos(x/2)))*cos(x)},
+	{(1+0.5*y*cos(x/2)))*sin(x)},
+	{0.5*y*sin(x/2)});
+	
+	% Center line
+	\addplot3 [samples=50, domain=-145:180, samples y=0, red, thick, opacity=0.5
+	] ({cos(x)},{sin(x)},{0});
+	
+	% Outside line
+	\addplot3 [samples=50, domain=-135:495, samples y=0, black, dashed] (
+	{(1+0.25*cos(x/2)))*cos(x)},
+	{(1+0.25*cos(x/2)))*sin(x)},
+	{0.25*sin(x/2)});
+	
+	% Glued line
+	\addplot3 [samples=50,domain=-0.5:0.5,samples y=0, black, thick,
+	] ({1+0.5*x},{0},{0});
+	
+	% Point
+	\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:1+1/8,0,0) {};
+	\end{axis}
+	\end{tikzpicture}
+	\end{center}
+\end{figure}
 
 \begin{exercise}
-	Check that $\sim$ is an equivalence relation. 
+	Check that $\sim$ is an equivalence relation, and that every equivalence class contains either one or two points. 
 \end{exercise}
 
-The \emph{M\"obius strip}\index{mobius strip@M\"obius strip} is the set of equivalence classes $M := B/\sim$. In other words, we take the box $[0,1] \times (0,1)$ and ``glue'' its left and right edges, with a twist. If you've ever made a M\"obius strip out of paper, you should be able to see that we've formalized exactly that same process. We regard $M$ as a topological space using the quotient topology, as in \cref{quotient-space}. 
+The \emph{M\"obius strip}\index{mobius strip@M\"obius strip} $M$ is the set of equivalence classes in $B$. In other words, we take the box $[0,1] \times (0,1)$ and ``glue'' its left and right edges, with a twist. If you've ever made a M\"obius strip out of paper, you can probably see that we've formalized exactly that same process. See \cref{mobius-box}, again.
 
-To give $X$ the structure of a manifold, we will now produce an atlas on $X$. It will consist of two charts. The first chart is easy to describe. Let \[ U = \{ [a, b] \in M : a \neq 0, 1 \} \] 
+We regard $M$ as a topological space using the quotient topology, as in \cref{quotient-space}. To give $X$ the structure of a manifold, we will construct an atlas consisting of two charts. But, before proceeding with the formalism, let's describe the intuition. Imagine making a cut in the M\"obius strip corresponding to a vertical cut in the box $B$. Once we make such a cut, we can untwist the M\"obius strip and we're left with an open rectangle, which we can regard as an open subset of $\R^2$. In other words, we've defined a chart on $M$. The points along the cut are missing from this chart; but if we construct a second chart by making a second separate cut, we will have constructed two charts that cover $M$. 
+
+Let's formalize this now. The easiest place to cut is the line along which we glued the M\"obius strip in the first place. In other words, we let \[ U = \{ [a, b] \in M : a \in (0,1) \} \] 
 and let $x : U \to \R^2$ be the function $x([a,b]) = (a, b)$.
 
 \begin{exercise}
-	Show that $x : U \to \R^2$ is well-defined and that it is a homeomorphism onto its image.
+	Show that $U$ is an open subset of $M$, and that the function $x : U \to \R^2$ is well-defined, continuous, injective, and open. 
 \end{exercise}
 
-Intuitively, what we've done here is cut along the same edge where we glued the Mobius strip together. What we're left with is $U$, which is just a flat rectangle and therefore embeds into $\R^2$. 
-
-% TODO: Picture
-
-The second chart is a bit harder to describe mathematically, but the intuitive idea is the same. Instead of cutting the M\"obius strip along the line where we glued, we'll cut along the line where $a = 1/2$. This should still leave us with a flat rectangle, which we can embed into $\R^2$. Formally, let \[ V = \{ [a, b] \in M : a \neq 1/2 \} \] and let $y : V \to  \R^2$ be the function defined by 
+The second chart is a bit harder to describe mathematically, but the intuitive idea is the same. We'll cut the M\"obius strip along the line corresponding the vertical line $a = 1/2$ in $B$. Formally, let \[ V = \{ [a, b] \in M : a \neq 1/2 \} \] and let $y : V \to  \R^2$ be the function defined by 
 \[ y([a,b]) = \begin{cases} (a, b) & \text{if } a < 1/2 \\ (a-1, 1-b) & \text{if } a > 1/2 \end{cases} \]
 
 \begin{exercise}
-	Show that $y : V \to \R^2$ is well-defined and that it is a homeomorphism onto its image.\index{homeomorphism!homeomorphism onto its image} 
+	Show that $V$ is also an open subset of $M$, and that $y : V \to \R^2$ is well-defined, continuous, injective, and open. 
 \end{exercise}
 
 \begin{exercise}
@@ -212,23 +298,153 @@ The second chart is a bit harder to describe mathematically, but the intuitive i
 
 Thus $\mathscr{A} = \{(U, x), (V, y)\}$ is an atlas on the M\"obius strip $M$. Letting $\mathscr{A}_M$ denote the corresponding maximal atlas, we obtain the structure of a manifold on $M$.
 
-\subsection{More examples}
-
-\begin{exercise}[Torus] \label{torus} \index{torus}
-	Let $B$ denote the box $[0,1] \times [0,1]$ inside $\R^2$ and define the equivalence relation $\sim$ by $(a,0) \sim (a,1)$ and $(0,b) \sim (1,b)$ for all $a, b \in [0,1]$. The \emph{torus} $T$ is defined to be the quotient $B/\sim$. Describe an atlas on $T$. 
+\begin{exercise}
+	Fix a constant $c \in [0,1)$, and let $U_c$ be the subset of $M$ where we've cut out the vertical line $a = c$. Show that $U_c$ is an open subset of $M$. Write down a formula for a well-defined function $x_c : U_c \to \R^2$ which is continuous, injective, and open; the image of $x_c$ should be an open box in $\R^2$, and you should recover the function $x$ above when $c = 0$, and the function $y$ when $c = 1/2$. Then show that $(U_c, x_c) \in \mathscr{A}_M$ for all $c \in [0,1)$. 
 \end{exercise}
 
+\subsection{More quotient examples}
+
+Here is another example of a manifold constructed as a quotient space that you probably recognize (though maybe under the name ``donut'' rather than ``torus.'')
+
+\begin{exercise}[Torus] \label{torus} \index{torus}
+	Let $B$ denote the box $[0,1] \times [0,1]$ inside $\R^2$ and let $\sim$ denote the equivalence relation generated by $(a,0) \sim (a,1)$ and $(0,b) \sim (1,b)$ for all $a, b \in [0,1]$. The \emph{torus} $T$ is defined to be the corresponding quotient space. Describe an atlas on $T$. 
+\end{exercise}
+
+% TODO: Torus picture
+
+But sometimes quotient spaces can be nearly impossible to visualize directly; the only way to have geometric intuition in these cases is to remember the space we started with before quotienting, and the equivalence relation we defined on it. 
+
 \begin{exercise}[Projective line] \label{rp1} \index{projective line} \index{p1@$\bbP^1$|see {projective line}}
-	Let $S^1$ denote the circle as in \cref{circle-projection-atlas}. Define an equivalence relation $\sim$ on $S^1$ which identifies antipodal points; in other words, every point on $S^1$ is declared to be equivalent to the point that is diametrically opposite it. The \emph{projective line} $\bbP^1$ is defined to be the quotient $S^1/\sim$. Describe an atlas on $\bbP^1$. 
+	Let $S^1$ denote the circle as in \cref{circle-projection-atlas}. Define an equivalence relation $\sim$ on $S^1$ which identifies antipodal points; in other words, every point on $S^1$ is declared to be equivalent to the point that is diametrically opposite it. The \emph{projective line} $\bbP^1$ is defined to be the corresponding quotient space. Describe an atlas on $\bbP^1$. 
 \end{exercise}
 
 \begin{exercise}[Projective plane] \label{rp2} \index{projective plane} \index{p2@$\bbP^2$|see {projective plane}}
-	Let $S^2$ denote the 2-sphere as in \cref{sphere-projection-atlas}. Define an equivalence relation $\sim$ on $S^2$ which identifies antipodal points; in other words, every point on $S^2$ is declared to be equivalent to the point that is diametrically opposite it. The \emph{projective plane} $\bbP^2$ is defined to be the quotient $S^2/\sim$. Describe an atlas on $\bbP^2$. 
+	Let $S^2$ denote the 2-sphere as in \cref{sphere-projection-atlas}. Define an equivalence relation $\sim$ on $S^2$ which identifies antipodal points; in other words, every point on $S^2$ is declared to be equivalent to the point that is diametrically opposite it. The \emph{projective plane} $\bbP^2$ is defined to be the corresponding quotient space. Describe an atlas on $\bbP^2$. 
 \end{exercise}
+
+\subsection{Submanifolds}
+
+\begin{definition}
+	Suppose $S$ is a subset of a manifold $X$. Then $S$ is a \emph{submanifold} of $X$ if there exist charts $(U, x) \in \mathscr{A}_X$ covering $S$ such that 
+	\[ S \cap U = \{ p \in U :  x_1(p) = x_2(p) = \dotsb = x_k(p) = 0 \} \]
+	for some non-negative integer $k \leq \dim(U,x)$. We say that the chart $(U,x)$ is \emph{adapted} to $S$, and the integer $k$ is called the \emph{codimension of $S$ in $(U,x)$}. 
+\end{definition}
+
+We'll justify this terminology in a moment by showing that submanifolds are actually manifolds in their own right (cf. \cref{submanifolds-are-manifolds}). But first, let's discuss some examples. 
+
+\begin{example}
+	Consider the set $S = \{ (0,y) \in \R^2 : -1 < x < 1 \}$ inside $\R^2$. In other words, $S$ is the open interval $(-1,1)$ along the $y$-axis inside $\R^2$. Then $S$ is a submanifold. Indeed, let $U$ be the open box $(-1,1) \times (-1,1)$ inside $\R^2$, and $x : U \to \R^2$ the inclusion map. Then $(U, x)$ is a chart on $\R^2$, and 
+	\[ S \cap U = \{ p \in S : x_1(p) = 0 \} \]
+	so $(U,x)$ is adapted to $S$ and $S$ has codimension 1 in $(U,x)$. 
+\end{example}
+
+\begin{exercise}
+	Show that each of the following is a submanifold of $\R^2$. 
+	\begin{enumerate}[(a)] 
+		\item The $y$-axis. 
+		\item The open interval $(-1,1)$ along the $x$-axis.
+		\item The line $y = x$. 
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise} \label{open-submanifolds-are-submanifolds}
+	Suppose $X$ is a manifold and $U$ is an open subset. Show that $U$ is a submanifold of $X$. 
+\end{exercise}
+
+\begin{proposition} \label{submanifolds-are-manifolds}
+	Let $S$ be a submanifold of a manifold $X$. Suppose $(U, x) \in \mathscr{A}_X$ is adapted to $S$ and $S$ has codimension $k$ in $(U, x)$. Let $x|_S : S \cap U \to \R^{n-k}$ be the function defined by 
+	\[ x|_S(p) = (x_{k+1}(p), \dotsc, x_n(p)). \]
+	Regarding $S$ as a topological space using the subspace topology, the pair $(S \cap U, x|_S)$ is a chart on $S$, and the set of all charts of this form is an atlas on $S$. Thus $S$ becomes a manifold if we equip it with the corresponding maximal atlas $\mathscr{A}_S$. Finally, if $(U, x) \in \mathscr{A}_X$ is a chart adapted to $S$ such that $S$ has codimension $k$ in $S$, then
+	\[ \dim_p(S) = \dim_p(X) - k \]
+	for all $p \in S \cap U$. 
+\end{proposition}
+
+\begin{proof}
+	The proof that $x|_S$ is continuous and injective is left as an exercise (cf. \cref{submanifolds-are-manifolds-details}). Let us show that $x|_S$ is open. Suppose $V$ is an open subset of $U$. 
+	
+	{\color{blue} Incomplete.}
+\end{proof}
+
+% TODO: Submanifolds are manifolds
+
+\begin{exercise} \label{submanifolds-are-manifolds-details}
+	Show that $x|_S$ is continuous and injective. 
+\end{exercise}
+
+\begin{exercise}
+	Suppose $X$ is a manifold and $U$ is an open subset. On the one hand, we can equip $U$ with the maximal atlas defined in \cref{open-submanifold}. On the other hand, we can regard $U$ as a submanifold (cf. \cref{open-submanifolds-are-submanifolds}) and then use \cref{submanifolds-are-manifolds} to equip $U$ with a maximal atlas. Show that these two maximal atlases are the same. 
+\end{exercise}
+
+\subsection{Submanifolds of euclidean space}
+
+We now have two results which let us produce lots of examples of submanifolds of euclidean space out of smooth functions (in the sense of \cref{smooth-multi}). 
+
+First up, we have the following important theorem which goes by many names; we will call it the ``regular level set theorem,'' but some other names include the ``implicit function theorem,'' the ``preimage theorem,'' and the ``submersion theorem.'' We will later generalize this theorem. 
+
+\begin{theorem}[Regular level set theorem] \label{regular-level-set-theorem-local}
+	Suppose $U$ is an open subset of $\R^m$ and $f : U \to \R^n$ is a smooth function where $m \geq n$. If $q \in \R^n$ is a regular value of $f$, then $S = f^{-1}(q)$ is a submanifold of $U$ of dimension $m-n$. 
+\end{theorem}
+
+\begin{proof}
+	By replacing $f$ with the function $x \mapsto f(x)-q$, we can assume without loss of generality that $q = 0$. Fix $p \in S$. We want to find a chart adapted to $S$ containing $p$. Since $0$ is a regular value and $m \geq n$, we know that $f$ is submersive at $p$. This means that the $n \times m$ matrix $f'(p)$ has a non-vanishing $n \times n$ minor, ie, there exist $n$ distinct integers $i_1, \dotsc, i_n$ between $1$ and $m$ such that 
+	\begin{equation} \label{derivative-non-vanishing-minor} 
+	\det \begin{bmatrix} \partial_{i_1} f_1(p) & \dotsb & \partial_{i_n} f_1(p) \\ \vdots & \ddots & \vdots \\ \partial_{i_1} f_n(p) & \dotsb & \partial_{i_n} f_n(p) \end{bmatrix} \neq 0. 
+	\end{equation}
+	By permuting the coordinates, we can assume without loss of generality that $i_1 = 1, i_2 = 2, \dotsc, i_n = n$ (cf. \cref{permutation-submanifold}). Consider the function $y : U \to \R^m$ such that, if $x = (x_1, \dotsc, x_m) \in U$, then
+	\[ y(x) = (f_1(x), \dotsc, f_n(x), x_{n+1}, \dotsc, x_m). \]
+	Then
+	\[ y'(x) = 
+	\begin{bmatrix} 
+	\partial_1 f_1(x) & \dotsb & \partial_n f_1(x) & \partial_{n+1} f_1(x) & \dotsb & \partial_m f_1(x) \\ 
+	\vdots & \dotsb & \vdots & \vdots & \ddots & \vdots \\ 
+	\partial_1 f_n(x) & \dotsb & \partial_n f_n(x) & \partial_{n+1} f_n(x) & \dotsb & \partial_m f_n(x) \\
+	0 & \dotsb & 0 & 1 & \dotsb & 0 \\ 
+	\vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\ 
+	0 & \dotsb & 0 & 0 & \dotsb & 1
+	\end{bmatrix} \]
+	In other words, the $(m-n) \times m$ submatrix on the bottom left of $g'(x)$ is all zeroes, and the $(m-n) \times (m-n)$ submatrix on the bottom right is the identity matrix. This means that $\det y'(x)$ is equal, up to sign, to the determinant of the $n \times n$ in the top left, which we know from \cref{derivative-non-vanishing-minor} is nonzero when $x = p$. Thus $y$ is \'etale at $p$. 
+	
+	Since $f$ is smooth, so is $y$, so there exists an open neighborhood $V$ of $p$ such that $y|_V$ is \'etale. By the inverse function theorem \ref{inverse-function-theorem}, we can replace $V$ with a smaller open neighborhood of $p$ in order to further assume that $y|_V$ is injective. Then \cref{euclidean-chart-characterization} tells us that $(V, y)$ is a chart in the euclidean atlas containing $p$. Moreover, 
+	\[ S \cap V = \{ p' \in V : f(p') = 0 \} = \{ p' \in V : y_1(p') = \dotsb = y_n(p') = 0 \} \]
+	because $y_j = f_j$ for all $j = 1, \dotsc, n$. This shows that $(V,y)$ is adapted to $S$, and that $S$ has codimension $n$ at $p$ in $\R^m$. 
+\end{proof}
+
+\begin{exercise} \label{permutation-submanifold}
+	Suppose $\sigma$ is a permutation of the set $\{1, \dotsc, m\}$. Let $f_\sigma : \R^m \to \R^m$ be the function which ``permutes the coordinates of elements of $\R^m$ according to $\sigma$,'' ie, 
+	\[ f_\sigma(x_1, \dotsc, x_m) = (x_{\sigma(1)}, \dotsc, x_{\sigma(m)}). \]
+	Show that a subset $S$ is a submanifold of $\R^m$ if and only if $f_\sigma(S)$ is a submanifold of $\R^m$. 
+\end{exercise}
+
+\begin{proposition} \label{graphs-smooth}
+	Suppose $U$ is an open subset of $\R^m$ and $f : U \to \R^n$ is a smooth function. Then the graph of $f$ is a submanifold of $\R^{m+n}$. 
+\end{proposition}
+
+\begin{proof}
+	We derive this from the regular level set theorem \ref{regular-level-set-theorem-local}. Consider the function $g : U \times \R^n \to \R^n$ given by $g(x, y) = f(x) - y$. Then the graph of $f$ is equal to $g^{-1}(0)$, so the result will follow from \cref{regular-level-set-theorem-local} provided we can show that 0 is a regular value of $g$. 
+	
+	In fact, $g$ is submersive at all points, so all of its values are regular! To see this, we calculate $dg$. Note that if $x = (x_1, \dotsc, x_m) \in U$ and $y = (y_1, \dotsc, y_n) \in \R^n$, then
+	\[ g(x,y) = g(x_1, \dotsc, x_m, y_1, \dotsc, y_n) = (f_1(x_1,\dotsc, x_m)-y_1, \dotsc, f_n(x_1, \dotsc, x_m) - y_n) \]
+	by definition of $g$, which means that
+	\[ \frac{\partial g_k}{\partial x_i}(x,y) = \frac{\partial f_k}{\partial x_j}(x) = \partial_j f_k(x) \quad \text{and} \quad \frac{\partial g_k}{\partial y_j}(x,y) = -\delta_{j,k} = \begin{cases} -1 & \text{if } j = k \\ 0 & \text{if } j \neq k \end{cases} \]
+	where $i = 1, \dotsc, m$ and $j, k = 1, \dotsc n$. In other words, $g'(x,y)$ is the following $n \times (m+n)$ matrix. 
+	\[ g'(x,y) = 
+	\begin{bmatrix} 
+	\partial_1 f_1(x) & \partial_2 f_1(x) & \dotsb & \partial_m f_1(x) & -1 & 0 & \dotsb & 0 \\ 
+	\partial_1 f_2(x) & \partial_2 f_2(x) & \dotsb & \partial_m f_2(x) & 0 & -1 & \dotsb & 0 \\
+	\vdots & \vdots & \ddots & \vdots & \vdots & \vdots & \ddots & \vdots \\ 
+	\partial_1 f_n(x) & \partial_2 f_n(x) & \dotsb & \partial_m f_n(x) & 0 & 0 & \dotsb & -1 \end{bmatrix} = \begin{bmatrix} f'(x) & -I \end{bmatrix} \]
+	where $I$ denotes the $n \times n$ identity matrix. Since $I$ has rank $n$, so does $g'(x,y)$, proving that $g$ is submersive everywhere. 
+\end{proof}
+
+An important cautionary remark is that sometimes, a subspace that is a manifold can fail to be a submanifold. For example, you might notice that we showed in \cref{graphs-continuous} that the graph of a \emph{continuous} function between two euclidean spaces is a subspace of euclidean space and is also a manifold; and then we showed in \cref{graphs-smooth} that the graph of a \emph{smooth} function is a submanifold of euclidean space. And indeed, the graphs of continuous-but-not-smooth functions provide examples of subspaces that are manifolds but not submanifolds. 
+
+\begin{example}
+	Let $f : \R \to \R$ be the function $f(x) = |x|$. Show that the graph of $f$ is not a submanifold of $\R^2$. 
+\end{example}
 
 \section{Smooth functions}
 
-We will now define what it means for a function between two manifolds to be smooth. Recall that in \cref{multi} we saw that the case when the codomain is $\R$ was the most important. The same will be true here. 
+We will now define what it means for a function between two manifolds to be smooth. Recall that in \cref{multi} we saw that the case when the codomain is $\R$ was the most important. The same will be true here. You may find that the number of definitions of ``smooth'' gets slightly out of hand; if you do, just remember that, whenever multiple definitions of ``smooth'' make sense, they'll all agree. 
 
 \subsection{Smooth real-valued functions}
 
@@ -239,7 +455,7 @@ We will now define what it means for a function between two manifolds to be smoo
 
 There are two disconcerting things about this definition. First, there is the issue that checking smoothness of a particular function seems next to impossible: the maximal atlas $\mathscr{A}_X$ will have \emph{many, many} charts, some that we may not even know about, and the definition makes it seem like we need to check smoothness on all of them! Thankfully, we don't need to check on all possible charts. As soon as we check smoothness on any atlas, even if it's not maximal, we're done. 
 
-\begin{lemma} \label{smooth-real-val-local}
+\begin{lemma} \label{smooth-real-valued-local}
 	Let $X$ be a manifold and $f : X \to \R$ a function. Suppose that there exists an atlas $\mathscr{A} \subseteq \mathscr{A}_X$ such that $f \circ x^{-1}$ is smooth for any $(U, x) \in \mathscr{A}$. Then $f$ is smooth. 
 \end{lemma}
 
@@ -254,14 +470,18 @@ There are two disconcerting things about this definition. First, there is the is
 	Since $f \circ y^{-1}$ is smooth when restricted to each the open subset $y(U \cap V)$ for all $(U, x) \in \mathscr{A}$, we conclude that $f \circ y^{-1}$ must be smooth on all of $y(V)$.
 \end{proof}
 
-The second disconcerting thing is the following. Suppose $U \subseteq \R^m$ is an open subset and $f : U \to \R$ is a function. On the one hand, we defined what it means for $f$ to be smooth back in \cref{smooth-multi}. On the other hand, we can regard $U$ as an open submanifold of $\R^n$ (cf. \cref{open-submanifold}) and then \cref{smooth-real-valued} gives us a definition of what it means to be smooth. A priori, it could be that these definitions conflict. Thankfully, they do not. 
+The second disconcerting thing is the following. Suppose $U \subseteq \R^m$ is an open subset and $f : U \to \R$ is a function. On the one hand, we defined what it means for $f$ to be smooth back in \cref{smooth-multi}. On the other hand, we can regard $U$ as an open submanifold of $\R^n$ (cf. \cref{open-submanifold}) and then \cref{smooth-real-valued} gives us another definition of what it means for $f$ to be smooth. A priori, it could be that these definitions conflict. Thankfully, they do not. 
 
 \begin{exercise}
 	Suppose $U \subseteq \R^m$ is an open subset and $f : U \to \R$ is a function. Show that $f$ is smooth in the sense of \cref{smooth-multi} if and only if it is smooth in the sense of \cref{smooth-real-valued}. 
 	\begin{hint}
-		You might find \cref{smooth-real-val-local} useful. 
+		You might find \cref{smooth-real-valued-local} useful. 
 	\end{hint}
 \end{exercise}
+
+From here on out, we'll use the fact that these two definitions of smoothness coincide without comment. 
+
+\subsubsection*{Combining smooth real-valued functions}
 
 \begin{definition}
 	If $X$ is a manifold, we write $\O(X)$ for the set of smooth functions $X \to \R$. 
@@ -269,27 +489,43 @@ The second disconcerting thing is the following. Suppose $U \subseteq \R^m$ is a
 
 Here is the standard set of stability properties we would want. 
 
-\begin{exercise} \label{smooth-stable-manifold}
+\begin{exercise} \label{smooth-real-valued-stable}
 	\begin{enumerate}[(a)]
 		\item Show that $\O(X)$ is a vector space. 
 		\item If $f, g \in \O(X)$, show that $fg \in \O(X)$ also. 
 		\item If $f \in \O(X)$ and $f(x) \neq 0$ for all $x$, show that $1/f \in \O(X)$ also. 
+		\begin{hint}
+			You might decide to do part (d) first, and then use it to prove (c). 
+		\end{hint}
+		\item Suppose $f \in \O(X)$, $U$ is an open subset of $\R$, $g : U \to \R$ is smooth, and $f(X) \subseteq U$. Show that $g \circ f \in \O(X)$. 
 	\end{enumerate}
 \end{exercise}
 
-\subsubsection*{Bump functions}
+\begin{unimportantremark}
+	The first two stability properties in \cref{smooth-real-valued-stable} show that $\O(X)$ is an $\R$-algebra. 
+\end{unimportantremark}
 
-We now prove that there is a preponderance of bump functions on manifolds. 
-
-\begin{proposition}
-	Suppose $K$ is a compact subset of $X$ and $U$ is an open neighborhood of $K$. Then there exists a smooth function $f : X \to \R$ such that $f(x) \in [0,1]$ for all $x \in \R$, $f(x) = 1$ for all $x \in K$, and $f(x) = 0$ for all $x \notin U$. 
+\begin{proposition} \label{preponderance}
+	Suppose $K$ is a compact subset of $X$ and $U$ is an open neighborhood of $K$. Then there exists a smooth function $f \in \O(X)$ such that $0 \leq f(x) \leq 1$ for all $x \in \R$, $f(x) = 1$ for all $x \in K$, and $f(x) = 0$ for all $x \notin U$. 
 \end{proposition}
 
 \begin{proof}
-	For each $p \in K$, let $(V, x)$ be a chart containing $p$. By shrinking $V$, we can assume that $\bar{V} \subseteq U$. 
+	Suppose $(V, x)$ is a chart containing some $p \in K$. Replacing $x$ with $x - x(p)$, we can assume that $x(p) = 0$. By shrinking $V$, we can assume that $\bar{V} \subseteq U$ (cf. \cref{preponderance-details}). Then $x(V)$ is an open neighborhood of $0 = x(p) \in \R^n$, so there exists $\epsilon > 0$ such that $B(0, \epsilon) \subseteq x(V)$. Let $\psi : \R^n \to \R$ be a bump function supported on $\overline{B}(0, \epsilon)$ (cf. \cref{multivariable-bump-round-support}). Then $\psi \circ x$ is a smooth function on $V$ which is strictly positive on an open neighborhood of $p$ contained entirely inside $V$ (namely, $x^{-1}(B(0,\epsilon))$), and zero elsewhere. Define $f_p : X \to \R$ by
+	\[ f_p(x) = \begin{cases} \psi \circ x & \text{if } x \in V \\ 0 &  \text{if } x \notin V. \end{cases} \]
+	Then $f_p$ is smooth, and it is strictly positive on an open neighborhood $V_p$ of $p$ contained inside $U$.  
+	
+	We can construct such a function $f_p$ for every $p \in K$. Since $K$ is compact, there exist finitely many $p_1, \dotsc, p_n \in K$ such that $K \subseteq V_{p_1} \cup \dotsb \cup V_{p_n}$. Thus $f_{p_1} + \dotsb + f_{p_n}$ is strictly positive on $K$, and zero outside $U$. Since $K$ is compact, there exists $\delta > 0$ such that $f_{p_1} + \dotsb + f_{p_n} \geq \delta$ on $K$. Let $g$ be a bridging function such that $g(x) = 1$ for $x \geq \delta$ and $g(x) = 0$ for $x \leq 0$ (cf. \cref{bridge-function}), and then set $f = g \circ (f_{p_1} + \dotsb + f_{p_n})$.
 \end{proof}
 
-% TODO: partitions of unity
+\begin{exercise} \label{preponderance-details}
+	\begin{enumerate}[(a)]
+		\item Prove that we can ``shrink $V$ in order to assume that $\bar{V} \subseteq U$.''
+		\item Modify the bump function of \cref{multivariable-bump-round-support} so that it has support $\overline{B}(0, \epsilon)$. 
+		\item Explain why $\psi \circ x$ and $f_p$ are smooth. 
+	\end{enumerate}
+\end{exercise}
+
+% TODO: Partitions of unity
 
 \subsection{Smooth functions between manifolds}
 
@@ -303,9 +539,9 @@ Here is a definition that looks a bit terrifying on the face of it.
 	\R^m && \R^n \end{tikzcd} \]
 \end{definition}
 
-Once again, we don't need to check all possible charts. The precise statement is a bit complicated though; there's a long string of quantifiers. 
+Once again, we don't need to check all possible charts. The statement is a bit complicated, but it's exactly the statement you might hope for.  
 
-\begin{exercise}
+\begin{exercise} \label{smooth-local}
 	Suppose $X$ and $Y$ are manifolds and $f : X \to Y$ is a function. Suppose further that there exists an atlas $\mathscr{A} \subseteq \mathscr{A}_Y$ such that, for every $(V, y) \in \mathscr{A}$, there exists an atlas $\mathscr{A}' \subseteq \mathscr{A}_{f^{-1}(V)}$, such that for every $(U, x) \in \mathscr{A}'$, the function $y \circ f \circ x^{-1} : x(U) \to y(V)$ is smooth. Show that $f$ is smooth.
 \end{exercise}
 
@@ -319,40 +555,74 @@ We should also note that we haven't redefined the word ``smooth'' in any conflic
 	Show that a function $f : X \to \R$ is smooth in the sense of \cref{smooth-real-valued} if and only if it is smooth in the sense of \cref{smooth-between-manifolds}.
 \end{exercise}
 
-Finally, we have the following result which tells us that the case when the codomain is $\R$ is the most important case. 
+From here on out, we'll use the fact that all of these definitions of smoothness coincide without comment. 
 
-\begin{proposition}
+\subsubsection*{Combining smooth maps}
+
+It doesn't make sense to add or multiply maps that take values in a manifold. The only thing that makes sense is composition, and indeed, we can compose. 
+
+\begin{exercise} \label{smooth-stable-composite}
+	Suppose $X, Y, Z$ are all manifolds and $f : X \to Y$ and $g : Y \to Z$ are smooth. Show that $g \circ f$ is also smooth. 
+\end{exercise}  
+
+\subsubsection*{Reduction to smooth real-valued functions}
+
+Finally, we show that the case when the codomain is $\R$ is the most important case. We do this in two steps. 
+
+\begin{proposition} \label{euclidean-valued-smooth-iff-components-smooth}
+	Suppose $X$ is a manifold and $f : X \to \R^n$ is a function. Then $f$ is smooth if and only if the component functions $f_i = \pi_i \circ f$ are smooth for all $i = 1, \dotsc, n$. 
+\end{proposition}
+
+\begin{proof}
+	The single chart $(\R^n, \id)$ is a sub-atlas of the euclidean atlas on $\R^n$, so \cref{smooth-local} says that $f$ is smooth if and only if, for every $(U, x) \in \mathscr{A}_X$, the composite $f \circ x^{-1} : x(U) \to \R^n$ is smooth. This is a function from an open subset of euclidean space into euclidean space, so we know from the definition of smoothness in \cref{multi} that $f \circ x^{-1}$ is smooth if and only if its component functions $\pi_i \circ (f \circ x^{-1})$ are smooth for all $i$. But 
+	\[ \pi_i \circ (f \circ x^{-1}) = (\pi_i \circ f) \circ x^{-1} = f_i \circ x^{-1}, \]
+	and $f_i \circ x^{-1}$ is smooth for all $(U, x) \in \mathscr{A}_X$ if and only if $f_i$ is smooth, again by \cref{smooth-local}. 
+\end{proof}
+
+\begin{proposition} \label{smooth-iff-real-valued-pullbacks-smooth}
 	Suppose $f : X \to Y$ is a function between two manifolds. Then the following are equivalent. 
 	\begin{enumerate}[(a)]
 		\item $f$ is smooth. 
-		\item For every smooth function $g :  Y \to \R$, the composite $g \circ f$ is a smooth function $X \to \R$. 
+		\item For every open subset $V \subseteq Y$ and every smooth function $g :  V \to \R$, the composite $g \circ f|_{f^{-1}(V)}$ is a smooth function $f^{-1}(V) \to \R$. 
 	\end{enumerate}
 \end{proposition}
 
-% TODO: incomplete
+\begin{proof}
+	One direction follows immediately from \cref{smooth-stable-composite}. Conversely, suppose $f$ has the property described in (b). Choose a chart $(V, y) \in \mathscr{A}_Y$ of dimension $n$. By assumption, $y_i \circ f|_{f^{-1}(V)}$ is a smooth function $f^{-1}(V) \to \R$ for all $i = 1, \dotsc, n$. By \cref{euclidean-valued-smooth-iff-components-smooth}, this means that $y \circ f|_{f^{-1}(V)}$ is smooth. Since this is true for all charts $(V, y) \in \mathscr{A}_Y$, we conclude that $f$ is smooth.  
+\end{proof}
+
+\begin{unimportantremark}
+	Suppose $f : X \to Y$ is a smooth function between manifolds. For any $g \in \O(Y)$, we have $g \circ f \in \O(X)$. Thus $g \mapsto g \circ f$ defines a function $f^\sharp : \O(Y) \to \O(X)$, which is actually a homomorphism of $\R$-algebras. 
+\end{unimportantremark}
 
 \subsection{Paths}
 
+{\color{blue} Incomplete}
+
+% TODO: Paths
+
 \subsection{Diffeomorphisms}
+
+Diffeomorphisms are how we formalize the idea that two manifolds are ``basically the same.''
 
 \begin{definition}[Diffeomorphism] \index{diffeomorphism}
 	Suppose $X$ and $Y$ are manifolds. A function $f : X \to Y$ is a \emph{diffeomorphism} if it is smooth, bijective, and the inverse function $f^{-1} : Y \to X$ is also smooth. If there exists a diffeomorphism $f : X \to Y$, then $X$ and $Y$ are \emph{diffeomorphic}. 
 \end{definition}
 
 \begin{exercise}
-	Regard $\R$ as a manifold in two different ways: once with the euclidean atlas, and next with the maximal atlas containing $x \mapsto x^3$. Show that these two manifolds are diffeomorphic. 
+	Regard $\R$ as a manifold in two different ways: once with the euclidean atlas, and next with the maximal atlas containing $(\R, x \mapsto x^3)$. Show that these two manifolds are diffeomorphic. 
 \end{exercise}
 
 \begin{exercise}
 	If $X$ is a manifold and $(U, x) \in \mathscr{A}_X$, prove that $x : U \to x(U)$ is a diffeomorphism. 
 \end{exercise}
 
-\begin{exercise}
-	Suppose $f : X \to Y$ is a diffeomorphism. Show that, for any open subset $U \subseteq X$, the image $f(U)$ is open in $Y$. 
-\end{exercise}
-
 \begin{definition}[Local diffeomorphism] \index{local diffeomorphism|see {diffeomorphism, local diffeomorphism}} \index{diffeomorphism!local diffeomorphism}
 	Suppose $X$ and $Y$ are manifolds. A function $f : X \to Y$ is a \emph{local diffeomorphism} at a point $p \in X$ if there exists an open neighborhood $U$ of $p$ such that $f|_U$ is a diffeomorphism $U \to f(U)$. 
 \end{definition}
 
-% TODO: paths
+\begin{exercise}
+	Consider the function $f : \R \to S^1$ given by $f(t) = (\cos(t), \sin(t))$. Show that $f$ is a local diffeomorphism. 
+\end{exercise}
+
+% TODO: Pictures of the universal cover of the circle

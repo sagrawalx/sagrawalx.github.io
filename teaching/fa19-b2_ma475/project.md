@@ -60,10 +60,8 @@ If you're struggling to find things, here's a short list of things that I think 
     * L'Hôpital's rule
     * Fundamental theorem of calculus (including a rigorous construction of the Riemann integral)
 * Multivariable calculus
-    * Implicit function theorem
     * Morse's lemma
     * Constant rank theorem
 * Manifolds
     * Exotic manifold structures (eg, exotic $\mathbb{R}^4$s, or exotic spheres)
-    * Regular level set theorem (sometimes also called the preimage theorem, or the submersion theorem, ...)
     * Hairy ball theorem
