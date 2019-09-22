@@ -1,4 +1,4 @@
-int---
+---
 layout: default
 title: Home
 bannertext: Fall 2019, Block 2 — MA475
