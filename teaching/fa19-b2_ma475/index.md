@@ -1,0 +1,303 @@
+int---
+layout: default
+title: Home
+bannertext: Fall 2019, Block 2 — MA475
+bannerlink: teaching/fa19-b2_ma475
+nonav: true
+---
+
+# Overview
+
+* Class: Monday through Friday, 9:15am, in TSC 215.
+* Instructor: Shishir Agrawal (I also go by Sunny).
+    * Email: <span class="email">@</span>.
+    * Office: Tutt Science 234.
+* [Course syllabus](syllabus).
+* Course materials: [Off on a Tangent](/math/tangent/stable.pdf)
+    * I'll try to keep the PDF linked above quasi-stable (I won't change any numbering in the sections for which I've assigned the reading assignment in the calendar below). If you want, you can look at the most updated version of the notes [here](/math/tangent/main.pdf).
+    * See [here](resources) for a longer list of potentially useful resources.
+* See [here](gradschool) for brief remark if you're going to graduate school.
+* [Reading assignment submission form](https://docs.google.com/forms/d/e/1FAIpQLScvWUKFyUFFxO4zHto7MVjVL1CZFBPaEA9x4Gs_kbPqUjNcPA/viewform).
+* [Self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSfxoVhQKw_e8xi-DBHaV0daVK_OlmKvBFCJGjhLQ5O58TK1aA/viewform).
+
+# Calendar
+
+<table style="width: 100%">
+<tr>
+<th style="width: 10%;">Day</th>
+<th style="width: 40%;">Topic</th>
+<th style="width: 25%;">Reading assignment</th>
+<th style="width: 25%;">In class problems</th>
+</tr>
+
+<tr>
+<td class="subheading" colspan="4" style="padding-left: 3em;">Week 1</td>
+</tr>
+
+<tr>
+<td rowspan="2">Mon</td>
+<td>Introduction</td>
+<td>None</td>
+<td></td>
+</tr>
+
+<tr>
+<td colspan="3">
+Office hours (1–2pm).
+</td>
+</tr>
+
+<tr>
+<td rowspan="2">Tue</td>
+<td>Single variable: Definitions</td>
+<td>Read: 1.1 (and 0.1)
+Do: 3, 4, 15</td>
+<td></td>
+</tr>
+
+<tr>
+<td colspan="3">
+Office hours (1–2pm).
+</td>
+</tr>
+
+
+<tr>
+<td rowspan="2">Wed</td>
+<td>Single variable: Computations</td>
+<td>Read: 1.2  
+Do: 1, 4, 6, 16</td>
+<td></td>
+</tr>
+
+<tr>
+<td colspan="3">
+Office hours (1–2pm).
+</td>
+</tr>
+
+<tr>
+<td rowspan="2">Thu</td>
+<td>Single variable: Differentiable functions</td>
+<td>Read: 1.3  
+Do: 5, 10, 12, 19</td>
+<td></td>
+</tr>
+
+<tr>
+<td colspan="3">
+Office hours (1–2pm).  
+Writing assignment due (11:59pm). [Prompt](/teaching/prompt.pdf).
+</td>
+</tr>
+
+
+<tr>
+<td rowspan="2">Fri</td>
+<td>Single variable: $C^k$ hierarchy</td>
+<td>Read: 1.4  
+Do: 2, 7, 11, 27</td>
+<td>
+</td>
+</tr>
+
+<tr>
+<td colspan="3">  
+Quiz 1 (in class). Covers through 1.3.  
+[Self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSfxoVhQKw_e8xi-DBHaV0daVK_OlmKvBFCJGjhLQ5O58TK1aA/viewform) for week 1 due (Sunday 11:59pm).
+</td>
+</tr>
+
+<tr>
+<td class="subheading" colspan="4" style="padding-left: 3em;">Week 2</td>
+</tr>
+
+<tr>
+<td rowspan="2">Mon</td>
+<td>Multivariable: Definitions</td>
+<td>Read: 2.1–2   
+Do: <!--3, 6, 7, 9--> </td>
+<td>  
+</td>
+</tr>
+
+<tr>
+<td colspan="3">
+Chapter 1 [proof portfolio](proof-portfolio) peer review (in class).  
+Quiz 1 revisions (1–2pm).  
+</td>
+</tr>
+
+
+<tr>
+<td rowspan="2">Tue</td>
+<td>Multivariable: Computations</td>
+<td>Read: 2.3  
+Do: <!--1, 5, 16, 18, 37--> </td>
+<td></td>
+</tr>
+
+<tr>
+<td colspan="3">
+Office hours (1–2pm).
+</td>
+</tr>
+
+<tr>
+<td rowspan="2">Wed</td>
+<td>Multivariable: Differentiable functions</td>
+<td>Read: 2.4  
+Do: </td>
+<td>
+</td>
+</tr>
+
+<tr>
+<td colspan="3">
+Chapter 1 [proof portfolio](proof-portfolio) due (9:15am).  
+</td>
+</tr>
+
+<tr>
+<td rowspan="2">Thu</td>
+<td>Multivariable: $C^k$ hierarchy</td>
+<td>Read: 2.5  
+Do: </td>
+<td>
+</td>
+</tr>
+
+<tr>
+<td colspan="3">
+Office hours (1–2pm).
+</td>
+</tr>
+
+<tr>
+<td rowspan="2">Fri</td>
+<td colspan="2">Catch-up day!</td>
+<td>
+</td>
+</tr>
+
+<tr>
+<td colspan="3">
+Quiz 2 (in class). Covers through chapter 2.  
+[Project proposals](project) due (Sunday 11:59pm).  
+[Self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSfxoVhQKw_e8xi-DBHaV0daVK_OlmKvBFCJGjhLQ5O58TK1aA/viewform) for week 2 due (Sunday 11:59pm).
+</td>
+</tr>
+
+<tr>
+<td class="subheading" colspan="4" style="padding-left: 3em;">Week 3</td>
+</tr>
+
+<tr>
+<td rowspan="2">Mon</td>
+<td>Manifolds: Definitions and examples</td>
+<td>Read: 3.1–2  
+Do: </td>
+<td>
+</td>
+</tr>
+
+<tr>
+<td colspan="3">
+Chapter 2 [proof portfolio](proof-portfolio) peer review (in class).  
+Quiz 2 revisions (1–2pm).  
+</td>
+</tr>
+
+
+<tr>
+<td rowspan="2">Tue</td>
+<td>Manifolds: Smooth functions</td>
+<td>Read: 3.3  
+Do: </td>
+<td></td>
+</tr>
+
+<tr>
+<td colspan="3">
+Office hours (1–2pm).  
+</td>
+</tr>
+
+<tr>
+<td rowspan="2">Wed</td>
+<td colspan="2">Catch-up day!</td>
+<td>
+</td>
+</tr>
+
+<tr>
+<td colspan="3">
+Chapter 2 [proof portfolio](proof-portfolio) due (9:15am).  
+Office hours (1–2pm).  
+</td>
+</tr>
+
+
+<tr>
+<td rowspan="2">Thu</td>
+<td>Tangent spaces: Definition</td>
+<td>Read: 4.1.A  
+Do: </td>
+<td>
+</td>
+</tr>
+
+<tr>
+<td colspan="3">
+Quiz 3 (in class). Covers through chapter 3.  
+[Project draft](project) due (11:59pm).  
+</td>
+</tr>
+
+
+<tr>
+<td rowspan="2">Fri</td>
+<td>Tangent spaces: Operations</td>
+<td>Read: 4.1.B–4.2  
+Do: </td>
+<td>
+</td>
+</tr>
+
+<tr>
+<td colspan="3">
+Chapter 3-4 [proof portfolio](proof-portfolio) peer review (in class).  
+Quiz 3 revisions (1–2pm).  
+[Self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSfxoVhQKw_e8xi-DBHaV0daVK_OlmKvBFCJGjhLQ5O58TK1aA/viewform) for week 3 due (Sunday 11:59pm).
+</td>
+</tr>
+
+<tr>
+<td class="subheading" colspan="4" style="padding-left: 3em;">Week 4</td>
+</tr>
+
+<tr>
+<td rowspan="2">Mon</td>
+<td colspan="2">Review</td>
+<td> </td>
+</tr>
+
+<tr>
+<td colspan="3">
+Chapter 3-4 [proof portfolio](proof-portfolio) due (in class).  
+Office hours (1–2pm).  
+</td>
+</tr>
+
+<tr>
+<td>Tue</td>
+<td colspan="3">Final exam (in class). Covers through... (TBA).</td>
+</tr>
+
+<tr>
+<td>Wed</td>
+<td colspan="3">[Project presentations](final-project).</td>
+</tr>
+
+
+</table>

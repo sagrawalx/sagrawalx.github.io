@@ -755,6 +755,7 @@ which again looks superficially identical to the single variable product rule \r
 		\item If $\rank_a(f) = m = n$, then we say that $f$ is \emph{\'etale at $a$}.\index{etale@\'etale} Note that this is equivalent to asking that $df_a$ be an isomorphism. 
 		\item If $\rank_a(f) = \min\{m,n\}$, then we say that $a$ is a \emph{regular point} of $f$.\index{regular point} 
 		\item If $\rank_a(f) < \min\{m,n\}$, then we say that $a$ is a \emph{critical point} of $f$.\index{critical point}
+		\item If $b \in \R^n$ is a point such that every $a \in f^{-1}(b)$ is a regular point, then $b$ is called a \emph{regular value} of $f$. 
 	\end{itemize}
 \end{definition}
 
@@ -1721,10 +1722,41 @@ In \cref{smooth-single}, we formulated the principle that smooth single variable
 
 \subsubsection*{Bump functions}
 
-\begin{exercise}
+Recall that a ``bump function''\index{bump function} is a smooth function with compact support. We can use single variable bump functions to construct multivariable bump functions. 
+
+\begin{exercise} \label{multivariable-bump-square-support}
 	Let $\psi : \R \to \R$ denote the single variable bump function from \cref{canonical-bump}. Then define $\Psi : \R^m \to \R$ by
 	\[ \Psi(x_1, \dotsc, x_m) = \psi(x_1) \psi(x_2) \dotsb \psi(x_m). \]
-	Show that $\Psi$ is a bump function (ie, a smooth function with compact support).\index{bump function} 
+	See \cref{multivariable-bump-square-support-graph}. Show that $\Psi$ is a bump function with support $[-1,1]^m$. 
+	\begin{figure}[ht]
+		\begin{center}
+			\begin{tikzpicture}
+			\begin{axis}[
+			view={120}{15},
+			axis lines=middle,
+			xlabel={$x$},
+			xtick={1},
+			xmin=-1.1,xmax=1.1,
+			ylabel={$y$},
+			ytick={1},
+			ymin=-1.1,ymax=1.1,
+			zlabel={$z$},
+			ztick={0},
+			zmin=0,zmax=0.15,
+			width=0.9\textwidth,
+			]
+			\addplot3[mesh,samples=50,domain=-0.99:0.99,colormap/Reds]{exp(-1/(1-x^2))*exp(-1/(1-y^2))}; 
+			\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		\caption{The graph of the function  $\Psi(x,y) = \psi(x)\psi(y)$, where $\psi$ is the single variable bump function from \cref{canonical-bump}.} \label{multivariable-bump-square-support-graph}
+	\end{figure}
+\end{exercise}
+
+\begin{exercise} \label{multivariable-bump-round-support}
+	Let $\psi : \R \to \R$ denote the single variable bump function from \cref{canonical-bump}. Then define $\Psi : \R^m \to \R$ by
+	\[ \Psi(x_1, \dotsc, x_m) = \psi(x_1^2 + \dotsb + x_m^2). \]
+	Show that $\Psi$ is a bump function with support $\overline{B}(0,1)$.  
 \end{exercise}
 
 \subsubsection*{Paths}
