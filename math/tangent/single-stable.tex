@@ -165,7 +165,7 @@ for small values of $h$. See \cref{figure-linear-approximation}.
 		\end{axis}
 		\end{tikzpicture}
 	\end{center}
-	\caption{The graph of a function $f$ is depicted in black, and its tangent line $t$ at $a$ is depicted in red. Then the vertical distance $f(a+h)-f(a)$ is approximated by the vertical distance $t(a+h)-t(a)$. Since the tangent line has slope $f'(a)$, this ``rise'' can be computed as $f'(a)$ times the ``run'' (in other words, $f'(a)h$). As $h$ gets smaller, this approximation of $f(a+h) - f(a)$ gets better.}  \label{figure-linear-approximation}
+	\caption{The graph of a function $f$ is depicted in black, and its tangent line $t$ at $a$ is depicted in red. Then the vertical distance $f(a+h)-f(a)$ is approximated by the vertical distance $t(a+h)-t(a)$. The ``rise'' $t(a+h)-t(a)$ can be computed as the slope times the ``run.'' In other words, $t(a+h)-t(a) = f'(a)h$. As $h$ gets smaller, this approximation of $f(a+h) - f(a)$ gets better.}  \label{figure-linear-approximation}
 \end{figure}
 
 Notice that the function $h \mapsto f'(a)h$ is a linear map $\R \to \R$, in the sense of linear algebra. The following result says that the function $h \mapsto f'(a)h$ is the \emph{only} linear map that is a good approximation\index{linear approximation} to $h \mapsto f(a+h)-f(a)$. The statement uses little-oh notation; if you have not seen this before, take a look at \cref{little-o-definition}.
@@ -213,7 +213,7 @@ The following is an important version of this same idea that comes up frequently
 			yticklabels={$f(a)$, $f(a)+df_a(h)$, $f(a+h)$},
 			axis lines=middle,
 			axis line style=lightgray,
-			width=0.75\textwidth
+			width=\textwidth
 			]
 			\addplot[black,thick,<->] expression[domain=-0.5:2.45,samples=50]{(x*(x^2+1)+5)/10}; 
 			
@@ -229,15 +229,15 @@ The following is an important version of this same idea that comes up frequently
 			
 			
 			\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:1,0.7) {}; 
-			\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:2,1.5) {}; 
-			\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:2,1.1) {}; 
+			\node[color=red,draw=red,circle,fill,inner sep=2pt] at (axis cs:2,1.5) {}; 
+			\node[color=red,draw=red,circle,fill,inner sep=2pt] at (axis cs:2,1.1) {}; 
 			
 			
-			\addplot +[mark=none,red,solid,style=thick,<->] coordinates {(2, 1.1) (2, 1.5)};
+			\addplot +[mark=none,red,solid] coordinates {(2, 1.1) (2, 1.5)};
 			\end{axis}
 			\end{tikzpicture}
 		\end{center}
-		\caption{The thick black curve is the graph of a function $f$ and the thinner black line is its tangent line $f(a) + df_a$ are depicted in black. On a small input $h$, the ``error in approximation'' function $r$ outputs the vertical distance indicated in red.}  \label{figure-error-in-approximation}
+		\caption{The thick black curve is the graph of a function $f$ and the thinner black line is its tangent line $f(a) + df_a$ are depicted in black. If $r$ is the ``error in approximation'' function, then $r(h)$ is the the vertical distance indicated in red above.}  \label{figure-error-in-approximation}
 	\end{figure}
 	Rearranging the definition of $r$, we have
 	\[ f(a+h) = f(a) + df_a(h) + r(h). \]
@@ -393,10 +393,11 @@ Observe that, when $f(a+h)\neq f(a)$, then this expression is precisely the diff
 			
 			\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:1,0.7) {}; 
 			
-			\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:2,1.5) {}; 
+			\node[color=red,draw=red,circle,fill,inner sep=2pt] at (axis cs:2,1.5) {}; 
+			\node[color=red,draw=red,circle,fill,inner sep=2pt] at (axis cs:2,0.7) {}; 
 			
 			
-			\addplot +[mark=none,gray,red,<->,solid] coordinates {(2, 0.7) (2, 1.5)};
+			\addplot +[mark=none,gray,red,solid] coordinates {(2, 0.7) (2, 1.5)};
 			\end{axis}
 			\end{tikzpicture}
 		\end{center}
@@ -424,7 +425,7 @@ Observe that, when $f(a+h)\neq f(a)$, then this expression is precisely the diff
 			\addplot[black,style=thick,<->] expression[domain=0.25:2.02,samples=100]{4*x^3-12*x^2+9*x}; 
 			
 			
-			\addplot[red,<->] expression[domain=0.2:2.2,samples=2]{(x-1)+1}; 
+			\addplot[red,<->] expression[domain=0.8:2.2,samples=2]{(x-1)+1}; 
 			
 			
 			\addplot[lightgray,dotted] expression[domain=0:2.75,samples=2]{1};
@@ -434,7 +435,7 @@ Observe that, when $f(a+h)\neq f(a)$, then this expression is precisely the diff
 			
 			\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:1,1) {}; 
 			
-			\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:2,2) {}; 
+			\node[color=red,draw=red,circle,fill,inner sep=2pt] at (axis cs:2,2) {}; 
 			\end{axis}
 			\end{tikzpicture}
 		\end{center}
@@ -643,7 +644,44 @@ In this section, we'll discuss some properties of functions which are differenti
 
 \subsection{Mean value theorem}
 
-The mean value theorem \ref{mean-value-theorem} is an extremely important foundational result; it comes up incredibly often during proofs. In this section, we'll discuss the theorem and a few of its consequences; we will see many more of its consequences later on. 
+The mean value theorem \ref{mean-value-theorem} is an extremely important foundational result. You may remember seeing and ignoring it during your first calculus class; at least, that's what I did, and I think that's okay. Its importance largely derives from the fact that it comes up incredibly frequently when proving things formally about derivatives. Before proceeding, I encourage you to look at \cref{mean-value-theorem-picture} and ensure that you understand the geometric content of the statement of the mean value theorem. 
+
+\begin{figure}
+	\begin{center}
+	\begin{tikzpicture}
+	\begin{axis}[
+	xmin=-0.1,xmax=2.5,
+	ymin=-0.1,ymax=2,
+	ytick={0.5, 1.5},
+	xtick={0.5, 0.892375, 2},
+	xticklabels={$a$, $c$, $b$},
+	yticklabels={$f(a)$, $f(b)$},
+	axis lines=middle,
+	axis line style=lightgray,
+	width=\textwidth
+	]
+	\addplot[black,thick,-] expression[domain=0.5:2,samples=50]{2/3*x+1/6 + 2*(x-0.5)*(x-1.5)*(x-2)}; 
+	
+	
+	\addplot[black,<->] expression[domain=0.25:2.25,samples=2]{2/3*x+1/6}; 
+	\addplot[red,<->] expression[domain=0.25:1.75,samples=2]{2/3*x+0.694821}; 
+	
+	
+	\addplot[lightgray,dotted] expression[domain=0:2.75,samples=2]{0.5};
+	\addplot[lightgray,dotted] expression[domain=0:2.75,samples=2]{1.5}; 
+	\addplot +[mark=none,lightgray,dotted] coordinates {(0.5, 0) (0.5, 2)};
+	\addplot +[mark=none,lightgray,dotted] coordinates {(2, 0) (2, 2)};
+	
+	
+	\node[color=red,draw=red,circle,fill,inner sep=2pt] at (axis cs:0.892375,1.28974) {};
+	\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:0.5,0.5) {}; 
+	\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:2,1.5) {}; 
+	\end{axis}
+	\end{tikzpicture}
+	\end{center}
+
+	\caption{The mean value theorem \ref{mean-value-theorem} states that, if we draw a secant line connecting two points $(a,f(a))$ and $(b,f(b))$ on the graph of a differentiable function $f$, then that secant line must be parallel to the tangent line of $f$ at some point $c$ in between $a$ and $b$. The statement of the mean value theorem only asserts existence, not uniqueness; there could be multiple points $c$ at which this happens.} \label{mean-value-theorem-picture} 
+\end{figure}
 
 Rolle's theorem \ref{rolles-theorem} is technically a special case of the mean value theorem, but the general case can be derived from this special case. 
 
@@ -878,8 +916,8 @@ Now we know that the derivative $f'$ of a differentiable function $f$ need not b
 			\addplot[red,<->] expression[domain=-0.25:2.25,samples=2]{x/2}; 
 			
 			
-			\addplot[lightgray,dashed,<->] expression[domain=-0.25:1,samples=2]{-0.5*(x-0.5) + 1.5};
-			\addplot[lightgray,dashed,<->] expression[domain=1.5:2.4,samples=2]{2.5*(x-2) + 3}; 
+			\addplot[dashed,<->] expression[domain=-0.25:1,samples=2]{-0.5*(x-0.5) + 1.5};
+			\addplot[dashed,<->] expression[domain=1.5:2.4,samples=2]{2.5*(x-2) + 3}; 
 			
 			\addplot +[mark=none,lightgray,dotted] coordinates {(0.5, 0) (0.5, 4)};
 			\addplot +[mark=none,lightgray,dotted] coordinates {(2, 0) (2, 4)};
