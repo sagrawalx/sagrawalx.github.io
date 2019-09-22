@@ -37,16 +37,16 @@ since the ``rise'' is $f(a+h)-f(a)$, and the ``run'' is $(a+h)-a = h$. This quan
 	\addplot +[mark=none,lightgray,dotted] coordinates {(1, 0) (1, 2)};
 	\addplot +[mark=none,lightgray,dotted] coordinates {(2, 0) (2, 2)};
 	
-	\addplot[gray,dashed] expression[domain=1:2,samples=2]{0.7}; 
-	\addplot +[mark=none,gray,dashed] coordinates {(2, 0.7) (2, 1.5)};
+	\addplot[black,dashed] expression[domain=1:2,samples=2]{0.7}; 
+	\addplot +[mark=none,black,dashed] coordinates {(2, 0.7) (2, 1.5)};
 	
 	\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:1,0.7) {}; 
 	
-	\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:2,1.5) {}; 
+	\node[color=red,draw=red,circle,fill,inner sep=2pt] at (axis cs:2,1.5) {}; 
 	\end{axis}
 	\end{tikzpicture}
 \end{center}
-\caption{The graph of a function $f$ is depicted in black. The secant line passing through the two points $(a, f(a))$ and $(a+h, f(a+h))$ is depicted in red. The ``run'' between these points, is $h$. The ``rise'' between these points is $f(a+h)-f(a)$. Thus the slope of the secant line, computed as ``rise over run,'' is precisely the difference quotient $(f(a+h)-f(a))/h$.}  \label{figure-difference-quotient}
+\caption{The graph of a function $f$ is depicted in black. The secant line passing through the two points $(a, f(a))$ and $(a+h, f(a+h))$ is depicted in red. The ``rise'' between these points is $f(a+h)-f(a)$, and the ``run'' is $h$. Thus the slope of the secant line is precisely the difference quotient $(f(a+h)-f(a))/h$.}  \label{figure-difference-quotient}
 \end{figure}
 
 As $h$ gets smaller and smaller, the secant line becomes a better and better approximation of our intuitive idea of the ``tangent line'' at $a$. So, we \emph{define} the slope of the tangent line to be the limit of the slopes of the secant lines. 
