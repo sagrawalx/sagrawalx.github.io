@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  22 SEP 2019 07:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  22 SEP 2019 07:53
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1698,13 +1698,21 @@ chapter 4.
 
 LaTeX Warning: Empty bibliography on input line 109.
 
-No file stable.ind.
-(./stable.aux (./introduction.aux) (./preliminaries.aux) (./single-stable.aux)
-(./multi.aux) (./manifolds.aux) (./tangent.aux))
+(./stable.ind
+chapter without number
+[163
+
+
+
+
+
+
+] [164] [165]) (./stable.aux (./introduction.aux) (./preliminaries.aux)
+(./single-stable.aux) (./multi.aux) (./manifolds.aux) (./tangent.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 113.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 113.
 Package rerunfilecheck Info: File `stable.out' has not changed.
-(rerunfilecheck)             Checksum: 17D32B0BFED471F47B56AE57372A358F;6014.
+(rerunfilecheck)             Checksum: 01AD5E582415F6E8489386FE78588168;6058.
 
 
 LaTeX Warning: There were undefined references.
@@ -1719,10 +1727,10 @@ Package logreq Info: Writing requests to 'stable.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45488 strings out of 492982
- 1049424 string characters out of 6134895
+ 45497 strings out of 492982
+ 1049531 string characters out of 6134895
  1770779 words of memory out of 5000000
- 47233 multiletter control sequences out of 15000+600000
+ 47236 multiletter control sequences out of 15000+600000
  105243 words of font info for 233 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,15n,119p,8817b,1247s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1749,10 +1757,10 @@ are/texmf/fonts/type1/public/tex-gyre/qplr.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/newpx/zplb.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/newpx/zplr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplr
 i.pfb>
-Output written on stable.pdf (162 pages, 1447030 bytes).
+Output written on stable.pdf (165 pages, 1458815 bytes).
 PDF statistics:
- 2740 PDF objects out of 2984 (max. 8388607)
- 2484 compressed objects within 25 object streams
- 821 named destinations out of 1000 (max. 500000)
- 24448 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 2973 PDF objects out of 2984 (max. 8388607)
+ 2711 compressed objects within 28 object streams
+ 825 named destinations out of 1000 (max. 500000)
+ 24456 words of extra memory for PDF output out of 24883 (max. 10000000)
 
