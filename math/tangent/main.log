@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  21 SEP 2019 20:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  22 SEP 2019 08:03
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1665,13 +1665,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45603 strings out of 492982
- 1051887 string characters out of 6134895
- 1771136 words of memory out of 5000000
+ 45599 strings out of 492982
+ 1051793 string characters out of 6134895
+ 1771135 words of memory out of 5000000
  47312 multiletter control sequences out of 15000+600000
- 106330 words of font info for 238 fonts, out of 8000000 for 9000
+ 106124 words of font info for 236 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,15n,119p,8815b,1375s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,15n,119p,8815b,1369s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-sc.enc}{/usr/
 share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/share/texlive/texmf-dist/f
 onts/enc/dvips/newtx/ntx-ecth-tlf.enc}{/usr/share/texlive/texmf-dist/fonts/enc/
@@ -1696,10 +1696,10 @@ f/fonts/type1/public/tex-gyre/qplr.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/n
 ewpx/zplb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplr.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on main.pdf (167 pages, 1471274 bytes).
+Output written on main.pdf (167 pages, 1471294 bytes).
 PDF statistics:
- 3034 PDF objects out of 3580 (max. 8388607)
- 2769 compressed objects within 28 object streams
+ 3033 PDF objects out of 3580 (max. 8388607)
+ 2768 compressed objects within 28 object streams
  841 named destinations out of 1000 (max. 500000)
  26512 words of extra memory for PDF output out of 29859 (max. 10000000)
 

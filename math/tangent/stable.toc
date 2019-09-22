@@ -171,3 +171,5 @@
 \contentsline {subsection}{\numberline {4.2.A}Definition of the pushforward}{160}{subsection.648}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.B}Rank of a smooth map}{162}{subsection.655}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Index}{163}{chapter*.659}

@@ -22,7 +22,7 @@
     \entry{konigsberger}{book}{}
       \name{author}{1}{}{%
         {{hash=6ccc562a716d5970a27b749bf96cf4f5}{%
-           family={K\"{o}nigsberger},
+           family={Königsberger},
            familyi={K\bibinitperiod},
            given={Konrad},
            giveni={K\bibinitperiod}}}%
@@ -36,7 +36,7 @@
       \strng{authorbibnamehash}{6ccc562a716d5970a27b749bf96cf4f5}
       \strng{authornamehash}{6ccc562a716d5970a27b749bf96cf4f5}
       \strng{authorfullhash}{6ccc562a716d5970a27b749bf96cf4f5}
-      \field{labelalpha}{{K\"{o}93}}
+      \field{labelalpha}{{Kö93}}
       \field{sortinit}{K}
       \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
       \field{labelnamesource}{author}
@@ -44,7 +44,7 @@
       \field{isbn}{3-540-54723-1}
       \field{note}{Grundwissen Mathematik}
       \field{series}{Springer-Lehrbuch}
-      \field{shorthand}{{K\"{o}93}}
+      \field{shorthand}{{Kö93}}
       \field{title}{Analysis 2}
       \field{year}{1993}
     \endentry
@@ -71,7 +71,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{Third}
-      \field{isbn}{978-3-319-11079-0; 978-3-319-11080-6}
       \field{series}{Undergraduate Texts in Mathematics}
       \field{title}{Linear algebra done right}
       \field{year}{2015}
@@ -87,9 +86,9 @@
            given={Pedro\bibnamedelima M.},
            giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
         {{hash=640ce9ff28061d9b510fb44133766df4}{%
-           family={Masqu\'{e}},
+           family={Masqué},
            familyi={M\bibinitperiod},
-           given={Jaime\bibnamedelima Mu\~{n}oz},
+           given={Jaime\bibnamedelima Muñoz},
            giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
         {{hash=571eba9027a801b741af7a0d9e2aba94}{%
            family={Mykytyuk},
@@ -112,7 +111,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{Second}
-      \field{isbn}{978-94-007-5951-0; 978-94-007-5952-7}
       \field{series}{Problem Books in Mathematics}
       \field{title}{Analysis and algebra on differentiable manifolds}
       \field{year}{2013}
@@ -180,7 +178,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{Fourth}
-      \field{isbn}{978-1-4214-0794-4; 1-4214-0794-9; 978-1-4214-0859-0}
+      \field{isbn}{978-1-4214-0859-0}
       \field{series}{Johns Hopkins Studies in the Mathematical Sciences}
       \field{title}{Matrix computations}
       \field{year}{2013}
@@ -244,7 +242,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{Second}
-      \field{isbn}{0-387-97437-7}
       \field{series}{Undergraduate Texts in Mathematics}
       \field{title}{A first course in real analysis}
       \field{year}{1991}
@@ -274,7 +271,7 @@
       \field{issn}{0025-5831}
       \field{journaltitle}{Mathematische Annalen}
       \field{number}{3}
-      \field{title}{Sur les fonctions d\'{e}riv\'{e}es}
+      \field{title}{Sur les fonctions dérivées}
       \field{volume}{63}
       \field{year}{1907}
       \field{pages}{326\bibrangedash 332}
@@ -306,7 +303,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{Second}
-      \field{isbn}{978-3-319-17770-0; 978-3-319-17771-7}
       \field{series}{Undergraduate Texts in Mathematics}
       \field{title}{Real mathematical analysis}
       \field{year}{2015}
