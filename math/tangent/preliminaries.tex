@@ -497,7 +497,7 @@ This is a bare-bones introduction to topological spaces, intended for readers wh
 
 Topological spaces come up throughout mathematics, and in general can be very very bizarre. We will not delve into the general theory of topological spaces, and won't see any of these bizarre examples. Instead, you are encouraged to content yourself with the following examples and constructions. 
 
-Here are two examples we've already seen. 
+Here are some examples we've already seen. 
 
 \begin{example}[Metric spaces] \label{metric-to-topological}
 	If $X$ is a metric space, the collection of subsets of $X$ that are open with respect to the metric defines a topology on $X$. Thus, every metric space can be regarded as a topological space in a natural way. It's worth noticing that this process of regarding a metric space as a topological space ``forgets information,'' since equivalent metrics on a set will define the same topology. 
@@ -505,6 +505,10 @@ Here are two examples we've already seen.
 
 \begin{example} \label{finite-dim-canonical-topology} \index{canonical topology}
 	Suppose $V$ is a finite dimensional vector space. Then all norms on $V$ are equivalent by \cref{finite-dim-norm}, so they all define the same topology on $V$ by \cref{metric-to-topological,equivalent-norm-equivalent-metric}. This topology is called the \emph{canonical topology} on $V$. Unless explicitly specified otherwise, we will always regard finite dimensional vector spaces as topological spaces using the canonical topology. 
+\end{example}
+
+\begin{example} \label{discrete-topology}
+	Suppose $X$ is any set. The \emph{discrete topology} on $X$ is the one where \emph{all} subsets of $X$ are declared to be open. 
 \end{example}
 
 Here are a few ways of producing new topological spaces out of ones we already have. 
@@ -619,14 +623,14 @@ However, quotient spaces need not be Hausdorff.
 	Let $Y = \R \times \{\pm 1 \}$ inside $\R^2$, and define an equivalence relation $\sim$ by declaring that $(a, 1) \sim (a,-1)$ for all $a \neq 0$. Show that $X = Y/\sim$ is not Hausdorff. 
 \end{exercise}
 
-\subsection{Compact and \texorpdfstring{$\sigma$}{sigma}-compact spaces \texorpdfstring{$\star$}{*}}
+\subsection{Compact and \texorpdfstring{$\sigma$}{sigma}-compact spaces \texorpdfstring{$\star$}{*}} 
 
 \begin{definition}[Open covers] \index{open cover} \index{open cover!subcover} \index{subcover|see {open cover, subcover}}
 	An \emph{open cover} of a topological space $X$ is a collection $\mathscr{U}$ of open subsets of $X$ which cover $X$, in the sense that \[ \bigcup_{U \in \mathscr{U}} U = X. \]
 	A \emph{subcover} of $\mathscr{U}$ is a subset $\mathscr{U}' \subseteq  \mathscr{U}$ which is itself an open cover. 
 \end{definition}
 
-\begin{definition}[Compact] \index{compact}
+\begin{definition}[Compact] \index{compact} \label{compact-topological-space}
 	A topological space $X$ is \emph{compact} if every open subcover has a finite subcover. 
 \end{definition}
 

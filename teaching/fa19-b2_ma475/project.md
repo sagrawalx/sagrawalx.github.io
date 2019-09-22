@@ -61,6 +61,7 @@ If you're struggling to find things, here's a short list of things that I think 
     * Fundamental theorem of calculus (including a rigorous construction of the Riemann integral)
 * Multivariable calculus
     * Morse's lemma
+    * Implicit function theorem
     * Constant rank theorem
 * Manifolds
     * Exotic manifold structures (eg, exotic $\mathbb{R}^4$s, or exotic spheres)
