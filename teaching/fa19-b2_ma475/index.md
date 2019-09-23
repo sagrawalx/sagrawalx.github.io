@@ -14,7 +14,8 @@ nonav: true
     * Office: Tutt Science 234.
 * [Course syllabus](syllabus).
 * Course materials: [Off on a Tangent](/math/tangent/stable.pdf)
-    * I'll try to keep the PDF linked above quasi-stable (I won't change any numbering in the sections for which I've assigned the reading assignment in the calendar below). If you want, you can look at the most updated version of the notes [here](/math/tangent/main.pdf).
+    * I'll keep the PDF linked above quasi-stable (I won't change any numbering in the sections for which I've assigned the reading assignment in the calendar below). You might refresh frequently to make sure you have the most updated version. 
+    * If you want, you can look at the most updated version of the notes [here](/math/tangent/main.pdf).
     * See [here](resources) for a longer list of potentially useful resources.
 * See [here](gradschool) for brief remark if you're going to graduate school.
 * [Reading assignment submission form](https://docs.google.com/forms/d/e/1FAIpQLScvWUKFyUFFxO4zHto7MVjVL1CZFBPaEA9x4Gs_kbPqUjNcPA/viewform).
