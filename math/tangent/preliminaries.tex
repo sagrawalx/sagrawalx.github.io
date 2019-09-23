@@ -165,7 +165,8 @@ If $V$ is a finite dimensional vector space, we can construct a number of norms 
 	Axioms (N1) through (N3) are straightforward to verify. For the triangle inequality (N4), suppose $v = a_1 v_1 + \dotsb + a_n v_n$ and $w = b_1 v_1 + \dotsb +  b_n v_n$. Then
 	\[ \begin{aligned} |v +  w|_\infty &= \max\{ |a_1 + b_1| + \dotsb + |a_n + b_n|  \} \\
 	&\leq \max\{ |a_1| + |b_1|, \dotsb, |a_n| + |b_n| \} \\
-	&\leq \max\{ |a_1|, \dotsc, |a_n|\} + \max\{|b_1|, \dotsc,  |b_n| \} = |v|_\infty +  |w|_\infty \end{aligned} \]
+	&\leq \max\{ |a_1|, \dotsc, |a_n|\} + \max\{|b_1|, \dotsc,  |b_n| \} \\
+	&= |v|_\infty +  |w|_\infty \end{aligned} \]
 	where we used the triangle inequality for real numbers for the second step. 
 \end{example}
 
@@ -244,7 +245,7 @@ Using the standard basis $e_1, \dotsc, e_n$ of $\R^n$, we can define the euclide
 |h|_2 &= \sqrt{h_1^2 + \dotsb + h_n^2} \\
 |h|_\infty &= \max\{ |h_1|, \dotsc, |h_n| \}
 \end{aligned} \]
-For the most  part, it doesn't matter which of these norms you use. We'll use $|h|$ to denote either of them; in other words, you are free to interpret $|h|$ as either $|h|_2$ or $|h|_\infty$, whichever you like better. When we need to choose one over another, we'll explicitly specify this. 
+For the most  part, it doesn't matter which of these norms you use. We'll use $|h|$ to denote either of them; in other words, you are free to interpret $|h|$ as either $|h|_2$ or $|h|_\infty$, whichever you like better. When we need to choose one over another, we'll explicitly specify this. Notice that, when $n = 1$, both of these norms are equal (both are just given by taking the absolute value of a real number). 
 
 \section{Matrices}
 
