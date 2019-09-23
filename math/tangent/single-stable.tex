@@ -193,9 +193,7 @@ Notice that the function $h \mapsto f'(a)h$ is a linear map $\R \to \R$, in the 
 	If $f : S \to \R$ is differentiable at an interior point $a \in U$, we define $df_a : \R \to \R$ to be the linear map $df_a(h) = f'(a)h$. The function $df_a$ is sometimes called the \emph{total derivative} or the \emph{differential of $f$ at $a$}. 
 \end{definition}
 
-Thus \cref{differential-unique-single} says that $df_a$ is the only good linear approximation to the function \[ h \mapsto f(a+h)-f(a). \] Being the \emph{only good} linear approximation, it is also the \emph{best} linear approximation, whence the name of this section.
-
-The following is an important version of this same idea that comes up frequently in proofs. 
+Thus \cref{differential-unique-single} says that $df_a$ is the only good linear approximation to the function \[ h \mapsto f(a+h)-f(a). \] Being the \emph{only good} linear approximation, it is also the \emph{best} linear approximation, whence the name of this section. The following is an important version of this same idea that comes up frequently in proofs. 
 
 \begin{remark}[``Error in approximation'' function] \label{error-in-approximation}
 	Suppose $f : S \to \R$ is differentiable at an interior point $a \in S$. For sufficiently small values of $h$, we can define a ``error in approximation'' function\index{error in approximation function@``error in approximation'' function} $r$ by
@@ -251,7 +249,7 @@ The following weak version of l'H\^opital's rule\index{lhopitals rule@L'H\^opita
 	Suppose $f, g : S \to \R$ are differentiable at an interior point $a \in S$, that $f(a) = g(a) = 0$, and that $g'(a) \neq 0$. Show that
 	\[ \lim_{x \to a} \frac{f(x)}{g(x)} = \frac{f'(a)}{g'(a)}. \]
 	\begin{hint} If $x = a+h$, we have
-	\[ f(x) = f(a+h) = f(a) + df_a(h) + r(h) = f'(a)h + r(h), \]
+	\[ f(x) = f(a+h) = f(a) + df_a(h) + r(h) = f'(a)h + r(h) = \left( f'(a) + \frac{r(h)}{h} \right)h, \]
 	where $r$ is the ``error in approximation'' function for $f$, as defined in \cref{error-in-approximation}. 
 	\end{hint}
 \end{exercise}

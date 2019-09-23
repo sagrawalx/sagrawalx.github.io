@@ -157,48 +157,37 @@ The $\delta$ obtained by going through the above process then has the desired pr
 
 \subsection{Norms on finite dimensional vector spaces}
 
-If $V$ is a finite dimensional vector space, we can construct a number of norms on $V$ by choosing a basis. Of these, two are of key importance. 
-
-\begin{example} \label{l2-norm} \index{l2 norm@$L^2$ norm}
-	Suppose $V$ is a finite dimensional vector space, and $v_1, \dotsc, v_n$ is a basis for $V$. The \emph{$L^2$ norm} on $V$ with respect to this basis is defined by
-	\[ |a_1v_1 + \dotsb + a_n v_n| = \sqrt{a_1^2 + \dotsb + a_n^2}, \]
-	where $a_1, \dotsc, a_n \in \R$. 
-	Axioms (N1) through (N3) are straightforward to verify. For the triangle inequality (N4), suppose $v = a_1 v_1 + \dotsb + a_n v_n$ and $w = b_1 v_1 + \dotsb +  b_n v_n$. Then
-	\[ \begin{aligned} |v + w|^2 &= (a_1 + b_1)^2 + \dotsb + (a_n + b_n)^2 \\
-	&= |v|^2 + 2(a_1b_1 + \dotsb + a_n b_n) +  |w|^2 \\
-	&\leq |v|^2 + 2|v||w| + |w|^2 \\
-	&= (|v| + |w|)^2, \end{aligned} \]
-	where we have used the Cauchy-Schwarz inequality\footnotemark\ for the third step. Taking square roots yields (N4). 
-\end{example} 
-
-\footnotetext{The \emph{Cauchy-Schwarz inequality}\index{cauchy schwarz inequality@Cauchy-Schwarz inequality} states that
-\[ (a_1 b_1  + \dotsb + a_n b_n)^2 \leq (a_1^2 + \dotsb + a_n^2) (b_1^2 + \dotsb + b_n^2) \]
-for all $a_1, \dotsc, a_n, b_1, \dotsc, b_n \in \R$. In other words, ``the square of the sum of the products is at most the product of the sums of the squares.'' Using the dot product, this can be phrased more succinctly as $|v \cdot w|^2 \leq |v|^2 |w|^2$ for all $v, w \in \R^n$. For a proof, see \cite[theorem 6.1]{protter-morrey}, for instance.}
+If $V$ is a finite dimensional vector space, we can construct a number of norms on $V$ by choosing a basis. Of these, two are especially important: the max norm (also called the $L^\infty$ norm, which is often the most convenient), and the euclidean norm (also called the $L^2$ norm, which is the most common). 
 
 \begin{example} \label{max-norm} \index{max norm} \index{linfinity norm@$L^\infty$ norm|see {max norm}}
-	Suppose $V$ is a finite dimensional vector space, and $v_1, \dotsc, v_n$ is a basis for $V$. The \emph{$L^\infty$-norm}, or the \emph{max norm}, on $V$ with respect to this basis is defined by
-	\[ |a_1v_1 + \dotsb + a_n v_n|_\mx = \max \{ |a_1|, \dotsc, |a_n| \}. \]
+	Suppose $V$ is a finite dimensional vector space, and $v_1, \dotsc, v_n$ is a basis for $V$. The \emph{$L^\infty$-norm}, also called the \emph{max norm}, on $V$ with respect to this basis is defined by
+	\[ |a_1v_1 + \dotsb + a_n v_n|_\infty = \max \{ |a_1|, \dotsc, |a_n| \}. \]
 	Axioms (N1) through (N3) are straightforward to verify. For the triangle inequality (N4), suppose $v = a_1 v_1 + \dotsb + a_n v_n$ and $w = b_1 v_1 + \dotsb +  b_n v_n$. Then
-	\[ \begin{aligned} |v +  w|_\mx &= \max\{ |a_1 + b_1| + \dotsb + |a_n + b_n|  \} \\
+	\[ \begin{aligned} |v +  w|_\infty &= \max\{ |a_1 + b_1| + \dotsb + |a_n + b_n|  \} \\
 	&\leq \max\{ |a_1| + |b_1|, \dotsb, |a_n| + |b_n| \} \\
-	&\leq \max\{ |a_1|, \dotsc, |a_n|\} + \max\{|b_1|, \dotsc,  |b_n| \} \\
-	&= |v|_\mx +  |w|_\mx \end{aligned} \]
+	&\leq \max\{ |a_1|, \dotsc, |a_n|\} + \max\{|b_1|, \dotsc,  |b_n| \} = |v|_\infty +  |w|_\infty \end{aligned} \]
 	where we used the triangle inequality for real numbers for the second step. 
 \end{example}
 
-The following states that these two norms are actually equivalent.  
+\begin{example} \label{l2-norm} \index{l2 norm@$L^2$ norm}
+	Suppose $V$ is a finite dimensional vector space, and $v_1, \dotsc, v_n$ is a basis for $V$. The \emph{$L^2$ norm}, also called the \emph{euclidean norm}, on $V$ with respect to this basis is defined by
+	\[ |a_1v_1 + \dotsb + a_n v_n|_2 = \sqrt{a_1^2 + \dotsb + a_n^2}. \]
+	Axioms (N1) through (N3) are straightforward to verify. The triangle inequality is harder: see \cite[theorem 6.2]{protter-morrey}, for instance.  
+\end{example}
 
-\begin{exercise} \label{max-l2}
-	Suppose $V$ is a finite dimensional vector space and $v_1, \dotsc, v_n$ is a basis for $V$. Let $|-|$ denote the $L^2$-norm from \cref{l2-norm} and $|-|_\mx$ the max norm from \cref{max-norm}. Show that, for any $v \in V$, we have
-	\[ |v|_\mx \leq |v| \leq \sqrt{n} |v|_\mx. \]
+The following states that these two norms are equivalent.  
+
+\begin{exercise} \label{max-euclidean}
+	Suppose $V$ is a finite dimensional vector space and $v_1, \dotsc, v_n$ is a basis for $V$. Show that, for any $v \in V$, we have \[ |v|_\infty \leq |v|_2 \leq \sqrt{n} |v|_\infty. \]
 \end{exercise} 
 
-In fact, here is vast generalization of \cref{max-l2}. 
+In fact, here is vast generalization of \cref{max-euclidean}. 
 
 \begin{theorem} \label{finite-dim-norm}
 	If $V$ is a finite dimensional vector space, all norms on $V$ are equivalent.\index{equivalence!of norms}
 \end{theorem}
 
+{\color{blue} I'll add a proof of this eventually...}
 % TODO: do this
 
 \subsection{Sup norm on real-valued functions}
@@ -250,13 +239,12 @@ This is a linear map.
 
 \subsection{Norms on \texorpdfstring{$\R^n$}{Rn}}
 
-The $L^2$ norm (cf. \cref{l2-norm}) with respect to the standard basis $e_1, \dotsc, e_n$ of $\R^n$ is the usual norm we use on $\R^n$. Explicitly, if $h = (h_1, \dotsc, h_n) \in \R^n$, we define
-\[ |h| := \sqrt{h_1^2 + \dotsb + h_n^2}. \]
-This norm is sometimes also called the \emph{euclidean norm} or the \emph{standard norm} on $\R^n$.\index{l2 norm@$L^2$ norm} \index{euclidean norm|see {l2 norm@$L^2$ norm}} 
-Unless explicitly specified otherwise, we regard $\R^n$ as a metric space with the metric induced by this norm (cf. \cref{norm-induces-metric}). 
-
-On the other hand, we could also endow $\R^n$ with the max norm (cf. \cref{max-norm}) with respect to the standard basis. We denote this norm by $|-|_\mx$.\index{max norm} Explicitly, if $h = (h_1, \dotsc, h_n) \in \R^n$, we have
-\[ |h|_\mx = \max\{ |h_1|, \dotsc, |h_n| \}. \]
+Using the standard basis $e_1, \dotsc, e_n$ of $\R^n$, we can define the euclidean (or $L^2$) and max (or $L^\infty$) norms (cf. \cref{l2-norm,max-norm}). Explicitly, if $h = (h_1, \dotsc, h_n) \in \R^n$, we have the following.  
+\[ \begin{aligned} 
+|h|_2 &= \sqrt{h_1^2 + \dotsb + h_n^2} \\
+|h|_\infty &= \max\{ |h_1|, \dotsc, |h_n| \}
+\end{aligned} \]
+For the most  part, it doesn't matter which of these norms you use. We'll use $|h|$ to denote either of them; in other words, you are free to interpret $|h|$ as either $|h|_2$ or $|h|_\infty$, whichever you like better. When we need to choose one over another, we'll explicitly specify this. 
 
 \section{Matrices}
 
@@ -338,10 +326,10 @@ Throughout the rest of this section, we assume that $U$, $V$, and $W$ are finite
 
 \subsection{Matrix norm} \label{matrix-norm}
 
-Observe that $\mathscr{M}_{n \times m}$ is a finite dimensional vector space. If $E_{j,i}$ denotes the matrix whose $(j,i)$-entry is 1 and all other entries are 0 for $i = 1, \dotsc, m$ and $j = 1, \dotsc, n$, then the list of all of these $mn$ matrices forms a basis for $\mathscr{M}_{n \times m}$. We can use this basis to define a $L^2$ and max norm on $\mathscr{M}_{n \times m}$, as in \cref{l2-norm,max-norm}.\index{l2 norm@$L^2$ norm} \index{max norm} Explicitly, if $A$ is a $n \times m$ matrix whose $(j,i)$-entry is $a_{j,i}$, we have the following. 
-\[ \begin{aligned} \|A\| &= \sqrt{ \sum_{j,i} a_{j,i}^2 } \\
-\|A\|_\mx &= \max_{j,i} |a_{j,i}| \end{aligned}  \]
-We know from \cref{max-l2} that these two norms are equivalent. All of the following statements are independent of which norm on $\mathscr{M}_{n \times m}$ we have in mind. 
+Observe that $\mathscr{M}_{n \times m}$ is a finite dimensional vector space. If $E_{j,i}$ denotes the matrix whose $(j,i)$-entry is 1 and all other entries are 0 for $i = 1, \dotsc, m$ and $j = 1, \dotsc, n$, then the list of all of these $mn$ matrices forms a basis for $\mathscr{M}_{n \times m}$. We can use this basis to define a $L^2$ and max norm on $\mathscr{M}_{n \times m}$, as in \cref{l2-norm,max-norm}.\index{l2 norm@$L^2$ norm} \index{max norm} Explicitly, if $A$ is a $n \times m$ matrix whose $(j,i)$-entry (ie, the entry in row $j$ and column $i$) is $a_{j,i}$, we have the following. 
+\[ \begin{aligned} |A|_2 &= \sqrt{ \sum_{j,i} a_{j,i}^2 } \\
+|A|_\infty &= \max_{j,i} |a_{j,i}| \end{aligned}  \]
+We know from \cref{max-euclidean} that these two norms are equivalent. We'll write $|A|$ to denote either of these norms; in other words, when you see $|A|$, you can interpret this to mean either $|A|_2$ or $|A|_\infty$, whichever you like better. All of the following don't depend on which norm you're using. 
 
 \begin{lemma}
 	The function $\det : \mathscr{M}_{n \times n} \to \R$ is continuous.
@@ -389,7 +377,9 @@ The following generalizes \cref{gln-open}.
 	\[ \|\ell\| = \sup\, \{ |\ell(v)| : |v| \leq 1 \}. \]
 \end{definition} 
 
-The operator norm $\|\ell\|$ is \emph{not} the same as the norm of the standard matrix representation $\|[\ell]\|$ as defined in \cref{matrix-norm}. The following gives an important reformulation of \cref{operator-norm-definition}.  
+If we're using the euclidean norms on $\R^m$ and $\R^n$, then we get one operator norm, which we denote by $\|\ell\|_2$ and call the \emph{euclidean (or $L^2$) operator norm} using the above definition. If we're using the max norms, then the above definition yields a different operator norm, which we denote by $\|-\|_\infty$ and call the \emph{max (or $L^\infty$) operator norm}. A lot of the basic properties of the operator norm work for either, so you can interpret the symbol $\|-\|$ to refer to either of them, whichever you like better. If we really need to distinguish one from the other, we'll indicate this explicitly. 
+
+Another important remark is that the operator norm $\|\ell\|$ is \emph{not} the same as the norm of the standard matrix representation $\|[\ell]\|$ as defined in \cref{matrix-norm}. 
 
 \begin{exercise} \label{operator-norm-reformulation}
 	Suppose $\ell : \R^m \to \R^n$ is a linear map. Show that 
@@ -443,6 +433,32 @@ This contradicts \cref{operator-norm-is-norm}.
 	Give an example to show that this inequality can be strict. 
 \end{exercise}
 
+Here is one reason for preferring the max norms over the euclidean norms: there's an easy formula for the max operator norm in terms of the entries of a matrix representation.
+
+\begin{proposition} \label{max-operator-norm-characterization}
+	Let $\ell : \R^m \to \R^n$ be a linear map and let $A = [\ell]$ be its standard matrix representation. Then $\|\ell\|_\infty$ is the maximum absolute row sum of $A$. In other words, 
+	\[ \|\ell\|_\infty = \max_j \sum_{i = 1}^m |a_{j,i}| \]
+	where $a_{j,i}$ denotes the $(j,i)$-entry of $A$ (ie, the entry in row $j$ and column $i$). 
+\end{proposition}
+
+\begin{proof}
+	Let $M$ denote the maximum absolute row sum of $A$. In other words, 
+	\[ M = \max_j \sum_{i = 1}^m |a_{j,i}|. \]
+	If $h = (h_1, \dotsc, h_m) \in \R^m$ and $|h|_\infty \leq 1$, then $|h_i| \leq 1$ for all $i$ and
+	\begin{equation} \label{bound-max-absolute-row-sum} |\ell(h)|_\infty = \max_j \left| \sum_{i = 1}^n a_{j,i} h_i \right|  \leq \max_j \sum_{i = 1}^m |a_{j,i}| = M. \end{equation}
+	Taking the supremum over all $h$ such that $|h|_\infty \leq 1$ shows that $\|\ell\|_\infty \leq M$. 
+	
+	To prove equality, we will explicitly construct an $h \in \R^m$ with $|h|_\infty = 1$ such that $|\ell(h)|_\infty = M$. Let $k$ be an integer (between 1 and $n$) which achieves the maximum absolute row sum of $A$. In other words, $k$ is an integer such that
+	\[ \sum_{i = 1}^m |a_{k,i}| = M. \]
+	For each $i = 1, \dotsc, m$, let
+	\[ h_i = \begin{cases} 1 & \text{if } a_{k, i} \geq 0 \\ -1 & \text{if } a_{k, i} < 0  \end{cases} \]
+	and then consider the vector $h = (h_1, \dotsc, h_m) \in \R^m$. Observe that $|h|_\infty = 1$, and notice that the $k$th entry of $\ell(h) = Ah$ is 
+	\[ \sum_{i = 1}^m a_{k,i} h_i = \sum_{i = 1}^m |a_{k,i}| = M \]
+	by choice of $h$. Thus we have
+	\[ M \leq |\ell(h)|_\infty \leq M \]
+	where the first inequality is from the definition of the max norm, and the second inequality is from \cref{bound-max-absolute-row-sum}. Thus $|\ell(h)|_\infty = M$, completing the proof. 
+\end{proof}
+
 \subsection{Operator norm as a metric \texorpdfstring{$\star$}{*}}
 
 Since the operator norm is a norm by \cref{operator-norm-is-norm}, we can regard $\mathscr{L}(\R^m, \R^n)$ as a metric space by \cref{norm-induces-metric}. It turns out that many natural maps are continuous when we do this. 
@@ -457,13 +473,21 @@ Since the operator norm is a norm by \cref{operator-norm-is-norm}, we can regard
 	given by $(\ell', \ell) \mapsto \ell' \circ \ell$ is continuous.\index{product!product metric} 
 \end{exercise}
 
-\begin{exercise} \label{operator-and-matrix-norms}
+\begin{exercise} \label{max-matrix-norm-and-max-operator-norm}
+	Suppose $\ell : \R^m \to \R^n$ is linear and $A = [\ell]$ is its standard matrix representation. Prove that 
+	\[ |A|_\infty \leq \|\ell\|_\infty \leq m |A|_\infty. \]
+	\begin{hint}
+		Use \cref{max-operator-norm-characterization}.
+	\end{hint}
+\end{exercise}
+
+\begin{comment} \label{operator-and-matrix-norms}
 	Suppose $\ell : \R^m \to \R^n$ is linear and $A = [\ell]$ is its standard matrix representation.\index{representation!standard matrix representation} Prove the following. 
 	\begin{enumerate}[(a)]
-		\item $\|\ell\| \leq \|A\| \leq \sqrt{n} \|\ell\|$. 
-		\item $\|A \|_\mx \leq \|\ell\| \leq \sqrt{mn} \|A\|_\mx$. 
+		\item $\|\ell\|_2 \leq |A|_2 \leq \sqrt{n} \|\ell\|_2$. 
+		\item $|A|_\infty \leq \|\ell\|_2 \leq \sqrt{mn} |A|_\infty$. 
 	\end{enumerate}
-\end{exercise}
+\end{comment}
 
 % \cite[section 2.3.2]{golub}
 
@@ -569,7 +593,7 @@ The canonical topology\index{canonical topology} on a finite dimensional vector 
 
 \begin{proof}
 	Choose a basis $w_1, \dotsc, w_r$ for $\ell(V)$, and extend it to a basis $w_1, \dotsc, w_n$ for $W$. For each $w_1, \dotsc, w_r$, choose vectors $v_1, \dotsc, v_r$ such that $\ell(v_i) = w_i$. Linear independence of $w_1, \dotsc, w_r$ guarantees linear independence of $v_1, \dotsc, v_r$. Choose a basis $v_{r+1}, \dotsc, v_m$ for the null space $\ker(\ell)$. Then $v_1, \dotsc, v_r, v_{r+1}, \dotsc, v_m$ is a basis for $V$ (exercise). Now consider the max norms with respect to the bases $v_1, \dotsc, v_m$ on $V$ and $w_1, \dotsc, w_n$ on $W$, as in \cref{max-norm}. If $v = a_1 v_1 + \dotsb + a_n v_m$, we have 
-	\[ |\ell(v)|_\mx = |a_1w_1 + \dotsb + a_r w_r| = \max\{ |a_1|, \dotsc, |a_r| \} \leq \max\{ |a_1|, \dotsc, |a_n|\} =  |v|_\mx \]
+	\[ |\ell(v)|_\infty = |a_1w_1 + \dotsb + a_r w_r| = \max\{ |a_1|, \dotsc, |a_r| \} \leq \max\{ |a_1|, \dotsc, |a_n|\} =  |v|_\infty \]
 	so \cref{bounded-continuous} tells us that $\ell$ is continuous with respect to the max norm. Since the topologies determined by the max norms on $V$ and $W$ are precisely the canonical topologies (cf. \cref{finite-dim-canonical-topology}), we are done.  
 \end{proof}
 
