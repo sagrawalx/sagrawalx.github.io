@@ -96,15 +96,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.A}Sum and scalar multiples rule}{84}{subsection.352}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.B}Chain rule}{84}{subsection.355}
+\contentsline {subsection}{\numberline {2.3.B}Chain rule}{85}{subsection.355}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.C}Differentiability by components}{85}{subsection.363}
+\contentsline {subsection}{\numberline {2.3.C}Differentiability by components}{86}{subsection.363}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.D}Product and quotient rules}{86}{subsection.368}
+\contentsline {subsection}{\numberline {2.3.D}Product and quotient rules}{87}{subsection.368}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.E}Directional and partial derivatives}{88}{subsection.372}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.F}Jacobian matrix}{94}{subsection.395}
+\contentsline {subsection}{\numberline {2.3.F}Jacobian matrix}{95}{subsection.395}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.G}Rank of a differentiable map}{96}{subsection.399}
 \defcounter {refsection}{0}\relax 
@@ -112,7 +112,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.A}Vanishing derivatives}{101}{subsection.414}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.B}Bounded derivative}{103}{subsection.424}
+\contentsline {subsection}{\numberline {2.4.B}Bounded derivatives}{103}{subsection.424}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.C}Inverse function theorem}{104}{subsection.430}
 \defcounter {refsection}{0}\relax 
@@ -122,13 +122,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.5.A}Continuous differentiability}{112}{subsection.455}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.B}$C^k$ functions}{118}{subsection.477}
+\contentsline {subsection}{\numberline {2.5.B}$C^k$ functions}{119}{subsection.477}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.C}Equality of mixed partials $\star $}{119}{subsection.484}
+\contentsline {subsection}{\numberline {2.5.C}Equality of mixed partials $\star $}{120}{subsection.484}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.D}Taylor's theorem $\star $}{121}{subsection.492}
+\contentsline {subsection}{\numberline {2.5.D}Taylor's theorem $\star $}{122}{subsection.492}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.E}Smooth functions}{128}{subsection.508}
+\contentsline {subsection}{\numberline {2.5.E}Smooth functions}{129}{subsection.508}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Manifolds}{133}{chapter.520}
 \defcounter {refsection}{0}\relax 
