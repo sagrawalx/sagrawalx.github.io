@@ -1935,10 +1935,12 @@
     <bcf:citekey order="9">protter-morrey</bcf:citekey>
     <bcf:citekey order="10">rudin</bcf:citekey>
     <bcf:citekey order="11">counterexamples</bcf:citekey>
-    <bcf:citekey order="12">saint-raymond</bcf:citekey>
-    <bcf:citekey order="13">spivak_calculus</bcf:citekey>
-    <bcf:citekey order="14">rudin</bcf:citekey>
-    <bcf:citekey order="15">konigsberger</bcf:citekey>
+    <bcf:citekey order="12">rudin</bcf:citekey>
+    <bcf:citekey order="13">saint-raymond</bcf:citekey>
+    <bcf:citekey order="14">spivak_calculus</bcf:citekey>
+    <bcf:citekey order="15">golub</bcf:citekey>
+    <bcf:citekey order="16">rudin</bcf:citekey>
+    <bcf:citekey order="17">konigsberger</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

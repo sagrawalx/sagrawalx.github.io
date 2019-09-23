@@ -236,10 +236,10 @@ Notice that $\epsilon$ gets small rapidly as $(h,k) \to 0$. More precisely, the 
 \[ \lim_{(h,k) \to 0} \frac{\epsilon(h,k)}{|(h,k)|} = 0, \]
 ie, that $\epsilon(h,k) = o(|(h,k)|)$ as $(h,k) \to 0$. 
 
-In fact, for the claim, it doesn't matter whether $|(h,k)|$ denotes the euclidean norm $|(h,k)|_2 = \sqrt{h^2 + k^2}$ or the max norm $|(h,k)|_\mx = \max\{|h|, |k|\}$. If it's the euclidean norm, we have
+In fact, for the claim, it doesn't matter whether $|(h,k)|$ denotes the euclidean norm $|(h,k)|_2 = \sqrt{h^2 + k^2}$ or the max norm $|(h,k)|_\infty = \max\{|h|, |k|\}$ (cf. \cref{euclidean}). If it's the euclidean norm, we have
 \[ \lim_{(h,k) \to 0} \frac{\epsilon(h,k)}{|(h,k)|_2} = \lim_{(h,k) \to 0} = \frac{h^2 + k^2}{\sqrt{h^2 + k^2}} = \lim_{(h,k) \to 0} \sqrt{h^2 + k^2} = 0. \]
 If instead it's the max norm, observe that
-\[ \frac{\epsilon(h,k)}{|(h,k)|_\mx} = \frac{h^2 + k^2}{|(h,k)|_\mx} \leq \frac{2(|(h,k)|_\mx)^2}{|(h,k)|_\mx} = 2|(h,k)|_\mx \]
+\[ \frac{\epsilon(h,k)}{|(h,k)|_\infty} = \frac{h^2 + k^2}{|(h,k)|_\infty} \leq \frac{2(|(h,k)|_\infty)^2}{|(h,k)|_\infty} = 2|(h,k)|_\infty \]
 so taking the limit as $(h,k) \to 0$ and applying the squeeze theorem yields the same result. 
 
 Since $\epsilon$ gets small rapidly, we can say that the function $(h,k) \mapsto f(a) + df_a(h,k)$ is a good approximation of the function $(h,k) \mapsto f(a+(h,k))$ for small vectors $(h,k)$. Said differently, letting $x = a + (h,k)$, the function $x \mapsto f(a) + df_a(x-a)$ is a good approximation of $f$ near $a$. 
@@ -250,9 +250,7 @@ In what follows, we will turn the above example on its head and \emph{define} th
 
 This might seem a bit ``backwards'' given our analysis of the example above, but there is a good reason for doing this; it turns out that there are some bizarre functions where partial derivatives make sense, but tangent planes do not (cf. \cref{partials-dont-imply-differentiable,directionals-dont-imply-differentiable}).
 
-We'll be using a lot of linear algebra in this chapter. The notation $|-|$ will denote a norm on $\R^n$. For the most part, it won't matter whether it's the euclidean norm $|h|_2 = \sqrt{h_1^2 + \dotsb + h_2^2}$ or the max norm $|h|_\mx = \max\{|h_1|, \dotsc, |h_n|\}$. You can choose whichever one you like better. If it makes a difference which norm on $\R^n$ we have in mind, we'll explicitly write either $|-|_2$ or $|-|_\mx$. 
-
-We'll also need some facts about the operator norm; I encourage you to at least skim through \cref{operator-norm-basic} before proceeding. 
+We'll be using a lot of linear algebra in this chapter. As mentioned in \cref{euclidean}, the notation $|-|$ will denote either the euclidean or the max norm on $\R^n$, and you can choose to interpret it to be whichever of the two norms you like better (in the calculation we did above, the euclidean norm was a little easier; but, in general, I find the max norm to be far more convenient). When it makes a difference which norm on $\R^n$ we have in mind, we'll specify this explicitly.  We'll also need some facts about the operator norm as we go along; I encourage you to at least skim through \cref{operator-norm-basic} before proceeding. 
 
 \section{Definition of the derivative}
 
@@ -437,7 +435,7 @@ Recall that we asserted at the beginning of this chapter that the ``multi'' in t
 \begin{exercise} \label{components-are-small-implies-small}
 	Show that if $S$ is a neighborhood of 0 in $\R^m$ and $r :  S  \to \R^n$ is a function such that $|r_j(h)| = o(|h|)$ as $h \to 0$ for all $j = 1, \dotsc, n$, then $|r(h)| = o(|h|)$ also.
 	\begin{hint}
-		You may find it useful to do \cref{max-l2} first. 
+		If you're using the euclidean norm, you may find it useful to do \cref{max-euclidean} first. 
 	\end{hint}
 \end{exercise}
 
@@ -1003,36 +1001,50 @@ Throughout this section, $U$ denotes an open subset of $\R^m$. In this section, 
 
 \subsection{Vanishing derivatives}
 
-Here is a multivariable generalization of \cref{constant-iff-derivative-zero-single}. In fact, we will use the single variable version to prove this multivariable version. 
+First off, here are some definitions that are rather useful. 
+
+\begin{definition} \label{straight-line-path}
+	If $a, b \in \R^n$, the \emph{straight line path} from $a$ to $b$ is the function
+	\[ \gamma(t) = (1-t)a + tb. \]
+	Observe that $\gamma(0) = a$ and $\gamma(1) = b$. 
+\end{definition}
+
+\begin{exercise} \label{straight-line-path-differentiable}
+	Show that the straight line path from $a$ to $b$ is differentiable. 
+\end{exercise}
+
+\begin{definition} \label{convex}
+	A subset $S$ of $\R^n$ is \emph{convex} if the straight line path between any two points in $S$ is contained in $S$. In other words, $S$ is convex if, whenever $a, b \in S$ and $\gamma$ is the straight line path from $a$ to $b$, then $\gamma(t) \in S$ for all $t \in [0,1]$. 
+\end{definition}
+
+Roughly speaking, the role of intervals in single variable calculus is played by convex sets in multivariable calculus. For example, here is a multivariable generalization of \cref{constant-iff-derivative-zero-single}. We will use the single variable version to prove this multivariable version. 
 
 \begin{proposition} \label{constant-iff-derivative-zero}
-	Suppose $B$ is an open ball and $f : B \to \R^n$ is a differentiable function. Then $df = 0$ if and only if $f$ is constant\index{constant function}.  
+	Suppose $U$ is convex and $f : U \to \R^n$ is a differentiable function. Then $df = 0$ if and only if $f$ is constant\index{constant function}.  
 \end{proposition}
 
 \begin{proof}
-	Taking $w = 0$ in \cref{derivative-of-line} shows that, if $f$ is constant, then $df = 0$. For the converse, we can assume without loss of generality that $n = 1$ (cf. \cref{constant-iff-derivative-zero-details}). We want to show that, for any $a,  b \in B$, we have $f(a) = f(b)$. Consider the function $\gamma : [0,1] \to B$ given by
-	\[ \gamma(t) = tb + (1-t)a.  \]
-	In other words, $\gamma$ is the ``straight line path'' that starts at $a$ and ends at $b$. Notice that $\gamma(t) \in B$ for all $t$ because $a$ and $b$ are both inside $B$ and $B$ is an open ball. Also, $\gamma$ is differentiable (cf. \cref{constant-iff-derivative-zero-details}). Thus $f \circ \gamma$ is a differentiable function $[0,1] \to \R$ and 
+	Taking $w = 0$ in \cref{derivative-of-line} shows that, if $f$ is constant, then $df = 0$. For the converse, we can assume without loss of generality that $n = 1$ (cf. \cref{constant-iff-derivative-zero-details}). We want to show that, for any $a,  b \in U$, we have $f(a) = f(b)$. Let $\gamma$ be the straight line path from $a$ to $b$. Convexity of $U$ tells us that $\gamma(t) \in U$ for all $t \in [0,1]$. Also, $\gamma$ is differentiable by \cref{straight-line-path-differentiable}. Thus $f \circ \gamma$ is a differentiable function $[0,1] \to \R$ and 
 	\[ (f \circ \gamma)'(t) = f'(\gamma(t)) \gamma'(t) = 0 \]
 	where we used the (matrix version of the) chain rule \ref{chain-rule} at the second step, and the fact that $df = 0$ for the final step. Thus it follows from \cref{constant-iff-derivative-zero-single} that $f \circ \gamma$ is constant, which means that
 	\[ f(a) = f(\gamma(0)) = f(\gamma(1)) = f(b). \qedhere \]
 \end{proof}
 
 \begin{exercise} \label{constant-iff-derivative-zero-details}
-	\begin{enumerate}[(a)]
-		\item Explain why proving that $df = 0$ implies that $f$ is constant for $n = 1$ implies the same fact for general $n$. 
-		\item Show that the straight line path $\gamma$ defined in the proof above is differentiable. 
-	\end{enumerate}
+	 Explain why proving that $df = 0$ implies that $f$ is constant for $n = 1$ implies the same fact for general $n$. 
 \end{exercise}
 
-In fact, it's not necessary that the domain be an open ball in order for the conclusion of \cref{constant-iff-derivative-zero} to be true. Before getting to the general statement, here is a useful intuition-building exercise. 
+In fact, it's not necessary that the domain be convex in order for the conclusion of \cref{constant-iff-derivative-zero} to be true. Before getting to the general statement, here is a useful intuition-building exercise. 
 
 \begin{exercise}
 	Let $U$ denote $\R^2$ minus the non-negative $x$-axis. In other words,
 	\[ U = \R^2 \setminus \{ (x, 0) \in \R^2 : x \geq 0 \}. \]
-	Suppose $f : U \to \R$ is a differentiable function such that $df = 0$. Show that $f$ is constant. 
+	\begin{enumerate}[(a)]
+		\item Show that $U$ is not convex. 
+		\item Suppose $f : U \to \R$ is a differentiable function such that $df = 0$. Show that $f$ is constant.
+	\end{enumerate} 
 	\begin{hint}
-		In the proof of \cref{constant-iff-derivative-zero}, we used the fact that any pair of points in an open ball could be joined by a straight line path that stayed entirely within the open ball. It's not true that any pair of points in $U$ can be joined by a straight line path that stays entirely within $U$. But any pair of points in $U$ \emph{can} be joined by \emph{two} straight line paths...
+		Any pair of points in $U$ \emph{can} be joined by \emph{two} straight line paths...
 	\end{hint}
 \end{exercise}
 
@@ -1056,70 +1068,32 @@ In fact, it's not necessary that the domain be an open ball in order for the con
 Here is a multivariable version of \cref{bounded-derivative}. Again, we will actually use the single variable version to prove the multivariable version. 
 
 \begin{proposition} \label{bounded-derivative-multi}
-	Suppose $B$ is an open ball and $f : B \to \R^n$ is a differentiable function. Suppose further that there exists a constant $M$ such that $\|df_x\| \leq M$ for all $x \in B$. Then
+	Suppose $U$ is convex and $f : U \to \R^n$ is a differentiable function. Suppose further that there exists a constant $M$ such that $\|df_x\| \leq M$ for all $x \in U$. Then
 	\[ |f(b) - f(a)| \leq M |b-a| \]
-	for all $a, b \in B$. 
+	for all $a, b \in U$. 
 \end{proposition}
 
 \begin{proof}
-	We'll prove this for the situation when $|-|$ denotes the max norm. For the proof when $|-|$ is the euclidean norm, see \cite[theorem 9.19]{rudin}. 
-	
-	Let us suppose first that $n = 1$. If $a = b$, there is nothing to do, so we can assume that $a \neq b$. Let \[ h = \frac{b-a}{|b-a|_\mx}, \]
+	We'll prove this only when $|-|$ denotes the max norm. The proof for the euclidean norm is a bit trickier: see \cite[theorem 9.19]{rudin}. Suppose first that $n = 1$. If $a = b$, there is nothing to do, so we can assume that $a \neq b$. Let \[ h = \frac{b-a}{|b-a|}, \]
 	ie, $h$ is the vector pointing from $a$ towards $b$ normalized to unit length. Consider the function $\xi(t) = a + th$ as in \cref{directional-to-single}. Then
 	\[ (f \circ \xi)'(t) = \partial_h f(a + th) = df_{a + th}(h)  \]
 	by \cref{jacobian-matrix}, which means that 
-	\[ |(f \circ \xi)'(t)| = |df_{a + th}(h)| \leq \|df_{a + th}\| |h|_\mx \leq M|h|_\mx = M, \]
+	\[ |(f \circ \xi)'(t)| = |df_{a + th}(h)| \leq \|df_{a + th}\| |h| \leq M|h| = M, \]
 	where we used the fact that $h$ has unit length for the final step. Notice that $\xi(0) = a$ and $\xi(|b-a|) =  b$, so by applying \cref{bounded-derivative} to $f \circ \xi$, we see that 
-	\[ |f(b) - f(a)| \leq M||b-a|_\mx - 0| = M|b-a|_\mx.  \]
-	This proves the statement for $n = 1$, and using this we can now prove the statement for general $n$ (still assuming that $|-|$ is the max norm $|-|_\mx$). Note that $df_{j,a} = \pi_j \circ df_a$ and $\|\pi_j\| = 1$ so \[ \|df_{j,a}\| \leq \|\pi_j\| \|df_a\| \leq M \]
+	\[ |f(b) - f(a)| \leq M||b-a| - 0| = M|b-a|.  \]
+	This proves the statement for $n = 1$, and using this we can now prove the statement for general $n$. Note that $df_{j,a} = \pi_j \circ df_a$ and $\|\pi_j\| = 1$ so \[ \|df_{j,a}\| \leq \|\pi_j\| \|df_a\| \leq M \]
 	by \cref{operator-norm-submultiplicative}. Applying \cref{bounded-derivative-multi} to the component functions $f_j$, so 
 	\[ |f_j(b) - f_j(a)| \leq M|b-a| \]
-	for all $a, b \in B$ and all $j = 1, \dotsc, n$, which means that
-	\[ |f(b) - f(a)| \leq M|b-a|. \]
-	Recall that, so far, $|-|$ denoted the max norm. 
-	
-	
-	where $|-|_\mx$ denotes the max norm (cf.  \cref{euclidean}). But then
-	\[ |f(b)-f(a)| \leq \sqrt{n} |f(b)-f(a)|_\mx \leq \sqrt{n}M |b-a|, \]
-	where we have used \cref{max-l2} for the first step.
+	for all $a, b \in B$ and all $j = 1, \dotsc, n$. Taking the maximum over all $j$ proves the result. 
 \end{proof}
 
 \begin{exercise}
 	\begin{enumerate}[(a)]
-		\item The statement of the \cref{bounded-derivative-multi} requires that the domain of $f$ is an open ball. Where in the proof is this used?
+		\item The statement of the \cref{bounded-derivative-multi} requires that the domain of $f$ is convex. Where in the proof is this used?
 		\item Prove that $\|\pi_j\| = 1$. 
 		\item If you haven't already done it, do \cref{operator-norm-submultiplicative}. 
 	\end{enumerate} 
 \end{exercise}
-
-\begin{comment}
-	Let us first show that it is enough to prove the lemma for $n = 1$. Indeed, if it is true for $n = 1$, then it is true for all of the component functions $f_j : B \to \R$, so
-	\[ |f_j(b) - f_j(a)| \leq mM|b-a| \]
-	for all $a, b \in B$, which means that
-	\[ |f(b) - f(a)|_\mx \leq mM|b-a|, \]
-	where $|-|_\mx$ denotes the max norm defined in \cref{euclidean}. But then
-	\[ |f(b)-f(a)| \leq \sqrt{n} |f(b)-f(a)|_\mx \leq m\sqrt{n}M |b-a|, \]
-	where we have used \cref{max-l2} for the first step. 
-	
-	So we can assume that $n = 1$. Set $h = b-a = (h_1, \dotsc, h_m)$, and then define the following list of vectors. 
-	\[ \begin{aligned} 
-	a_0 &= a \\
-	a_1 &= a + (h_1, 0, 0 \dotsc, 0, 0) \\
-	a_2 &= a + (h_1, h_2, 0, \dotsc, 0, 0) \\
-	&\enspace \vdots \\
-	a_{m-1} &= (a_1, a_2, a_3, \dotsc, a_{m-1}, 0) \\
-	a_m &= (a_1, a_2, a_3, \dotsc, a_{m-1}, a_m) = b \end{aligned} \]
-	Notice that
-	\[ f(b) - f(a) = \sum_{i = 1}^m (f(a_i ) - f(a_{i-1})) \]
-	We're now going to restrict $f$ to the zigzag path from $a$ to $b$ made by the points $a_0, \dotsc, a_m$, looking at each segment in turn. The function
-	\[ t \mapsto f(a_{i-1} + te_i) \]
-	is a single variable function whose derivative at a point $t$ is given by $\partial_i f(a_{i-1} + te_i)$, which we know is bounded in absolute value by $M$. Since this function has the value $f(a_{i-1})$ at $t = 0$ and $f(a_i)$ at $t = s_i$, \cref{bounded-derivative} gives us the first step of the following chain. 
-	\[ |f(a_i) - f(a_{i-1})| \leq M|h_i|. \]
-	But then, using \cref{max-l2}, we have
-	\[ |f(a_i) - f(a_{i-1})| \leq M|h_i| \leq M|h|_\mx \leq M|h| = M|b-a| \]
-	so we have
-	\[ |f(b) - f(a)| = \left| \sum_{i = 1}^m f(a_i) - f(a_{i-1}) \right| \leq \sum_{i = 1}^m |f(a_i) - f(a_{i-1})| \leq mM|b-a|. \qedhere \]
-\end{comment}
 
 \subsection{Inverse function theorem}
 
@@ -1137,7 +1111,7 @@ The inverse function theorem is an extremely important foundational result. It c
 
 The proof will require an extremely lengthy discussion. For the time being, let us content ourselves with thinking about the statement of the theorem. 
 
-First off, the statement invites comparison with the single variable version we established in  \cref{inverse-function-theorem-single}. If $U$ is an open subset of $\R$, then $f : U \to \R$ is \'etale if and only if it is differentiable and $f'(x)$ never vanishes, so the hypotheses of the theorem above and the single variable version match up exactly. The multivariable version above asserts that $f$ must be open and ``locally injective.'' On the other hand, the single variable version asserts that $f$ is strictly monotone; and we've seen that strict monotonicity implies that $f$ is open and injective (cf. \cref{strictly-monotone-iff-injective,strictly-monotone-implies-open}). The assertion on the differentiability of the inverse and the formula for the derivative of the inverse match up exactly.  
+First off, the statement invites comparison with the single variable version we established in  \cref{inverse-function-theorem-single}. If $I$ is an open interval in $\R$, then $f : I \to \R$ is \'etale if and only if it is differentiable and $f'(x)$ never vanishes, so the hypotheses of the theorem above and the single variable version match up exactly. The multivariable version above asserts that $f$ must be open and ``locally injective.'' On the other hand, the single variable version asserts that $f$ is strictly monotone; and we've seen that strict monotonicity implies that $f$ is open and injective (cf. \cref{strictly-monotone-iff-injective,strictly-monotone-implies-open}). The assertion on the differentiability of the inverse and the formula for the derivative of the inverse match up exactly.  
 
 Thus, the single variable version is a stronger statement (when it applies) because it guarantees full injectivity everywhere on the domain, whereas the multivariable version above only guarantees ``local injectivity'' near every point of the domain. This is the only difference between the two statements, and here is an example to show that we cannot expect full injectivity in the multivariable setting.  
 
@@ -1253,8 +1227,8 @@ Suppose $b \in B(0, r/3)$. Let $\nu : \R^m \to \R$ be the differentiable functio
 Since $\overline{B}(0,r)$ is compact, this function must attain its minimum at a point $a \in \overline{B}(0,r)$. We will show that $a \in B(0,r)$ and that $f(a) = b$, thus proving \cref{inverse-function-theorem-locally-surjective}. 
 
 First of all, we must have $a \in B(0,r)$. Suppose for a contradiction that $|a| = r$. Then by \cref{inverse-function-theorem-eqn1} we would have
-\[ r/2 \geq |f(a)-a| \geq ||a| - |f(a)|| = r - |f(a)| > 2r/3, \]
-which is evidently contradiction. In other words, we have proved that $a$ is an interior point of the domain of $\sigma$. 
+\[ r/2 \geq |f(a)-a| \geq |a| - |f(a)| = r - |f(a)| > 2r/3, \]
+where we've used the reverse triangle inequality for the second step. This is evidently contradiction, since $r/2 < 2r/3$. In other words, we have proved that $a$ is an interior point of the domain of $\sigma$. 
 
 Now we prove that $f(a) = b$. The chain rule \ref{chain-rule} tells us that 
 \[ d\sigma_{a} = d\nu_{f(a)-b} \circ df_{a}. \]
@@ -1275,33 +1249,39 @@ Proving local injectivity in general is very challenging, but is a bit easier if
 Suppose we have $a_1 < a_2$ such that $f(a_1) = f(a_2)$. We'll prove that this leads to a contradiction using two different but very similar arguments. The first argument is very quick. The mean value theorem guarantees that there exists $\xi$ between $a_1$ and $a_2$ such that $f'(\xi) = 0$, which contradicts our assumption that $f$ is \'etale. 
 
 The second argument is a little less quick, but in the end it's very similar to the first argument; the main reason for including it here is that it's somewhat similar in spirit to the general proof. The idea is to set $b := f(a_1) = f(a_2)$ and consider the function \[ \sigma(x) = (f(x)-b)^2. \]
-Since $\sigma$ is a continuous function on the compact interval $[a_1, a_2]$, the extreme value theorem guarantees that it attains its maximum at some point $\xi \in [a_1, a_2]$. Observe that $\sigma(a_1) = \sigma(a_2) = 0$ and that $\sigma \geq 0$. If the maximum occurred at one of the endpoints, then $\sigma = 0$ constantly, so $f$ is constantly equal to $b$, which means the derivative vanishes on $(a_1, a_2)$ by \cref{constant-iff-derivative-zero}, contradicting our assumption that $f$ is \'etale. Thus $\xi$ is an interior point of the interval $(a_1, a_2)$. Then the interior extremum theorem \ref{interior-extremum} plus the chain rule tells us that
+Since $\sigma$ is a continuous function on the compact interval $[a_1, a_2]$, the extreme value theorem guarantees that it attains its maximum at some point $\xi \in [a_1, a_2]$. Observe that $\sigma(a_1) = \sigma(a_2) = 0$ and that $\sigma \geq 0$. If the maximum $\xi$ occurred at one of the endpoints, then $\sigma = 0$ constantly, so $f$ is constantly equal to $b$, which means the derivative vanishes on $(a_1, a_2)$ by \cref{constant-iff-derivative-zero}, contradicting our assumption that $f$ is \'etale. Thus $\xi$ is an interior point of the interval $(a_1, a_2)$. Then the interior extremum theorem \ref{interior-extremum} plus the chain rule tells us that
 \[ 0 = \sigma'(\xi) = 2f'(\xi),  \]
-which again contradicts our assumption that $f$ is \'etale. 
+which means that $f'(\xi) = 0$, again contradicting our assumption that $f$ is \'etale. 
 
 \mbox{}
 
-\noindent \textit{Assuming continuous differentiability.} We haven't formally defined it yet, but $f$ is said to be ``continuously differentiable'' if all of the partial derivatives of the component functions $\partial_i f_j$ are continuous (cf. \cref{continuously-differentiable-definition}). The proof that $f$ is locally injective at 0 is a little easier if we assume that $f$ is continuously differentiable, but still a little tricky. The proof here is essentially the one from \cite[chapter 2]{spivak_calculus}.
+\noindent \textit{Assuming continuous differentiability.} We haven't formally defined it yet, but $f$ is said to be ``continuously differentiable'' if all of the partial derivatives of the component functions $\partial_i f_j$ are continuous (cf. \cref{continuously-differentiable-definition}). The proof that $f$ is locally injective at 0 is a little easier if we assume that $f$ is continuously differentiable, but still a little tricky. The proof here is essentially the one from \cite[chapter 2]{spivak_calculus}. 
 
 Since $df_0 = \id$, we know that $\partial_i f_j(0) = \delta_{i,j}$. Since $\partial_i f_j$ is continuous at 0, there exists $\delta > 0$ such that 
 \[ |\partial_i f_j(0) - \partial_i f_j(x)| = |\delta_{i,j} - \partial_i f_j(x)| \leq \frac{1}{2n}. \]
-Let $V = B(0,\delta)$. The claim is that $f|_V$ is injective. 
+Let $V = B(0,\delta)$. We will show that $f|_V$ is injective. 
 
-Let $g(x) = x - f(x)$, and observe that $\partial_i g_j(x) = \delta_{i,j} - \partial_i f_j(x)$, so we have 
-\[ \|g'(x)\|_\mx = \max_{i,j} |\partial_i g_j(x)| \leq \frac{1}{2n} \]
-for all $x \in V$. Using \cref{operator-and-matrix-norms}, we see that $\|dg_x\| \leq 1/2$ for all $x \in V$, so \cref{bounded-derivative-multi} tells us that 
+Let $g(x) = x - f(x)$. It turns out that it is sufficient to prove that $\|dg_x\| \leq 1/2$ for all $x \in V$. Indeed, if we can prove this, then \cref{bounded-derivative-multi} would tell us that 
 \[ |g(x_1) - g(x_2)| \leq \frac{1}{2} |x_1 - x_2| \]
 for all $x_1, x_2 \in V$. But
 \[ |g(x_1) - g(x_2)| = |(x_1 - f(x_1)) - (x_2 - f(x_2))| \geq |x_1 - x_2| - |f(x_1) - f(x_2)| \]
-by the reverse triangle inequality. Thus we have the following inequalities. 
+by the reverse triangle inequality. This leads to the following. 
 \[ \begin{aligned} |x_1 - x_2| - |f(x_1) - f(x_2)| &\leq \frac{1}{2} |x_1 - x_2| \\
 \frac{1}{2}|x_1 - x_2| &\leq |f(x_1) - f(x_2)| \\
 |x_1 - x_2| &\leq 2|f(x_1) - f(x_2)| \end{aligned} \]
 This shows that $f(x_1) = f(x_2)$ if and only if $x_1 = x_2$, or, in other words, that $f|_V$ is injective. 
 
+We'll prove that $\|df_x\| \leq 1/2$ only for the max norm (and, correspondingly, the max operator norm). Observe that $\partial_i g_j(x) = \delta_{i,j} - \partial_i f_j(x)$, so we have 
+\[ |g'(x)|_\infty = \max_{i,j} |\partial_i g_j(x)| \leq \frac{1}{2n} \]
+for all $x \in V$. Using \cref{max-matrix-norm-and-max-operator-norm}, we see that $\|dg_x\|_\infty \leq 1/2$ for all $x \in V$. 
+
+\begin{unimportantremark}
+	It is also true that $\|dg_x\|_2 \leq 1/2$. To prove this, we would use the fact that $\|\ell\|_2 \leq \sqrt{mn}|A|_\infty$ when $A$ is the standard matrix representation of a linear map $\ell : \R^m \to  \R^n$ (cf. \cite[section 2.3.2]{golub}), instead of \cref{max-matrix-norm-and-max-operator-norm}. In any case, we didn't prove \cref{bounded-derivative-multi} for the eucldiean norm situation, so perhaps its better to stick with the max norm here anyway. 
+\end{unimportantremark}
+
 \subsubsection*{Local injectivity}
 	
-{\color{blue} Incomplete. I'll write this up eventually. Meanwhile, if you're really curious, look at \href{https://terrytao.wordpress.com/2011/09/12/the-inverse-function-theorem-for-everywhere-differentiable-maps/#more-5298}{Terry Tao's blog post}.}
+{\color{blue} Incomplete. I'll write this up eventually. The continuously differentiable case we proved above is really sufficient almost all of the time (and is all we'll use as we go forward), but if you're really curious about the general case, look at \href{https://terrytao.wordpress.com/2011/09/12/the-inverse-function-theorem-for-everywhere-differentiable-maps/#more-5298}{Terry Tao's blog post}.}
 % TODO: Local injecticity for inverse function theorem
 
 \section{\texorpdfstring{$C^k$}{Ck} hierarchy}
@@ -1331,7 +1311,7 @@ The following theorem is the promised sort-of-converse to \cref{differentiable-i
 	which implies that $f$ is differentiable at $a$ and that $df_a = \ell$. In other words, we will show that, for any $\epsilon > 0$, there exists a $\delta > 0$ such that, for all $h \in \R^m$ with $|h| < \delta$, we have
 	\begin{equation} \label{continuous-differentiability-desired} |f(a+h) - f(a) - \ell(h)| \leq |h|\epsilon. \end{equation}
 	
-	Let $\delta_0 > 0$ be small enough that the open ball $B(a, \delta_0)$ is contained in $U$. We will soon make it smaller to get inequality \eqref{continuous-differentiability-desired} to hold, but for the moment it is sufficient that $B(a, \delta_0) \subseteq U$. 
+	Let $\delta_0 > 0$ be small enough that $B(a, \delta_0) \subseteq U$. We will soon make it smaller to get inequality \eqref{continuous-differentiability-desired} to hold, but for the moment it is sufficient that $B(a, \delta_0) \subseteq U$. 
 	Suppose $h = (h_1, \dotsc, h_m) \in \R^m$ with $|h| < \delta_0$. Then consider the following vectors in $\R^m$. 
 	\[ \begin{aligned} 
 	a_0 &= a \\
@@ -1340,8 +1320,7 @@ The following theorem is the promised sort-of-converse to \cref{differentiable-i
 	&\enspace \vdots \\
 	a_{m-1} &= a + (h_1, h_2, h_3, \dotsc, h_{m-1}, 0) \\
 	a_m &= (h_1, h_2, h_3, \dotsc, h_{m-1}, h_m) = a + h \end{aligned} \]
-	The vectors $a_0, \dotsc, a_m$ define a sort of ``zigzag path'' from $a$ to $a + h$. See \cref{continuous-differentiability-picture}. 
-	Clearly $|h_i| \leq |h|$ for all $i$. 
+	The vectors $a_0, \dotsc, a_m$ define a sort of ``zigzag path'' from $a$ to $a + h$. See \cref{continuous-differentiability-picture}. Clearly $a_i \in B(a, \delta_0)$ for all $i = 1, \dotsc, m$. 
 	\begin{figure}
 		\begin{center}
 			\begin{tikzpicture}
@@ -1357,23 +1336,25 @@ The following theorem is the promised sort-of-converse to \cref{differentiable-i
 			axis equal,
 			width=0.75\textwidth
 			]
-			\addplot[black,dotted,-] expression[name path=a,domain=0.5:2.5,samples=100]{1.5+sqrt(1-(x-1.5)^2)}; 
-			\addplot[black,dotted,-] expression[name path=b,domain=0.5:2.5,samples=100]{1.5-sqrt(1-(x-1.5)^2)}; 
+			\addplot[black,dotted,-] expression[name path=a,domain=0.5:2.5,samples=100]{2.5}; 
+			\addplot[black,dotted,-] expression[name path=b,domain=0.5:2.5,samples=100]{0.5}; 
 			\addplot[fill=gray, fill opacity=0.05
 			]
 			fill between[of=a and b,soft clip={domain=0.5:2.5}];
+			\addplot +[mark=none,black,dotted] coordinates {(0.5, 0.5) (0.5, 2.5)};
+			\addplot +[mark=none,black,dotted] coordinates {(2.5, 0.5) (2.5, 2.5)};
 			
 			
 			\node[label={235:$a$},color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:1.5,1.5) {}; 
-			\node[label={45:$a+h$},color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:2.3,1.9) {}; 
-			\node[label={315:$a_1$},color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:2.3,1.5) {};
+			\node[label={90:$a+h$},color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:2.2,1.9) {}; 
+			\node[label={315:$a_1$},color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:2.2,1.5) {};
 			
-			\addplot[black,-] expression[domain=1.5:2.3,samples=2]{1.5};
-			\addplot +[mark=none,black] coordinates {(2.3, 1.5) (2.3, 1.9)};
+			\addplot[black,-] expression[domain=1.5:2.2,samples=2]{1.5};
+			\addplot +[mark=none,black,solid] coordinates {(2.2, 1.5) (2.2, 1.9)};
 			\end{axis}
 			\end{tikzpicture}
 		\end{center}
-		\caption{This is a picture of an open ball of some radius $\delta_0$ around a point $a \in \R^2$. The vector $h \in \R^2$ has $|h| < \delta$, so that $a+h$ is a point inside this ball. Defining $a_1$ as in the proof of \cref{continuous-partials}, the vector $a_1$ is also inside this ball. Then, defining $\xi_1$ and $\xi_2$ as in the proof, the point $a + \xi_1e_1$ is somewhere along the horizontal line joining $a$ and $a+h_1$, and the point $a+h_1 + \xi_2e_2$ is somewhere on the vertical line joining $a+h_1$ and $a+h$.}  \label{continuous-differentiability-picture}
+		\caption{A picture of $a, a_1$ and $a_2 = a + h$, as defined in the proof of \cref{continuous-partials}. Defining $\xi_1$ and $\xi_2$ using the mean value theorem as in the proof, the point $a + \xi_1e_1$ is somewhere along the horizontal line joining $a$ and $a+h_1$, and the point $a+h_1 + \xi_2e_2$ is somewhere on the vertical line joining $a+h_1$ and $a+h$.}  \label{continuous-differentiability-picture}
 	\end{figure}
 	
 	Notice that 
@@ -1392,9 +1373,13 @@ The following theorem is the promised sort-of-converse to \cref{differentiable-i
 	Since $\partial_if$ is continuous at $a$, there exists $\delta_i > 0$ such that $|\partial_i(a+k) - \partial_i(a)| < \epsilon/m$ for all $|k| < \delta_i$. Let $\delta = \min\{\delta_0, \delta_1, \dotsc, \delta_m\}$. If $|h| < \delta$, then 
 	\[ |\partial_i(a_{i-1} + \xi_ie_i) - \partial_i f(a)| < \epsilon/m, \]
 	which means that
-	\[ |f(a+h) - f(a)-\ell(h)| \leq \sum_{i = 1}^m \frac{|\xi_i| \epsilon}{m} \leq |h|_\mx \epsilon \leq |h|\epsilon, \]
-	where we use the fact that $|\xi_i| \leq |h_i|$ for all $i$ for the second step, and  \cref{max-l2} for the final step. This proves that $f$ is differentiable at $a$. 
+	\[ |f(a+h) - f(a)-\ell(h)| \leq \sum_{i = 1}^m \frac{|\xi_i| \epsilon}{m} = \frac{\epsilon}{m} \sum_{i = 1}^m |\xi_i| \leq |h| \epsilon , \]
+	where we use the fact that $|\xi_i| \leq |h_i|$ for all $i$ for the final step. 
 \end{proof}
+
+\begin{unimportantremark}
+	If you're using the euclidean norm, you'll have to apply \cref{max-euclidean} for the final step of the proof above. This is another example of why the max norm is often easier to deal with. 
+\end{unimportantremark}
 
 \subsubsection*{Continuous differentiability}
 
@@ -1444,18 +1429,18 @@ Here is a multivariable version of the differentiable-but-not-continuously-diffe
 
 \subsubsection*{Continuous differentiability and continuity of the derivative \starred}
 
-For this section, we will need to make substantial use of the continuity properties of the operator norm.\index{operator norm} This might make it a bit challenging for those who have not used the operator norm before, but the results contained in this section are also not terribly important. The only reason this section is included is because \cref{continuously-differentiable} is aesthetically a rather satisfying statement which can sometimes streamline proofs. 
+For this section, we will need to make substantial use of the continuity properties of the operator norm. But it's also not terribly important. The main result of this section, \cref{continuously-differentiable}, is aesthetically rather satisfying, and can occasionally streamline proofs. 
 
 \begin{lemma} \label{continuously-differentiable-by-components}
-	Suppose $f : U \to \R^n$ is differentiable. Then $df : U \to \mathscr{L}(\R^m, \R^n)$ is continuous if and only if $df_j : \mathscr{L}(\R^m, \R)$ is continuous for all $j = 1, \dotsc, n$. 
+	Suppose $f : U \to \R^n$ is differentiable. Then $df : U \to \mathscr{L}(\R^m, \R^n)$ is continuous if and only if $df_j : U \to \mathscr{L}(\R^m, \R)$ is continuous for all $j = 1, \dotsc, n$. 
 \end{lemma}
 
 \begin{proof}
 	We will use \cref{differentiable-by-components}, which tells us that $f$ is differentiable if and only if $f_j$ is differentiable for all $j = 1, \dotsc, n$, and moreover that $df_{j,a} = \pi_j \circ df_a$ for all $a \in U$. In other words, the following diagram commutes. 
 	\[ \begin{tikzcd} U \ar{r}{df} \ar[bend right]{dr}[swap]{df_j} & \mathscr{L}(\R^m, \R^n) \ar{d}{\pi_j \circ -} \\ & \mathscr{L}(\R^m, \R) \end{tikzcd} \]
-	You will verify in \cref{continuously-differentiable-by-components-exercise} below that the map ``postcompose with $\pi_j$'' map $\pi_j \circ - : \mathscr{L}(\R^m, \R^n) \to \mathscr{L}(\R^m, \R)$ is continuous. Thus, if $df$ is continuous, then $df_j$ is also continuous at $a$. 
+	You will verify in \cref{continuously-differentiable-by-components-exercise} below that the map ``postcompose with $\pi_j$'' map $\pi_j \circ - : \mathscr{L}(\R^m, \R^n) \to \mathscr{L}(\R^m, \R)$ is continuous. Thus, if $df$ is continuous, then $df_j$ is also continuous. 
 	
-	Conversely, suppose that $df_j$ is continuous at $a$ for all $j$. Let us show that $df$ is continuous at $a$. Suppose $\epsilon > 0$. Since $df_j$ is continuous, there exists $\delta_j > 0$ such that \[ \|df_{j,x} - df_{j,a}\| < \frac{\epsilon}{\sqrt{n}} \] for all $x \in U$ such that $|x - a| < \delta_j$. Let $\delta := \min\{\delta_1, \dotsc, \delta_n\}$. Then $\|df_x - df_a\| < \epsilon$ for all $x \in U$ such that $|x-a| < \delta$, as you will verify in \cref{continuously-differentiable-by-components-exercise} below. 
+	Conversely, suppose that $df_j$ is continuous for all $j$. Let us show that $df$ is continuous at any $a \in U$. Suppose $\epsilon > 0$. Since $df_j$ is continuous at $a$, there exists $\delta_j > 0$ such that \[ \|df_{j,x} - df_{j,a}\| < \frac{\epsilon}{\sqrt{n}} \] for all $x \in U$ such that $|x - a| < \delta_j$. Let $\delta := \min\{\delta_1, \dotsc, \delta_n\}$. Then $\|df_x - df_a\| < \epsilon$ for all $x \in U$ such that $|x-a| < \delta$, as you will verify in \cref{continuously-differentiable-by-components-exercise} below. 
 \end{proof}
 
 \begin{exercise} \label{continuously-differentiable-by-components-exercise}
@@ -1723,8 +1708,7 @@ While the notation is compact and aesthetically pleasing, there's a lot of infor
 	and we want to prove that this is ``small.'' Notice that 
 	\[ \frac{|f(a+h) - p_k(h)|}{|h|^k} \leq \sum_{|\alpha| = k} \frac{|\partial^\alpha f(\xi) - \partial^\alpha f(a)| \cdot |h^\alpha|}{\alpha! |h|^k} \leq \sum_{|\alpha| = k} \frac{|\partial^\alpha f(\xi) - \partial^\alpha f(a)|}{\alpha!}. \]
 	Here the first inequality is just the triangle inequality, and the second inequality is because 
-	\[ |h^\alpha| = |h_1^{\alpha_1} \dotsb h_m^{\alpha_m}| \leq |h|_\mx^k \leq |h|^k, \]
-	where we have used \cref{max-l2} for the final step. 
+	\[ |h^\alpha| = |h_1^{\alpha_1} \dotsb h_m^{\alpha_m}| \leq |h|^k. \]
 	
 	Choose $\epsilon > 0$. Since $f$ is $C^k$, we know that $\partial^\alpha f$, and therefore also $\partial^\alpha/\alpha!$, is continuous for all multi-indices $\alpha$ such that $|\alpha| = k$. There are only finitely many such multi-indices, so there exists a $\delta > 0$ such that 
 	\[ \sum_{|\alpha| = k} \frac{|\partial^\alpha f(x) - \partial^\alpha f(a)|}{\alpha!} < \epsilon \]
@@ -1790,7 +1774,11 @@ Recall the definition of support in \cref{support}. Just like in the single vari
 	\end{itemize}
 \end{definition}
 
-For example, if $a, b \in \R^m$, we have seen the straight line path $\gamma(t) = (1-t)a + tb$ which starts at $a$ and ends at $b$ several times (eg, the proof of \cref{constant-iff-derivative-zero}). It is smooth. 
+We met straight line paths between any two points of $\R^m$ in \cref{straight-line-path}, and then in \cref{convex}, we defined a subset $S \subseteq \R^m$ to be convex by requiring that all straight line paths between pairs of points of $S$ are inside $S$. 
+
+\begin{exercise}
+	Check that the straight line path between any two points in $\R^m$ is smooth. 
+\end{exercise} 
 
 \begin{exercise}[Slowing down smooth paths] \label{slowing-down-paths}
 	Suppose $\gamma$ is a smooth path in $\R^m$. Show that there exists a smooth path $\gamma_{\text{slow-start}}$ with the same start and end as $\gamma$ and the same image as $\gamma$, such that 

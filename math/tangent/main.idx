@@ -4,22 +4,18 @@
 \indexentry{product!product metric|hyperpage}{12}
 \indexentry{product!product metric|hyperpage}{12}
 \indexentry{equivalence!of norms|hyperpage}{12}
-\indexentry{l2 norm@$L^2$ norm|hyperpage}{13}
 \indexentry{max norm|hyperpage}{13}
 \indexentry{linfinity norm@$L^\infty$ norm|hyperindexformat{\see {max norm}}}{13}
-\indexentry{cauchy schwarz inequality@Cauchy-Schwarz inequality|hyperpage}{13}
-\indexentry{equivalence!of norms|hyperpage}{14}
+\indexentry{l2 norm@$L^2$ norm|hyperpage}{13}
+\indexentry{equivalence!of norms|hyperpage}{13}
 \indexentry{euclidean space|hyperpage}{15}
 \indexentry{standard basis|hyperpage}{15}
 \indexentry{projection map|hyperpage}{15}
-\indexentry{l2 norm@$L^2$ norm|hyperpage}{16}
-\indexentry{euclidean norm|hyperindexformat{\see {l2 norm@$L^2$ norm}}}{16}
-\indexentry{max norm|hyperpage}{16}
 \indexentry{mnm@$\mathscr{M}_{n \times m}$|hyperpage}{16}
 \indexentry{gln@$\GL_n$|hyperpage}{16}
 \indexentry{rank!of a matrix|hyperpage}{16}
-\indexentry{lvw@$\mathscr{L}(V,W)$|hyperpage}{17}
-\indexentry{glv@$\GL(V)$|hyperpage}{17}
+\indexentry{lvw@$\mathscr{L}(V,W)$|hyperpage}{16}
+\indexentry{glv@$\GL(V)$|hyperpage}{16}
 \indexentry{representation!of a vector|hyperpage}{17}
 \indexentry{representation!of a linear map|hyperpage}{17}
 \indexentry{rank!of a linear map|hyperpage}{18}
@@ -35,35 +31,34 @@
 \indexentry{adjugate matrix|hyperpage}{19}
 \indexentry{minor|hyperpage}{19}
 \indexentry{minor|hyperpage}{19}
-\indexentry{operator norm|hyperpage}{20}
+\indexentry{operator norm|hyperpage}{19}
 \indexentry{submultiplicativity|hyperpage}{21}
-\indexentry{product!product metric|hyperpage}{22}
-\indexentry{representation!standard matrix representation|hyperpage}{22}
-\indexentry{homeomorphism|hyperpage}{22}
-\indexentry{homeomorphism|hyperpage}{22}
-\indexentry{homeomorphism|hyperpage}{22}
-\indexentry{glv@$\GL(V)$|hyperpage}{22}
-\indexentry{topology|hyperpage}{23}
-\indexentry{topological space|hyperpage}{23}
-\indexentry{open!open subset|hyperpage}{23}
-\indexentry{canonical topology|hyperpage}{23}
-\indexentry{subspace|hyperpage}{24}
-\indexentry{subspace!subspace topology|hyperpage}{24}
-\indexentry{product!product topology|hyperpage}{24}
-\indexentry{quotient space|hyperpage}{24}
-\indexentry{continuous|hyperpage}{24}
-\indexentry{canonical topology|hyperpage}{25}
-\indexentry{canonical topology|hyperpage}{25}
-\indexentry{canonical topology|hyperpage}{25}
-\indexentry{open!open map|hyperpage}{26}
-\indexentry{homeomorphism|hyperpage}{26}
-\indexentry{homeomorphism!homeomorphism onto its image|hyperpage}{26}
-\indexentry{hausdorff@Hausdorff|hyperpage}{26}
-\indexentry{open cover|hyperpage}{27}
-\indexentry{open cover!subcover|hyperpage}{27}
-\indexentry{subcover|hyperindexformat{\see {open cover, subcover}}}{27}
-\indexentry{compact|hyperpage}{27}
-\indexentry{sigma compact@$\sigma$-compact|hyperpage}{27}
+\indexentry{product!product metric|hyperpage}{23}
+\indexentry{homeomorphism|hyperpage}{23}
+\indexentry{homeomorphism|hyperpage}{23}
+\indexentry{homeomorphism|hyperpage}{23}
+\indexentry{glv@$\GL(V)$|hyperpage}{23}
+\indexentry{topology|hyperpage}{24}
+\indexentry{topological space|hyperpage}{24}
+\indexentry{open!open subset|hyperpage}{24}
+\indexentry{canonical topology|hyperpage}{24}
+\indexentry{subspace|hyperpage}{25}
+\indexentry{subspace!subspace topology|hyperpage}{25}
+\indexentry{product!product topology|hyperpage}{25}
+\indexentry{quotient space|hyperpage}{25}
+\indexentry{continuous|hyperpage}{26}
+\indexentry{canonical topology|hyperpage}{26}
+\indexentry{canonical topology|hyperpage}{26}
+\indexentry{canonical topology|hyperpage}{26}
+\indexentry{open!open map|hyperpage}{27}
+\indexentry{homeomorphism|hyperpage}{27}
+\indexentry{homeomorphism!homeomorphism onto its image|hyperpage}{27}
+\indexentry{hausdorff@Hausdorff|hyperpage}{28}
+\indexentry{open cover|hyperpage}{28}
+\indexentry{open cover!subcover|hyperpage}{28}
+\indexentry{subcover|hyperindexformat{\see {open cover, subcover}}}{28}
+\indexentry{compact|hyperpage}{28}
+\indexentry{sigma compact@$\sigma$-compact|hyperpage}{28}
 \indexentry{difference quotient|hyperpage}{29}
 \indexentry{differentiable!differentiable at a point|hyperpage}{30}
 \indexentry{derivative!derivative at a point|hyperpage}{30}
@@ -180,19 +175,18 @@
 \indexentry{critical point|hyperpage}{99}
 \indexentry{differentiable|hyperpage}{101}
 \indexentry{derivative|hyperpage}{101}
-\indexentry{constant function|hyperpage}{101}
+\indexentry{constant function|hyperpage}{102}
 \indexentry{connected|hyperpage}{103}
-\indexentry{mean value theorem|hyperpage}{113}
 \indexentry{mean value theorem|hyperpage}{115}
-\indexentry{continuously differentiable|hyperpage}{115}
-\indexentry{operator norm|hyperpage}{117}
+\indexentry{mean value theorem|hyperpage}{115}
+\indexentry{continuously differentiable|hyperpage}{116}
 \indexentry{ck@$C^k$|hyperpage}{119}
 \indexentry{mixed partials|hyperpage}{120}
 \indexentry{mixed partials!equality of mixed partials|hyperpage}{120}
 \indexentry{mean value theorem|hyperpage}{121}
 \indexentry{mean value theorem|hyperpage}{121}
-\indexentry{hessian|hyperpage}{121}
-\indexentry{multi-index|hyperpage}{122}
+\indexentry{hessian|hyperpage}{122}
+\indexentry{multi-index|hyperpage}{123}
 \indexentry{multinomial|hyperpage}{124}
 \indexentry{smooth|hyperpage}{129}
 \indexentry{bump function|hyperpage}{129}

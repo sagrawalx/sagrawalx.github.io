@@ -117,7 +117,7 @@ Quiz 1 (in class). Covers through 1.3.
 <td rowspan="2">Mon</td>
 <td>Multivariable: Definitions</td>
 <td>Read: 2.1–2   
-Do: <!--3, 6, 7, 9--> </td>
+Do: 5, 6, 7, 9</td>
 <td>  
 </td>
 </tr>
