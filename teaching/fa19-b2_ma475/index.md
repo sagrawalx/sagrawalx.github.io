@@ -52,7 +52,7 @@ Office hours (1–2pm).
 <td rowspan="2">Tue</td>
 <td>Single variable: Definitions</td>
 <td>Read: 1.1 (and 0.1)
-Do: 3, 4, 15</td>
+Do: 3, 4, 16</td>
 <td></td>
 </tr>
 

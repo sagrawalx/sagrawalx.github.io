@@ -231,10 +231,18 @@ so the standard matrix representation $[df_a]$ (cf. \cref{matrix-representation-
 Consider the function $\epsilon : \R^2 \to \R$ defined by
 \[ (h,k) \mapsto |f(a+(h,k))-f(a)-df_a(h,k)|.  \]
 Then
-\[ \epsilon(h,k) = |(2+h)^2 + (1+k)^2 - 5 - 4h - 2k| = |h^2 + k^2| = |(h,k)|^2. \]
-Notice that $\epsilon$ gets small rapidly as $(h,k) \to 0$. More precisely, notice that
-\[ \lim_{(h,k) \to 0} \frac{\epsilon(h,k)}{|(h,k)|} = \lim_{(h,k) \to 0} |(h,k)| = 0, \]
-so $\epsilon(h,k) = o(|(h,k)|)$ as $(h,k) \to 0$. Since $\epsilon$ gets small rapidly, we can say that the function $(h,k) \mapsto f(a) + df_a(h,k)$ is a good approximation of the function $(h,k) \mapsto f(a+(h,k))$ for small vectors $(h,k)$. Said differently, letting $x = a + (h,k)$, the function $x \mapsto f(a) + df_a(x-a)$ is a good approximation of $f$ near $a$. 
+\[ \epsilon(h,k) = |(2+h)^2 + (1+k)^2 - 5 - 4h - 2k| = h^2 + k^2. \]
+Notice that $\epsilon$ gets small rapidly as $(h,k) \to 0$. More precisely, the claim is that
+\[ \lim_{(h,k) \to 0} \frac{\epsilon(h,k)}{|(h,k)|} = 0, \]
+ie, that $\epsilon(h,k) = o(|(h,k)|)$ as $(h,k) \to 0$. 
+
+In fact, for the claim, it doesn't matter whether $|(h,k)|$ denotes the euclidean norm $|(h,k)|_2 = \sqrt{h^2 + k^2}$ or the max norm $|(h,k)|_\mx = \max\{|h|, |k|\}$. If it's the euclidean norm, we have
+\[ \lim_{(h,k) \to 0} \frac{\epsilon(h,k)}{|(h,k)|_2} = \lim_{(h,k) \to 0} = \frac{h^2 + k^2}{\sqrt{h^2 + k^2}} = \lim_{(h,k) \to 0} \sqrt{h^2 + k^2} = 0. \]
+If instead it's the max norm, observe that
+\[ \frac{\epsilon(h,k)}{|(h,k)|_\mx} = \frac{h^2 + k^2}{|(h,k)|_\mx} \leq \frac{2(|(h,k)|_\mx)^2}{|(h,k)|_\mx} = 2|(h,k)|_\mx \]
+so taking the limit as $(h,k) \to 0$ and applying the squeeze theorem yields the same result. 
+
+Since $\epsilon$ gets small rapidly, we can say that the function $(h,k) \mapsto f(a) + df_a(h,k)$ is a good approximation of the function $(h,k) \mapsto f(a+(h,k))$ for small vectors $(h,k)$. Said differently, letting $x = a + (h,k)$, the function $x \mapsto f(a) + df_a(x-a)$ is a good approximation of $f$ near $a$. 
 
 \subsection*{Overview}
 
@@ -242,7 +250,9 @@ In what follows, we will turn the above example on its head and \emph{define} th
 
 This might seem a bit ``backwards'' given our analysis of the example above, but there is a good reason for doing this; it turns out that there are some bizarre functions where partial derivatives make sense, but tangent planes do not (cf. \cref{partials-dont-imply-differentiable,directionals-dont-imply-differentiable}).
 
-As you may be able to tell, we'll be using linear algebra heavily in this chapter. We'll also need some facts about the operator norm; I encourage you to at least skim through \cref{operator-norm-basic} before proceeding. 
+We'll be using a lot of linear algebra in this chapter. The notation $|-|$ will denote a norm on $\R^n$. For the most part, it won't matter whether it's the euclidean norm $|h|_2 = \sqrt{h_1^2 + \dotsb + h_2^2}$ or the max norm $|h|_\mx = \max\{|h_1|, \dotsc, |h_n|\}$. You can choose whichever one you like better. If it makes a difference which norm on $\R^n$ we have in mind, we'll explicitly write either $|-|_2$ or $|-|_\mx$. 
+
+We'll also need some facts about the operator norm; I encourage you to at least skim through \cref{operator-norm-basic} before proceeding. 
 
 \section{Definition of the derivative}
 
@@ -273,7 +283,7 @@ It turns out that there exists at most one linear map that has the above propert
 	Look at the exercises from \cref{prelims} that are invoked in the proof above (namely, \cref{less-than-small-is-small,little-o-vector-space,operator-norm-is-norm}) and do any of them that you haven't already done.
 \end{exercise}
 
-\Cref{differential-unique} guarantees that the following definition makes sense.  
+\Cref{differential-unique} tells us that the following definition makes sense.  
 
 \begin{definition}[Derivative at a point] \index{derivative!derivative at a point} \index{total derivative|see {derivative}} \index{differential|see {derivative}}
 	Suppose $f : S \to \R^n$ is differentiable at an interior point $a \in S$. Then the \emph{total derivative of $f$ at $a$}, denoted $df_a$, is the unique linear map $\R^m \to \R^n$ satisfying
@@ -288,7 +298,7 @@ We've now defined the derivative, but it's fairly difficult to use this definiti
 \end{exercise}
 
 \begin{exercise} \label{derivative-of-multiplication}
-	Let $\mu : \R^2 \to \R$ be the multiplication map $\mu(x, y) = xy$. Use the definition of the derivative to prove that
+	Let $\mu : \R^2 \to \R$ be the multiplication map $\mu(x, y) = xy$. Prove that
 	\[ d\mu_{(a,b)}(h, k) = bh + ak \]
 	for all $(a,b) \in \R^2$ and $(h,k) \in \R^2$. 
 \end{exercise}
@@ -1041,29 +1051,34 @@ In fact, it's not necessary that the domain be an open ball in order for the con
 
 \footnotetext{Recall that a metric space $X$ is \emph{connected}\index{connected} if it cannot be written as the union of two disjoint open subsets.}
 
-\subsection{Bounded derivative}
+\subsection{Bounded derivatives}
 
 Here is a multivariable version of \cref{bounded-derivative}. Again, we will actually use the single variable version to prove the multivariable version. 
 
 \begin{proposition} \label{bounded-derivative-multi}
 	Suppose $B$ is an open ball and $f : B \to \R^n$ is a differentiable function. Suppose further that there exists a constant $M$ such that $\|df_x\| \leq M$ for all $x \in B$. Then
-	\[ |f(b) - f(a)| \leq \sqrt{n} M |b-a| \]
+	\[ |f(b) - f(a)| \leq M |b-a| \]
 	for all $a, b \in B$. 
 \end{proposition}
 
 \begin{proof}
-	Let us suppose first that $n = 1$. If $a = b$, there is nothing to do, so we can assume that $a \neq b$. Let \[ h = \frac{b-a}{|b-a|}, \]
+	We'll prove this for the situation when $|-|$ denotes the max norm. For the proof when $|-|$ is the euclidean norm, see \cite[theorem 9.19]{rudin}. 
+	
+	Let us suppose first that $n = 1$. If $a = b$, there is nothing to do, so we can assume that $a \neq b$. Let \[ h = \frac{b-a}{|b-a|_\mx}, \]
 	ie, $h$ is the vector pointing from $a$ towards $b$ normalized to unit length. Consider the function $\xi(t) = a + th$ as in \cref{directional-to-single}. Then
 	\[ (f \circ \xi)'(t) = \partial_h f(a + th) = df_{a + th}(h)  \]
 	by \cref{jacobian-matrix}, which means that 
-	\[ |(f \circ \xi)'(t)| = |df_{a + th}(h)| \leq \|df_{a + th}\| |h| \leq M|h| = M, \]
+	\[ |(f \circ \xi)'(t)| = |df_{a + th}(h)| \leq \|df_{a + th}\| |h|_\mx \leq M|h|_\mx = M, \]
 	where we used the fact that $h$ has unit length for the final step. Notice that $\xi(0) = a$ and $\xi(|b-a|) =  b$, so by applying \cref{bounded-derivative} to $f \circ \xi$, we see that 
-	\[ |f(b) - f(a)| \leq M||b-a| - 0| = M|b-a|.  \]
-	This proves the statement for $n = 1$, and using this we can now prove the statement for general $n$. Note that $df_{j,a} = \pi_j \circ df_a$ and $\|\pi_j\| = 1$ so \[ \|df_{j,a}\| \leq \|\pi_j\| \|df_a\| \leq M \]
+	\[ |f(b) - f(a)| \leq M||b-a|_\mx - 0| = M|b-a|_\mx.  \]
+	This proves the statement for $n = 1$, and using this we can now prove the statement for general $n$ (still assuming that $|-|$ is the max norm $|-|_\mx$). Note that $df_{j,a} = \pi_j \circ df_a$ and $\|\pi_j\| = 1$ so \[ \|df_{j,a}\| \leq \|\pi_j\| \|df_a\| \leq M \]
 	by \cref{operator-norm-submultiplicative}. Applying \cref{bounded-derivative-multi} to the component functions $f_j$, so 
 	\[ |f_j(b) - f_j(a)| \leq M|b-a| \]
 	for all $a, b \in B$ and all $j = 1, \dotsc, n$, which means that
-	\[ |f(b) - f(a)|_\mx \leq M|b-a|, \]
+	\[ |f(b) - f(a)| \leq M|b-a|. \]
+	Recall that, so far, $|-|$ denoted the max norm. 
+	
+	
 	where $|-|_\mx$ denotes the max norm (cf.  \cref{euclidean}). But then
 	\[ |f(b)-f(a)| \leq \sqrt{n} |f(b)-f(a)|_\mx \leq \sqrt{n}M |b-a|, \]
 	where we have used \cref{max-l2} for the first step.
@@ -1234,17 +1249,20 @@ Since $f(0) = 0$ and $df_0 = \id$, we have $|f(h) - h| = o(|h|)$ as $h \to 0$ by
 \begin{equation} \label{inverse-function-theorem-eqn1} |f(h)-h| \leq |h|/2 \end{equation}
 for all $|h| < \delta$. Replacing $f$ with the function $x \mapsto f(x/\delta)$, we can assume without loss of generality that $\delta = 1$ (cf. \cref{wlog-inverse-function-theorem}). We now claim that for all $0 < r < 1$, we have
 \begin{equation} \label{inverse-function-theorem-locally-surjective} B(0,r/3) \subseteq f(B(0,r)). \end{equation}
-Suppose $y \in B(0, r/3)$ and consider the function $\sigma : \overline{B}(0,r) \to \R$ given by $\sigma(x) = |f(x)-y|$. Since $\overline{B}(0,r)$ is compact, this function must attain its minimum at a point $x \in \overline{B}(0,r)$. We will show that $f(x) = y$. 
+Suppose $b \in B(0, r/3)$. Let $\nu : \R^m \to \R$ be the differentiable function given by $\nu(x) = x_1^2 + \dotsb x_n^2$ and then consider the function $\sigma : \overline{B}(0,r) \to \R$ given by \[ \sigma(x) = \nu(f(x)-b). \]
+Since $\overline{B}(0,r)$ is compact, this function must attain its minimum at a point $a \in \overline{B}(0,r)$. We will show that $a \in B(0,r)$ and that $f(a) = b$, thus proving \cref{inverse-function-theorem-locally-surjective}. 
 
-In fact, we must have $x \in B(0,r)$. Suppose for a contradiction that $|x| = r$. Then by \cref{inverse-function-theorem-eqn1} we would have
-\[ r/2 \geq |f(x)-x| \geq ||x| - |f(x)|| = r - |f(x)| > 2r/3, \]
-which is evidently contradiction. In other words, $x$ is an interior point of the domain of $\sigma$. 
+First of all, we must have $a \in B(0,r)$. Suppose for a contradiction that $|a| = r$. Then by \cref{inverse-function-theorem-eqn1} we would have
+\[ r/2 \geq |f(a)-a| \geq ||a| - |f(a)|| = r - |f(a)| > 2r/3, \]
+which is evidently contradiction. In other words, we have proved that $a$ is an interior point of the domain of $\sigma$. 
 
-Now we prove that we must have $f(x) = y$. Suppose for a contradiction that $f(x) \neq y$. Then the euclidean norm function $|-| : \R^n \to \R$ is differentiable at $f(x) - y$, which means that $\sigma$ is differentiable at $x$ by the chain rule \cref{chain-rule}, and
-\[ d\sigma_x = d(|-|)_{f(x)-y} \circ df_x. \]
-Since the interior point $x$ is the absolute minimum of $\sigma$, the interior extremum theorem \ref{interior-extremum-directional} and \cref{jacobian-matrix} tell us that $d\sigma_x = 0$, which means that $df_x(\R^n) \subseteq \ker(d(|-|)_{f(x)-y})$. This is a contradiction: since $df_x$ is invertible, we have $\dim df_x(\R^n) = n$, whereas $\dim(\ker(d(|-|)_{f(x)-y})) = n-1$ by the rank-nullity theorem. 
+Now we prove that $f(a) = b$. The chain rule \ref{chain-rule} tells us that 
+\[ d\sigma_{a} = d\nu_{f(a)-b} \circ df_{a}. \]
+Since the interior point $a$ is the absolute minimum of $\sigma$, the interior extremum theorem \ref{interior-extremum-directional} and \cref{jacobian-matrix} tells us that $d\sigma_a = 0$, which means that $df_a(\R^n) \subseteq \ker(d\nu_{f(a)-b})$. Since $df_a$ is invertible, this means that $d\nu_{f(a)-b} = 0$. But we have 
+\[ \nu'(x) = \begin{bmatrix} 2x_1 & 2x_2 & \dotsb & 2x_n \end{bmatrix} \]
+so $d\nu_{f(a) - b} = 0$ if and only if $f(a) - b = 0$. We have now proved \cref{inverse-function-theorem-locally-surjective}. 
 
-We have now proved \cref{inverse-function-theorem-locally-surjective}. Notice that this implies that $f$ is locally surjective at 0. Indeed, any open neighborhood $V$ of 0 contains an open ball of the form $B(0,r)$ for $0 < r < 1$, and then \[ f(V) \supseteq f(B(0,r)) \supseteq B(0,r/3), \] so $f(0) = 0$ is an interior point of $f(V)$. 
+Notice that \cref{inverse-function-theorem-locally-surjective} implies that $f$ is locally surjective at 0. Indeed, any open neighborhood $V$ of 0 contains an open ball of the form $B(0,r)$ for $0 < r < 1$, and then \[ f(V) \supseteq f(B(0,r)) \supseteq B(0,r/3), \] so $f(0) = 0$ is an interior point of $f(V)$. 
 
 \subsubsection*{Local injectivity under assumptions}
 
@@ -1254,9 +1272,12 @@ Proving local injectivity in general is very challenging, but is a bit easier if
 
 \noindent \textit{Assuming $n = 1$.} As we've already noted, we've already proved not just local injectivity but full injectivity when $n = 1$ in \cref{inverse-function-theorem-single}. In any case, it's worth isolating the argument of injectivity and inspecting it closely. 
 
-Suppose we have $x_1 < x_2$ such that $f(x_1) = f(x_2)$. We'll prove that this leads to a contradiction using two different but very similar arguments. The first argument is very quick. The mean value theorem guarantees that there exists $\xi$ between $x_1$ and $x_2$ such that $f'(\xi) = 0$, which contradicts our assumption that $f$ is \'etale. 
+Suppose we have $a_1 < a_2$ such that $f(a_1) = f(a_2)$. We'll prove that this leads to a contradiction using two different but very similar arguments. The first argument is very quick. The mean value theorem guarantees that there exists $\xi$ between $a_1$ and $a_2$ such that $f'(\xi) = 0$, which contradicts our assumption that $f$ is \'etale. 
 
-The second argument is a little less quick, but in the end it's very similar to the first argument; the main reason for including it here is that it's somewhat similar in spirit to the general proof. The idea is to set $y := f(x_1) = f(x_2)$ and consider the function $\sigma(x) = |f(x) - y|$. Since $\sigma$ is a continuous function on the compact interval $[x_1, x_2]$, the extreme value theorem guarantees that it attains its maximum at some point $\xi \in [x_1, x_2]$. If $\sigma(\xi) = 0$, then $\sigma$ is identically zero, which means that $f$ is constantly equal to $y$ on $[x_1, x_2]$, and then \cref{constant-iff-derivative-zero} tells us that we've contradicted our assumption that $f$ is \'etale. Thus $\sigma(\xi) > 0$. But then $\sigma$ is differentiable at $\xi$, so the interior extremum theorem \ref{interior-extremum} guarantees that $\sigma'(\xi) = 0$. The chain rule implies that $f'(\xi) = 0$, again contradicting the assumption that $f$ is \'etale. 
+The second argument is a little less quick, but in the end it's very similar to the first argument; the main reason for including it here is that it's somewhat similar in spirit to the general proof. The idea is to set $b := f(a_1) = f(a_2)$ and consider the function \[ \sigma(x) = (f(x)-b)^2. \]
+Since $\sigma$ is a continuous function on the compact interval $[a_1, a_2]$, the extreme value theorem guarantees that it attains its maximum at some point $\xi \in [a_1, a_2]$. Observe that $\sigma(a_1) = \sigma(a_2) = 0$ and that $\sigma \geq 0$. If the maximum occurred at one of the endpoints, then $\sigma = 0$ constantly, so $f$ is constantly equal to $b$, which means the derivative vanishes on $(a_1, a_2)$ by \cref{constant-iff-derivative-zero}, contradicting our assumption that $f$ is \'etale. Thus $\xi$ is an interior point of the interval $(a_1, a_2)$. Then the interior extremum theorem \ref{interior-extremum} plus the chain rule tells us that
+\[ 0 = \sigma'(\xi) = 2f'(\xi),  \]
+which again contradicts our assumption that $f$ is \'etale. 
 
 \mbox{}
 
