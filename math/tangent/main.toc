@@ -80,7 +80,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.4.A}Continuous differentiability}{60}{subsection.273}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.B}$C^k$ functions}{62}{subsection.280}
+\contentsline {subsection}{\numberline {1.4.B}$C^k$ functions}{61}{subsection.278}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.4.C}Taylor's theorem $\star $}{64}{subsection.290}
 \defcounter {refsection}{0}\relax 

@@ -220,7 +220,7 @@ Do: </td>
 
 <tr>
 <td colspan="3">
-Office hours (1–2pm).  
+Office hours (1:30–2:30pm).  
 </td>
 </tr>
 

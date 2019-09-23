@@ -1129,26 +1129,20 @@ This section is just for fun: we'll discuss many bizarre examples of differentia
 
 We saw in \cref{darboux-section} that the derivative of a differentiable function is always ``close'' to being continuous, though in a slightly bizarre way. Insisting that the derivative actually be continuous is often useful for ruling out pathological behavior. 
 
-\begin{definition} \label{continuously-differentiable-singlevar}
+\begin{definition} \label{continuously-differentiable}
 	Suppose $U$ is an open subset of $\R$ and $f : U \to \R$ is differentiable. If the derivative $f' : U \to \R$ is also continuous, then $f$ is said to be \emph{continuously differentiable}.\index{continuously differentiable} 
 \end{definition}
 
-For example, we saw in \cref{positive-not-monotone} that $f(x) = x + 2x^2\sin(1/x)$ defined a differentiable function $f : \R \to \R$ such that $f'(0) = 0$, but which is not monotone on any interval containing that point. This is rather bizarre behavior, and it cannot happen with continuously differentiable functions. 
+For example, we saw in \cref{positive-not-monotone} that $f(x) = x + 2x^2\sin(1/x)$ defined a differentiable function $f : \R \to \R$ such that $f'(0) \neq 0$, but which is not monotone on any interval containing that point. This is rather bizarre behavior, and it cannot happen with continuously differentiable functions. 
 
 \begin{exercise} \label{nonzero-derivative-at-point-implies-monotone-in-neighborhood}
 	Suppose $f : U \to \R$ is continuously differentiable, and $a \in U$ is a point such that $f'(a) \neq 0$. Show that there exists an open interval containing $a$ on which $f$ is strictly monotone. 
 \end{exercise}
 
-To appreciate the following fact, it's worth noting the following: for any open interval $I$, there exist differentiable functions $f : I \to \R$ such that $f'(x) = 0$ for all $x \in I \cap \Q$, but $f$ is \emph{not} constant! These extremely bizarre functions were first found by Pompeiu \cite{pompeiu}. This pathological behavior is also ruled out by insisting that the derivative be continuous. 
+To appreciate the following fact, it's worth noting the following: there exist \emph{non-constant} differentiable functions $f : U \to \R$ such that $f'(x) = 0$ for all $x \in U \cap \Q$! These extremely bizarre functions were first found by Pompeiu \cite{pompeiu}. This pathological behavior is also ruled out by insisting that the derivative be continuous. 
 
-\begin{exercise} \label{critical-locus-closed-singlevar}
-	Suppose $f : U \to \R$ is continuously differentiable. 
-	\begin{enumerate}[(a)]
-		\item The \emph{critical locus}\index{critical point!critical locus} of $f$ is the set
-		\[ Z = \{ x \in U : f'(x) = 0 \}. \]
-		Show that $Z$ is a closed subset of $U$.
-		\item Conclude that, if $f'(x) = 0$ for all $x \in U \cap \Q$, then $f$ is constant.   
-	\end{enumerate}
+\begin{exercise} \label{critical-dense-implies-constant}
+	Suppose $f : U \to \R$ is continuously differentiable. Show that, if $f'(x) = 0$ for all $x \in U \cap \Q$, then $f$ is constant. 
 \end{exercise}
 
 Unfortunately, insisting that the derivative of a function be continuous does not rule out all possible bizarre behavior. For example, in \cref{extremum-no-sign-change}, we saw that $f(x) = x^4 \left( 2 + \sin(1/x) \right)$ defined a differentiable function $f$ with an absolute minimum at 0, but the derivative doesn't just simply ``change sign'' at 0. In fact, it turns out that function is also continuously differentiable (cf. \cref{extremum-no-sign-change-continued}), so merely insisting on continuous differentiability does not quite manage to rule out that kind of pathological behavior. However, as it turns out, the derivative of $f'$ (called the ``second derivative'' of $f$, and denoted $f''$), turns out \emph{not} to be continuous. 
@@ -1176,16 +1170,22 @@ This leads us to thinking about iterated derivatives.
 First up, let's prove that all reasonable ways of combining functions in a particular differentiability class stays within that differentiability class. 
 
 \begin{exercise} \label{ck-stable-sum-scalar-single}
-	Prove that the set of all $k$ times differentiable functions $U \to \R$ is a vector space. 
+	Prove that the set of all $C^k$ functions $U \to \R$ is a vector space. 
+	\begin{hint}
+		Induct on $k$. 
+	\end{hint}
 \end{exercise}
 
 \begin{exercise} \label{ck-stable-product-single}
-	Suppose that $f, g : U \to \R$ are $C^k$ functions. Prove that the product $fg$ is also $C^k$, and that
-	\[ (fg)^{(k)} = \sum_{i = 0}^k \binom{k}{i} f^{(i)} g^{(k-i)}. \]
+	\begin{enumerate}[(a)]
+		\item Prove that the product of any two $C^k$ functions is also $C^k$. 
+		\item If $f, g : U \to \R$ are $C^k$ functions, show that
+		\[ (fg)^{(k)} = \sum_{i = 0}^k \binom{k}{i} f^{(i)} g^{(k-i)}. \]
+	\end{enumerate}
 \end{exercise}
 
 \begin{exercise} \label{ck-stable-composite-single}
-	Show that the composite of two $C^k$ functions is also $C^k$. \begin{hint} Induct on $k$. The base case $k = 0$ is clear. For the inductive step, use the chain rule \ref{chain-rule-single} and \cref{ck-stable-product-single}. \end{hint}
+	Show that the composite of two $C^k$ functions is also $C^k$. \begin{hint} Induct on $k$. The base case $k = 0$ is clear. For the inductive step, use the chain rule \ref{chain-rule-single} and \cref{ck-stable-product-single}(a). \end{hint}
 \end{exercise}
 
 \begin{exercise} \label{ck-stable-reciprocal-single}
@@ -1196,7 +1196,7 @@ First up, let's prove that all reasonable ways of combining functions in a parti
 \end{exercise}
 
 \begin{proposition} \label{ck-stable-inversion-single}
-	Suppose $I$ is an open interval, $f : I \to \R$ is $C^k$ injection for some $k \geq 1$, and that $f'(x) \neq 0$ for all $x \in I$. Then $f^{-1} : f(I) \to U$ is also $C^k$. \index{inverse function}
+	Suppose $I$ is an open interval, $f : I \to \R$ is injective, $C^k$ for some $k \geq 1$, and that $f'(x) \neq 0$ for all $x \in I$. Then $f^{-1} : f(I) \to U$ is also $C^k$. \index{inverse function}
 \end{proposition}
 
 \begin{proof}

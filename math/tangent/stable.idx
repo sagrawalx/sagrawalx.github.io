@@ -15,7 +15,7 @@
 \indexentry{gln@$\GL_n$|hyperpage}{16}
 \indexentry{rank!of a matrix|hyperpage}{16}
 \indexentry{lvw@$\mathscr{L}(V,W)$|hyperpage}{16}
-\indexentry{glv@$\GL(V)$|hyperpage}{16}
+\indexentry{glv@$\GL(V)$|hyperpage}{17}
 \indexentry{representation!of a vector|hyperpage}{17}
 \indexentry{representation!of a linear map|hyperpage}{17}
 \indexentry{rank!of a linear map|hyperpage}{18}
@@ -123,14 +123,13 @@
 \indexentry{monotone!strictly monotone|hyperpage}{56}
 \indexentry{power rule|hyperpage}{57}
 \indexentry{continuously differentiable|hyperpage}{60}
-\indexentry{critical point!critical locus|hyperpage}{61}
-\indexentry{ck@$C^k$|hyperpage}{62}
-\indexentry{inverse function|hyperpage}{63}
-\indexentry{remainder|hyperpage}{67}
+\indexentry{ck@$C^k$|hyperpage}{61}
+\indexentry{inverse function|hyperpage}{62}
+\indexentry{remainder|hyperpage}{66}
 \indexentry{smooth|hyperpage}{68}
 \indexentry{Cinfinity@$C^\infty$|hyperindexformat{\see {smooth}}}{68}
 \indexentry{infinitely differentiable|hyperindexformat{\see {smooth}}}{68}
-\indexentry{diffeomorphism|hyperpage}{69}
+\indexentry{diffeomorphism|hyperpage}{68}
 \indexentry{monotone!strictly increasing|hyperpage}{69}
 \indexentry{intermediate value theorem|hyperpage}{69}
 \indexentry{diffeomorphism|hyperpage}{69}
