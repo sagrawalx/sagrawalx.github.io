@@ -180,6 +180,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.B}Rank of a smooth map}{166}{subsection.681}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{167}{chapter*.685}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Index}{169}{chapter*.686}
+\contentsline {chapter}{\nonumberline Index}{167}{chapter*.685}
