@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  23 SEP 2019 17:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  24 SEP 2019 11:37
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1671,9 +1671,15 @@ chapter without number
 (./single-stable.aux) (./multi.aux) (./manifolds.aux) (./tangent.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 113.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 113.
-Package rerunfilecheck Info: File `stable.out' has not changed.
-(rerunfilecheck)             Checksum: 8CA728AF23B4C6523522115FCEEFAD8D;6376.
 
+
+Package rerunfilecheck Warning: File `stable.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `stable.out':
+(rerunfilecheck)             Before: 8CA728AF23B4C6523522115FCEEFAD8D;6376
+(rerunfilecheck)             After:  90808C27470D3818B467EFAFDC32A811;6376.
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1682,41 +1688,83 @@ Package logreq Info: Writing requests to 'stable.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45754 strings out of 492982
- 1055614 string characters out of 6134895
- 1773480 words of memory out of 5000000
+ 45769 strings out of 492982
+ 1055808 string characters out of 6134895
+ 1773497 words of memory out of 5000000
  47438 multiletter control sequences out of 15000+600000
  106124 words of font info for 236 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,15n,119p,8817b,1369s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-sc.enc}{/usr/
-share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/share/texlive/texmf-dist/f
-onts/enc/dvips/newtx/ntx-ecth-tlf.enc}{/usr/share/texlive/texmf-dist/fonts/enc/
-dvips/newtx/ntx-ec-tlf.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec.enc}
-</usr/share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/euler/euex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/euler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/euler/eurm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/eu
-ler/eusm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler
-/eusm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
-sam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
-am7.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/texm
-f/fonts/type1/public/tex-gyre/qplr.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/n
-ewpx/zplb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplr.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on stable.pdf (171 pages, 1500130 bytes).
+pdfTeX warning (dest): name{chapter*.684} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.680} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.673} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.672} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.663} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.645} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.640} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.639} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.638} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.630} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.617} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.597} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.596} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.586} has been referenced but does not ex
+ist, replaced by a fixed one
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-sc.enc}{/usr/sh
+are/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/share/texlive/texmf-dist/fon
+ts/enc/dvips/newtx/ntx-ecth-tlf.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dv
+ips/newtx/ntx-ec-tlf.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec.enc}</
+usr/share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/euler/euex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/euler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+euler/eurm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/eule
+r/eusm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/e
+usm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msa
+m10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
+7.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf/
+fonts/type1/public/tex-gyre/qplr.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/new
+px/zplb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplr.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
+Output written on stable.pdf (171 pages, 1500918 bytes).
 PDF statistics:
- 3130 PDF objects out of 3580 (max. 8388607)
- 2858 compressed objects within 29 object streams
- 870 named destinations out of 1000 (max. 500000)
+ 3148 PDF objects out of 3580 (max. 8388607)
+ 2876 compressed objects within 29 object streams
+ 885 named destinations out of 1000 (max. 500000)
  26549 words of extra memory for PDF output out of 29859 (max. 10000000)
 

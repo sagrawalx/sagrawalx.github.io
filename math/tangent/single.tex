@@ -374,7 +374,7 @@ Observe that, when $f(a+h)\neq f(a)$, then this expression is precisely the diff
 
 \begin{proof}[First proof of the chain rule]
 	Consider the function $\epsilon$ defined for small values of $h$ by \[ \epsilon(h) = f(a+h)-f(a). \]
-	See \cref{value-difference-chain-rule}. You will verify in \cref{chain-rule-details} below that $\epsilon$ is continuous at 0. 
+	See \cref{value-difference-chain-rule}. You will verify in \cref{chain-rule-single-first-proof-details} below that $\epsilon$ is continuous at 0. 
 	
 	\begin{figure}[t]
 		\begin{center}
@@ -451,7 +451,7 @@ Observe that, when $f(a+h)\neq f(a)$, then this expression is precisely the diff
 	\end{figure}
 	
 	
-	You will verify in \cref{chain-rule-details} below that
+	You will verify in \cref{chain-rule-single-first-proof-details} below that
 	\begin{equation} \label{alternative-to-multiplicative-cross-term} \frac{(g \circ f)(a+h) - (g \circ f)(a)}{h} = \sigma(\epsilon(h)) \cdot \frac{f(a+h)-f(a)}{h} \end{equation}
 	for all small values of $h$. Thus
 	\[ \begin{aligned} \lim_{h \to 0} \frac{(g \circ f)(a+h) - (g \circ f)(a)}{h} &= \lim_{h \to 0} \sigma (\epsilon(h)) \cdot \frac{f(a+h)-f(a)}{h} \\ 
