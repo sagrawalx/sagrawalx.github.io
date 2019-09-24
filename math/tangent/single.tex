@@ -97,6 +97,16 @@ As $h$ gets smaller and smaller, the secant line becomes a better and better app
 	\end{enumerate}
 \end{exercise}
 
+\begin{pedanticremark}
+	You might wonder why definition \cref{derivative-definition-single} is only made for when $a$ is an interior point of the domain $S$. First of all, notice that \emph{at the very least} we need for $a$ to be a limit point of $S$. Indeed, if $a$ is not a limit point of $S$, then we cannot evaluate $f(a+h)$ for all sufficiently small values of $h$, so ``secant line'' stops making any sense at all. 
+	
+	The reason why we insist that $a$ be an interior point (rather than just a limit point) is a bit more subtle: requiring $a$ to be an interior point makes the definition resistant to changing the domain $S$. For example, suppose $S = [0,\infty)$ and $f : S \to \R$ is the function given by $f(x) = 1$ for all $x \in S$. Notice that $a = 0$ is a limit point but not an interior point of $S$. If we compute the limit
+	\[ \lim_{h \to 0} \frac{f(0 + h)- f(0)}{h} \]
+	in $S$, we find that it equals 0 (cf. your proof of  \cref{constant-implies-derivative-zero-single}). But suppose we ``extend'' the domain of the function $f$ to all of $\R$ by setting $f(x) = 0$ for all $x < 0$. Now the limit
+	\[ \lim_{h \to 0} \frac{f(0 + h)- f(0)}{h} \]
+	computed in $\R$ does \emph{not} exist (cf. \cref{differentiable-implies-continuous-single}). This means that we would have to talk about ``differentiability of $f$ with respect to $S$'' and ``the derivative of $f$ with respect to $S$.'' This is rather annoying, and insisting that $a$ be an interior point avoids this pedantry. More precisely, the assertion is that if $a$ is an interior point of $S$ and $S \subseteq T$ and $f : T \to \R$ is a function, then $f$ is ``differentiable with respect to $S$'' if and only if it is ``differentiable with respect to $T$,'' and ``the derivative of $f$ with respect to $S$'' equals ``the derivative of $f$ with respect to $T$.'' If you're still reading this pedantic remark, you should take a few minutes and prove this assertion. 
+\end{pedanticremark}
+
 Occasionally, it's useful to talk about differentiability from just one side. 
 
 \begin{definition}[One-sided differentiability]

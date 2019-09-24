@@ -39,7 +39,7 @@ nonav: true
 <td rowspan="2">Mon</td>
 <td>Introduction</td>
 <td>None</td>
-<td></td>
+<td>None</td>
 </tr>
 
 <tr>
@@ -53,7 +53,7 @@ Office hours (1–2pm).
 <td>Single variable: Definitions</td>
 <td>Read: 1.1 (and 0.1)
 Do: 3, 4, 16</td>
-<td></td>
+<td>[Link](single-definition.pdf)</td>
 </tr>
 
 <tr>
