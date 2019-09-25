@@ -66,6 +66,7 @@ As $h$ gets smaller and smaller, the secant line becomes a better and better app
 		\item $f(x) = x^2$ at $a = 0$. 
 		\item $f(x) = x^2$ at $a = 2$. 
 		\item $f(x) = \begin{cases} 1 & x \geq 0 \\ 0 & x < 0 \end{cases}$ at $a = 0$. 
+		\item $f(x) = \begin{cases} rx & \text{if } x \geq 0 \\ sx & \text{if } x < 0 \end{cases}$ where $r \neq s$. 
 	\end{enumerate}
 \end{exercise}
 
@@ -107,32 +108,13 @@ As $h$ gets smaller and smaller, the secant line becomes a better and better app
 	computed in $\R$ does \emph{not} exist (cf. \cref{differentiable-implies-continuous-single}). This means that we would have to talk about ``differentiability of $f$ with respect to $S$'' and ``the derivative of $f$ with respect to $S$.'' This is rather annoying, and insisting that $a$ be an interior point avoids this pedantry. More precisely, the assertion is that if $a$ is an interior point of $S$ and $S \subseteq T$ and $f : T \to \R$ is a function, then $f$ is ``differentiable with respect to $S$'' if and only if it is ``differentiable with respect to $T$,'' and ``the derivative of $f$ with respect to $S$'' equals ``the derivative of $f$ with respect to $T$.'' If you're still reading this pedantic remark, you should take a few minutes and prove this assertion. 
 \end{pedanticremark}
 
-Occasionally, it's useful to talk about differentiability from just one side. 
-
-\begin{definition}[One-sided differentiability]
-	Suppose $f : S \to \R$ is a function and $a \in S$ is an interior point. Then $f$ is \emph{left differentiable at $a$} if 
+\begin{unimportantremark}
+	Occasionally, it's useful to talk about differentiability from just one side. Suppose $f : S \to \R$ is a function and $a \in S$ is an interior point. Then $f$ is \emph{left differentiable at $a$} if 
 	\[ \lim_{h \to 0^-} \frac{f(a+h)-f(a)}{h} \]
 	exists, and then the value of this limit is called the \emph{left derivative} of $f$ at $a$. Similarly, $f$ is \emph{right differentiable at $a$} if 
 	\[ \lim_{h \to 0^+} \frac{f(a+h)-f(a)}{h} \]
 	exists, and then the value of this limit is called the \emph{right derivative} of $f$ at $a$.
-\end{definition}
-
-\begin{exercise}
-	Suppose $r \neq s$ are two distinct real numbers and let $f : \R \to \R$ be the function
-	\[ f(x) = \begin{cases} rx & \text{if } x \geq 0 \\ sx & \text{if } x < 0 \end{cases}. \]
-	Show that $f$ is not differentiable at $0$, but that it is both left differentiable and right differentiable at 0. 
-\end{exercise}
-
-It's also useful to talk about differentiability not just at a single point, but everywhere on the domain. 
-
-\begin{definition} \index{differentiable} \index{derivative}
-	A function $f : S \to \R$ is \emph{differentiable} if it is continuous, and it is differentiable at every interior point of $S$. Letting $S^\circ$ denote the interior of $S$, the function $f' : S^\circ \to \R$ defined by $a \mapsto f'(a)$ is called the \emph{derivative} of $f$. Sometimes also use one of the following notations in place of $f'$, where $x$ is the variable that is being used to denote the argument to $f$. \[ \frac{df}{dx} \quad \frac{d}{dx} f(x) \] 
-\end{definition}
-
-\begin{caution}
-	Some authors define differentiability on a non-open subset slightly differently, so you should be cautious when you're reading other texts and see assertions about a function on a non-open subset of $\R$ being ``differentiable.'' Because of the potential for misunderstanding, we'll apply the above definition sparingly for non-open subsets. Specifically, we will only use this definition either when $S$ is open, or when it is an interval.\footnote{By \emph{interval}\index{interval}, we mean an uncountable connected subset of $\R$. This means that intervals can be open, closed, or half-open; and they can be bounded or unbounded.}
-\end{caution}
-
+\end{unimportantremark}
 
 \subsection{Best linear approximation}
 
@@ -350,9 +332,7 @@ We will discuss two different (but similar) proofs of this important result. But
 
 \subsubsection*{First proof}
 
-The first proof uses the definition of the derivative \cref{derivative-definition-single}, but there is a subtle technicality involved; so, let us discuss it informally first before diving into the formal proof.  
-
-The idea involved is again a clever rewriting of difference quotients. We introduce a cross term, which in this case is $f(a+h) - f(a)$. But this time we introduce this cross term ``multiplicatively'' rather than ``additively.'' More precsiely, we have
+The first proof uses the definition of the derivative \ref{derivative-definition-single}, but there is a subtle technicality involved; so, let us discuss it informally first before diving into the formal proof. The idea involved is again a clever rewriting of difference quotients. We introduce a cross term, which in this case is $f(a+h) - f(a)$. But this time we introduce this cross term ``multiplicatively'' rather than ``additively.'' More precsiely, we have
 \[ \begin{aligned} \frac{(g \circ f)(a+h) - (g \circ f)(a)}{h} &= \frac{g(f(a+h)) - g(f(a))}{h} \\ &= \frac{g(f(a+h)) - g(f(a))}{f(a+h)-f(a)} \cdot \frac{f(a+h)-f(a)}{h}. \end{aligned} \]
 The difference quotient on the right is precisely $f'(a)$. Thus, it would be sufficient to prove  
 \begin{equation} \label{wrong-conjecture} \lim_{h \to 0} \frac{g(f(a+h)) - g(f(a))}{f(a+h)-f(a)} = g'(f(a)). \end{equation}
@@ -409,7 +389,7 @@ Observe that, when $f(a+h)\neq f(a)$, then this expression is precisely the diff
 			\end{axis}
 			\end{tikzpicture}
 		\end{center}
-		\caption{The graph of $f$ is depicted in black. The value of the function $t$ on a small nonzero input value $h$ is the vertical distance depicted in red.}  \label{value-difference-chain-rule}
+		\caption{The graph of $f$ is depicted in black. The value of the function $\epsilon$ on a small nonzero input value $h$ is the vertical distance depicted in red.}  \label{value-difference-chain-rule}
 	\end{figure}
 
 	Next, define a function $\sigma$ by the following.  
@@ -454,10 +434,8 @@ Observe that, when $f(a+h)\neq f(a)$, then this expression is precisely the diff
 	You will verify in \cref{chain-rule-single-first-proof-details} below that
 	\begin{equation} \label{alternative-to-multiplicative-cross-term} \frac{(g \circ f)(a+h) - (g \circ f)(a)}{h} = \sigma(\epsilon(h)) \cdot \frac{f(a+h)-f(a)}{h} \end{equation}
 	for all small values of $h$. Thus
-	\[ \begin{aligned} \lim_{h \to 0} \frac{(g \circ f)(a+h) - (g \circ f)(a)}{h} &= \lim_{h \to 0} \sigma (\epsilon(h)) \cdot \frac{f(a+h)-f(a)}{h} \\ 
-	&\stackrel{(*)}{=} \sigma (\epsilon(0)) f'(a) \\
-	&= g'(f(a)) f'(a) \end{aligned}  \]
-	where we have used the continuity of $\epsilon$ and $\sigma$ and the definition of the derivative of $f$ at $a$ for the step labeled $(*)$ above. This proves the chain rule. 
+	\[ \lim_{h \to 0} \frac{(g \circ f)(a+h) - (g \circ f)(a)}{h} = \lim_{h \to 0} \sigma (\epsilon(h)) \cdot \frac{f(a+h)-f(a)}{h} = g'(f(a)) f'(a) \]
+	where we have used the continuity of $\epsilon$ and $\sigma$ and the definition of the derivative of $f$ at $a$ for the last step. This completes the proof. 
 \end{proof}
 	
 \begin{exercise} \label{chain-rule-single-first-proof-details}
@@ -475,24 +453,23 @@ Observe that, when $f(a+h)\neq f(a)$, then this expression is precisely the diff
 Our second proof of the chain rule will use the ``best linear approximation'' interpretation of derivatives provided by \cref{differential-unique-single}. 
 
 \begin{proof}[Second proof of the chain rule] \renewcommand{\qedsymbol}{}
-	By \cref{differential-unique-single}, it is sufficient to prove that
+	Note that, by definition of $dg_{f(a)}$ and $df_a$, we have 
+	\[ dg_{f(a)}(df_a(h)) = g'(f(a))f'(a)h. \]
+	Thus, by \cref{differential-unique-single}, it is sufficient to prove that
 	\[ g(f(a+h))-g(f(a))-dg_{f(a)}(df_a(h)) = o(|h|) \text{ as } h \to 0. \]
 	Define the following ``error in approximation'' functions, as in \cref{error-in-approximation}.\index{error in approximation function@``error in approximation'' function} 
 	\[ \begin{aligned} 
 	r(h) &= f(a+h)-f(a) - df_a(h) \\ 
 	s(k) &= g(f(a)+k)-g(f(a))-dg_{f(a)}(k) \end{aligned} \]
-	Since
-	\[ f(a+h) = f(a) + df_a(h) + r(h) \]
-	by definition of $r$, we have
-	\[ \begin{aligned}
-	g(f(a+h)) &= g(f(a) + df_a(h) + r(h)) \\
-	&= g(f(a)) + dg_{f(a)}(df_{a}(h) + r(h)) + s(df_a(h)+r(h)) \\
-	&= g(f(a)) + dg_{f(a)}(df_{a}(h)) + dg_{f(a)}(r(h)) +  s(df_a(h) + r(h)) \end{aligned} \]
-	where we use the definition of $s$ on input $k = df_a(h)+r(h)$ for the second step, and the fact that $dg_{f(a)}$ is linear for the third. Thus
+	Rearranging the definition of $r(h)$ tells us that
+	\begin{equation} \label{rearranged-definition-error} g(f(a+h)) = g(f(a) + df_a(h) + r(h)). \end{equation}
+	Now note that the definition of $s(k)$ for $k = df_a(h) + r(h)$ says the following. 
+	\[ \begin{aligned} s(df_a(h) + r(h)) &= g(f(a) + df_a(h) + r(h)) - g(f(a)) -dg_{f(a)}(df_a(h) + r(h)) \\
+	g(f(a) + df_a(h) + r(h)) &= g(f(a)) + dg_{f(a)}(df_a(h) + r(h)) + s(df_a(h) + r(h)) \\
+	&= g(f(a)) + dg_{f(a)}(df_a(h)) + dg_{f(a)}(r(h)) + s(df_a(h) + r(h))  \end{aligned} \]
+	We used linearity of $dg_{f(a)}$ for the final step above. Combining this with \cref{rearranged-definition-error} show that
 	\[ g(f(a+h)) - g(f(a)) - dg_{f(a)}(df_a(h)) = dg_{f(a)}(r(h)) + s(df_a(h)+r(h)). \]
-	We therefore want to prove that the right-hand side is $o(|h|)$. 	
-	
-	Since \[ dg_{f(a)}(r(h)) = g'(f(a)) \cdot r(h) \] is just a scalar multiple of $r$, and $r = o(|h|)$, we see that $dg_{f(a)}(r) = o(|h|)$ also. So it is sufficient to prove that
+	We therefore want to prove that the right-hand side is $o(|h|)$. Since \[ dg_{f(a)}(r(h)) = g'(f(a)) \cdot r(h) \] is just a scalar multiple of $r$, and $r = o(|h|)$, we see that $dg_{f(a)}(r) = o(|h|)$ also. So it is sufficient to prove that
 	\[ s(df_a(h)+r(h)) = o(|h|). \]
 	We've now hit the technical part, so let's hit pause. 
 \end{proof}
@@ -508,29 +485,15 @@ We'll deal with this problem in essentially the same way as before: namely, we e
 so that it is also defined when $f(a+h) = f(a)$. 
 
 \begin{proof}[Second proof of the chain rule, continued]
-	Define $\eta(k) = s(k)/k$ for nonzero $k$. If we set $\eta(0) = 0$, the fact that $s(k) = o(|k|)$ as $k \to 0$ implies that $\eta$ is continuous at 0. Then $s(k) = \eta(k)k$ for all $k$. Applying this with $k = df_a(h) + r(h)$, we see that
+	Define $\eta(k) = s(k)/k$ for nonzero $k$. Then extend $\eta$ by setting $\eta(0) = 0$. The fact that $s(k) = o(|k|)$ as $k \to 0$ implies that $\eta$ is continuous at 0. We now have \[ s(k) = \eta(k)k \]
+	for all $k$. Applying this with $k = df_a(h) + r(h)$, we see that
 	\[ \begin{aligned} \frac{|s(df_a(h)+r(h))|}{|h|} &= \frac{|\eta(df_a(h)+r(h))| \cdot |df_a(h)+r(h)|}{|h|} \\
 	&\leq |\eta(df_a(h)+r(h))| \cdot \left( |f'(a)| + \frac{|r(h)|}{|h|} \right). \end{aligned} \]
 	Observe that $r$ and therefore $df_a + r$ is continuous at $0$ (cf. \cref{error-in-approximation}). Moreover, we have just seen that $\eta$ is continuous at $(df_a + r)(0) = 0$. Thus the composite $\eta \circ (df_a + r)$ is also continuous at 0. Thus
 	\[ \lim_{h \to 0} |\eta(df_a(h)+r(h))| \cdot \left( |f'(a)| + \frac{|r(h)|}{|h|} \right) = 0, \]
-	where we have used the fact that $|r(h)| = o(|h|)$ to see that the parenthetical expression has a finite limit (namely, $|f'(a)|$). So, by the squeeze theorem, we can therefore conclude that $|s(df_a(h)+r(h))| = o(|h|)$.  
+	where we have used the fact that $|r(h)| = o(|h|)$ to see that the parenthetical expression has a finite limit (namely, $|f'(a)|$). So, by the squeeze theorem, we can conclude that \[ |s(df_a(h)+r(h))| = o(|h|), \]
+	completing the proof.   
 \end{proof}
-
-\begin{comment}[Second proof of the chain rule, continued]
-	To prove that \[ s(df_a(h)+r(h)) = o(|h|), \] let's whip out some epsilons and deltas. Suppose $\epsilon > 0$. We want to find a $\delta > 0$ such that $|h| < \delta$ implies that
-	\[ |s(df_a(h)+r(h))| \leq \epsilon|h|. \]
-	
-	Since $s$ is $o(|h|)$, we know that for any $\epsilon_1 > 0$ there exists $\delta_1 > 0$ such that $|k| < \delta_1$ implies that
-	\[ \begin{aligned} |s(k)| \leq \epsilon_1|k|. \end{aligned} \] 
-	Since $df_a + r$ is continuous at 0, there then exists $\delta_2 > 0$ such that $|h| < \delta$ implies that $|df_a(h) + r(h)| < \delta_1$. Then for $|h| < \delta_2$, we have
-	\[ |s(df_a(h) + r(h)| \leq \epsilon_1 |df_a(h) + r(h)| 
-	\leq \epsilon_1|f'(a)||h| + \epsilon_1|r(h)| \]
-	Since $r$ is $o(|h|)$, for any $\epsilon_2 > 0$ there exists $\delta_3 > 0$ such that $|h| < \delta_3$ implies that $|r(h)| \leq \epsilon_2 |h|$. Let $\delta = \min\{\delta_2, \delta_3\}$. Then for $|h| < \delta$, we can continue the above chain of inequalities to obtain 
-	\[ |s(df_a(h) + r(h)| \leq \epsilon_1|f'(a)||h| + \epsilon_1 \epsilon_2|h| = \epsilon_1(|f'(a)| + \epsilon_2)|h|. \]
-	So we let $\epsilon_2 = 1$ and then let 
-	\[ \epsilon_1 = \frac{\epsilon}{|f'(a)| + 1}. \]
-	The $\delta$ obtained by going through the above process then has the desired property. 
-\end{comment}
 
 Notice that in the first proof, the trick to overcoming the technicality was defining the function $\sigma$ at $k = 0$. In the second proof, the trick to overcoming the same technicality was defining $\eta$ at $k = 0$. These two tricks are really the same trick, as shown by the following.  
 
@@ -586,10 +549,10 @@ Using the rules we've developed so far, we can differentiate any rational functi
 First off, here is the most general statement of the power rule.
 
 \begin{proposition}[Power rule for real exponents] \label{power-rule-general} \index{power rule}
-	If $r$ is any real number and $f : (0, \infty) \to \R$ is the function $f(x) = x^r$, then $f$ is differentiable and $f'(x) = rx^{r-1}$. 
+	If $r$ is any real number and $f : (0, \infty) \to \R$ is the function $f(x) = x^r$, then $f'(x) = rx^{r-1}$ for all $x \in (0,\infty)$. 
 \end{proposition}
 
-We will prove this for \emph{rational} exponents in \cref{power-rule-fractional}. We won't prove it in full generality, because that would require a long tangential discussion of what $x^r$ even means for irrational $r$. Actually, once we have a sufficiently rigorous definition of $x^r$ for irrational $r$, it turns out that \cref{power-rule-general} is actually a relatively straightforward \emph{consequence} of \cref{power-rule-fractional}. 
+We'll prove this for \emph{rational} exponents (ie, exponents that can be written as fractions of an integer over another integer) in \cref{power-rule-fractional}. We won't prove it in full generality, because that would require a long tangential discussion of what $x^r$ even means for irrational $r$. Actually, once we have a sufficiently rigorous definition of $x^r$ for irrational $r$, it turns out that \cref{power-rule-general} is actually a relatively straightforward \emph{consequence} of \cref{power-rule-fractional}. 
 
 \subsubsection*{Exponential, sine, and cosine functions}
 
@@ -597,16 +560,18 @@ Next up, we have the exponential, sine, and cosine functions. These are usually 
 \begin{equation} \label{exp-sin-cos-power-series} \begin{aligned} \exp(x) &= \sum_{n = 0}^\infty \frac{x^n}{n!} \\
 \cos(x) &= \sum_{n = 0}^\infty \frac{(-1)^n x^{2n}}{(2n)!} \\
 \sin(x) &= \sum_{n = 0}^\infty \frac{(-1)^n x^{2n+1}}{(2n+1)!} \end{aligned} \end{equation}
-We'll prove that power series can be differentiated term-by-term in \cref{differentiating-power-series}. This yields the following standard facts. 
+All three of these have infinite radius of convergence (ie, they're defined for all real $x$). We'll prove that power series can be differentiated term-by-term in \cref{differentiating-power-series} inside their radius of convergences. This yields the following standard facts. 
 \begin{enumerate}[(1)]
 	\item If $f(x) = \exp(x)$, then $f'(x) = \exp(x)$. 
 	\item If $f(x) = \sin(x)$, then $f'(x) = \cos(x)$. 
 	\item If $f(x) = \cos(x)$, then $f'(x) = -\sin(x)$.
 \end{enumerate} 
 
-\begin{remark}
-	Defining the exponential, sine, and cosine functions using power series is mathematically sound, but there are numerous facts about these functions that are not clear from the power series, and one needs to prove these facts separately. For example, it's useful knowing that, if $e := \exp(1)$, then $\exp(x) = e^x$. This fact is not immediately clear from the power series definition; it requires some proof, and we won't prove it here, but you should feel free to use it. It's obviously also useful to know that sines and cosines have something to do with trigonometry. Again, this is not clear from the power series definition; it requires some proof, and we won't prove it, but you should feel free to use it. 
-\end{remark}
+\begin{pedanticremark}
+	Defining the exponential, sine, and cosine functions using power series is mathematically sound, but there are numerous facts about these functions that are not clear from the power series. For example, it's useful knowing that, if $e := \exp(1)$, then $\exp(x) = e^x$. This fact is not immediately clear from the power series definition; it requires some proof, and we won't prove it here, but you should feel free to use it. It's obviously also useful to know that sines and cosines have something to do with trigonometry. Again, this is not clear from the power series definition; it requires some proof, and we won't prove it, but you should feel free to use it. 
+\end{pedanticremark}
+
+% TODO: Geometric proof of the derivative of sines and cosines
 
 \subsubsection*{Examples}
 
@@ -653,7 +618,15 @@ The following example, again involving $\sin(1/x)$, illustrates a caveat to the 
 
 \section{Differentiable functions}
 
-In this section, we'll discuss some properties of functions which are differentiable along an entire interval.
+In this section, we'll discuss some properties of functions which are differentiable everywhere on their domain. 
+
+\begin{definition} \index{differentiable} \index{derivative}
+	Suppose $U$ is an open subset of $\R$. A function $f : U \to \R$ is \emph{differentiable} it is differentiable at every point in $U$. More generally, if $S$ is any subset of $\R$ and $f : S \to \R$ is a function, we say that $f$ is \emph{differentiable on the interior} if $f|_{S^\circ}$ is differentiable (ie, if $f$ is differentiable at every interior point of $S$). 
+\end{definition}
+
+Every open subset of $\R$ is a countable disjoint union of open intervals\footnotemark\ (cf. \cite[theorem 6.17]{protter-morrey}). This means that the most important case is when the domain happens to be an interval, and many of the theorems in this section will be about this situation. 
+
+\footnotetext{By the word \emph{interval}\index{interval}, we mean an uncountable connected subset of $\R$. This means that intervals can be open, closed, or half-open; and they can be bounded or unbounded. They cannot be just a single point.}
 
 \subsection{Mean value theorem}
 
@@ -699,17 +672,20 @@ The mean value theorem \ref{mean-value-theorem} is an extremely important founda
 Rolle's theorem \ref{rolles-theorem} is technically a special case of the mean value theorem, but the general case can be derived from this special case. 
 
 \begin{exercise}[Rolle's theorem] \label{rolles-theorem} \index{mean value theorem!rolles theorem@Rolle's theorem} \index{rolles theorem@Rolle's theorem|see {mean value theorem}}
-	Suppose $a < b$ and let $f : [a, b] \to \R$ be a differentiable function. If $f(a) = f(b) = 0$, prove that there exists $c \in (a, b)$ such that $f'(c) = 0$. \begin{hint} Any function must fall into at least one of the following three cases: (i) $f$ is constantly zero, (ii) $f$ takes on positive values somewhere on $[a, b]$, and (iii) $f$ takes on negative values somewhere on $[a, b]$. Deal with the first case using \cref{constant-implies-derivative-zero-single}, and the latter two cases using the extreme value theorem\footnotemark\ together with \cref{interior-extremum}. 
+	Suppose $a < b$ and let $f : [a, b] \to \R$ be continuous and differentiable on the interior. If $f(a) = f(b) = 0$, prove that there exists $c \in (a, b)$ such that $f'(c) = 0$. 
+	\begin{hint}
+		Notice that any function must fall into at least one of the following three cases: (i) $f$ is constantly zero, (ii) $f$ takes on positive values somewhere on $[a, b]$, and (iii) $f$ takes on negative values somewhere on $[a, b]$. Deal with the first case using \cref{constant-implies-derivative-zero-single}, and the latter two cases using the extreme value theorem\footnotemark\ together with the interior extremum theorem \cref{interior-extremum}. 
 	\end{hint}
 \end{exercise}
 
 \footnotetext{The \emph{extreme value theorem}\index{extremum!extreme value theorem} \index{extreme value theorem|see {extremum}} says that if $K$ is a compact metric space and $f : K \to \R$ is continuous, then $f$ achieves its global maximum and its global minimum somewhere on $K$ (cf. \cite[theorems 3.17 and 6.30]{protter-morrey}).}
 
 \begin{exercise}[Mean value theorem] \label{mean-value-theorem} \index{mean value theorem}
-	Suppose $a < b$ and let $f : [a, b] \to \R$ be a differentiable function. Prove that there exists $c \in (a, b)$ such that
+	Suppose $a < b$ and let $f : [a, b] \to \R$ be continuous and differentiable on the interior. Prove that there exists $c \in (a, b)$ such that
 	\[ f'(c) = \frac{f(b) - f(a)}{b-a}. \]
-	\begin{hint} Let $\ell$ be the secant line passing through $(a, f(a))$ and $(b, f(b))$. Then consider the function $g = f - \ell$. See \cref{subtracting-the-secant}. 
-	Then $g(a) = g(b) = 0$, so we can apply Rolle's theorem \ref{rolles-theorem} to $g$.
+	\begin{hint} 
+		Let $\ell$ be the secant line passing through $(a, f(a))$ and $(b, f(b))$. Then consider the function $g = f - \ell$. See \cref{subtracting-the-secant}. 
+		Then $g(a) = g(b) = 0$, so we can apply Rolle's theorem \ref{rolles-theorem} to $g$.
 	\end{hint} 
 \end{exercise}
 
@@ -773,11 +749,11 @@ Rolle's theorem \ref{rolles-theorem} is technically a special case of the mean v
 We can use the mean value theorem to prove the following ``if and only if upgrade'' of \cref{constant-implies-derivative-zero-single}. 
 
 \begin{proposition} \label{constant-iff-derivative-zero-single}
-	Suppose $I$ is an interval and that $f : I \to \R$ is differentiable. Then $f' = 0$ if and only if $f$ is constant\index{constant function}. 
+	Suppose $I$ is an interval and that $f : I \to \R$ is continuous and differentiable on the interior. Then $f' = 0$ if and only if $f$ is constant\index{constant function}. 
 \end{proposition}
 
 \begin{proof}
-	We showed in \cref{constant-implies-derivative-zero-single} that $f$ being constant implies $f' = 0$. Conversely, suppose we have $a < b$ in $I$. We want to show that $f(a) = f(b)$. Since $f$ is differentiable on $I$, we can apply the mean value theorem\index{mean value theorem} on the smaller closed subinterval $[a, b]$. In other words, there exists a point $c \in (a,b)$ such that
+	We showed in \cref{constant-implies-derivative-zero-single} that $f$ being constant implies $f' = 0$. Conversely, suppose we have $a < b$ in $I$. We want to show that $f(a) = f(b)$. Since $f$ is continuous and differentiable on the interior, the same is true on the compact subinterval $[a,b]$, so we can apply the mean value theorem on this interval. In other words, there exists a point $c \in (a,b)$ such that
 	\[ \frac{f(b)-f(a)}{b-a} = f'(c). \]
 	But $f'(c) = 0$ by assumption, so $f(a) = f(b)$. 
 \end{proof}
@@ -785,9 +761,12 @@ We can use the mean value theorem to prove the following ``if and only if upgrad
 Here are some more consequences. 
 
 \begin{exercise} \label{bounded-derivative}
-	Suppose $I$ is an open interval and $f : I \to \R$ is a differentiable function such that there exists a number $M$ such that $|f'(x)| \leq M$ for all $x \in I$. Show that $|f(b) - f(a)| \leq M|b-a|$ for all $a, b \in I$.\footnotemark
-	\footnotetext{Using the vocabulary of \cref{sup-norm}, this result can be rephrased by saying that, if $f'$ is bounded, then $|f(b) - f(a)| \leq \|f'\|_\spn |b-a|$.}
+	Suppose $I$ is an interval and $f : I \to \R$ is continuous and differentiable on the interior. Let $M$ be a real number. Show that $|f'(x)| \leq M$ if and only if for all $x \in I$ if and only if \[ |f(b) - f(a)| \leq M|b-a| \] for all $a, b \in I$.
 \end{exercise}
+
+\begin{unimportantremark}
+	Another way of stating the result of \cref{bounded-derivative} is that bounds on the derivative of $f$ are equivalent to \emph{Lipschitz constants} for $f$. In particular, having a bounded derivative implies \emph{Lipschitz continuity}. 
+\end{unimportantremark}
 
 \begin{exercise}[Fixed points] \label{fixed-points}
 	Suppose $f : \R \to \R$ is a function. A \emph{fixed point} of $f$ is a point $\xi$ such that $f(\xi) = \xi$. 
@@ -835,7 +814,7 @@ Here are some important properties of strictly monotone continuous functions.
 The proofs of the following standard relationships between derivatives and monotonicity are similar to the proof of \cref{constant-iff-derivative-zero-single}.
 
 \begin{exercise}[Derivatives and monotonicity] \label{monotone-derivative} \index{monotone}
-	Suppose $I$ is an interval and that $f : I \to \R$ is differentiable. Prove the following. 
+	Suppose $I$ is an interval and that $f : I \to \R$ is continuous and differentiable on the interior. Prove the following. 
 	\begin{enumerate}[(a)]
 		\item $f' \geq 0$ if and only if $f$ is increasing\index{monotone!increasing}. 
 		\item $f' \leq 0$ if and only if $f$ is decreasing\index{monotone!decreasing}.
@@ -843,7 +822,7 @@ The proofs of the following standard relationships between derivatives and monot
 \end{exercise}
 
 \begin{exercise}[Derivatives and strict monotonicity] \label{strictly-monotone-derivative} \index{monotone!strictly monotone}
-	Suppose $I$ is an interval and that $f : I \to \R$ is differentiable. Prove the following. 
+	Suppose $I$ is an interval and that $f : I \to \R$ is continuous and differentiable on the interior. Prove the following. 
 	\begin{enumerate}[(a)]
 		\item If $f' > 0$, then $f$ is strictly increasing\index{monotone!strictly increasing}. 
 		\item If $f' < 0$, then $f$ is strictly decreasing\index{monotone!strictly decreasing}. 
@@ -900,13 +879,13 @@ Using this vocabulary, the intermediate value theorem\index{intermediate value t
 Now we know that the derivative $f'$ of a differentiable function $f$ need not be continuous (cf. \cref{power-times-sine}). Darboux's theorem asserts that, even though $f'$ might not be continuous, it must still have the intermediate value property! This means, for example, that derivatives cannot have removable or jump discontinuities (because, as we saw in \cref{removable-jump-ivp}, functions with these kinds of discontinuities do not have the intermediate value property). 
 
 \begin{theorem}[Darboux] \label{darboux} \index{darbouxs theorem@Darboux's theorem}
-	Suppose $I$ is an open interval and $f : I \to \R$ is differentiable. Then $f'$ has the intermediate value property.\index{intermediate value property} 
+	Suppose $I$ is an interval and $f : I \to \R$ is continuous and differentiable on the interior. Then $f'$ has the intermediate value property.\index{intermediate value property} 
 \end{theorem}
 
 \begin{proof}
 	Suppose $a < b$ are two elements of $I$ and $m$ is a real number strictly between $f'(a)$ and $f'(b)$. We want to show that there exists $c \in (a,b)$ such that $f'(c) = m$. This statement somewhat resembles the statement of the mean value theorem \ref{mean-value-theorem}, and indeed, our proof will also somewhat resemble the proof we gave of the mean value theorem. 
 	
-	Consider the differentiable function $g : I \to \R$ defined by $g(x) = f(x) - mx$. See \cref{subtracting-a-line}. Observe that $f'(c) = m$ if and only if $g'(c) = 0$. Thus we would like to show that there exists $c \in (a, b)$ such that $g'(c) = 0$. 
+	Consider the differentiable function $g : I \to \R$ defined by $g(x) = f(x) - mx$. See \cref{subtracting-a-line}. Then $g$ is also continuous and differentiable on the interior, with $g'(x) = f'(x) - m$. Thus $f'(c) = m$ if and only if $g'(c) = 0$. Thus we would like to show that there exists $c \in (a, b)$ such that $g'(c) = 0$. 
 	
 	
 	\begin{figure}
@@ -1040,7 +1019,7 @@ Derivatives interact somewhat strangely with limits. Here are some examples to i
 In fact, to get well-behaved interacted between limits and derivatives, what we really need is uniform convergence \emph{of the derivatives}. 
 
 \begin{theorem} \label{differentiation-uniform-limit}
-	Suppose $U$ is an open subset and $f_n : U \to \R$ is a differentiable function for each $n = 0, 1, \dotsc$ such that $\lim f_n = f$ pointwise. If the derivatives $f_n'$ converge uniformly on compact subsets of $U$, then $f$ is differentiable and $\lim f_n' = f'$. 
+	Suppose $U$ is an open subset of $\R$ and $f_n : U \to \R$ is a differentiable function for each $n = 0, 1, \dotsc$ such that $\lim f_n = f$ pointwise. If the derivatives $f_n'$ converge uniformly on compact subsets of $U$, then $f$ is differentiable and $\lim f_n' = f'$. 
 \end{theorem}
 
 \begin{proof}
@@ -1563,11 +1542,11 @@ A ``bump function'' is a smooth function with compact support.
 \end{example}
 
 \begin{exercise}
-	For any $a < b$ in $\R$, construct a bump function whose support is $[a,b]$. 
+	For any $a < b$ in $\R$, construct a bump function $f : \R \to \R$ whose support is $[a,b]$. 
 \end{exercise}
 
 \begin{exercise}
-	Let $F$ be a closed subset of $\R$. Construct a smooth function which is zero on $F$ and nonzero outside of $F$. \begin{hint} Recall that the complement of $F$ is a countable disjoint union of open intervals (cf. \cite[theorem 6.17]{protter-morrey}). \end{hint}
+	Let $F$ be a closed subset of $\R$. Construct a smooth function $f : \R \to \R$ which is zero on $F$ and nonzero outside of $F$. \begin{hint} Recall that the complement of $F$ is a countable disjoint union of open intervals (cf. \cite[theorem 6.17]{protter-morrey}). \end{hint}
 \end{exercise}
 
 \subsubsection*{Bridge functions}
