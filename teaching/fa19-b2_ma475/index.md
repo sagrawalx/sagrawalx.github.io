@@ -68,7 +68,7 @@ Office hours (1–2pm).
 <td>Single variable: Computations</td>
 <td>Read: 1.2  
 Do: 1, 4, 6, 16</td>
-<td></td>
+<td>[Link](single-computation.pdf)</td>
 </tr>
 
 <tr>

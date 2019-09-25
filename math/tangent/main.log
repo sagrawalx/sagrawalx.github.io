@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  24 SEP 2019 13:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  25 SEP 2019 08:35
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1518,38 +1518,39 @@ chapter 1.
 
 
 ] [30 <./figures/main-figure0.pdf>] [31] [32]
-LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
-(Font)              scaled to size 9.0pt on input line 133.
- [33]
 ===== Image 'figures/main-figure1' is up-to-date. ======
 LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
-(Font)              scaled to size 8.0pt on input line 185.
+(Font)              scaled to size 8.0pt on input line 167.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
-(Font)              scaled to size 6.0pt on input line 185.
-[34 <./figures/main-figure1.pdf>] [35]
+(Font)              scaled to size 6.0pt on input line 167.
+[33] [34 <./figures/main-figure1.pdf>]
 ===== Image 'figures/main-figure2' is up-to-date. ======
-[36] [37 <./figures/main-figure2.pdf>] [38] [39] [40]
+[35] [36 <./figures/main-figure2.pdf>] [37] [38] [39] [40]
 ===== Image 'figures/main-figure3' is up-to-date. ======
+[41 <./figures/main-figure3.pdf>]
 ===== Image 'figures/main-figure4' is up-to-date. ======
-[41] [42 <./figures/main-figure3.pdf>] [43 <./figures/main-figure4.pdf>]
-[44] [45] [46] [47] [48] [49]
+[42 <./figures/main-figure4.pdf>] [43] [44] [45] [46] [47] [48] [49]
+LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
+(Font)              scaled to size 9.0pt on input line 627.
+
 ===== Image 'figures/main-figure5' is up-to-date. ======
+[50] [51 <./figures/main-figure5.pdf>]
 ===== Image 'figures/main-figure6' is up-to-date. ======
 ===== Image 'figures/main-figure7' is up-to-date. ======
-[50] [51 <./figures/main-figure5.pdf>] [52 <./figures/main-figure6.pdf> <./figu
-res/main-figure7.pdf>] [53] [54] [55]
+[52 <./figures/main-figure6.pdf> <./figures/main-figure7.pdf>] [53] [54]
+[55]
 ===== Image 'figures/main-figure8' is up-to-date. ======
 ===== Image 'figures/main-figure9' is up-to-date. ======
-[56 <./figures/main-figure8.pdf> <./figures/main-figure9.pdf>] [57] [58]
+[56] [57 <./figures/main-figure8.pdf> <./figures/main-figure9.pdf>] [58]
 [59] [60] [61] [62] [63]
 ===== Image 'figures/main-figure10' is up-to-date. ======
 ===== Image 'figures/main-figure11' is up-to-date. ======
 ===== Image 'figures/main-figure12' is up-to-date. ======
 ===== Image 'figures/main-figure13' is up-to-date. ======
-[64 <./figures/main-figure10.pdf> <./figures/main-figure11.pdf> <./figures/main
--figure12.pdf> <./figures/main-figure13.pdf>] [65] [66] [67] [68] [69]
+[64] [65 <./figures/main-figure10.pdf> <./figures/main-figure11.pdf> <./figures
+/main-figure12.pdf> <./figures/main-figure13.pdf>] [66] [67] [68] [69]
 ===== Image 'figures/main-figure14' is up-to-date. ======
-[70 <./figures/main-figure14.pdf>] [71]
+[70] [71 <./figures/main-figure14.pdf>]
 ===== Image 'figures/main-figure15' is up-to-date. ======
 [72 <./figures/main-figure15.pdf>]
 ===== Image 'figures/main-figure16' is up-to-date. ======
@@ -1666,7 +1667,7 @@ chapter without number
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 113.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 113.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 90808C27470D3818B467EFAFDC32A811;6376.
+(rerunfilecheck)             Checksum: 9C053D1343DF9128E62DA921BF6F013D;6376.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1676,11 +1677,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45756 strings out of 492982
- 1055410 string characters out of 6134895
- 1773482 words of memory out of 5000000
- 47439 multiletter control sequences out of 15000+600000
- 106006 words of font info for 235 fonts, out of 8000000 for 9000
+ 45760 strings out of 492982
+ 1055526 string characters out of 6134895
+ 1774600 words of memory out of 5000000
+ 47441 multiletter control sequences out of 15000+600000
+ 106242 words of font info for 237 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,15n,119p,8815b,1369s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-sc.enc}{/usr/
@@ -1707,10 +1708,10 @@ f/fonts/type1/public/tex-gyre/qplr.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/n
 ewpx/zplb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplr.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on main.pdf (173 pages, 1505149 bytes).
+Output written on main.pdf (173 pages, 1504943 bytes).
 PDF statistics:
- 3142 PDF objects out of 3580 (max. 8388607)
- 2868 compressed objects within 29 object streams
- 873 named destinations out of 1000 (max. 500000)
+ 3141 PDF objects out of 3580 (max. 8388607)
+ 2867 compressed objects within 29 object streams
+ 871 named destinations out of 1000 (max. 500000)
  26549 words of extra memory for PDF output out of 29859 (max. 10000000)
 

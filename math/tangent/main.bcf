@@ -1927,20 +1927,21 @@
     <bcf:citekey order="1">protter-morrey</bcf:citekey>
     <bcf:citekey order="2">protter-morrey</bcf:citekey>
     <bcf:citekey order="3">protter-morrey</bcf:citekey>
-    <bcf:citekey order="4">rudin</bcf:citekey>
-    <bcf:citekey order="5">pompeiu</bcf:citekey>
-    <bcf:citekey order="6">protter-morrey</bcf:citekey>
-    <bcf:citekey order="7">rudin</bcf:citekey>
-    <bcf:citekey order="8">protter-morrey</bcf:citekey>
+    <bcf:citekey order="4">protter-morrey</bcf:citekey>
+    <bcf:citekey order="5">rudin</bcf:citekey>
+    <bcf:citekey order="6">pompeiu</bcf:citekey>
+    <bcf:citekey order="7">protter-morrey</bcf:citekey>
+    <bcf:citekey order="8">rudin</bcf:citekey>
     <bcf:citekey order="9">protter-morrey</bcf:citekey>
-    <bcf:citekey order="10">rudin</bcf:citekey>
-    <bcf:citekey order="11">counterexamples</bcf:citekey>
-    <bcf:citekey order="12">rudin</bcf:citekey>
-    <bcf:citekey order="13">saint-raymond</bcf:citekey>
-    <bcf:citekey order="14">spivak_calculus</bcf:citekey>
-    <bcf:citekey order="15">golub</bcf:citekey>
-    <bcf:citekey order="16">rudin</bcf:citekey>
-    <bcf:citekey order="17">konigsberger</bcf:citekey>
+    <bcf:citekey order="10">protter-morrey</bcf:citekey>
+    <bcf:citekey order="11">rudin</bcf:citekey>
+    <bcf:citekey order="12">counterexamples</bcf:citekey>
+    <bcf:citekey order="13">rudin</bcf:citekey>
+    <bcf:citekey order="14">saint-raymond</bcf:citekey>
+    <bcf:citekey order="15">spivak_calculus</bcf:citekey>
+    <bcf:citekey order="16">golub</bcf:citekey>
+    <bcf:citekey order="17">rudin</bcf:citekey>
+    <bcf:citekey order="18">konigsberger</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
