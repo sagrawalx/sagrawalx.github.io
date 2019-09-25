@@ -217,7 +217,7 @@ See \cref{multi-introductory-example-graph-tangent-lines}.
 
 These two tangent lines uniquely determine the entire tangent plane $T$ (ie, $T$ is the plane containing these two lines). One way of describing $T$ that immediately falls out of the parametrizations we've found of the tangent lines is the plane parametrized by
 \[ \begin{bmatrix} h \\ k \end{bmatrix} \mapsto \begin{bmatrix} 2 \\ 1 \\ 5 \end{bmatrix} + \begin{bmatrix} h \\ k \\ 4h + 2k \end{bmatrix}. \]
-The important part of this expression is the bottom entry on the far right, the $4h + 2k$. The function $\R^2 \to \R$ given by $(h, k)  \mapsto 4h + 2k$ is what we will call the \emph{total derivative} of $f$ and denote by $df_a$. 
+The important part of this expression is the bottom entry on the far right, the $4h + 2k$. The function $\R^2 \to \R$ given by $(h, k)  \mapsto 4h + 2k$ is what we will call the \emph{total derivative} or the \emph{differential} of $f$ and denote by $df_a$. 
 
 Notice that $df_a$ is a linear map $\R^2 \to \R$. Moreover, its graph is a plane passing through the origin that is parallel to $T$. In other words, if we take the graph of $df_a$ and translate it over to the point $(2,1,5)$, we obtain exactly the tangent plane $T$. Speaking more loosely, the derivative $df_a : \R^2 \to \R$ records all of the ``slopey information'' about the tangent plane $T$. 
 
@@ -246,11 +246,11 @@ Since $\epsilon$ gets small rapidly, we can say that the function $(h,k) \mapsto
 
 \subsection*{Overview}
 
-In what follows, we will turn the above example on its head and \emph{define} the derivative using approximations. In other words, the derivative $df_a$ will be defined to be a linear function which yields a good approximation of $f$ near a point $a$, and then we will prove in \cref{jacobian-matrix} that partial derivatives (ie, derivatives along various ``slices'') can be used to compute the standard matrix representation of the derivative. 
+In what follows, we will turn the above example on its head and \emph{define} the differential $df_a$ to be a linear function which yields a good approximation of $f$ near a point $a$, and then we will prove in \cref{jacobian-matrix} that partial derivatives (ie, derivatives along various ``slices'') can be used to compute the standard matrix representation of the the differential. 
 
-This might seem a bit ``backwards'' given our analysis of the example above, but there is a good reason for doing this; it turns out that there are some bizarre functions where partial derivatives make sense, but tangent planes do not (cf. \cref{partials-dont-imply-differentiable,directionals-dont-imply-differentiable}).
+This might seem a bit ``backwards'' given our analysis of the example above, but there is a good reason for doing this; it turns out that there are some bizarre functions where partial derivatives make sense, but tangent planes do not (cf. \cref{partials-dont-imply-differentiable,directionals-dont-imply-differentiable,directionals-and-linear-dont-imply-differentiable}).
 
-We'll be using a lot of linear algebra in this chapter. As mentioned in \cref{euclidean}, the notation $|-|$ will denote either the euclidean or the max norm on $\R^n$, and you can choose to interpret it to be whichever of the two norms you like better (in the calculation we did above, the euclidean norm was a little easier; but, in general, I find the max norm to be far more convenient). When it makes a difference which norm on $\R^n$ we have in mind, we'll specify this explicitly.  We'll also need some facts about the operator norm as we go along; I encourage you to at least skim through \cref{operator-norm-basic} before proceeding. 
+We'll be using a lot of linear algebra in this chapter. As mentioned in \cref{euclidean} and stated , the notation $|-|$ will denote either the euclidean or the max norm on $\R^n$, and you can choose to interpret it to be whichever of the two norms you like better (in the calculation we did above, the euclidean norm was a little easier; but, in general, I find the max norm to be far more convenient). When it makes a difference which norm on $\R^n$ we have in mind, we'll specify this explicitly.  We'll also need some facts about the operator norm as we go along; I encourage you to at least skim through \cref{operator-norm-basic} before proceeding. 
 
 \section{Definition of the derivative}
 
@@ -283,13 +283,16 @@ It turns out that there exists at most one linear map that has the above propert
 
 \Cref{differential-unique} tells us that the following definition makes sense.  
 
-\begin{definition}[Derivative at a point] \index{derivative!derivative at a point} \index{total derivative|see {derivative}} \index{differential|see {derivative}}
-	Suppose $f : S \to \R^n$ is differentiable at an interior point $a \in S$. Then the \emph{total derivative of $f$ at $a$}, denoted $df_a$, is the unique linear map $\R^m \to \R^n$ satisfying
+\begin{definition} 
+	Suppose $f : S \to \R^n$ is differentiable at an interior point $a \in S$. Then the \emph{total derivative} or the \emph{differential of $f$ at $a$}, denoted $df_a$, is the unique linear map $\R^m \to \R^n$ satisfying
 	\[ |f(a+v)-f(a)-df_a(h)| = o(|h|) \text{ as } h \to 0.  \]
-	Sometimes $df_a$ is also called the \emph{differential} of $f$ at $a$. 
 \end{definition}
 
-We've now defined the derivative, but it's fairly difficult to use this definition in practice. There are only a few examples that can be computed directly from this definition. Here are some.
+\begin{pedanticremark}
+	Since we're using $|-|$ to refer indiscriminately to both the euclidean and max norms, it might be worth pointing out that the above definition is independent of which norm you have in mind. More precisely, for any linear function $\ell : \R^m \to \R^n$, we have $|f(a+h)-f(a)-\ell(h)|_2 = o(|h|_2)$ if and only if $|f(a+h)-f(a)-\ell(h)|_\infty = o(|h|_\infty)$. You might try proving this; the key is \cref{max-euclidean}. Thus, if $df_a$ exists, it is a ``good'' approximation for $f(a+h)-f(a)$, independently of whether we're measuring distances using the euclidean norm or the max norm. 
+\end{pedanticremark}
+
+We've now defined the derivative, but it's fairly difficult to use this definition in practice. There are only a few examples that can be computed directly from this definition. Here are some that I think are instructive.
 
 \begin{exercise} \label{derivative-of-linear}
 	Suppose $\ell : \R^m \to \R^n$ is a linear map. Prove that $d\ell_a = \ell$ for all $a \in \R^m$.  
@@ -305,7 +308,7 @@ We've now defined the derivative, but it's fairly difficult to use this definiti
 	Suppose $v, w \in \R^n$ and $f : \R \to \R^n$ is given by $f(t) = v + tw$. Calculate $df_a$ for any $a \in \R$. What is $df_a(1)$?
 \end{exercise}
 
-We will develop a bit more theory in order to compute derivatives more easily. Meanwhile, we can prove the following directly from the definition. 
+We will develop a bit more theory in order to compute more effectively. Meanwhile, we can prove the following directly from the definition. 
 
 \begin{exercise} \label{differentiable-implies-continuous}
 	If $f : S \to \R^n$ is differentiable at an interior point $a \in S$, show that $f$ must be continuous at $a$. 
@@ -435,8 +438,14 @@ Recall that we asserted at the beginning of this chapter that the ``multi'' in t
 \begin{exercise} \label{components-are-small-implies-small}
 	Show that if $S$ is a neighborhood of 0 in $\R^m$ and $r :  S  \to \R^n$ is a function such that $|r_j(h)| = o(|h|)$ as $h \to 0$ for all $j = 1, \dotsc, n$, then $|r(h)| = o(|h|)$ also.
 	\begin{hint}
-		If you're using the euclidean norm, you may find it useful to do \cref{max-euclidean} first. 
+		This is easy if you're using the max norm. If you're using the euclidean norm, you may find it useful to do \cref{max-euclidean} first. 
 	\end{hint}
+\end{exercise}
+
+\begin{exercise}
+	Suppose $S$ is a subset of $\R$ and $f : S \to \R^n$ is differentiable at an interior point $a$. Show that the standard matrix representation $[df_a]$ of the linear map $df_a : \R \to \R^nn$ is given by 
+	\[ [df_a] = \begin{bmatrix} f_1'(a) \\ \vdots \\ f_n'(a) \end{bmatrix}, \]
+	where $f_j'(a)$ is the derivative of the single variable function $f_j : S \to \R$ in the sense of \cref{single}. 
 \end{exercise}
 
 \subsection{Product and quotient rules}
@@ -633,13 +642,15 @@ Now for the main result of this section: partial derivatives help us compute der
 	where the $\cdot$ denotes the dot product. 
 \end{remark}
 
-Now for the important caveat: unfortunately, the converse to \cref{differentiable-implies-directionals} is \emph{not} true: the existence of all partial derivatives is not sufficient to guarantee differentiability. In fact, even the existence of all \emph{directional} derivatives is not sufficient to guarantee differentiability. 
+Now for the important caveat: unfortunately, the converse to \cref{differentiable-implies-directionals} is \emph{not} true: the existence of all partial derivatives is not sufficient to guarantee differentiability. Even the existence of all \emph{directional} derivatives is not sufficient to guarantee differentiability. In fact, we cannot guarantee differentiability even if all directional derivatives exist \emph{and} the function $h \mapsto \partial_h f(a)$ is linear. 
+
+Here are three examples to drive home these points. They're useful examples to study closely; you'll gain valuable intuition about multivariable derivatives by doing so. 
 
 \begin{exercise} \label{partials-dont-imply-differentiable}
 	Consider the function $f : \R^2 \to \R$ defined as follows.
 	\[ f(x, y) = \begin{cases} \dfrac{x y}{x^2 + y^2} &  \text{if } (x, y) \neq 0 \\ 0 & \text{if } (x, y) = 0 \end{cases} \]
 	Show that the partial derivatives of $f$ with respect to $x$ and $y$ both exist at the origin, but that $f$ is not even continuous at the origin (so it cannot be differentiable, by \cref{differentiable-implies-continuous}). 
-	\begin{hint} Approach the origin along the line $y = rx$ for some nonzero $r$. See \cref{partials-dont-imply-differentiable-graph}. \end{hint}
+	\begin{hint} Slice along the line $y = rx$ for various $r$. See \cref{partials-dont-imply-differentiable-graph}. \end{hint}
 	\begin{figure}[ht]
 		\begin{center}
 			\begin{tikzpicture}
@@ -717,13 +728,28 @@ Now for the important caveat: unfortunately, the converse to \cref{differentiabl
 	\end{figure} 
 	Show that $f$ is continuous and that $\partial_h f(0)$ exists for all nonzero $h \in \R^2$, but that $f$ is not differentiable at the origin. 
 	\begin{hint}
-		To show that $f$ is not differentiable at the origin, suppose it were differentiable, and then find a vector $h \in \R^2$ such that 
-		\[ [df_0]h \neq \partial_h f(0), \]
-		which contradicts \cref{differentiable-implies-directionals}. 
+		Calculate a formula for $\partial_{(h,k)} f(0)$ for all $(h,k) \in \R^2$, and show that the function $\R^2 \to \R$ given by $(h,k) \mapsto \partial_{(h,k)} f(0)$ is not linear. Explain why \cref{differentiable-implies-directionals} then implies that $f$ is \emph{not} differentiable at 0.  
 	\end{hint}
 \end{exercise}
 
-Thankfully, this phenomenon is fairly pathological; \cref{continuous-partials} will provide a converse to \cref{differentiable-implies-directionals} under fairly mild additional hypotheses. 
+\begin{exercise} \label{directionals-and-linear-dont-imply-differentiable}
+	Consider the function $f : \R^2 \to \R$ given by
+	\[ f(x,y) = \begin{cases} |x| & \text{if } y = x^2 \\ 0 & \text{otherwise}. \end{cases} \]
+	\begin{enumerate}[(a)]
+		\item Doodle a picture of $f$ by hand.
+		\item Show that $f$ is continuous at the origin. 
+		\item Show that all directional derivatives of $f$ at the origin exist and are equal to 0. 
+		\begin{hint}
+			First show it for the partial derivatives, using \cref{directional-to-single}. Then fix $r \neq 0$ and show that $\partial_{(1,r)}f(0) = 0$, again using \cref{directional-to-single}. Then use \cref{basic-directional-derivative-properties} to conclude. 
+		\end{hint}
+		\item Show that $f$ is not differentiable at the origin.
+		\begin{hint}
+			Find a differentiable function $\gamma : \R \to \R^2$ such that $\gamma(0) = 0$ and $f \circ \gamma$ is not differentiable at the origin. Use the chain rule \ref{chain-rule} to conclude that $f$ cannot be differentiable at the origin. 
+		\end{hint}
+	\end{enumerate} 
+\end{exercise}
+
+Thankfully, this phenomenon is fairly pathological. \Cref{continuous-partials} below proves that the partial derivatives existing \emph{and being continuous} is sufficient to guarantee differentiability. 
 
 \subsection{Jacobian matrix}
 
@@ -756,18 +782,18 @@ which again looks superficially identical to the single variable product rule \r
 \subsection{Rank of a differentiable map}
 
 \begin{definition}[Rank of a differentiable map] \label{immersive-submersive-critical} \index{rank!of a differentiable function}
-	Suppose $f : S \to \R^n$ is differentiable at an interior point $a \in S$. The rank of the linear map $df_a : \R^m \to \R^n$ is also called the \emph{rank of $f$ at $a$}, denoted $\rank_a(f)$. Note that $\rank_a(f) \leq \min\{m,n\}$.
+	Suppose $f : S \to \R^n$ is differentiable at an interior point $a \in S$. The rank of the linear map $df_a : \R^m \to \R^n$ (or, equivalently, of the matrix $f'(a)$) is also called the \emph{rank of $f$ at $a$}, denoted $\rank_a(f)$. Note that we always have \[ \rank_a(f) \leq \min\{m,n\}. \]
+	We then make the following definitions in various special cases. 
 	\begin{itemize}
-		\item If $\rank_a(f) = m$, then we say that $f$ is \emph{immersive at $a$}.\index{immersive} Note that this is equivalent to asking that $df_a$ be injective. 
-		\item If $\rank_a(f) = n$, then we say that $f$ is \emph{submersive at $a$}.\index{submersive} Note that this is equivalent to asking that $df_a$ be surjective. 
-		\item If $\rank_a(f) = m = n$, then we say that $f$ is \emph{\'etale at $a$}.\index{etale@\'etale} Note that this is equivalent to asking that $df_a$ be an isomorphism. 
-		\item If $\rank_a(f) = \min\{m,n\}$, then we say that $a$ is a \emph{regular point} of $f$.\index{regular point} 
-		\item If $\rank_a(f) < \min\{m,n\}$, then we say that $a$ is a \emph{critical point} of $f$.\index{critical point}
-		\item If $b \in \R^n$ is a point such that every $a \in f^{-1}(b)$ is a regular point, then $b$ is called a \emph{regular value} of $f$. 
+		\item We say that $f$ is \emph{immersive at $a$}\index{immersive} if $\rank_a(f) = m$ (equivalently, if $df_a$ is injective). 
+		\item We say that $f$ is \emph{submersive at $a$}\index{submersive} if $\rank_a(f) = n$ (equivalently, if $df_a$ is surjective). 
+		\item We say that $f$ is \emph{\'etale at $a$}\index{etale@\'etale} if $\rank_a(f) = m = n$ (equivalently, if $df_a$ is an isomorphism). 
+		\item We say that $a$ is a \emph{regular point}\index{regular!regular point} of $f$ if $\rank_a(f) = \min\{m,n\}$. Otherwise, we say that $a$ is a \emph{critical point}\index{critical! critical point} of $f$.
 	\end{itemize}
+	We also say that a point $b \in \R^n$ is a \emph{regular value}\index{regular!regular value} of $f$ if every $a \in f^{-1}(b)$ is a regular point of $f$, and that it is a \emph{critical value}\index{critical!critical value} otherwise. 
 \end{definition}
 
-There are lots of relationships between these notions, depending on how $m$ compares to $n$. You should convince yourself of the following facts.  
+There are lots of relationships between these notions, depending on how the dimension of the domain, $m$, compares with the dimension of the codomain, $n$. You should convince yourself of the following facts.  
 \begin{itemize}
 	\item If $m > n$...
 	\begin{itemize}
@@ -786,11 +812,11 @@ There are lots of relationships between these notions, depending on how $m$ comp
 \end{itemize}
 
 \begin{caution}
-	A map $f$ being immersive or submersive at an interior point $a \in S$ is always defined as it is above, and critical points are always defined to be the opposite of regular points. But some mathematicians use a different definition of regularity: they define a point to be regular if $\rank_a(f) = n$, so that, by definition, it's \emph{always} true (for all $m, n$) that $f$ is a submersion at $a$ if and only if $a$ is a regular point of $f$. If $m \geq n$, there's no difference between these alternative definitions and our definitions. But, if $m < n$, there is a difference: these other mathematicians would say that all points are critical in this case, but that isn't true for us. So, if you see the words ``regular point'' and ``critical point'' in another text and it's possible that $m < n$, it's worth looking back to make sure you know what the author means!
+	Some mathematicians use a different definition of ``regular point.'' They define a point to be regular if $\rank_a(f) = n$, so that, by definition, it's \emph{always} true (for all $m, n$ regardless of how these two integers compare) that $f$ is a submersion at $a$ if and only if $a$ is a regular point of $f$. If $m \geq n$, there's no difference between these alternative definitions and our definitions. But, if $m < n$, there is a difference: these other mathematicians would say that all points are critical in this case, but that isn't true for us with the definitions we've made above. So, if you see the words ``regular point'' and ``critical point'' in another text and it's possible that $m < n$, it's worth looking back to make sure you know what the author means!
 \end{caution}
 
 \begin{unimportantremark}
-	While we're on the topic of terminology, it may be worth mentioning that the word ``\'etale'' is not commonly used in real analysis or in differential geometry; in fact, as far as I'm aware, there is no word in these fields that means that the derivative is invertible. But the word ``\'etale'' is used in algebraic geometry to mean that the derivative is invertible, so I decided to import this word from algebraic geometry. That said, if you do go on to study algebraic geometry at some point, it's worth noting the algebraic geometry words corresponding to ``immersive'' and ``submersive'' are ``unramified'' and ``smooth,'' respectively. This usage of ``smooth'' in algebraic geometry is unrelated to the real analysis and differential geometry usage of smooth. 
+	While we're on the topic of terminology, it may be worth mentioning that the word ``\'etale'' is not commonly used in real analysis or in differential geometry; in fact, as far as I'm aware, there is no word in these fields that means that the derivative is invertible. But the word ``\'etale'' is used in algebraic geometry to mean that the derivative is invertible, so I decided to import this word from algebraic geometry. That said, if you do go on to study algebraic geometry at some point, it's worth noting the algebraic geometry words corresponding to ``immersive'' and ``submersive'' are ``unramified'' and ``smooth,'' respectively. This usage of ``smooth'' in algebraic geometry is unrelated to the real analysis and differential geometry usage of smooth that we'll encounter later on. 
 \end{unimportantremark}
 
 \begin{example} \label{polar-map}
@@ -1001,7 +1027,7 @@ Throughout this section, $U$ denotes an open subset of $\R^m$. In this section, 
 
 \subsection{Vanishing derivatives}
 
-First off, here are some definitions that are rather useful. 
+First off, here are some definitions that are rather useful when studying functions that are differentiable everywhere on an open set. 
 
 \begin{definition} \label{straight-line-path}
 	If $a, b \in \R^n$, the \emph{straight line path} from $a$ to $b$ is the function
@@ -1248,10 +1274,12 @@ Proving local injectivity in general is very challenging, but is a bit easier if
 
 Suppose we have $a_1 < a_2$ such that $f(a_1) = f(a_2)$. We'll prove that this leads to a contradiction using two different but very similar arguments. The first argument is very quick. The mean value theorem guarantees that there exists $\xi$ between $a_1$ and $a_2$ such that $f'(\xi) = 0$, which contradicts our assumption that $f$ is \'etale. 
 
-The second argument is a little less quick, but in the end it's very similar to the first argument; the main reason for including it here is that it's somewhat similar in spirit to the general proof. The idea is to set $b := f(a_1) = f(a_2)$ and consider the function \[ \sigma(x) = (f(x)-b)^2. \]
-Since $\sigma$ is a continuous function on the compact interval $[a_1, a_2]$, the extreme value theorem guarantees that it attains its maximum at some point $\xi \in [a_1, a_2]$. Observe that $\sigma(a_1) = \sigma(a_2) = 0$ and that $\sigma \geq 0$. If the maximum $\xi$ occurred at one of the endpoints, then $\sigma = 0$ constantly, so $f$ is constantly equal to $b$, which means the derivative vanishes on $(a_1, a_2)$ by \cref{constant-iff-derivative-zero}, contradicting our assumption that $f$ is \'etale. Thus $\xi$ is an interior point of the interval $(a_1, a_2)$. Then the interior extremum theorem \ref{interior-extremum} plus the chain rule tells us that
-\[ 0 = \sigma'(\xi) = 2f'(\xi),  \]
-which means that $f'(\xi) = 0$, again contradicting our assumption that $f$ is \'etale. 
+The second argument avoids using the mean value theorem basically by proving the mean value theorem for this particular situation. The idea is to set $b := f(a_1) = f(a_2)$ and consider the function \[ \sigma(x) = (f(x)-b)^2. \]
+Since $\sigma$ is a continuous function on the compact interval $[a_1, a_2]$, the extreme value theorem guarantees that it attains its maximum at some point $\xi \in [a_1, a_2]$. Observe that $\sigma(a_1) = \sigma(a_2) = 0$ and $\sigma \geq 0$, so if $\sigma(\xi) = 0$, then $\sigma = 0$ constantly, so $f$ is constantly equal to $b$, which means the derivative vanishes on $(a_1, a_2)$ by \cref{constant-iff-derivative-zero}, contradicting our assumption that $f$ is \'etale. Thus $\sigma(\xi)$ must be an interior point of the interval $(a_1, a_2)$ and $\sigma(\xi) \neq 0$, ie, $f(\xi) \neq b$. Then the interior extremum theorem \ref{interior-extremum} plus the chain rule tells us that
+\[ 0 = \sigma'(\xi) = 2(f(\xi) - b)f'(\xi).  \]
+Since $f(\xi) \neq b$, this says that $f'(\xi) = 0$, which again contradicts our assumption that $f$ is \'etale. 
+
+This second argument is useful because the proof in the general setting involves maximizing a multivariable function that's very similar to the single variable function $\sigma$ above. But before we get to the general proof, here is another proof under additional hypotheses. 
 
 \mbox{}
 
@@ -1298,7 +1326,7 @@ The following theorem is the promised sort-of-converse to \cref{differentiable-i
 	Suppose $f : U \to \R$ is a function such that the $i$th partial derivative $\partial_i f : U \to \R$ exists for all $i = 1 , \dotsc m$. If $a \in U$ is a point such that $\partial_i f$ is continuous at $a$ for all $i$, then $f$ is differentiable at $a$. 
 \end{theorem}
 
-\begin{proof}[Proof \starred]
+\begin{proof}[Proof]
 	If $f$ is to be differentiable at $a$, we know from \cref{jacobian-matrix} what $df_a$ needs to be in terms of the partial derivatives; so let's turn this on its head by writing down the linear map defined by the partial derivatives, and then proving that that linear map is in fact $df_a$. 
 	
 	More precisely, we mean the following. Let $\ell$ be the linear map $\R^m \to \R$ such that \[ [\ell] = \begin{bmatrix}

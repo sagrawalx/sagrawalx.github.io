@@ -134,7 +134,7 @@ Quiz 1 revisions (1–2pm).
 <td rowspan="2">Tue</td>
 <td>Multivariable: Computations</td>
 <td>Read: 2.3  
-Do: <!--1, 5, 16, 18, 37--> </td>
+Do: 2, 5, 10, 24, 28, 39</td>
 <td></td>
 </tr>
 
@@ -148,7 +148,7 @@ Office hours (1–2pm).
 <td rowspan="2">Wed</td>
 <td>Multivariable: Differentiable functions</td>
 <td>Read: 2.4  
-Do: </td>
+Do: 8, 11, 14, 18</td>
 <td>
 </td>
 </tr>
