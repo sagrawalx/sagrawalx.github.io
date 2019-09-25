@@ -100,84 +100,86 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.C}Differentiability by components}{86}{subsection.362}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.D}Product and quotient rules}{87}{subsection.367}
+\contentsline {subsection}{\numberline {2.3.D}Product and quotient rules}{87}{subsection.368}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.E}Directional and partial derivatives}{88}{subsection.371}
+\contentsline {subsection}{\numberline {2.3.E}Directional and partial derivatives}{89}{subsection.372}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.F}Jacobian matrix}{95}{subsection.394}
+\contentsline {subsection}{\numberline {2.3.F}Jacobian matrix}{96}{subsection.400}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.G}Rank of a differentiable map}{96}{subsection.398}
+\contentsline {subsection}{\numberline {2.3.G}Rank of a differentiable map}{97}{subsection.404}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Differentiable functions}{101}{section.410}
+\contentsline {section}{\numberline {2.4}Differentiable functions}{102}{section.416}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.A}Vanishing derivatives}{101}{subsection.413}
+\contentsline {subsection}{\numberline {2.4.A}Vanishing derivatives}{102}{subsection.419}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.B}Bounded derivatives}{103}{subsection.426}
+\contentsline {subsection}{\numberline {2.4.B}Bounded derivatives}{104}{subsection.432}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.C}Inverse function theorem}{104}{subsection.432}
+\contentsline {subsection}{\numberline {2.4.C}Inverse function theorem}{105}{subsection.438}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.D}Proof of the inverse function theorem $\star $}{106}{subsection.440}
+\contentsline {subsection}{\numberline {2.4.D}Proof of the inverse function theorem $\star $}{107}{subsection.446}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}$C^k$ hierarchy}{112}{section.456}
+\contentsline {section}{\numberline {2.5}$C^k$ hierarchy}{114}{section.462}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.A}Continuous differentiability}{113}{subsection.457}
+\contentsline {subsection}{\numberline {2.5.A}Continuous differentiability}{114}{subsection.463}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.B}$C^k$ functions}{119}{subsection.479}
+\contentsline {subsection}{\numberline {2.5.B}$C^k$ functions}{120}{subsection.485}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.C}Equality of mixed partials $\star $}{120}{subsection.486}
+\contentsline {subsection}{\numberline {2.5.C}Equality of mixed partials $\star $}{121}{subsection.492}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.D}Taylor's theorem $\star $}{122}{subsection.494}
+\contentsline {subsection}{\numberline {2.5.D}Taylor's theorem $\star $}{123}{subsection.500}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.E}Smooth functions}{129}{subsection.510}
+\contentsline {subsection}{\numberline {2.5.E}Smooth functions}{130}{subsection.516}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Manifolds}{133}{chapter.523}
+\contentsline {chapter}{\numberline {3}Manifolds}{135}{chapter.529}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Definition of a manifold}{134}{section.524}
+\contentsline {section}{\numberline {3.1}Definition of a manifold}{136}{section.530}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.A}Charts}{134}{subsection.525}
+\contentsline {subsection}{\numberline {3.1.A}Charts}{136}{subsection.531}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.B}Compatibility of charts}{135}{subsection.529}
+\contentsline {subsection}{\numberline {3.1.B}Compatibility of charts}{137}{subsection.535}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.C}Atlases and manifolds}{136}{subsection.536}
+\contentsline {subsection}{\numberline {3.1.C}Atlases and manifolds}{138}{subsection.542}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.D}Dimension}{137}{subsection.540}
+\contentsline {subsection}{\numberline {3.1.D}Dimension}{139}{subsection.546}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Examples}{137}{section.542}
+\contentsline {section}{\numberline {3.2}Examples}{139}{section.548}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.A}First examples}{137}{subsection.543}
+\contentsline {subsection}{\numberline {3.2.A}First examples}{139}{subsection.549}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.B}M\"obius strip}{140}{subsection.563}
+\contentsline {subsection}{\numberline {3.2.B}M\"obius strip}{142}{subsection.569}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.C}More quotient examples}{143}{subsection.570}
+\contentsline {subsection}{\numberline {3.2.C}More quotient examples}{145}{subsection.576}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.D}Submanifolds}{143}{subsection.574}
+\contentsline {subsection}{\numberline {3.2.D}Submanifolds}{145}{subsection.580}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.E}Submanifolds of euclidean space}{147}{subsection.587}
+\contentsline {subsection}{\numberline {3.2.E}Submanifolds of euclidean space}{149}{subsection.593}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Smooth functions}{150}{section.597}
+\contentsline {section}{\numberline {3.3}Smooth functions}{152}{section.603}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.A}Smooth real-valued functions}{150}{subsection.598}
+\contentsline {subsection}{\numberline {3.3.A}Smooth real-valued functions}{152}{subsection.604}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.B}Smooth functions between manifolds}{153}{subsection.618}
+\contentsline {subsection}{\numberline {3.3.B}Smooth functions between manifolds}{155}{subsection.624}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.C}Paths}{155}{subsection.631}
+\contentsline {subsection}{\numberline {3.3.C}Paths}{157}{subsection.637}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.D}Diffeomorphisms}{155}{subsection.632}
+\contentsline {subsection}{\numberline {3.3.D}Diffeomorphisms}{157}{subsection.638}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Tangent Spaces}{157}{chapter.639}
+\contentsline {chapter}{\numberline {4}Tangent Spaces}{159}{chapter.645}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Tangent space}{157}{section.640}
+\contentsline {section}{\numberline {4.1}Tangent space}{159}{section.646}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.A}Curves based at a point}{157}{subsection.641}
+\contentsline {subsection}{\numberline {4.1.A}Curves based at a point}{159}{subsection.647}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.B}Vector space structure}{158}{subsection.646}
+\contentsline {subsection}{\numberline {4.1.B}Vector space structure}{160}{subsection.652}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.C}Derivations $\star $}{162}{subsection.664}
+\contentsline {subsection}{\numberline {4.1.C}Derivations $\star $}{164}{subsection.670}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Pushforward}{164}{section.673}
+\contentsline {section}{\numberline {4.2}Pushforward}{166}{section.679}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.A}Definition of the pushforward}{164}{subsection.674}
+\contentsline {subsection}{\numberline {4.2.A}Definition of the pushforward}{166}{subsection.680}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.B}Rank of a smooth map}{166}{subsection.681}
+\contentsline {subsection}{\numberline {4.2.B}Rank of a smooth map}{168}{subsection.687}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Index}{167}{chapter*.685}
+\contentsline {chapter}{\nonumberline Bibliography}{169}{chapter*.691}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Index}{171}{chapter*.692}

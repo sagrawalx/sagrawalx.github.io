@@ -48,44 +48,45 @@
 \BOOKMARK [2][-]{subsection.351}{Sum and scalar multiples rule}{section.350}% 48
 \BOOKMARK [2][-]{subsection.354}{Chain rule}{section.350}% 49
 \BOOKMARK [2][-]{subsection.362}{Differentiability by components}{section.350}% 50
-\BOOKMARK [2][-]{subsection.367}{Product and quotient rules}{section.350}% 51
-\BOOKMARK [2][-]{subsection.371}{Directional and partial derivatives}{section.350}% 52
-\BOOKMARK [2][-]{subsection.394}{Jacobian matrix}{section.350}% 53
-\BOOKMARK [2][-]{subsection.398}{Rank of a differentiable map}{section.350}% 54
-\BOOKMARK [1][-]{section.410}{Differentiable functions}{chapter.328}% 55
-\BOOKMARK [2][-]{subsection.413}{Vanishing derivatives}{section.410}% 56
-\BOOKMARK [2][-]{subsection.426}{Bounded derivatives}{section.410}% 57
-\BOOKMARK [2][-]{subsection.432}{Inverse function theorem}{section.410}% 58
-\BOOKMARK [2][-]{subsection.440}{Proof of the inverse function theorem *}{section.410}% 59
-\BOOKMARK [1][-]{section.456}{Ck hierarchy}{chapter.328}% 60
-\BOOKMARK [2][-]{subsection.457}{Continuous differentiability}{section.456}% 61
-\BOOKMARK [2][-]{subsection.479}{Ck functions}{section.456}% 62
-\BOOKMARK [2][-]{subsection.486}{Equality of mixed partials *}{section.456}% 63
-\BOOKMARK [2][-]{subsection.494}{Taylor's theorem *}{section.456}% 64
-\BOOKMARK [2][-]{subsection.510}{Smooth functions}{section.456}% 65
-\BOOKMARK [0][-]{chapter.523}{Manifolds}{}% 66
-\BOOKMARK [1][-]{section.524}{Definition of a manifold}{chapter.523}% 67
-\BOOKMARK [2][-]{subsection.525}{Charts}{section.524}% 68
-\BOOKMARK [2][-]{subsection.529}{Compatibility of charts}{section.524}% 69
-\BOOKMARK [2][-]{subsection.536}{Atlases and manifolds}{section.524}% 70
-\BOOKMARK [2][-]{subsection.540}{Dimension}{section.524}% 71
-\BOOKMARK [1][-]{section.542}{Examples}{chapter.523}% 72
-\BOOKMARK [2][-]{subsection.543}{First examples}{section.542}% 73
-\BOOKMARK [2][-]{subsection.563}{M\366bius strip}{section.542}% 74
-\BOOKMARK [2][-]{subsection.570}{More quotient examples}{section.542}% 75
-\BOOKMARK [2][-]{subsection.574}{Submanifolds}{section.542}% 76
-\BOOKMARK [2][-]{subsection.587}{Submanifolds of euclidean space}{section.542}% 77
-\BOOKMARK [1][-]{section.597}{Smooth functions}{chapter.523}% 78
-\BOOKMARK [2][-]{subsection.598}{Smooth real-valued functions}{section.597}% 79
-\BOOKMARK [2][-]{subsection.618}{Smooth functions between manifolds}{section.597}% 80
-\BOOKMARK [2][-]{subsection.631}{Paths}{section.597}% 81
-\BOOKMARK [2][-]{subsection.632}{Diffeomorphisms}{section.597}% 82
-\BOOKMARK [0][-]{chapter.639}{Tangent Spaces}{}% 83
-\BOOKMARK [1][-]{section.640}{Tangent space}{chapter.639}% 84
-\BOOKMARK [2][-]{subsection.641}{Curves based at a point}{section.640}% 85
-\BOOKMARK [2][-]{subsection.646}{Vector space structure}{section.640}% 86
-\BOOKMARK [2][-]{subsection.664}{Derivations *}{section.640}% 87
-\BOOKMARK [1][-]{section.673}{Pushforward}{chapter.639}% 88
-\BOOKMARK [2][-]{subsection.674}{Definition of the pushforward}{section.673}% 89
-\BOOKMARK [2][-]{subsection.681}{Rank of a smooth map}{section.673}% 90
-\BOOKMARK [0][-]{chapter*.685}{Index}{}% 91
+\BOOKMARK [2][-]{subsection.368}{Product and quotient rules}{section.350}% 51
+\BOOKMARK [2][-]{subsection.372}{Directional and partial derivatives}{section.350}% 52
+\BOOKMARK [2][-]{subsection.400}{Jacobian matrix}{section.350}% 53
+\BOOKMARK [2][-]{subsection.404}{Rank of a differentiable map}{section.350}% 54
+\BOOKMARK [1][-]{section.416}{Differentiable functions}{chapter.328}% 55
+\BOOKMARK [2][-]{subsection.419}{Vanishing derivatives}{section.416}% 56
+\BOOKMARK [2][-]{subsection.432}{Bounded derivatives}{section.416}% 57
+\BOOKMARK [2][-]{subsection.438}{Inverse function theorem}{section.416}% 58
+\BOOKMARK [2][-]{subsection.446}{Proof of the inverse function theorem *}{section.416}% 59
+\BOOKMARK [1][-]{section.462}{Ck hierarchy}{chapter.328}% 60
+\BOOKMARK [2][-]{subsection.463}{Continuous differentiability}{section.462}% 61
+\BOOKMARK [2][-]{subsection.485}{Ck functions}{section.462}% 62
+\BOOKMARK [2][-]{subsection.492}{Equality of mixed partials *}{section.462}% 63
+\BOOKMARK [2][-]{subsection.500}{Taylor's theorem *}{section.462}% 64
+\BOOKMARK [2][-]{subsection.516}{Smooth functions}{section.462}% 65
+\BOOKMARK [0][-]{chapter.529}{Manifolds}{}% 66
+\BOOKMARK [1][-]{section.530}{Definition of a manifold}{chapter.529}% 67
+\BOOKMARK [2][-]{subsection.531}{Charts}{section.530}% 68
+\BOOKMARK [2][-]{subsection.535}{Compatibility of charts}{section.530}% 69
+\BOOKMARK [2][-]{subsection.542}{Atlases and manifolds}{section.530}% 70
+\BOOKMARK [2][-]{subsection.546}{Dimension}{section.530}% 71
+\BOOKMARK [1][-]{section.548}{Examples}{chapter.529}% 72
+\BOOKMARK [2][-]{subsection.549}{First examples}{section.548}% 73
+\BOOKMARK [2][-]{subsection.569}{M\366bius strip}{section.548}% 74
+\BOOKMARK [2][-]{subsection.576}{More quotient examples}{section.548}% 75
+\BOOKMARK [2][-]{subsection.580}{Submanifolds}{section.548}% 76
+\BOOKMARK [2][-]{subsection.593}{Submanifolds of euclidean space}{section.548}% 77
+\BOOKMARK [1][-]{section.603}{Smooth functions}{chapter.529}% 78
+\BOOKMARK [2][-]{subsection.604}{Smooth real-valued functions}{section.603}% 79
+\BOOKMARK [2][-]{subsection.624}{Smooth functions between manifolds}{section.603}% 80
+\BOOKMARK [2][-]{subsection.637}{Paths}{section.603}% 81
+\BOOKMARK [2][-]{subsection.638}{Diffeomorphisms}{section.603}% 82
+\BOOKMARK [0][-]{chapter.645}{Tangent Spaces}{}% 83
+\BOOKMARK [1][-]{section.646}{Tangent space}{chapter.645}% 84
+\BOOKMARK [2][-]{subsection.647}{Curves based at a point}{section.646}% 85
+\BOOKMARK [2][-]{subsection.652}{Vector space structure}{section.646}% 86
+\BOOKMARK [2][-]{subsection.670}{Derivations *}{section.646}% 87
+\BOOKMARK [1][-]{section.679}{Pushforward}{chapter.645}% 88
+\BOOKMARK [2][-]{subsection.680}{Definition of the pushforward}{section.679}% 89
+\BOOKMARK [2][-]{subsection.687}{Rank of a smooth map}{section.679}% 90
+\BOOKMARK [0][-]{chapter*.691}{Bibliography}{}% 91
+\BOOKMARK [0][-]{chapter*.692}{Index}{}% 92
