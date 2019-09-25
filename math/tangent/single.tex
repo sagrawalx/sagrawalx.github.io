@@ -182,7 +182,7 @@ Notice that the function $h \mapsto f'(a)h$ is a linear map $\R \to \R$, in the 
 \end{proof}
 
 \begin{definition}
-	If $f : S \to \R$ is differentiable at an interior point $a \in U$, we define $df_a : \R \to \R$ to be the linear map $df_a(h) = f'(a)h$. The function $df_a$ is sometimes called the \emph{total derivative} or the \emph{differential of $f$ at $a$}. 
+	If $f : S \to \R$ is differentiable at an interior point $a \in S$, we define $df_a : \R \to \R$ to be the linear map $df_a(h) = f'(a)h$. The function $df_a$ is sometimes called the \emph{total derivative} or the \emph{differential of $f$ at $a$}. 
 \end{definition}
 
 Thus \cref{differential-unique-single} says that $df_a$ is the only good linear approximation to the function \[ h \mapsto f(a+h)-f(a). \] Being the \emph{only good} linear approximation, it is also the \emph{best} linear approximation, whence the name of this section. The following is an important version of this same idea that comes up frequently in proofs. 
@@ -293,7 +293,7 @@ When you use \cref{differential-unique-single}, you may find it useful to have d
 \end{exercise}
 
 \begin{exercise}[Quotient rule] \label{quotient-rule-single} \index{quotient rule}
-	Suppose $f, g : S \to \R$ are both differentiable at an interior point $a \in U$, and that $g(a) \neq 0$. Prove that $f/g$ is also differentiable at $a$ and 
+	Suppose $f, g : S \to \R$ are both differentiable at an interior point $a \in S$, and that $g(a) \neq 0$. Prove that $f/g$ is also differentiable at $a$ and 
 	\[ (f/g)'(a) = \frac{g(a)f'(a) - f(a)g'(a)}{g(a)^2}. \] 
 	\begin{hint} Observe that \[ \frac{(f/g)(a+h)-(f/g)(a)}{h} = \frac{\frac{f(a+h)}{g(a+h)} - \frac{f(a)}{g(a)} }{h}. \]
 	Multiply both the numerator and denominator by $g(a+h)g(a)$ to clear the denominators inside the numerator, and then introduce the cross term $f(a)g(a)$. Be sure to notice at what point you use \cref{differentiable-implies-continuous-single}.
@@ -624,7 +624,7 @@ In this section, we'll discuss some properties of functions which are differenti
 	Suppose $U$ is an open subset of $\R$. A function $f : U \to \R$ is \emph{differentiable} it is differentiable at every point in $U$. More generally, if $S$ is any subset of $\R$ and $f : S \to \R$ is a function, we say that $f$ is \emph{differentiable on the interior} if $f|_{S^\circ}$ is differentiable (ie, if $f$ is differentiable at every interior point of $S$). 
 \end{definition}
 
-Every open subset of $\R$ is a countable disjoint union of open intervals\footnotemark\ (cf. \cite[theorem 6.17]{protter-morrey}). This means that the most important case is when the domain happens to be an interval, and many of the theorems in this section will be about this situation. 
+Every open subset of $\R$ is a countable disjoint union of open intervals\footnotemark\ (cf. \cite[theorem 6.17]{protter-morrey}), so the most important case is when the domain happens to be an interval, and many of the theorems in this section will be about this situation. 
 
 \footnotetext{By the word \emph{interval}\index{interval}, we mean an uncountable connected subset of $\R$. This means that intervals can be open, closed, or half-open; and they can be bounded or unbounded. They cannot be just a single point.}
 
@@ -1122,16 +1122,24 @@ We saw in \cref{darboux-section} that the derivative of a differentiable functio
 	Suppose $U$ is an open subset of $\R$ and $f : U \to \R$ is differentiable. If the derivative $f' : U \to \R$ is also continuous, then $f$ is said to be \emph{continuously differentiable}.\index{continuously differentiable} 
 \end{definition}
 
-For example, we saw in \cref{positive-not-monotone} that $f(x) = x + 2x^2\sin(1/x)$ defined a differentiable function $f : \R \to \R$ such that $f'(0) \neq 0$, but which is not monotone on any interval containing that point. This is rather bizarre behavior, and it cannot happen with continuously differentiable functions. 
+Here is an important ``reasonableness'' property of continuously differentiable functions. 
+
+\begin{exercise} \label{critical-locus-closed-single}
+	Show that, if $f : U \to \R$ is continuously differentiable, then the set
+	\[ C = \{ x \in U : f'(x) = 0 \} \]
+	is a closed subset of $U$. 
+\end{exercise}
+
+\Cref{critical-locus-closed-single} actually tells us that lots of strange pathological behavior is ruled out by insisting that the derivative is continuous. For example, we saw in \cref{positive-not-monotone} that $f(x) = x + 2x^2\sin(1/x)$ defined a differentiable function $f : \R \to \R$ such that $f'(0) \neq 0$, but which is not monotone on any interval containing that point. This is rather bizarre behavior, and it cannot happen with continuously differentiable functions. 
 
 \begin{exercise} \label{nonzero-derivative-at-point-implies-monotone-in-neighborhood}
-	Suppose $f : U \to \R$ is continuously differentiable, and $a \in U$ is a point such that $f'(a) \neq 0$. Show that there exists an open interval containing $a$ on which $f$ is strictly monotone. 
+	Suppose $f : U \to \R$ is continuously differentiable, and $a \in U$ is a point such that $f'(a) \neq 0$. Use \cref{critical-locus-closed-single} to conclude that there exists an open interval containing $a$ on which $f$ is strictly monotone. 
 \end{exercise}
 
 To appreciate the following fact, it's worth noting the following: there exist \emph{non-constant} differentiable functions $f : U \to \R$ such that $f'(x) = 0$ for all $x \in U \cap \Q$! These extremely bizarre functions were first found by Pompeiu \cite{pompeiu}. This pathological behavior is also ruled out by insisting that the derivative be continuous. 
 
 \begin{exercise} \label{critical-dense-implies-constant}
-	Suppose $f : U \to \R$ is continuously differentiable. Show that, if $f'(x) = 0$ for all $x \in U \cap \Q$, then $f$ is constant. 
+	Suppose $f : U \to \R$ is continuously differentiable. Use \cref{critical-locus-closed-single} to show that, if $f'(x) = 0$ for all $x \in U \cap \Q$, then $f$ is constant. 
 \end{exercise}
 
 Unfortunately, insisting that the derivative of a function be continuous does not rule out all possible bizarre behavior. For example, in \cref{extremum-no-sign-change}, we saw that $f(x) = x^4 \left( 2 + \sin(1/x) \right)$ defined a differentiable function $f$ with an absolute minimum at 0, but the derivative doesn't just simply ``change sign'' at 0. In fact, it turns out that function is also continuously differentiable (cf. \cref{extremum-no-sign-change-continued}), so merely insisting on continuous differentiability does not quite manage to rule out that kind of pathological behavior. However, as it turns out, the derivative of $f'$ (called the ``second derivative'' of $f$, and denoted $f''$), turns out \emph{not} to be continuous. 
@@ -1349,7 +1357,7 @@ We can now return to our discussion of the pathology exhibited by the function $
 The difference $f(a+h) - p_k(h)$ is often called a ``remainder,''\index{remainder} since it's what's left over after we approximate $f$ by its Taylor polynomial. It turns out that if $f$ is $C^{k+1}$, we can use the mean value theorem to express this remainder in terms of the $(k+1)$st derivative. 
 
 \begin{theorem}[Taylor's theorem with remainder, Lagrange form] \label{taylor-single-remainder-lagrange}
-	Suppose $I$ is an open interval, $f : I \to \R$ is $C^{k+1}$ for some non-negative integer $k$ and $a \in U$. Then for any $h$ such that $a+h \in I$, there exists $\xi$ between $a$ and $a+h$ such that 
+	Suppose $I$ is an open interval, $f : I \to \R$ is $C^{k+1}$ for some non-negative integer $k$ and $a \in I$. Then for any $h$ such that $a+h \in I$, there exists $\xi$ between $a$ and $a+h$ such that 
 	\[ f(a+h) - p_k(h) = \frac{f^{(k+1)}(\xi)}{(k+1)!}h^{k+1}, \]
 	where $p_k$ is the degree $k$ Taylor polynomial of $f$ at $a$. 
 \end{theorem}

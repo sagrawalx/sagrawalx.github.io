@@ -190,7 +190,7 @@ Notice that the function $h \mapsto f'(a)h$ is a linear map $\R \to \R$, in the 
 \end{proof}
 
 \begin{definition}
-	If $f : S \to \R$ is differentiable at an interior point $a \in U$, we define $df_a : \R \to \R$ to be the linear map $df_a(h) = f'(a)h$. The function $df_a$ is sometimes called the \emph{total derivative} or the \emph{differential of $f$ at $a$}. 
+	If $f : S \to \R$ is differentiable at an interior point $a \in S$, we define $df_a : \R \to \R$ to be the linear map $df_a(h) = f'(a)h$. The function $df_a$ is sometimes called the \emph{total derivative} or the \emph{differential of $f$ at $a$}. 
 \end{definition}
 
 Thus \cref{differential-unique-single} says that $df_a$ is the only good linear approximation to the function \[ h \mapsto f(a+h)-f(a). \] Being the \emph{only good} linear approximation, it is also the \emph{best} linear approximation, whence the name of this section. The following is an important version of this same idea that comes up frequently in proofs. 
@@ -301,7 +301,7 @@ When you use \cref{differential-unique-single}, you may find it useful to have d
 \end{exercise}
 
 \begin{exercise}[Quotient rule] \label{quotient-rule-single} \index{quotient rule}
-	Suppose $f, g : S \to \R$ are both differentiable at an interior point $a \in U$, and that $g(a) \neq 0$. Prove that $f/g$ is also differentiable at $a$ and 
+	Suppose $f, g : S \to \R$ are both differentiable at an interior point $a \in S$, and that $g(a) \neq 0$. Prove that $f/g$ is also differentiable at $a$ and 
 	\[ (f/g)'(a) = \frac{g(a)f'(a) - f(a)g'(a)}{g(a)^2}. \] 
 	\begin{hint} Observe that \[ \frac{(f/g)(a+h)-(f/g)(a)}{h} = \frac{\frac{f(a+h)}{g(a+h)} - \frac{f(a)}{g(a)} }{h}. \]
 	Multiply both the numerator and denominator by $g(a+h)g(a)$ to clear the denominators inside the numerator, and then introduce the cross term $f(a)g(a)$. Be sure to notice at what point you use \cref{differentiable-implies-continuous-single}.
@@ -1136,7 +1136,7 @@ We saw in \cref{darboux-section} that the derivative of a differentiable functio
 For example, we saw in \cref{positive-not-monotone} that $f(x) = x + 2x^2\sin(1/x)$ defined a differentiable function $f : \R \to \R$ such that $f'(0) \neq 0$, but which is not monotone on any interval containing that point. This is rather bizarre behavior, and it cannot happen with continuously differentiable functions. 
 
 \begin{exercise} \label{nonzero-derivative-at-point-implies-monotone-in-neighborhood}
-	Suppose $f : U \to \R$ is continuously differentiable, and $a \in U$ is a point such that $f'(a) \neq 0$. Show that there exists an open interval containing $a$ on which $f$ is strictly monotone. 
+	Suppose $f : U \to \R$ is continuously differentiable, and $a \in S$ is a point such that $f'(a) \neq 0$. Show that there exists an open interval containing $a$ on which $f$ is strictly monotone. 
 \end{exercise}
 
 To appreciate the following fact, it's worth noting the following: there exist \emph{non-constant} differentiable functions $f : U \to \R$ such that $f'(x) = 0$ for all $x \in U \cap \Q$! These extremely bizarre functions were first found by Pompeiu \cite{pompeiu}. This pathological behavior is also ruled out by insisting that the derivative be continuous. 
