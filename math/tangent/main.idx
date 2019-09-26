@@ -75,27 +75,27 @@
 \indexentry{chain rule|hyperpage}{39}
 \indexentry{inverse function|hyperpage}{39}
 \indexentry{error in approximation function@``error in approximation'' function|hyperpage}{43}
-\indexentry{extremum!local extremum|hyperpage}{46}
-\indexentry{extremum!local maximum|hyperpage}{46}
-\indexentry{extremum!local minimum|hyperpage}{46}
-\indexentry{extremum!absolute maximum|hyperpage}{46}
-\indexentry{extremum!absolute minimum|hyperpage}{46}
-\indexentry{extremum!absolute extremum|hyperpage}{46}
+\indexentry{extremum!local extremum|hyperpage}{45}
+\indexentry{extremum!local maximum|hyperpage}{45}
+\indexentry{extremum!local minimum|hyperpage}{45}
+\indexentry{extremum!absolute maximum|hyperpage}{45}
+\indexentry{extremum!absolute minimum|hyperpage}{45}
+\indexentry{extremum!absolute extremum|hyperpage}{45}
 \indexentry{extremum!interior extremum theorem|hyperpage}{46}
 \indexentry{interior extremum theorem|hyperindexformat{\see {extremum}}}{46}
-\indexentry{extremum!local extremum|hyperpage}{47}
+\indexentry{extremum!local extremum|hyperpage}{46}
 \indexentry{power rule|hyperpage}{47}
 \indexentry{power series|hyperpage}{47}
 \indexentry{extremum!absolute minimum|hyperpage}{49}
-\indexentry{differentiable|hyperpage}{50}
-\indexentry{derivative|hyperpage}{50}
+\indexentry{differentiable|hyperpage}{49}
+\indexentry{derivative|hyperpage}{49}
+\indexentry{mean value theorem|hyperpage}{50}
 \indexentry{mean value theorem!rolles theorem@Rolle's theorem|hyperpage}{50}
 \indexentry{rolles theorem@Rolle's theorem|hyperindexformat{\see {mean value theorem}}}{50}
 \indexentry{interval|hyperpage}{50}
-\indexentry{extremum!extreme value theorem|hyperpage}{50}
-\indexentry{extreme value theorem|hyperindexformat{\see {extremum}}}{50}
-\indexentry{mean value theorem|hyperpage}{52}
 \indexentry{constant function|hyperpage}{52}
+\indexentry{extremum!extreme value theorem|hyperpage}{52}
+\indexentry{extreme value theorem|hyperindexformat{\see {extremum}}}{52}
 \indexentry{monotone|hyperpage}{53}
 \indexentry{monotone!increasing|hyperpage}{53}
 \indexentry{monotone!decreasing|hyperpage}{53}
@@ -129,17 +129,17 @@
 \indexentry{Cinfinity@$C^\infty$|hyperindexformat{\see {smooth}}}{69}
 \indexentry{infinitely differentiable|hyperindexformat{\see {smooth}}}{69}
 \indexentry{diffeomorphism|hyperpage}{70}
-\indexentry{monotone!strictly increasing|hyperpage}{70}
-\indexentry{intermediate value theorem|hyperpage}{70}
+\indexentry{monotone!strictly increasing|hyperpage}{71}
+\indexentry{intermediate value theorem|hyperpage}{71}
 \indexentry{diffeomorphism|hyperpage}{71}
-\indexentry{infinitely flat functions@``infinitely flat'' functions|hyperpage}{71}
+\indexentry{infinitely flat functions@``infinitely flat'' functions|hyperpage}{72}
 \indexentry{lhopitals rule@L'H\^opital's rule|hyperpage}{72}
-\indexentry{bump function|hyperpage}{73}
-\indexentry{support|hyperpage}{73}
+\indexentry{bump function|hyperpage}{74}
+\indexentry{support|hyperpage}{74}
 \indexentry{infinitely flat function@``infinitely flat'' function|hyperpage}{74}
 \indexentry{bridge function@``bridge'' function|hyperpage}{75}
 \indexentry{fundamental theorem of calculus|hyperpage}{75}
-\indexentry{bridge function@``bridge'' function|hyperpage}{75}
+\indexentry{bridge function@``bridge'' function|hyperpage}{76}
 \indexentry{differentiable!differentiable at a point|hyperpage}{83}
 \indexentry{sum rule|hyperpage}{86}
 \indexentry{scalar multiples rule|hyperpage}{86}
