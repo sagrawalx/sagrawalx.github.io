@@ -240,9 +240,8 @@ The following weak version of l'H\^opital's rule\index{lhopitals rule@L'H\^opita
 \begin{exercise}[L'H\^opital's rule, weak version] \label{weak-lhopital}
 	Suppose $f, g : S \to \R$ are differentiable at an interior point $a \in S$, that $f(a) = g(a) = 0$, and that $g'(a) \neq 0$. Show that
 	\[ \lim_{x \to a} \frac{f(x)}{g(x)} = \frac{f'(a)}{g'(a)}. \]
-	\begin{hint} If $x = a+h$, we have
-	\[ f(x) = f(a+h) = f(a) + df_a(h) + r(h) = f'(a)h + r(h) = \left( f'(a) + \frac{r(h)}{h} \right)h, \]
-	where $r$ is the ``error in approximation'' function for $f$, as defined in \cref{error-in-approximation}. 
+	\begin{hint} First show that, if $x = a+h$ and $r$ is the ``error in approximation'' function for $f$ defined in \cref{error-in-approximation}, then
+	\[ f(x) = f(a+h) = \left( f'(a) + \frac{r(h)}{h} \right)h. \]
 	\end{hint}
 \end{exercise}
 
@@ -353,8 +352,8 @@ We will get around the kind of issue that is described by the above example by c
 Observe that, when $f(a+h)\neq f(a)$, then this expression is precisely the difference quotient that calculates the slope of the secant line passing through $(f(a), g(f(a))$ and $(f(a+h), g(f(a+h))$. When $f(a+h) = f(a)$, this secant line doesn't make sense; but what does make sense is the tangent line! So we'll remove the undefinedness of expression \eqref{weird-difference-quotient} by extending it so that it takes the value $g'(f(a))$ whenever $f(a+h) = f(a)$. 
 
 \begin{proof}[First proof of the chain rule]
-	Consider the function $\epsilon$ defined for small values of $h$ by \[ \epsilon(h) = f(a+h)-f(a). \]
-	See \cref{value-difference-chain-rule}. You will verify in \cref{chain-rule-single-first-proof-details} below that $\epsilon$ is continuous at 0. 
+	Consider the function $\Delta$ defined for small values of $h$ by \[ \Delta(h) = f(a+h)-f(a). \]
+	See \cref{value-difference-chain-rule}. Then $\Delta(0) = 0$ and $\Delta$ is also continuous at 0 because $f$ is continuous at $a$, by \cref{differentiable-implies-continuous-single}. 
 	
 	\begin{figure}[t]
 		\begin{center}
@@ -389,7 +388,7 @@ Observe that, when $f(a+h)\neq f(a)$, then this expression is precisely the diff
 			\end{axis}
 			\end{tikzpicture}
 		\end{center}
-		\caption{The graph of $f$ is depicted in black. The value of the function $\epsilon$ on a small nonzero input value $h$ is the vertical distance depicted in red.}  \label{value-difference-chain-rule}
+		\caption{The graph of $f$ is depicted in black. The value of the function $\Delta$ on a small nonzero input value $h$ is the vertical distance depicted in red.}  \label{value-difference-chain-rule}
 	\end{figure}
 
 	Next, define a function $\sigma$ by the following.  
@@ -432,20 +431,16 @@ Observe that, when $f(a+h)\neq f(a)$, then this expression is precisely the diff
 	
 	
 	You will verify in \cref{chain-rule-single-first-proof-details} below that
-	\begin{equation} \label{alternative-to-multiplicative-cross-term} \frac{(g \circ f)(a+h) - (g \circ f)(a)}{h} = \sigma(\epsilon(h)) \cdot \frac{f(a+h)-f(a)}{h} \end{equation}
+	\begin{equation} \label{alternative-to-multiplicative-cross-term} \frac{(g \circ f)(a+h) - (g \circ f)(a)}{h} = \sigma(\Delta(h)) \cdot \frac{f(a+h)-f(a)}{h} \end{equation}
 	for all small values of $h$. Thus
 	\[ \lim_{h \to 0} \frac{(g \circ f)(a+h) - (g \circ f)(a)}{h} = \lim_{h \to 0} \sigma (\epsilon(h)) \cdot \frac{f(a+h)-f(a)}{h} = g'(f(a)) f'(a) \]
 	where we have used the continuity of $\epsilon$ and $\sigma$ and the definition of the derivative of $f$ at $a$ for the last step. This completes the proof. 
 \end{proof}
 	
 \begin{exercise} \label{chain-rule-single-first-proof-details}
-	Verify the following facts used in the proof above.
-	\begin{enumerate}[(a)]
-		\item Prove that $\epsilon$ is continuous at 0.
-		\item Prove \cref{alternative-to-multiplicative-cross-term}. 
-	\end{enumerate}
-\begin{hint} You might split up your proof of \cref{alternative-to-multiplicative-cross-term} into two cases: when $f(a+h) \neq f(a)$, and when $f(a+h) = f(a)$. 
-\end{hint}
+	Prove \cref{alternative-to-multiplicative-cross-term}. 
+	\begin{hint} You might split up your proof of \cref{alternative-to-multiplicative-cross-term} into two cases: when $f(a+h) \neq f(a)$, and when $f(a+h) = f(a)$. 
+	\end{hint}
 \end{exercise}
 
 \subsubsection*{Second proof}
@@ -630,7 +625,14 @@ Every open subset of $\R$ is a countable disjoint union of open intervals\footno
 
 \subsection{Mean value theorem}
 
-The mean value theorem \ref{mean-value-theorem} is an extremely important foundational result. You may remember seeing and ignoring it during your first calculus class; at least, that's what I did, and I think that's okay. Its importance largely derives from the fact that it comes up incredibly frequently when proving things formally about derivatives. Before proceeding, I encourage you to look at \cref{mean-value-theorem-picture} and ensure that you understand the geometric content of the statement of the mean value theorem. 
+The mean value theorem \ref{mean-value-theorem}\index{mean value theorem} is an extremely important foundational result. You may remember seeing and ignoring it during your first calculus class; at least, that's what I did, and I think that's okay. Its importance largely derives from the fact that it comes up incredibly frequently when proving things formally about derivatives. 
+
+\begin{theorem}[Mean value theorem]  \label{mean-value-theorem}
+	Suppose $a < b$ and let $f : [a, b] \to \R$ be continuous and differentiable on the interior. Then there exists $c \in (a, b)$ such that
+	\[ f'(c) = \frac{f(b) - f(a)}{b-a}. \]
+\end{theorem}
+
+Before proceeding, I encourage you to look at \cref{mean-value-theorem-picture} and ensure that you understand the geometric content of the statement. 
 
 \begin{figure}
 	\begin{center}
@@ -669,6 +671,10 @@ The mean value theorem \ref{mean-value-theorem} is an extremely important founda
 	\caption{The mean value theorem \ref{mean-value-theorem} states that, if we draw a secant line connecting two points $(a,f(a))$ and $(b,f(b))$ on the graph of a differentiable function $f$, then that secant line must be parallel to the tangent line of $f$ at some point $c$ in between $a$ and $b$. The statement of the mean value theorem only asserts existence, not uniqueness; there could be multiple points $c$ at which this happens.} \label{mean-value-theorem-picture} 
 \end{figure}
 
+\begin{caution}
+	Despite the similar sounding name, the mean value theorem is \emph{not} the same as the intermediate value theorem! The intermediate value theorem asserts that, if $f : [a,b] \to \R$ is continuous and $y$ is in between $f(a)$ and $f(b)$, then there exists $c \in (a,b)$ such that $f(c) = y$. The output of the intermediate value theorem is a point $c$ where the value of the function itself is some desired value (specifically, some value between $f(a)$ and $f(b)$), while the output of the mean value theorem is a point $c$ where the value of the \emph{derivative} is some desired value (specifically, the slope of the secant connecting $((a,f(a))$ and $(b,f(b))$. 
+\end{caution}
+
 Rolle's theorem \ref{rolles-theorem} is technically a special case of the mean value theorem, but the general case can be derived from this special case. 
 
 \begin{exercise}[Rolle's theorem] \label{rolles-theorem} \index{mean value theorem!rolles theorem@Rolle's theorem} \index{rolles theorem@Rolle's theorem|see {mean value theorem}}
@@ -680,9 +686,8 @@ Rolle's theorem \ref{rolles-theorem} is technically a special case of the mean v
 
 \footnotetext{The \emph{extreme value theorem}\index{extremum!extreme value theorem} \index{extreme value theorem|see {extremum}} says that if $K$ is a compact metric space and $f : K \to \R$ is continuous, then $f$ achieves its global maximum and its global minimum somewhere on $K$ (cf. \cite[theorems 3.17 and 6.30]{protter-morrey}).}
 
-\begin{exercise}[Mean value theorem] \label{mean-value-theorem} \index{mean value theorem}
-	Suppose $a < b$ and let $f : [a, b] \to \R$ be continuous and differentiable on the interior. Prove that there exists $c \in (a, b)$ such that
-	\[ f'(c) = \frac{f(b) - f(a)}{b-a}. \]
+\begin{exercise}
+	Prove the mean value theorem. 
 	\begin{hint} 
 		Let $\ell$ be the secant line passing through $(a, f(a))$ and $(b, f(b))$. Then consider the function $g = f - \ell$. See \cref{subtracting-the-secant}. 
 		Then $g(a) = g(b) = 0$, so we can apply Rolle's theorem \ref{rolles-theorem} to $g$.
@@ -972,16 +977,16 @@ Here is an example application.
 \end{theorem}
 
 \begin{proof}
-	\Cref{nonzero-derivative-implies-strictly-monotone} tells us that $f$ is strictly monotone, so \cref{strictly-monotone-implies-open} tells us that $f$ is an open map and that $f(I)$ is an open interval. In particular, $f$ being open means that $f^{-1}$ is continuous. To see that it is differentiable, fix $y \in f(I)$ and let $x = f^{-1}(y)$. For each $k$, define \[ h(k) = f^{-1}(y + k) - f^{-1}(y). \]
-	Rearranging, this is equivalent to all of the following. 
+	\Cref{nonzero-derivative-implies-strictly-monotone} tells us that $f$ is strictly monotone, and then \cref{strictly-monotone-implies-open} tells us that $f(I)$ is an open interval and that $f$ is open, ie, that $f^{-1}$ is continuous. To see that $f^{-1}$ is actually differentiable, fix $y \in f(I)$ and let $x = f^{-1}(y)$. For each $k$, define \[ h(k) = f^{-1}(y + k) - f^{-1}(y). \]
+	Rearranging, this is equivalent the following. 
 	\[ \begin{aligned} f^{-1}(y + k) &= f^{-1}(y) + h(k) \\
 	f^{-1}(y + k) &= x + h(k) \\
 	y + k &= f(x + h(k)) \\
 	k &= f(x + h(k)) - y \\
 	k &= f(x+h(k)) - f(x) \end{aligned} \]
-	Thus
+	Thus, for any nonzero $k$, we have
 	\[ \frac{f^{-1}(y + k) - f^{-1}(y)}{k} = \frac{h(k)}{k} = \frac{h(k)}{f(x + h(k)) - f(x)} = \frac{1}{ \left( \dfrac{f(x + h(k)) - f(x)}{h(k)} \right) } \]
-	Since $f^{-1}$ is continuous at $y$, we have $\lim_{k \to 0} h(k) = 0$. Thus the denominator on the far right above tends to $f'(x) = f'(f^{-1}(y))$ as $k \to 0$. Since the limit of the denominator is nonzero by assumption, the result follows from the quotient rule for limits. 
+	where for last step, we have used the fact that $h(k) \neq 0$ for all nonzero $k$ since $f^{-1}$ is injective. Since $f^{-1}$ is continuous at $y$, we have $h(k) \to 0$ as $k \to 0$. Thus the denominator on the far right above tends to $f'(x) = f'(f^{-1}(y))$ as $k \to 0$. Since the limit of the denominator is nonzero by assumption, the result follows from the quotient rule for limits. 
 \end{proof}
 
 \begin{exercise}[Power rule for fractional exponents] \label{power-rule-fractional} \index{power rule}
@@ -994,7 +999,7 @@ Here is an example application.
 
 \subsection{Uniform limits \starred} \label{uniform-limit}
 
-Derivatives interact somewhat strangely with limits. Here are some examples to illustrate that the limit of the derivatives is necessarily the derivative of the limit.
+Derivatives interact somewhat strangely with limits. Here are some examples to illustrate that the limit of the derivatives is \emph{not} necessarily the derivative of the limit.
 
 \begin{exercise}
 	For any positive integer $n$, let $f_n : \R \to \R$ be the function 
@@ -1016,7 +1021,7 @@ Derivatives interact somewhat strangely with limits. Here are some examples to i
 	\end{enumerate}
 \end{exercise} 
 
-In fact, to get well-behaved interacted between limits and derivatives, what we really need is uniform convergence \emph{of the derivatives}. 
+In fact, to get well-behaved interaction between limits and derivatives, what we really need is uniform convergence \emph{of the derivatives}, rather than of the functions themselves. 
 
 \begin{theorem} \label{differentiation-uniform-limit}
 	Suppose $U$ is an open subset of $\R$ and $f_n : U \to \R$ is a differentiable function for each $n = 0, 1, \dotsc$ such that $\lim f_n = f$ pointwise. If the derivatives $f_n'$ converge uniformly on compact subsets of $U$, then $f$ is differentiable and $\lim f_n' = f'$. 
@@ -1028,13 +1033,13 @@ In fact, to get well-behaved interacted between limits and derivatives, what we 
 	\sigma(h) &= \begin{cases} \dfrac{f(a+h) - f(a)}{h} & \text{if } h  \neq 0 \\ g(a) & \text{if } h = 0 \end{cases} \end{aligned} \]
 	Continuity of $\sigma_n$ and $\sigma$ away from $h = 0$ is clear. At $h = 0$, we know that $\sigma_n$ is continuous because $f_n$ is differentiable at $a$. Note moreover that $\sigma_n$ converges pointwise to $\sigma$. 
 	
-	In fact, $\sigma_n$ converges \emph{uniformly} to $\sigma$ on a compact interval $I$ containing 0. To see this, observe that for any $m, n$, and $h \in I \setminus \{0\}$, we have
+	If we can show that $\sigma$ is continuous at $a$, then $f$ is differentiable at $a$ and $f'(a) = g(a) = \lim f_n'(a)$, which is what we ultimately wanted to prove. To show that $\sigma$ is continuous, our strategy is to prove that $\sigma_n$ converges \emph{uniformly} to $\sigma$ on a compact interval $I$ containing 0 (not just pointwise, as we observed above). Then we can invoke the theorem which guarantees that uniform limits of continuous functions are continuous (cf. \cite[theorem 9.13]{protter-morrey}).
+	
+	Observe that for any pair of integers $m, n$ and any $h \in I \setminus \{0\}$, we have
 	\[ \sigma_m(h) - \sigma_n(h) = \frac{(f_m(a+h) - f_n(a+h)) - (f_m(a) - f_n(a))}{h} = f_m'(\xi) - f_n'(\xi), \]
 	where for the last step we have applied the mean value theorem to the function $f_m - f_n$ on the closed interval between $a$ and $a + h$ to find $\xi$ strictly between $a$ and $a + h$. Moreover, we have $\sigma_m(0) - \sigma_n(0) = f_m'(a) - f_n'(a)$. In other words, for every $h \in I$, there exists $\xi \in a + I$ such that $\sigma_m(h) - \sigma_n(h) \leq f_m'(\xi) - f_n'(\xi)$. Thus
 	\[ \|\sigma_m - \sigma_n\|_{\spn, I} \leq \|f_m' - f_n'\|_{\spn, a+I}. \]
-	Since the derivatives converge uniformly on the compact subset $a+I$, they are uniformly Cauchy. It follows from the above inequality that the $\sigma_n$ are also uniformly Cauchy, and therefore uniformly convergent. But $\sigma$ is the pointwise limit of the $\sigma_n$, so it must be the uniform limit. 
-	
-	Since the $\sigma_n$ are continuous on $I$, and uniform limits of continuous functions are also continuous, we conclude that $\sigma$ is also continuous. This proves that $f$ is differentiable at $a$ and $f'(a) = g(a) = \lim f_n'(a)$. 
+	Since the derivatives converge uniformly on the compact subset $a+I$, they are uniformly Cauchy. It follows from the above inequality that the $\sigma_n$ are also uniformly Cauchy, and therefore uniformly convergent. Since $\sigma$ is the pointwise limit of the $\sigma_n$, it must also be the uniform limit; in other words, we have now proved that $\sigma_n$ converges uniformly to $\sigma$, as we wanted. 
 \end{proof}
 
 \begin{remark}

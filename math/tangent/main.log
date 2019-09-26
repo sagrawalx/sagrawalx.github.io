@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  25 SEP 2019 15:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  26 SEP 2019 08:44
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1521,11 +1521,11 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 ===== Image 'figures/main-figure2' is up-to-date. ======
 [35] [36 <./figures/main-figure2.pdf>] [37] [38] [39] [40]
 ===== Image 'figures/main-figure3' is up-to-date. ======
-[41 <./figures/main-figure3.pdf>]
 ===== Image 'figures/main-figure4' is up-to-date. ======
-[42 <./figures/main-figure4.pdf>] [43] [44] [45] [46] [47] [48] [49]
+[41 <./figures/main-figure3.pdf>] [42 <./figures/main-figure4.pdf>] [43]
+[44] [45] [46] [47] [48] [49]
 LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
-(Font)              scaled to size 9.0pt on input line 629.
+(Font)              scaled to size 9.0pt on input line 624.
 
 ===== Image 'figures/main-figure5' is up-to-date. ======
 [50] [51 <./figures/main-figure5.pdf>]
@@ -1548,17 +1548,17 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 ===== Image 'figures/main-figure15' is up-to-date. ======
 [72] [73 <./figures/main-figure15.pdf>]
 ===== Image 'figures/main-figure16' is up-to-date. ======
-[74 <./figures/main-figure16.pdf>]) [75]
+[74 <./figures/main-figure16.pdf>] [75]) [76]
 \openout2 = `multi.aux'.
 
- (./multi.tex [76
+ (./multi.tex
+chapter 2.
+[77
 
 
 
 
 ]
-chapter 2.
-[77]
 ===== Image 'figures/main-figure17' is up-to-date. ======
 ===== Image 'figures/main-figure18' is up-to-date. ======
 ===== Image 'figures/main-figure19' is up-to-date. ======
@@ -1658,15 +1658,15 @@ chapter without number
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 113.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 113.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3788495C456C66CB1D40983579106E85;6376.
+(rerunfilecheck)             Checksum: 1C0859ABE5DEFC9ED75B1D7B2DE422FF;6376.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45773 strings out of 492982
- 1055782 string characters out of 6134895
- 1774709 words of memory out of 5000000
+ 45772 strings out of 492982
+ 1055778 string characters out of 6134895
+ 1774723 words of memory out of 5000000
  47445 multiletter control sequences out of 15000+600000
  106242 words of font info for 237 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1695,10 +1695,10 @@ f/fonts/type1/public/tex-gyre/qplr.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/n
 ewpx/zplb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplr.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on main.pdf (175 pages, 1509393 bytes).
+Output written on main.pdf (175 pages, 1511138 bytes).
 PDF statistics:
  3167 PDF objects out of 3580 (max. 8388607)
  2891 compressed objects within 29 object streams
- 880 named destinations out of 1000 (max. 500000)
+ 879 named destinations out of 1000 (max. 500000)
  26549 words of extra memory for PDF output out of 29859 (max. 10000000)
 

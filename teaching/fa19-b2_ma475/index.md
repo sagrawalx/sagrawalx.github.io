@@ -82,7 +82,7 @@ Office hours (1–2pm).
 <td>Single variable: Differentiable functions</td>
 <td>Read: 1.3  
 Do: 6, 11, 13, 20</td>
-<td></td>
+<td>[Link](single-differentiable.pdf)</td>
 </tr>
 
 <tr>
