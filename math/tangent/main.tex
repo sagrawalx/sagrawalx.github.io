@@ -28,7 +28,7 @@
 \tikzexternalize[prefix=figures/]
 
 % Miscellaneous
-\usepackage{makeidx, enumerate, toolbox, tikz-cd, color, cancel, microtype, verbatim}
+\usepackage{makeidx, enumerate, toolbox, tikz-cd, color, cancel, microtype, verbatim, tabu}
 \usepackage[colorlinks=true,hypertexnames=false]{hyperref}
 \hypersetup{linkcolor=red}
 \makeindex
@@ -53,6 +53,7 @@
 % \renewcommand{\thesection}{\thechapter.\Alph{section}}
 \renewcommand{\thesubsection}{\thesection.\Alph{subsection}}
 \renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\renewcommand{\thetable}{\thesection.\arabic{figure}}
 
 \newtheorem{theorem}[equation]{Theorem}
 \newtheorem{lemma}[equation]{Lemma}

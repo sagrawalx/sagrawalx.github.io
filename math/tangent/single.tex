@@ -187,10 +187,10 @@ Notice that the function $h \mapsto f'(a)h$ is a linear map $\R \to \R$, in the 
 
 Thus \cref{differential-unique-single} says that $df_a$ is the only good linear approximation to the function \[ h \mapsto f(a+h)-f(a). \] Being the \emph{only good} linear approximation, it is also the \emph{best} linear approximation, whence the name of this section. The following is an important version of this same idea that comes up frequently in proofs. 
 
-\begin{remark}[``Error in approximation'' function] \label{error-in-approximation}
-	Suppose $f : S \to \R$ is differentiable at an interior point $a \in S$. For sufficiently small values of $h$, we can define a ``error in approximation'' function\index{error in approximation function@``error in approximation'' function} $r$ by
+\begin{remark}[``Remainder'' function] \label{remainder-linear}
+	Suppose $f : S \to \R$ is differentiable at an interior point $a \in S$. For sufficiently small values of $h$, we can define a ``remainder'' function\index{remainder} $r$ by
 	\[ r(h) = f(a+h) - f(a) - df_a(h). \]
-	See \cref{figure-error-in-approximation}. 
+	See \cref{figure-remainder-linear}. 
 	\begin{figure}
 		\begin{center}
 			\begin{tikzpicture}
@@ -227,21 +227,20 @@ Thus \cref{differential-unique-single} says that $df_a$ is the only good linear 
 			\end{axis}
 			\end{tikzpicture}
 		\end{center}
-		\caption{The thick black curve is the graph of a function $f$ and the thinner black line is its tangent line $f(a) + df_a$ are depicted in black. If $r$ is the ``error in approximation'' function, then $r(h)$ is the the vertical distance indicated in red above.}  \label{figure-error-in-approximation}
+		\caption{The thick black curve is the graph of a function $f$ and the thinner black line is its tangent line $f(a) + df_a$ are depicted in black. If $r$ is the remainder function, then $r(h)$ is the the vertical distance indicated in red above.}  \label{figure-remainder-linear}
 	\end{figure}
-	Rearranging the definition of $r$, we have
-	\[ f(a+h) = f(a) + df_a(h) + r(h). \]
-	This equation just says that $f(a+h)$ is the sum of the value of the tangent line (which is $f(a) + df_a(h)$) and the error (which is $r(h)$). Notice that $r(0) = 0$. Moreover, $f$ is differentiable hence continuous at $a$ (cf. \cref{differentiable-implies-continuous-single}), so $r$ is also  continuous at 0. Finally, $r$ is ``small.'' More precisely, we know from \cref{differential-unique-single} that $|r(h)| = o(|h|)$ as $h \to 0$, which means that
+	Notice that the value of the tangent line at $a+h$ is $f(a) + df_a(h)$, so $r(h)$ is defined to be ``what's left over'' after approximating $f$ by its tangent line (whence the name, ``remainder''). Notice that $r(0) = 0$. Moreover, $f$ is differentiable hence continuous at $a$ (cf. \cref{differentiable-implies-continuous-single}), so $r$ is also  continuous at 0. Finally, $r$ is ``small.'' More precisely, we know from \cref{differential-unique-single} that $|r(h)| = o(|h|)$ as $h \to 0$, which means that
 	\[ \lim_{h \to 0} \frac{r(h)}{h} = 0. \]
 \end{remark} 
 
 The following weak version of l'H\^opital's rule\index{lhopitals rule@L'H\^opital's rule} is an application of this idea. 
 
-\begin{exercise}[L'H\^opital's rule, weak version] \label{weak-lhopital}
+\begin{exercise}[L'H\^opital's rule, weak version] \label{lhopital-weak}
 	Suppose $f, g : S \to \R$ are differentiable at an interior point $a \in S$, that $f(a) = g(a) = 0$, and that $g'(a) \neq 0$. Show that
 	\[ \lim_{x \to a} \frac{f(x)}{g(x)} = \frac{f'(a)}{g'(a)}. \]
-	\begin{hint} First show that, if $x = a+h$ and $r$ is the ``error in approximation'' function for $f$ defined in \cref{error-in-approximation}, then
-	\[ f(x) = f(a+h) = \left( f'(a) + \frac{r(h)}{h} \right)h. \]
+	\begin{hint} 
+		First show that, if $x = a+h$ and $r$ is the remainder function for $f$ defined in \cref{remainder-linear}, then
+		\[ f(x) = f(a+h) = \left( f'(a) + \frac{r(h)}{h} \right)h. \]
 	\end{hint}
 \end{exercise}
 
@@ -260,6 +259,10 @@ When you use \cref{differential-unique-single}, you may find it useful to have d
 
 \begin{exercise}[Scalar multiples rule] \index{scalar multiples rule} \label{scalar-multiples-rule-single}
 	Prove that, if $c$ is a constant and $f : S \to \R$ is differentiable at an interior point $a \in S$, then $cf$ is also differentiable at $a$ and \[ (cf)'(a) = c f'(a). \]
+\end{exercise}
+
+\begin{exercise}
+	Suppose $f, g : S \to \R$ are functions and $f + g$ is differentiable at an interior point $a \in S$. Does it then follow that $f$ and $g$ are also differentiable at $a$? If so, prove it. If not, provide a counterexample. 
 \end{exercise}
 
 \subsection{Product and quotient rules}
@@ -452,7 +455,7 @@ Our second proof of the chain rule will use the ``best linear approximation'' in
 	\[ dg_{f(a)}(df_a(h)) = g'(f(a))f'(a)h. \]
 	Thus, by \cref{differential-unique-single}, it is sufficient to prove that
 	\[ g(f(a+h))-g(f(a))-dg_{f(a)}(df_a(h)) = o(|h|) \text{ as } h \to 0. \]
-	Define the following ``error in approximation'' functions, as in \cref{error-in-approximation}.\index{error in approximation function@``error in approximation'' function} 
+	Define the following remainder functions, as in \cref{remainder-linear}.
 	\[ \begin{aligned} 
 	r(h) &= f(a+h)-f(a) - df_a(h) \\ 
 	s(k) &= g(f(a)+k)-g(f(a))-dg_{f(a)}(k) \end{aligned} \]
@@ -570,17 +573,7 @@ All three of these have infinite radius of convergence (ie, they're defined for 
 
 \subsubsection*{Examples}
 
-Let's now discuss some examples using these functions. 
-
-\begin{exercise}
-	Let $f, g : (0,\infty) \to \R$ be the functions given by 
-	\[ f(x) = \frac{\sin(x)}{x} \quad \text{and} \quad g(x) = \frac{\sin(x^2)}{x}. \]
-	Show that $f$ and $g$ are both differentiable, and that 
-	\[ \lim_{x \to \infty} f(x) = 0 = \lim_{x \to \infty} g(x). \] Then show that 
-	\[ \lim_{x \to \infty} f'(x) = 0 \quad \text{but} \quad \lim_{x \to \infty} g'(x) \text{ does not exist}. \]
-\end{exercise}
-
-The following two examples both involve the expression $\sin(1/x)$. As we will see, functions involving this expression exhibit a wild variety of interesting pathological behavior. 
+Let's now discuss some examples using these functions. The following two examples both involve the expression $\sin(1/x)$. As we will see, functions involving this expression exhibit a wild variety of interesting pathological behavior. 
 
 \begin{exercise} \label{power-times-sine}
 	\begin{enumerate}[(a)]
@@ -788,6 +781,21 @@ Here are some more consequences.
 	\end{enumerate}
 \end{exercise}
 
+\begin{exercise}[``Leveling off'' vs ``flattening out''] \label{leveling-off-vs-flattening-out}
+	\begin{enumerate}[(a)]
+		\item Suppose $f : (0, \infty) \to \R$ is differentiable and $f(x) \to 0$ as $x \to \infty$ (one might say informally that $f$ ``levels off'' near infinity). Show that, if 
+		\[ \lim_{x \to \infty} f'(x) \]
+		exists, then this limit must equal 0 (informally, one might say that that $f$ must ``flatten out'' near infinity).
+		\item Let $f : (0, \infty) \to \R$ be defined by 
+		\[ f(x) = \frac{\sin(x^2)}{x}. \]
+		Show that ``levels off'' but does not ``flatten out'' near infinity.  
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+	Suppose $f : \R \to \R$ is differentiable which ``flattens out'' near infinity; in other words, \[ \lim_{x \to \infty} f'(x) = 0. \] Let $g(x) = f(x+1) - f(x)$. Is it true that $g$ ``levels off'' near infinity (ie, that $g(x) \to 0$ as $x \to \infty$)? If so, prove it. If not, explain why not. 
+\end{exercise}
+
 \subsection{Monotonicity}
 
 We begin by recalling the following definition. 
@@ -840,7 +848,12 @@ It's worth noticing that \cref{strictly-monotone-derivative} cannot be upgraded 
 	Give an example of a strictly increasing differentiable function $f : \R \to \R$ for which there exists some $a \in \R$ such that $f'(a) = 0$. 
 \end{exercise}
 
-And again, there are pathologies involving monotonicity than can be exhibited by functions involving $\sin(1/x)$. Here is an example of a function whose derivative is positive at a single point, but it is not monotone near that point. 
+\begin{exercise}
+	Suppose $f : \R \to \R$ is differentiable and there exists $M > 0$ such that $|f'(x)| \leq M$ for all $x \in \R$. Is it true that there must exist $\epsilon >  0$ such that the function $g : \R \to \R$ given by \[ g(x) = x + \epsilon f(x) \]
+	is strictly increasing? If so, prove it. If not, explain why not. 
+\end{exercise}
+
+Again, there are pathologies involving monotonicity than can be exhibited by functions involving $\sin(1/x)$. Here is an example of a function whose derivative is positive at a single point, but it is not monotone near that point. 
 
 \begin{exercise} \label{positive-not-monotone}
 	Let $f : \R \to \R$ denote the function
@@ -884,7 +897,7 @@ Using this vocabulary, the intermediate value theorem\index{intermediate value t
 Now we know that the derivative $f'$ of a differentiable function $f$ need not be continuous (cf. \cref{power-times-sine}). Darboux's theorem asserts that, even though $f'$ might not be continuous, it must still have the intermediate value property! This means, for example, that derivatives cannot have removable or jump discontinuities (because, as we saw in \cref{removable-jump-ivp}, functions with these kinds of discontinuities do not have the intermediate value property). 
 
 \begin{theorem}[Darboux] \label{darboux} \index{darbouxs theorem@Darboux's theorem}
-	Suppose $I$ is an interval and $f : I \to \R$ is continuous and differentiable on the interior. Then $f'$ has the intermediate value property.\index{intermediate value property} 
+	Suppose $I$ is an open interval and $f : I \to \R$ is differentiable. Then $f'$ has the intermediate value property.\index{intermediate value property} 
 \end{theorem}
 
 \begin{proof}
@@ -968,6 +981,24 @@ Here is an example application.
 	Suppose $I$ is an open interval and $f : I \to \R$ is a differentiable function such that $f'(x) \neq 0$ for all $x \in I$. Show that $f$ is strictly monotone.\index{monotone!strictly monotone} 
 \end{exercise}
 
+The intermediate value theorem, mean value theorem, and Darboux's theorem all say similar but different things. I encourage you to ensure that you understand how the statements differ. See \cref{ivt-mvt-darboux}.
+
+\begin{table}
+	\begin{center}
+	{\tabulinesep=1.5mm
+	\begin{tabu} to \textwidth {| X[l] | X[c] X[c] X[c] |} 
+		\hline
+		& Intermediate value theorem & Mean value theorem & Darboux's theorem \\ \hline
+		If $f : [a, b] \to \R$ is... & continuous & continuous and differentiable on the interior & differentiable on an open neighborhood of $[a,b]$ \\ 
+		and... & $y$ is strictly in between $f(a)$ and $f(b)$ & & $m$ is strictly in between $f'(a)$ and $f'(b)$ \\
+		then there exists $c \in (a,b)$ such that & $f(c) = y$. & $f'(c) = \dfrac{f(b) - f(a)}{b-a}$. & $f'(c) = m$. \\ \hline
+	\end{tabu}}
+	\end{center}
+	\caption{A tabular comparison of the statements of the intermediate value theorem, the mean value theorem, and Darboux's theorem.} \label{ivt-mvt-darboux}
+\end{table}
+
+% TODO: header shading
+
 \subsection{Inverse function theorem}
 
 \begin{theorem} \label{inverse-function-theorem-single}
@@ -999,7 +1030,19 @@ Here is an example application.
 
 \subsection{Uniform limits \starred} \label{uniform-limit}
 
-Derivatives interact somewhat strangely with limits. Here are some examples to illustrate that the limit of the derivatives is \emph{not} necessarily the derivative of the limit.
+Derivatives interact somewhat strangely with limits. First off, here is an example to show that uniform limits of differentiable functions need not be differentiable. 
+
+\begin{exercise}
+	For any positive integer $n$, let $f_n : \R \to \R$ be the function
+	\[ f_n(x) = \sqrt{x^2 + \frac{1}{n}}. \]
+	\begin{enumerate}[(a)]
+		\item Show that $f_n$ is differentiable. 
+		\item Show that the $f_n$ converge uniformly to the absolute value function $f(x) = |x|$. 
+		\item Show that the derivatives $f_n'$ converge pointwise but \emph{not} uniformly. 
+	\end{enumerate}
+\end{exercise}
+
+In fact, even if a uniform limit of differentiable functions is differentiable, we cannot guarantee that the derivative of the limit is the limit of the derivatives; in fact, the derivatives need not converge at all.  
 
 \begin{exercise}
 	For any positive integer $n$, let $f_n : \R \to \R$ be the function 
@@ -1011,17 +1054,7 @@ Derivatives interact somewhat strangely with limits. Here are some examples to i
 	\end{enumerate}
 \end{exercise}
 
-\begin{exercise}
-	For any positive integer $n$, let $f_n : \R \to \R$ be the function
-	\[ f_n(x) = \sqrt{x^2 + \frac{1}{n}}. \]
-	\begin{enumerate}[(a)]
-		\item Show that $f_n$ is differentiable. 
-		\item Show that the $f_n$ converge uniformly to the absolute value function $f(x) = |x|$. 
-		\item Show that the derivatives $f_n'$ converge pointwise but \emph{not} uniformly. 
-	\end{enumerate}
-\end{exercise} 
-
-In fact, to get well-behaved interaction between limits and derivatives, what we really need is uniform convergence \emph{of the derivatives}, rather than of the functions themselves. 
+As suggested by part (c) of the previous two exercises, what we really need in order to have well-behaved interaction between limits and derivatives is uniform convergence \emph{of the derivatives}, rather than of the functions themselves. 
 
 \begin{theorem} \label{differentiation-uniform-limit}
 	Suppose $U$ is an open subset of $\R$ and $f_n : U \to \R$ is a differentiable function for each $n = 0, 1, \dotsc$ such that $\lim f_n = f$ pointwise. If the derivatives $f_n'$ converge uniformly on compact subsets of $U$, then $f$ is differentiable and $\lim f_n' = f'$. 
@@ -1326,9 +1359,24 @@ Taylor's theorem gives us a way of approximating a $C^k$ function by a polynomia
 	so \cref{little-o-vector-space,less-than-small-is-small} imply that $|p_k(h) -  q(h)| = o(|h|^k)$. But $p_k - q$ is a polynomial of degree at most $k$, and a nonzero polynomial of degree at most $k$ cannot be $o(|h|^k)$ as $h \to 0$. So we must have $p_k = q$.
 \end{proof}
 
-\begin{remark}
+\begin{unimportantremark}
 	It's worth remarking that Taylor's theorem does not use the fact that $f^{(k)}$ is continuous; it merely requires that $f^{(k)}$ exists, ie, that $f$ is \emph{$k$ times differentiable}. This is evident in the proof above. 
-\end{remark}
+\end{unimportantremark}
+
+The difference 
+\[ r(h) = f(a+h) - p_k(h) \]
+is often called a ``remainder,''\index{remainder} since it's what's left over after we approximate $f$ by its Taylor polynomial. When $k = 1$, this is precisely the remainder function we discussed in \cref{remainder-linear}.
+
+\begin{exercise}[L'H\^opital's rule, less weak version] \label{lhopital-less-weak}
+	Suppose $f, g : U \to \R$ are $C^k$ functions for some $k \geq 1$ and 
+	\[ \begin{aligned} f(a) = f'(a) = \dotsb = f^{(k-1)}(a) = 0 \\
+	g(a) = g'(a) = \dotsb = g^{(k-1)}(a) = 0 \end{aligned} \]
+	and $g^{(k)}(a) \neq 0$. Prove that 
+	\[ \lim_{x \to a} \frac{f(x)}{g(x)} = \frac{f^{(k)}(a)}{g^{(k)}(a)}. \]
+	\begin{hint}
+		Mimic the proof of \cref{lhopital-weak}, but now use $r(h) = f(a+h) - p_k(h)$ instead of $r(h) = f(a+h) - p_1(h)$. 
+	\end{hint}
+\end{exercise}
 
 We can now return to our discussion of the pathology exhibited by the function $f(x) = x^4 \left( 2 + \sin(1/x) \right)$ from \cref{extremum-no-sign-change,extremum-no-sign-change-continued}, and prove that such pathologies cannot occur under some hypotheses. We prepare for this discussion with the following lemma. 
 
@@ -1359,7 +1407,7 @@ We can now return to our discussion of the pathology exhibited by the function $
 	Let $f : \R \to \R$ be the function of \cref{extremum-no-sign-change,extremum-no-sign-change-continued}. Then $f$ is twice differentiable and $f'(0) = f''(0) = 0$, but it is not thrice differentiable at 0. In other words, it doesn't eventually have a nonzero derivative at 0, so we're not able to apply \cref{extremum-sign-change}. 
 \end{example}
 
-The difference $f(a+h) - p_k(h)$ is often called a ``remainder,''\index{remainder} since it's what's left over after we approximate $f$ by its Taylor polynomial. It turns out that if $f$ is $C^{k+1}$, we can use the mean value theorem to express this remainder in terms of the $(k+1)$st derivative. 
+It turns out that if $f$ is $C^{k+1}$, we can use the mean value theorem to express the remainder in terms of the $(k+1)$st derivative. 
 
 \begin{theorem}[Taylor's theorem with remainder, Lagrange form] \label{taylor-single-remainder-lagrange}
 	Suppose $I$ is an open interval, $f : I \to \R$ is $C^{k+1}$ for some non-negative integer $k$ and $a \in I$. Then for any $h$ such that $a+h \in I$, there exists $\xi$ between $a$ and $a+h$ such that 
@@ -1459,7 +1507,7 @@ We next discuss an example of a smooth function which gets ``infinitely flat'' a
 	\[ \lim_{x \to 0^+} \frac{e^{-1/x}}{x^m} = 0 \]
 	for any non-negative integer $m$, which follows immediately from \cref{exponential-polynomial} by making the substitution $u = 1/x$.
 	
-	You probably remember proving \cref{exponential-polynomial} using l'H\^{o}pital's rule\index{lhopitals rule@L'H\^opital's rule} in your calculus class. We haven't proved l'H\^{o}pital's rule (except for the weak version in \cref{weak-lhopital}, which you can check is not enough to prove \cref{exponential-polynomial}), but you can find proofs of l'H\^opital's rule in many places (eg, \cite[theorem 4.15]{protter-morrey}, \cite[theorem 5.13]{rudin}, or even \href{https://en.wikipedia.org/wiki/L\%27hopital\%27s_rule}{Wikipedia}). The proof is a clever application of the mean value theorem \ref{mean-value-theorem}. 
+	You probably remember proving \cref{exponential-polynomial} using l'H\^{o}pital's rule\index{lhopitals rule@L'H\^opital's rule} in your calculus class. We haven't proved l'H\^{o}pital's rule (except for the weak version in \cref{lhopital-weak} and then the less weak version in \cref{lhopital-less-weak}, neither of which proves \cref{exponential-polynomial}), but you can find proofs of l'H\^opital's rule in many places (eg, \cite[theorem 4.15]{protter-morrey}, \cite[theorem 5.13]{rudin}, or even \href{https://en.wikipedia.org/wiki/L\%27hopital\%27s_rule}{Wikipedia}). The proof is a clever application of the mean value theorem \ref{mean-value-theorem}. 
 	
 	An alternative proof of \cref{exponential-polynomial} uses the power series definition of the exponential function. The idea is to notice that
 	\[ \frac{e^u}{u^m} = \frac{1}{u^m} + \dotsb + \frac{1}{(m-1)!u} + \sum_{k = 0}^\infty \frac{u^k}{(m+k)!} \]
@@ -1506,6 +1554,14 @@ We next discuss an example of a smooth function which gets ``infinitely flat'' a
 		where $p_k$ is a polynomial function of degree $k-1$ such that $p_k(0) = 1$. 
 	\end{enumerate}
 	Thus $f$ is an example of a smooth function that is ``infinitely flat'' at $x = 0$, in the sense that $f^{(k)}(x) = 0$ for all $k$, but is not constantly equal to 0. 
+\end{exercise}
+
+Using the infinitely flat function from \cref{infinitely-flat}, we can actually construct a smooth analog of the crazy oscillating $\sin(1/x)$-type functions. 
+
+\begin{exercise}
+	Consider the function $f : \R \to \R$ defined by
+	\[ f(x) = \begin{cases} e^{-1/x}\sin(1/x) & \text{if } x > 0 \\ 0 & \text{if } x \leq 0. \end{cases} \]
+	Show that $f$ is smooth. 
 \end{exercise}
 
 \subsubsection*{Bump functions}
