@@ -99,6 +99,7 @@ Writing assignment due (11:59pm). [Prompt](/teaching/prompt.pdf).
 <td>Read: 1.4  
 Do: 2, 7, 11, 27</td>
 <td>
+[Link](single-ck.pdf)
 </td>
 </tr>
 
