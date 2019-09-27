@@ -825,26 +825,22 @@ Here are some important properties of strictly monotone continuous functions.
 
 The proofs of the following standard relationships between derivatives and monotonicity are similar to the proof of \cref{constant-iff-derivative-zero-single}.
 
-\begin{exercise}[Derivatives and monotonicity] \label{monotone-derivative} \index{monotone}
-	Suppose $I$ is an interval and that $f : I \to \R$ is continuous and differentiable on the interior. Prove the following. 
+\begin{exercise}[Derivatives and monotonicity] \label{monotone-derivative}
+	Suppose $I$ is an interval and that $f : I \to \R$ is continuous and differentiable on the interior. 
 	\begin{enumerate}[(a)]
-		\item $f' \geq 0$ if and only if $f$ is increasing\index{monotone!increasing}. 
-		\item $f' \leq 0$ if and only if $f$ is decreasing\index{monotone!decreasing}.
+		\item Prove that $f' \geq 0$ if and only if $f$ is increasing. 
+		\item Prove that $f' \leq 0$ if and only if $f$ is decreasing.
 	\end{enumerate}
 \end{exercise}
 
-\begin{exercise}[Derivatives and strict monotonicity] \label{strictly-monotone-derivative} \index{monotone!strictly monotone}
+\begin{exercise}[Derivatives and strict monotonicity] \label{strictly-monotone-derivative}
 	Suppose $I$ is an interval and that $f : I \to \R$ is continuous and differentiable on the interior. Prove the following. 
 	\begin{enumerate}[(a)]
-		\item If $f' > 0$, then $f$ is strictly increasing\index{monotone!strictly increasing}. 
-		\item If $f' < 0$, then $f$ is strictly decreasing\index{monotone!strictly decreasing}. 
+		\item If $f' > 0$, prove that $f$ is strictly increasing. 
+		\item If $f' < 0$, prove that $f$ is strictly decreasing. 
+		\item Unlike \cref{monotone-derivative}, the above two statements on strict monotonicity cannot be upgraded to ``if and only if'' statements. Give an example of a strictly increasing function $f : \R \to \R$ for which there exists some $a \in \R$ such that $f'(a) = 0$. 
+		\item Notice that your proof of ``$f' \geq 0$ implies increasing'' from \cref{monotone-derivative} part (a) and ``$f' > 0$ implies strictly increasing'' from part (a) of this exercise are basically the same, except that all instances of ``$\geq$'' get replaced by ``$>$.'' Now inspect your proof of ``increasing implies $f' \geq 0$'' from \cref{monotone-derivative} part (a). Why can't you just replace all instances of ``$\geq$'' with ``$>$''?
 	\end{enumerate} 
-\end{exercise}
-
-It's worth noticing that \cref{strictly-monotone-derivative} cannot be upgraded to if and only if statements. 
-
-\begin{exercise}
-	Give an example of a strictly increasing differentiable function $f : \R \to \R$ for which there exists some $a \in \R$ such that $f'(a) = 0$. 
 \end{exercise}
 
 \begin{exercise}
@@ -859,7 +855,8 @@ Again, there are pathologies involving monotonicity than can be exhibited by fun
 	\[ f(x) = \begin{cases} x + 2x^2 \sin(1/x) & \text{if } x \neq 0 \\ 0 & \text{if } x = 0. \end{cases} \]
 	\begin{enumerate}[(a)]
 		\item Show that $f$ is differentiable and calculate $f'$. In particular, show that $f'(0) = 1$. 
-		\item Show that $f$ is not monotone\index{monotone} on any open interval containing 0.  
+		\item Show that $f$ is not monotone on any open interval containing 0.  
+		\item Explain the ``2'' that shows up in the definition of $f$. Could it be replaced by 1 without changing the property of $f$ you proved in (b) above? Could it be replaced by 3? What is the set of all real numbers that it could be replaced with?
 	\end{enumerate}
 \end{exercise}
 
@@ -1099,11 +1096,11 @@ This theorem lets us prove that we can differentiate power series term-by-term.
 	\[ f_n(x) = a_0 + a_1 x + \dotsb + a_n x^n \]
 	be the sequence of the partial sums of the power series. Then clearly $\lim f_n = f$ pointwise. The conclusion of \cref{differentiating-power-series} would therefore follow by applying \cref{differentiation-uniform-limit} to the sequence $f_n$, provided we first show that $f_n'$ converges uniformly on compact subsets of $(-R, R)$. To prove this, it is sufficient to show that the radius of convergence of the power series 
 	\[ \sum_{n = 0} na_n x^{n-1} \]
-	is also $R$. Let $R'$ denote the radius of convergence of this power series; we want to show that $R' = R$. Observe that
-	\[ \frac{1}{R'} = \limsup_{n \to \infty} (na_n)^{1/(n-1)} = \limsup_{n \to \infty} ((na_n)^{1/n})^{n/(n-1)}. \]
-	We know that $\lim n^{1/n} = 1$ and that $\lim n/(n-1) = 1$. We also know that
-	\[ \frac{1}{R} = \limsup_{n \to \infty} a_n^{1/n}.  \]
-	Putting all of this together, we conclude that $R = R'$. 
+	is also $R$. Let $R'$ denote the radius of convergence of this power series; we want to show that $R' = R$. We also know that
+	\[ \frac{1}{R} = \limsup_{n \to \infty} |a_n|^{1/n}.  \] 
+	Observe that
+	\[ \frac{1}{R'} = \limsup_{n \to \infty} |na_n|^{1/(n-1)} = \limsup_{n \to \infty} (|na_n|^{1/n})^{n/(n-1)}. \]
+	Since $\lim n^{1/n} = 1$ and $\lim n/(n-1) = 1$, we conclude that $R = R'$. 
 \end{proof}
 
 \begin{exercise}
