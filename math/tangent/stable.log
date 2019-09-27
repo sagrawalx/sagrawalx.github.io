@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  27 SEP 2019 07:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  27 SEP 2019 08:20
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1669,7 +1669,7 @@ Package logreq Info: Writing requests to 'stable.run.xml'.
 Here is how much of TeX's memory you used:
  45767 strings out of 492982
  1055913 string characters out of 6134895
- 1774551 words of memory out of 5000000
+ 1774552 words of memory out of 5000000
  47442 multiletter control sequences out of 15000+600000
  106124 words of font info for 236 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191

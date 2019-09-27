@@ -88,50 +88,50 @@
 \indexentry{extremum!absolute minimum|hyperpage}{48}
 \indexentry{differentiable|hyperpage}{49}
 \indexentry{derivative|hyperpage}{49}
-\indexentry{mean value theorem|hyperpage}{49}
 \indexentry{interval|hyperpage}{49}
-\indexentry{mean value theorem!rolles theorem@Rolle's theorem|hyperpage}{51}
-\indexentry{rolles theorem@Rolle's theorem|hyperindexformat{\see {mean value theorem}}}{51}
-\indexentry{constant function|hyperpage}{51}
-\indexentry{extremum!extreme value theorem|hyperpage}{51}
-\indexentry{extreme value theorem|hyperindexformat{\see {extremum}}}{51}
-\indexentry{monotone|hyperpage}{53}
-\indexentry{monotone!increasing|hyperpage}{53}
-\indexentry{monotone!decreasing|hyperpage}{53}
-\indexentry{monotone!strictly monotone|hyperpage}{53}
-\indexentry{monotone!strictly increasing|hyperpage}{53}
-\indexentry{monotone!strictly decreasing|hyperpage}{53}
+\indexentry{mean value theorem|hyperpage}{50}
+\indexentry{mean value theorem!rolles theorem@Rolle's theorem|hyperpage}{50}
+\indexentry{rolles theorem@Rolle's theorem|hyperindexformat{\see {mean value theorem}}}{50}
+\indexentry{extremum!extreme value theorem|hyperpage}{50}
+\indexentry{extreme value theorem|hyperindexformat{\see {extremum}}}{50}
+\indexentry{constant function|hyperpage}{52}
+\indexentry{monotone|hyperpage}{54}
+\indexentry{monotone!increasing|hyperpage}{54}
+\indexentry{monotone!decreasing|hyperpage}{54}
+\indexentry{monotone!strictly monotone|hyperpage}{54}
+\indexentry{monotone!strictly increasing|hyperpage}{54}
+\indexentry{monotone!strictly decreasing|hyperpage}{54}
 \indexentry{open!open map|hyperpage}{54}
-\indexentry{intermediate value property|hyperpage}{55}
-\indexentry{Darboux function|hyperindexformat{\see {intermediate value property}}}{55}
+\indexentry{intermediate value property|hyperpage}{56}
 \indexentry{intermediate value theorem|hyperpage}{56}
 \indexentry{discontinuity!removable discontinuity|hyperpage}{56}
-\indexentry{discontinuity!jump discontinuity|hyperpage}{56}
+\indexentry{Darboux function|hyperindexformat{\see {intermediate value property}}}{56}
+\indexentry{discontinuity!jump discontinuity|hyperpage}{57}
 \indexentry{darbouxs theorem@Darboux's theorem|hyperpage}{57}
 \indexentry{intermediate value property|hyperpage}{57}
 \indexentry{extremum!extreme value theorem|hyperpage}{57}
-\indexentry{extremum!interior extremum theorem|hyperpage}{57}
+\indexentry{extremum!interior extremum theorem|hyperpage}{58}
 \indexentry{monotone!strictly monotone|hyperpage}{58}
-\indexentry{power rule|hyperpage}{59}
-\indexentry{continuously differentiable|hyperpage}{63}
-\indexentry{ck@$C^k$|hyperpage}{64}
-\indexentry{inverse function|hyperpage}{65}
-\indexentry{remainder|hyperpage}{68}
-\indexentry{smooth|hyperpage}{71}
-\indexentry{Cinfinity@$C^\infty$|hyperindexformat{\see {smooth}}}{71}
-\indexentry{infinitely differentiable|hyperindexformat{\see {smooth}}}{71}
-\indexentry{diffeomorphism|hyperpage}{71}
-\indexentry{monotone!strictly increasing|hyperpage}{72}
-\indexentry{intermediate value theorem|hyperpage}{72}
+\indexentry{power rule|hyperpage}{60}
+\indexentry{continuously differentiable|hyperpage}{64}
+\indexentry{ck@$C^k$|hyperpage}{65}
+\indexentry{inverse function|hyperpage}{66}
+\indexentry{remainder|hyperpage}{69}
+\indexentry{smooth|hyperpage}{72}
+\indexentry{Cinfinity@$C^\infty$|hyperindexformat{\see {smooth}}}{72}
+\indexentry{infinitely differentiable|hyperindexformat{\see {smooth}}}{72}
 \indexentry{diffeomorphism|hyperpage}{72}
-\indexentry{infinitely flat functions@``infinitely flat'' functions|hyperpage}{73}
-\indexentry{lhopitals rule@L'H\^opital's rule|hyperpage}{73}
-\indexentry{bump function|hyperpage}{75}
-\indexentry{support|hyperpage}{75}
-\indexentry{infinitely flat function@``infinitely flat'' function|hyperpage}{76}
-\indexentry{bridge function@``bridge'' function|hyperpage}{76}
-\indexentry{fundamental theorem of calculus|hyperpage}{76}
+\indexentry{monotone!strictly increasing|hyperpage}{73}
+\indexentry{intermediate value theorem|hyperpage}{73}
+\indexentry{diffeomorphism|hyperpage}{73}
+\indexentry{infinitely flat functions@``infinitely flat'' functions|hyperpage}{74}
+\indexentry{lhopitals rule@L'H\^opital's rule|hyperpage}{74}
+\indexentry{bump function|hyperpage}{76}
+\indexentry{support|hyperpage}{76}
+\indexentry{infinitely flat function@``infinitely flat'' function|hyperpage}{77}
 \indexentry{bridge function@``bridge'' function|hyperpage}{77}
+\indexentry{fundamental theorem of calculus|hyperpage}{77}
+\indexentry{bridge function@``bridge'' function|hyperpage}{78}
 \indexentry{differentiable!differentiable at a point|hyperpage}{85}
 \indexentry{sum rule|hyperpage}{88}
 \indexentry{scalar multiples rule|hyperpage}{88}

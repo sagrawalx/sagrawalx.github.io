@@ -4,7 +4,7 @@ The goal in this chapter is to formalize derivatives of functions whose input is
 
 \section{Two definitions of the derivative}
 
-\subsection{Slope of the tangent line}
+\subsection{Slope of the tangent line} \label{slope-of-tangent-line}
 
 Let $S$ be a subset of $\R$ and $a \in S$ an interior point. We would like to define the tangent line to the graph of a function $f : S \to \R$ at $a$. Intuitively, the ``tangent line'' should be a line that ``just barely touches'' the graph of $f$ at the point $(a, f(a))$. But it's not immediately clear how to formalize this intuitive definition.  
 
@@ -607,13 +607,25 @@ The following example, again involving $\sin(1/x)$, illustrates a caveat to the 
 
 In this section, we'll discuss some properties of functions which are differentiable everywhere on their domain. 
 
-\begin{definition} \index{differentiable} \index{derivative}
-	Suppose $U$ is an open subset of $\R$. A function $f : U \to \R$ is \emph{differentiable} it is differentiable at every point in $U$. More generally, if $S$ is any subset of $\R$ and $f : S \to \R$ is a function, we say that $f$ is \emph{differentiable on the interior} if $f|_{S^\circ}$ is differentiable (ie, if $f$ is differentiable at every interior point of $S$). 
+\begin{definition} \label{differentiable-open-domain-single} \index{differentiable} \index{derivative}
+	Suppose $U$ is an open subset of $\R$. A function $f : U \to \R$ is \emph{differentiable} it is differentiable at every point in $U$. The function $U \to \R$ given by $x \mapsto f'(x)$ is called the \emph{derivative} of $f$, and is denoted $f'$. 
 \end{definition}
 
-Every open subset of $\R$ is a countable disjoint union of open intervals\footnotemark\ (cf. \cite[theorem 6.17]{protter-morrey}), so the most important case is when the domain happens to be an interval, and many of the theorems in this section will be about this situation. 
+Every open subset of $\R$ is a countable disjoint union of open intervals\footnotemark\ (cf. \cite[theorem 6.17]{protter-morrey}), so the most important case of the above definition is when the domain happens to be an open interval. Occasionally, it's also useful to have some vocabulary for talking about functions on non-open intervals. Here is the ``correct'' definition for doing this.
 
 \footnotetext{By the word \emph{interval}\index{interval}, we mean an uncountable connected subset of $\R$. This means that intervals can be open, closed, or half-open; and they can be bounded or unbounded. They cannot be just a single point.}
+
+\begin{definition} \label{differentiable-any-domain-single}
+	Suppose $S$ is any subset of $\R$ and $f : S \to \R$ is a function.
+	\begin{itemize}
+		\item We say that $f$ is \emph{differentiable on the interior} if $f$ is differentiable at every interior point of $S$ (ie, if the restriction of $f$ to the interior $S^\circ$ is differentiable in the sense of \cref{differentiable-open-domain-single}). The function $S^\circ \to \R$ given by $x \mapsto f'(x)$ is called the \emph{derivative} of $f$, and is denoted $f'$. 
+		\item We say that $f$ is \emph{differentiable} if it is the restriction to $S$ of a differentiable function defined on an open neighborhood of $S$.  The function $S \to \R$ given by $x \mapsto f'(x)$ is called the \emph{derivative} of $f$, and is denoted $f'$. 
+	\end{itemize} 
+\end{definition}
+
+\begin{pedanticremark}
+	The reason these definitions are made the way they are is for precisely the same reasons discussed in the pedantic remark towards the end of \cref{slope-of-tangent-line}. 
+\end{pedanticremark}
 
 \subsection{Mean value theorem}
 
@@ -793,6 +805,11 @@ Here are some more consequences.
 
 \begin{exercise}
 	Suppose $f : \R \to \R$ is differentiable which ``flattens out'' near infinity; in other words, \[ \lim_{x \to \infty} f'(x) = 0. \] Let $g(x) = f(x+1) - f(x)$. Is it true that $g$ ``levels off'' near infinity (ie, that $g(x) \to 0$ as $x \to \infty$)? If so, prove it. If not, explain why not. 
+\end{exercise}
+
+\begin{exercise} \label{continuous-and-differentiable-except-at-point}
+	Suppose $I$ is an open interval and $a \in I$. Let $f : I \to \R$ be continuous, and suppose further that it is differentiable at every $x \in I$ except possibly at $a$. If \[ \lim_{x \to a} f'(x) = L \]
+	exists, show that $f$ is also differentiable at $a$ and that $f'(a) = L$. 
 \end{exercise}
 
 \subsection{Monotonicity}
@@ -987,7 +1004,7 @@ The intermediate value theorem, mean value theorem, and Darboux's theorem all sa
 	\begin{tabular}{ p{0.17\textwidth} p{0.23\textwidth} p{0.23\textwidth} p{0.23\textwidth} } 
 		\toprule[1pt]
 		& Intermediate value theorem & Mean value theorem & Darboux's theorem \\ \cmidrule{2-4}
-		If $f : [a, b] \to \R$ is... & continuous & continuous and differentiable on the interior & differentiable on an open neighborhood of $[a,b]$ \\ \addlinespace[1em]
+		If $f : [a, b] \to \R$ is... & continuous & continuous and differentiable on the interior & differentiable \\ \addlinespace[1em]
 		& and $y$ is strictly in between $f(a)$ and $f(b)$ & & and $m$ is strictly in between $f'(a)$ and $f'(b)$ \\ \addlinespace[1em]
 		then there exists $c$ in $(a,b)$ such that... & $f(c) = y$. & $f'(c) = \dfrac{f(b) - f(a)}{b-a}$. & $f'(c) = m$. \\ \bottomrule[1pt]
 	\end{tabular}}
@@ -1542,13 +1559,22 @@ We next discuss an example of a smooth function which gets ``infinitely flat'' a
 		\caption{The graph of the function $f$ from \cref{infinitely-flat} that is ``infinitely flat'' at 0.}  \label{infinitely-flat-graph}
 	\end{figure}
 	\begin{enumerate}[(a)]
-		\item Use \cref{exponential-limit} to show that $f'(0) = 0$.
+		
 		\item Check that
 		\[ f'(x) = \begin{cases} \dfrac{e^{-1/x}}{x^2} & \text{if } x > 0 \\ 0 & \text{if } x \leq 0. \end{cases} \]
-		You've already computed $f'(0)$. You can compute formulas for the derivative $f'(x)$ for $x > 0$ and for $x < 0$ using the usual rules for differentiation.
-		\item Use \cref{exponential-limit} to show that $f''(0) = 0$, and then check that 
+		
+		\begin{hint}
+			You can compute $f'(x)$ for $x \neq 0$ using the usual rules for differentiation. The standard differentiation rules from calculus don't apply at $x = 0$, so you'll have to use a different argument to prove that $f'(0) = 0$. I can think of two possible strategies: (i) you could use the definition of the derivative \ref{derivative-definition-single} plus \cref{exponential-limit}, or (ii) you could use your calculations of $f'(x)$ for $x \neq 0$ plus \cref{continuous-and-differentiable-except-at-point}. 
+		\end{hint}
+		
+		\item Check that 
 		\[ f''(x) = \begin{cases} p_2(x) \cdot \dfrac{e^{-1/x}}{x^4} & \text{if } x > 0 \\ 0 & \text{if } x \leq 0 \end{cases} \]
 		where $p_2$ is the function $p_2(x) = 1-2x$. 
+		
+		\begin{hint}
+			Like in the previous part, you'll have to give a special argument to prove that $f''(0) = 0$. 
+		\end{hint}
+		
 		\item Inductively, prove that
 		\[ f^{(k)}(x) = \begin{cases} p_k(x) \cdot \dfrac{e^{-1/x}}{x^{2k}} & \text{if } x > 0 \\ 0 & \text{if } x \leq 0 \end{cases} \]
 		where $p_k$ is a polynomial function of degree $k-1$ such that $p_k(0) = 1$. 
