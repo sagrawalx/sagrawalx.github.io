@@ -850,7 +850,7 @@ And again, there are pathologies involving monotonicity than can be exhibited by
 
 \begin{exercise} \label{positive-not-monotone}
 	Let $f : \R \to \R$ denote the function
-	\[ f(x) = \begin{cases} x + 2x^2 \sin(1/x) & \text{if } x > 0 \\ 0 & \text{if } x = 0. \end{cases} \]
+	\[ f(x) = \begin{cases} x + 2x^2 \sin(1/x) & \text{if } x \neq 0 \\ 0 & \text{if } x = 0. \end{cases} \]
 	\begin{enumerate}[(a)]
 		\item Show that $f$ is differentiable and calculate $f'$. In particular, show that $f'(0) = 1$. 
 		\item Show that $f$ is not monotone\index{monotone} on any open interval containing 0.  
@@ -1041,7 +1041,7 @@ In fact, to get well-behaved interacted between limits and derivatives, what we 
 	
 	In fact, $\sigma_n$ converges \emph{uniformly} to $\sigma$ on a compact interval $I$ containing 0. To see this, observe that for any $m, n$, and $h \in I \setminus \{0\}$, we have
 	\[ \sigma_m(h) - \sigma_n(h) = \frac{(f_m(a+h) - f_n(a+h)) - (f_m(a) - f_n(a))}{h} = f_m'(\xi) - f_n'(\xi), \]
-	where for the last step we have applied the mean value theorem to the function $f_m - f_n$ on the closed interval between $a$ and $a + h$ to find $\xi$ strictly between $a$ and $a + h$. Moreover, we have $\sigma_m(0) - \sigma_n(0) = f_m'(a) - f_n'(a)$. In other words, for every $h \in I$, there exists $\xi \in a + I$ such that $\sigma_m(h) - \sigma_n(h) \leq f_m'(\xi) - f_n'(\xi)$. Thus
+	where for the last step we have applied the mean value theorem to the function $f_m - f_n$ on the closed interval between $a$ and $a + h$ to find $\xi$ strictly between $a$ and $a + h$. Moreover, we have $\sigma_m(0) - \sigma_n(0) = f_m'(a) - f_n'(a)$. In other words, for every $h \in I$, there exists $\xi \in a + I := \{a + x : x \in I\}$ such that $\sigma_m(h) - \sigma_n(h) = f_m'(\xi) - f_n'(\xi)$. Thus
 	\[ \|\sigma_m - \sigma_n\|_{\spn, I} \leq \|f_m' - f_n'\|_{\spn, a+I}. \]
 	Since the derivatives converge uniformly on the compact subset $a+I$, they are uniformly Cauchy. It follows from the above inequality that the $\sigma_n$ are also uniformly Cauchy, and therefore uniformly convergent. But $\sigma$ is the pointwise limit of the $\sigma_n$, so it must be the uniform limit. 
 	
