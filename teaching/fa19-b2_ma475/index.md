@@ -105,6 +105,7 @@ Do: 2, 7, 11, 27</td>
 <tr>
 <td colspan="3">  
 Quiz 1 (in class). Covers through 1.3.  
+Fearless Friday (2:30pm in TSC 229).   
 [Self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSfxoVhQKw_e8xi-DBHaV0daVK_OlmKvBFCJGjhLQ5O58TK1aA/viewform) for week 1 due (Sunday 11:59pm).
 </td>
 </tr>

@@ -1070,9 +1070,9 @@ This theorem lets us prove that we can differentiate power series term-by-term.
 	be the sequence of the partial sums of the power series. Then clearly $\lim f_n = f$ pointwise. The conclusion of \cref{differentiating-power-series} would therefore follow by applying \cref{differentiation-uniform-limit} to the sequence $f_n$, provided we first show that $f_n'$ converges uniformly on compact subsets of $(-R, R)$. To prove this, it is sufficient to show that the radius of convergence of the power series 
 	\[ \sum_{n = 0} na_n x^{n-1} \]
 	is also $R$. Let $R'$ denote the radius of convergence of this power series; we want to show that $R' = R$. Observe that
-	\[ \frac{1}{R'} = \limsup_{n \to \infty} (na_n)^{1/(n-1)} = \limsup_{n \to \infty} ((na_n)^{1/n})^{n/(n-1)}. \]
+	\[ \frac{1}{R'} = \limsup_{n \to \infty} |na_n|^{1/(n-1)} = \limsup_{n \to \infty} (|na_n|^{1/n})^{n/(n-1)}. \]
 	We know that $\lim n^{1/n} = 1$ and that $\lim n/(n-1) = 1$. We also know that
-	\[ \frac{1}{R} = \limsup_{n \to \infty} a_n^{1/n}.  \]
+	\[ \frac{1}{R} = \limsup_{n \to \infty} |a_n|^{1/n}.  \]
 	Putting all of this together, we conclude that $R = R'$. 
 \end{proof}
 
