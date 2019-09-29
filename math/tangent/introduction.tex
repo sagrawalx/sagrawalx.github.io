@@ -1,21 +1,42 @@
 \addcontentsline{toc}{chapter}{Introduction}
 \chapter*{Introduction}
 
-These notes are intended as a guided meditation on the concept of the derivative. Here, ``derivative'' is interpreted broadly to refer to single variable derivatives, multivariable derivatives, and pushforwards of tangent vectors on manifolds. There are many exercises, because it seems to me the only way to understand concepts is to play with them. 
+These notes are intended as a guided meditation on the concept of the derivative. They start with a rigorous treatment of single variable derivatives. The next step is to generalize and consider multivariable derivatives. Then, after an interlude introducing manifolds, the notes conclude with the ``ultimate'' generalization of the derivative: pushforwards of tangent vectors on manifolds.
 
+I have tried to include many pictures, because it seems to me that you don't deeply understand something until you can visualize it. I have also tried to include many exercises, because it seems to me that you really need to play with concepts yourself in order to understand them. 
 
-\section*{Prerequisites}
+\section*{How to read mathematics}
 
-This text assumes basic familiarity with point-set topology (specifically, metric spaces, and basic topological properties of $\R$) and with linear algebra. At a few points, there may be some ideas from point-set topology and linear algebra that you have not encountered before. A sort of ``bare minimum'' exposition of some of these ideas is included in \cref{prelims}. 
+The first and foremost comment I have about reading math is to remember that you'll only understand things if you do them yourself. Spend a lot of time solving exercises. It's okay if you get stuck; in fact, that's great news! That means you'll have learned something when you finally do figure it out. Don't let it bog you down, but do keep coming back to the exercises that give you trouble until you manage to pin down a solution. 
+
+Generally speaking, I think that it's useful to organize reading and learning new mathematics in the following stages. 
+\begin{enumerate}[(1)]
+	\item In the first stage, focus on the definitions, theorem statements, and examples. The examples are the most important of those. If there are exercises about explicit examples, do them. Skip the proofs of the theorems. 
+	
+	\item In the second stage, look over the proofs and try to figure out how it's structured. Do not go through line-by-line and trying to understand all of the details at this point. Try to formulate an outline of the argument by identifying the main claims that are being made. Make sure that these main claims agree with the intuition you've developed from the examples you studied in the previous step. Try to visualize parts of the argument. 
+	
+	\item In the third stage, study the details of the proofs. 
+\end{enumerate}
+Each of these three stages builds on the previous one. If your grasp on definitions, theorem statements, and examples is shaky, you're unlikely to get anything meaningful out of reading proofs. If you don't understand how a proof is broadly structured, the details of the proofs may just be an amorphous and meaningless string of logic. 
+
+I also think that each of these three stages is also less important than the previous one. If your understanding of definitions and examples is solid enough, you'll often just figure out the proofs yourself. Maybe not all of the proofs (some theorems have very hard proofs), but that's okay. Similarly, if you understand the broad outline of arguments, you'll often just be able to fill in the details yourself. Maybe not always (sometimes the details are very tricky), but that's also okay. If you're at the point where you really understand everything except perhaps the trickiest parts of the proofs of the hardest theorems, you're in a good place! 
+
+\section*{``Do I need to prove this formally?''}
+
+If you find yourself asking this question, the answer is almost definitely ``yes.'' You'll often learn a lot by trying to formalize arguments. It might just give you more practice structuring formal arguments, but sometimes you'll also discover that an assertion you thought was true isn't actually.  
+
+When you look at an assertion and \emph{confidently know} that you \emph{could} write down a formal proof, that's the point when maybe you don't actually need to write it down. I like calling this the \emph{Bergman principle} (after George Bergman, who said something to this effect in a class I took with him at UC Berkeley in Fall 2011).
 
 \section*{How to use these notes}
 
-If you're working through these notes and find one of the exercises challenging, that's great news! That means you'll have learned something when you solve it. But don't let the challenging exercises bog you down. Keep reading onwards, but do eventually come back to the exercises that gave you trouble. 
+These notes assume basic familiarity with point-set topology (specifically, metric spaces, and basic topological properties of $\R$) and with linear algebra. At a few points, there may be some ideas from point-set topology and linear algebra that you have not encountered before. A sort of ``bare minimum'' exposition of some of these ideas is included in \cref{prelims}. 
 
-You are advised to \emph{not} spend time reading \cref{prelims} thoroughly before jumping into the main part of the text. When ideas from \cref{prelims} are invoked in the main part, a reference to the relevant part of \cref{prelims} is included. My suggestion is to only look at \cref{prelims} when you run into a reference to it, chasing references back as needed. 
+That said, you are advised to \emph{not} spend time reading \cref{prelims} thoroughly before jumping into the main part of the text. When ideas from \cref{prelims} are invoked in the main part, a reference to the relevant part of \cref{prelims} is included. My suggestion is to only look at \cref{prelims} when you run into a reference to it, chasing references back as needed. 
 
-Some sections are starred (\starred). This is intended to indicate that the section is more challenging, and perhaps not quite as important for the overall direction that these notes take. This is not to say they are not important; some very important facts are discussed in starred sections, and in fact unstarred sections do sometimes reference results in starred sections. But, if you find yourself struggling and need help deciding what's most important to focus on, focus on the unstarred sections. 
+Some sections are starred (\starred). This is intended to indicate one of two things: either that the section is a little more challenging than others, or that it's slightly less important for the overall development of concepts in these notes. I wouldn't say that the starred sections are all skip-able, and unstarred sections do sometimes reference results in starred sections. But, if you find yourself struggling and need help deciding what's most important to focus on, focus on the unstarred sections. 
 
 \section*{Suggestions for improvement}
 
-This is a first draft, and there are bound to be many errors. Please be on the lookout for them! If you think you've found one, please share it with me. I'd also be very interested to hear about non-errors. For example, if there are sentences that are phrased confusingly, I'd like to know that. I'd also especially like to know if you think that there are places where additional pictures would be useful. 
+These notes are still in very rough form. There are bound to be many errors, so please be on the lookout for them! If you think you've found one, please share it with me. 
+
+I'd also very much appreciate suggestions for improving the exposition. For example, I'd like to know if there are parts that are phrased confusingly, or if there are specific proofs where I could spend more time discussing the broad outline before diving into the details, or if there are places where more pictures would be useful... Any way that you think these notes could be better, please tell me!

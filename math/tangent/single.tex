@@ -817,12 +817,12 @@ Here are some more consequences.
 We begin by recalling the following definition. 
 
 \begin{definition} \index{monotone} \index{monotone!increasing} \index{monotone!decreasing} \index{monotone!strictly monotone} \index{monotone!strictly increasing} \index{monotone!strictly decreasing} 
-	Suppose $f : S \to \R$ is a function and $x, y \in S$. 
+	Suppose $I$ is an interval and $f : I \to \R$ is a function.
 	\begin{itemize}
-		\item $f$ is \emph{increasing} if $x < y$ implies $f(x) \leq f(y)$. 
-		\item $f$ is \emph{decreasing} if $x < y$ implies $f(x) \geq f(y)$.
-		\item $f$ is \emph{strictly increasing} if $x < y$ implies $f(x) < f(y)$. 
-		\item $f$ is \emph{strictly decreasing} if $x < y$ implies $f(x) > f(y)$. 
+		\item $f$ is \emph{increasing} $f(x) \leq f(y)$ for all $x < y$ in $I$. 
+		\item $f$ is \emph{decreasing} $f(x) \geq f(y)$ for all $x < y$ in $I$.
+		\item $f$ is \emph{strictly increasing} $f(x) < f(y)$ for all $x < y$ in $I$. 
+		\item $f$ is \emph{strictly decreasing} $f(x) > f(y)$ for all $x < y$ in $I$. 
 	\end{itemize}
 Further, $f$ is \emph{monotone} if it is either increasing or decreasing, and \emph{strictly monotone} if it is either strictly increasing or strictly decreasing. 
 \end{definition}
@@ -848,6 +848,9 @@ The proofs of the following standard relationships between derivatives and monot
 		\item Prove that $f' \geq 0$ if and only if $f$ is increasing. 
 		\item Prove that $f' \leq 0$ if and only if $f$ is decreasing.
 	\end{enumerate}
+	\begin{hint}
+		You could basically repeat your proof of part (a) for part (b). Alternatively, notice that $f$ is decreasing if and only if $-f$ is increasing. 
+	\end{hint}
 \end{exercise}
 
 \begin{exercise}[Derivatives and strict monotonicity] \label{strictly-monotone-derivative}
@@ -875,6 +878,106 @@ Again, there are pathologies involving monotonicity than can be exhibited by fun
 		\item Show that $f$ is not monotone on any open interval containing 0.  
 		\item Explain the ``2'' that shows up in the definition of $f$. Could it be replaced by 1 without changing the property of $f$ you proved in (b) above? Could it be replaced by 3? What is the set of all real numbers that it could be replaced with?
 	\end{enumerate}
+\end{exercise}
+
+\subsection{Concavity}
+
+Here is a word you probably recognize from calculus, but perhaps you haven't seen a formal definition. 
+
+\begin{definition} \label{concave-up-definition}
+	Suppose $I$ is an interval and $f : I \to \R$ is a function. We say that $f$ is \emph{concave up}, or \emph{convex}, if
+	\[ \frac{f(y)-f(x)}{y-x} \leq \frac{f(z)-f(y)}{z-y} \]
+	for all $x < y < z$ in $I$. 
+	See \cref{concave-up-picture}. Similarly, we say that $f$ is \emph{concave down}, or just \emph{concave}, if
+	\[ \frac{f(y)-f(x)}{y-x} \geq \frac{f(z)-f(y)}{z-y} \]
+	for all $x < y < z$ in $I$. 
+	Notice that $f$ is concave down if and only if $-f$ is concave up. 
+\end{definition}
+
+\begin{figure}[t]
+	\begin{center}
+		\begin{tikzpicture}
+		\begin{axis}[
+		xmin=-0.5,xmax=4,
+		ymin=-0.5,ymax=7,
+		xtick={1,2,3},
+		ytick={0},
+		xticklabels={$x$, $y$, $z$},
+		yticklabels={},
+		axis lines=middle,
+		axis line style=lightgray,
+		width=0.75\textwidth
+		]
+		\addplot[lightgray,style=thick,<->] expression[domain=-0.4:3.4,samples=50]{(x-1)^2+1}; 
+		
+		
+		\addplot[black,<->] expression[domain=0.5:2.3,samples=2]{x}; 
+		\addplot[black,<->] expression[domain=1.8:3.5,samples=2]{3*x-4};
+		\addplot[black,dashed,<->] expression[domain=0.4:3.5,samples=2]{2*x-1};  
+		
+		\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:1,1) {};
+		\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:2,2) {};
+		\node[color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:3,5) {};
+		
+		\end{axis}
+		\end{tikzpicture}
+	\end{center}
+	\caption{A function $f$ is defined to be \emph{concave up} in \cref{concave-up-definition} if the slope of the secant connecting $(x,f(x))$ and $(y,f(y))$ is less than or equal to the slope of the secant connecting $(y,f(y))$ and $(z,f(z))$ for all $x < y < z$. \Cref{concave-up-reformulation} says that, in this situation, the slope of the secant connecting $(x,f(x))$ and $(z,f(z))$ is in between the other two slopes. }  \label{concave-up-picture}
+\end{figure}
+
+\begin{lemma} \label{concave-up-reformulation}
+	Suppose $I$ is an interval. A function $f : I \to \R$ is concave up if and only if 
+	\[ \frac{f(y)-f(x)}{y-x} \leq \frac{f(z)-f(x)}{z-x} \leq \frac{f(z)-f(y)}{z-y} \]
+	for all $x < y < z$ in $I$. 
+\end{lemma}
+
+\begin{proof}
+	Clearly the double inequality in the statement of the lemma implies the single inequality in the definition. The proof of the converse is a rather unenlightening string of inequalities. 
+	\begin{equation} \label{concave-up-reformulation-eqn1} \begin{aligned} \frac{f(y)-f(x)}{y-x} &\leq \frac{f(z)-f(y)}{z-y} \\
+	(z-y)(f(y)-f(x)) &\leq (y-x)(f(z)-f(y)) \\
+	zf(y) - zf(x) - yf(y) + yf(x) &\leq yf(z) - yf(y) - xf(z) +xf(y) \\
+	zf(y) - zf(x) + yf(x) &\leq yf(z) - xf(z) + xf(y)
+	\end{aligned} \end{equation}
+	We'll take \cref{concave-up-reformulation-eqn1} and manipulate it to prove the two inequalities in the statement of the lemma. 
+	
+	First, if we take \cref{concave-up-reformulation-eqn1} and move the $yf(x)$ and $xf(y)$ terms to the opposite sides, and then add in $xf(x)$ to both sides, we see that 
+	\[ \begin{aligned} 
+	zf(y) - zf(x) - xf(y) &\leq yf(z) - yf(x) - xf(z) \\
+	zf(y) - zf(x) - xf(y) + xf(x) &\leq yf(z) - yf(x) - xf(z) + xf(x) \\
+	(z-x)(f(y)-f(x)) &\leq (y-x)(f(z)-f(x)) \\
+	\frac{f(y)-f(x)}{y-x} &\leq \frac{f(z)-f(x)}{z-x},
+	\end{aligned} \]
+	which is one of the inequalities. On the other hand, if we move the $yf(z)$ and $zf(y)$ terms to the opposite sides in \cref{concave-up-reformulation-eqn1}, and then add in $zf(z)$ to both sides, we see that 
+	\[ \begin{aligned} -zf(x) - yf(z) + yf(x) &\leq -zf(y) - xf(z) + xf(y) \\
+	zf(z) -zf(x) - yf(z) + yf(x) &\leq zf(z) -zf(y) - xf(z) + xf(y) \\
+	(z-y)(f(z)-f(x)) &\leq (z-x)(f(z)-f(y)) \\
+	\frac{f(z)-f(x)}{z-x} &\leq \frac{f(z)-f(y)}{z-y}, \end{aligned} \]
+	which is the other inequality. 
+\end{proof}
+
+\begin{unimportantremark}
+	The proof above shows that either one of the two inequalities in the statement of \cref{concave-up-reformulation} implies that $f$ is concave up. 
+\end{unimportantremark}
+
+\begin{exercise}
+	Suppose $f : [0, \infty) \to \R$ is continuous, concave up, and that $f(0) = 0$. Show that the function $g : (0, \infty) \to \R$ defined by 
+	\[ g(x) = \frac{f(x)}{x} \]
+	is increasing. 
+\end{exercise}
+
+Here is the relationship between differentiation and concavity. 
+
+\begin{exercise}[Derivatives and concavity] \label{concavity-derivative}
+	Suppose $I$ is an open interval and $f : I \to \R$ is differentiable. 
+	\begin{enumerate}[(a)]
+		\item Prove that $f$ is concave up if and only if $f'$ is increasing. 
+		\item Prove that $f$ is concave down if and only if $f'$ is decreasing. 
+	\end{enumerate}
+	\begin{hint}
+		If $f'$ is increasing, apply the mean value theorem \ref{mean-value-theorem} to prove that $f$ is concave up. Conversely, if $f$ is concave, suppose we have $a < b$ in $I$. Let $x$ and $y$ be such that $a < x < y < b$. Show that 
+		\[ \frac{f(x)-f(a)}{x-a} \leq \frac{f(b)-f(y)}{b-y}, \]
+		and then let $x \to a^+$ and $y \to b^-$. 
+	\end{hint}
 \end{exercise}
 
 \subsection{Darboux's theorem \starred} \label{darboux-section}
@@ -1339,6 +1442,16 @@ The following shows that all of these implications are strict; in other words, f
 	For any positive integer $k$, let $f_k : \R \to \R$ be the function given by
 	\[ f_k(x) = \begin{cases} x^{k+1} \sin(1/x) &  \text{if } x \neq 0 \\ 0 & \text{if } x = 0. \end{cases} \]
 	Show that the $k$th derivative $f^{(k)}$ exists, but it is not continuous. 
+\end{exercise}
+
+Here is a property of $C^2$ functions you likely recognize from calculus. 
+
+\begin{exercise}
+	Suppose $I$ is an open interval and $f : I \to \R$ is $C^2$. 
+	\begin{enumerate}[(a)]
+		\item Show that $f$ is concave up if and only if $f'' \geq 0$.
+		\item Show that $f$ is concave down if and only if $f'' \leq 0$.  
+	\end{enumerate}
 \end{exercise}
 
 \subsection{Taylor's theorem \starred}
