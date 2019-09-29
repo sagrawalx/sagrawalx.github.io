@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  28 SEP 2019 15:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  28 SEP 2019 15:32
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1193,7 +1193,7 @@ File: english.lbx 2017/12/19 v3.10 biblatex localization (PK/JW/AB)
 )
 \@quotelevel=\count336
 \@quotereset=\count337
-No file figures/main-figure13.aux.
+No file figures/main-figure40.aux.
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
 LaTeX Font Info:    ... okay on input line 93.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
@@ -2043,14 +2043,8 @@ A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
-\openout4 = `figures/main-figure13.dpth'.
-
-[64
-
-
-
-
-]
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
@@ -3307,8 +3301,14 @@ LaTeX Warning: Reference `mobius-box' on page 1 undefined on input line 217.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
+\openout4 = `figures/main-figure40.dpth'.
+
+[135
+
+
+
+
+]
 
 LaTeX Warning: Reference `mobius-box' on page 1 undefined on input line 309.
 
@@ -3693,7 +3693,7 @@ LaTeX Warning: Reference `immersive-submersive-critical' on page 1 undefined on
 
 LaTeX Warning: Empty bibliography on input line 110.
 
-No file figures/main-figure13.ind.
+No file figures/main-figure40.ind.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 114.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 114.
 
@@ -3701,23 +3701,23 @@ LaTeX Warning: There were undefined references.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                figures/main-figure13
+(biblatex)                figures/main-figure40
 (biblatex)                and rerun LaTeX afterwards.
 
-Package logreq Info: Writing requests to 'figures/main-figure13.run.xml'.
-\openout1 = `figures/main-figure13.run.xml'.
+Package logreq Info: Writing requests to 'figures/main-figure40.run.xml'.
+\openout1 = `figures/main-figure40.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44741 strings out of 492982
- 1046555 string characters out of 6134895
- 1734012 words of memory out of 5000000
- 47413 multiletter control sequences out of 15000+600000
- 97378 words of font info for 197 fonts, out of 8000000 for 9000
+ 45131 strings out of 492982
+ 1054634 string characters out of 6134895
+ 1735012 words of memory out of 5000000
+ 47805 multiletter control sequences out of 15000+600000
+ 97275 words of font info for 196 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,15n,119p,8849b,2494s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 74i,15n,119p,8849b,3232s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on figures/main-figure13.pdf (1 page, 1979 bytes).
+Output written on figures/main-figure40.pdf (1 page, 8534 bytes).
 PDF statistics:
  25 PDF objects out of 1000 (max. 8388607)
  8 compressed objects within 1 object stream

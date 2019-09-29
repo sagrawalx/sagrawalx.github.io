@@ -117,9 +117,8 @@ Fearless Friday (2:30pm in TSC 229).
 
 <tr>
 <td rowspan="2">Mon</td>
-<td>Multivariable: Definitions</td>
-<td>Read: 2.1–2   
-Do: 5, 6, 7, 9</td>
+<td>Single variable: Review</td>
+<td>None</td>
 <td>  
 </td>
 </tr>
@@ -134,9 +133,9 @@ Quiz 1 revisions (1–2pm).
 
 <tr>
 <td rowspan="2">Tue</td>
-<td>Multivariable: Computations</td>
-<td>Read: 2.3  
-Do: 2, 5, 10, 24, 28, 39</td>
+<td>Multivariable: Definitions</td>
+<td>Read: 2.1–2   
+Do: 5, 6, 9</td>
 <td></td>
 </tr>
 
@@ -148,9 +147,9 @@ Office hours (1–2pm).
 
 <tr>
 <td rowspan="2">Wed</td>
-<td>Multivariable: Differentiable functions</td>
-<td>Read: 2.4  
-Do: 8, 11, 14, 18</td>
+<td>Multivariable: Computations</td>
+<td>Read: 2.3  
+Do: 2, 10, 24, 28, 39</td>
 <td>
 </td>
 </tr>
@@ -163,29 +162,30 @@ Chapter 1 [proof portfolio](proof-portfolio) due (9:15am).
 
 <tr>
 <td rowspan="2">Thu</td>
-<td>Multivariable: $C^k$ hierarchy</td>
-<td>Read: 2.5  
-Do: </td>
+<td>Review</td>
+<td>Reread: 2.1–3  
+Do: (2.3) 5, 12, 30, 41</td>
 <td>
 </td>
 </tr>
 
 <tr>
 <td colspan="3">
+[Quiz 1 exceptional make-up](quiz1-makeup) due (9:15am).  
 Office hours (1–2pm).
 </td>
 </tr>
 
 <tr>
 <td rowspan="2">Fri</td>
-<td colspan="2">Catch-up day!</td>
-<td>
-</td>
+<td>Multivariable: Differentiable functions</td>
+<td>Read: 2.4  
+Do: 14</td>
 </tr>
 
 <tr>
 <td colspan="3">
-Quiz 2 (in class). Covers through chapter 2.  
+Quiz 2 (in class). Covers through 2.3.  
 [Project proposals](project) due (Sunday 11:59pm).  
 [Self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSfxoVhQKw_e8xi-DBHaV0daVK_OlmKvBFCJGjhLQ5O58TK1aA/viewform) for week 2 due (Sunday 11:59pm).
 </td>
@@ -197,16 +197,15 @@ Quiz 2 (in class). Covers through chapter 2.
 
 <tr>
 <td rowspan="2">Mon</td>
-<td>Manifolds: Definitions and examples</td>
-<td>Read: 3.1–2  
-Do: </td>
+<td>Multivariable: $C^k$ hierarchy</td>
+<td>Read: 2.5   
+Do: 18, 23, 25, 34, 37</td>
 <td>
 </td>
 </tr>
 
 <tr>
 <td colspan="3">
-Chapter 2 [proof portfolio](proof-portfolio) peer review (in class).  
 Quiz 2 revisions (1–2pm).  
 </td>
 </tr>
@@ -214,22 +213,29 @@ Quiz 2 revisions (1–2pm).
 
 <tr>
 <td rowspan="2">Tue</td>
-<td>Manifolds: Smooth functions</td>
-<td>Read: 3.3  
-Do: </td>
+<td>Multivariable: Review</td>
+<td>Reread: Chapter 2
+Do: (2.2) 7  
+(2.3) 45  
+(2.4) 8, 11, 18  
+(2.5) 41, 42</td>
 <td></td>
 </tr>
 
 <tr>
 <td colspan="3">
+Chapter 2 [proof portfolio](proof-portfolio) peer review (in class).  
 Office hours (1:30–2:30pm).  
 </td>
 </tr>
 
 <tr>
 <td rowspan="2">Wed</td>
-<td colspan="2">Catch-up day!</td>
+<td>Manifolds: Definitions</td>
 <td>
+Read: 3.1–2.A  
+Do: (3.1) 3, 6  
+(3.2) 4
 </td>
 </tr>
 
@@ -243,8 +249,8 @@ Office hours (1–2pm).
 
 <tr>
 <td rowspan="2">Thu</td>
-<td>Tangent spaces: Definition</td>
-<td>Read: 4.1.A  
+<td>Manifolds: Examples</td>
+<td>Read: 3.2.B–E  
 Do: </td>
 <td>
 </td>
@@ -252,7 +258,7 @@ Do: </td>
 
 <tr>
 <td colspan="3">
-Quiz 3 (in class). Covers through chapter 3.  
+Quiz 3 (in class). Covers through 2.5.  
 [Project draft](project) due (11:59pm).  
 </td>
 </tr>
@@ -260,8 +266,8 @@ Quiz 3 (in class). Covers through chapter 3.
 
 <tr>
 <td rowspan="2">Fri</td>
-<td>Tangent spaces: Operations</td>
-<td>Read: 4.1.B–4.2  
+<td>Review</td>
+<td>Reread: 3.1–2  
 Do: </td>
 <td>
 </td>
@@ -269,7 +275,7 @@ Do: </td>
 
 <tr>
 <td colspan="3">
-Chapter 3-4 [proof portfolio](proof-portfolio) peer review (in class).  
+Chapter 3 [proof portfolio](proof-portfolio) peer review (in class).  
 Quiz 3 revisions (1–2pm).  
 [Self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSfxoVhQKw_e8xi-DBHaV0daVK_OlmKvBFCJGjhLQ5O58TK1aA/viewform) for week 3 due (Sunday 11:59pm).
 </td>
@@ -287,7 +293,7 @@ Quiz 3 revisions (1–2pm).
 
 <tr>
 <td colspan="3">
-Chapter 3-4 [proof portfolio](proof-portfolio) due (in class).  
+Chapter 3 [proof portfolio](proof-portfolio) due (in class).  
 Office hours (1–2pm).  
 </td>
 </tr>
