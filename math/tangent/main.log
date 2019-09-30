@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  29 SEP 2019 10:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  29 SEP 2019 21:17
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1545,7 +1545,7 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 [43 <./figures/main-figure3.pdf>] [44 <./figures/main-figure4.pdf>] [45]
 [46] [47] [48] [49] [50]
 LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
-(Font)              scaled to size 9.0pt on input line 616.
+(Font)              scaled to size 9.0pt on input line 618.
  [51]
 ===== Image 'figures/main-figure5' is up-to-date. ======
 [52] [53 <./figures/main-figure5.pdf>]
@@ -1553,25 +1553,12 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 ===== Image 'figures/main-figure7' is up-to-date. ======
 [54 <./figures/main-figure6.pdf> <./figures/main-figure7.pdf>] [55] [56]
 [57]
-\openout3 = `figures/main-figure8.md5'.
-
-\openout3 = `main.auxlock'.
-
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "figures/main-figure8" "\def\tikzextern
-alrealjob{main}\input{main}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "figures/main-figure8" "\def\tikzexternalrealjob{main}\input{main}")...execute
-d.
-
-\openout3 = `main.auxlock'.
-
+===== Image 'figures/main-figure8' is up-to-date. ======
 [58] [59 <./figures/main-figure8.pdf>] [60] [61]
 ===== Image 'figures/main-figure9' is up-to-date. ======
 ===== Image 'figures/main-figure10' is up-to-date. ======
 [62]
-Underfull \hbox (badness 6526) in paragraph at lines 1110--1110
+Underfull \hbox (badness 6526) in paragraph at lines 1112--1112
 []\T1/zpltlf/m/n/8 continuous and dif-fer-en-
  []
 
@@ -1623,22 +1610,20 @@ chapter 2.
 ===== Image 'figures/main-figure31' is up-to-date. ======
 ===== Image 'figures/main-figure32' is up-to-date. ======
 ===== Image 'figures/main-figure33' is up-to-date. ======
-[109 <./figures/main-figure30.pdf> <./figures/main-figure31.pdf> <./figures/mai
-n-figure32.pdf> <./figures/main-figure33.pdf>]
+[109] [110 <./figures/main-figure30.pdf> <./figures/main-figure31.pdf> <./figur
+es/main-figure32.pdf> <./figures/main-figure33.pdf>]
 ===== Image 'figures/main-figure34' is up-to-date. ======
 ===== Image 'figures/main-figure35' is up-to-date. ======
-[110] [111 <./figures/main-figure34.pdf> <./figures/main-figure35.pdf>]
-[112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122] [123]
-[124]
+[111 <./figures/main-figure34.pdf>] [112 <./figures/main-figure35.pdf>]
+[113] [114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124]
 ===== Image 'figures/main-figure36' is up-to-date. ======
-[125 <./figures/main-figure36.pdf>] [126] [127] [128] [129] [130] [131]
-[132] [133] [134] [135] [136] [137] [138] [139]
+[125] [126 <./figures/main-figure36.pdf>] [127] [128] [129] [130] [131]
+[132] [133] [134] [135] [136] [137] [138] [139] [140]
 ===== Image 'figures/main-figure37' is up-to-date. ======
-[140] [141 <./figures/main-figure37.pdf>] [142]) [143]
+[141] [142 <./figures/main-figure37.pdf>]) [143]
 \openout2 = `manifolds.aux'.
 
- (./manifolds.tex
-[144
+ (./manifolds.tex [144
 
 
 
@@ -1698,14 +1683,14 @@ chapter without number
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 114.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 114.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3FAA382B03C51B6A5CC293EB98DD415D;6451.
+(rerunfilecheck)             Checksum: 24E37D6BC328408CE998FFEDD9FA2E0F;6451.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45893 strings out of 492982
- 1057695 string characters out of 6134895
+ 45894 strings out of 492982
+ 1057707 string characters out of 6134895
  1777024 words of memory out of 5000000
  47528 multiletter control sequences out of 15000+600000
  106242 words of font info for 237 fonts, out of 8000000 for 9000
@@ -1736,10 +1721,10 @@ s/type1/public/tex-gyre/qplr.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/z
 plb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on main.pdf (183 pages, 1536029 bytes).
+Output written on main.pdf (183 pages, 1537284 bytes).
 PDF statistics:
- 3266 PDF objects out of 3580 (max. 8388607)
- 2977 compressed objects within 30 object streams
- 912 named destinations out of 1000 (max. 500000)
+ 3269 PDF objects out of 3580 (max. 8388607)
+ 2980 compressed objects within 30 object streams
+ 913 named destinations out of 1000 (max. 500000)
  26562 words of extra memory for PDF output out of 29859 (max. 10000000)
 

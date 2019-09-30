@@ -1,19 +1,19 @@
 [0] Config.pm:302> INFO - This is Biber 2.9
 [0] Config.pm:305> INFO - Logfile is 'stable.blg'
-[31] biber:313> INFO - === Wed Sep 25, 2019, 15:15:09
-[55] Biber.pm:371> INFO - Reading 'stable.bcf'
-[114] Biber.pm:854> INFO - Using all citekeys in bib section 0
-[127] Biber.pm:3981> INFO - Processing section 0
-[139] Biber.pm:4154> INFO - Looking for bibtex format file 'references.bib' for section 0
-[140] bibtex.pm:1468> INFO - LaTeX decoding ...
-[157] bibtex.pm:1294> INFO - Found BibTeX data source 'references.bib'
-[254] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[254] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[254] Biber.pm:3809> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[254] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
-[277] bbl.pm:617> INFO - Writing 'stable.bbl' with encoding 'ascii'
-[279] Utils.pm:169> WARN - The entry 'konigsberger' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
-[281] Utils.pm:169> WARN - The entry 'gadea' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
-[284] Utils.pm:169> WARN - The entry 'pompeiu' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
-[286] bbl.pm:720> INFO - Output to stable.bbl
-[286] Biber.pm:110> INFO - WARNINGS: 3
+[30] biber:313> INFO - === Sun Sep 29, 2019, 21:16:28
+[54] Biber.pm:371> INFO - Reading 'stable.bcf'
+[120] Biber.pm:854> INFO - Using all citekeys in bib section 0
+[132] Biber.pm:3981> INFO - Processing section 0
+[145] Biber.pm:4154> INFO - Looking for bibtex format file 'references.bib' for section 0
+[146] bibtex.pm:1468> INFO - LaTeX decoding ...
+[163] bibtex.pm:1294> INFO - Found BibTeX data source 'references.bib'
+[248] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[248] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[249] Biber.pm:3809> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[249] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
+[264] bbl.pm:617> INFO - Writing 'stable.bbl' with encoding 'ascii'
+[267] Utils.pm:169> WARN - The entry 'konigsberger' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[268] Utils.pm:169> WARN - The entry 'gadea' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[271] Utils.pm:169> WARN - The entry 'pompeiu' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[274] bbl.pm:720> INFO - Output to stable.bbl
+[274] Biber.pm:110> INFO - WARNINGS: 3
