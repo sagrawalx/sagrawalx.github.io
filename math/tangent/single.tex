@@ -182,7 +182,7 @@ Notice that the function $h \mapsto f'(a)h$ is a linear map $\R \to \R$, in the 
 \end{proof}
 
 \begin{definition}
-	If $f : S \to \R$ is differentiable at an interior point $a \in S$, we define $df_a : \R \to \R$ to be the linear map $df_a(h) = f'(a)h$. The function $df_a$ is sometimes called the \emph{total derivative} or the \emph{differential of $f$ at $a$}. 
+	If $f : S \to \R$ is differentiable at an interior point $a \in S$, the \emph{differential} or the \emph{total derivative of $f$ at $a$}, denoted $df_a$, is the linear map $\R \to \R$ given by $df_a(h) = f'(a)h$. 
 \end{definition}
 
 Thus \cref{differential-unique-single} says that $df_a$ is the only good linear approximation to the function \[ h \mapsto f(a+h)-f(a). \] Being the \emph{only good} linear approximation, it is also the \emph{best} linear approximation, whence the name of this section. The following is an important version of this same idea that comes up frequently in proofs. 
@@ -455,10 +455,12 @@ Our second proof of the chain rule will use the ``best linear approximation'' in
 	\[ dg_{f(a)}(df_a(h)) = g'(f(a))f'(a)h. \]
 	Thus, by \cref{differential-unique-single}, it is sufficient to prove that
 	\[ g(f(a+h))-g(f(a))-dg_{f(a)}(df_a(h)) = o(|h|) \text{ as } h \to 0. \]
-	Define the following remainder functions, as in \cref{remainder-linear}.
+	In other words, we want to prove that $g(f(a+h))-g(f(a))-dg_{f(a)}(df_a(h))$ is ``small.'' What we know is that the following remainder functions are ``small'' (cf. \cref{remainder-linear}).
 	\[ \begin{aligned} 
 	r(h) &= f(a+h)-f(a) - df_a(h) \\ 
 	s(k) &= g(f(a)+k)-g(f(a))-dg_{f(a)}(k) \end{aligned} \]
+	So the gist of the proof is to rewrite $g(f(a+h))-g(f(a))-dg_{f(a)}(df_a(h))$ in terms of $r$ and $s$, and then prove that it is ``small'' using the facts that $r$ and $s$ are ``small.''
+	
 	Rearranging the definition of $r(h)$ tells us that
 	\begin{equation} \label{rearranged-definition-error} g(f(a+h)) = g(f(a) + df_a(h) + r(h)). \end{equation}
 	Now note that the definition of $s(k)$ for $k = df_a(h) + r(h)$ says the following. 
@@ -467,7 +469,7 @@ Our second proof of the chain rule will use the ``best linear approximation'' in
 	&= g(f(a)) + dg_{f(a)}(df_a(h)) + dg_{f(a)}(r(h)) + s(df_a(h) + r(h))  \end{aligned} \]
 	We used linearity of $dg_{f(a)}$ for the final step above. Combining this with \cref{rearranged-definition-error} show that
 	\[ g(f(a+h)) - g(f(a)) - dg_{f(a)}(df_a(h)) = dg_{f(a)}(r(h)) + s(df_a(h)+r(h)). \]
-	We therefore want to prove that the right-hand side is $o(|h|)$. Since \[ dg_{f(a)}(r(h)) = g'(f(a)) \cdot r(h) \] is just a scalar multiple of $r$, and $r = o(|h|)$, we see that $dg_{f(a)}(r) = o(|h|)$ also. So it is sufficient to prove that
+	At this point, we've rewritten $g(f(a+h))-g(f(a))-dg_{f(a)}(df_a(h))$ in terms of $r$ and $s$. We'll now prove that the right-hand side is in fact ``small'', ie, that it is $o(|h|)$. Since \[ dg_{f(a)}(r(h)) = g'(f(a)) \cdot r(h) \] is just a scalar multiple of $r$, and $r = o(|h|)$, we see that $dg_{f(a)}(r) = o(|h|)$ also. So it is sufficient to prove that
 	\[ s(df_a(h)+r(h)) = o(|h|). \]
 	We've now hit the technical part, so let's hit pause. 
 \end{proof}
@@ -476,7 +478,7 @@ To see why this is technical, and for essentially the same reasons as the previo
 \[ \lim_{h \to 0} \frac{|s(df_a(h)+r(h)|)}{|h|} = 0.  \]
 To prove this, it's tempting to introduce a multiplicative cross-term as follows. 
 \[ \frac{|s(df_a(h)+r(h)|)}{|h|} = \frac{|s(df_a(h)+r(h)|)}{|df_a(h)+r(h)|} \cdot \frac{|df_a(h)+r(h)|}{|h|} \]
-But notice that $df_a(h)+r(h) = f(a+h)-f(a)$ by definition of $r$, so this cross term is problematic for the same reasons as before! If $f(a+h) = f(a)$ for $h$ arbitrary close to $0$, we have an infinite sequence of divisions by zeroes that causes problems. 
+But notice that $df_a(h)+r(h) = f(a+h)-f(a)$ by definition of $r$, so this cross term is problematic for the same reasons as before! If $f(a+h) = f(a)$ for $h$ arbitrarily close to $0$, we have an infinite sequence of divisions by zeroes that causes problems. 
 
 We'll deal with this problem in essentially the same way as before: namely, we extend the definition of 
 \[\frac{|s(df_a(h)+r(h)|)}{|df_a(h)+r(h)|}\]
@@ -960,7 +962,7 @@ Here is a word you probably recognize from calculus, but perhaps you haven't see
 \end{unimportantremark}
 
 \begin{exercise}
-	Suppose $f : [0, \infty) \to \R$ is continuous, concave up, and that $f(0) = 0$. Show that the function $g : (0, \infty) \to \R$ defined by 
+	Suppose $f : [0, \infty) \to \R$ is concave up and that $f(0) = 0$. Show that the function $g : (0, \infty) \to \R$ defined by 
 	\[ g(x) = \frac{f(x)}{x} \]
 	is increasing. 
 \end{exercise}
@@ -1091,7 +1093,7 @@ Now we know that the derivative $f'$ of a differentiable function $f$ need not b
 	In case (ii), we instead let $c$ be the \emph{maximum} of $g$ on $[a,b]$, and argue similarly to show that $c$ must be an interior point. 
 \end{proof}
 
-Here is an example application. 
+Here is one application of Darboux's theorem. 
 
 \begin{exercise} \label{nonzero-derivative-implies-strictly-monotone}
 	Suppose $I$ is an open interval and $f : I \to \R$ is a differentiable function such that $f'(x) \neq 0$ for all $x \in I$. Show that $f$ is strictly monotone.\index{monotone!strictly monotone} 
@@ -1677,7 +1679,7 @@ We next discuss an example of a smooth function which gets ``infinitely flat'' a
 		\[ f'(x) = \begin{cases} \dfrac{e^{-1/x}}{x^2} & \text{if } x > 0 \\ 0 & \text{if } x \leq 0. \end{cases} \]
 		
 		\begin{hint}
-			You can compute $f'(x)$ for $x \neq 0$ using the usual rules for differentiation. The standard differentiation rules from calculus don't apply at $x = 0$, so you'll have to use a different argument to prove that $f'(0) = 0$. I can think of two possible strategies: (i) you could use the definition of the derivative \ref{derivative-definition-single} plus \cref{exponential-limit}, or (ii) you could use your calculations of $f'(x)$ for $x \neq 0$ plus \cref{continuous-and-differentiable-except-at-point}. 
+			You can compute $f'(x)$ for $x \neq 0$ using the usual rules for differentiation. The standard differentiation rules from calculus don't apply at $x = 0$, so you'll have to use a different argument to prove that $f'(0) = 0$. I can think of two possible strategies: (i) you could use the definition of the derivative \ref{derivative-definition-single}, or (ii) you could use your calculations of $f'(x)$ for $x \neq 0$ plus \cref{continuous-and-differentiable-except-at-point}. In either case, you'll probably need to use  \cref{exponential-limit}. 
 		\end{hint}
 		
 		\item Check that 

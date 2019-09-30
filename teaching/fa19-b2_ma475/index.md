@@ -157,6 +157,7 @@ Do: 2, 10, 24, 28, 39</td>
 <tr>
 <td colspan="3">
 Chapter 1 [proof portfolio](proof-portfolio) due (9:15am).  
+Office hours (2–3pm). 
 </td>
 </tr>
 

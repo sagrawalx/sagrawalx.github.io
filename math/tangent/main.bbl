@@ -22,7 +22,7 @@
     \entry{konigsberger}{book}{}
       \name{author}{1}{}{%
         {{hash=6ccc562a716d5970a27b749bf96cf4f5}{%
-           family={Königsberger},
+           family={K\"{o}nigsberger},
            familyi={K\bibinitperiod},
            given={Konrad},
            giveni={K\bibinitperiod}}}%
@@ -36,7 +36,7 @@
       \strng{authorbibnamehash}{6ccc562a716d5970a27b749bf96cf4f5}
       \strng{authornamehash}{6ccc562a716d5970a27b749bf96cf4f5}
       \strng{authorfullhash}{6ccc562a716d5970a27b749bf96cf4f5}
-      \field{labelalpha}{{Kö93}}
+      \field{labelalpha}{{K\"{o}93}}
       \field{sortinit}{K}
       \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
       \field{labelnamesource}{author}
@@ -44,7 +44,7 @@
       \field{isbn}{3-540-54723-1}
       \field{note}{Grundwissen Mathematik}
       \field{series}{Springer-Lehrbuch}
-      \field{shorthand}{{Kö93}}
+      \field{shorthand}{{K\"{o}93}}
       \field{title}{Analysis 2}
       \field{year}{1993}
     \endentry
@@ -86,9 +86,9 @@
            given={Pedro\bibnamedelima M.},
            giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
         {{hash=640ce9ff28061d9b510fb44133766df4}{%
-           family={Masqué},
+           family={Masqu\'{e}},
            familyi={M\bibinitperiod},
-           given={Jaime\bibnamedelima Muñoz},
+           given={Jaime\bibnamedelima Mu\~{n}oz},
            giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
         {{hash=571eba9027a801b741af7a0d9e2aba94}{%
            family={Mykytyuk},
@@ -271,7 +271,7 @@
       \field{issn}{0025-5831}
       \field{journaltitle}{Mathematische Annalen}
       \field{number}{3}
-      \field{title}{Sur les fonctions dérivées}
+      \field{title}{Sur les fonctions d\'{e}riv\'{e}es}
       \field{volume}{63}
       \field{year}{1907}
       \field{pages}{326\bibrangedash 332}

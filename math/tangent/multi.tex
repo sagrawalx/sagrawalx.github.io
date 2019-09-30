@@ -284,7 +284,7 @@ It turns out that there exists at most one linear map that has the above propert
 \Cref{differential-unique} tells us that the following definition makes sense.  
 
 \begin{definition} 
-	Suppose $f : S \to \R^n$ is differentiable at an interior point $a \in S$. Then the \emph{total derivative} or the \emph{differential of $f$ at $a$}, denoted $df_a$, is the unique linear map $\R^m \to \R^n$ satisfying
+	Suppose $f : S \to \R^n$ is differentiable at an interior point $a \in S$. Then the \emph{differential} or the \emph{total derivative of $f$ at $a$}, denoted $df_a$, is the unique linear map $\R^m \to \R^n$ satisfying
 	\[ |f(a+v)-f(a)-df_a(h)| = o(|h|) \text{ as } h \to 0.  \]
 \end{definition}
 
@@ -292,7 +292,7 @@ It turns out that there exists at most one linear map that has the above propert
 	Since we're using $|-|$ to refer indiscriminately to both the euclidean and max norms, it might be worth pointing out that the above definition is independent of which norm you have in mind. More precisely, for any linear function $\ell : \R^m \to \R^n$, we have $|f(a+h)-f(a)-\ell(h)|_2 = o(|h|_2)$ if and only if $|f(a+h)-f(a)-\ell(h)|_\infty = o(|h|_\infty)$. You might try proving this; the key is \cref{max-euclidean}. Thus, if $df_a$ exists, it is a ``good'' approximation for $f(a+h)-f(a)$, independently of whether we're measuring distances using the euclidean norm or the max norm. 
 \end{pedanticremark}
 
-We've now defined the derivative, but it's fairly difficult to use this definition in practice. There are only a few examples that can be computed directly from this definition. Here are some that I think are instructive.
+This definition is fairly difficult to use in practice. Only a handful examples can be computed directly from the definition. Here are some that I think are instructive.
 
 \begin{exercise} \label{derivative-of-linear}
 	Suppose $\ell : \R^m \to \R^n$ is a linear map. Prove that $d\ell_a = \ell$ for all $a \in \R^m$.  
@@ -549,7 +549,7 @@ We can use \cref{directional-to-single} to prove some directional derivative ana
 	\begin{hint} Use \cref{directional-to-single} and the single variable interior extremum theorem \ref{interior-extremum}. \end{hint}
 \end{exercise}
 
-Just as the converse to the single variable interior extremum theorem \ref{interior-extremum} is false (cf. \cref{interior-extremum-converse-false}), so too is the converse to the interior extremum theorem for directional derivatives \ref{interior-extremum-directional}, except that there are now even more ways for the converse to fail. Here are two examples to illustrate this.  
+Just as the converse to the single variable interior extremum theorem \ref{interior-extremum} is false (cf. \cref{interior-extremum-converse-false}), so too is the converse to the interior extremum theorem for directional derivatives \ref{interior-extremum-directional}, except that there are now even more ways for the converse to fail. Here are some examples to illustrate this.  
 
 \begin{example} \label{saddle}
 	Consider the function $f : \R^2 \to \R$ given by \[ f(x, y) = x^2 - y^2. \]
@@ -614,7 +614,13 @@ Just as the converse to the single variable interior extremum theorem \ref{inter
 	\end{enumerate}
 \end{exercise}
 
-Now for the main result of this section: partial derivatives help us compute derivatives. Note that we will generalize this result slightly in \cref{jacobian-matrix} below. 
+\begin{exercise}
+	Consider the function $f : \R^2 \to \R$ given by
+	\[ f(x,y) = 2x^3 - 3x^2 + 2y^3 + 3y^2. \]
+	Find all points $a \in \R^2$ such that $\partial_1 f(a) = \partial_2 f(a) = 0$. Of these points, which (if any) are local extremums? 
+\end{exercise}
+
+Now for the main result of this section: partial derivatives help us compute differentials. Note that we will generalize this result slightly in \cref{jacobian-matrix} below. 
 
 \begin{proposition} \label{differentiable-implies-directionals}
 	If $f : S \to \R$ is differentiable at an interior point $a \in S$ and $h \in \R^m$, then \[ df_a(h) = \partial_h f(a). \]
@@ -779,10 +785,14 @@ Similarly, the matrix version of the multivariable product rule \ref{product-rul
 \[ (fg)'(a) = g(a)f'(a) + f(a)g'(a), \]
 which again looks superficially identical to the single variable product rule \ref{product-rule-single}, but again, it is worth noting that $g(a)$ and $f(a)$ are scalars, whereas $f'(a)$ and $g'(a)$ are matrices. 
 
+\begin{unimportantremark}
+	For a single variable function differentiable $f$, in \cref{single} we saw that the differential $df_a$ to be the linear map given by multiplication by the derivative $f'(a)$, and the derivative $f'(a)$ was the standard matrix representation $[df_a]$ of the differential $df_a$. For multivariable differentiable functions $f$, the differential $df_a$ is the linear map given by left multiplication by the Jacobian matrix $f'(a)$, and the Jacobian matrix $f'(a)$ is the standard matrix representation $[df_a]$ of the differential $df_a$. The term ``derivative'' is a little ambiguous for multivariable functions; sometimes people will use it to refer to the differential $df_a$, and sometimes people will use it to refer to the Jacobian matrix $f'(a)$. 
+\end{unimportantremark}
+
 \subsection{Rank of a differentiable map}
 
 \begin{definition}[Rank of a differentiable map] \label{immersive-submersive-critical} \index{rank!of a differentiable function}
-	Suppose $f : S \to \R^n$ is differentiable at an interior point $a \in S$. The rank of the linear map $df_a : \R^m \to \R^n$ (or, equivalently, of the matrix $f'(a)$) is also called the \emph{rank of $f$ at $a$}, denoted $\rank_a(f)$. Note that we always have \[ \rank_a(f) \leq \min\{m,n\}. \]
+	Suppose $f : S \to \R^n$ is differentiable at an interior point $a \in S$. The rank of the differential $df_a : \R^m \to \R^n$ (or, equivalently, the rank of the Jacobian matrix $f'(a)$) is also called the \emph{rank of $f$ at $a$}, denoted $\rank_a(f)$. Note that we always have \[ \rank_a(f) \leq \min\{m,n\}. \]
 	We then make the following definitions in various special cases. 
 	\begin{itemize}
 		\item We say that $f$ is \emph{immersive at $a$}\index{immersive} if $\rank_a(f) = m$ (equivalently, if $df_a$ is injective). 

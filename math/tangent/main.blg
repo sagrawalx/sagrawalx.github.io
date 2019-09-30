@@ -1,15 +1,19 @@
 [0] Config.pm:302> INFO - This is Biber 2.9
 [0] Config.pm:305> INFO - Logfile is 'main.blg'
-[24] biber:313> INFO - === Sun Sep 22, 2019, 07:59:26
-[44] Biber.pm:371> INFO - Reading 'main.bcf'
-[102] Biber.pm:854> INFO - Using all citekeys in bib section 0
-[115] Biber.pm:3981> INFO - Processing section 0
-[124] Biber.pm:4154> INFO - Looking for bibtex format file 'references.bib' for section 0
-[125] bibtex.pm:1468> INFO - LaTeX decoding ...
-[140] bibtex.pm:1294> INFO - Found BibTeX data source 'references.bib'
-[232] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[232] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[232] Biber.pm:3809> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[232] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
-[249] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[255] bbl.pm:720> INFO - Output to main.bbl
+[34] biber:313> INFO - === Sun Sep 29, 2019, 21:16:25
+[58] Biber.pm:371> INFO - Reading 'main.bcf'
+[119] Biber.pm:854> INFO - Using all citekeys in bib section 0
+[131] Biber.pm:3981> INFO - Processing section 0
+[144] Biber.pm:4154> INFO - Looking for bibtex format file 'references.bib' for section 0
+[145] bibtex.pm:1468> INFO - LaTeX decoding ...
+[162] bibtex.pm:1294> INFO - Found BibTeX data source 'references.bib'
+[253] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[253] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[254] Biber.pm:3809> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[254] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
+[274] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'ascii'
+[276] Utils.pm:169> WARN - The entry 'konigsberger' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[278] Utils.pm:169> WARN - The entry 'gadea' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[282] Utils.pm:169> WARN - The entry 'pompeiu' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[284] bbl.pm:720> INFO - Output to main.bbl
+[285] Biber.pm:110> INFO - WARNINGS: 3
