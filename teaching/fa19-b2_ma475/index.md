@@ -98,9 +98,7 @@ Writing assignment due (11:59pm). [Prompt](/teaching/prompt.pdf).
 <td>Single variable: $C^k$ hierarchy</td>
 <td>Read: 1.4  
 Do: 2, 7, 11, 27</td>
-<td>
-[Link](single-ck.pdf)
-</td>
+<td>[Link](single-ck.pdf)</td>
 </tr>
 
 <tr>
@@ -119,8 +117,7 @@ Fearless Friday (2:30pm in TSC 229).
 <td rowspan="2">Mon</td>
 <td>Single variable: Review</td>
 <td>None</td>
-<td>  
-</td>
+<td>[Link](single-review.pdf)</td>
 </tr>
 
 <tr>
@@ -157,7 +154,7 @@ Do: 2, 10, 24, 28, 39</td>
 <tr>
 <td colspan="3">
 Chapter 1 [proof portfolio](proof-portfolio) due (9:15am).  
-Office hours (2–3pm). 
+Office hours (2–3pm).
 </td>
 </tr>
 
