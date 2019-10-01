@@ -133,7 +133,7 @@ Quiz 1 revisions (1–2pm).
 <td>Multivariable: Definitions</td>
 <td>Read: 2.1–2   
 Do: 5, 6, 9</td>
-<td></td>
+<td>[Link](multi-definition.pdf)</td>
 </tr>
 
 <tr>
@@ -184,6 +184,7 @@ Do: 14</td>
 <tr>
 <td colspan="3">
 Quiz 2 (in class). Covers through 2.3.  
+Student summer research poster session (2:30–4pm in TSC 2nd floor atrium).  
 [Project proposals](project) due (Sunday 11:59pm).  
 [Self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSfxoVhQKw_e8xi-DBHaV0daVK_OlmKvBFCJGjhLQ5O58TK1aA/viewform) for week 2 due (Sunday 11:59pm).
 </td>

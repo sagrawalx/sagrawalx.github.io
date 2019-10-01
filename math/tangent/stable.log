@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  27 SEP 2019 08:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  1 OCT 2019 07:38
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1436,22 +1436,26 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 ]
 LaTeX Font Info:    Font shape `T1/qhv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/qhv/b/n' tried instead on input line 7.
+(Font)              Font shape `T1/qhv/b/n' tried instead on input line 8.
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 13.53603pt on input line 7.
+(Font)              scaled to size 13.53603pt on input line 8.
+ [3]
+LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
+(Font)              scaled to size 10.95pt on input line 28.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 9.
+(Font)              scaled to size 8.0pt on input line 32.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 6.0pt on input line 9.
-LaTeX Font Info:    Try loading font information for U+bbold on input line 9.
+(Font)              scaled to size 6.0pt on input line 32.
+LaTeX Font Info:    Try loading font information for U+bbold on input line 32.
 
 (/usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd)
-LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
-(Font)              scaled to size 10.95pt on input line 15.
- [3])
 LaTeX Font Info:    Font shape `T1/zpltlf/m/sl' will be
-(Font)              scaled to size 10.95pt on input line 96.
- [4]
+(Font)              scaled to size 10.95pt on input line 35.
+ [4]) [5] [6
+
+
+
+]
 Package tocbasic Info: character protrusion at toc deactivated on input line 98
 .
 
@@ -1460,15 +1464,11 @@ LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 3.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
 (Font)              scaled to size 10.95pt on input line 3.
- [5
-
-
-
-] [6] [7])
+ [7] [8] [9])
 \tf@toc=\write8
 \openout8 = `stable.toc'.
 
- [8]
+ [10]
 \openout2 = `preliminaries.aux'.
 
  (./preliminaries.tex
@@ -1477,20 +1477,20 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 9.0pt on input line 11.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 5.0pt on input line 11.
-[9
+[11
 
 
 
-] [10] [11] [12] [13] [14]
+] [12] [13] [14] [15] [16]
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 12.0pt on input line 224.
- [15]
+ [17]
 LaTeX Font Info:    Try loading font information for U+eus on input line 255.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
-) [16] [17] [18]
-[19] [20] [21] [22] [23] [24] [25]
+) [18] [19] [20]
+[21] [22] [23] [24] [25] [26] [27]
 LaTeX Font Info:    Try loading font information for TS1+zpltlf on input line 5
 79.
 
@@ -1499,64 +1499,64 @@ File: ts1zpltlf.fd 2015/01/18 v1.0 fd file for TS1/zpltlf
 )
 LaTeX Font Info:    Font shape `TS1/zpltlf/m/n' will be
 (Font)              scaled to size 10.95pt on input line 579.
- [26] [27])
-[28]
+ [28] [29])
+[30]
 \openout2 = `single-stable.aux'.
 
  (./single-stable.tex
 chapter 1.
 ===== Image 'figures/stable-figure0' is up-to-date. ======
-[29
+[31
 
 
 
 
-] [30 <./figures/stable-figure0.pdf>] [31]
+] [32 <./figures/stable-figure0.pdf>] [33]
 LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 (Font)              scaled to size 9.0pt on input line 123.
- [32]
+ [34]
 ===== Image 'figures/stable-figure1' is up-to-date. ======
-[33 <./figures/stable-figure1.pdf>]
+[35 <./figures/stable-figure1.pdf>]
 LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 (Font)              scaled to size 8.0pt on input line 175.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 (Font)              scaled to size 6.0pt on input line 175.
- [34]
+ [36]
 ===== Image 'figures/stable-figure2' is up-to-date. ======
-[35] [36 <./figures/stable-figure2.pdf>] [37] [38] [39]
+[37] [38 <./figures/stable-figure2.pdf>] [39] [40] [41]
 ===== Image 'figures/stable-figure3' is up-to-date. ======
-[40]
+[42]
 ===== Image 'figures/stable-figure4' is up-to-date. ======
-[41 <./figures/stable-figure3.pdf>] [42 <./figures/stable-figure4.pdf>]
-[43] [44] [45] [46] [47] [48]
+[43 <./figures/stable-figure3.pdf>] [44 <./figures/stable-figure4.pdf>]
+[45] [46] [47] [48] [49] [50]
 ===== Image 'figures/stable-figure5' is up-to-date. ======
-[49] [50 <./figures/stable-figure5.pdf>]
+[51] [52 <./figures/stable-figure5.pdf>]
 ===== Image 'figures/stable-figure6' is up-to-date. ======
 ===== Image 'figures/stable-figure7' is up-to-date. ======
-[51 <./figures/stable-figure6.pdf> <./figures/stable-figure7.pdf>] [52]
-[53] [54]
+[53 <./figures/stable-figure6.pdf> <./figures/stable-figure7.pdf>] [54]
+[55] [56]
 ===== Image 'figures/stable-figure8' is up-to-date. ======
 ===== Image 'figures/stable-figure9' is up-to-date. ======
-[55] [56 <./figures/stable-figure8.pdf> <./figures/stable-figure9.pdf>]
-[57] [58] [59] [60] [61] [62]
+[57] [58 <./figures/stable-figure8.pdf> <./figures/stable-figure9.pdf>]
+[59] [60] [61] [62] [63] [64]
 ===== Image 'figures/stable-figure10' is up-to-date. ======
 ===== Image 'figures/stable-figure11' is up-to-date. ======
 ===== Image 'figures/stable-figure12' is up-to-date. ======
 ===== Image 'figures/stable-figure13' is up-to-date. ======
-[63 <./figures/stable-figure10.pdf> <./figures/stable-figure11.pdf> <./figures/
-stable-figure12.pdf> <./figures/stable-figure13.pdf>] [64] [65] [66] [67]
-[68]
+[65 <./figures/stable-figure10.pdf> <./figures/stable-figure11.pdf> <./figures/
+stable-figure12.pdf> <./figures/stable-figure13.pdf>] [66] [67] [68] [69]
+[70]
 ===== Image 'figures/stable-figure14' is up-to-date. ======
-[69] [70 <./figures/stable-figure14.pdf>]
+[71] [72 <./figures/stable-figure14.pdf>]
 ===== Image 'figures/stable-figure15' is up-to-date. ======
-[71 <./figures/stable-figure15.pdf>]
+[73 <./figures/stable-figure15.pdf>]
 ===== Image 'figures/stable-figure16' is up-to-date. ======
-[72] [73 <./figures/stable-figure16.pdf>]) [74]
+[74] [75 <./figures/stable-figure16.pdf>]) [76]
 \openout2 = `multi-stable.aux'.
 
  (./multi-stable.tex
 chapter 2.
-[75
+[77
 
 
 
@@ -1567,65 +1567,65 @@ chapter 2.
 ===== Image 'figures/stable-figure19' is up-to-date. ======
 ===== Image 'figures/stable-figure20' is up-to-date. ======
 ===== Image 'figures/stable-figure21' is up-to-date. ======
-[76 <./figures/stable-figure17.pdf> <./figures/stable-figure18.pdf> <./figures/
-stable-figure19.pdf>] [77 <./figures/stable-figure20.pdf>] [78 <./figures/stabl
+[78 <./figures/stable-figure17.pdf> <./figures/stable-figure18.pdf> <./figures/
+stable-figure19.pdf>] [79 <./figures/stable-figure20.pdf>] [80 <./figures/stabl
 e-figure21.pdf>]
 ===== Image 'figures/stable-figure22' is up-to-date. ======
-[79 <./figures/stable-figure22.pdf>] [80] [81] [82]
+[81 <./figures/stable-figure22.pdf>] [82] [83] [84]
 ===== Image 'figures/stable-figure23' is up-to-date. ======
-[83] [84 <./figures/stable-figure23.pdf>] [85] [86] [87] [88] [89] [90]
+[85] [86 <./figures/stable-figure23.pdf>] [87] [88] [89] [90] [91] [92]
 ===== Image 'figures/stable-figure24' is up-to-date. ======
 ===== Image 'figures/stable-figure25' is up-to-date. ======
-[91] [92 <./figures/stable-figure24.pdf>] [93 <./figures/stable-figure25.pdf>]
+[93] [94 <./figures/stable-figure24.pdf>] [95 <./figures/stable-figure25.pdf>]
 ===== Image 'figures/stable-figure26' is up-to-date. ======
 ===== Image 'figures/stable-figure27' is up-to-date. ======
 ===== Image 'figures/stable-figure28' is up-to-date. ======
-[94] [95 <./figures/stable-figure26.pdf> <./figures/stable-figure27.pdf>]
-[96 <./figures/stable-figure28.pdf>] [97] [98]
+[96] [97 <./figures/stable-figure26.pdf> <./figures/stable-figure27.pdf>]
+[98 <./figures/stable-figure28.pdf>] [99] [100]
 ===== Image 'figures/stable-figure29' is up-to-date. ======
 ===== Image 'figures/stable-figure30' is up-to-date. ======
 ===== Image 'figures/stable-figure31' is up-to-date. ======
 ===== Image 'figures/stable-figure32' is up-to-date. ======
-[99 <./figures/stable-figure29.pdf> <./figures/stable-figure30.pdf> <./figures/
-stable-figure31.pdf> <./figures/stable-figure32.pdf>]
+[101 <./figures/stable-figure29.pdf> <./figures/stable-figure30.pdf> <./figures
+/stable-figure31.pdf> <./figures/stable-figure32.pdf>]
 ===== Image 'figures/stable-figure33' is up-to-date. ======
 ===== Image 'figures/stable-figure34' is up-to-date. ======
-[100] [101 <./figures/stable-figure33.pdf> <./figures/stable-figure34.pdf>]
-[102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112] [113]
-[114]
+[102] [103 <./figures/stable-figure33.pdf> <./figures/stable-figure34.pdf>]
+[104] [105] [106] [107] [108] [109] [110] [111] [112] [113] [114] [115]
+[116]
 ===== Image 'figures/stable-figure35' is up-to-date. ======
-[115 <./figures/stable-figure35.pdf>] [116] [117] [118] [119] [120] [121]
-[122] [123] [124] [125] [126] [127] [128] [129]
+[117 <./figures/stable-figure35.pdf>] [118] [119] [120] [121] [122] [123]
+[124] [125] [126] [127] [128] [129] [130] [131]
 ===== Image 'figures/stable-figure36' is up-to-date. ======
-[130] [131 <./figures/stable-figure36.pdf>] [132]) [133]
+[132] [133 <./figures/stable-figure36.pdf>] [134]) [135]
 \openout2 = `manifolds.aux'.
 
  (./manifolds.tex
-[134
+[136
 
 
 
 
 ]
 chapter 3.
-[135] [136] [137] [138]
+[137] [138] [139] [140]
 ===== Image 'figures/stable-figure37' is up-to-date. ======
-[139] [140 <./figures/stable-figure37.pdf>] [141]
+[141] [142 <./figures/stable-figure37.pdf>] [143]
 ===== Image 'figures/stable-figure38' is up-to-date. ======
 ===== Image 'figures/stable-figure39' is up-to-date. ======
-[142] [143 <./figures/stable-figure38.pdf> <./figures/stable-figure39.pdf>]
-[144] [145] [146] [147] [148] [149] [150] [151] [152] [153] [154] [155]
-[156] [157]) [158]
+[144] [145 <./figures/stable-figure38.pdf> <./figures/stable-figure39.pdf>]
+[146] [147] [148] [149] [150] [151] [152] [153] [154] [155] [156] [157]
+[158] [159]) [160]
 \openout2 = `tangent.aux'.
 
  (./tangent.tex
 chapter 4.
-[159
+[161
 
 
 
 
-] [160] [161] [162] [163] [164] [165] [166] [167]) [168]
+] [162] [163] [164] [165] [166] [167] [168] [169]) [170]
 chapter without number
 LaTeX Font Info:    Font shape `T1/zpltlf/m/sc' will be
 (Font)              scaled to size 10.95pt on input line 110.
@@ -1643,33 +1643,33 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `npxtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [169
+ [171
 
 
 
 ] (./stable.ind
-[170]
+[172]
 chapter without number
-[171
+[173
 
 
 
 
 
-] [172] [173]) (./stable.aux (./introduction.aux) (./preliminaries.aux)
+] [174] [175]) (./stable.aux (./introduction.aux) (./preliminaries.aux)
 (./single-stable.aux) (./multi-stable.aux) (./manifolds.aux) (./tangent.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 114.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 114.
 Package rerunfilecheck Info: File `stable.out' has not changed.
-(rerunfilecheck)             Checksum: A70842CFCF023540B0A72302A8E2E9C5;6376.
+(rerunfilecheck)             Checksum: 78788DD6D45B3670488DB1E54816A7B3;6390.
 Package logreq Info: Writing requests to 'stable.run.xml'.
 \openout1 = `stable.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45767 strings out of 492982
- 1055913 string characters out of 6134895
- 1774552 words of memory out of 5000000
+ 45773 strings out of 492982
+ 1055969 string characters out of 6134895
+ 1774572 words of memory out of 5000000
  47442 multiletter control sequences out of 15000+600000
  106124 words of font info for 236 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1698,10 +1698,10 @@ f/fonts/type1/public/tex-gyre/qplr.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/n
 ewpx/zplb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplr.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on stable.pdf (173 pages, 1504699 bytes).
+Output written on stable.pdf (175 pages, 1509297 bytes).
 PDF statistics:
- 3153 PDF objects out of 3580 (max. 8388607)
- 2879 compressed objects within 29 object streams
- 879 named destinations out of 1000 (max. 500000)
+ 3167 PDF objects out of 3580 (max. 8388607)
+ 2891 compressed objects within 29 object streams
+ 885 named destinations out of 1000 (max. 500000)
  26549 words of extra memory for PDF output out of 29859 (max. 10000000)
 
