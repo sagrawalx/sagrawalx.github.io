@@ -294,15 +294,23 @@ It turns out that there exists at most one linear map that has the above propert
 
 This definition is fairly difficult to use in practice. Only a handful examples can be computed directly from the definition. Here are some that I think are instructive.
 
-\begin{exercise} \label{derivative-of-linear}
+\begin{exercise}[``Linear maps are their own derivatives''] \label{derivative-of-linear}
 	Suppose $\ell : \R^m \to \R^n$ is a linear map. Prove that $d\ell_a = \ell$ for all $a \in \R^m$.  
 \end{exercise}
 
-\begin{exercise} \label{derivative-of-multiplication}
-	Let $\mu : \R^2 \to \R$ be the multiplication map $\mu(x, y) = xy$. Prove that
+\begin{example}[Derivative of multiplication] \label{derivative-of-multiplication}
+	Let $\mu : \R^2 \to \R$ be the multiplication map $\mu(x, y) = xy$. Let us show that 
 	\[ d\mu_{(a,b)}(h, k) = bh + ak \]
-	for all $(a,b) \in \R^2$ and $(h,k) \in \R^2$. 
-\end{exercise}
+	for all $(a,b) \in \R^2$ and $(h,k) \in \R^2$. Let $\ell(h,k) = bh + ak$. Observe that 
+	\[ \mu((a,b)+(h,k)) - \mu(a,b) - \ell(h,k) = (a+h)(b+k) - ab - bh - ak = hk, \]
+	and it is true that $|hk| = o(|(h,k)|)$. Roughly, this is because $|hk|$ is ``quadratic,'' which should be smaller than the ``linearish'' $|(h,k)|$. 
+	
+	To check that $|hk| = o(|(h,k)|)$ formally, we have to choose either the euclidean or the max norm. Let's use the max norm; if you prefer the euclidean norm, I'll leave the euclidean version of the following for you to check yourself. We have $|hk| \leq |(h,k)|_\infty^2$ by definition, so 
+	\[ \frac{|hk|}{|(h,k)|_\infty} \leq \frac{|(h,k)|_\infty^2}{|(h,k)|_\infty} = |(h,k)|_\infty. \]
+	The right hand side tends to 0 as $(h,k) \to 0$, so the squeeze theorem guarantees that the left hand side tends to as well. In other words, we have shown that 
+	\[ |\mu((a,b)+(h,k)) - \mu(a,b) - \ell(h,k)| = |hk| = o(|(h,k)|_\infty), \]
+	proving that $\ell = d\mu_{(a,b)}$. 
+\end{example}
 
 \begin{exercise} \label{derivative-of-line}
 	Suppose $v, w \in \R^n$ and $f : \R \to \R^n$ is given by $f(t) = v + tw$. Calculate $df_a$ for any $a \in \R$. What is $df_a(1)$?
@@ -314,7 +322,48 @@ We will develop a bit more theory in order to compute more effectively. Meanwhil
 	If $f : S \to \R^n$ is differentiable at an interior point $a \in S$, show that $f$ must be continuous at $a$. 
 \end{exercise}
 
-Of course, the converse to \cref{differentiable-implies-continuous} is false. We've seen single variable examples; here is a multivariable example. 
+Of course, the converse to \cref{differentiable-implies-continuous} is false. We've seen single variable examples; here are some multivariable examples. 
+
+\begin{example}
+	Consider the euclidean norm function $f : \R^2 \to \R$, given by 
+	\[ f(x,y) = \sqrt{x^2 + y^2}. \]
+	See \cref{euclidean-norm-graph}. This is definitely continuous at the origin, but the ``point'' of the cone at the origin suggests that this function is not differentiable at 0. Let's check this directly from the definition. 
+	
+	\begin{figure}[ht]
+		\begin{center}
+			\begin{tikzpicture}
+			\begin{axis}[
+			view={120}{15},
+			axis lines=middle,
+			xlabel={$x$},
+			xtick={0},
+			xmin=-5,xmax=5,
+			ylabel={$y$},
+			ytick={0},
+			ymin=-5,ymax=5,
+			zlabel={$z$},
+			ztick={0},
+			zmin=0,zmax=5,
+			width=0.9\textwidth,
+			]
+			\addplot3[mesh, colormap/Reds, samples=50, domain=-3:3]{sqrt(x^2 + y^2)};
+			\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		\caption{The graph of the function  $f(x,y) = \sqrt{x^2 + y^2}$ is an infinite cone, extending upwards, with its point at the origin.} \label{euclidean-norm-graph}
+	\end{figure}
+	
+	Suppose for a contradiction that $f$ were differentiable at the origin. Then there would exist a linear map $\ell(h,k) = ah + bk$ such that $|f(h,k) - f(0) - \ell(h,k)| = o(|(h,k)|)$. 
+	Observe that
+	\[ |f(h,k) - f(0) - \ell(h,k)| = |\sqrt{h^2 +  k^2} - ah - bk|. \]
+	Intuitively, notice that $\sqrt{h^2 + k^2}$ is ``linearish,'' and $ah + bk$ is definitely linear; so the difference should also be ``linearish,'' but the only way a ``linearish'' function can be $o(|(h,k)|)$ is if it's zero. But $\sqrt{h^2 + k^2}$ is not actually linear, so there cannot not exist $a$ and $b$ such that $\sqrt{h^2 + k^2} = ah + bk$. The conclusion of this intuitive argument is that it should be impossible for $|\sqrt{h^2 + k^2} - ah - bk|$ to be $o(|(h,k)|)$, no matter what $a$ and $b$ are. 
+	
+	More formally, we want to find a contradiction to the assertion that
+	\[ \lim_{(h,k) \to 0} \frac{|\sqrt{h^2 + k^2} - ah - bk|}{|(h,k)|} = 0. \]
+	If we approach the origin along the line $k = 0$, this says that
+	\[ 0 = \lim_{h \to 0} \frac{|\sqrt{h^2} - ah|}{|h|} = \lim_{h \to 0} \left| \frac{|h|}{h} - a \right| \quad\implies\quad \lim_{h \to 0} \frac{|h|}{h} = a.  \]
+	But this is nonsense, since $|h|/h$ does not converge at all as $h \to 0$. It tends to 1 as $h \to 0^+$ and to $-1$ as $h \to 0^-$. 
+\end{example}
 
 \begin{exercise} \label{continuous-not-differentiable}
 	Consider the function $f : \R^2 \to \R$ given by \[ f(x,y) = \sqrt{|xy|}. \]

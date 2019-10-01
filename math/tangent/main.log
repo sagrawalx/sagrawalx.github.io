@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  1 OCT 2019 08:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  1 OCT 2019 15:02
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1595,60 +1595,62 @@ chapter 2.
 -figure20.pdf>] [87 <./figures/main-figure21.pdf>] [88 <./figures/main-figure22
 .pdf>]
 ===== Image 'figures/main-figure23' is up-to-date. ======
-[89 <./figures/main-figure23.pdf>] [90] [91] [92]
+[89 <./figures/main-figure23.pdf>] [90] [91] [92] [93]
 ===== Image 'figures/main-figure24' is up-to-date. ======
-[93] [94 <./figures/main-figure24.pdf>] [95] [96] [97] [98] [99] [100]
+[94 <./figures/main-figure24.pdf>]
 ===== Image 'figures/main-figure25' is up-to-date. ======
+[95] [96 <./figures/main-figure25.pdf>] [97] [98] [99] [100] [101] [102]
 ===== Image 'figures/main-figure26' is up-to-date. ======
-[101] [102 <./figures/main-figure25.pdf>] [103 <./figures/main-figure26.pdf>]
-[104]
 ===== Image 'figures/main-figure27' is up-to-date. ======
+[103] [104 <./figures/main-figure26.pdf>] [105 <./figures/main-figure27.pdf>]
+[106]
 ===== Image 'figures/main-figure28' is up-to-date. ======
 ===== Image 'figures/main-figure29' is up-to-date. ======
-[105 <./figures/main-figure27.pdf> <./figures/main-figure28.pdf>] [106 <./figur
-es/main-figure29.pdf>] [107] [108] [109]
 ===== Image 'figures/main-figure30' is up-to-date. ======
+[107 <./figures/main-figure28.pdf> <./figures/main-figure29.pdf>] [108 <./figur
+es/main-figure30.pdf>] [109] [110] [111]
 ===== Image 'figures/main-figure31' is up-to-date. ======
 ===== Image 'figures/main-figure32' is up-to-date. ======
 ===== Image 'figures/main-figure33' is up-to-date. ======
-[110 <./figures/main-figure30.pdf> <./figures/main-figure31.pdf> <./figures/mai
-n-figure32.pdf> <./figures/main-figure33.pdf>]
 ===== Image 'figures/main-figure34' is up-to-date. ======
+[112 <./figures/main-figure31.pdf> <./figures/main-figure32.pdf> <./figures/mai
+n-figure33.pdf> <./figures/main-figure34.pdf>]
 ===== Image 'figures/main-figure35' is up-to-date. ======
-[111 <./figures/main-figure34.pdf>] [112 <./figures/main-figure35.pdf>]
-[113] [114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124]
 ===== Image 'figures/main-figure36' is up-to-date. ======
-[125] [126 <./figures/main-figure36.pdf>] [127] [128] [129] [130] [131]
-[132] [133] [134] [135] [136] [137] [138] [139] [140]
+[113 <./figures/main-figure35.pdf>] [114 <./figures/main-figure36.pdf>]
+[115] [116] [117] [118] [119] [120] [121] [122] [123] [124] [125] [126]
 ===== Image 'figures/main-figure37' is up-to-date. ======
-[141] [142 <./figures/main-figure37.pdf>]) [143]
+[127] [128 <./figures/main-figure37.pdf>] [129] [130] [131] [132] [133]
+[134] [135] [136] [137] [138] [139] [140] [141] [142]
+===== Image 'figures/main-figure38' is up-to-date. ======
+[143] [144 <./figures/main-figure38.pdf>]) [145]
 \openout2 = `manifolds.aux'.
 
- (./manifolds.tex [144
+ (./manifolds.tex [146
 
 
 
 
 ]
 chapter 3.
-[145] [146] [147] [148]
-===== Image 'figures/main-figure38' is up-to-date. ======
-[149] [150 <./figures/main-figure38.pdf>] [151]
+[147] [148] [149] [150]
 ===== Image 'figures/main-figure39' is up-to-date. ======
+[151] [152 <./figures/main-figure39.pdf>] [153]
 ===== Image 'figures/main-figure40' is up-to-date. ======
-[152] [153 <./figures/main-figure39.pdf> <./figures/main-figure40.pdf>]
-[154] [155] [156] [157] [158] [159] [160] [161] [162] [163] [164] [165]
-[166] [167]) [168]
+===== Image 'figures/main-figure41' is up-to-date. ======
+[154] [155 <./figures/main-figure40.pdf> <./figures/main-figure41.pdf>]
+[156] [157] [158] [159] [160] [161] [162] [163] [164] [165] [166] [167]
+[168] [169]) [170]
 \openout2 = `tangent.aux'.
 
  (./tangent.tex
 chapter 4.
-[169
+[171
 
 
 
 
-] [170] [171] [172] [173] [174] [175] [176] [177]) [178]
+] [172] [173] [174] [175] [176] [177] [178] [179]) [180]
 chapter without number
 LaTeX Font Info:    Font shape `T1/zpltlf/m/sc' will be
 (Font)              scaled to size 10.95pt on input line 110.
@@ -1666,34 +1668,34 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `npxtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [179
+ [181
 
 
 
 ] (./main.ind
-[180]
+[182]
 chapter without number
-[181
+[183
 
 
 
 
 
-] [182] [183]) (./main.aux (./introduction.aux) (./preliminaries.aux)
+] [184] [185]) (./main.aux (./introduction.aux) (./preliminaries.aux)
 (./single.aux) (./multi.aux) (./manifolds.aux) (./tangent.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 114.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 114.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 62EC8327DEF7C831E42D8CD33CC890FE;6451.
+(rerunfilecheck)             Checksum: 823B8CA6A52D945D73B996EF2A810B2A;6451.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45903 strings out of 492982
- 1057783 string characters out of 6134895
- 1777024 words of memory out of 5000000
- 47528 multiletter control sequences out of 15000+600000
+ 45910 strings out of 492982
+ 1057883 string characters out of 6134895
+ 1777293 words of memory out of 5000000
+ 47530 multiletter control sequences out of 15000+600000
  106242 words of font info for 237 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,15n,119p,8815b,1369s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1722,10 +1724,10 @@ s/type1/public/tex-gyre/qplr.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/z
 plb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on main.pdf (183 pages, 1538465 bytes).
+Output written on main.pdf (185 pages, 1607121 bytes).
 PDF statistics:
- 3276 PDF objects out of 3580 (max. 8388607)
- 2987 compressed objects within 30 object streams
- 922 named destinations out of 1000 (max. 500000)
- 26562 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 3294 PDF objects out of 3580 (max. 8388607)
+ 3001 compressed objects within 31 object streams
+ 926 named destinations out of 1000 (max. 500000)
+ 26567 words of extra memory for PDF output out of 29859 (max. 10000000)
 
