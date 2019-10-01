@@ -132,7 +132,7 @@
 \indexentry{bridge function@``bridge'' function|hyperpage}{82}
 \indexentry{fundamental theorem of calculus|hyperpage}{82}
 \indexentry{bridge function@``bridge'' function|hyperpage}{83}
-\indexentry{differentiable!differentiable at a point|hyperpage}{91}
+\indexentry{differentiable!differentiable at a point|hyperpage}{92}
 \indexentry{sum rule|hyperpage}{94}
 \indexentry{scalar multiples rule|hyperpage}{94}
 \indexentry{chain rule|hyperpage}{95}
@@ -149,19 +149,19 @@
 \indexentry{extremum!interior extremum theorem|hyperpage}{101}
 \indexentry{saddle|hyperpage}{101}
 \indexentry{gradient|hyperpage}{104}
-\indexentry{jacobian matrix|hyperpage}{106}
+\indexentry{jacobian matrix|hyperpage}{107}
 \indexentry{rank!of a differentiable function|hyperpage}{108}
 \indexentry{immersive|hyperpage}{108}
 \indexentry{submersive|hyperpage}{108}
 \indexentry{etale@\'etale|hyperpage}{108}
 \indexentry{regular!regular point|hyperpage}{108}
 \indexentry{critical! critical point|hyperpage}{108}
-\indexentry{regular!regular value|hyperpage}{108}
-\indexentry{critical!critical value|hyperpage}{108}
-\indexentry{critical point!critical locus|hyperpage}{109}
+\indexentry{regular!regular value|hyperpage}{109}
+\indexentry{critical!critical value|hyperpage}{109}
+\indexentry{critical point!critical locus|hyperpage}{111}
 \indexentry{cusp|hyperpage}{111}
-\indexentry{node|hyperpage}{111}
-\indexentry{critical point|hyperpage}{111}
+\indexentry{node|hyperpage}{112}
+\indexentry{critical point|hyperpage}{112}
 \indexentry{differentiable|hyperpage}{113}
 \indexentry{derivative|hyperpage}{113}
 \indexentry{constant function|hyperpage}{114}

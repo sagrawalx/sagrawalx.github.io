@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  29 SEP 2019 21:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  1 OCT 2019 08:36
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1601,17 +1601,18 @@ chapter 2.
 ===== Image 'figures/main-figure25' is up-to-date. ======
 ===== Image 'figures/main-figure26' is up-to-date. ======
 [101] [102 <./figures/main-figure25.pdf>] [103 <./figures/main-figure26.pdf>]
+[104]
 ===== Image 'figures/main-figure27' is up-to-date. ======
 ===== Image 'figures/main-figure28' is up-to-date. ======
 ===== Image 'figures/main-figure29' is up-to-date. ======
-[104] [105 <./figures/main-figure27.pdf> <./figures/main-figure28.pdf>]
-[106 <./figures/main-figure29.pdf>] [107] [108]
+[105 <./figures/main-figure27.pdf> <./figures/main-figure28.pdf>] [106 <./figur
+es/main-figure29.pdf>] [107] [108] [109]
 ===== Image 'figures/main-figure30' is up-to-date. ======
 ===== Image 'figures/main-figure31' is up-to-date. ======
 ===== Image 'figures/main-figure32' is up-to-date. ======
 ===== Image 'figures/main-figure33' is up-to-date. ======
-[109] [110 <./figures/main-figure30.pdf> <./figures/main-figure31.pdf> <./figur
-es/main-figure32.pdf> <./figures/main-figure33.pdf>]
+[110 <./figures/main-figure30.pdf> <./figures/main-figure31.pdf> <./figures/mai
+n-figure32.pdf> <./figures/main-figure33.pdf>]
 ===== Image 'figures/main-figure34' is up-to-date. ======
 ===== Image 'figures/main-figure35' is up-to-date. ======
 [111 <./figures/main-figure34.pdf>] [112 <./figures/main-figure35.pdf>]
@@ -1683,14 +1684,14 @@ chapter without number
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 114.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 114.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 24E37D6BC328408CE998FFEDD9FA2E0F;6451.
+(rerunfilecheck)             Checksum: 62EC8327DEF7C831E42D8CD33CC890FE;6451.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45894 strings out of 492982
- 1057707 string characters out of 6134895
+ 45903 strings out of 492982
+ 1057783 string characters out of 6134895
  1777024 words of memory out of 5000000
  47528 multiletter control sequences out of 15000+600000
  106242 words of font info for 237 fonts, out of 8000000 for 9000
@@ -1721,10 +1722,10 @@ s/type1/public/tex-gyre/qplr.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/z
 plb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on main.pdf (183 pages, 1537284 bytes).
+Output written on main.pdf (183 pages, 1538465 bytes).
 PDF statistics:
- 3269 PDF objects out of 3580 (max. 8388607)
- 2980 compressed objects within 30 object streams
- 913 named destinations out of 1000 (max. 500000)
+ 3276 PDF objects out of 3580 (max. 8388607)
+ 2987 compressed objects within 30 object streams
+ 922 named destinations out of 1000 (max. 500000)
  26562 words of extra memory for PDF output out of 29859 (max. 10000000)
 

@@ -6,7 +6,7 @@ We'll begin by analyzing a particular example to build up some geometric intuiti
 
 \section{Introductory example} \label{multi-introductory-example}
 
-Recall that we started off our discussion of single variable derivatives starting with a very geometric idea of tangent lines to graphs. For large values of $m$ (and $n$), graphs become hard to visualize and it is not so clear what ``tangent'' should mean. But there is at least one multivariable situation where, by exerting some strain on the three-dimensional visualization sectors of our brain, we can geometrically formalize what ``tangent'' might mean. This is the $m = 2, n = 1$ situation. The graph of such a function is a surface in $\R^3$, and its ``tangent'' at a point should be a plane. 
+Recall that we started off our discussion of single variable derivatives starting with a very geometric idea of tangent lines to graphs. For large values of $m$ (and $n$), graphs become hard to visualize and it is not so clear what ``tangent'' should mean. But there is at least one multivariable situation where, by exerting some strain on the three-dimensional visualization sectors of our brain, we can geometrically formalize what ``tangent'' might mean. This is the $m = 2, n = 1$ situation. The graph of such a function is a surface in $\R^3$, and its ``tangent'' at a point should be a plane.  
 
 By analyzing a specific function $f : \R^2 \to \R$,  we can get some valuable insights into multivariable derivatives; the analysis will presage many of the concepts we will discuss later in the chapter. Any function would do, but let's focus on the function $f : \R^2 \to \R$ defined by
 \[ f(x, y) = x^2 + y^2 \]
@@ -246,11 +246,11 @@ Since $\epsilon$ gets small rapidly, we can say that the function $(h,k) \mapsto
 
 \subsection*{Overview}
 
-In what follows, we will turn the above example on its head and \emph{define} the differential $df_a$ to be a linear function which yields a good approximation of $f$ near a point $a$, and then we will prove in \cref{jacobian-matrix} that partial derivatives (ie, derivatives along various ``slices'') can be used to compute the standard matrix representation of the the differential. 
+In what follows, we will turn the above example on its head and \emph{define} the differential $df_a$ to be a linear function which yields a good approximation of $f$ near a point $a$, and then we will prove in \cref{jacobian-matrix} that partial derivatives (ie, derivatives along various ``slices'') can be used to compute the standard matrix representation of the the differential. This might seem a bit ``backwards'' given our analysis of the example above, but there is a good reason for doing this; it turns out that there are some bizarre functions where partial derivatives make sense, but tangent planes do not.
 
-This might seem a bit ``backwards'' given our analysis of the example above, but there is a good reason for doing this; it turns out that there are some bizarre functions where partial derivatives make sense, but tangent planes do not (cf. \cref{partials-dont-imply-differentiable,directionals-dont-imply-differentiable,directionals-and-linear-dont-imply-differentiable}).
+Much of the discussion below will involve arbitrary $m$ and $n$, which is impossible to visualize. However, the $m = 2, n = 1$ situation already captures most of the complexity that arises in the multivariable setting. If you run into something that you looks overly abstract because of the general $m$ and $n$, try to understand it when $m = 2, n = 1$. 
 
-We'll be using a lot of linear algebra in this chapter. As mentioned in \cref{euclidean} and stated , the notation $|-|$ will denote either the euclidean or the max norm on $\R^n$, and you can choose to interpret it to be whichever of the two norms you like better (in the calculation we did above, the euclidean norm was a little easier; but, in general, I find the max norm to be far more convenient). When it makes a difference which norm on $\R^n$ we have in mind, we'll specify this explicitly.  We'll also need some facts about the operator norm as we go along; I encourage you to at least skim through \cref{operator-norm-basic} before proceeding. 
+We'll be using a lot of linear algebra in this chapter. The notation $|-|$ will denote either the euclidean or the max norm on $\R^n$, and you can choose to interpret it to be whichever of the two norms you like better (in the calculation we did above, the euclidean norm was a little easier; but, in general, I find the max norm to be far more convenient). When it makes a difference which of the two norms on $\R^n$ we have in mind, we'll specify this explicitly.  We'll also need some facts about the operator norm as we go along; I encourage you to at least skim through \cref{operator-norm-basic} before proceeding. 
 
 \section{Definition of the derivative}
 
@@ -285,11 +285,11 @@ It turns out that there exists at most one linear map that has the above propert
 
 \begin{definition} 
 	Suppose $f : S \to \R^n$ is differentiable at an interior point $a \in S$. Then the \emph{differential} or the \emph{total derivative of $f$ at $a$}, denoted $df_a$, is the unique linear map $\R^m \to \R^n$ satisfying
-	\[ |f(a+v)-f(a)-df_a(h)| = o(|h|) \text{ as } h \to 0.  \]
+	\[ |f(a+h)-f(a)-df_a(h)| = o(|h|) \text{ as } h \to 0.  \]
 \end{definition}
 
 \begin{pedanticremark}
-	Since we're using $|-|$ to refer indiscriminately to both the euclidean and max norms, it might be worth pointing out that the above definition is independent of which norm you have in mind. More precisely, for any linear function $\ell : \R^m \to \R^n$, we have $|f(a+h)-f(a)-\ell(h)|_2 = o(|h|_2)$ if and only if $|f(a+h)-f(a)-\ell(h)|_\infty = o(|h|_\infty)$. You might try proving this; the key is \cref{max-euclidean}. Thus, if $df_a$ exists, it is a ``good'' approximation for $f(a+h)-f(a)$, independently of whether we're measuring distances using the euclidean norm or the max norm. 
+	Since we're using $|-|$ to refer indiscriminately to both the euclidean and max norms, it might be worth pointing out that the above definition is independent of which norm you have in mind. More precisely, for any linear function $\ell : \R^m \to \R^n$, it is true that $|f(a+h)-f(a)-\ell(h)|_2 = o(|h|_2)$ if and only if $|f(a+h)-f(a)-\ell(h)|_\infty = o(|h|_\infty)$. You might try proving this if you're interested; the key is \cref{max-euclidean}. The upshot is that the differential $df_a$ is a ``good'' approximation for $f(a+h)-f(a)$, independently of whether we're measuring distances using the euclidean norm or the max norm. 
 \end{pedanticremark}
 
 This definition is fairly difficult to use in practice. Only a handful examples can be computed directly from the definition. Here are some that I think are instructive.
@@ -650,13 +650,26 @@ Now for the main result of this section: partial derivatives help us compute dif
 
 Now for the important caveat: unfortunately, the converse to \cref{differentiable-implies-directionals} is \emph{not} true: the existence of all partial derivatives is not sufficient to guarantee differentiability. Even the existence of all \emph{directional} derivatives is not sufficient to guarantee differentiability. In fact, we cannot guarantee differentiability even if all directional derivatives exist \emph{and} the function $h \mapsto \partial_h f(a)$ is linear. 
 
-Here are three examples to drive home these points. They're useful examples to study closely; you'll gain valuable intuition about multivariable derivatives by doing so. 
+Here are several examples to drive home these points. They're useful examples to study closely; you'll gain valuable intuition about multivariable differentiability and the somewhat subtle way in which it is related to single variable differentiability. 
+
+\begin{exercise}
+	Consider the function $f : \R^2 \to \R$ defined as follows. 
+	\[ f(x, y) = \begin{cases} 1 &  \text{if } x = 0 \text{ or } y = 0 \\ 0 & \text{otherwise} \end{cases} \]
+	\begin{enumerate}[(a)]
+		\item Sketch a graph of $f$ by hand. 
+		\item Show that $f$ is discontinuous (so it cannot be differentiable, by \cref{differentiable-implies-continuous}). 
+		\item Show that both partial derivatives of $f$ exist at the origin. 
+	\end{enumerate}
+\end{exercise}
 
 \begin{exercise} \label{partials-dont-imply-differentiable}
 	Consider the function $f : \R^2 \to \R$ defined as follows.
 	\[ f(x, y) = \begin{cases} \dfrac{x y}{x^2 + y^2} &  \text{if } (x, y) \neq 0 \\ 0 & \text{if } (x, y) = 0 \end{cases} \]
-	Show that the partial derivatives of $f$ with respect to $x$ and $y$ both exist at the origin, but that $f$ is not even continuous at the origin (so it cannot be differentiable, by \cref{differentiable-implies-continuous}). 
-	\begin{hint} Slice along the line $y = rx$ for various $r$. See \cref{partials-dont-imply-differentiable-graph}. \end{hint}
+	See \cref{partials-dont-imply-differentiable-graph}. Clearly $f$ is continuous (and differentiable) away from the origin.
+	\begin{enumerate}[(a)]
+		\item Show that $f$ is discontinuous at the origin (so it cannot be differentiable, by \cref{differentiable-implies-continuous}). 
+		\item Show that both partial derivatives of $f$ exist at the origin. 
+	\end{enumerate} 
 	\begin{figure}[ht]
 		\begin{center}
 			\begin{tikzpicture}
@@ -732,17 +745,21 @@ Here are three examples to drive home these points. They're useful examples to s
 		\end{center}
 		\caption{The graph of the function  $f$ from \cref{directionals-dont-imply-differentiable}.} \label{directionals-dont-imply-differentiable-graph}
 	\end{figure} 
-	Show that $f$ is continuous and that $\partial_h f(0)$ exists for all nonzero $h \in \R^2$, but that $f$ is not differentiable at the origin. 
-	\begin{hint}
-		Calculate a formula for $\partial_{(h,k)} f(0)$ for all $(h,k) \in \R^2$, and show that the function $\R^2 \to \R$ given by $(h,k) \mapsto \partial_{(h,k)} f(0)$ is not linear. Explain why \cref{differentiable-implies-directionals} then implies that $f$ is \emph{not} differentiable at 0.  
-	\end{hint}
+	\begin{enumerate}[(a)]
+		\item Show that $f$ is continuous. 
+		\item Show that $\partial_{(h,k)} f(0)$ exists for all nonzero $(h,k) \in \R^2$, but that $f$ is not differentiable at the origin.
+		\begin{hint}
+			Calculate a formula for $\partial_{(h,k)} f(0)$ for all $(h,k) \in \R^2$, and show that the function $\R^2 \to \R$ given by $(h,k) \mapsto \partial_{(h,k)} f(0)$ is not linear. Explain why \cref{differentiable-implies-directionals} then implies that $f$ is \emph{not} differentiable at 0.  
+		\end{hint}
+		\item Suppose that $\gamma : \R \to \R^2$ is differentiable at 0, that $\gamma(0) = 0$, and that $d\gamma_0 \neq 0$. Show that $f \circ \gamma$ is differentiable at 0. 
+	\end{enumerate} 
 \end{exercise}
 
 \begin{exercise} \label{directionals-and-linear-dont-imply-differentiable}
 	Consider the function $f : \R^2 \to \R$ given by
 	\[ f(x,y) = \begin{cases} |x| & \text{if } y = x^2 \\ 0 & \text{otherwise}. \end{cases} \]
 	\begin{enumerate}[(a)]
-		\item Doodle a picture of $f$ by hand.
+		\item Sketch a graph of $f$ by hand.
 		\item Show that $f$ is continuous at the origin. 
 		\item Show that all directional derivatives of $f$ at the origin exist and are equal to 0. 
 		\begin{hint}
@@ -750,12 +767,12 @@ Here are three examples to drive home these points. They're useful examples to s
 		\end{hint}
 		\item Show that $f$ is not differentiable at the origin.
 		\begin{hint}
-			Find a differentiable function $\gamma : \R \to \R^2$ such that $\gamma(0) = 0$ and $f \circ \gamma$ is not differentiable at the origin. Use the chain rule \ref{chain-rule} to conclude that $f$ cannot be differentiable at the origin. 
+			Find a differentiable function $\gamma : \R \to \R^2$ such that $\gamma(0) = 0$ and $f \circ \gamma$ is not differentiable at the origin, and then use the chain rule \ref{chain-rule} to conclude that $f$ cannot be differentiable at the origin. 
 		\end{hint}
 	\end{enumerate} 
 \end{exercise}
 
-Thankfully, this phenomenon is fairly pathological. \Cref{continuous-partials} below proves that the partial derivatives existing \emph{and being continuous} is sufficient to guarantee differentiability. 
+Thankfully, the failure of partial derivatives to imply differentiability is relatively pathological. \Cref{continuous-partials} below proves that the partial derivatives existing \emph{and being continuous} is sufficient to guarantee differentiability. 
 
 \subsection{Jacobian matrix}
 
