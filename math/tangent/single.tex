@@ -967,16 +967,29 @@ Here is a word you probably recognize from calculus, but perhaps you haven't see
 	is increasing. 
 \end{exercise}
 
-Here is the relationship between differentiation and concavity. 
+Here are some facts about how concavity relates to differentiation that you likely recognize from calculus. 
 
-\begin{exercise}[Derivatives and concavity] \label{concavity-derivative}
+\begin{exercise}[Concavity and extremums]
+	Let $I$ be an open interval. Suppose $f : I \to \R$ is differentiable at a point $a \in I$ and $f'(a) = 0$. 
+	\begin{enumerate}[(a)]
+		\item If $f$ is concave up, show that $a$ is an absolute minimum of $f$. 
+		\item If $f$ is concave down, show that $a$ is an absolute maximum of $f$. 
+	\end{enumerate} 
+	\begin{hint}
+		If $k < 0 < h$ and $f$ is concave up, then
+		\[ \frac{f(a+k) - f(a)}{k} \leq \frac{f(a+h)-f(a)}{h}. \]
+		Let $k \to 0^-$ to show that $a$ is a minimum on its right, and proceed similarly for the left. 
+	\end{hint}
+\end{exercise}
+
+\begin{exercise}[Concavity and derivatives] \label{concavity-derivative}
 	Suppose $I$ is an open interval and $f : I \to \R$ is differentiable. 
 	\begin{enumerate}[(a)]
 		\item Prove that $f$ is concave up if and only if $f'$ is increasing. 
 		\item Prove that $f$ is concave down if and only if $f'$ is decreasing. 
 	\end{enumerate}
 	\begin{hint}
-		If $f'$ is increasing, apply the mean value theorem \ref{mean-value-theorem} to prove that $f$ is concave up. Conversely, if $f$ is concave, suppose we have $a < b$ in $I$. Let $x$ and $y$ be such that $a < x < y < b$. Show that 
+		If $f'$ is increasing, apply the mean value theorem \ref{mean-value-theorem} to prove that $f$ is concave up. Conversely, if $f$ is concave up, suppose we have $a < b$ in $I$. Let $x$ and $y$ be such that $a < x < y < b$. Explain why 
 		\[ \frac{f(x)-f(a)}{x-a} \leq \frac{f(b)-f(y)}{b-y}, \]
 		and then let $x \to a^+$ and $y \to b^-$. 
 	\end{hint}
