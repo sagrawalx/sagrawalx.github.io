@@ -104,33 +104,33 @@
 \indexentry{open!open map|hyperpage}{56}
 \indexentry{intermediate value property|hyperpage}{61}
 \indexentry{intermediate value theorem|hyperpage}{61}
-\indexentry{discontinuity!removable discontinuity|hyperpage}{61}
-\indexentry{discontinuity!jump discontinuity|hyperpage}{61}
 \indexentry{Darboux function|hyperindexformat{\see {intermediate value property}}}{61}
+\indexentry{discontinuity!removable discontinuity|hyperpage}{62}
+\indexentry{discontinuity!jump discontinuity|hyperpage}{62}
 \indexentry{darbouxs theorem@Darboux's theorem|hyperpage}{62}
 \indexentry{intermediate value property|hyperpage}{62}
-\indexentry{extremum!extreme value theorem|hyperpage}{62}
-\indexentry{extremum!interior extremum theorem|hyperpage}{62}
-\indexentry{monotone!strictly monotone|hyperpage}{63}
+\indexentry{extremum!extreme value theorem|hyperpage}{63}
+\indexentry{extremum!interior extremum theorem|hyperpage}{63}
+\indexentry{monotone!strictly monotone|hyperpage}{64}
 \indexentry{power rule|hyperpage}{65}
-\indexentry{continuously differentiable|hyperpage}{68}
-\indexentry{ck@$C^k$|hyperpage}{69}
+\indexentry{continuously differentiable|hyperpage}{69}
+\indexentry{ck@$C^k$|hyperpage}{70}
 \indexentry{inverse function|hyperpage}{71}
 \indexentry{remainder|hyperpage}{74}
-\indexentry{smooth|hyperpage}{76}
-\indexentry{Cinfinity@$C^\infty$|hyperindexformat{\see {smooth}}}{76}
-\indexentry{infinitely differentiable|hyperindexformat{\see {smooth}}}{76}
-\indexentry{diffeomorphism|hyperpage}{77}
-\indexentry{monotone!strictly increasing|hyperpage}{77}
-\indexentry{intermediate value theorem|hyperpage}{77}
+\indexentry{smooth|hyperpage}{77}
+\indexentry{Cinfinity@$C^\infty$|hyperindexformat{\see {smooth}}}{77}
+\indexentry{infinitely differentiable|hyperindexformat{\see {smooth}}}{77}
 \indexentry{diffeomorphism|hyperpage}{78}
-\indexentry{infinitely flat functions@``infinitely flat'' functions|hyperpage}{78}
+\indexentry{monotone!strictly increasing|hyperpage}{78}
+\indexentry{intermediate value theorem|hyperpage}{78}
+\indexentry{diffeomorphism|hyperpage}{78}
+\indexentry{infinitely flat functions@``infinitely flat'' functions|hyperpage}{79}
 \indexentry{lhopitals rule@L'H\^opital's rule|hyperpage}{79}
 \indexentry{bump function|hyperpage}{81}
 \indexentry{support|hyperpage}{81}
-\indexentry{infinitely flat function@``infinitely flat'' function|hyperpage}{81}
-\indexentry{bridge function@``bridge'' function|hyperpage}{82}
-\indexentry{fundamental theorem of calculus|hyperpage}{82}
+\indexentry{infinitely flat function@``infinitely flat'' function|hyperpage}{82}
+\indexentry{bridge function@``bridge'' function|hyperpage}{83}
+\indexentry{fundamental theorem of calculus|hyperpage}{83}
 \indexentry{bridge function@``bridge'' function|hyperpage}{83}
 \indexentry{differentiable!differentiable at a point|hyperpage}{92}
 \indexentry{sum rule|hyperpage}{96}

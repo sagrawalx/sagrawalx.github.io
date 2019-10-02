@@ -15,7 +15,7 @@ nonav: true
 * [Course syllabus](syllabus).
 * Course materials: [Off on a Tangent](/math/tangent/stable.pdf)
     * I'll keep the PDF linked above quasi-stable (no numbering will change in sections where I've assigned reading assignments below). You might refresh frequently to make sure you're looking at the most recent stable version.
-    * If you want, you can look at the *unstable* version [here](/math/tangent/main.pdf). The exposition should be better, but the numbering won't agree with the stable version (or with the reading assignments below). 
+    * If you want, you can look at the *unstable* version [here](/math/tangent/main.pdf). The exposition should be better, but the numbering won't agree with the stable version (or with the reading assignments below).
     * See [here](resources) for a longer list of potentially useful resources.
 * See [here](gradschool) for brief remark if you're going to graduate school.
 * [Reading assignment submission form](https://docs.google.com/forms/d/e/1FAIpQLScvWUKFyUFFxO4zHto7MVjVL1CZFBPaEA9x4Gs_kbPqUjNcPA/viewform).
@@ -147,8 +147,7 @@ Office hours (1–2pm).
 <td>Multivariable: Computations</td>
 <td>Read: 2.3  
 Do: 2, 10, 24, 28, 39</td>
-<td>
-</td>
+<td>[Link](multi-computation.pdf)</td>
 </tr>
 
 <tr>
