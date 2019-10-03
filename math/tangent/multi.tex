@@ -1189,15 +1189,17 @@ Here is a multivariable version of \cref{bounded-derivative}. Again, we will act
 \end{proposition}
 
 \begin{proof}
-	We'll prove this only when $|-|$ denotes the max norm. The proof for the euclidean norm is a bit trickier: see \cite[theorem 9.19]{rudin}. Suppose first that $n = 1$. If $a = b$, there is nothing to do, so we can assume that $a \neq b$. Let \[ h = \frac{b-a}{|b-a|}, \]
+	Suppose first that $n = 1$. If $a = b$, there is nothing to do, so we can assume that $a \neq b$. Let \[ h = \frac{b-a}{|b-a|}, \]
 	ie, $h$ is the vector pointing from $a$ towards $b$ normalized to unit length. Consider the function $\xi(t) = a + th$ as in \cref{directional-to-single}. Then
 	\[ (f \circ \xi)'(t) = \partial_h f(a + th) = df_{a + th}(h)  \]
 	by \cref{jacobian-matrix}, which means that 
 	\[ |(f \circ \xi)'(t)| = |df_{a + th}(h)| \leq \|df_{a + th}\| |h| \leq M|h| = M, \]
 	where we used the fact that $h$ has unit length for the final step. Notice that $\xi(0) = a$ and $\xi(|b-a|) =  b$, so by applying \cref{bounded-derivative} to $f \circ \xi$, we see that 
 	\[ |f(b) - f(a)| \leq M||b-a| - 0| = M|b-a|.  \]
-	This proves the statement for $n = 1$, and using this we can now prove the statement for general $n$. Note that $df_{j,a} = \pi_j \circ df_a$ and $\|\pi_j\| = 1$ so \[ \|df_{j,a}\| \leq \|\pi_j\| \|df_a\| \leq M \]
-	by \cref{operator-norm-submultiplicative}. Applying \cref{bounded-derivative-multi} to the component functions $f_j$, so 
+	This proves the statement for $n = 1$.
+	
+	We'll prove the statement for general $n$ only for the max norm and the max operator norm. The proof for the euclidean norm is a bit trickier: see \cite[theorem 9.19]{rudin}. Note that $df_{j,a} = \pi_j \circ df_a$ and $\|\pi_j\|_\infty = 1$ so \[ \|df_{j,a}\|_\infty \leq \|\pi_j\|_\infty \|df_a\|_\infty \leq M \]
+	by \cref{operator-norm-submultiplicative}. Applying \cref{bounded-derivative-multi} to the component functions $f_j$, we find that 
 	\[ |f_j(b) - f_j(a)| \leq M|b-a| \]
 	for all $a, b \in B$ and all $j = 1, \dotsc, n$. Taking the maximum over all $j$ proves the result. 
 \end{proof}
@@ -1205,7 +1207,7 @@ Here is a multivariable version of \cref{bounded-derivative}. Again, we will act
 \begin{exercise}
 	\begin{enumerate}[(a)]
 		\item The statement of the \cref{bounded-derivative-multi} requires that the domain of $f$ is convex. Where in the proof is this used?
-		\item Prove that $\|\pi_j\| = 1$. 
+		\item Prove that $\|\pi_j\|_2 = \|\pi_j\|_\infty = 1$. 
 		\item If you haven't already done it, do \cref{operator-norm-submultiplicative}. 
 	\end{enumerate} 
 \end{exercise}
@@ -1235,7 +1237,7 @@ Thus, the single variable version is a stronger statement (when it applies) beca
 	\[ f(x,y) = (e^x \cos y, e^x \sin y). \]
 	\begin{enumerate}[(a)]
 		\item Compute $df$ and verify that $f$ is \'etale. 
-		\item Show that $f$ is \emph{not} injective. In fact, for any point $(a,b) \in \R^2$, show that there exist infinitely many other points in the domain with the same image as $(a,b)$.
+		\item Show that $f$ is \emph{not} injective. In fact, for any point $(a,b)$ in the range, show that there exist infinitely many points in the domain which map to $(a,b)$.
 		\item Find an open neighborhood $V$ of the origin such that $f|_V$ is injective. 
 	\end{enumerate}
 \end{exercise}
