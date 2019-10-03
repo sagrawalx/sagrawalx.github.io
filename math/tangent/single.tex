@@ -187,8 +187,10 @@ Notice that the function $h \mapsto f'(a)h$ is a linear map $\R \to \R$, in the 
 
 Thus \cref{differential-unique-single} says that $df_a$ is the only good linear approximation to the function \[ h \mapsto f(a+h)-f(a). \] Being the \emph{only good} linear approximation, it is also the \emph{best} linear approximation, whence the name of this section. The following is an important version of this same idea that comes up frequently in proofs. 
 
+% TODO: add more here
+
 \begin{remark}[``Remainder'' function] \label{remainder-linear}
-	Suppose $f : S \to \R$ is differentiable at an interior point $a \in S$. For sufficiently small values of $h$, we can define a ``remainder'' function\index{remainder} $r$ by
+	Suppose $f : S \to \R$ is differentiable at an interior point $a \in S$. We define a ``remainder'' function\index{remainder} $r$ on sufficiently small values of $h$ by
 	\[ r(h) = f(a+h) - f(a) - df_a(h). \]
 	See \cref{figure-remainder-linear}. 
 	\begin{figure}
@@ -229,7 +231,8 @@ Thus \cref{differential-unique-single} says that $df_a$ is the only good linear 
 		\end{center}
 		\caption{The thick black curve is the graph of a function $f$ and the thinner black line is its tangent line $f(a) + df_a$ are depicted in black. If $r$ is the remainder function, then $r(h)$ is the the vertical distance indicated in red above.}  \label{figure-remainder-linear}
 	\end{figure}
-	Notice that the value of the tangent line at $a+h$ is $f(a) + df_a(h)$, so $r(h)$ is defined to be ``what's left over'' after approximating $f$ by its tangent line (whence the name, ``remainder''). Notice that $r(0) = 0$. Moreover, $f$ is differentiable hence continuous at $a$ (cf. \cref{differentiable-implies-continuous-single}), so $r$ is also  continuous at 0. Finally, $r$ is ``small.'' More precisely, we know from \cref{differential-unique-single} that $|r(h)| = o(|h|)$ as $h \to 0$, which means that
+	Notice that the value of the tangent line at $a+h$ is \[ f(a) + f'(a)h = f(a) + df_a(h), \]
+	so $r(h)$ is ``what's left over'' after approximating $f$ by its tangent line (whence the name, ``remainder''). Notice that $r(0) = 0$. Moreover, $f$ is differentiable and therefore continuous at $a$ (cf. \cref{differentiable-implies-continuous-single}), so $r$ is also  continuous at 0. Finally, $r$ is ``small.'' More precisely, we know from \cref{differential-unique-single} that $|r(h)| = o(|h|)$ as $h \to 0$, which means that
 	\[ \lim_{h \to 0} \frac{r(h)}{h} = 0. \]
 \end{remark} 
 
@@ -328,7 +331,7 @@ When you use \cref{differential-unique-single}, you may find it useful to have d
 We will discuss two different (but similar) proofs of this important result. But first, here is an application. We will later prove a better version of this result (cf. \cref{inverse-function-theorem-single}). 
 
 \begin{exercise}[Derivatives of inverses] \label{inverse-derivative} \index{inverse function}
-	Suppose $f : S \to \R$ is injective, differentiable at an interior point $a \in S$, and that $b = f(a)$ is an interior point of $f(S)$. Show that, if the inverse $f^{-1} : f(S) \to \R$ is differentiable at $b$, then 
+	Suppose $f : S \to \R$ is differentiable at an interior point $a \in S$ and that $b = f(a)$ is an interior point of $f(S)$. Suppose further that $f$ is injective, so that the inverse function $f^{-1} : f(S) \to \R$ exists. Show that, if the inverse $f^{-1}$ is differentiable at $b$, then 
 	\[ (f^{-1})'(b) = \frac{1}{f'(f^{-1}(b))}. \]
 \end{exercise}
 
@@ -339,15 +342,15 @@ The first proof uses the definition of the derivative \ref{derivative-definition
 The difference quotient on the right is precisely $f'(a)$. Thus, it would be sufficient to prove  
 \begin{equation} \label{wrong-conjecture} \lim_{h \to 0} \frac{g(f(a+h)) - g(f(a))}{f(a+h)-f(a)} = g'(f(a)). \end{equation}
 This formula looks an awful lot like the difference quotient that is used to define the derivative of $g$ at $f(a)$. In fact, since $f$ is continuous at $a$ by \cref{differentiable-implies-continuous-single}, we have $f(a+h) \approx f(a)+h$ for small values of $h$, which means that
-\[ \frac{g(f(a+h)) - g(f(a))}{f(a+h)-f(a)} \approx \frac{g(f(a)+h) - g(f(a))}{f(a)+h-f(a)} = \frac{(g \circ f)(a+h) - (g\circ f)(a)}{h} \]
-for small values of $h$. Taking the limit as $h \to 0$ on the right-hand side yields precisely $g'(f(a))$, so \cref{wrong-conjecture} seems like a reasonable conjecture. 
+\[ \frac{g(f(a+h)) - g(f(a))}{f(a+h)-f(a)} \approx \frac{g(f(a)+h) - g(f(a))}{f(a)+h-f(a)} = \frac{g(f(a)+h) - g(f(a))}{h} \]
+for small values of $h$. Taking the limit as $h \to 0$ on the right-hand side yields precisely the definition of $g'(f(a))$, so \cref{wrong-conjecture} seems like a reasonable conjecture. 
 
-The problem is that \cref{wrong-conjecture} isn't true. Issues arise when $f(a+h) = f(a)$ for arbitrarily small values of $h$, which leads to an infinite sequence of divisions by 0. 
+The problem is that \cref{wrong-conjecture} isn't true. Issues arise when $f(a+h) = f(a)$ for arbitrarily small values of $h$, which leads to an infinite sequence of divisions by 0. More precisely, if, for every $\epsilon > 0$, there exists an $h$ such that $|h| < \epsilon$ and $f(a+h)=f(a)$, then 
+\[ \frac{g(f(a+h)) - g(f(a))}{f(a+h)-f(a)} \]
+cannot converge as $h \to 0$ at all. This kind of behavior, where $f$ keeps on repeating the value $f(a)$ arbitrarily close to $a$, is in fact possible, even when $f$ happens to be differentiable at $a$. This happens in the following example. 
 
 \begin{example} \label{wrong-conjecture-counterexample}
-	Let \[ f(x) = \begin{cases} x^2\sin(1/x) & \text{if } x \neq 0 \\ 0 & \text{if } x = 0 \end{cases} \] and let $g(x) = x^2$. Observe that $g'(f(0)) = 0$. You will show later (in \cref{power-times-sine}) that $f$ is in fact differentiable at 0, so these functions do satisfy the hypothesis of the chain rule. However, the limit as $h \to 0$ of
-	\[ \frac{g(f(a+h)) - g(f(a))}{f(a+h)-f(a)} = \frac{(h^2\sin(1/h))^2}{h^2\sin(1/h)} \]
-	does not exist. For example, the sequence $h_k = 1/k\pi$ converges to 0 as $k \to \infty$, but the expression above is undefined along this sequence. 
+	Let $f : \R \to \R$ be the function \[ f(x) = \begin{cases} x^2\sin(1/x) & \text{if } x \neq 0 \\ 0 & \text{if } x = 0. \end{cases} \] You will show in \cref{power-times-sine} that $f$ is in fact differentiable at 0. Set $h_k = 1/k\pi$. Then $h_k \to 0$ as $k \to \infty$, and $f(0 + h_k) = f(0)$ for all $k$. In other words, $f$ keeps on repeating the value 0 arbitrarily close to 0. 
 \end{example}
 
 We will get around the kind of issue that is described by the above example by carefully studying the expression
@@ -469,7 +472,7 @@ Our second proof of the chain rule will use the ``best linear approximation'' in
 	&= g(f(a)) + dg_{f(a)}(df_a(h)) + dg_{f(a)}(r(h)) + s(df_a(h) + r(h))  \end{aligned} \]
 	We used linearity of $dg_{f(a)}$ for the final step above. Combining this with \cref{rearranged-definition-error} show that
 	\[ g(f(a+h)) - g(f(a)) - dg_{f(a)}(df_a(h)) = dg_{f(a)}(r(h)) + s(df_a(h)+r(h)). \]
-	At this point, we've rewritten $g(f(a+h))-g(f(a))-dg_{f(a)}(df_a(h))$ in terms of $r$ and $s$. We'll now prove that the right-hand side is in fact ``small'', ie, that it is $o(|h|)$. Since \[ dg_{f(a)}(r(h)) = g'(f(a)) \cdot r(h) \] is just a scalar multiple of $r$, and $r = o(|h|)$, we see that $dg_{f(a)}(r) = o(|h|)$ also. So it is sufficient to prove that
+	At this point, we've rewritten $g(f(a+h))-g(f(a))-dg_{f(a)}(df_a(h))$ in terms of $r$ and $s$. We'll now prove that the right-hand side is in fact ``small'', ie, that it is $o(|h|)$. Observe that \[ dg_{f(a)}(r(h)) = g'(f(a)) \cdot r(h), \] ie, $dg_{f(a)} \circ r$ is just a scalar multiple of $r$. We know that $r(h) = o(|h|)$ as $h \to 0$, so it follows that $dg_{f(a)}(r(h)) = o(|h|)$ also. So it is sufficient to prove that
 	\[ s(df_a(h)+r(h)) = o(|h|). \]
 	We've now hit the technical part, so let's hit pause. 
 \end{proof}
@@ -529,7 +532,7 @@ The following is a key property of derivatives that you probably remember using 
 	\begin{hint} 
 		Consider the following ``slope of secant'' function (which we've seen before, during the first proof of the chain rule in \cref{chain-rule-single-section}).
 		\[ \sigma(h) = \begin{cases} \dfrac{f(a+h)-f(a)}{h} & \text{if } h \neq 0 \\ f'(a) & \text{if } h = 0 \end{cases} \]
-		Since $f$ is differentiable at $x = a$, we know that $\sigma$ is continuous at $h = 0$. If $a$ is a local minimum, what can you say about the values of $\sigma$ for positive values of $h$? Negative values of $h$? Then consider the case when $a$ is a local minimum. 
+		Since $f$ is differentiable at $x = a$, we know that $\sigma$ is continuous at $h = 0$. If $a$ is a local minimum, what can you say about the values of $\sigma$ for positive values of $h$? Negative values of $h$? Then consider the case when $a$ is a local maximum. 
 	\end{hint}
 \end{exercise}
 
@@ -610,7 +613,7 @@ The following example, again involving $\sin(1/x)$, illustrates a caveat to the 
 In this section, we'll discuss some properties of functions which are differentiable everywhere on their domain. 
 
 \begin{definition} \label{differentiable-open-domain-single} \index{differentiable} \index{derivative}
-	Suppose $U$ is an open subset of $\R$. A function $f : U \to \R$ is \emph{differentiable} it is differentiable at every point in $U$. The function $U \to \R$ given by $x \mapsto f'(x)$ is called the \emph{derivative} of $f$, and is denoted $f'$. 
+	Suppose $U$ is an open subset of $\R$. A function $f : U \to \R$ is \emph{differentiable} if it is differentiable at every point in $U$. The function $U \to \R$ given by $x \mapsto f'(x)$ is called the \emph{derivative} of $f$, and is denoted $f'$. 
 \end{definition}
 
 Every open subset of $\R$ is a countable disjoint union of open intervals\footnotemark\ (cf. \cite[theorem 6.17]{protter-morrey}), so the most important case of the above definition is when the domain happens to be an open interval. Occasionally, it's also useful to have some vocabulary for talking about functions on non-open intervals. Here is the ``correct'' definition for doing this.
@@ -997,6 +1000,8 @@ Here are some facts about how concavity relates to differentiation that you like
 
 \subsection{Darboux's theorem \starred} \label{darboux-section}
 
+% TODO: make less terse
+
 Derivatives are often ``close'' to being continuous, but in a weird way. They cannot have ``simple'' discontinuities, which means that when they are discontinuous at all, they are discontinuous in wild ways. Darboux's theorem is one way in which this principle manifests itself. Before getting to the precise statement, we make the following definition. 
 
 \begin{definition} \index{intermediate value property}
@@ -1013,7 +1018,7 @@ Using this vocabulary, the intermediate value theorem\index{intermediate value t
 		exists, but the value of this limit does not equal $f(a)$. Show that, if $f$ has a removable discontinuity, then $f$ does \emph{not} have the intermediate value property. 
 		
 		\item Recall that $f$ has a \emph{jump discontinuity}\index{discontinuity!jump discontinuity} at a point $a \in I$ if the two one-sided limits
-		\[ \lim_{x \to a^-} f(x) \text{ and } \lim_{x \to a^+} f(x) \]
+		\[ \lim_{x \to a^-} f(x) \quad\text{ and }\quad \lim_{x \to a^+} f(x) \]
 		both exist, but their values are not equal to each other. Show that, if $f$ has a jump discontinuity, then $f$ does \emph{not} have the intermediate value property.  
 	\end{enumerate}
 \end{exercise}

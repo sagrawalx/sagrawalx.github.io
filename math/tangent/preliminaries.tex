@@ -400,7 +400,7 @@ Here are some fundamental properties of the operator norm.
 
 \begin{proof}
 	The ``unit disk'' \[ D = \{ x \in \R^m : |x| \leq 1 \} \]
-	is a nonempty, connected, and compact subset of $\R^m$. The function $v \mapsto |\ell(v)|$ is also a continuous function $D \to \R$, so its image $|\ell(D)|$ must also be a nonempty, connected, and compact subset of $\R$. In other words, it must be a closed interval in $\R$. This means that there exists $v_0 \in D$ such that 
+	is a nonempty compact subset of $\R^m$. The function $v \mapsto |\ell(v)|$ is a continuous function $D \to \R$, so its image $|\ell(D)|$ must also be a nonempty compact subset of $\R$. Thus there exists $v_0 \in D$ such that 
 	\[ |\ell(v_0)| = \sup |\ell(D)| = \|\ell\|. \]
 	Since $\ell \neq 0$, we know $\|\ell\| \neq 0$ from \cref{operator-norm-is-norm}, which in turn means that $v_0 \neq 0$. To prove that $|v_0| = 1$, assume for a contradiction that $|v_0| < 1$, and let $c = 1/|v_0| > 1$. Then $|cv_0| = |c||v_0| = 1$, so $cv_0 \in D$. But then
 	\[ |\ell(cv_0)| = |c\ell(v_0)| = c|\ell(v_0)| > |\ell(v_0)| = \sup |\ell(D)|, \]
