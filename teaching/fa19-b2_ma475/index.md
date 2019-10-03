@@ -162,8 +162,7 @@ Office hours (2–3pm).
 <td>Review</td>
 <td>Reread: 2.1–3  
 Do: (2.3) 5, 12, 30, 41</td>
-<td>
-</td>
+<td>[Link](multi-review-1.pdf)</td>
 </tr>
 
 <tr>
@@ -178,6 +177,7 @@ Office hours (1–2pm).
 <td>Multivariable: Differentiable functions</td>
 <td>Read: 2.4  
 Do: 14</td>
+<td></td>
 </tr>
 
 <tr>
