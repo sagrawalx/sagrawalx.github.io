@@ -71,8 +71,8 @@ As $h$ gets smaller and smaller, the secant line becomes a better and better app
 \end{exercise}
 
 \begin{exercise}[Power rule for positive integer exponents] \label{power-rule-positive} \index{power rule}
-	Prove that, if $f(x) = x^n$ for a positive integer $n$, then $f'(a) = na^{n-1}$. \begin{hint} Recall the binomial theorem, which says that
-	\[ (a+h)^n = \sum_{k = 0}^n \binom{n}{k} a^k h^{n-k}. \]
+	Prove that, if $f(x) = x^n$ for a positive integer $n$, then $f'(x) = nx^{n-1}$ for all $x \in \R$. \begin{hint} Recall the binomial theorem, which says that
+	\[ (x+h)^n = \sum_{k = 0}^n \binom{n}{k} x^k h^{n-k}. \]
 	\end{hint}
 \end{exercise}
 
@@ -185,12 +185,12 @@ Notice that the function $h \mapsto f'(a)h$ is a linear map $\R \to \R$, in the 
 	If $f : S \to \R$ is differentiable at an interior point $a \in S$, the \emph{differential} or the \emph{total derivative of $f$ at $a$}, denoted $df_a$, is the linear map $\R \to \R$ given by $df_a(h) = f'(a)h$. 
 \end{definition}
 
-Thus \cref{differential-unique-single} says that $df_a$ is the only good linear approximation to the function \[ h \mapsto f(a+h)-f(a). \] Being the \emph{only good} linear approximation, it is also the \emph{best} linear approximation, whence the name of this section. The following is an important version of this same idea that comes up frequently in proofs. 
+Thus \cref{differential-unique-single} says that $df_a$ is the only ``good'' linear approximation to the function \[ h \mapsto f(a+h)-f(a). \] Since it is the only ``good'' linear approximation, it is also fair to say that it is the ``best'' linear approximation, whence the name of this section. The following is an important version of this same idea that comes up frequently in proofs. 
 
 % TODO: add more here
 
-\begin{remark}[``Remainder'' function] \label{remainder-linear}
-	Suppose $f : S \to \R$ is differentiable at an interior point $a \in S$. We define a ``remainder'' function\index{remainder} $r$ on sufficiently small values of $h$ by
+\begin{remark}[Remainder function] \label{remainder-linear}
+	Suppose $f : S \to \R$ is differentiable at an interior point $a \in S$. We define a remainder function\index{remainder} $r$ on sufficiently small values of $h$ by
 	\[ r(h) = f(a+h) - f(a) - df_a(h). \]
 	See \cref{figure-remainder-linear}. 
 	\begin{figure}
@@ -231,12 +231,15 @@ Thus \cref{differential-unique-single} says that $df_a$ is the only good linear 
 		\end{center}
 		\caption{The thick black curve is the graph of a function $f$ and the thinner black line is its tangent line $f(a) + df_a$ are depicted in black. If $r$ is the remainder function, then $r(h)$ is the the vertical distance indicated in red above.}  \label{figure-remainder-linear}
 	\end{figure}
-	Notice that the value of the tangent line at $a+h$ is \[ f(a) + f'(a)h = f(a) + df_a(h), \]
-	so $r(h)$ is ``what's left over'' after approximating $f$ by its tangent line (whence the name, ``remainder''). Notice that $r(0) = 0$. Moreover, $f$ is differentiable and therefore continuous at $a$ (cf. \cref{differentiable-implies-continuous-single}), so $r$ is also  continuous at 0. Finally, $r$ is ``small.'' More precisely, we know from \cref{differential-unique-single} that $|r(h)| = o(|h|)$ as $h \to 0$, which means that
+
+	Notice that the $y$-value of the tangent line of $f$ at $a$ when $x = a+h$ is \[ f(a) + f'(a)h = f(a) + df_a(h), \]
+	so $r(h)$ is what's left over after approximating $f$ by its tangent line (whence the name, ``remainder''). Notice that $r(0) = 0$. Moreover, $f$ is differentiable and therefore continuous at $a$ (cf. \cref{differentiable-implies-continuous-single}), so $r$ is also  continuous at 0. 
+	
+	Finally, the remainder function $r$ is ``small'' because $df_a$ is a ``good'' linear approximation of $f(a+h)-f(a)$. More precisely, we know from \cref{differential-unique-single} that $|r(h)| = o(|h|)$, which means that
 	\[ \lim_{h \to 0} \frac{r(h)}{h} = 0. \]
 \end{remark} 
 
-The following weak version of l'H\^opital's rule\index{lhopitals rule@L'H\^opital's rule} is an application of this idea. 
+The following weak version of l'H\^opital's rule\index{lhopitals rule@L'H\^opital's rule} is an application of this idea. % TODO: Why this is weak
 
 \begin{exercise}[L'H\^opital's rule, weak version] \label{lhopital-weak}
 	Suppose $f, g : S \to \R$ are differentiable at an interior point $a \in S$, that $f(a) = g(a) = 0$, and that $g'(a) \neq 0$. Show that
@@ -608,7 +611,7 @@ The following example, again involving $\sin(1/x)$, illustrates a caveat to the 
 	\end{enumerate}
 \end{exercise}
 
-\section{Differentiable functions}
+\section{Differentiable functions} \label{single-differentiable}
 
 In this section, we'll discuss some properties of functions which are differentiable everywhere on their domain. 
 
@@ -1000,9 +1003,11 @@ Here are some facts about how concavity relates to differentiation that you like
 
 \subsection{Darboux's theorem \starred} \label{darboux-section}
 
-% TODO: make less terse
+Darboux's theorem asserts that derivatives are often ``close'' to being continuous, but in a weird way: they cannot have ``simple'' discontinuities, which means that when they are discontinuous at all, they are discontinuous in wild ways. 
 
-Derivatives are often ``close'' to being continuous, but in a weird way. They cannot have ``simple'' discontinuities, which means that when they are discontinuous at all, they are discontinuous in wild ways. Darboux's theorem is one way in which this principle manifests itself. Before getting to the precise statement, we make the following definition. 
+\subsubsection*{Intermediate value property}
+
+Before getting to the precise statement, we make the following definition. 
 
 \begin{definition} \index{intermediate value property}
 	Suppose $I$ is an interval and $f : I \to \R$ is a function. Then $f$ \emph{has the intermediate value property} if, for every $a < b$ in $I$ and every $y \in \R$ strictly between $f(a)$ and $f(b)$, there exists $x \in (a, b)$ such that $f(x) = y$.\footnote{Functions which have the intermediate value property are sometimes also called \emph{Darboux functions}.\index{Darboux function|see {intermediate value property}}} 
@@ -1030,19 +1035,51 @@ Using this vocabulary, the intermediate value theorem\index{intermediate value t
 	\end{hint}
 \end{exercise}
 
-Now we know that the derivative $f'$ of a differentiable function $f$ need not be continuous (cf. \cref{power-times-sine}). Darboux's theorem asserts that, even though $f'$ might not be continuous, it must still have the intermediate value property! This means, for example, that derivatives cannot have removable or jump discontinuities (because, as we saw in \cref{removable-jump-ivp}, functions with these kinds of discontinuities do not have the intermediate value property). 
+\subsubsection*{Statement of Darboux's theorem}
+
+We know that the derivative $f'$ of a differentiable function $f$ need not be continuous (cf. \cref{power-times-sine}). Darboux's theorem asserts that, even though $f'$ might not be continuous, it must still have the intermediate value property! This means, for example, that derivatives cannot have removable or jump discontinuities (because, as we saw in \cref{removable-jump-ivp}, functions with these kinds of discontinuities do not have the intermediate value property). 
 
 \begin{theorem}[Darboux] \label{darboux} \index{darbouxs theorem@Darboux's theorem}
 	Suppose $I$ is an open interval and $f : I \to \R$ is differentiable. Then $f'$ has the intermediate value property.\index{intermediate value property} 
 \end{theorem}
 
-\begin{proof}
-	Suppose $a < b$ are two elements of $I$ and $m$ is a real number strictly between $f'(a)$ and $f'(b)$. We want to show that there exists $c \in (a,b)$ such that $f'(c) = m$. This statement somewhat resembles the statement of the mean value theorem \ref{mean-value-theorem}, and indeed, our proof will also somewhat resemble the proof we gave of the mean value theorem. 
+We noted earlier that the intermediate value theorem and the mean value theorem make similar but different assertions. Darboux's theorem now gets added to the fray! I encourage you to ensure that you understand how the statements of these three theorems differ (cf. \cref{ivt-mvt-darboux}).
+
+\begin{table}
+	\begin{center}
+		{\scriptsize 
+			\begin{tabular}{ p{0.17\textwidth} p{0.23\textwidth} p{0.23\textwidth} p{0.23\textwidth} } 
+				\toprule[1pt]
+				& Intermediate value theorem & Mean value theorem & Darboux's theorem \\ \cmidrule{2-4}
+				If $f : [a, b] \to \R$ is... & continuous & continuous and differentiable on the interior & differentiable \\ \addlinespace[1em]
+				& and $y$ is strictly in between $f(a)$ and $f(b)$ & & and $m$ is strictly in between $f'(a)$ and $f'(b)$ \\ \addlinespace[1em]
+				then there exists $c$ in $(a,b)$ such that... & $f(c) = y$. & $f'(c) = \dfrac{f(b) - f(a)}{b-a}$. & $f'(c) = m$. \\ \bottomrule[1pt]
+		\end{tabular}}
+	\end{center}
+	\caption{A tabular comparison of the statements of the intermediate value theorem, the mean value theorem, and Darboux's theorem.} \label{ivt-mvt-darboux}
+\end{table}
+
+Most functions that one encounters in life have continuous derivatives. In other words, most of the time, the fact that a derivative we're interested in has the intermediate value property would follow immediately from the intermediate value theorem. This makes Darboux's theorem not terribly important going forward, but it is a very interesting result nonetheless. Here are some applications. 
+
+\begin{exercise} \label{nonzero-derivative-implies-strictly-monotone}
+	Suppose $I$ is an open interval and $f : I \to \R$ is a differentiable function such that $f'(x) \neq 0$ for all $x \in I$. Show that $f$ is strictly monotone.
+\end{exercise}
+
+\begin{exercise}
+	Let $I$ be an open interval. Suppose $f : I \to \R$ is a differentiable function and $a \in I$ is a point such that the one-sided limits
+	\[ \lim_{x \to a^-} f'(x) \quad\text{ and }\quad \lim_{x \to a^+} f'(x) \]
+	both exist (but are not assumed to be equal). Show that $f'$ is continuous at $a$ (in particular, this means that the above one-sided limits are forced to be equal). 
+\end{exercise}
+
+\subsubsection*{Proof of Darboux's theorem}
+
+\begin{proof}[Proof of Darboux's theorem \ref{darboux}]
+	Suppose $a < b$ are two elements of $I$ and $m$ is a real number strictly between $f'(a)$ and $f'(b)$. This means that either $f'(a) < m < f'(b)$ or $f'(a) > m > f'(b)$. Let us suppose that $f'(a) < m < f'(b)$ (the proof in the other case will be analogous). We want to show that there exists $c \in (a,b)$ such that $f'(c) = m$. We will prove this by considering an associated extreme value problem, and then applying the extreme value theorem\index{extremum!extreme value theorem}. 
 	
-	Consider the differentiable function $g : I \to \R$ defined by $g(x) = f(x) - mx$. See \cref{subtracting-a-line}. Then $g$ is also continuous and differentiable on the interior, with $g'(x) = f'(x) - m$. Thus $f'(c) = m$ if and only if $g'(c) = 0$. Thus we would like to show that there exists $c \in (a, b)$ such that $g'(c) = 0$. 
+	Specifically, consider the differentiable function $g : I \to \R$ defined by $g(x) = f(x) - mx$. See \cref{subtracting-a-line}. 
+	Notice that \[ g'(x) = f'(x) - m, \] so $f'(c) = m$ if and only if $g'(c) = 0$. In other words, we would like to show that there exists $c \in (a, b)$ such that $g'(c) = 0$. By the extreme value theorem, we know that $g$ attains its minimum on the compact interval $[a,b]$ at some point $c \in [a,b]$. We claim that $c$ must be an interior point of $[a,b]$, and then interior extremum theorem \ref{interior-extremum} will imply that $g'(c) = 0$. 
 	
-	
-	\begin{figure}
+	\begin{figure}[ht]
 		\begin{center}
 			\begin{tikzpicture}
 			\begin{axis}[
@@ -1100,42 +1137,16 @@ Now we know that the derivative $f'$ of a differentiable function $f$ need not b
 		\caption{On the left is depicted the graph of a function $f$, the two tangent lines at $a$ and $b$, and the graph of the line $\ell(x) = mx$ for some $m$ in between $f'(a)$ and $f'(b)$. Subtracting $\ell$ from this picture yields the picture on the right.}  \label{subtracting-a-line}
 	\end{figure}
 	
-	There are two cases two consider: either (i) $f'(a) < m < f'(b)$ or (ii) $f'(a) > m > f'(b)$. Suppose we are in case (i). By the extreme value theorem\index{extremum!extreme value theorem}, $g$ attains its minimum on the compact interval $[a,b]$ at some point $c \in [a,b]$. We claim that $c$ must be an interior point of $[a,b]$, and then interior extremum theorem\index{extremum!interior extremum theorem} \ref{interior-extremum} will imply that $g'(c) = 0$. 
-	
 	If $c = a$ were the minimum of $g$ on $[a,b]$, then we would have 
 	\[ \frac{g(a+h)-g(a)}{h} > 0 \]
-	for all sufficiently small positive values of $h$. This would mean that $g'(a) \geq 0$, but we know that $g'(a) = f'(a) - m < 0$, which is a contradiction. Similarly, if $c = b$ were the minimum of $g$ on $[a,b]$, then we would have
+	for all sufficiently small positive values of $h$. This would mean that \[ f'(a) - m = g'(a) = \lim_{h \to 0^+} \frac{g(a+h)-g(a)}{h} \geq 0, \] which is a contradiction since $f'(a) < m$. Similarly, if $c = b$ were the minimum of $g$ on $[a,b]$, then we would have
 	\[ \frac{g(b+h)-g(b)}{h} < 0 \]
-	for all sufficiently small negative values of $h$. This would imply that $g'(b) \leq 0$, but we know that $g'(b) = f'(b) - m > 0$. 
+	for all sufficiently small negative values of $h$. This would imply that 
+	\[ f'(b) - m = g'(b) = \lim_{h \to 0^-} \frac{g(b+h)-g(b)}{h} \leq 0, \]
+	which again is a contradiction since $m < f'(b)$. Thus we conclude that $c \in (a,b)$.  
 	
-	In case (ii), we instead let $c$ be the \emph{maximum} of $g$ on $[a,b]$, and argue similarly to show that $c$ must be an interior point. 
+	If instead we had $f'(a) > m > f'(b)$, we would define $c$ to be the point in $[a,b]$ where $g$ attains its \emph{maximum}. A similar argument then shows that $c$ must be an interior point. 
 \end{proof}
-
-Here is one application of Darboux's theorem. 
-
-\begin{exercise} \label{nonzero-derivative-implies-strictly-monotone}
-	Suppose $I$ is an open interval and $f : I \to \R$ is a differentiable function such that $f'(x) \neq 0$ for all $x \in I$. Show that $f$ is strictly monotone.\index{monotone!strictly monotone} 
-\end{exercise}
-
-The intermediate value theorem, mean value theorem, and Darboux's theorem all say similar things, and invite direct comparison. I encourage you to ensure that you understand how the statements differ. See \cref{ivt-mvt-darboux}.
-
-\mbox{}
-
-\begin{table}[ht]
-	\begin{center}
-	{\scriptsize 
-	\begin{tabular}{ p{0.17\textwidth} p{0.23\textwidth} p{0.23\textwidth} p{0.23\textwidth} } 
-		\toprule[1pt]
-		& Intermediate value theorem & Mean value theorem & Darboux's theorem \\ \cmidrule{2-4}
-		If $f : [a, b] \to \R$ is... & continuous & continuous and differentiable on the interior & differentiable \\ \addlinespace[1em]
-		& and $y$ is strictly in between $f(a)$ and $f(b)$ & & and $m$ is strictly in between $f'(a)$ and $f'(b)$ \\ \addlinespace[1em]
-		then there exists $c$ in $(a,b)$ such that... & $f(c) = y$. & $f'(c) = \dfrac{f(b) - f(a)}{b-a}$. & $f'(c) = m$. \\ \bottomrule[1pt]
-	\end{tabular}}
-	\end{center}
-	\caption{A tabular comparison of the statements of the intermediate value theorem, the mean value theorem, and Darboux's theorem.} \label{ivt-mvt-darboux}
-\end{table}
-
-% TODO: header shading
 
 \subsection{Inverse function theorem}
 
@@ -1217,7 +1228,7 @@ As suggested by part (c) of the previous two exercises, what we really need in o
 	The hypotheses of this theorem can be made weaker by only assuming that the functions $f_n$ converge \emph{just at a single point} rather than pointwise on all of $U$, but one still needs to assume uniform convergence of the derivatives on compact subsets \cite[theorem 7.17]{rudin}. The idea of the proof of this generalization is similar to the proof above, but the flow of the argument gets obscured by more technical details. 
 \end{unimportantremark}
 
-% TODO: do the generalization; in particular, at least prove that the convergence of the functions themselves is uniform.
+% TODO: Convergence of the functions themselves is uniform.
 
 This theorem lets us prove that we can differentiate power series term-by-term.
 

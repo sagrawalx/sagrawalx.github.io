@@ -937,8 +937,8 @@ Let $f : \R^2 \to \R^2$ be the map $f(r,\theta) = (r\cos\theta, r\sin\theta)$. S
 		axis lines=middle,
 		axis line style=lightgray,
 		width=0.5\textwidth,
-		xlabel={x},
-		ylabel={y},
+		xlabel={$x$},
+		ylabel={$y$},
 		axis equal
 		] 
 		
@@ -986,8 +986,8 @@ Let $f : \R^2 \to \R^2$ be the map $f(r,\theta) = (r\cos\theta, r\sin\theta)$. S
 		axis lines=middle,
 		axis line style=lightgray,
 		width=0.5\textwidth,
-		xlabel={x},
-		ylabel={y},
+		xlabel={$x$},
+		ylabel={$y$},
 		axis equal
 		] 
 		
@@ -1106,7 +1106,7 @@ so the critical locus\index{critical point!critical locus} (ie, the set of all c
 Throughout this section, $U$ denotes an open subset of $\R^m$. In this section, we'll discuss functions that are differentiable at every point in $U$. 
 
 \begin{definition} \index{differentiable} \index{derivative}
-	A function $f : U \to \R^n$ is \emph{differentiable} if it is differentiable at every $a \in U$. The \emph{total derivative} of $f$, denoted $df$, is the function $U \to \mathscr{L}(\R^m, \R^n)$ given by $a \mapsto df_a$. Sometimes the function $df$ is also called the \emph{differential} of $f$. 
+	A function $f : U \to \R^n$ is \emph{differentiable} if it is differentiable at every $a \in U$. The \emph{differential} or the \emph{total derivative} of $f$, denoted $df$, is the function $U \to \mathscr{L}(\R^m, \R^n)$ given by $a \mapsto df_a$, where $\mathscr{L}(\R^m, \R^n)$ denotes the set of all linear maps $\R^m \to \R^n$.  
 \end{definition}
 
 \begin{definition}
@@ -1114,25 +1114,39 @@ Throughout this section, $U$ denotes an open subset of $\R^m$. In this section, 
 	\[ f_{x_i} \quad \frac{\partial f}{\partial x_i} \]
 \end{definition}
 
-\subsection{Vanishing derivatives}
+\subsection{Convex subsets}
 
-First off, here are some definitions that are rather useful when studying functions that are differentiable everywhere on an open set. 
+Recall that, in the single variable situation of \cref{single-differentiable}, a key role was played by functions defined on intervals. In the multivariable situation, a similar role is played by functions defined on ``convex'' subsets. These are subsets $S \subseteq \R^m$ such that any two points in $S$ can be joined by a straight line segment that never leaves $S$. 
 
 \begin{definition} \label{straight-line-path}
-	If $a, b \in \R^n$, the \emph{straight line path} from $a$ to $b$ is the function
+	If $a, b \in \R^m$, the \emph{straight line path} from $a$ to $b$ is the function
 	\[ \gamma(t) = (1-t)a + tb. \]
 	Observe that $\gamma(0) = a$ and $\gamma(1) = b$. 
 \end{definition}
 
 \begin{exercise} \label{straight-line-path-differentiable}
-	Show that the straight line path from $a$ to $b$ is differentiable. 
+	Show that, for any $a, b \in \R^m$, the straight line path from $a$ to $b$ is differentiable. 
 \end{exercise}
 
 \begin{definition} \label{convex}
-	A subset $S$ of $\R^n$ is \emph{convex} if the straight line path between any two points in $S$ is contained in $S$. In other words, $S$ is convex if, whenever $a, b \in S$ and $\gamma$ is the straight line path from $a$ to $b$, then $\gamma(t) \in S$ for all $t \in [0,1]$. 
+	A subset $S$ of $\R^m$ is said to be \emph{convex} if, whenever $a, b \in S$ and $\gamma$ is the straight line path from $a$ to $b$, then $\gamma(t) \in S$ for all $t \in [0,1]$. 
 \end{definition}
 
-Roughly speaking, the role of intervals in single variable calculus is played by convex sets in multivariable calculus. For example, here is a multivariable generalization of \cref{constant-iff-derivative-zero-single}. We will use the single variable version to prove this multivariable version. 
+\begin{exercise}
+	Determine whether or not
+	\[ S = \{ (x, y) \in \R^2 : x \geq 0 \text{ or } y \neq 0 \} \]
+	is a convex subset of $\R^2$. Justify your answer. 
+\end{exercise}
+
+\begin{exercise}
+	Let $I$ be an interval. Suppose $f : I \to \R$ is concave down and $f \geq 0$. Show that
+	\[ S = \{ (x, y) \in \R^2 : x \in I \text{ and } 0 \leq y \leq f(x) \} \]
+	is a convex subset of $\R^2$. 
+\end{exercise}
+
+\subsection{Vanishing derivatives}
+
+Here is a multivariable generalization of \cref{constant-iff-derivative-zero-single}. We will use the single variable version to prove this multivariable version. 
 
 \begin{proposition} \label{constant-iff-derivative-zero}
 	Suppose $U$ is convex and $f : U \to \R^n$ is a differentiable function. Then $df = 0$ if and only if $f$ is constant\index{constant function}.  
@@ -1198,7 +1212,7 @@ Here is a multivariable version of \cref{bounded-derivative}. Again, we will act
 	\[ |f(b) - f(a)| \leq M||b-a| - 0| = M|b-a|.  \]
 	This proves the statement for $n = 1$.
 	
-	We'll prove the statement for general $n$ only for the max norm and the max operator norm. The proof for the euclidean norm is a bit trickier: see \cite[theorem 9.19]{rudin}. Note that $df_{j,a} = \pi_j \circ df_a$ and $\|\pi_j\|_\infty = 1$ so \[ \|df_{j,a}\|_\infty \leq \|\pi_j\|_\infty \|df_a\|_\infty \leq M \]
+	We'll prove the statement for general $n$ only for the max norm and the max operator norm. The proof for the euclidean norm is trickier: see \cite[theorem 9.19]{rudin}. Note that $df_{j,a} = \pi_j \circ df_a$ and $\|\pi_j\|_\infty = 1$ so \[ \|df_{j,a}\|_\infty \leq \|\pi_j\|_\infty \|df_a\|_\infty \leq M \]
 	by \cref{operator-norm-submultiplicative}. Applying \cref{bounded-derivative-multi} to the component functions $f_j$, we find that 
 	\[ |f_j(b) - f_j(a)| \leq M|b-a| \]
 	for all $a, b \in B$ and all $j = 1, \dotsc, n$. Taking the maximum over all $j$ proves the result. 
@@ -1217,7 +1231,7 @@ Here is a multivariable version of \cref{bounded-derivative}. Again, we will act
 The inverse function theorem is an extremely important foundational result. It comes up frequently in real analysis and differential geometry, and has inspired significant developments in algebraic geometry and number theory. 
 
 \begin{definition}
-	A function $f : U \to \R^n$ is \emph{\'etale} if it is differentiable and \'etale at every $a \in U$. 
+	A differentiable function $f : U \to \R^n$ is \emph{\'etale} if it is \'etale at every $a \in U$ (ie, if $df_a$ is an isomorphism for every $a \in U$). 
 \end{definition}
 
 \begin{theorem}[Inverse function theorem] \label{inverse-function-theorem}
@@ -1228,7 +1242,7 @@ The inverse function theorem is an extremely important foundational result. It c
 
 The proof will require an extremely lengthy discussion. For the time being, let us content ourselves with thinking about the statement of the theorem. 
 
-First off, the statement invites comparison with the single variable version we established in  \cref{inverse-function-theorem-single}. If $I$ is an open interval in $\R$, then $f : I \to \R$ is \'etale if and only if it is differentiable and $f'(x)$ never vanishes, so the hypotheses of the theorem above and the single variable version match up exactly. The multivariable version above asserts that $f$ must be open and ``locally injective.'' On the other hand, the single variable version asserts that $f$ is strictly monotone; and we've seen that strict monotonicity implies that $f$ is open and injective (cf. \cref{strictly-monotone-iff-injective,strictly-monotone-implies-open}). The assertion on the differentiability of the inverse and the formula for the derivative of the inverse match up exactly.  
+First off, let us compare the statement against the single variable version of \cref{inverse-function-theorem-single}. If $I$ is an open interval in $\R$, then $f : I \to \R$ is \'etale if and only if it is differentiable and $f'(x)$ never vanishes, so the hypotheses of the theorem above and the single variable version match up exactly. The multivariable version above asserts that $f$ must be open and ``locally injective.'' On the other hand, the single variable version asserts that $f$ is strictly monotone; and we've seen that strict monotonicity implies that $f$ is open and injective (cf. \cref{strictly-monotone-iff-injective,strictly-monotone-implies-open}). The assertion on the differentiability of the inverse and the formula for the derivative of the inverse match up exactly.  
 
 Thus, the single variable version is a stronger statement (when it applies) because it guarantees full injectivity everywhere on the domain, whereas the multivariable version above only guarantees ``local injectivity'' near every point of the domain. This is the only difference between the two statements, and here is an example to show that we cannot expect full injectivity in the multivariable setting.  
 
@@ -1242,8 +1256,44 @@ Thus, the single variable version is a stronger statement (when it applies) beca
 	\end{enumerate}
 \end{exercise}
 
+Another important observation about the statement is the following. The inverse function theorem asserts that being \'etale is \emph{sufficient} to guarantee the existence of (local) inverses. It is \emph{not} a necessary condition for the existence of inverses, but it \emph{is} a necessary condition for the existence of \emph{differentiable} inverses, as shown by the following exercise. 
+
+\begin{exercise}
+	\begin{enumerate}[(a)]
+		\item Give an example of a differentiable and injective function $f : \R \to \R$ which is not \'etale. What is the inverse of your function $f$? Is the inverse differentiable? 
+		\item Suppose $U$ is an open subset of $\R^n$ such that $f : U \to \R^n$ is differentiable and injective and that $f(U)$ is open. Show that, if $f^{-1} : f(U) \to \R^n$ is differentiable, then $f$ is \'etale.  
+	\end{enumerate}
+\end{exercise}
+
+% TODO: Remarks about why its important
+
+The importance of the inverse function theorem derives from the fact that it lets us use linear algebra (which is easy) to make assertions about solutions of nonlinear equations (which are very difficult, in general). Here is an example to illustrate this point. 
+
+\begin{example}
+	Consider the following nonlinear system of equations. 
+	\[ \begin{aligned} x + y^2 &= a \\ y - xy^2 + 3x^2 &= b \end{aligned} \]
+	When $a = b = 0$, this system has a solution given by $x = y = 0$. What if $a$ and $b$ are not both zero? Does this system have any solutions? Are the solutions unique at all? None of this is very obvious on the face of it. 
+	
+	Let $f : \R^2 \to \R^2$ be the function given by $f(x,y) = (x+y^2, y - xy^2 + 3x^2)$. Then 
+	\[ \det f'(x,y) = \det \begin{bmatrix} 1 & 2y \\ 6x -y^2 & 1 - 2xy \end{bmatrix} = (1 - 2xy) - 2y(6x - y^2) = 1 - 14xy + 2y^3.  \]
+	This is a continuous function of $(x,y)$ and it is nonzero when $(x,y) = 0$, so there exists an open neighborhood $U$ of $0$ such that $\det f'(x,y) \neq 0$ for all $(x,y) \in U$. In other words, $f|_U$ is \'etale. By the inverse function theorem \ref{inverse-function-theorem}, we can replace $U$ with a smaller open neighborhood of 0 in order to guarantee that $f|_U$ is injective and open. Then $f(U)$ is an open neighborhood of $f(0) = 0$, and for every $(a,b) \in f(U)$, there exists a unique $(x,y) \in \R^2$ such that $f(x,y) = (a,b)$. 
+	
+	We have just proved that, for every $(a,b)$ in $f(U)$, the system has a unique solution given by $(x,y) \in U$. In other words, if we perturb $a$ and $b$ just a little bit away from 0, our system will have a unique solution close to 0. Thanks to the inverse function theorem \ref{inverse-function-theorem}, proving this boiled down to a simple linear algebra calculation!
+\end{example}
+
+Here are some more exercises and examples that may help clarify the statement of the inverse function theorem. 
+
 \begin{exercise}
 	Recall the function $f(x) = x + 2x^2 \sin(1/x)$ that we saw in \cref{positive-not-monotone}. As we've seen, $f'(0) = 1$ but $f$ is not monotone (hence not injective, by \cref{strictly-monotone-iff-injective}) on any open neighborhood of $0$. Explain why this does not violate the inverse function theorem. In other words, show that $f$ is not \'etale on any open neighborhood of 0.
+\end{exercise}
+
+\begin{exercise}
+	Let $U = \{(x,y) : x > 0\}$ and let $f : U \to \R^2$ be the function \[ f(x,y) = (xe^{-y}, xe^y). \]
+	\begin{enumerate}[(a)]
+		\item Show that $f$ is \'etale. 
+		\item Show that $f$ is injective. What is $f(U)$?
+		\item Calculate $(f^{-1})'(1,1)$. 
+	\end{enumerate}
 \end{exercise}
 
 \subsection{Proof of the inverse function theorem \starred}
@@ -1500,6 +1550,12 @@ The following theorem is the promised sort-of-converse to \cref{differentiable-i
 	If you're using the euclidean norm, you'll have to apply \cref{max-euclidean} for the final step of the proof above. This is another example of why the max norm is often easier to deal with. 
 \end{unimportantremark}
 
+Here is another fact that can be proved using a similar argument involving zigzag paths where each segment is orthogonal to the coordinate axes. 
+
+\begin{exercise}
+	Suppose $U$ is a convex open subset of $\R^m$ and $f : \R^m \to \R$ is a (not necessarily differentiable) function for which there exists a constant $M > 0$ such that $|\partial_i f(x)| \leq M$ for all $i = 1, \dotsc, m$ and $x \in U$. Prove that $f$ is continuous. 
+\end{exercise}
+
 \subsubsection*{Continuous differentiability}
 
 \begin{definition}[Continuously differentiable functions] \index{continuously differentiable} \label{continuously-differentiable-definition}
@@ -1527,7 +1583,7 @@ Here is a multivariable version of the differentiable-but-not-continuously-diffe
 	You might recall proving at some point in a previous class that $\R^2$ and $\R$ have the same cardinality: in other words, that there exists a bijection $f : \R^2 \to \R$. Show that any such bijection cannot be continuously differentiable. 
 	
 	\begin{hint}
-		Suppose for a contradiction that $f : \R^2 \to \R$ is a continuously differentiable bijection.  Let $U$ be an open subset of $\R^2$ such that $\partial_1 f(x) \neq 0$ for all $x \in U$, and then consider the function $g : U \to \R^2$ given by $g(x_1, x_2) = (f(x_1, x_2), x_2)$. 
+		Suppose for a contradiction that $f : \R^2 \to \R$ is a continuously differentiable bijection.  Let $U$ be an open subset of $\R^2$ such that $\partial_1 f(x, y) \neq 0$ for all $(x,y) \in U$, and then consider the function $g : U \to \R^2$ given by $g(x, y) = (f(x, y), y)$. 
 	\end{hint}
 \end{exercise}
 
@@ -1583,7 +1639,7 @@ For this section, we will need to make substantial use of the continuity propert
 	\begin{enumerate}[(a)]
 		\item Elaborate on the first sentence of the above proof (in other words, explain why proving \cref{continuous-partials} for $n = 1$ is sufficient to prove it for all $n$). 
 		\item If you haven't already done it, do \cref{evaluation-continuous}. 
-		\item Complete the proof above by showing that $df : U \to \mathscr{L}(\R^m, \R)$ is continuous. 
+		\item Complete the proof above by showing that $df : U \to \mathscr{L}(\R^m, \R)$ is continuous if $f$ is continuously differentiable. 
 	\end{enumerate}
 \end{exercise}
 
@@ -1719,7 +1775,7 @@ We now establish some rules of doing algebra with multi-indices.
 \begin{exercise}[Equality of mixed partials, multi-index version] \label{mixed-partials-multi-index}
 	Suppose $\alpha, \beta$ are multi-indices and $f : U \to \R$ is $C^{|\alpha + \beta|}$. Prove that \[ \partial^\alpha \partial^\beta f = \partial^{\alpha + \beta} f. \] 
 	\begin{hint}
-		First consider the case when $\alpha = 1_i$ for some $i = 1, \dotsc, m$. 
+		First consider the case when $\alpha = 1_i$ for some $i = 1, \dotsc, m$. Prove this by induction on $|\beta|$. 
 	\end{hint}
 \end{exercise}
 
@@ -1728,7 +1784,7 @@ We now establish some rules of doing algebra with multi-indices.
 	\[ (x_1 + \dotsb + x_m)^\ell = \sum_{|\alpha| = \ell} \binom{\ell}{\alpha} x^\alpha. \]
 \end{theorem} 
 
-The proof of the multinomial theorem is omitted because we won't actually have much use for it. If you're interested, try it yourself; if you get stuck, you can find a proof on \href{https://en.wikipedia.org/wiki/Multinomial_theorem}{Wikipedia}. 
+The proof of the multinomial theorem is omitted because we won't actually have much use for the theorem. If you're interested, try it yourself; if you get stuck, you can find a proof on \href{https://en.wikipedia.org/wiki/Multinomial_theorem}{Wikipedia}. 
 
 There is a convenient combinatorial interpretation of $\binom{\ell}{\alpha}$ when $\ell = |\alpha|$ which generalizes the interpretation of binomial coefficients. For this reason, the $\binom{\ell}{\alpha}$ are often called ``multinomial coefficients.''\index{multinomial}
 
@@ -1785,6 +1841,12 @@ While the notation is compact and aesthetically pleasing, there's a lot of infor
 
 \begin{exercise}
 	Let $f : \R^2 \to \R$ be the function $f(x,y) = \sin(xy)$. Calculate the degree 3 Taylor polynomial of $f$ at the origin. 
+\end{exercise}
+
+Here is some practice using the statement of Taylor's theorem. 
+
+\begin{exercise}
+	Let $f : \R^2 \to \R$ be a $C^2$ function. Suppose $a \in \R^2$ is a critical point of $f$ and $\partial^{(1,1)}f(a) = 0$. Use the degree 2 Taylor polynomial of $f$ at $a$ to formulate a rule for determining when $a$ is a local minimum, local maximum, or neither, and prove your rule. 
 \end{exercise}
 
 \subsubsection*{Proof of Taylor's theorem}

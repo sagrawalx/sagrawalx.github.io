@@ -111,31 +111,17 @@ This leads us to the following definition.
 
 \subsection{First examples}
 
-\subsubsection*{Euclidean space}
-
 \begin{example} \label{natural-euclidean-atlas}
 	The single chart $(\R^n, \id)$, where $\id : \R^n \to \R^n$ is the identity map, defines an atlas on $\R^n$. We can extend this to a maximal atlas, called the \emph{euclidean atlas} on $\R^n$. Unless explicitly specified otherwise, we always regard $\R^n$ as a manifold by equipping it with the euclidean atlas. By \cref{polar-compatible-with-identity}, the polar representation chart $(U, \text{polar})$ is an element of the euclidean atlas. 
 \end{example}
 
 \begin{exercise}
-	For any $r > 0$, let $h_r : \R \to \R$ be the function
-	\[ h_r(t) = \begin{cases} t & \text{if } t \leq 0 \\ rt & \text{if } t > 0. \end{cases} \]
-	Note that $h_r$ is continuous and strictly increasing (hence also injective and open, by \cref{strictly-monotone-iff-injective,strictly-monotone-implies-open}), so $(\R, h_r)$ is a chart. Note also that $h_1 = \id$. 
-	\begin{enumerate}[(a)]
-		\item Show that $(\R, h_r)$ and $(\R, h_s)$ are compatible if and only if $r = s$.
-		\item Let $\mathscr{A}_r$ be the maximal atlas obtained by extending $(\R, h_r)$. What can you say about $\mathscr{A}_r$ and $\mathscr{A}_s$ if $r \neq s$?
-	\end{enumerate}  
-\end{exercise}
-
-\begin{exercise}
-	Let $h : \R \to \R$ be the function $h(t) = t^3$. Note that $h$ is continuous and strictly increasing, so $(\R, h)$ is a chart (by \cref{strictly-monotone-iff-injective,strictly-monotone-implies-open}). Show that $(\R, f)$ is \emph{not} a member of the euclidean atlas on $\R$. 
+	Let $f : \R \to \R$ be the function $f(x) = x^3$. Note that $f$ is smooth and strictly increasing (hence also injective and open, by \cref{strictly-monotone-iff-injective,strictly-monotone-implies-open}). Show that $(\R, f)$ is \emph{not} a member of the euclidean atlas on $\R$. 
 \end{exercise}
 
 \begin{exercise} \label{euclidean-chart-characterization}
 	Suppose $U$ is an open subset of $\R^n$ and $f : U \to \R^n$ is a function. Show that the pair $(U, f)$ is a chart in the euclidean atlas on $\R^n$ if and only if $f$ is smooth, injective, and \'etale.
 \end{exercise}
-
-\subsubsection*{Circles and spheres}
 
 \begin{exercise}[The circle $S^1$] \index{s1@$S^1$|see {circle}} \index{circle} \label{circle-projection-atlas}
 	Let $S^1$ denote the set of points in $\R^2$ along the unit circle. In other words,
@@ -199,17 +185,11 @@ This leads us to the following definition.
 	Let $S^n$ denote the set of points in $\R^{n+1}$ of norm 1. Generalize \cref{circle-projection-atlas} and show that ``projection from the north pole'' and ``projection from the south pole'' define an atlas on $S^n$. 
 \end{exercise}
 
-\subsubsection*{Matrices and vector spaces}
-
 \begin{example}[Matrices]
 	There is an isomorphism of vector spaces $x : \mathscr{M}_{n \times m} \to \R^{mn}$\index{mnm@$\mathscr{M}_{n \times m}$} where, if $A \in \mathscr{M}_{n \times m}$ has entries $a_{i,j}$, then
 	\[ x(A) = \begin{bmatrix} a_{1,1} \\ a_{1,2} \\ \vdots \\ a_{1,m} \\ a_{2,1} \\ \vdots \\ a_{n,m} \end{bmatrix}. \]
-	If we endow $\mathscr{M}_{n \times m}$ with the canonical topology,\index{canonical topology} then $x$ is automatically a homeomorphism by \cref{linear-isomorphism-homeomorphism}.\index{homeomorphism} In other words, the single chart $(\mathscr{M}_{n \times m}, x)$ is an atlas on $\mathscr{M}_{n \times m}$. Extending it to a maximal atlas using \cref{existence-maximal-atlas}, we see that we can regard $\mathscr{M}_{n,m}$ as a manifold. It is $mn$-dimensional.  
+	If we endow $\mathscr{M}_{n \times m}$ with the canonical topology,\index{canonical topology} then $x$ is automatically a homeomorphism by \cref{linear-isomorphism-homeomorphism}.\index{homeomorphism} In other words, the single chart $(\mathscr{M}_{n \times m}, x)$ is an atlas on $\mathscr{M}_{n \times m}$. Extending it to a maximal atlas using \cref{existence-maximal-atlas}, we see that we can regard $\mathscr{M}_{n,m}$ as a manifold. It is $mn$-dimensional. The same process allows us to regard \emph{any} finite dimensional vector space (not just $\mathscr{M}_{n \times m}$) as a manifold.  
 \end{example}
-
-The same process allows us to regard \emph{any} finite dimensional vector space (not just $\mathscr{M}_{n \times m}$) as a manifold. 
-
-\subsubsection*{Constructions}
 
 \begin{exercise}[Graphs of continuous functions] \label{graphs-continuous}
 	Suppose $U$ is an open subset of $\R^m$ and $f : U \to \R^n$ is a continuous function. 
@@ -467,9 +447,7 @@ Here is another property you would hope would be true.
 
 We now have two important results which let us produce lots of examples of submanifolds of euclidean space out of smooth functions (in the sense of \cref{smooth-multi}). 
 
-\subsubsection*{Regular level set theorem}
-
-First up, we have the following important theorem which goes by many names; we will call it the ``regular level set theorem,'' but some other names include the ``preimage theorem'' or the ``submersion theorem.'' We will later generalize this result. 
+First up, we have the following important theorem which goes by many names; we will call it the ``regular level set theorem,'' but some other names include the ``preimage theorem'' or the ``submersion theorem.'' We will later generalize this theorem. 
 
 \begin{theorem}[Regular level set theorem] \label{regular-level-set-theorem-local}
 	Suppose $U$ is an open subset of $\R^m$ and $f : U \to \R^n$ is a smooth function where $m \geq n$. If $q \in \R^n$ is a regular value of $f$, then $S = f^{-1}(q)$ is a submanifold of $U$ of dimension $m-n$. 
@@ -515,49 +493,6 @@ First up, we have the following important theorem which goes by many names; we w
 	\end{enumerate}
 \end{exercise}
 
-\begin{exercise} \label{torus-equation}
-	Let $T$ be the torus inside $\R^3$ centered around the $z$-axis where the distance from the origin to the center of the tube is $R$, the radius of the tube is $r$, and $0 < r < R$. Find a smooth function $f : U \to \R$ where $U$ is an open subset of $\R^3$, 0 is a regular value of $f$, and \[ T = \{ (x,y,z) \in U : f(x,y,z) = 0 \}. \]
-	Thus, applying \cref{regular-level-set-theorem-local}, we can conclude that $T$ is a submanifold of $\R^3$. 
-	\begin{hint}
-		See \cref{torus-slice}. 
-	\end{hint}
-	\begin{figure}[ht]
-		\begin{center}
-			\begin{tikzpicture}
-			\begin{axis}[
-			xmin=-4.5,xmax=4.5,
-			ymin=-2,ymax=3,
-			ytick={0},
-			xtick={-3,3},
-			xticklabels={$-R$,$R$},
-			yticklabels={},
-			axis lines=middle,
-			axis line style=lightgray,
-			width=\textwidth,
-			axis equal,
-			ylabel={$z$}
-			]
-			
-			\addplot[black,style=thick] expression[domain=2:4,samples=200]{sqrt(1 - (x-3)^2)};
-			\addplot[black,style=thick] expression[domain=2:4,samples=200]{-sqrt(1 - (x-3)^2)};
-			\addplot[black,style=thick] expression[domain=-4:-2,samples=200]{sqrt(1 - (x+3)^2)};
-			\addplot[black,style=thick] expression[domain=-4:-2,samples=200]{-sqrt(1 - (x+3)^2)};
-			
-			\node[label={45:$(x,y,z)$},color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:3.5,0.866025) (A) {};
-			\node[color=black,draw=black,circle,fill,inner sep=1pt] at (axis cs:3,0) (B) {};
-			\node[color=black,draw=black,circle,fill,inner sep=1pt] at (axis cs:3.5,0) (C) {};
-			\node[label={$r$}] at (axis cs:3.1,0.3) {};
-			
-			\draw[black] (B) -- (A) -- (C) -- (B);
-			\end{axis}
-			\end{tikzpicture}
-		\end{center}
-		\caption{A slice of the torus $T$ from \cref{torus-equation} along a plane that is perpendicular to the $xy$-plane and contains the $z$-axis.}  \label{torus-slice}
-	\end{figure}
-\end{exercise}
-
-\subsubsection*{Graphs of smooth functions}
-
 \begin{proposition} \label{graphs-smooth}
 	Suppose $U$ is an open subset of $\R^m$ and $f : U \to \R^n$ is a smooth function. Then the graph of $f$ is a submanifold of $\R^{m+n}$. 
 \end{proposition}
@@ -583,10 +518,6 @@ An important cautionary remark is that sometimes, a subspace that is a manifold 
 
 \begin{exercise}
 	Let $f : \R \to \R$ be the function $f(x) = |x|$. Show that the graph of $f$ is not a submanifold of $\R^2$. 
-\end{exercise}
-
-\begin{exercise}
-	Suppose $U$ is an open subset of $\R^m$ and $f : U \to \R^n$ is a smooth function. We have discussed two atlases on the graph $\Gamma$ of $f$. One was discussed in \cref{graphs-continuous}, and the other arises by combining \cref{graphs-smooth,submanifolds-are-manifolds}. How do these atlases compare?
 \end{exercise}
 
 \section{Smooth functions}
