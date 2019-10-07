@@ -198,8 +198,7 @@ Student summer research poster session (2:30–4pm in TSC 2nd floor atrium).
 <td>Multivariable: $C^k$ hierarchy</td>
 <td>Read: 2.5   
 Do: 18, 23, 25, 34, 37</td>
-<td>
-</td>
+<td>[Link](multi-review-2.pdf)</td>
 </tr>
 
 <tr>
