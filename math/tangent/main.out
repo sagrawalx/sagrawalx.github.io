@@ -64,35 +64,31 @@
 \BOOKMARK [2][-]{subsection.543}{Ck functions}{section.519}% 64
 \BOOKMARK [2][-]{subsection.550}{Equality of mixed partials *}{section.519}% 65
 \BOOKMARK [2][-]{subsection.558}{Taylor's theorem *}{section.519}% 66
-\BOOKMARK [2][-]{subsection.576}{Smooth functions}{section.519}% 67
-\BOOKMARK [0][-]{chapter.589}{Manifolds}{}% 68
-\BOOKMARK [1][-]{section.590}{Definition of a manifold}{chapter.589}% 69
-\BOOKMARK [2][-]{subsection.591}{Charts}{section.590}% 70
-\BOOKMARK [2][-]{subsection.595}{Compatibility of charts}{section.590}% 71
-\BOOKMARK [2][-]{subsection.602}{Atlases and manifolds}{section.590}% 72
-\BOOKMARK [2][-]{subsection.606}{Dimension}{section.590}% 73
-\BOOKMARK [1][-]{section.608}{Examples}{chapter.589}% 74
-\BOOKMARK [2][-]{subsection.609}{First examples}{section.608}% 75
-\BOOKMARK [2][-]{subsection.636}{M\366bius strip}{section.608}% 76
-\BOOKMARK [2][-]{subsection.643}{More quotient examples}{section.608}% 77
-\BOOKMARK [2][-]{subsection.647}{Submanifolds}{section.608}% 78
-\BOOKMARK [2][-]{subsection.660}{Submanifolds of euclidean space}{section.608}% 79
-\BOOKMARK [1][-]{section.675}{Smooth functions}{chapter.589}% 80
-\BOOKMARK [2][-]{subsection.676}{Smooth real-valued functions}{section.675}% 81
-\BOOKMARK [2][-]{subsection.696}{Smooth functions between manifolds}{section.675}% 82
-\BOOKMARK [2][-]{subsection.709}{Paths}{section.675}% 83
-\BOOKMARK [2][-]{subsection.710}{Diffeomorphisms}{section.675}% 84
-\BOOKMARK [0][-]{chapter.717}{Tangent Spaces}{}% 85
-\BOOKMARK [1][-]{section.718}{Tangent space}{chapter.717}% 86
-\BOOKMARK [2][-]{subsection.719}{Curves based at a point}{section.718}% 87
-\BOOKMARK [2][-]{subsection.724}{Vector space structure}{section.718}% 88
-\BOOKMARK [2][-]{subsection.742}{Derivations *}{section.718}% 89
-\BOOKMARK [1][-]{section.751}{Pushforward}{chapter.717}% 90
-\BOOKMARK [2][-]{subsection.752}{Definition of the pushforward}{section.751}% 91
-\BOOKMARK [2][-]{subsection.759}{Rank of a smooth map}{section.751}% 92
-\BOOKMARK [0][-]{appendix.763}{Trigonometry}{}% 93
-\BOOKMARK [1][-]{section.764}{Arclength function}{appendix.763}% 94
-\BOOKMARK [1][-]{section.772}{Definition of pi}{appendix.763}% 95
-\BOOKMARK [1][-]{section.776}{Sine and cosine}{appendix.763}% 96
-\BOOKMARK [0][-]{chapter*.778}{Bibliography}{}% 97
-\BOOKMARK [0][-]{chapter*.779}{Index}{}% 98
+\BOOKMARK [2][-]{subsection.578}{Smooth functions}{section.519}% 67
+\BOOKMARK [0][-]{chapter.591}{Manifolds}{}% 68
+\BOOKMARK [1][-]{section.592}{Definition of a manifold}{chapter.591}% 69
+\BOOKMARK [2][-]{subsection.593}{Charts}{section.592}% 70
+\BOOKMARK [2][-]{subsection.597}{Compatibility of charts}{section.592}% 71
+\BOOKMARK [2][-]{subsection.604}{Atlases and manifolds}{section.592}% 72
+\BOOKMARK [2][-]{subsection.608}{Dimension}{section.592}% 73
+\BOOKMARK [1][-]{section.610}{Examples}{chapter.591}% 74
+\BOOKMARK [2][-]{subsection.611}{First examples}{section.610}% 75
+\BOOKMARK [2][-]{subsection.638}{M\366bius strip}{section.610}% 76
+\BOOKMARK [2][-]{subsection.645}{More quotient examples}{section.610}% 77
+\BOOKMARK [2][-]{subsection.649}{Submanifolds}{section.610}% 78
+\BOOKMARK [2][-]{subsection.662}{Submanifolds of euclidean space}{section.610}% 79
+\BOOKMARK [1][-]{section.677}{Smooth functions}{chapter.591}% 80
+\BOOKMARK [2][-]{subsection.678}{Smooth real-valued functions}{section.677}% 81
+\BOOKMARK [2][-]{subsection.698}{Smooth functions between manifolds}{section.677}% 82
+\BOOKMARK [2][-]{subsection.711}{Paths}{section.677}% 83
+\BOOKMARK [2][-]{subsection.712}{Diffeomorphisms}{section.677}% 84
+\BOOKMARK [0][-]{chapter.719}{Tangent Spaces}{}% 85
+\BOOKMARK [1][-]{section.720}{Tangent space}{chapter.719}% 86
+\BOOKMARK [2][-]{subsection.721}{Curves based at a point}{section.720}% 87
+\BOOKMARK [2][-]{subsection.726}{Vector space structure}{section.720}% 88
+\BOOKMARK [2][-]{subsection.744}{Derivations *}{section.720}% 89
+\BOOKMARK [1][-]{section.753}{Pushforward}{chapter.719}% 90
+\BOOKMARK [2][-]{subsection.754}{Definition of the pushforward}{section.753}% 91
+\BOOKMARK [2][-]{subsection.761}{Rank of a smooth map}{section.753}% 92
+\BOOKMARK [0][-]{chapter*.765}{Bibliography}{}% 93
+\BOOKMARK [0][-]{chapter*.766}{Index}{}% 94

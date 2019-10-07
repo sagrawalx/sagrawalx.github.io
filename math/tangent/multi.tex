@@ -1846,29 +1846,82 @@ We're now ready to state the multivariable version of Taylor's theorem.
 
 While the notation for the Taylor polynomial is compact and aesthetically pleasing, there's a lot of information packed into very few symbols. Here is an example. 
 
-\begin{example}
+\begin{example} \label{taylor-example}
 	Let $U = \R^2 \setminus \{0\}$ and let $f : U \to \R^2$ be the function \[ f(x,y) = \ln(x^2 + y^2). \]
-	Let us calculate the degree 2 Taylor polynomial of $f$ at the point $(1,0)$. First of all, we have \[ f(1,0) = 0, \] which tells us the constant term of the polynomial. The linear terms in the Taylor polynomial will depend on the partial derivatives of $f$. More precisely, note that there are two multi-indices $\alpha$ with $|\alpha| = 1$, which are $\alpha = (1,0)$ and $\alpha = (0,1)$. We have the following.  
+	See \cref{taylor-example-graph}
+	\begin{figure}[ht]
+		\begin{center}
+			\begin{tikzpicture}
+			\begin{axis}[
+			view={120}{15},
+			axis lines=middle,
+			xlabel={$x$},
+			xtick={0},
+			xmin=-3.1,xmax=3.1,
+			ylabel={$y$},
+			ytick={0},
+			ymin=-3.1,ymax=3.1,
+			zlabel={$z$},
+			ztick={0},
+			zmin=-5,zmax=4,
+			width=\textwidth,
+			]
+			\addplot3[mesh,samples=50,domain=-3:3,colormap/Reds]{ln(x^2+y^2)}; 
+			\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		\caption{The graph of the function  $f(x,y) = \ln(x^2 + y^2)$. } \label{taylor-example-graph}
+	\end{figure}
+	
+	Let's calculate the degree 2 Taylor polynomial of $f$ at the point $(1,0)$. First of all, we have \[ f(1,0) = 0, \] which tells us the constant term of the polynomial. The linear terms in the Taylor polynomial will depend on the partial derivatives of $f$. More precisely, note that there are two multi-indices $\alpha$ with $|\alpha| = 1$, which are $\alpha = (1,0)$ and $\alpha = (0,1)$. We have the following.  
 	\[ \begin{aligned} \partial^{(1,0)}f(1,0) &= \frac{\partial f}{\partial x}(1,0) = \left.\frac{2x}{x^2 + y^2}\right|_{(x,y) = (1,0)} = 2 \\
 	 \partial^{(0,1)}f(1,0) &= \frac{\partial f}{\partial y}(1,0) = \left.\frac{2y}{x^2 + y^2}\right|_{(x,y) = (1,0)} = 0 \end{aligned} \]
 	The quadratic terms of the polynomial will depend on the second order partial derivatives, ie, on $\partial^\alpha f(1,0)$ where $|\alpha| = 2$. There are three such multi-indices: $(2,0), (1,1)$, and $(0,2)$. We have the following. 
-	\[ \begin{aligned} \partial^{(2,0)}f(1,0) &= \left.\frac{\partial^2 f}{\partial x^2}(1,0) = \frac{2y^2 - 2x^2}{x^2 + y^2}\right|_{(x,y) = (1,0)} = -2 \\
-	\partial^{(1,1)}f(1,0) &= \frac{\partial^2 f}{\partial x^2}(1,0) = \left.\frac{-4xy}{x^2 + y^2}\right|_{(x,y) = (1,0)} = 0 \\
-	\partial^{(0,2)}f(1,0) &= \frac{\partial^2 f}{\partial x^2}(1,0) = \left.\frac{2x^2 - 2y^2}{x^2 + y^2}\right|_{(x,y) = (1,0)} = 2 \end{aligned} \]
-	This lets us assemble the degree 2 Taylor polynomial. 
+	\[ \begin{aligned} \partial^{(2,0)}f(1,0) &= \left.\frac{\partial^2 f}{\partial x^2}(1,0) = \frac{2y^2 - 2x^2}{(x^2 + y^2)^2}\right|_{(x,y) = (1,0)} = -2 \\
+	\partial^{(1,1)}f(1,0) &= \frac{\partial^2 f}{\partial x^2}(1,0) = \left.\frac{-4xy}{(x^2 + y^2)^2}\right|_{(x,y) = (1,0)} = 0 \\
+	\partial^{(0,2)}f(1,0) &= \frac{\partial^2 f}{\partial x^2}(1,0) = \left.\frac{2x^2 - 2y^2}{(x^2 + y^2)^2}\right|_{(x,y) = (1,0)} = 2 \end{aligned} \]
+	You may find it convenient to organize your partial derivative calculations in a tree-like diagram, as in \cref{partial-derivatives-tree}. 
+	\begin{figure}
+		\begin{center}
+			\begin{tikzpicture}
+			\node (A) at (0,0) {$\ln(x^2+y^2)$};
+			
+			\node (B) at (-3,-3) {$\dfrac{2x}{x^2+y^2}$};
+			\node (C) at (3,-3) {$\dfrac{2y}{x^2+y^2}$};
+			
+			\node (D) at (-6,-6) {$\dfrac{2y^2-2x^2}{(x^2+y^2)^2}$};
+			\node (E) at (0,-6) {$\dfrac{-4xy}{(x^2+y^2)^2}$};
+			\node (F) at (6,-6) {$\dfrac{2x^2-2y^2}{(x^2+y^2)^2}$};
+			
+			
+			\begin{scope}[every node/.style={fill=white,circle}]
+			\path [->] (A) edge node {$\partial_x$} (B);
+			\path [->] (A) edge node {$\partial_y$} (C);
+			
+			\path [->] (B) edge node {$\partial_x$} (D);
+			\path [->] (B) edge node {$\partial_y$} (E);
+			\path [->] (C) edge node {$\partial_x$} (E);
+			\path [->] (C) edge node {$\partial_y$} (F);
+			\end{scope}
+			\end{tikzpicture}
+		\end{center}
+		\caption{Iterated partial derivatives of the function $f(x,y) = \ln(x^2+y^2)$.} \label{partial-derivatives-tree}
+	\end{figure}
+	
+	These calculations let us assemble the degree 2 Taylor polynomial. 
 	\[ \begin{aligned} p_2(h,k) &= f(1,0) (h,k)^{(0,0)} + \frac{\partial^{(1,0)}f(1,0)}{(1,0)!}(h,k)^{(1,0)} + \frac{\partial^{(0,1)}f(0,1)}{(0,1)!}(h,k)^{(0,1)}  \\
 	&\quad + \frac{\partial^{(2,0)}f(1,0)}{(2,0)!}(h,k)^{(2,0)} + \frac{\partial^{(1,1)}f(1,0)}{(1,1)!}(h,k)^{(1,1)} + \frac{\partial^{(0,2)}f(1,0)}{(0,2)!}(h,k)^{(0,2)} \\
 	&= 2h - h^2 + k^2. \end{aligned} \]
-	Taylor's theorem \ref{taylor} states that \[ f(1+h,k) \approx 2h - h^2 + k^2 \] for small $(h,k)$. More precisely, the assertion is that the difference between these two functions is $o(|(h,k)|^2)$ as $(h,k) \to 0$. 
+	Taylor's theorem \ref{taylor} states roughly that $f(1+h,k) \approx 2h - h^2 + k^2$ for small $(h,k)$. More precisely, the assertion is that the difference between the left and right hand sides above is $o(|(h,k)|^2)$ as $(h,k) \to 0$. 
 \end{example}
 
-I exhort you to work through the following example yourself before proceeding. It may start feeling tedious at some point, but power through it. 
+I exhort you to work through the following example yourself before proceeding. It may start feeling tedious at some point, but power through it. Facility with calculating explicit examples is what gives you the intuition you need to do abstract proofs. 
 
 \begin{exercise}
-	Let $f : \R^2 \to \R$ be the function $f(x,y) = \sin(xy)$. Calculate the degree 3 Taylor polynomial of $f$ at the origin. 
+	Let $f : \R^2 \to \R$ be the function $f(x,y) = \sin(xy^2)$. Calculate the degree 3 Taylor polynomial of $f$ at the origin. 
 \end{exercise}
 
-Here is some practice using the statement of Taylor's theorem. 
+Here is some practice using the statement of Taylor's theorem in proofs. 
 
 \begin{exercise}
 	Let $f : \R^2 \to \R$ be a $C^2$ function. Suppose $a \in \R^2$ is a critical point of $f$ and $\partial^{(1,1)}f(a) = 0$. Use the degree 2 Taylor polynomial of $f$ at $a$ to formulate a rule for determining when $a$ is a local minimum, local maximum, or neither, and prove your rule. 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  6 OCT 2019 18:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  7 OCT 2019 15:49
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2746,6 +2746,10 @@ LaTeX Warning: Reference `node-graph' on page 1 undefined on input line 1058.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
+LaTeX Warning: Reference `differentiable-at-a-point-but-not-in-any-neighborhood
+' on page 1 undefined on input line 1106.
+
+
 LaTeX Warning: Reference `single-differentiable' on page 1 undefined on input l
 ine 1119.
 
@@ -3112,144 +3116,159 @@ LaTeX Warning: Reference `taylor-single' on page 1 undefined on input line 1751
 
 
 LaTeX Warning: Reference `multinomial-combinatorial' on page 1 undefined on inp
-ut line 1814.
+ut line 1813.
 
 
-LaTeX Warning: Reference `taylor' on page 130 undefined on input line 1854.
+LaTeX Warning: Reference `multinomial-combinatorial' on page 1 undefined on inp
+ut line 1820.
 
 
-LaTeX Warning: Reference `iterated-derivative-restricted-to-line' on page 1 und
-efined on input line 1857.
+LaTeX Warning: Reference `taylor-example-graph' on page 1 undefined on input li
+ne 1851.
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+LaTeX Warning: Reference `taylor' on page 132 undefined on input line 1902.
 
 
-LaTeX Warning: Reference `iterated-derivative-restricted-to-line' on page 1 und
-efined on input line 1857.
-
-
-LaTeX Warning: Reference `jacobian-matrix' on page 1 undefined on input line 18
-61.
-
-
-LaTeX Warning: Reference `iterated-derivative-restricted-to-line' on page 1 und
-efined on input line 1861.
-
-
-LaTeX Warning: Reference `mixed-partials' on page 131 undefined on input line 1
-869.
+LaTeX Warning: Reference `taylor' on page 132 undefined on input line 1919.
 
 
 LaTeX Warning: Reference `iterated-derivative-restricted-to-line' on page 1 und
-efined on input line 1869.
+efined on input line 1922.
 
 
 LaTeX Warning: Reference `iterated-derivative-restricted-to-line' on page 1 und
-efined on input line 1871.
+efined on input line 1922.
 
 
-LaTeX Warning: Reference `jacobian-matrix' on page 1 undefined on input line 18
-77.
+LaTeX Warning: Reference `jacobian-matrix' on page 1 undefined on input line 19
+26.
+
+
+LaTeX Warning: Reference `iterated-derivative-restricted-to-line' on page 1 und
+efined on input line 1926.
+
+
+LaTeX Warning: Reference `mixed-partials' on page 133 undefined on input line 1
+934.
+
+
+LaTeX Warning: Reference `iterated-derivative-restricted-to-line' on page 1 und
+efined on input line 1934.
+
+
+LaTeX Warning: Reference `iterated-derivative-restricted-to-line' on page 1 und
+efined on input line 1936.
+
+
+LaTeX Warning: Reference `jacobian-matrix' on page 1 undefined on input line 19
+42.
 
 
 LaTeX Warning: Reference `mixed-partials-multi-index' on page 1 undefined on in
-put line 1877.
+put line 1942.
 
 
 LaTeX Warning: Reference `multinomial-recurrence' on page 1 undefined on input 
-line 1877.
+line 1942.
 
 
 LaTeX Warning: Reference `iterated-derivative-restricted-to-line' on page 1 und
-efined on input line 1877.
+efined on input line 1942.
 
 
-LaTeX Warning: Reference `taylor' on page 1 undefined on input line 1879.
+LaTeX Warning: Reference `taylor' on page 1 undefined on input line 1944.
 
 
-LaTeX Warning: Citation 'konigsberger' on page 132 undefined on input line 1879
+LaTeX Warning: Citation 'konigsberger' on page 134 undefined on input line 1944
 .
 
 
-LaTeX Warning: Reference `taylor-single' on page 132 undefined on input line 18
-79.
+LaTeX Warning: Reference `taylor-single' on page 134 undefined on input line 19
+44.
 
 
 LaTeX Warning: Reference `iterated-derivative-restricted-to-line' on page 1 und
-efined on input line 1881.
+efined on input line 1946.
 
 
 LaTeX Warning: Reference `taylor-polynomial' on page 1 undefined on input line 
-1883.
+1948.
 
 
 LaTeX Warning: Reference `taylor-polynomial' on page 1 undefined on input line 
-1885.
+1950.
 
 
-LaTeX Warning: Reference `taylor' on page 1 undefined on input line 1898.
+LaTeX Warning: Reference `taylor' on page 1 undefined on input line 1963.
 
 
 LaTeX Warning: Reference `small-polynomial-is-zero' on page 1 undefined on inpu
-t line 1898.
+t line 1963.
 
 
-LaTeX Warning: Reference `taylor-single' on page 133 undefined on input line 18
-98.
+LaTeX Warning: Reference `taylor-single' on page 135 undefined on input line 19
+63.
 
 
-LaTeX Warning: Reference `smooth-single' on page 1 undefined on input line 1907
+LaTeX Warning: Reference `smooth-single' on page 1 undefined on input line 1972
 .
 
 
-LaTeX Warning: Reference `support' on page 1 undefined on input line 1911.
+LaTeX Warning: Reference `support' on page 1 undefined on input line 1976.
 
 
-LaTeX Warning: Reference `canonical-bump' on page 1 undefined on input line 191
-4.
+LaTeX Warning: Reference `canonical-bump' on page 1 undefined on input line 197
+9.
 
 
 LaTeX Warning: Reference `multivariable-bump-square-support-graph' on page 1 un
-defined on input line 1916.
+defined on input line 1981.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-LaTeX Warning: Reference `canonical-bump' on page 1 undefined on input line 193
-8.
-
-
-LaTeX Warning: Reference `canonical-bump' on page 1 undefined on input line 193
-8.
-
-
-LaTeX Warning: Reference `canonical-bump' on page 1 undefined on input line 194
+LaTeX Warning: Reference `canonical-bump' on page 1 undefined on input line 200
 3.
 
 
+LaTeX Warning: Reference `canonical-bump' on page 1 undefined on input line 200
+3.
+
+
+LaTeX Warning: Reference `canonical-bump' on page 1 undefined on input line 200
+8.
+
+
 LaTeX Warning: Reference `straight-line-path' on page 1 undefined on input line
- 1958.
+ 2023.
 
 
-LaTeX Warning: Reference `convex' on page 1 undefined on input line 1958.
+LaTeX Warning: Reference `convex' on page 1 undefined on input line 2023.
 
 
-LaTeX Warning: Reference `infinitely-flat' on page 1 undefined on input line 19
-71.
+LaTeX Warning: Reference `infinitely-flat' on page 1 undefined on input line 20
+36.
 
 
 LaTeX Warning: Reference `concatenation-paths' on page 1 undefined on input lin
-e 1984.
+e 2049.
 
 
 LaTeX Warning: Reference `slowing-down-paths' on page 1 undefined on input line
- 1984.
+ 2049.
 
 
 LaTeX Warning: Reference `smooth-concatenation-paths' on page 1 undefined on in
-put line 1992.
+put line 2057.
 
 
 LaTeX Warning: Reference `constant-iff-derivative-zero-connected' on page 1 und
-efined on input line 1992.
+efined on input line 2057.
 
 ) (./manifolds.tex
 chapter 3.
@@ -3350,18 +3369,45 @@ LaTeX Warning: Reference `existence-maximal-atlas' on page 1 undefined on input
  line 207.
 
 
-LaTeX Warning: Reference `product-space' on page 143 undefined on input line 21
+LaTeX Warning: Reference `product-space' on page 145 undefined on input line 21
 7.
 
 
-LaTeX Warning: Reference `subspace-topology' on page 143 undefined on input lin
+LaTeX Warning: Reference `subspace-topology' on page 145 undefined on input lin
 e 217.
 
 
 LaTeX Warning: Reference `mobius-box' on page 1 undefined on input line 237.
 
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
+\openout4 = `figures/main-figure42.dpth'.
+
+Package pgfplots info on input line 273: fill between: activating layered graph
+ics
+\pgf@layerbox@axis background=\box45
+\pgf@layerboxsaved@axis background=\box46
+\pgf@layerbox@axis grid=\box47
+\pgf@layerboxsaved@axis grid=\box48
+\pgf@layerbox@axis ticks=\box49
+\pgf@layerboxsaved@axis ticks=\box50
+\pgf@layerbox@axis lines=\box51
+\pgf@layerboxsaved@axis lines=\box52
+\pgf@layerbox@axis tick labels=\box53
+\pgf@layerboxsaved@axis tick labels=\box54
+\pgf@layerbox@pre main=\box55
+\pgf@layerboxsaved@pre main=\box56
+\pgf@layerbox@axis descriptions=\box57
+\pgf@layerboxsaved@axis descriptions=\box58
+\pgf@layerbox@axis foreground=\box59
+\pgf@layerboxsaved@axis foreground=\box60
+Package pgfplots info on input line 273: Setting layers 'axis background,axis g
+rid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axis
+ foreground'...
+[146
+
+
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
@@ -3391,7 +3437,7 @@ LaTeX Warning: Reference `submanifolds-are-manifolds-details' on page 1 undefin
 ed on input line 417.
 
 
-LaTeX Warning: Reference `subspace-topology' on page 148 undefined on input lin
+LaTeX Warning: Reference `subspace-topology' on page 150 undefined on input lin
 e 419.
 
 
@@ -3425,7 +3471,7 @@ LaTeX Warning: Reference `derivative-non-vanishing-minor' on page 1 undefined o
 n input line 495.
 
 
-LaTeX Warning: Reference `inverse-function-theorem' on page 151 undefined on in
+LaTeX Warning: Reference `inverse-function-theorem' on page 153 undefined on in
 put line 497.
 
 
@@ -3441,7 +3487,7 @@ LaTeX Warning: Reference `circle-projection-atlas' on page 1 undefined on input
  line 509.
 
 
-LaTeX Warning: Reference `regular-level-set-theorem-local' on page 151 undefine
+LaTeX Warning: Reference `regular-level-set-theorem-local' on page 153 undefine
 d on input line 512.
 
 
@@ -3459,14 +3505,8 @@ on input line 520.
 
 LaTeX Warning: Reference `torus-slice' on page 1 undefined on input line 522.
 
-\openout4 = `figures/main-figure42.dpth'.
-
-[152
-
-
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 
 LaTeX Warning: Reference `torus-equation' on page 1 undefined on input line 555
 .
@@ -3476,7 +3516,7 @@ LaTeX Warning: Reference `torus-equation' on page 1 undefined on input line 555
 .
 
 
-LaTeX Warning: Reference `regular-level-set-theorem-local' on page 152 undefine
+LaTeX Warning: Reference `regular-level-set-theorem-local' on page 154 undefine
 d on input line 566.
 
 
@@ -3669,7 +3709,7 @@ LaTeX Warning: Reference `transition-map' on page 1 undefined on input line 88.
 
 
 
-LaTeX Warning: Reference `chain-rule' on page 164 undefined on input line 95.
+LaTeX Warning: Reference `chain-rule' on page 166 undefined on input line 95.
 
 
 LaTeX Warning: Reference `tangent-chart-bijection' on page 1 undefined on input
@@ -3720,11 +3760,11 @@ LaTeX Warning: Reference `sum-rule-single' on page 1 undefined on input line 16
 0.
 
 
-LaTeX Warning: Reference `product-rule-single' on page 167 undefined on input l
+LaTeX Warning: Reference `product-rule-single' on page 169 undefined on input l
 ine 165.
 
 
-LaTeX Warning: Reference `chain-rule' on page 167 undefined on input line 184.
+LaTeX Warning: Reference `chain-rule' on page 169 undefined on input line 184.
 
 
 LaTeX Warning: Reference `tangent-euclidean' on page 1 undefined on input line 
@@ -3738,7 +3778,7 @@ LaTeX Warning: Reference `tangent-euclidean' on page 1 undefined on input line
 231.
 
 
-LaTeX Warning: Reference `chain-rule' on page 168 undefined on input line 233.
+LaTeX Warning: Reference `chain-rule' on page 170 undefined on input line 233.
 
 
 LaTeX Warning: Reference `multi' on page 1 undefined on input line 238.
@@ -3765,7 +3805,7 @@ LaTeX Warning: Reference `pushforward-generalizes-derivative' on page 1 undefin
 ed on input line 253.
 
 
-LaTeX Warning: Reference `chain-rule' on page 169 undefined on input line 253.
+LaTeX Warning: Reference `chain-rule' on page 171 undefined on input line 253.
 
 
 LaTeX Warning: Reference `pushforward-generalizes-derivative' on page 1 undefin
@@ -3792,7 +3832,7 @@ LaTeX Warning: Reference `arclength-finite' on page 1 undefined on input line 5
 1.
 
 
-LaTeX Warning: Reference `inscribed-polygon-perimeter' on page 172 undefined on
+LaTeX Warning: Reference `inscribed-polygon-perimeter' on page 174 undefined on
  input line 60.
 
 
@@ -3836,19 +3876,19 @@ Package logreq Info: Writing requests to 'figures/main-figure42.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44819 strings out of 492982
- 1047965 string characters out of 6134895
+ 44858 strings out of 492982
+ 1049991 string characters out of 6134895
  1733012 words of memory out of 5000000
- 47486 multiletter control sequences out of 15000+600000
- 98600 words of font info for 200 fonts, out of 8000000 for 9000
+ 47530 multiletter control sequences out of 15000+600000
+ 97157 words of font info for 195 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,15n,119p,8849b,2278s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb>
-Output written on figures/main-figure42.pdf (1 page, 13670 bytes).
+ 75i,15n,119p,8849b,2103s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}</usr/sha
+re/texlive/texmf-dist/fonts/type1/public/newpx/zplr.pfb>
+Output written on figures/main-figure42.pdf (1 page, 15482 bytes).
 PDF statistics:
- 33 PDF objects out of 1000 (max. 8388607)
- 14 compressed objects within 1 object stream
+ 30 PDF objects out of 1000 (max. 8388607)
+ 12 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  25613 words of extra memory for PDF output out of 29859 (max. 10000000)
 
