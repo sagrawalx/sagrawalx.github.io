@@ -1706,22 +1706,22 @@ By definition, $f : U \to \R^n$ is $C^1$ if and only if it is continuously diffe
 	then
 	\[ \partial_{j,i} f(a) = \lim_{t_j \to 0} \lim_{t_i \to 0} \sigma(t_i, t_j) \quad \text{ whereas } \quad \partial_{i,j}f(a) = \lim_{t_i \to 0} \lim_{t_j \to 0} \sigma(t_i, t_j). \]
 	So, to prove the theorem, it is sufficient to prove that
-	\[ \partial_{j,i} f(a) = \lim_{h \to 0} \sigma(t,t). \]
+	\[ \partial_{j,i} f(a) = \lim_{t \to 0} \sigma(t,t). \]
 	
 	Fix a nonzero real number $t$ and consider the function
 	\[ \alpha(s) = f(a + se_i + te_j) - f(a + se_i). \]
 	Notice that
 	\[ \sigma(t,t) = \frac{\alpha(t)-\alpha(0)}{t^2} \]
 	and that $\alpha$ is differentiable with \[ \alpha'(s) = \partial_i f(a + se_i + te_j) - \partial_i f(a + se_i). \]
-	Applying the mean value theorem \ref{mean-value-theorem}\index{mean value theorem} to $\alpha$ on the closed interval between 0 and $h$, there exists $\xi_i(t)$, strictly between 0 and $t$, such that
+	Applying the mean value theorem \ref{mean-value-theorem}\index{mean value theorem} to $\alpha$ on the closed interval between 0 and $t$, there exists $\xi_i(t)$, strictly between 0 and $t$, such that
 	\[ \sigma(t,t) = \frac{\alpha(t) - \alpha(0)}{t^2} = \frac{\alpha'(\xi_i(t))}{t} = \frac{\partial_i f(a + \xi_i(t) e_i + te_j) - \partial_i f(a + \xi_i(t) e_i)}{t}. \]
 	Now consider the function 
 	\[ \beta(s) = \partial_i f(a + \xi_i(t) e_i + se_j). \]
 	Then $\beta$ is differentiable with
 	\[ \beta'(s) = \partial_{j,i} f(a + \xi_i(t) e_i + se_j), \]
-	so, applying the mean value theorem \ref{mean-value-theorem}\index{mean value theorem} to $\beta$ on the closed interval between 0 and $h$, we find that there exists $\xi_j(t)$, strictly between 0 and $t$, such that
+	so, applying the mean value theorem \ref{mean-value-theorem}\index{mean value theorem} to $\beta$ on the closed interval between 0 and $t$, we find that there exists $\xi_j(t)$, strictly between 0 and $t$, such that
 	\[ \sigma(t,t) = \frac{\beta(t) - \beta(0)}{t} = \beta'(\xi_j(t)) = \partial_{j,i} f(a + \xi_i(t) e_i + \xi_j(t) e_j). \]
-	Now notice that, since both $\xi_i(t)$ and $\xi_j(t)$ are between 0 and $h$, we have $\xi_i(t), \xi_j(t) \to 0$ as $h \to 0$. Since $\partial_{j,i} f$ is continuous at $a$, we have
+	Now notice that, since both $\xi_i(t)$ and $\xi_j(t)$ are between 0 and $h$, we have $\xi_i(t), \xi_j(t) \to 0$ as $t \to 0$. Since $\partial_{j,i} f$ is continuous at $a$, we have
 	\[ \lim_{t \to 0} \sigma(t,t) = \lim_{t \to 0} \partial_{j,i} f (a + \xi_i(t)e_i + \xi_j(t)e_j) = \partial_{j,i} f(a). \qedhere \]
 \end{proof}
 
@@ -1748,7 +1748,7 @@ There are many versions of this theorem, all with slightly different hypotheses.
 
 \subsection{Taylor's theorem \starred} 
 
-The main difficulty in the multivariable Taylor's theorem is notation; we've already done most of the hard work of the proof with the single variable versions of \cref{taylor-single,taylor-single-remainder-lagrange}. Let us first discuss some standard notational conventions that make the statement of Taylor's theorem more readable. 
+The main difficulty in the multivariable Taylor's theorem is notation; we've already done most of the hard work of the proof with the single variable version (cf.  \cref{taylor-single,taylor-single-remainder-lagrange}). Let us first discuss some typical notation conventions that make the statement of Taylor's theorem more readable. 
 
 \subsubsection*{Multi-index notation}
 
@@ -1831,9 +1831,9 @@ Multi-index notation also gives us compact notation for multivariable polynomial
 We're now ready to state the multivariable version of Taylor's theorem. 
 
 \begin{theorem}[Taylor] \label{taylor}
-	Suppose $B$ is an open ball, $f : B \to \R$ is $C^k$ for some non-negative integer $k$, and $a \in U$. Then there exists a unique polynomial $p_k$ of degree at most $k$ in $m$ variables, called the \emph{degree $k$ Taylor polynomial of $f$ at $a$}, such that $|f(a+h) - p_k(h)| = o(|h|^k)$ as $h \to 0$. Moreover, we have
+	Suppose $U$ is a convex open set, $f : U \to \R$ is $C^k$ for some non-negative integer $k$, and $a \in U$. Then there exists a unique polynomial $p_k$ of degree at most $k$ in $m$ variables, called the \emph{degree $k$ Taylor polynomial of $f$ at $a$}, such that $|f(a+h) - p_k(h)| = o(|h|^k)$ as $h \to 0$. Moreover, we have
 	\begin{equation} \label{taylor-polynomial} p_k(h) = \sum_{|\alpha| \leq k} \frac{\partial^\alpha f(a)}{\alpha!} h^\alpha. \end{equation}
-	Finally, if $f$ is $C^{k+1}$, then for any $h$ such that $a + h \in B$, there exists $\xi$ on the line segment between $a$ and $a+h$ such that 
+	Finally, if $f$ is $C^{k+1}$, then for any $h$ such that $a + h \in U$, there exists $\xi$ on the line segment between $a$ and $a+h$ such that 
 	\[ f(a+h) - p_k(h) = \sum_{|\alpha| = k+1} \frac{\partial^\alpha f(\xi)}{\alpha!} h^{k+1}. \]
 \end{theorem}
 
