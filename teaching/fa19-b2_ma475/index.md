@@ -177,7 +177,7 @@ Office hours (1–2pm).
 <td>Multivariable: Differentiable functions</td>
 <td>Read: 2.4  
 Do: 14</td>
-<td></td>
+<td>[Link](multi-differentiable.pdf)</td>
 </tr>
 
 <tr>
@@ -249,7 +249,7 @@ Office hours (1–2pm).
 <td rowspan="2">Thu</td>
 <td>Manifolds: Examples</td>
 <td>Read: 3.2.B–E  
-Do: </td>
+Do: 12–16</td>
 <td>
 </td>
 </tr>
@@ -266,7 +266,7 @@ Quiz 3 (in class). Covers through 2.5.
 <td rowspan="2">Fri</td>
 <td>Review</td>
 <td>Reread: 3.1–2  
-Do: </td>
+Do: 22, 24, 26, 30, 32</td>
 <td>
 </td>
 </tr>

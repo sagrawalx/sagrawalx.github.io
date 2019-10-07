@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  6 OCT 2019 18:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  6 OCT 2019 18:41
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1193,7 +1193,7 @@ File: english.lbx 2017/12/19 v3.10 biblatex localization (PK/JW/AB)
 )
 \@quotelevel=\count336
 \@quotereset=\count337
-No file figures/main-figure32.aux.
+No file figures/main-figure44.aux.
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
 LaTeX Font Info:    ... okay on input line 93.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
@@ -2720,14 +2720,8 @@ LaTeX Warning: Reference `polar-map-picture' on page 1 undefined on input line
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
-\openout4 = `figures/main-figure32.dpth'.
-
-[102
-
-
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
@@ -3468,148 +3462,140 @@ LaTeX Warning: Reference `torus-slice' on page 1 undefined on input line 522.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-LaTeX Warning: Reference `torus-equation' on page 1 undefined on input line 556
-.
-
-
-LaTeX Warning: Reference `torus-equation' on page 1 undefined on input line 556
-.
-
-
 LaTeX Warning: Reference `regular-level-set-theorem-local' on page 152 undefine
-d on input line 567.
+d on input line 554.
 
 
 LaTeX Warning: Reference `regular-level-set-theorem-local' on page 1 undefined 
-on input line 567.
+on input line 554.
 
 
 LaTeX Warning: Reference `graphs-continuous' on page 1 undefined on input line 
-583.
+570.
 
 
-LaTeX Warning: Reference `graphs-smooth' on page 1 undefined on input line 583.
+LaTeX Warning: Reference `graphs-smooth' on page 1 undefined on input line 570.
 
 
 
 LaTeX Warning: Reference `graphs-continuous' on page 1 undefined on input line 
-590.
+577.
 
 
 LaTeX Warning: Reference `submanifolds-are-manifolds' on page 1 undefined on in
-put line 590.
+put line 577.
 
 
-LaTeX Warning: Reference `graphs-smooth' on page 1 undefined on input line 590.
+LaTeX Warning: Reference `graphs-smooth' on page 1 undefined on input line 577.
 
 
 
-LaTeX Warning: Reference `multi' on page 1 undefined on input line 595.
+LaTeX Warning: Reference `multi' on page 1 undefined on input line 582.
 
 
-LaTeX Warning: Reference `smooth-multi' on page 1 undefined on input line 623.
+LaTeX Warning: Reference `smooth-multi' on page 1 undefined on input line 610.
 
 
 LaTeX Warning: Reference `open-submanifold' on page 1 undefined on input line 6
-23.
+10.
 
 
 LaTeX Warning: Reference `smooth-real-valued' on page 1 undefined on input line
- 623.
+ 610.
 
 
-LaTeX Warning: Reference `smooth-multi' on page 1 undefined on input line 626.
+LaTeX Warning: Reference `smooth-multi' on page 1 undefined on input line 613.
 
 
 LaTeX Warning: Reference `smooth-real-valued' on page 1 undefined on input line
- 626.
+ 613.
 
 
 LaTeX Warning: Reference `smooth-real-valued-local' on page 1 undefined on inpu
-t line 628.
+t line 615.
 
 
 LaTeX Warning: Reference `smooth-real-valued-stable' on page 1 undefined on inp
-ut line 655.
+ut line 642.
 
 
 LaTeX Warning: Reference `constant-compact-zero-outside-neighborhood' on page 1
- undefined on input line 660.
+ undefined on input line 647.
 
 
 LaTeX Warning: Reference `compact-topological-space' on page 1 undefined on inp
-ut line 660.
+ut line 647.
 
 
 LaTeX Warning: Reference `recentering-chart' on page 1 undefined on input line 
-667.
+654.
 
 
 LaTeX Warning: Reference `smooth-approximation-characteristic-compact-details' 
-on page 1 undefined on input line 667.
+on page 1 undefined on input line 654.
 
 
 LaTeX Warning: Reference `multivariable-bump-round-support' on page 1 undefined
- on input line 667.
+ on input line 654.
 
 
 LaTeX Warning: Reference `smooth-approximation-characteristic-compact-details' 
-on page 1 undefined on input line 667.
+on page 1 undefined on input line 654.
 
 
 LaTeX Warning: Reference `smooth-approximation-characteristic-compact-details' 
-on page 1 undefined on input line 669.
+on page 1 undefined on input line 656.
 
 
 LaTeX Warning: Reference `smooth-approximation-characteristic-compact-details' 
-on page 1 undefined on input line 671.
+on page 1 undefined on input line 658.
 
 
-LaTeX Warning: Reference `bridge-function' on page 1 undefined on input line 67
-1.
+LaTeX Warning: Reference `bridge-function' on page 1 undefined on input line 65
+8.
 
 
 LaTeX Warning: Reference `multivariable-bump-round-support' on page 1 undefined
- on input line 678.
+ on input line 665.
 
 
-LaTeX Warning: Reference `smooth-multi' on page 1 undefined on input line 712.
+LaTeX Warning: Reference `smooth-multi' on page 1 undefined on input line 699.
 
 
 LaTeX Warning: Reference `smooth-between-manifolds' on page 1 undefined on inpu
-t line 712.
+t line 699.
 
 
 LaTeX Warning: Reference `smooth-real-valued' on page 1 undefined on input line
- 716.
+ 703.
 
 
 LaTeX Warning: Reference `smooth-between-manifolds' on page 1 undefined on inpu
-t line 716.
+t line 703.
 
 
-LaTeX Warning: Reference `smooth-local' on page 1 undefined on input line 746.
+LaTeX Warning: Reference `smooth-local' on page 1 undefined on input line 733.
 
 
-LaTeX Warning: Reference `multi' on page 1 undefined on input line 746.
+LaTeX Warning: Reference `multi' on page 1 undefined on input line 733.
 
 
-LaTeX Warning: Reference `smooth-local' on page 1 undefined on input line 748.
+LaTeX Warning: Reference `smooth-local' on page 1 undefined on input line 735.
 
 
 LaTeX Warning: Reference `smooth-stable-composite' on page 1 undefined on input
- line 760.
+ line 747.
 
 
 LaTeX Warning: Reference `euclidean-valued-smooth-iff-components-smooth' on pag
-e 1 undefined on input line 760.
+e 1 undefined on input line 747.
 
 
-LaTeX Warning: Reference `paths-multi' on page 1 undefined on input line 769.
+LaTeX Warning: Reference `paths-multi' on page 1 undefined on input line 756.
 
 
 LaTeX Warning: Reference `universal-cover-circle' on page 1 undefined on input 
-line 794.
+line 781.
 
 ) (./tangent.tex
 chapter 4.
@@ -3803,8 +3789,14 @@ nput line 60.
 LaTeX Warning: Reference `arclength-finite-picture' on page 1 undefined on inpu
 t line 62.
 
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
+\openout4 = `figures/main-figure44.dpth'.
+
+[172
+
+
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
 LaTeX Warning: Reference `taxicab-norm' on page 1 undefined on input line 135.
 
@@ -3820,7 +3812,7 @@ put line 156.
 
 LaTeX Warning: Empty bibliography on input line 114.
 
-No file figures/main-figure32.ind.
+No file figures/main-figure44.ind.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 118.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 118.
 
@@ -3828,24 +3820,24 @@ LaTeX Warning: There were undefined references.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                figures/main-figure32
+(biblatex)                figures/main-figure44
 (biblatex)                and rerun LaTeX afterwards.
 
-Package logreq Info: Writing requests to 'figures/main-figure32.run.xml'.
-\openout1 = `figures/main-figure32.run.xml'.
+Package logreq Info: Writing requests to 'figures/main-figure44.run.xml'.
+\openout1 = `figures/main-figure44.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44793 strings out of 492982
- 1047789 string characters out of 6134895
+ 44834 strings out of 492982
+ 1047942 string characters out of 6134895
  1733012 words of memory out of 5000000
- 47460 multiletter control sequences out of 15000+600000
- 98600 words of font info for 200 fonts, out of 8000000 for 9000
+ 47497 multiletter control sequences out of 15000+600000
+ 99873 words of font info for 204 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,15n,119p,8849b,2473s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb>
-Output written on figures/main-figure32.pdf (1 page, 7612 bytes).
+ 75i,15n,119p,8849b,2249s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb>
+Output written on figures/main-figure44.pdf (1 page, 11263 bytes).
 PDF statistics:
  33 PDF objects out of 1000 (max. 8388607)
  14 compressed objects within 1 object stream

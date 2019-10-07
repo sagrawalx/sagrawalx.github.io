@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  3 OCT 2019 15:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  6 OCT 2019 09:17
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1264,7 +1264,7 @@ File: english.lbx 2017/12/19 v3.10 biblatex localization (PK/JW/AB)
 \@quotereset=\count333
 
 (./stable.aux (./introduction.aux) (./preliminaries.aux) (./single-stable.aux)
-(./multi-stable.aux) (./manifolds.aux) (./tangent.aux))
+(./multi-stable.aux) (./manifolds-stable.aux) (./tangent.aux))
 \openout1 = `stable.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
@@ -1598,10 +1598,10 @@ e-figure21.pdf>]
 [124] [125] [126] [127] [128] [129] [130] [131]
 ===== Image 'figures/stable-figure36' is up-to-date. ======
 [132] [133 <./figures/stable-figure36.pdf>] [134]) [135]
-\openout2 = `manifolds.aux'.
+\openout2 = `manifolds-stable.aux'.
 
- (./manifolds.tex
-[136
+
+(./manifolds-stable.tex [136
 
 
 
@@ -1657,7 +1657,8 @@ chapter without number
 
 
 ] [174] [175]) (./stable.aux (./introduction.aux) (./preliminaries.aux)
-(./single-stable.aux) (./multi-stable.aux) (./manifolds.aux) (./tangent.aux))
+(./single-stable.aux) (./multi-stable.aux) (./manifolds-stable.aux)
+(./tangent.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 114.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 114.
 Package rerunfilecheck Info: File `stable.out' has not changed.
@@ -1668,7 +1669,7 @@ Package logreq Info: Writing requests to 'stable.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  45773 strings out of 492982
- 1055969 string characters out of 6134895
+ 1056046 string characters out of 6134895
  1774573 words of memory out of 5000000
  47442 multiletter control sequences out of 15000+600000
  106124 words of font info for 236 fonts, out of 8000000 for 9000
@@ -1698,7 +1699,7 @@ f/fonts/type1/public/tex-gyre/qplr.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/n
 ewpx/zplb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplr.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on stable.pdf (175 pages, 1509231 bytes).
+Output written on stable.pdf (175 pages, 1509226 bytes).
 PDF statistics:
  3167 PDF objects out of 3580 (max. 8388607)
  2891 compressed objects within 29 object streams

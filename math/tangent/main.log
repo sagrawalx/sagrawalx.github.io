@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  3 OCT 2019 15:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  6 OCT 2019 19:15
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1284,7 +1284,7 @@ File: english.lbx 2017/12/19 v3.10 biblatex localization (PK/JW/AB)
 \@quotereset=\count337
  (./main.aux
 (./introduction.aux) (./preliminaries.aux) (./single.aux) (./multi.aux)
-(./manifolds.aux) (./tangent.aux))
+(./manifolds.aux) (./tangent.aux) (./trigonometry.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
@@ -1545,7 +1545,7 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 [43] [44 <./figures/main-figure3.pdf>] [45 <./figures/main-figure4.pdf>]
 [46] [47] [48] [49] [50]
 LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
-(Font)              scaled to size 9.0pt on input line 621.
+(Font)              scaled to size 9.0pt on input line 624.
  [51]
 ===== Image 'figures/main-figure5' is up-to-date. ======
 [52] [53 <./figures/main-figure5.pdf>]
@@ -1555,150 +1555,168 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 [57] [58]
 ===== Image 'figures/main-figure8' is up-to-date. ======
 [59 <./figures/main-figure8.pdf>] [60] [61] [62]
-===== Image 'figures/main-figure9' is up-to-date. ======
-===== Image 'figures/main-figure10' is up-to-date. ======
-[63]
-Underfull \hbox (badness 6526) in paragraph at lines 1130--1130
+Underfull \hbox (badness 6526) in paragraph at lines 1054--1054
 []\T1/zpltlf/m/n/8 continuous and dif-fer-en-
  []
 
-[64 <./figures/main-figure9.pdf> <./figures/main-figure10.pdf>] [65] [66]
-[67] [68] [69] [70] [71]
+[63]
+===== Image 'figures/main-figure9' is up-to-date. ======
+===== Image 'figures/main-figure10' is up-to-date. ======
+[64] [65 <./figures/main-figure9.pdf> <./figures/main-figure10.pdf>] [66]
+[67] [68] [69] [70] [71] [72]
 ===== Image 'figures/main-figure11' is up-to-date. ======
 ===== Image 'figures/main-figure12' is up-to-date. ======
 ===== Image 'figures/main-figure13' is up-to-date. ======
 ===== Image 'figures/main-figure14' is up-to-date. ======
-[72 <./figures/main-figure11.pdf> <./figures/main-figure12.pdf> <./figures/main
--figure13.pdf> <./figures/main-figure14.pdf>] [73] [74] [75] [76] [77]
+[73 <./figures/main-figure11.pdf> <./figures/main-figure12.pdf> <./figures/main
+-figure13.pdf> <./figures/main-figure14.pdf>] [74] [75] [76] [77] [78]
 ===== Image 'figures/main-figure15' is up-to-date. ======
-[78] [79 <./figures/main-figure15.pdf>]
+[79] [80 <./figures/main-figure15.pdf>]
 ===== Image 'figures/main-figure16' is up-to-date. ======
-[80 <./figures/main-figure16.pdf>] [81]
+[81 <./figures/main-figure16.pdf>] [82]
 ===== Image 'figures/main-figure17' is up-to-date. ======
-[82 <./figures/main-figure17.pdf>] [83]) [84]
+[83 <./figures/main-figure17.pdf>] [84]) [85]
 \openout2 = `multi.aux'.
 
- (./multi.tex
-chapter 2.
-[85
+ (./multi.tex [86
 
 
 
 
 ]
+chapter 2.
+[87]
 ===== Image 'figures/main-figure18' is up-to-date. ======
 ===== Image 'figures/main-figure19' is up-to-date. ======
 ===== Image 'figures/main-figure20' is up-to-date. ======
 ===== Image 'figures/main-figure21' is up-to-date. ======
 ===== Image 'figures/main-figure22' is up-to-date. ======
-[86 <./figures/main-figure18.pdf> <./figures/main-figure19.pdf> <./figures/main
--figure20.pdf>] [87 <./figures/main-figure21.pdf>] [88 <./figures/main-figure22
+[88 <./figures/main-figure18.pdf> <./figures/main-figure19.pdf> <./figures/main
+-figure20.pdf>] [89 <./figures/main-figure21.pdf>] [90 <./figures/main-figure22
 .pdf>]
 ===== Image 'figures/main-figure23' is up-to-date. ======
-[89 <./figures/main-figure23.pdf>] [90] [91] [92] [93]
+[91 <./figures/main-figure23.pdf>] [92] [93] [94] [95]
 ===== Image 'figures/main-figure24' is up-to-date. ======
-[94]
+[96]
 ===== Image 'figures/main-figure25' is up-to-date. ======
-[95 <./figures/main-figure24.pdf>] [96 <./figures/main-figure25.pdf>] [97]
-[98] [99] [100] [101] [102]
+[97 <./figures/main-figure24.pdf>] [98 <./figures/main-figure25.pdf>] [99]
+[100] [101] [102] [103] [104]
 ===== Image 'figures/main-figure26' is up-to-date. ======
 ===== Image 'figures/main-figure27' is up-to-date. ======
-[103] [104 <./figures/main-figure26.pdf>] [105 <./figures/main-figure27.pdf>]
-[106]
+[105] [106 <./figures/main-figure26.pdf>] [107 <./figures/main-figure27.pdf>]
+[108]
 ===== Image 'figures/main-figure28' is up-to-date. ======
 ===== Image 'figures/main-figure29' is up-to-date. ======
 ===== Image 'figures/main-figure30' is up-to-date. ======
-[107 <./figures/main-figure28.pdf> <./figures/main-figure29.pdf>] [108 <./figur
-es/main-figure30.pdf>] [109] [110] [111]
+[109 <./figures/main-figure28.pdf> <./figures/main-figure29.pdf>] [110 <./figur
+es/main-figure30.pdf>] [111] [112] [113]
 ===== Image 'figures/main-figure31' is up-to-date. ======
 ===== Image 'figures/main-figure32' is up-to-date. ======
 ===== Image 'figures/main-figure33' is up-to-date. ======
 ===== Image 'figures/main-figure34' is up-to-date. ======
-[112 <./figures/main-figure31.pdf> <./figures/main-figure32.pdf> <./figures/mai
+[114 <./figures/main-figure31.pdf> <./figures/main-figure32.pdf> <./figures/mai
 n-figure33.pdf> <./figures/main-figure34.pdf>]
 ===== Image 'figures/main-figure35' is up-to-date. ======
 ===== Image 'figures/main-figure36' is up-to-date. ======
-[113] [114 <./figures/main-figure35.pdf> <./figures/main-figure36.pdf>]
-[115] [116] [117] [118] [119] [120] [121] [122] [123] [124] [125] [126]
-[127]
+[115] [116 <./figures/main-figure35.pdf> <./figures/main-figure36.pdf>]
+[117] [118] [119] [120] [121] [122] [123] [124] [125] [126] [127] [128]
+[129] [130]
 ===== Image 'figures/main-figure37' is up-to-date. ======
-[128 <./figures/main-figure37.pdf>] [129] [130] [131] [132] [133] [134]
-[135] [136] [137] [138] [139] [140] [141] [142]
+[131] [132 <./figures/main-figure37.pdf>] [133] [134] [135] [136] [137]
+[138] [139] [140] [141] [142] [143] [144] [145] [146]
 ===== Image 'figures/main-figure38' is up-to-date. ======
-[143] [144 <./figures/main-figure38.pdf>] [145]) [146]
+[147] [148 <./figures/main-figure38.pdf>] [149]) [150]
 \openout2 = `manifolds.aux'.
 
  (./manifolds.tex
 chapter 3.
-[147
+[151
 
 
 
 
-] [148] [149] [150]
+] [152] [153] [154] [155]
 ===== Image 'figures/main-figure39' is up-to-date. ======
-[151] [152 <./figures/main-figure39.pdf>] [153]
+[156] [157 <./figures/main-figure39.pdf>] [158]
 ===== Image 'figures/main-figure40' is up-to-date. ======
 ===== Image 'figures/main-figure41' is up-to-date. ======
-[154] [155 <./figures/main-figure40.pdf> <./figures/main-figure41.pdf>]
-[156] [157] [158] [159] [160] [161] [162] [163] [164] [165] [166] [167]
-[168] [169]) [170]
+[159] [160 <./figures/main-figure40.pdf> <./figures/main-figure41.pdf>]
+[161] [162] [163] [164] [165] [166]
+===== Image 'figures/main-figure42' is up-to-date. ======
+[167] [168 <./figures/main-figure42.pdf>] [169] [170] [171] [172] [173]
+[174] [175]) [176]
 \openout2 = `tangent.aux'.
 
  (./tangent.tex
 chapter 4.
-[171
+[177
 
 
 
 
-] [172] [173] [174] [175] [176] [177] [178] [179]) [180]
+] [178] [179] [180] [181] [182] [183] [184] [185]) [186]
+\openout2 = `trigonometry.aux'.
+
+
+(./trigonometry.tex
+chapter A.
+===== Image 'figures/main-figure43' is up-to-date. ======
+[187
+
+
+
+
+]
+===== Image 'figures/main-figure44' is up-to-date. ======
+[188 <./figures/main-figure43.pdf>] [189 <./figures/main-figure44.pdf>]
+[190]) [191] [192
+
+
+
+]
 chapter without number
 LaTeX Font Info:    Font shape `T1/zpltlf/m/sc' will be
-(Font)              scaled to size 10.95pt on input line 110.
+(Font)              scaled to size 10.95pt on input line 114.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/zpltlf/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Try loading font information for T1+npxtt on input line 110
+LaTeX Font Info:    Try loading font information for T1+npxtt on input line 114
 .
 (/usr/share/texlive/texmf-dist/tex/latex/newpx/t1npxtt.fd
 File: t1npxtt.fd 2000/12/14 v1.0
 )
 LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
-(Font)              scaled to size 10.95pt on input line 110.
+(Font)              scaled to size 10.95pt on input line 114.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `npxtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [181
-
-
-
-] (./main.ind
-[182]
+ [193] (./main.ind
+[194]
 chapter without number
-[183
+[195
 
 
 
 
 
-] [184] [185]) (./main.aux (./introduction.aux) (./preliminaries.aux)
-(./single.aux) (./multi.aux) (./manifolds.aux) (./tangent.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 114.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 114.
+] [196] [197]) (./main.aux (./introduction.aux) (./preliminaries.aux)
+(./single.aux) (./multi.aux) (./manifolds.aux) (./tangent.aux)
+(./trigonometry.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 118.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 118.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A203A646D5B5396E6CD71AC178E741FF;6451.
+(rerunfilecheck)             Checksum: 84412EC13791A94E55885DF1360400D4;6767.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45919 strings out of 492982
- 1057968 string characters out of 6134895
- 1776377 words of memory out of 5000000
- 47532 multiletter control sequences out of 15000+600000
- 106242 words of font info for 237 fonts, out of 8000000 for 9000
+ 46018 strings out of 492982
+ 1059381 string characters out of 6134895
+ 1779392 words of memory out of 5000000
+ 47563 multiletter control sequences out of 15000+600000
+ 106360 words of font info for 238 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,15n,119p,8815b,1369s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-sc.enc}{/usr/
@@ -1726,10 +1744,10 @@ s/type1/public/tex-gyre/qplr.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/z
 plb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on main.pdf (185 pages, 1610374 bytes).
+Output written on main.pdf (197 pages, 1660502 bytes).
 PDF statistics:
- 3304 PDF objects out of 3580 (max. 8388607)
- 3011 compressed objects within 31 object streams
- 933 named destinations out of 1000 (max. 500000)
- 26567 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 3468 PDF objects out of 3580 (max. 8388607)
+ 3158 compressed objects within 32 object streams
+ 989 named destinations out of 1000 (max. 500000)
+ 26622 words of extra memory for PDF output out of 29859 (max. 10000000)
 
