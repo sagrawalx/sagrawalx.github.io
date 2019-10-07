@@ -399,7 +399,7 @@ Of course, the converse to \cref{differentiable-implies-continuous} is false. We
 	\end{figure}
 \end{exercise}
 
-\begin{exercise}
+\begin{exercise} \label{differentiable-at-a-point-but-not-in-any-neighborhood}
 	Describe the set of all points $(a, b) \in \R^2$ where the function $f : \R^2 \to \R$ given by \[ f(x,y) = |xy| \] is not differentiable. 
 \end{exercise}
 
@@ -1103,7 +1103,7 @@ so the critical locus\index{critical point!critical locus} (ie, the set of all c
 
 \section{Differentiable functions}
 
-Throughout this section, $U$ denotes an open subset of $\R^m$. In this section, we'll discuss functions that are differentiable at every point in $U$. 
+We saw in \cref{differentiable-at-a-point-but-not-in-any-neighborhood} that a function that is differentiable at a point need not be differentiable at nearby points. Functions which are differentiable throughout an open set have some nice properties, which we discuss in this section. Throughout this section, $U$ denotes an open subset of $\R^m$. 
 
 \begin{definition} \index{differentiable} \index{derivative}
 	A function $f : U \to \R^n$ is \emph{differentiable} if it is differentiable at every $a \in U$. The \emph{differential} or the \emph{total derivative} of $f$, denoted $df$, is the function $U \to \mathscr{L}(\R^m, \R^n)$ given by $a \mapsto df_a$, where $\mathscr{L}(\R^m, \R^n)$ denotes the set of all linear maps $\R^m \to \R^n$.  
@@ -1689,7 +1689,7 @@ By definition, $f : U \to \R^n$ is $C^1$ if and only if it is continuously diffe
 
 \begin{definition}[Mixed partials] \index{mixed partials}
 	Suppose $f : U \to \R$ is $C^2$. The partial derivative $\partial_i f : U \to \R$ for any $i = 1, \dotsc, m$ is a continuously differentiable function, so its $j$th partial deriative $\partial_j( \partial_i f)$ is a continuous function $U \to \R$ for any $j = 1, \dotsc m$. We denote the function $\partial_j(\partial_i f)$ more succinctly as $\partial_{j,i} f$, or as
-	\[ \frac{\partial^2 f}{\partial x_j x_i} \]
+	\[ \frac{\partial^2 f}{\partial x_j \partial x_i} \]
 \end{definition}
 
 \begin{theorem}[Equality of mixed partials] \label{mixed-partials} \index{mixed partials!equality of mixed partials}
@@ -1766,7 +1766,11 @@ The main difficulty in the multivariable Taylor's theorem is notation; we've alr
 	where we use the convention that $\partial^{0} f = f$. In particular, we have $\partial^{1_i} f = \partial_i f$. 
 \end{definition}
 
-We now establish some rules of doing algebra with multi-indices. 
+\begin{caution}
+	Note that, the way we've set up notation, superscripts and subscripts on $\partial$ denote distinct concepts. For example, if $f : \R^2 \to \R$ is a function, $\partial_{(1,1)}f(a)$ denotes the directional derivative in the direction of the vector $(1,1)$, while $\partial^{(1,1)}f(a)$ is the mixed partial derivative $\partial_{1,2}f(a)$. 
+\end{caution}
+
+We now establish some rules for doing algebra with multi-indices. 
 
 \begin{exercise}
 	Suppose $\alpha, \beta$ are multi-indices and $x = (x_1, \dotsc, x_m) \in \R^m$. Prove that \[ x^\alpha x^\beta = x^{\alpha + \beta}. \]
@@ -1779,18 +1783,13 @@ We now establish some rules of doing algebra with multi-indices.
 	\end{hint}
 \end{exercise}
 
-\begin{theorem}[Multinomial theorem] \label{multinomial}
-	For any $x = (x_1, \dotsc, x_m) \in \R^m$, we have 
-	\[ (x_1 + \dotsb + x_m)^\ell = \sum_{|\alpha| = \ell} \binom{\ell}{\alpha} x^\alpha. \]
-\end{theorem} 
-
 The proof of the multinomial theorem is omitted because we won't actually have much use for the theorem. If you're interested, try it yourself; if you get stuck, you can find a proof on \href{https://en.wikipedia.org/wiki/Multinomial_theorem}{Wikipedia}. 
 
 There is a convenient combinatorial interpretation of $\binom{\ell}{\alpha}$ when $\ell = |\alpha|$ which generalizes the interpretation of binomial coefficients. For this reason, the $\binom{\ell}{\alpha}$ are often called ``multinomial coefficients.''\index{multinomial}
 
-\begin{proposition} \label{multinomial-combinatorial}
+\begin{theorem} \label{multinomial-combinatorial}
 	Suppose $\alpha$ is a multi-index and $\ell = |\alpha|$. Then the multinomial coefficient $\binom{\ell}{\alpha}$ is the number of ways of placing $\ell$ objects into $m$ bins, with $\alpha_1$ objects in the first bin, $\alpha_2$ objects in the second bin, and so on. In particular, $\binom{\ell}{\alpha}$ is a positive integer. 
-\end{proposition}
+\end{theorem}
 
 \begin{proof}
 	The number of ways of choosing $\alpha_1$ objects out of the $\ell$ to place in the first bin is
@@ -1813,6 +1812,14 @@ There is a convenient combinatorial interpretation of $\binom{\ell}{\alpha}$ whe
 \begin{proof}
 	Suppose we want to place $\ell + 1$ objects into $m$ bins with $\alpha'_i$ objects in the $i$th bin for all $i$. On the one hand, \cref{multinomial-combinatorial} tells us that the left hand side is the number of ways of doing this. On the other hand, if $\alpha_i' \geq 1$, then there is a unique multi-index $\alpha$ such that $\alpha' = \alpha + 1_i$. We can place the first object in bin $i$, then the number of ways of distributing the remaining $\ell$ objects is $\binom{\ell}{\alpha}$. Summing over all such $i$ yields precisely the sum on the right hand side. 
 \end{proof}
+
+\begin{exercise}[Multinomial theorem] \label{multinomial}
+	Prove that, for any $x = (x_1, \dotsc, x_m) \in \R^m$, we have 
+	\[ (x_1 + \dotsb + x_m)^\ell = \sum_{|\alpha| = \ell} \binom{\ell}{\alpha} x^\alpha. \]
+	\begin{hint}
+		You might use the combinatorial interpretation of  \cref{multinomial-combinatorial}. 
+	\end{hint}
+\end{exercise}
 
 Multi-index notation also gives us compact notation for multivariable polynomials. 
 
@@ -1837,7 +1844,25 @@ We're now ready to state the multivariable version of Taylor's theorem.
 	\[ f(a+h) - p_k(h) = \sum_{|\alpha| = k+1} \frac{\partial^\alpha f(\xi)}{\alpha!} h^{k+1}. \]
 \end{theorem}
 
-While the notation is compact and aesthetically pleasing, there's a lot of information packed into very few symbols. I exhort you to work through the following example before proceeding. It may start feeling tedious at some point, but power through it. 
+While the notation for the Taylor polynomial is compact and aesthetically pleasing, there's a lot of information packed into very few symbols. Here is an example. 
+
+\begin{example}
+	Let $U = \R^2 \setminus \{0\}$ and let $f : U \to \R^2$ be the function \[ f(x,y) = \ln(x^2 + y^2). \]
+	Let us calculate the degree 2 Taylor polynomial of $f$ at the point $(1,0)$. First of all, we have \[ f(1,0) = 0, \] which tells us the constant term of the polynomial. The linear terms in the Taylor polynomial will depend on the partial derivatives of $f$. More precisely, note that there are two multi-indices $\alpha$ with $|\alpha| = 1$, which are $\alpha = (1,0)$ and $\alpha = (0,1)$. We have the following.  
+	\[ \begin{aligned} \partial^{(1,0)}f(1,0) &= \frac{\partial f}{\partial x}(1,0) = \left.\frac{2x}{x^2 + y^2}\right|_{(x,y) = (1,0)} = 2 \\
+	 \partial^{(0,1)}f(1,0) &= \frac{\partial f}{\partial y}(1,0) = \left.\frac{2y}{x^2 + y^2}\right|_{(x,y) = (1,0)} = 0 \end{aligned} \]
+	The quadratic terms of the polynomial will depend on the second order partial derivatives, ie, on $\partial^\alpha f(1,0)$ where $|\alpha| = 2$. There are three such multi-indices: $(2,0), (1,1)$, and $(0,2)$. We have the following. 
+	\[ \begin{aligned} \partial^{(2,0)}f(1,0) &= \left.\frac{\partial^2 f}{\partial x^2}(1,0) = \frac{2y^2 - 2x^2}{x^2 + y^2}\right|_{(x,y) = (1,0)} = -2 \\
+	\partial^{(1,1)}f(1,0) &= \frac{\partial^2 f}{\partial x^2}(1,0) = \left.\frac{-4xy}{x^2 + y^2}\right|_{(x,y) = (1,0)} = 0 \\
+	\partial^{(0,2)}f(1,0) &= \frac{\partial^2 f}{\partial x^2}(1,0) = \left.\frac{2x^2 - 2y^2}{x^2 + y^2}\right|_{(x,y) = (1,0)} = 2 \end{aligned} \]
+	This lets us assemble the degree 2 Taylor polynomial. 
+	\[ \begin{aligned} p_2(h,k) &= f(1,0) (h,k)^{(0,0)} + \frac{\partial^{(1,0)}f(1,0)}{(1,0)!}(h,k)^{(1,0)} + \frac{\partial^{(0,1)}f(0,1)}{(0,1)!}(h,k)^{(0,1)}  \\
+	&\quad + \frac{\partial^{(2,0)}f(1,0)}{(2,0)!}(h,k)^{(2,0)} + \frac{\partial^{(1,1)}f(1,0)}{(1,1)!}(h,k)^{(1,1)} + \frac{\partial^{(0,2)}f(1,0)}{(0,2)!}(h,k)^{(0,2)} \\
+	&= 2h - h^2 + k^2. \end{aligned} \]
+	Taylor's theorem \ref{taylor} states that \[ f(1+h,k) \approx 2h - h^2 + k^2 \] for small $(h,k)$. More precisely, the assertion is that the difference between these two functions is $o(|(h,k)|^2)$ as $(h,k) \to 0$. 
+\end{example}
+
+I exhort you to work through the following example yourself before proceeding. It may start feeling tedious at some point, but power through it. 
 
 \begin{exercise}
 	Let $f : \R^2 \to \R$ be the function $f(x,y) = \sin(xy)$. Calculate the degree 3 Taylor polynomial of $f$ at the origin. 
