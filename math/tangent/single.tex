@@ -235,11 +235,11 @@ Thus \cref{differential-unique-single} says that $df_a$ is the only ``good'' lin
 	Notice that the $y$-value of the tangent line of $f$ at $a$ when $x = a+h$ is \[ f(a) + f'(a)h = f(a) + df_a(h), \]
 	so $r(h)$ is what's left over after approximating $f$ by its tangent line (whence the name, ``remainder''). Notice that $r(0) = 0$. Moreover, $f$ is differentiable and therefore continuous at $a$ (cf. \cref{differentiable-implies-continuous-single}), so $r$ is also  continuous at 0. 
 	
-	Finally, the remainder function $r$ is ``small'' because $df_a$ is a ``good'' linear approximation of $f(a+h)-f(a)$. More precisely, we know from \cref{differential-unique-single} that $|r(h)| = o(|h|)$, which means that
-	\[ \lim_{h \to 0} \frac{r(h)}{h} = 0. \]
+	Finally, the remainder function $r$ is ``small'' because $df_a$ is a ``good'' linear approximation of $f(a+h)-f(a)$. More precisely, we know from \cref{differential-unique-single} that $|r(h)| = o(|h|)$, which means that $r(h)/h \to 0$ as $h \to 0$. 
 \end{remark} 
 
-The following weak version of l'H\^opital's rule\index{lhopitals rule@L'H\^opital's rule} is an application of this idea. % TODO: Why this is weak
+The following weak version of l'H\^opital's rule\index{lhopitals rule@L'H\^opital's rule} is an application of this idea. 
+Note that this version of l'H\^opital's rule cannot be iterated (you cannot use it twice to evaluate $\lim_{x \to 0} (\sin x - x)/x^3$, for instance). In any case, in many cases it is often sufficient. 
 
 \begin{exercise}[L'H\^opital's rule, weak version] \label{lhopital-weak}
 	Suppose $f, g : S \to \R$ are differentiable at an interior point $a \in S$, that $f(a) = g(a) = 0$, and that $g'(a) \neq 0$. Show that
@@ -248,7 +248,7 @@ The following weak version of l'H\^opital's rule\index{lhopitals rule@L'H\^opita
 		First show that, if $x = a+h$ and $r$ is the remainder function for $f$ defined in \cref{remainder-linear}, then
 		\[ f(x) = f(a+h) = \left( f'(a) + \frac{r(h)}{h} \right)h. \]
 	\end{hint}
-\end{exercise}
+\end{exercise} 
 
 \section{Computing derivatives}
 
@@ -975,7 +975,7 @@ Here is a word you probably recognize from calculus, but perhaps you haven't see
 
 Here are some facts about how concavity relates to differentiation that you likely recognize from calculus. 
 
-\begin{exercise}[Concavity and extremums]
+\begin{exercise}[Concavity and extremums] \label{concavity-extremums}
 	Let $I$ be an open interval. Suppose $f : I \to \R$ is differentiable at a point $a \in I$ and $f'(a) = 0$. 
 	\begin{enumerate}[(a)]
 		\item If $f$ is concave up, show that $a$ is an absolute minimum of $f$. 
@@ -1477,7 +1477,7 @@ The following shows that all of these implications are strict; in other words, f
 
 Here is a property of $C^2$ functions you likely recognize from calculus. 
 
-\begin{exercise}
+\begin{exercise} \label{second-derivative-concavity}
 	Suppose $I$ is an open interval and $f : I \to \R$ is $C^2$. 
 	\begin{enumerate}[(a)]
 		\item Show that $f$ is concave up if and only if $f'' \geq 0$.
@@ -1539,8 +1539,27 @@ is often called a ``remainder,''\index{remainder} since it's what's left over af
 	\end{hint}
 \end{exercise}
 
-We can now return to our discussion of the pathology exhibited by the function $f(x) = x^4 \left( 2 + \sin(1/x) \right)$ from \cref{extremum-no-sign-change,extremum-no-sign-change-continued}, and prove that such pathologies cannot occur under some hypotheses. We prepare for this discussion with the following lemma. 
+\begin{exercise}
+	Suppose $f : U \to \R$ is $C^2$ and $a \in U$ is a point such that $f'(a) = 0$. 
+	\begin{enumerate}[(a)]
+		\item Show that, if $f''(a) > 0$, then $a$ is a local minimum of $f$, and that if $f''(a) < 0$, then $a$ is a local maximum of $f$. 
+		\begin{hint}
+			You can do this using \cref{concavity-extremums,second-derivative-concavity}. Alternatively, you can do it using Taylor's theorem \ref{taylor-single}. Try both methods. It's the Taylor's theorem method that will be more helpful for part (c) below. You may also notice that the first method really requires that $f$ be $C^2$, while the Taylor's theorem method only requires that $f$ be twice differentiable. 
+		\end{hint}
+		\item Give examples of three $C^2$ functions $f_1, f_2, f_3 : \R \to \R$ and a point $a \in \R$ such that
+		\[ f_i'(a) = f''_i(a) = 0 \] 
+		for all $i = 1, 2, 3$, where $f_1$ has a local minimum at $a$, $f_2$ has a local maximum at $a$, and $f_3$ has neither a local minimum nor a local maximum at $a$. In other words, when $f'(a) = f''(a) = 0$, the test from part (a) is inconclusive at determining whether $a$ is a local minimum, a local maximum, or neither. 
+		
+		\item Suppose $f$ is $C^k$ for some $k \geq 2$, that 
+		\[ f'(a) = f^{(2)} = \dotsb = f^{(k-1)}(a) = 0 \]
+		and that $f^{(k)}(a) \neq 0$. Formulate and prove a rule that uses the sign of $f^{(k)}(a)$ and/or the parity of $k$ to determine whether $a$ is a local minimum, a local maximum, or neither. 
+	\end{enumerate}
+\end{exercise}
 
+We now return to our discussion of the pathology exhibited by the function $f(x) = x^4 \left( 2 + \sin(1/x) \right)$ from \cref{extremum-no-sign-change,extremum-no-sign-change-continued}, which has the strange property that $f'(0) = 0$ but $f$ is not monotone on any interval to the left or to the right of 0. Such pathologies cannot occur if the function eventually has a nonzero derivative. 
+
+% We prepare for this discussion with the following lemma. 
+\begin{comment}
 \begin{lemma} \label{eventual-nonvanishing-derivative}
 	Suppose $I$ is an open interval, $f : I \to \R$ is $C^k$ for some positive integer $k$, that 
 	\[ f(a) = f'(a) = f^{(2)}(a) = \dotsb = f^{(k-1)}(a) = 0, \] and that $f^{(k)}(a) > 0$. Then there exists an $\epsilon > 0$ such that $f$ is positive on $(a, a+\epsilon)$, and on $(a-\epsilon, a)$, $f$ is positive if $k$ is even and negative if $k$ is odd. Moreover, if $f^{(k)}(a) < 0$, then all instances of ``positive'' in the conclusion get replaced by ``negative'' and vice versa. 
@@ -1551,21 +1570,19 @@ We can now return to our discussion of the pathology exhibited by the function $
 	\[ f(a+h) = \frac{f^{(k)}(a)}{k!} h^k + r(h) \]
 	where $|r(h)| = o(|h|^k)$ as $h \to 0$. Dividing through by $h^k$, we see that 
 	\[ \frac{f(a+h)}{h^k} = \frac{f^{(k)}(a)}{k!} + \frac{r(h)}{h^k}. \]
-	Since $f^{(k)}(a) > 0$, we also have $f^{(k)}(a)/k! > 0$. Since $\lim_{h \to 0} |r(h)/h^k| = 0$, there exists $\epsilon > 0$ such that $|r(h)/h^k| < \epsilon$ for all $|h| < \epsilon$. Then, if $0 < |h| < \epsilon$, we have
+	Since $f^{(k)}(a) > 0$, we also have $f^{(k)}(a)/k! > 0$. Since $\lim_{h \to 0} |r(h)/h^k| = 0$, there exists $\epsilon > 0$ such that $|r(h)/h^k| < f^{(k)}(a)/k!$ for all $|h| < \epsilon$. Then, if $0 < |h| < \epsilon$, we have
 	\[ \frac{f(a+h)}{h^k} = \frac{f^{(k)}(a)}{k!} + \frac{r(h)}{h^k} > 0. \]
 	Now note that if $k$ is even, then $h^k$ is always positive, so the lemma follows. On the other hand, if $k$ is odd, then $h^k$ is positive for positive $h$ and negative for negative $h$, and again the lemma follows. The proof when $f^{(k)}(a) < 0$ is similar. 
 \end{proof}
+\end{comment}
 
 \begin{exercise} \label{extremum-sign-change}
-	Suppose $f$ is $C^k$ for some $k \geq 1$, that
-	\[ f'(a) = f^{(2)}(a) = \dotsb = f^{(k-1)}(a) = 0 \] and $f^{(k)}(a) \neq 0$. Then there exists an $\epsilon > 0$ such that $f$ is strictly monotone on $(a-\epsilon, a)$ and on $(a, a+\epsilon)$. 
-	\begin{hint}
-		Apply \cref{eventual-nonvanishing-derivative} to $f'$. Then use \cref{strictly-monotone-derivative}. 
-	\end{hint}
+	Suppose $f$ is $C^k$ for some $k \geq 2$, that
+	\[ f'(a) = f^{(2)}(a) = \dotsb = f^{(k-1)}(a) = 0 \] and $f^{(k)}(a) \neq 0$. Prove that there exists an $\epsilon > 0$ such that $f$ is strictly monotone on $(a-\epsilon, a)$ and on $(a, a+\epsilon)$. 
 \end{exercise}
 
 \begin{example} \label{extremum-no-sign-change-final}
-	Let $f : \R \to \R$ be the function of \cref{extremum-no-sign-change,extremum-no-sign-change-continued}. Then $f$ is twice differentiable and $f'(0) = f''(0) = 0$, but it is not thrice differentiable at 0. In other words, it doesn't eventually have a nonzero derivative at 0, so we're not able to apply \cref{extremum-sign-change}. 
+	Let $f : \R \to \R$ be the function $f(x) = x^4(2 + \sin(1/x))$ of \cref{extremum-no-sign-change,extremum-no-sign-change-continued}. Then $f$ is twice differentiable and $f'(0) = f''(0) = 0$, but it is not thrice differentiable at 0. In other words, it doesn't eventually have a nonzero derivative at 0, so we're not able to apply \cref{extremum-sign-change}. 
 \end{example}
 
 It turns out that if $f$ is $C^{k+1}$, we can use the mean value theorem to express the remainder in terms of the $(k+1)$st derivative. 

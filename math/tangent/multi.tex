@@ -1265,17 +1265,15 @@ Another important observation about the statement is the following. The inverse 
 	\end{enumerate}
 \end{exercise}
 
-% TODO: Remarks about why its important
-
 The importance of the inverse function theorem derives from the fact that it lets us use linear algebra (which is easy) to make assertions about solutions of nonlinear equations (which are very difficult, in general). Here is an example to illustrate this point. 
 
 \begin{example}
 	Consider the following nonlinear system of equations. 
-	\[ \begin{aligned} x + y^2 &= a \\ y - xy^2 + 3x^2 &= b \end{aligned} \]
-	When $a = b = 0$, this system has a solution given by $x = y = 0$. What if $a$ and $b$ are not both zero? Does this system have any solutions? Are the solutions unique at all? None of this is very obvious on the face of it. 
+	\[ \begin{aligned} x + x^2y &= a \\ y - xy^2 + 3x^2 &= b \end{aligned} \]
+	When $a = b = 0$, this system has a solution given by $x = y = 0$. That much is clear. What if $a$ and $b$ are not both zero? Does this system have any solutions? Are the solutions unique at all? None of this is very obvious on the face of it. I at least do not see any clear way to solve for $x$ and $y$ in terms of $a$ and $b$.  
 	
-	Let $f : \R^2 \to \R^2$ be the function given by $f(x,y) = (x+y^2, y - xy^2 + 3x^2)$. Then 
-	\[ \det f'(x,y) = \det \begin{bmatrix} 1 & 2y \\ 6x -y^2 & 1 - 2xy \end{bmatrix} = (1 - 2xy) - 2y(6x - y^2) = 1 - 14xy + 2y^3.  \]
+	Let $f : \R^2 \to \R^2$ be the function given by $f(x,y) = (x+x^2y, y - xy^2 + 3x^2)$. Then 
+	\[ \det f'(x,y) = \det \begin{bmatrix} 1 + 2xy & x^2 \\ 6x -y^2 & 1 - 2xy \end{bmatrix} = 1 - 6x^3 - 3x^2y^2. \]
 	This is a continuous function of $(x,y)$ and it is nonzero when $(x,y) = 0$, so there exists an open neighborhood $U$ of $0$ such that $\det f'(x,y) \neq 0$ for all $(x,y) \in U$. In other words, $f|_U$ is \'etale. By the inverse function theorem \ref{inverse-function-theorem}, we can replace $U$ with a smaller open neighborhood of 0 in order to guarantee that $f|_U$ is injective and open. Then $f(U)$ is an open neighborhood of $f(0) = 0$, and for every $(a,b) \in f(U)$, there exists a unique $(x,y) \in \R^2$ such that $f(x,y) = (a,b)$. 
 	
 	We have just proved that, for every $(a,b)$ in $f(U)$, the system has a unique solution given by $(x,y) \in U$. In other words, if we perturb $a$ and $b$ just a little bit away from 0, our system will have a unique solution close to 0. Thanks to the inverse function theorem \ref{inverse-function-theorem}, proving this boiled down to a simple linear algebra calculation!
@@ -1288,7 +1286,7 @@ Here are some more exercises and examples that may help clarify the statement of
 \end{exercise}
 
 \begin{exercise}
-	Let $U = \{(x,y) : x > 0\}$ and let $f : U \to \R^2$ be the function \[ f(x,y) = (xe^{-y}, xe^y). \]
+	Let $U = \{(x,y) \in \R^2 : x > 0\}$ and let $f : U \to \R^2$ be the function \[ f(x,y) = (xe^{-y}, xe^y). \]
 	\begin{enumerate}[(a)]
 		\item Show that $f$ is \'etale. 
 		\item Show that $f$ is injective. What is $f(U)$?
@@ -1453,6 +1451,8 @@ for all $x \in V$. Using \cref{max-matrix-norm-and-max-operator-norm}, we see th
 {\color{blue} Incomplete. I'll write this up eventually. The continuously differentiable case we proved above is really sufficient almost all of the time (and is all we'll use as we go forward), but if you're really curious about the general case, look at \href{https://terrytao.wordpress.com/2011/09/12/the-inverse-function-theorem-for-everywhere-differentiable-maps/#more-5298}{Terry Tao's blog post}.}
 % TODO: Local injecticity for inverse function theorem
 
+% TODO: Implicit function theorem
+
 \section{\texorpdfstring{$C^k$}{Ck} hierarchy}
 
 Throughout this section, $U$ denotes an open subset of $\R^m$.
@@ -1461,7 +1461,7 @@ Throughout this section, $U$ denotes an open subset of $\R^m$.
 
 \subsubsection*{Continuity of partials}
 
-The following theorem is the promised sort-of-converse to \cref{differentiable-implies-directionals}. Recall from \cref{partials-dont-imply-differentiable} above that $\partial_i f$ existing for all $i$ is \emph{not} sufficient to guarantee differentiability. But, insisting that $\partial_i f$ exist \emph{and be continuous} turns out to be enough to guarantee differentiability of $f$. The proof is harder than you might expect. 
+The following theorem is the promised sort-of-converse to \cref{differentiable-implies-directionals}. Recall from \cref{partials-dont-imply-differentiable} above that the partial derivatives all existing everywhere is \emph{not} sufficient to guarantee differentiability. But, insisting that the partial derivatives all exist \emph{and are continuous} turns out to be enough to guarantee differentiability of $f$. The proof is harder than you might expect. 
 
 \begin{theorem} \label{continuous-partials}
 	Suppose $f : U \to \R$ is a function such that the $i$th partial derivative $\partial_i f : U \to \R$ exists for all $i = 1 , \dotsc m$. If $a \in U$ is a point such that $\partial_i f$ is continuous at $a$ for all $i$, then $f$ is differentiable at $a$. 
@@ -1814,10 +1814,9 @@ There is a convenient combinatorial interpretation of $\binom{\ell}{\alpha}$ whe
 \begin{exercise}[Multinomial theorem] \label{multinomial}
 	Prove that, for any $x = (x_1, \dotsc, x_m) \in \R^m$, we have 
 	\[ (x_1 + \dotsb + x_m)^\ell = \sum_{|\alpha| = \ell} \binom{\ell}{\alpha} x^\alpha. \]
-	\begin{comment}
-		You might use the combinatorial interpretation of  \cref{multinomial-combinatorial}. 
-	\end{comment} 
-	% TODO: Think this hint through!
+	\begin{hint}
+		You can do it by induction. A more insightful proof involves using the combinatorial interpretation of  \cref{multinomial-combinatorial}. 
+	\end{hint} 
 \end{exercise}
 
 Multi-index notation also gives us compact notation for multivariable polynomials. 
@@ -1974,6 +1973,8 @@ Here is some practice using the statement of Taylor's theorem in proofs.
 	\[ \frac{|f(a+h) - p_k(h)|}{|h|^k} \leq \sum_{|\alpha| = k} \frac{|\partial^\alpha f(\xi) - \partial^\alpha f(a)|}{\alpha!} < \epsilon. \]
 	This proves that $|f(a+h) - p_k(h)| = o(|h|^k)$ as $h \to 0$. Finally, the uniqueness assertion of \cref{taylor} follows from \cref{small-polynomial-is-zero}, just as in the proof of the single variable version \ref{taylor-single}. 
 \end{proof}
+
+% TODO: Concavity test
 
 \subsection{Smooth functions}
 
