@@ -243,7 +243,6 @@ Office hours (1–2pm).
 </td>
 </tr>
 
-
 <tr>
 <td rowspan="2">Thu</td>
 <td>Manifolds: Examples</td>

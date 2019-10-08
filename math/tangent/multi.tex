@@ -295,10 +295,6 @@ It turns out that there exists at most one linear map that has the above propert
 
 This definition is fairly difficult to use in practice. Only a handful examples can be computed directly from the definition. Here are some that I think are instructive.
 
-\begin{exercise}[``Linear maps are their own derivatives''] \label{derivative-of-linear}
-	Suppose $\ell : \R^m \to \R^n$ is a linear map. Prove that $d\ell_a = \ell$ for all $a \in \R^m$.  
-\end{exercise}
-
 \begin{example}[Derivative of multiplication] \label{derivative-of-multiplication}
 	Let $\mu : \R^2 \to \R$ be the multiplication map $\mu(x, y) = xy$. Let us show that 
 	\[ d\mu_{(a,b)}(h, k) = bh + ak \]
@@ -312,6 +308,16 @@ This definition is fairly difficult to use in practice. Only a handful examples 
 	\[ |\mu((a,b)+(h,k)) - \mu(a,b) - \ell(h,k)| = |hk| = o(|(h,k)|_\infty), \]
 	proving that $\ell = d\mu_{(a,b)}$. 
 \end{example}
+
+\begin{exercise}[Derivative of division] \label{derivative-of-division}
+	Let $U = \{(x,y) \in \R^2 : y \neq 0\}$ and let $\Delta : U \to \R$ be the division map $\Delta(x, y) = x/y$. Show that 
+	\[ d\Delta_{(a,b)}(h, k) = \frac{bh - ak}{b^2}. \]
+	for all $(a, b) \in U$ and $(h,k) \in \R^2$. 
+\end{exercise}
+
+\begin{exercise}[``Linear maps are their own derivatives''] \label{derivative-of-linear}
+	Suppose $\ell : \R^m \to \R^n$ is a linear map. Prove that $d\ell_a = \ell$ for all $a \in \R^m$.  
+\end{exercise}
 
 \begin{exercise} \label{derivative-of-line}
 	Suppose $v, w \in \R^n$ and $f : \R \to \R^n$ is given by $f(t) = v + tw$. Calculate $df_a$ for any $a \in \R$. What is $df_a(1)$?
@@ -537,7 +543,7 @@ Note that we can combine real-valued functions in more ways than the ones we've 
 	Suppose $f, g : S \to \R$ is differentiable at an interior point $a \in S$ and that $g(a) \neq 0$. Show that $f/g$ is also differentiable at $a$, and that
 	\[ d(f/g)_a = \frac{g(a)df_a - f(a)dg_a}{g(a)^2}. \]
 	\begin{hint}
-		Combine \cref{reciprocal-rule,product-rule}. 
+		One approach is to combine \cref{reciprocal-rule} and the product rule \ref{product-rule}. An alternative approach is to mimic the proof of the product rule \ref{product-rule} (using the division function of \cref{derivative-of-division} in place of the multiplication function of  \cref{derivative-of-multiplication}). 
 	\end{hint}
 \end{exercise}
 

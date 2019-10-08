@@ -131,24 +131,24 @@
 \indexentry{fundamental theorem of calculus|hyperpage}{84}
 \indexentry{bridge function@``bridge'' function|hyperpage}{85}
 \indexentry{differentiable!differentiable at a point|hyperpage}{94}
-\indexentry{sum rule|hyperpage}{98}
-\indexentry{scalar multiples rule|hyperpage}{98}
+\indexentry{sum rule|hyperpage}{99}
+\indexentry{scalar multiples rule|hyperpage}{99}
 \indexentry{chain rule|hyperpage}{99}
 \indexentry{error in approximation function@``error in approximation'' function|hyperpage}{99}
 \indexentry{operator norm|hyperpage}{100}
 \indexentry{component function|hyperpage}{100}
 \indexentry{projection map|hyperpage}{100}
 \indexentry{product rule|hyperpage}{102}
-\indexentry{quotient rule|hyperpage}{102}
+\indexentry{quotient rule|hyperpage}{103}
 \indexentry{directional derivative|hyperpage}{103}
 \indexentry{partial derivative|hyperpage}{103}
-\indexentry{product rule|hyperpage}{104}
+\indexentry{product rule|hyperpage}{105}
 \indexentry{quotient rule|hyperpage}{105}
 \indexentry{extremum!interior extremum theorem|hyperpage}{105}
-\indexentry{saddle|hyperpage}{105}
+\indexentry{saddle|hyperpage}{106}
 \indexentry{gradient|hyperpage}{108}
 \indexentry{jacobian matrix|hyperpage}{111}
-\indexentry{rank!of a differentiable function|hyperpage}{112}
+\indexentry{rank!of a differentiable function|hyperpage}{113}
 \indexentry{immersive|hyperpage}{113}
 \indexentry{submersive|hyperpage}{113}
 \indexentry{etale@\'etale|hyperpage}{113}
@@ -156,71 +156,71 @@
 \indexentry{critical! critical point|hyperpage}{113}
 \indexentry{regular!regular value|hyperpage}{113}
 \indexentry{critical!critical value|hyperpage}{113}
-\indexentry{critical point!critical locus|hyperpage}{115}
-\indexentry{cusp|hyperpage}{115}
-\indexentry{node|hyperpage}{115}
-\indexentry{critical point|hyperpage}{115}
-\indexentry{differentiable|hyperpage}{117}
-\indexentry{derivative|hyperpage}{117}
-\indexentry{constant function|hyperpage}{118}
+\indexentry{critical point!critical locus|hyperpage}{116}
+\indexentry{cusp|hyperpage}{116}
+\indexentry{node|hyperpage}{116}
+\indexentry{critical point|hyperpage}{116}
+\indexentry{differentiable|hyperpage}{118}
+\indexentry{derivative|hyperpage}{118}
+\indexentry{constant function|hyperpage}{119}
 \indexentry{connected|hyperpage}{120}
-\indexentry{mean value theorem|hyperpage}{133}
-\indexentry{mean value theorem|hyperpage}{133}
-\indexentry{continuously differentiable|hyperpage}{134}
-\indexentry{ck@$C^k$|hyperpage}{137}
-\indexentry{mixed partials|hyperpage}{138}
-\indexentry{mixed partials!equality of mixed partials|hyperpage}{138}
-\indexentry{mean value theorem|hyperpage}{139}
-\indexentry{mean value theorem|hyperpage}{139}
-\indexentry{hessian|hyperpage}{140}
-\indexentry{multi-index|hyperpage}{141}
-\indexentry{multinomial|hyperpage}{142}
-\indexentry{smooth|hyperpage}{150}
-\indexentry{bump function|hyperpage}{150}
-\indexentry{topological space|hyperpage}{154}
-\indexentry{chart|hyperpage}{154}
-\indexentry{open!open map|hyperpage}{154}
-\indexentry{coordinates|hyperpage}{154}
-\indexentry{transition function|hyperpage}{155}
-\indexentry{compatibile|hyperpage}{155}
-\indexentry{atlas|hyperpage}{156}
-\indexentry{atlas!maximal atlas|hyperpage}{156}
-\indexentry{maximal atlas|hyperindexformat{\see {atlas, maximal atlas}}}{156}
-\indexentry{atlas!maximal atlas|hyperpage}{156}
-\indexentry{manifold|hyperpage}{156}
-\indexentry{smooth manifold|hyperindexformat{\see {manifold}}}{156}
-\indexentry{dimension!of a manifold|hyperpage}{157}
-\indexentry{s1@$S^1$|hyperindexformat{\see {circle}}}{158}
-\indexentry{circle|hyperpage}{158}
-\indexentry{homeomorphism|hyperpage}{158}
-\indexentry{sn@$S^n$|hyperindexformat{\see {$n$-sphere}}}{158}
-\indexentry{n-sphere@$n$-sphere|hyperpage}{158}
-\indexentry{mnm@$\mathscr{M}_{n \times m}$|hyperpage}{160}
-\indexentry{canonical topology|hyperpage}{160}
+\indexentry{mean value theorem|hyperpage}{134}
+\indexentry{mean value theorem|hyperpage}{134}
+\indexentry{continuously differentiable|hyperpage}{135}
+\indexentry{ck@$C^k$|hyperpage}{138}
+\indexentry{mixed partials|hyperpage}{139}
+\indexentry{mixed partials!equality of mixed partials|hyperpage}{139}
+\indexentry{mean value theorem|hyperpage}{140}
+\indexentry{mean value theorem|hyperpage}{140}
+\indexentry{hessian|hyperpage}{141}
+\indexentry{multi-index|hyperpage}{142}
+\indexentry{multinomial|hyperpage}{143}
+\indexentry{smooth|hyperpage}{151}
+\indexentry{bump function|hyperpage}{151}
+\indexentry{topological space|hyperpage}{156}
+\indexentry{chart|hyperpage}{156}
+\indexentry{open!open map|hyperpage}{156}
+\indexentry{coordinates|hyperpage}{156}
+\indexentry{transition function|hyperpage}{157}
+\indexentry{compatibile|hyperpage}{157}
+\indexentry{atlas|hyperpage}{158}
+\indexentry{atlas!maximal atlas|hyperpage}{158}
+\indexentry{maximal atlas|hyperindexformat{\see {atlas, maximal atlas}}}{158}
+\indexentry{atlas!maximal atlas|hyperpage}{158}
+\indexentry{manifold|hyperpage}{158}
+\indexentry{smooth manifold|hyperindexformat{\see {manifold}}}{158}
+\indexentry{dimension!of a manifold|hyperpage}{159}
+\indexentry{s1@$S^1$|hyperindexformat{\see {circle}}}{160}
+\indexentry{circle|hyperpage}{160}
 \indexentry{homeomorphism|hyperpage}{160}
-\indexentry{mobius strip@M\"obius strip|hyperpage}{161}
-\indexentry{torus|hyperpage}{164}
-\indexentry{projective line|hyperpage}{164}
-\indexentry{p1@$\bbP^1$|hyperindexformat{\see {projective line}}}{164}
-\indexentry{projective plane|hyperpage}{164}
-\indexentry{p2@$\bbP^2$|hyperindexformat{\see {projective plane}}}{164}
-\indexentry{smooth|hyperpage}{172}
-\indexentry{smooth|hyperpage}{175}
-\indexentry{diffeomorphism|hyperpage}{177}
-\indexentry{local diffeomorphism|hyperindexformat{\see {diffeomorphism, local diffeomorphism}}}{178}
-\indexentry{diffeomorphism!local diffeomorphism|hyperpage}{178}
-\indexentry{curve|hyperpage}{179}
-\indexentry{equivalence!of curves|hyperpage}{179}
-\indexentry{tangent space|hyperpage}{180}
-\indexentry{circle|hyperpage}{183}
-\indexentry{derivation|hyperpage}{184}
-\indexentry{pushforward|hyperpage}{186}
-\indexentry{rank!of a smooth map|hyperpage}{188}
-\indexentry{immersive|hyperpage}{188}
-\indexentry{submersive|hyperpage}{188}
-\indexentry{etale@\'etale|hyperpage}{188}
-\indexentry{regular point|hyperpage}{188}
-\indexentry{critical point|hyperpage}{188}
-\indexentry{immersion|hyperpage}{188}
-\indexentry{submersion|hyperpage}{188}
-\indexentry{etale@\'etale|hyperpage}{188}
+\indexentry{sn@$S^n$|hyperindexformat{\see {$n$-sphere}}}{160}
+\indexentry{n-sphere@$n$-sphere|hyperpage}{160}
+\indexentry{mnm@$\mathscr{M}_{n \times m}$|hyperpage}{162}
+\indexentry{canonical topology|hyperpage}{162}
+\indexentry{homeomorphism|hyperpage}{162}
+\indexentry{mobius strip@M\"obius strip|hyperpage}{163}
+\indexentry{torus|hyperpage}{166}
+\indexentry{projective line|hyperpage}{166}
+\indexentry{p1@$\bbP^1$|hyperindexformat{\see {projective line}}}{166}
+\indexentry{projective plane|hyperpage}{166}
+\indexentry{p2@$\bbP^2$|hyperindexformat{\see {projective plane}}}{166}
+\indexentry{smooth|hyperpage}{174}
+\indexentry{smooth|hyperpage}{177}
+\indexentry{diffeomorphism|hyperpage}{179}
+\indexentry{local diffeomorphism|hyperindexformat{\see {diffeomorphism, local diffeomorphism}}}{180}
+\indexentry{diffeomorphism!local diffeomorphism|hyperpage}{180}
+\indexentry{curve|hyperpage}{181}
+\indexentry{equivalence!of curves|hyperpage}{181}
+\indexentry{tangent space|hyperpage}{182}
+\indexentry{circle|hyperpage}{185}
+\indexentry{derivation|hyperpage}{186}
+\indexentry{pushforward|hyperpage}{188}
+\indexentry{rank!of a smooth map|hyperpage}{190}
+\indexentry{immersive|hyperpage}{190}
+\indexentry{submersive|hyperpage}{190}
+\indexentry{etale@\'etale|hyperpage}{190}
+\indexentry{regular point|hyperpage}{190}
+\indexentry{critical point|hyperpage}{190}
+\indexentry{immersion|hyperpage}{190}
+\indexentry{submersion|hyperpage}{190}
+\indexentry{etale@\'etale|hyperpage}{190}
