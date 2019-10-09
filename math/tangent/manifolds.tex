@@ -23,18 +23,28 @@ Throughout this section, let $X$ be a topological space.\index{topological space
 	\begin{itemize}
 		\item The integer $n$ is called the \emph{dimension} of the chart, and write $\dim (U,x)$ to denote it. 
 		\item The function $x$ is called the \emph{coordinate function} of the chart. 
-		\item If $p \in X$, we say that the chart $(U,x)$ \emph{contains} $p$ if $p \in U$. 
-		\item For all $i = 1, \dotsc, n$, we let $x_i := \pi_i \circ x$. For any $p \in U$, the real numbers $x_1(p), \dotsc, x_n(p)$ are called the \emph{coordinates of $p$ with respect to $(U,x)$}.\index{coordinates}
+		\item If $p \in X$, we say that the chart $(U,x)$ \emph{contains} $p$ if $p \in U$. If $(U,x)$ contains $p$ and $x(p) = 0$, we say that $(U,x)$ is \emph{centered at} $p$. 
+		\item For all $i = 1, \dotsc, n$, we define $x_i := \pi_i \circ x$. For any $p \in U$, the real numbers $x_1(p), \dotsc, x_n(p)$ are called the \emph{coordinates of $p$ with respect to the chart  $(U,x)$}.\index{coordinates}
 	\end{itemize} 
 \end{definition}
+
+\begin{example} \label{polar-representation}
+	Let $X = \R^2$ and let $U$ denote $\R^2$ minus the non-negative real axis. Let $\rho : U \to \R^2$ be the function which sends a point $p$ to its polar representation $\rho(p) = (r(p), \theta(p))$, where $r(p) = |p|$ and $\theta(p)$ is the angle in radians strictly between 0 and $2\pi$ formed between $p$ and the non-negative real axis. Then $(U, \rho)$ is a chart. 
+	
+	To see this, observe that $\rho$ is injective, we have
+	\[ \rho(U) = \{ (r, \theta) : r > 0, \theta \in (0, 2\pi) \}, \]
+	and the inverse function of $\rho$ is given by  $\rho^{-1}(r,\theta) = (r\cos \theta, r\sin\theta)$. Clearly $\rho^{-1}$ is continuous. In fact, it is even \'etale, since 
+	\[ \det (\rho^{-1})'(r, \theta) = \det \begin{bmatrix} \cos \theta & -r\sin\theta \\ \sin\theta & r\cos \theta \end{bmatrix} = r^2 \neq 0 \]
+	on $\rho(U)$, so the inverse function theorem \ref{inverse-function-theorem} tells us that $\rho^{-1}$ is open. This means that $\rho$ is continuous as well, proving that $(U, \rho)$ is a chart. 
+	
+	Notice that the chart $(U, \rho)$ contains the point $(1,1)$. We calculate the coordinates of $(1,1)$ with respect to this chart by evaluating $\rho(1,1)$. We find
+	\[ \rho(1,1) = (\sqrt{1^2 + 1^2}, \arctan(1)) = (\sqrt{2}, \pi/4). \]
+	In other words, $\rho$ outputs precisely the polar representation of $(1,1)$. 
+\end{example}
 
 \begin{remark} \label{recentering-chart}
 	If $(U,x)$ is a chart on $X$ and $p \in U$  is a point, we can ``recenter the chart at $p$'' by replacing $x$ with the function $x' = x - x(p)$. In other words, if $x' = x - x(p)$, then $(U, x')$ is also a chart, and we have $x'(p) = 0$.
 \end{remark}
-
-\begin{exercise} \label{polar-representation}
-	Let $X = \R^2$ and let $U$ denote $\R^2$ minus the non-negative real axis. Let $\text{polar} : U \to \R^2$ be the function which sends a point $p$ to its polar representation $(r(p), \theta(p))$, where $r(p) = |p|$ and $\theta(p)$ is the angle in radians strictly between 0 and $2\pi$ formed between $P$ and the non-negative real axis. Show that $(U, \text{polar})$ is a chart. Calculate the coordinates of $(1,1) \in \R^2$ with respect to $(U, \text{polar})$. 
-\end{exercise}
 
 \subsection{Compatibility of charts}
 
@@ -51,32 +61,60 @@ Charts formalize the idea of local coordinate systems; the following formalizes 
 	The two charts $(U, x)$ and $(U', x')$ on $X$ are \emph{smoothly compatible}, or just \emph{compatible}, if both of the transition maps between $(U, x)$ and $(U', x')$ are smooth. 
 \end{definition}
 
-\begin{exercise} \label{polar-compatible-with-identity}
-	Let $\id : \R^2 \to \R^2$ denote the identity map and $\text{polar} : U \to \R^2$ the polar representation map from \cref{polar-representation}. Show that $(\R^2, \id)$ and $(U, \text{polar})$ are compatible charts. 
+\begin{example} \label{cube-not-compatible}
+	Let $\id : \R \to \R$ denote the identity map and let $h : \R \to  \R$ denote the map $h(x) = x^3$. Both maps are homeomorphisms, so $(\R, \id)$ and $(\R, h)$ are charts. However, these two charts are not compatible. The transition function from $(\R, \id)$ to $(\R, h)$ is 
+	\[ \begin{tikzcd} \R = \id(\R) \ar{r}{\id^{-1}} & \R \ar{r}{h} & h(\R) = \R, \end{tikzcd} \]
+	which is just $h$, which is in fact smooth. However, in the other direction, the transition function is 
+	\[ \begin{tikzcd} \R = h(\R) \ar{r}{h^{-1}} & \R \ar{r}{h} & \id(\R) = \R, \end{tikzcd} \]
+	which is the function $h^{-1}(x) = \sqrt[3]{x}$. In other words, the transition function from $(\R, h)$ to $(\R, \id)$ is not differentiable. 
+\end{example}
+
+\begin{exercise}
+	Determine whether or not each of the following charts $(U, h)$ is compatible with $(\R, \id)$.
+	\begin{enumerate}[(a)]
+		\item $U = \R$ and $h(x) = 2x$.
+		\item $U = \R$ and $h(x) = -x$. 
+		\item $U = \R$ and $h(x) = x|x|$. 
+		\item $U = \R$ and $h(x) = -x^3$. 
+		\item $U = (-\pi/2, \pi/2)$ and $h(x) = \tan(x)$. 
+		\item $U = (0, \infty)$ and $h(x) = \ln(x)$. 
+		\item $U = \R$ and $h(x) = x^5$. 
+	\end{enumerate}
+	Use these examples to formulate a conjecture for determining when a chart $(U, h)$ on $\R$ is compatible with $(\R, \id)$. Then prove your conjecture. 
+\end{exercise}
+
+\begin{example} \label{polar-compatible-with-identity}
+	Let $\id : \R^2 \to \R^2$ denote the identity map and $\rho : U \to \R^2$ the polar representation map from \cref{polar-representation}. The two charts $(\R^2, \id)$ and $(U, \rho)$ are compatible. To see this, observe that the transition function from $(U, \rho)$ to $(\R^2, \id)$ is the function
+	\[ \begin{tikzcd} \rho(U) \ar{r}{\rho^{-1}} & U \ar{r}{\id} & \id(U) = U, \end{tikzcd} \]
+	which is just $\rho^{-1}$. We saw in \cref{polar-representation} that $\rho^{-1}$ is given explicitly by \[ \rho^{-1}(r, \theta) = (r\cos\theta, r\sin\theta), \]
+	which is a smooth function. Going the other way, the transition function from $(\R^2, \id)$ to $(U, \rho)$ is precisely $\rho$. 
+	\[ \begin{tikzcd} U = \id(U) \ar{r}{\id^{-1}} \ar{r} & U \ar{r}{\rho} & \rho(U) \end{tikzcd} \]
+	As we saw in \cref{polar-representation}, the map $\rho^{-1}$ is \'etale, so its inverse function $\rho$ is smooth. Thus both transition functions are smooth, so the two charts are compatible. 
+\end{example}
+
+\begin{exercise}
+	Show that two charts $(U,x)$ and $(U', x')$ are compatible if and only if the transition function from $(U, x)$ to $(U',x')$ is smooth and \'etale. 
 \end{exercise}
 
 \begin{exercise}
 	Suppose $(U, x)$ is a chart and $p \in X$ is a point. Consider the recentered chart $(U, x')$ where $x' = x - x(p)$, as in \cref{recentering-chart}. Show that $(U, x)$ and $(U, x')$ are compatible. 
 \end{exercise}
 
-\begin{exercise} \label{compatibility-not-equivalence-relation}
-	Show that the relation ``is compatible with'' is \emph{not} an equivalence relation on the set of all charts. 
-	\begin{hint}
-		The function $x \mapsto x^3$ is a smooth homeomorphism $\R \to \R$, but its inverse is not differentiable. 
-	\end{hint}
-\end{exercise}
+\begin{remark} \label{compatibility-not-equivalence-relation}
+	An important cautionary observation is that compatibility of charts is \emph{not} an equivalence relation on the set of all charts. It is certainly reflexive and symmetric, but it fails to be transitive. For example, let $h(x) = x^3$ and then consider the three charts $(\R, \id), (\R \setminus \{0\}, h)$, and $(\R, h)$. The first two are compatible with each other, and the second two are compatible with each other, but the first and third are \emph{not} compatible with each other. See \cref{cube-not-compatible}. 
+\end{remark}
 
 \begin{exercise} \label{dimension-well-defined}
 	Suppose $(U, x)$ and $(U', x')$ are compatible charts and that the intersection $U \cap U'$ is nonempty. Show that $\dim(U,x) = \dim(U',x')$. 
 	\begin{hint}
-		Pick a point $p \in U \cap V$, and consider the derivatives of $x' \circ x^{-1}$ at $x(p)$ and of $x \circ x'^{-1}$ at $x'(p)$. 
+		Pick a point $p \in U \cap V$, and observe that the two transition functions between $(U, x)$ and $(U', x')$ are inverses of each other. What can you say about the total derivatives of the transition functions at $x(p)$ and $x'(p)$?
 	\end{hint}
 \end{exercise}
 
 \subsection{Atlases and manifolds}
 
 \begin{definition}[Atlas] \index{atlas} \index{atlas!maximal atlas} \index{maximal atlas|see {atlas, maximal atlas}}
-	An \emph{atlas} on $X$ is a collection $\mathscr{A}$ of compatible charts such that covers $X$. In other words, a collection $\mathscr{A}$ of charts is an atlas if every pair of charts is compatible, and \[ \bigcup_{(U, x) \in \mathscr{A}} U = X. \]
+	An \emph{atlas} on $X$ is a collection $\mathscr{A}$ of compatible charts such that covers $X$. In other words, a collection $\mathscr{A}$ of charts is an atlas if every pair of charts in $\mathscr{A}$ is compatible, and \[ \bigcup_{(U, x) \in \mathscr{A}} U = X. \]
 	If $\mathscr{A}'$ is also an atlas and $\mathscr{A}' \subseteq \mathscr{A}$, we say that $\mathscr{A}'$ is a \emph{sub-atlas} of $\mathscr{A}$. An atlas is \emph{maximal} if there is no strictly larger atlas containing it.
 \end{definition}
 
@@ -85,6 +123,20 @@ Charts formalize the idea of local coordinate systems; the following formalizes 
 	\begin{hint}
 		Let $\mathscr{A}'$ be the set of all charts that are compatible with all of the charts in $\mathscr{A}$. Prove that $\mathscr{A}'$ is an atlas (caution: keep \cref{compatibility-not-equivalence-relation} in mind). Then prove that it is maximal, and that it is the only maximal atlas containing $\mathscr{A}$. 
 	\end{hint}
+\end{exercise}
+
+\begin{exercise}
+	Suppose $\mathscr{A}$ and $\mathscr{A}'$ are two atlases on $X$. Let us say that $\mathscr{A}$ and $\mathscr{A}'$ are \emph{compatible} if the union $\mathscr{A} \cup \mathscr{A}'$ is an atlas. 
+	\begin{enumerate}[(a)]
+		\item  Show that the following are equivalent. 
+		\begin{enumerate}[(i)]
+			\item $\mathscr{A}$ and $\mathscr{A}'$ are compatible. 
+			\item Each chart in $\mathscr{A}$ is compatible with every chart in $\mathscr{A}'$. 
+			\item $\mathscr{A}$ is a sub-atlas of the unique maximal atlas that contains $\mathscr{A}'$. 
+		\end{enumerate}
+		\item Show that compatibility \emph{is} an equivalence relation on the set of all atlases on $X$.
+	\end{enumerate} 
+	Make sure you understand how the assertion made in part (b) above differs from the assertion in \cref{compatibility-not-equivalence-relation}. Compatibility of  \emph{charts} is not an equivalence relation, compatibility of \emph{atlases} is. 
 \end{exercise}
 
 This leads us to the following definition.
@@ -102,10 +154,22 @@ This leads us to the following definition.
 \subsection{Dimension}
 
 \begin{definition}[Dimension] \index{dimension!of a manifold}
-	Suppose $X$ is a manifold and $p \in X$ is a point. By \cref{dimension-well-defined}, there is a unique integer $n$ such that $\dim(U,x) = n$ for every chart $(U, x) \in \mathscr{A}_X$ containing $p$. This integer is called the \emph{dimension of $X$ at $p$}, and is denoted $\dim_p(X)$. 
-	
-	If there exists a single integer $n$ such that $\dim_p(X) = n$ for all $p \in X$, we say that $X$ is \emph{equidimensional} and that the \emph{dimension of $X$} is $n$. 
+	Suppose $X$ is a manifold and $p \in X$ is a point. By \cref{dimension-well-defined}, there is a unique integer $n$ such that $\dim(U,x) = n$ for every chart $(U, x) \in \mathscr{A}_X$ containing $p$. This integer is called the \emph{dimension of $X$ at $p$}, and is denoted $\dim_p(X)$. If there exists a single integer $n$ such that $\dim_p(X) = n$ for all $p \in X$, we say that $X$ is \emph{equidimensional} and that the \emph{dimension of $X$} is $n$. 
 \end{definition}
+
+\begin{proposition}
+	If the set $\N$ of natural numbers is given the discrete topology, the function $X \to \N$ given by $p \mapsto \dim_p(X)$ is continuous. In particular, if $X$ is a nonempty connected manifold, it must be equidimensional. 
+\end{proposition}
+
+\begin{proof}
+	To show that $p \mapsto \dim_p(X)$ is continuous, we want to show that, for any natural number $n$, the set 
+	\[ X_n = \{ p \in X : \dim_p(X) = n \} \]
+	is an open subset of $X$. Suppose $p \in  X_n$. Let $(U, x)$ be a chart containing $p$. Then $\dim(U,x) = n$, and we have $\dim_q(X) = n$ for all $q \in U$. In other words, $U \subseteq X_n$. Thus every point in $X_n$ is contained inside an open neighborhood that is entirely contained in $X_n$, so $X_n$ is open. 
+	
+	Now suppose $X$ is connected and $p \in X$. Let $n = \dim_p(X)$, so that $p \in X_n$. Then 
+	\[ X \setminus X_n = \bigcup_{m \neq n} X_m \]
+	is open, so $X_n$ is a nonempty subset of $X$ that is both open and closed. Since $X$ is connected, we conclude that $X = X_n$. In other words, $X$ is equidimensional of dimension $n$. 
+\end{proof}
 
 \section{Examples}
 
@@ -114,7 +178,7 @@ This leads us to the following definition.
 \subsubsection*{Euclidean space}
 
 \begin{example} \label{natural-euclidean-atlas}
-	The single chart $(\R^n, \id)$, where $\id : \R^n \to \R^n$ is the identity map, defines an atlas on $\R^n$. We can extend this to a maximal atlas, called the \emph{euclidean atlas} on $\R^n$. Unless explicitly specified otherwise, we always regard $\R^n$ as a manifold by equipping it with the euclidean atlas. By \cref{polar-compatible-with-identity}, the polar representation chart $(U, \text{polar})$ is an element of the euclidean atlas. 
+	The single chart $(\R^n, \id)$, where $\id : \R^n \to \R^n$ is the identity map, defines an atlas on $\R^n$. We can extend this to a maximal atlas, called the \emph{euclidean atlas} on $\R^n$. Unless explicitly specified otherwise, we always regard $\R^n$ as a manifold by equipping it with the euclidean atlas. By \cref{polar-compatible-with-identity}, the polar representation chart $(U, \rho)$ is an element of the euclidean atlas. 
 \end{example}
 
 \begin{exercise}
@@ -122,8 +186,9 @@ This leads us to the following definition.
 	\[ h_r(t) = \begin{cases} t & \text{if } t \leq 0 \\ rt & \text{if } t > 0. \end{cases} \]
 	Note that $h_r$ is continuous and strictly increasing (hence also injective and open, by \cref{strictly-monotone-iff-injective,strictly-monotone-implies-open}), so $(\R, h_r)$ is a chart. Note also that $h_1 = \id$. 
 	\begin{enumerate}[(a)]
+		\item Show that $h_s \circ h_r = h_{sr}$ and that $h_r^{-1} = h_{1/r}$. 
 		\item Show that $(\R, h_r)$ and $(\R, h_s)$ are compatible if and only if $r = s$.
-		\item Let $\mathscr{A}_r$ be the maximal atlas obtained by extending $(\R, h_r)$. What can you say about $\mathscr{A}_r$ and $\mathscr{A}_s$ if $r \neq s$?
+		\item Let $\mathscr{A}_r$ be the maximal atlas obtained by extending $(\R, h_r)$. What can you say about $\mathscr{A}_r$ and $\mathscr{A}_s$ if $r \neq s$? Are any of these the euclidean atlas? What can you conclude about the number of maximal atlases on $\R$?
 	\end{enumerate}  
 \end{exercise}
 
@@ -143,7 +208,7 @@ This leads us to the following definition.
 	\begin{enumerate}[(a)]
 		\item Do \cref{metric-subspace}. This shows that both ways that we might think to regard $S^1$ as a topological space are actually the same. 
 		
-		\item Let $U = S^1 \setminus \{(0,1)\}$. For $p \in S^1$, let $x(p)$ denote the $x$-coordinate of the point where the line $y = -1$ intersects the line passing through $(0,1)$ and $p$. See \cref{circle-projection}. If $p = (a, b)$, find a formula for $x(p)$ in terms of $a$ and $b$. 
+		\item Let $U = S^1 \setminus \{(0,1)\}$. For $p \in S^1$, let $x(p)$ denote the $x$-coordinate of the point where the line $y = -1$ intersects the line passing through $(0,1)$ and $p$. This is sometimes called ``projection from the north pole.'' See \cref{circle-projection}. If $p = (a, b)$, find a formula for $x(p)$ in terms of $a$ and $b$. 
 		
 		\begin{figure}
 			\begin{center}
@@ -161,8 +226,8 @@ This leads us to the following definition.
 				axis equal
 				]
 				
-				\addplot[black,style=thick,-] expression[domain=-1:1,samples=100]{sqrt(1-x^2)}; 
-				\addplot[black,style=thick,-] expression[domain=-1:1,samples=100]{-sqrt(1-x^2)};
+				\addplot[black,style=thick,-] expression[domain=-1:1,samples=200]{sqrt(1-x^2)}; 
+				\addplot[black,style=thick,-] expression[domain=-1:1,samples=200]{-sqrt(1-x^2)};
 				
 				
 				\addplot[red,<->] expression[domain=-0.1:0.95,samples=2]{-2.414*x+1}; 
@@ -177,7 +242,7 @@ This leads us to the following definition.
 				\end{axis}
 				\end{tikzpicture}
 			\end{center}
-			\caption{Given a point $p \in U = S^1 \setminus \{(0,1)\}$, we draw a line connecting $p$ to $(0,1)$, indicated in red. The point where that line intersects the line $y = -1$ (in black) is sometimes called the \emph{projection of $p$ from $(0,1)$ onto $\R \times \{-1\}$}. The $x$-coordinate of this point is $x(p)$.}  \label{circle-projection}
+			\caption{Given a point $p \in U = S^1 \setminus \{(0,1)\}$, we draw a line connecting $p$ to $(0,1)$, indicated in red. The point where that line intersects the line $y = -1$ (in black) is sometimes called the ``projection'' of $p$ from $(0,1)$ onto $\R \times \{-1\}$. The $x$-coordinate of this point is $x(p)$.}  \label{circle-projection}
 		\end{figure}
 		
 		\item Show that $x : U \to \R$ is a homeomorphism.\index{homeomorphism} Thus $(U, x)$ is a chart on $S^1$. 
@@ -191,12 +256,16 @@ This leads us to the following definition.
 		
 		\item Let $V = \{ (a,b) \in S^1 : a > 0 \}$ be the ``right half of the circle.'' If $y : V \to \R$ is the function $y(a,b) = b$, show that $(V,y)$ is a chart and that it is compatible with the charts in the atlas $\mathscr{A}$ above. Thus $(V,y) \in \mathscr{A}_{S^1}$. 
 		
-		\item Can you think of any other charts in the maximal atlas $\mathscr{A}_{S^1}$, besides the three discussed above? 
+		\item Can you think of any other charts in the maximal atlas $\mathscr{A}_{S^1}$, besides the three discussed above? In other words, can you think of any other charts that are compatible with both $(U,x)$ and $(U',x')$?
+		
+		\begin{hint}
+			There are many, many possibilities here. You could look at functions $(a,b) \mapsto a$ and/or $(a,b) \mapsto b$ on other halves of the circle, besides the right half discussed in (f) above. More interestingly, you could also think about charts defined somehow using sines and cosines. 
+		\end{hint}
 	\end{enumerate}
 \end{exercise}
 
 \begin{exercise}[The $n$-sphere $S^n$] \label{sphere-projection-atlas} \index{sn@$S^n$|see {$n$-sphere}} \index{n-sphere@$n$-sphere}
-	Let $S^n$ denote the set of points in $\R^{n+1}$ of norm 1. Generalize \cref{circle-projection-atlas} and show that ``projection from the north pole'' and ``projection from the south pole'' define an atlas on $S^n$. 
+	Let $S^n$ denote the set of points in $\R^{n+1}$ that have euclidean norm 1. Generalize \cref{circle-projection-atlas} and show that ``projection from the north pole'' and ``projection from the south pole'' define an atlas on $S^n$. 
 \end{exercise}
 
 \subsubsection*{Matrices and vector spaces}
@@ -207,7 +276,7 @@ This leads us to the following definition.
 	If we endow $\mathscr{M}_{n \times m}$ with the canonical topology,\index{canonical topology} then $x$ is automatically a homeomorphism by \cref{linear-isomorphism-homeomorphism}.\index{homeomorphism} In other words, the single chart $(\mathscr{M}_{n \times m}, x)$ is an atlas on $\mathscr{M}_{n \times m}$. Extending it to a maximal atlas using \cref{existence-maximal-atlas}, we see that we can regard $\mathscr{M}_{n,m}$ as a manifold. It is $mn$-dimensional.  
 \end{example}
 
-The same process allows us to regard \emph{any} finite dimensional vector space (not just $\mathscr{M}_{n \times m}$) as a manifold. 
+The same process discussed above allows us to regard \emph{any} finite dimensional vector space as a manifold. 
 
 \subsubsection*{Constructions}
 
@@ -216,9 +285,7 @@ The same process allows us to regard \emph{any} finite dimensional vector space 
 	\begin{enumerate}[(a)]
 		\item There are two ways we might think to regard $U \times \R^n$ as a topological space. One way is to use the product topology \ref{product-space}. The second way is to regard $U \times \R^n$ as a subset of $\R^m \times \R^n = \R^{m+n}$ and then give $U \times \R^n$ the subspace topology \ref{subspace-topology}. Show that these two topologies are the same. 
 		
-		\item Let
-		\[ \Gamma = \{ (x,y) \in U \times \R^n : f(x) = y \} \]
-		be the graph of $f$, regarded as a subspace of $U \times \R^n$. Show that the function $\pi : \Gamma \to \R^m$ given by $\pi(x,y) = x$ is continuous, injective, and open. 
+		\item Let $\Gamma = \{ (x,y) \in U \times \R^n : f(x) = y \}$ be the graph of $f$, regarded as a subspace of $U \times \R^n$. Show that the function $\pi : \Gamma \to \R^m$ given by $\pi(x,y) = x$ is continuous, injective, and open. 
 	\end{enumerate}
 	Thus the single chart $(\Gamma, \pi)$ defines an atlas on $\Gamma$. Extending this to a maximal atlas, we can regard $\Gamma$ as a manifold. 
 \end{exercise}

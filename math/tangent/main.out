@@ -69,26 +69,26 @@
 \BOOKMARK [1][-]{section.596}{Definition of a manifold}{chapter.595}% 69
 \BOOKMARK [2][-]{subsection.597}{Charts}{section.596}% 70
 \BOOKMARK [2][-]{subsection.601}{Compatibility of charts}{section.596}% 71
-\BOOKMARK [2][-]{subsection.608}{Atlases and manifolds}{section.596}% 72
-\BOOKMARK [2][-]{subsection.612}{Dimension}{section.596}% 73
-\BOOKMARK [1][-]{section.614}{Examples}{chapter.595}% 74
-\BOOKMARK [2][-]{subsection.615}{First examples}{section.614}% 75
-\BOOKMARK [2][-]{subsection.642}{M\366bius strip}{section.614}% 76
-\BOOKMARK [2][-]{subsection.649}{More quotient examples}{section.614}% 77
-\BOOKMARK [2][-]{subsection.653}{Submanifolds}{section.614}% 78
-\BOOKMARK [2][-]{subsection.666}{Submanifolds of euclidean space}{section.614}% 79
-\BOOKMARK [1][-]{section.681}{Smooth functions}{chapter.595}% 80
-\BOOKMARK [2][-]{subsection.682}{Smooth real-valued functions}{section.681}% 81
-\BOOKMARK [2][-]{subsection.702}{Smooth functions between manifolds}{section.681}% 82
-\BOOKMARK [2][-]{subsection.715}{Paths}{section.681}% 83
-\BOOKMARK [2][-]{subsection.716}{Diffeomorphisms}{section.681}% 84
-\BOOKMARK [0][-]{chapter.723}{Tangent Spaces}{}% 85
-\BOOKMARK [1][-]{section.724}{Tangent space}{chapter.723}% 86
-\BOOKMARK [2][-]{subsection.725}{Curves based at a point}{section.724}% 87
-\BOOKMARK [2][-]{subsection.730}{Vector space structure}{section.724}% 88
-\BOOKMARK [2][-]{subsection.748}{Derivations *}{section.724}% 89
-\BOOKMARK [1][-]{section.757}{Pushforward}{chapter.723}% 90
-\BOOKMARK [2][-]{subsection.758}{Definition of the pushforward}{section.757}% 91
-\BOOKMARK [2][-]{subsection.765}{Rank of a smooth map}{section.757}% 92
-\BOOKMARK [0][-]{chapter*.769}{Bibliography}{}% 93
-\BOOKMARK [0][-]{chapter*.770}{Index}{}% 94
+\BOOKMARK [2][-]{subsection.618}{Atlases and manifolds}{section.596}% 72
+\BOOKMARK [2][-]{subsection.628}{Dimension}{section.596}% 73
+\BOOKMARK [1][-]{section.631}{Examples}{chapter.595}% 74
+\BOOKMARK [2][-]{subsection.632}{First examples}{section.631}% 75
+\BOOKMARK [2][-]{subsection.660}{M\366bius strip}{section.631}% 76
+\BOOKMARK [2][-]{subsection.667}{More quotient examples}{section.631}% 77
+\BOOKMARK [2][-]{subsection.671}{Submanifolds}{section.631}% 78
+\BOOKMARK [2][-]{subsection.684}{Submanifolds of euclidean space}{section.631}% 79
+\BOOKMARK [1][-]{section.699}{Smooth functions}{chapter.595}% 80
+\BOOKMARK [2][-]{subsection.700}{Smooth real-valued functions}{section.699}% 81
+\BOOKMARK [2][-]{subsection.720}{Smooth functions between manifolds}{section.699}% 82
+\BOOKMARK [2][-]{subsection.733}{Paths}{section.699}% 83
+\BOOKMARK [2][-]{subsection.734}{Diffeomorphisms}{section.699}% 84
+\BOOKMARK [0][-]{chapter.741}{Tangent Spaces}{}% 85
+\BOOKMARK [1][-]{section.742}{Tangent space}{chapter.741}% 86
+\BOOKMARK [2][-]{subsection.743}{Curves based at a point}{section.742}% 87
+\BOOKMARK [2][-]{subsection.748}{Vector space structure}{section.742}% 88
+\BOOKMARK [2][-]{subsection.766}{Derivations *}{section.742}% 89
+\BOOKMARK [1][-]{section.775}{Pushforward}{chapter.741}% 90
+\BOOKMARK [2][-]{subsection.776}{Definition of the pushforward}{section.775}% 91
+\BOOKMARK [2][-]{subsection.783}{Rank of a smooth map}{section.775}% 92
+\BOOKMARK [0][-]{chapter*.787}{Bibliography}{}% 93
+\BOOKMARK [0][-]{chapter*.788}{Index}{}% 94

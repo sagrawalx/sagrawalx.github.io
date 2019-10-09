@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  8 OCT 2019 15:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  9 OCT 2019 13:10
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1287,27 +1287,27 @@ File: english.lbx 2017/12/19 v3.10 biblatex localization (PK/JW/AB)
 (./manifolds.aux) (./tangent.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 93.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 94.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 94.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
 \c@mv@tabular=\count338
 \c@mv@boldtabular=\count339
 
@@ -1345,7 +1345,7 @@ ABD: EveryShipout initializing macros
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.15}).
 
-LaTeX Info: Redefining \microtypecontext on input line 93.
+LaTeX Info: Redefining \microtypecontext on input line 94.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1359,7 +1359,7 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
 \AtBeginShipoutBox=\box44
-Package hyperref Info: Link coloring ON on input line 93.
+Package hyperref Info: Link coloring ON on input line 94.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1369,9 +1369,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count346
 )
-LaTeX Info: Redefining \ref on input line 93.
-LaTeX Info: Redefining \pageref on input line 93.
-LaTeX Info: Redefining \nameref on input line 93.
+LaTeX Info: Redefining \ref on input line 94.
+LaTeX Info: Redefining \pageref on input line 94.
+LaTeX Info: Redefining \nameref on input line 94.
 
 (./main.out) (./main.out)
 \@outlinefile=\write7
@@ -1386,38 +1386,38 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 93.
-Package biblatex Info: Reference segment=0 on input line 93.
-LaTeX Font Info:    Try loading font information for T1+qhv on input line 95.
+Package biblatex Info: Reference section=0 on input line 94.
+Package biblatex Info: Reference segment=0 on input line 94.
+LaTeX Font Info:    Try loading font information for T1+qhv on input line 96.
 
 (/usr/share/texmf/tex/latex/tex-gyre/t1qhv.fd
 File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
 )
 LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 10.29301pt on input line 95.
+(Font)              scaled to size 10.29301pt on input line 96.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `qhv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/qhv/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/qhv/b/n' tried instead on input line 95.
+(Font)              Font shape `T1/qhv/b/n' tried instead on input line 96.
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 10.29301pt on input line 95.
+(Font)              scaled to size 10.29301pt on input line 96.
 LaTeX Font Info:    Font shape `T1/qhv/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/qhv/b/n' tried instead on input line 95.
+(Font)              Font shape `T1/qhv/b/n' tried instead on input line 96.
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 19.49565pt on input line 95.
+(Font)              scaled to size 19.49565pt on input line 96.
 LaTeX Font Info:    Font shape `T1/qhv/bx/n' in size <12> not available
-(Font)              Font shape `T1/qhv/b/n' tried instead on input line 95.
+(Font)              Font shape `T1/qhv/b/n' tried instead on input line 96.
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 11.28003pt on input line 95.
+(Font)              scaled to size 11.28003pt on input line 96.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 95.
+(Font)              scaled to size 14.4pt on input line 96.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 95.
+(Font)              scaled to size 10.0pt on input line 96.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 7.0pt on input line 95.
-LaTeX Font Info:    Try loading font information for U+zeur on input line 95.
+(Font)              scaled to size 7.0pt on input line 96.
+LaTeX Font Info:    Try loading font information for U+zeur on input line 96.
 
 (/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeur.fd
 File: uzeur.fd 2005/01/11 v4.0 (WaS)
@@ -1425,7 +1425,7 @@ File: uzeur.fd 2005/01/11 v4.0 (WaS)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-eur.cfg
 File: mt-eur.cfg 2006/07/31 v1.1 microtype config. file: AMS Euler Roman (RS)
 )
-LaTeX Font Info:    Try loading font information for U+zeus on input line 95.
+LaTeX Font Info:    Try loading font information for U+zeus on input line 96.
 
 (/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeus.fd
 File: uzeus.fd 2005/01/11 v4.0 (WaS)
@@ -1433,7 +1433,7 @@ File: uzeus.fd 2005/01/11 v4.0 (WaS)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-eus.cfg
 File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
 )
-LaTeX Font Info:    Try loading font information for U+zeuex on input line 95.
+LaTeX Font Info:    Try loading font information for U+zeuex on input line 96.
 
 (/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeuex.fd
 File: uzeuex.fd 2005/01/11 v4.0 (WaS)
@@ -1476,7 +1476,7 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/sl' will be
 
 
 ]
-Package tocbasic Info: character protrusion at toc deactivated on input line 98
+Package tocbasic Info: character protrusion at toc deactivated on input line 99
 .
 
 (./main.toc
@@ -1640,71 +1640,71 @@ es/main-figure33.pdf> <./figures/main-figure34.pdf>]
 
 ]
 chapter 3.
-[155] [156] [157] [158] [159]
+[155] [156] [157] [158] [159] [160] [161] [162]
 ===== Image 'figures/main-figure41' is up-to-date. ======
-[160] [161 <./figures/main-figure41.pdf>] [162]
+[163] [164 <./figures/main-figure41.pdf>] [165]
 ===== Image 'figures/main-figure42' is up-to-date. ======
 ===== Image 'figures/main-figure43' is up-to-date. ======
-[163] [164 <./figures/main-figure42.pdf> <./figures/main-figure43.pdf>]
-[165] [166] [167] [168] [169] [170]
+[166] [167 <./figures/main-figure42.pdf> <./figures/main-figure43.pdf>]
+[168] [169] [170] [171] [172] [173]
 ===== Image 'figures/main-figure44' is up-to-date. ======
-[171] [172 <./figures/main-figure44.pdf>] [173] [174] [175] [176] [177]
-[178] [179]) [180]
+[174] [175 <./figures/main-figure44.pdf>] [176] [177] [178] [179] [180]
+[181] [182]) [183]
 \openout2 = `tangent.aux'.
 
- (./tangent.tex
+ (./tangent.tex [184
+
+
+
+
+]
 chapter 4.
-[181
-
-
-
-
-] [182] [183] [184] [185] [186] [187] [188] [189]) [190]
+[185] [186] [187] [188] [189] [190] [191] [192] [193]) [194]
 chapter without number
 LaTeX Font Info:    Font shape `T1/zpltlf/m/sc' will be
-(Font)              scaled to size 10.95pt on input line 113.
+(Font)              scaled to size 10.95pt on input line 114.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/zpltlf/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Try loading font information for T1+npxtt on input line 113
+LaTeX Font Info:    Try loading font information for T1+npxtt on input line 114
 .
 (/usr/share/texlive/texmf-dist/tex/latex/newpx/t1npxtt.fd
 File: t1npxtt.fd 2000/12/14 v1.0
 )
 LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
-(Font)              scaled to size 10.95pt on input line 113.
+(Font)              scaled to size 10.95pt on input line 114.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `npxtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [191
+ [195
 
 
 
 ] (./main.ind
-[192]
+[196]
 chapter without number
-[193
+[197
 
 
 
 
 
-] [194] [195]) (./main.aux (./introduction.aux) (./preliminaries.aux)
+] [198] [199]) (./main.aux (./introduction.aux) (./preliminaries.aux)
 (./single.aux) (./multi.aux) (./manifolds.aux) (./tangent.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 117.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 117.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 118.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 118.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3FEEBA2693DAFA4A73EDB9603018E938;6517.
+(rerunfilecheck)             Checksum: CBC964430D1C9D43B8B655C37E6A43C9;6517.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45989 strings out of 492982
- 1058998 string characters out of 6134895
- 1775350 words of memory out of 5000000
- 47551 multiletter control sequences out of 15000+600000
+ 46138 strings out of 492982
+ 1062388 string characters out of 6134895
+ 1775432 words of memory out of 5000000
+ 47678 multiletter control sequences out of 15000+600000
  106360 words of font info for 238 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,15n,119p,8815b,1369s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1733,10 +1733,10 @@ s/type1/public/tex-gyre/qplr.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/z
 plb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on main.pdf (195 pages, 1704351 bytes).
+Output written on main.pdf (199 pages, 1717900 bytes).
 PDF statistics:
- 3437 PDF objects out of 3580 (max. 8388607)
- 3129 compressed objects within 32 object streams
- 979 named destinations out of 1000 (max. 500000)
+ 3480 PDF objects out of 3580 (max. 8388607)
+ 3168 compressed objects within 32 object streams
+ 1001 named destinations out of 1200 (max. 500000)
  26590 words of extra memory for PDF output out of 29859 (max. 10000000)
 

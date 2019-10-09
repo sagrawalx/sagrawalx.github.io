@@ -1992,12 +1992,12 @@ In \cref{smooth-single}, we formulated the principle that smooth single variable
 
 \subsubsection*{Bump functions}
 
-Recall the definition of support in \cref{support}. Just like in the single variable setting, a ``bump function''\index{bump function} is a smooth function with compact support. In fact, we can use single variable bump functions to construct multivariable bump functions. 
+Recall the definition of support in \cref{support}. Just like in the single variable setting, a ``bump function''\index{bump function} is a smooth function with compact support. We can use single variable bump functions to construct multivariable bump functions. 
 
 \begin{exercise} \label{multivariable-bump-square-support}
-	Let $\psi : \R \to \R$ denote the single variable bump function from \cref{canonical-bump}. Then define $\Psi : \R^m \to \R$ by
-	\[ \Psi(x_1, \dotsc, x_m) = \psi(x_1) \psi(x_2) \dotsb \psi(x_m). \]
-	See \cref{multivariable-bump-square-support-graph}. Show that $\Psi$ is a bump function supported on the hypercube $[-1,1]^m$. 
+	Let $\psi : \R \to \R$ denote the single variable bump function from \cref{canonical-bump}. Then define $\alpha : \R^m \to \R$ by
+	\[ \alpha(x_1, \dotsc, x_m) = \psi(x_1) \psi(x_2) \dotsb \psi(x_m). \]
+	See \cref{multivariable-bump-square-support-graph}. Show that $\alpha$ is a bump function supported on the hypercube $[-1,1]^m$ (ie, the closed unit ball with respect to the max norm). 
 	\begin{figure}[ht]
 		\begin{center}
 			\begin{tikzpicture}
@@ -2024,9 +2024,9 @@ Recall the definition of support in \cref{support}. Just like in the single vari
 \end{exercise}
 
 \begin{exercise} \label{multivariable-bump-round-support}
-	Let $\psi : \R \to \R$ denote the single variable bump function from \cref{canonical-bump}. Then define $\Psi : \R^m \to \R$ by
-	\[ \Psi(x_1, \dotsc, x_m) = \psi(x_1^2 + \dotsb + x_m^2). \]
-	Show that $\Psi$ is a bump function supported on the closed unit ball $\bar{B}(0,1)$.  
+	Let $\psi : \R \to \R$ denote the single variable bump function from \cref{canonical-bump}. Then define $\alpha : \R^m \to \R$ by
+	\[ \alpha(x_1, \dotsc, x_m) = \psi(x_1^2 + \dotsb + x_m^2). \]
+	Show that $\alpha$ is a bump function supported on the closed unit ball $\bar{B}(0,1)$ with respect to the euclidean norm.  
 \end{exercise}
 
 \subsubsection*{Paths} \label{paths-multi}

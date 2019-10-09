@@ -183,44 +183,44 @@
 \indexentry{coordinates|hyperpage}{156}
 \indexentry{transition function|hyperpage}{157}
 \indexentry{compatibile|hyperpage}{157}
-\indexentry{atlas|hyperpage}{158}
-\indexentry{atlas!maximal atlas|hyperpage}{158}
-\indexentry{maximal atlas|hyperindexformat{\see {atlas, maximal atlas}}}{158}
-\indexentry{atlas!maximal atlas|hyperpage}{158}
-\indexentry{manifold|hyperpage}{158}
-\indexentry{smooth manifold|hyperindexformat{\see {manifold}}}{158}
-\indexentry{dimension!of a manifold|hyperpage}{159}
-\indexentry{s1@$S^1$|hyperindexformat{\see {circle}}}{160}
-\indexentry{circle|hyperpage}{160}
-\indexentry{homeomorphism|hyperpage}{160}
-\indexentry{sn@$S^n$|hyperindexformat{\see {$n$-sphere}}}{160}
-\indexentry{n-sphere@$n$-sphere|hyperpage}{160}
-\indexentry{mnm@$\mathscr{M}_{n \times m}$|hyperpage}{162}
-\indexentry{canonical topology|hyperpage}{162}
-\indexentry{homeomorphism|hyperpage}{162}
-\indexentry{mobius strip@M\"obius strip|hyperpage}{163}
-\indexentry{torus|hyperpage}{166}
-\indexentry{projective line|hyperpage}{166}
-\indexentry{p1@$\bbP^1$|hyperindexformat{\see {projective line}}}{166}
-\indexentry{projective plane|hyperpage}{166}
-\indexentry{p2@$\bbP^2$|hyperindexformat{\see {projective plane}}}{166}
-\indexentry{smooth|hyperpage}{174}
+\indexentry{atlas|hyperpage}{159}
+\indexentry{atlas!maximal atlas|hyperpage}{159}
+\indexentry{maximal atlas|hyperindexformat{\see {atlas, maximal atlas}}}{159}
+\indexentry{atlas!maximal atlas|hyperpage}{160}
+\indexentry{manifold|hyperpage}{160}
+\indexentry{smooth manifold|hyperindexformat{\see {manifold}}}{160}
+\indexentry{dimension!of a manifold|hyperpage}{161}
+\indexentry{s1@$S^1$|hyperindexformat{\see {circle}}}{163}
+\indexentry{circle|hyperpage}{163}
+\indexentry{homeomorphism|hyperpage}{163}
+\indexentry{sn@$S^n$|hyperindexformat{\see {$n$-sphere}}}{165}
+\indexentry{n-sphere@$n$-sphere|hyperpage}{165}
+\indexentry{mnm@$\mathscr{M}_{n \times m}$|hyperpage}{165}
+\indexentry{canonical topology|hyperpage}{165}
+\indexentry{homeomorphism|hyperpage}{165}
+\indexentry{mobius strip@M\"obius strip|hyperpage}{166}
+\indexentry{torus|hyperpage}{169}
+\indexentry{projective line|hyperpage}{169}
+\indexentry{p1@$\bbP^1$|hyperindexformat{\see {projective line}}}{169}
+\indexentry{projective plane|hyperpage}{169}
+\indexentry{p2@$\bbP^2$|hyperindexformat{\see {projective plane}}}{169}
 \indexentry{smooth|hyperpage}{177}
-\indexentry{diffeomorphism|hyperpage}{179}
-\indexentry{local diffeomorphism|hyperindexformat{\see {diffeomorphism, local diffeomorphism}}}{180}
-\indexentry{diffeomorphism!local diffeomorphism|hyperpage}{180}
-\indexentry{curve|hyperpage}{181}
-\indexentry{equivalence!of curves|hyperpage}{181}
-\indexentry{tangent space|hyperpage}{182}
-\indexentry{circle|hyperpage}{185}
-\indexentry{derivation|hyperpage}{186}
-\indexentry{pushforward|hyperpage}{188}
-\indexentry{rank!of a smooth map|hyperpage}{190}
-\indexentry{immersive|hyperpage}{190}
-\indexentry{submersive|hyperpage}{190}
-\indexentry{etale@\'etale|hyperpage}{190}
-\indexentry{regular point|hyperpage}{190}
-\indexentry{critical point|hyperpage}{190}
-\indexentry{immersion|hyperpage}{190}
-\indexentry{submersion|hyperpage}{190}
-\indexentry{etale@\'etale|hyperpage}{190}
+\indexentry{smooth|hyperpage}{180}
+\indexentry{diffeomorphism|hyperpage}{182}
+\indexentry{local diffeomorphism|hyperindexformat{\see {diffeomorphism, local diffeomorphism}}}{183}
+\indexentry{diffeomorphism!local diffeomorphism|hyperpage}{183}
+\indexentry{curve|hyperpage}{185}
+\indexentry{equivalence!of curves|hyperpage}{185}
+\indexentry{tangent space|hyperpage}{186}
+\indexentry{circle|hyperpage}{189}
+\indexentry{derivation|hyperpage}{190}
+\indexentry{pushforward|hyperpage}{192}
+\indexentry{rank!of a smooth map|hyperpage}{194}
+\indexentry{immersive|hyperpage}{194}
+\indexentry{submersive|hyperpage}{194}
+\indexentry{etale@\'etale|hyperpage}{194}
+\indexentry{regular point|hyperpage}{194}
+\indexentry{critical point|hyperpage}{194}
+\indexentry{immersion|hyperpage}{194}
+\indexentry{submersion|hyperpage}{194}
+\indexentry{etale@\'etale|hyperpage}{194}
