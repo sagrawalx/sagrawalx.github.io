@@ -234,6 +234,7 @@ Read: 3.1–2.A
 Do: (3.1) 3, 6  
 (3.2) 4
 </td>
+<td>[Link](manifolds.pdf)</td>
 </tr>
 
 <tr>
@@ -248,8 +249,7 @@ Office hours (1–2pm).
 <td>Manifolds: Examples</td>
 <td>Read: 3.2.B–E  
 Do: 12–16</td>
-<td>
-</td>
+<td></td>
 </tr>
 
 <tr>
