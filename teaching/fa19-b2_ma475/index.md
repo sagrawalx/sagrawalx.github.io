@@ -271,7 +271,8 @@ Do: 22, 24, 26, 30, 32</td>
 <tr>
 <td colspan="3">
 Chapter 3 [proof portfolio](proof-portfolio) peer review (in class).  
-Quiz 3 revisions (1–2pm).  
+Fearless Friday (noon in TSC 122).  
+Quiz 3 revisions (2–3pm).  
 [Project draft](project) due (11:59pm).  
 [Self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSfxoVhQKw_e8xi-DBHaV0daVK_OlmKvBFCJGjhLQ5O58TK1aA/viewform) for week 3 due (Sunday 11:59pm).
 </td>
