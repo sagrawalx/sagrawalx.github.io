@@ -249,7 +249,7 @@ Office hours (1–2pm).
 <td>Manifolds: Examples</td>
 <td>Read: 3.2.B–E  
 Do: 12–16</td>
-<td></td>
+<td>None</td>
 </tr>
 
 <tr>
@@ -264,8 +264,7 @@ Quiz 3 (in class). Covers through 2.5.
 <td>Review</td>
 <td>Reread: 3.1–2  
 Do: 22, 30</td>
-<td>
-</td>
+<td></td>
 </tr>
 
 <tr>
