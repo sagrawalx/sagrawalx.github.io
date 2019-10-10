@@ -152,38 +152,36 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.B}M\"obius strip}{166}{subsection.667}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.C}More quotient examples}{169}{subsection.674}
+\contentsline {subsection}{\numberline {3.2.C}More quotient examples}{168}{subsection.673}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.D}Submanifolds}{169}{subsection.678}
+\contentsline {subsection}{\numberline {3.2.D}Submanifolds}{169}{subsection.677}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.E}Submanifolds of euclidean space}{172}{subsection.691}
+\contentsline {subsection}{\numberline {3.2.E}Submanifolds of euclidean space}{172}{subsection.690}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Smooth functions}{176}{section.706}
+\contentsline {section}{\numberline {3.3}Smooth functions}{176}{section.705}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.A}Smooth real-valued functions}{177}{subsection.707}
+\contentsline {subsection}{\numberline {3.3.A}Smooth real-valued functions}{177}{subsection.706}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.B}Smooth functions between manifolds}{180}{subsection.727}
+\contentsline {subsection}{\numberline {3.3.B}Smooth functions between manifolds}{180}{subsection.726}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.C}Paths}{182}{subsection.740}
+\contentsline {subsection}{\numberline {3.3.C}Paths}{182}{subsection.739}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.D}Diffeomorphisms}{182}{subsection.741}
+\contentsline {subsection}{\numberline {3.3.D}Diffeomorphisms}{182}{subsection.740}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Tangent Spaces}{185}{chapter.748}
+\contentsline {chapter}{\numberline {4}Tangent Spaces}{185}{chapter.747}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Tangent space}{185}{section.749}
+\contentsline {section}{\numberline {4.1}Tangent space}{185}{section.748}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.A}Curves based at a point}{185}{subsection.750}
+\contentsline {subsection}{\numberline {4.1.A}Curves based at a point}{185}{subsection.749}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.B}Vector space structure}{186}{subsection.755}
+\contentsline {subsection}{\numberline {4.1.B}Vector space structure}{186}{subsection.754}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.C}Derivations $\star $}{190}{subsection.773}
+\contentsline {subsection}{\numberline {4.1.C}Derivations $\star $}{190}{subsection.772}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Pushforward}{192}{section.782}
+\contentsline {section}{\numberline {4.2}Pushforward}{192}{section.781}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.A}Definition of the pushforward}{192}{subsection.783}
+\contentsline {subsection}{\numberline {4.2.A}Definition of the pushforward}{192}{subsection.782}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.B}Rank of a smooth map}{194}{subsection.790}
+\contentsline {subsection}{\numberline {4.2.B}Rank of a smooth map}{194}{subsection.789}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{195}{chapter*.794}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Index}{197}{chapter*.795}
+\contentsline {chapter}{\nonumberline Index}{195}{chapter*.793}
