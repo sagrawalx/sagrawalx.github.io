@@ -515,14 +515,18 @@ We first recall the following definitions.
 	Supppose $X$ is a set, $f : X \to \R$ is a function, and $a \in X$. 
 	\begin{itemize}
 		\item $a$ is an \emph{absolute maximum}, or just \emph{maximum}, of $f$ if $f(x) \leq f(a)$ for all $x \in X$. 
+		\item $a$ is a \emph{strict absolute maximum}, or just \emph{strict maximum} of $f$ if $f(x) < f(a)$ for all $x \in X \setminus\{a\}$. 
 		\item $a$ is an \emph{absolute minimum}, or just \emph{minimum}, of $f$ if $f(x) \geq f(a)$ for all $x \in X$. 
-		\item $a$ is a \emph{absolute extremum} or just \emph{extremum}, if it is either an absolute maximum or an absolute minimum.
+		\item $a$ is a \emph{strict absolute minimum}, or just \emph{strict minimum} of $f$ if $f(x) > f(a)$ for all $x \in X \setminus\{a\}$. 
+		\item $a$ is a \emph{absolute extremum}, or just \emph{extremum}, if it is either an absolute maximum or an absolute minimum. Similarly, $a$ is a \emph{strict absolute extremum}, or just \emph{strict extremum}, if it is either a strict absolute maximum or a strict absolute minimum. 
 	\end{itemize}
 	If $X$ is a metric space\footnotemark, we can also make the following definitions. 
 	\begin{itemize}
 		\item $a$ is a \emph{local maximum} of $f$ if there exists a neighborhood $U$ of $a$ in $X$ such that $f(x) \leq f(a)$ for all $x \in U$. 
+		\item $a$ is a \emph{strict local maximum}, or just \emph{strict maximum} of $f$ if there exists a neighborhood $U$ of $a$ in $X$ such that $f(x) < f(a)$ for all $x \in U \setminus\{a\}$. 
 		\item $a$ is a \emph{local minimum} of $f$ if there exists a neighborhood $U$ of $a$ in $X$ such that $f(x) \geq f(a)$ for all $x \in U$. 
-		\item $a$ is a \emph{local extremum} if it is either a local maximum or a local minimum.
+		\item $a$ is a \emph{strict local minimum}, or just \emph{strict minimum} of $f$ if there exists a neighborhood $U$ of $a$ in $X$ such that $f(x) > f(a)$ for all $x \in U \setminus\{a\}$.
+		\item $a$ is a \emph{local extremum} if it is either a local maximum or a local minimum. Similarly, $a$ is a \emph{strict local extremum} if it is either a strict local maximum or a strict local minimum. 
 	\end{itemize}
 \end{definition}
 
@@ -893,14 +897,18 @@ Again, there are pathologies involving monotonicity than can be exhibited by fun
 Here is a word you probably recognize from calculus, but perhaps you haven't seen a formal definition. 
 
 \begin{definition} \label{concave-up-definition}
-	Suppose $I$ is an interval and $f : I \to \R$ is a function. We say that $f$ is \emph{concave up}, or \emph{convex}, if
+	Suppose $I$ is an interval and $f : I \to \R$ is a function. We say that $f$ is \emph{concave up} (or \emph{convex}) if
 	\[ \frac{f(y)-f(x)}{y-x} \leq \frac{f(z)-f(y)}{z-y} \]
 	for all $x < y < z$ in $I$. 
-	See \cref{concave-up-picture}. Similarly, we say that $f$ is \emph{concave down}, or just \emph{concave}, if
-	\[ \frac{f(y)-f(x)}{y-x} \geq \frac{f(z)-f(y)}{z-y} \]
+	See \cref{concave-up-picture}. We say that $f$ is \emph{strictly concave up} (or \emph{strictly convex}) if 
+	\[ \frac{f(y)-f(x)}{y-x} < \frac{f(z)-f(y)}{z-y} \]
 	for all $x < y < z$ in $I$. 
-	Notice that $f$ is concave down if and only if $-f$ is concave up. 
+	Similarly, we say that $f$ is \emph{concave down} (or just \emph{concave}) if
+	\[ \frac{f(y)-f(x)}{y-x} \geq \frac{f(z)-f(y)}{z-y} \]
+	for all $x < y < z$ in $I$, and we make an analogous definition for \emph{strictly concave down} (or just \emph{strictly concave}). 
 \end{definition}
+
+Notice that $f$ is (strictly) concave down if and only if $-f$ is (strictly) concave up. 
 
 \begin{figure}[t]
 	\begin{center}
@@ -980,6 +988,7 @@ Here are some facts about how concavity relates to differentiation that you like
 	\begin{enumerate}[(a)]
 		\item If $f$ is concave up, show that $a$ is an absolute minimum of $f$. 
 		\item If $f$ is concave down, show that $a$ is an absolute maximum of $f$. 
+		\item If $f$ is strictly concave up, does it follow that $a$ is a strict absolute minimum of $f$? If so, prove it. If not, give a counterexample. 
 	\end{enumerate} 
 	\begin{hint}
 		If $k < 0 < h$ and $f$ is concave up, then
@@ -989,15 +998,18 @@ Here are some facts about how concavity relates to differentiation that you like
 \end{exercise}
 
 \begin{exercise}[Concavity and derivatives] \label{concavity-derivative}
-	Suppose $I$ is an open interval and $f : I \to \R$ is differentiable. 
+	Suppose $I$ is an open interval and $f : I \to \R$ is differentiable. Prove the following. 
 	\begin{enumerate}[(a)]
-		\item Prove that $f$ is concave up if and only if $f'$ is increasing. 
-		\item Prove that $f$ is concave down if and only if $f'$ is decreasing. 
+		\item $f$ is concave up if and only if $f'$ is increasing. 
+		\item $f$ is concave down if and only if $f'$ is decreasing. 
+		\item $f$ is strictly concave up if and only if $f'$ is strictly increasing. 
+		\item $f$ is strictly concave down if and only if $f'$ is strictly decreasing. 
 	\end{enumerate}
 	\begin{hint}
-		If $f'$ is increasing, apply the mean value theorem \ref{mean-value-theorem} to prove that $f$ is concave up. Conversely, if $f$ is concave up, suppose we have $a < b$ in $I$. Let $x$ and $y$ be such that $a < x < y < b$. Explain why 
+		If $f'$ is (strictly) increasing, apply the mean value theorem \ref{mean-value-theorem} to prove that $f$ is (strictly) concave up. If $f$ is concave up, suppose we have $a < b$ in $I$. Let $x$ and $y$ be such that $a < x < y < b$. Explain why 
 		\[ \frac{f(x)-f(a)}{x-a} \leq \frac{f(b)-f(y)}{b-y}, \]
 		and then let $x \to a^+$ and $y \to b^-$. 
+		The case when $f$ is \emph{strictly} concave up is a bit trickier (roughly because taking a limit can turn a $<$ into a  $\leq$), but one possible correct proof is a slight variant of the same idea. 
 	\end{hint}
 \end{exercise}
 
@@ -1485,6 +1497,15 @@ Here is a property of $C^2$ functions you likely recognize from calculus.
 	\end{enumerate}
 \end{exercise}
 
+\begin{exercise} \label{second-derivative-strict-concavity}
+	Suppose $I$ is an open interval and $f : I \to \R$ is $C^2$. 
+	\begin{enumerate}[(a)]
+		\item Show that, if $f'' > 0$, then $f$ is strictly concave up.
+		\item Show that, if $f'' < 0$, then $f$ is strictly concave down. 
+		\item Unlike \cref{second-derivative-concavity}, the above two statements cannot be upgraded to ``if and only if'' statements. Give an example of a strictly concave up function $f : \R \to  \R$ for which there exists some $a \in \R$ such that $f''(a) = 0$. 
+	\end{enumerate}
+\end{exercise}
+
 \subsection{Taylor's theorem \starred}
 
 Taylor's theorem gives us a way of approximating a $C^k$ function by a polynomial of at most degree $k$. When $k = 1$, the theorem says nothing more than \cref{differential-unique-single}.
@@ -1542,17 +1563,16 @@ is often called a ``remainder,''\index{remainder} since it's what's left over af
 \begin{exercise}
 	Suppose $f : U \to \R$ is $C^2$ and $a \in U$ is a point such that $f'(a) = 0$. 
 	\begin{enumerate}[(a)]
-		\item Show that, if $f''(a) > 0$, then $a$ is a local minimum of $f$, and that if $f''(a) < 0$, then $a$ is a local maximum of $f$. 
+		\item Show that, if $f''(a) > 0$, then $a$ is a strict local minimum of $f$, and that if $f''(a) < 0$, then $a$ is a strict local maximum of $f$. 
 		\begin{hint}
-			You can do this using \cref{concavity-extremums,second-derivative-concavity}. Alternatively, you can do it using Taylor's theorem \ref{taylor-single}. Try both methods. It's the Taylor's theorem method that will be more helpful for part (c) below. You may also notice that the first method really requires that $f$ be $C^2$, while the Taylor's theorem method only requires that $f$ be twice differentiable. 
+			You can do this using \cref{concavity-extremums,second-derivative-strict-concavity}. Alternatively, you can do it using Taylor's theorem \ref{taylor-single}. Try both methods. It's the Taylor's theorem method that will be more helpful for part (c) below. You may also notice that the first method really requires that $f$ be $C^2$, while the Taylor's theorem method only requires that $f$ be twice differentiable. 
 		\end{hint}
-		\item Give examples of three $C^2$ functions $f_1, f_2, f_3 : \R \to \R$ and a point $a \in \R$ such that
-		\[ f_i'(a) = f''_i(a) = 0 \] 
-		for all $i = 1, 2, 3$, where $f_1$ has a local minimum at $a$, $f_2$ has a local maximum at $a$, and $f_3$ has neither a local minimum nor a local maximum at $a$. In other words, when $f'(a) = f''(a) = 0$, the test from part (a) is inconclusive at determining whether $a$ is a local minimum, a local maximum, or neither. 
+	
+		\item Give examples to show that, if $f''(a) = 0$, then the test from part (a) is entirely inconclusive: $a$ could be a strict local extremum (of either type), a non-strict local extremum (of either type), or not a local extremum at all. 
 		
 		\item Suppose $f$ is $C^k$ for some $k \geq 2$, that 
 		\[ f'(a) = f^{(2)} = \dotsb = f^{(k-1)}(a) = 0 \]
-		and that $f^{(k)}(a) \neq 0$. Formulate and prove a rule that uses the sign of $f^{(k)}(a)$ and/or the parity of $k$ to determine whether $a$ is a local minimum, a local maximum, or neither. 
+		and that $f^{(k)}(a) \neq 0$. Formulate and prove a rule that uses the sign of $f^{(k)}(a)$ and/or the parity of $k$ to determine whether or not $a$ is a local extremum, and if it is a local extremum, what kind of local extremum it is. 
 	\end{enumerate}
 \end{exercise}
 

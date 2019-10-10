@@ -263,7 +263,7 @@ Quiz 3 (in class). Covers through 2.5.
 <td rowspan="2">Fri</td>
 <td>Review</td>
 <td>Reread: 3.1–2  
-Do: 22, 24, 26, 30, 32</td>
+Do: 22, 30, 32</td>
 <td>
 </td>
 </tr>
