@@ -168,13 +168,13 @@ Consider the $y = 1$ slice of $\Gamma$, which is a vertical slice containing the
 \[ \left.\frac{d }{d x} f(x, 1) \right|_{x = 2} = 4. \]
 This quantity is called a \emph{partial derivative of $f$ at $a$}, and will be denoted $(\partial f/\partial x)(a)$.  Thus the tangent line is the line parametrized by
 \[ h \mapsto \begin{bmatrix} 2 \\ 1 \\ 5 \end{bmatrix} + h \begin{bmatrix} 1 \\ 0 \\ 4 \end{bmatrix}. \]
-% TODO: Explain the 1 in the second vector
+The vector $(1,0,4)$ records the fact that the tangent line moves up 4 units in the $z$-direction for every 1 unit that it moves in $x$-direction. 
 
 Similarly, we can consider the $x = 2$ slice, which is another vertical slice containing $a$. We know that the graph $\Gamma$ along this slice is the parabola $z = 4 + y^2$.The slope of the corresponding tangent line is
 \[ \frac{\partial f}{\partial y}(a) = \left.\frac{d f(2, y)}{dy}\right|_{y = 1} = 2. \]
 Thus this tangent line is the line parametrized by
 \[ k \mapsto \begin{bmatrix} 2 \\ 1 \\ 5 \end{bmatrix} + k \begin{bmatrix} 0 \\ 1 \\ 2 \end{bmatrix}. \]
-See \cref{multi-introductory-example-graph-tangent-lines}.
+Again, the vector $(1,0,2)$ records the fact that the tangent line moves up 4 units in the $z$-direction for every 1 unit that it moves in $y$-direction. See \cref{multi-introductory-example-graph-tangent-lines}.
 
 \begin{figure}[ht]
 	\begin{center}
@@ -217,10 +217,8 @@ See \cref{multi-introductory-example-graph-tangent-lines}.
 \end{figure}
 
 These two tangent lines uniquely determine the entire tangent plane $T$ (ie, $T$ is the plane containing these two lines). One description that falls out immediately from the parametrizations of the tangent lines we found above is that $T$ is the plane parametrized by
-\[ \begin{bmatrix} h \\ k \end{bmatrix} \mapsto \begin{bmatrix} 2 \\ 1 \\ 5 \end{bmatrix} + \begin{bmatrix} h \\ k \\ 4h + 2k \end{bmatrix}. \]
-The important part of this expression is the bottom entry on the far right, the $4h + 2k$. The function $\R^2 \to \R$ given by $(h, k)  \mapsto 4h + 2k$ is what we will call the \emph{differential} or the \emph{total derivative} of $f$, and denote by $df_a$. 
-
-Notice that $df_a$ is a linear map $\R^2 \to \R$. Moreover, its graph is a plane passing through the origin that is parallel to $T$. In other words, if we take the graph of $df_a$ and translate it over to the point $(2,1,5)$, we obtain exactly the tangent plane $T$. Speaking more loosely, the derivative $df_a : \R^2 \to \R$ records all of the ``slopey information'' about the tangent plane $T$. 
+\[ \begin{bmatrix} h \\ k \end{bmatrix} \mapsto \begin{bmatrix} 2 \\ 1 \\ 5 \end{bmatrix} + h \begin{bmatrix} 1 \\ 0 \\ 4 \end{bmatrix} + k \begin{bmatrix} 0 \\ 1 \\ 2 \end{bmatrix} = \begin{bmatrix} 2 \\ 1 \\ 5 \end{bmatrix} + \begin{bmatrix} h \\ k \\ 4h + 2k \end{bmatrix}. \]
+As we've seen, the important part of this expression is the bottom entry on the far right, the $4h + 2k$. The function $\R^2 \to \R$ given by $(h, k)  \mapsto 4h + 2k$ is what we will call the \emph{differential} or the \emph{total derivative} of $f$, and denote by $df_a$. Notice that $df_a$ is a linear map $\R^2 \to \R$. Moreover, its graph is a plane passing through the origin that is parallel to $T$. In other words, if we take the graph of $df_a$ and translate it over to the point $(2,1,5)$, we obtain exactly the tangent plane $T$. Speaking more loosely, $df_a$ records all of the ``slopey information'' about the tangent plane $T$. 
 
 Notice moreover that, if $e_1, e_2$ are the standard basis vectors of $\R^2$ (cf. \cref{euclidean}), then
 \[ \begin{aligned} df_a(e_1) &= 4 = \frac{\partial f}{\partial x}(a) \\
