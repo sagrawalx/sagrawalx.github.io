@@ -1,0 +1,6 @@
+\noindent \textbf {Solution to \cref {monotone-derivative} part (a).}
+{}{} Suppose $f' \geq 0$ and $x < y$ in $I$. By the mean value theorem \ref {mean-value-theorem}, there exists $c$ between $x$ and $y$ such that \[ \frac {f(y)-f(x)}{y-x} = f'(c) \geq 0. \] Since $y - x \geq 0$, this means that $f(y) \geq f(x)$, proving that $f$ is increasing. Conversely, suppose $f$ is increasing. Then for any $a \in I$ and $h > 0$, we have $f(a+h) \geq f(a)$, which means that \[ \frac {f(a+h)-f(a)}{h} \geq 0 \] for all $h > 0$. Thus \[ f'(a) = \lim _{h \to 0^+} \frac {f(a+h)-f(a)}{h} \geq 0, \] proving that $f' \geq 0$.
+\par \mbox {}\par 
+\noindent \textbf {Solution to \cref {open-iff-locally-surjective}.}
+{}{} This is just unwinding definitions. Suppose $f$ is open. Fix a point $a \in U$ and let $V$ be an open neighborhood of $a$ in $U$. Since $f$ is open, $f(V)$ is open, so $f(a)$ must be an interior point of $f(V)$. Conversely, suppose $f$ is locally surjective at every point in $U$. Let $V$ be an open subset of $U$. If $b \in f(V)$, there is an $a \in V$ such that $f(a) = b$. But $f$ is locally surjective at $a$, so $f(a) = b$ is an interior point of $f(V)$. Thus every $b \in f(V)$ is an interior point of $f(V)$, so $f(V)$ is open.
+\par \mbox {}\par 

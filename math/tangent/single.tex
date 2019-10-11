@@ -865,6 +865,16 @@ The proofs of the following standard relationships between derivatives and monot
 	\end{hint}
 \end{exercise}
 
+\begin{solution}{\cref{monotone-derivative} part (a)}
+	Suppose $f' \geq 0$ and $x < y$ in $I$. By the mean value theorem \ref{mean-value-theorem}, there exists $c$ between $x$ and $y$ such that 
+	\[ \frac{f(y)-f(x)}{y-x} = f'(c) \geq 0. \]
+	Since $y - x \geq 0$, this means that $f(y) \geq f(x)$, proving that $f$ is increasing. Conversely, suppose $f$ is increasing. Then for any $a \in I$ and $h > 0$, we have $f(a+h) \geq f(a)$, which means that 
+	\[ \frac{f(a+h)-f(a)}{h} \geq 0 \]
+	for all $h > 0$. Thus 
+	\[ f'(a) = \lim_{h \to 0^+} \frac{f(a+h)-f(a)}{h} \geq 0, \]
+	proving that $f' \geq 0$. 
+\end{solution}
+
 \begin{exercise}[Derivatives and strict monotonicity] \label{strictly-monotone-derivative}
 	Suppose $I$ is an interval and that $f : I \to \R$ is continuous and differentiable on the interior. Prove the following. 
 	\begin{enumerate}[(a)]

@@ -184,4 +184,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.B}Rank of a smooth map}{194}{subsection.789}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Index}{195}{chapter*.793}
+\contentsline {chapter}{\numberline {A}Selected partial solutions}{195}{appendix.793}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Bibliography}{197}{chapter*.794}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Index}{199}{chapter*.795}

@@ -264,7 +264,7 @@ Quiz 3 (in class). Covers through 2.5.
 <td>Review</td>
 <td>Reread: 3.1–2  
 Do: 22, 30</td>
-<td></td>
+<td>[Link](manifolds-2.pdf)</td>
 </tr>
 
 <tr>
