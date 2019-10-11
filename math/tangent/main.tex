@@ -28,7 +28,7 @@
 \tikzexternalize[prefix=figures/]
 
 % Miscellaneous
-\usepackage{makeidx, enumerate, toolbox, tikz-cd, color, cancel, microtype, verbatim, booktabs}
+\usepackage{makeidx, enumerate, toolbox, tikz-cd, color, cancel, microtype, verbatim, booktabs, collect}
 \usepackage[colorlinks=true,hypertexnames=false]{hyperref}
 \hypersetup{linkcolor=red}
 \makeindex
@@ -91,6 +91,14 @@
 
 \newcommand{\starred}{\texorpdfstring{$\star$}{*}}
 
+\definecollection{sols}
+\makeatletter
+\newenvironment{solution}[1]{
+	\@nameuse{collect}{sols}{\noindent \textbf{Solution to #1.}}{\par\mbox{}\par}{}{}}{
+	\@nameuse{endcollect}
+}
+\makeatother
+
 \begin{document}
 	\maketitle
 	
@@ -108,8 +116,11 @@
 	
 	\include{tangent}
 	
-	% \appendix
+	\appendix
 	% \include{trigonometry}
+	
+	\chapter{Selected partial solutions}
+	\includecollection{sols}
 	
 	\printbibliography
 	

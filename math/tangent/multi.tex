@@ -1355,13 +1355,17 @@ Let's begin by making a couple of helpful definitions.
 	For any point $a \in U$, we make the following definitions. 
 	\begin{itemize}
 		\item We say that $f$ is \emph{locally injective at $a$} if there exists an open neighborhood $V$ of $a$ such that $f|_V$ is injective. 
-		\item We say that $f$ is \emph{locally surjective at $a$} if $f(a)$ is an interior point of $f(V)$ for every neighborhood $V$ of $a$. 
+		\item We say that $f$ is \emph{locally surjective at $a$} if $f(a)$ is an interior point of $f(V)$ for every open neighborhood $V$ of $a$. 
 	\end{itemize}
 \end{definition}
 
-\begin{exercise}
+\begin{exercise} \label{open-iff-locally-surjective}
 	Show that $f$ is open if and only if $f$ is locally surjective at every $a \in U$. 
 \end{exercise}
+
+\begin{solution}{\cref{open-iff-locally-surjective}}
+	This is just unwinding definitions. Suppose $f$ is open. Fix a point $a \in U$ and let $V$ be an open neighborhood of $a$ in $U$. Since $f$ is open, $f(V)$ is open, so $f(a)$ must be an interior point of $f(V)$. Conversely, suppose $f$ is locally surjective at every point in $U$. Let $V$ be an open subset of $U$. If $b \in f(V)$, there is an $a \in V$ such that $f(a) = b$. But $f$ is locally surjective at $a$, so $f(a) = b$ is an interior point of $f(V)$. Thus every $b \in f(V)$ is an interior point of $f(V)$, so $f(V)$ is open. 
+\end{solution}
 
 In other words, to prove the inverse function theorem, we want to show that $f$ is locally injective and locally surjective at every point $a \in U$. We can replace $f$ with the function $x \mapsto f(x+a)$ in order to assume that $a = 0$. Then, we can replace $f$ with the function $x \mapsto f(x) - f(0)$ in order to assume that $f(0) = 0$. Finally, since $df_0$ is invertible, we can replace $f$ with $df_0^{-1} \circ f$ in order to assume that $df_0 = \id$. 
 

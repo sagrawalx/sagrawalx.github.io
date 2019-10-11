@@ -531,16 +531,16 @@ Here is another property you would hope would be true.
 
 We now have two important results which let us produce lots of examples of submanifolds of euclidean space out of smooth functions (in the sense of \cref{smooth-multi}). 
 
-\subsubsection*{Regular level set theorem}
+\subsubsection*{Submersion theorem}
 
-First up, we have the following important theorem which goes by many names; we will call it the ``regular level set theorem,'' but some other names include the ``preimage theorem'' or the ``submersion theorem.'' We will later generalize this result. 
+First up, we have the following important theorem which goes by many names, including the ``regular level set theorem,'' the ``preimage theorem'' and the ``submersion theorem.'' We will later generalize this result. 
 
-\begin{theorem}[Regular level set theorem] \label{regular-level-set-theorem-local}
-	Suppose $U$ is an open subset of $\R^m$ and $f : U \to \R^n$ is a smooth function where $m \geq n$. If $q \in \R^n$ is a regular value of $f$, then $S = f^{-1}(q)$ is a submanifold of $U$ of dimension $m-n$. 
+\begin{theorem}[Submersion theorem] \label{submersion-theorem-local}
+	Suppose $U$ is an open subset of $\R^m$ and $f : U \to \R^n$ is smooth and submersive. Then $S = f^{-1}(q)$ is a submanifold of $U$ of dimension $m-n$ for any $q \in \R^n$. 
 \end{theorem}
 
 \begin{proof}
-	By replacing $f$ with the function $x \mapsto f(x)-q$, we can assume without loss of generality that $q = 0$. Fix $p \in S$. We want to find a chart adapted to $S$ containing $p$. Since $0$ is a regular value and $m \geq n$, we know that $f$ is submersive at $p$. This means that the $n \times m$ matrix $f'(p)$ has a non-vanishing $n \times n$ minor, ie, there exist $n$ distinct integers $i_1, \dotsc, i_n$ between $1$ and $m$ such that 
+	By replacing $f$ with the function $x \mapsto f(x)-q$, we can assume without loss of generality that $q = 0$. Fix $p \in S$. We want to find a chart adapted to $S$ containing $p$. We know that $f$ is submersive at $p$, which means that the $n \times m$ matrix $f'(p)$ has a non-vanishing $n \times n$ minor, ie, there exist $n$ distinct integers $i_1, \dotsc, i_n$ between $1$ and $m$ such that 
 	\begin{equation} \label{derivative-non-vanishing-minor} 
 	\det \begin{bmatrix} \partial_{i_1} f_1(p) & \dotsb & \partial_{i_n} f_1(p) \\ \vdots & \ddots & \vdots \\ \partial_{i_1} f_n(p) & \dotsb & \partial_{i_n} f_n(p) \end{bmatrix} \neq 0. 
 	\end{equation}
@@ -571,9 +571,9 @@ First up, we have the following important theorem which goes by many names; we w
 
 \begin{exercise}
 	Recall from \cref{circle-projection-atlas,sphere-projection-atlas} that the $n$-sphere $S^n$ is defined by
-	\[ S^n = \{ x \in \R^{n+1} : |x| = 1 \}. \]
+	\[ S^n = \{ x \in \R^{n+1} : |x|_2 = 1 \}. \]
 	\begin{enumerate}[(a)]
-		\item Use the regular level set theorem \ref{regular-level-set-theorem-local} to show that $S^1$ is a submanifold of $\R^{2}$. 
+		\item Use the submersion theorem \ref{submersion-theorem-local} to show that $S^1$ is a submanifold of $\R^{2}$. 
 		\item Show that the maximal atlas on $S^1$ produced by \cref{submanifolds-are-manifolds} coincides with the maximal atlas from \cref{circle-projection-atlas}. 
 		\item Generalize parts (a) and (b) to $S^n$ for arbitrary $n$. 
 	\end{enumerate}
@@ -581,7 +581,7 @@ First up, we have the following important theorem which goes by many names; we w
 
 \begin{exercise} \label{torus-equation}
 	Let $T$ be the torus inside $\R^3$ centered around the $z$-axis where the distance from the origin to the center of the tube is $R$, the radius of the tube is $r$, and $0 < r < R$. Find a smooth function $f : U \to \R$ where $U$ is an open subset of $\R^3$, 0 is a regular value of $f$, and \[ T = \{ (x,y,z) \in U : f(x,y,z) = 0 \}. \]
-	Thus, applying \cref{regular-level-set-theorem-local}, we can conclude that $T$ is a submanifold of $\R^3$. 
+	Thus, applying the submersion theorem \ref{submersion-theorem-local}, we can conclude that $T$ is a submanifold of $\R^3$. 
 	\begin{hint}
 		See \cref{torus-slice}. 
 	\end{hint}
@@ -627,9 +627,7 @@ First up, we have the following important theorem which goes by many names; we w
 \end{proposition}
 
 \begin{proof}
-	We derive this from the regular level set theorem \ref{regular-level-set-theorem-local}. Consider the function $g : U \times \R^n \to \R^n$ given by $g(x, y) = f(x) - y$. Then the graph of $f$ is equal to $g^{-1}(0)$, so the result will follow from \cref{regular-level-set-theorem-local} provided we can show that 0 is a regular value of $g$. 
-	
-	In fact, $g$ is submersive at all points, so all of its values are regular! To see this, we calculate $dg$. Note that if $x = (x_1, \dotsc, x_m) \in U$ and $y = (y_1, \dotsc, y_n) \in \R^n$, then
+	We derive this from the submersion theorem \ref{submersion-theorem-local}. Consider the function $g : U \times \R^n \to \R^n$ given by $g(x, y) = f(x) - y$. Then the graph of $f$ is equal to $g^{-1}(0)$, so the result will follow from the submersion theorem provided we can show that $g$ is submersive. To see this, we calculate $dg$. Note that if $x = (x_1, \dotsc, x_m) \in U$ and $y = (y_1, \dotsc, y_n) \in \R^n$, then
 	\[ g(x,y) = g(x_1, \dotsc, x_m, y_1, \dotsc, y_n) = (f_1(x_1,\dotsc, x_m)-y_1, \dotsc, f_n(x_1, \dotsc, x_m) - y_n) \]
 	by definition of $g$, which means that
 	\[ \frac{\partial g_k}{\partial x_i}(x,y) = \frac{\partial f_k}{\partial x_j}(x) = \partial_j f_k(x) \quad \text{and} \quad \frac{\partial g_k}{\partial y_j}(x,y) = -\delta_{j,k} = \begin{cases} -1 & \text{if } j = k \\ 0 & \text{if } j \neq k \end{cases} \]
