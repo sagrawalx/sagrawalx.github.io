@@ -476,7 +476,9 @@ We now define submanifolds. Roughly, a submanifold is a subset for which there e
 	for some non-negative integer $k \leq \dim(U,x)$. Such a chart $(U,\phi)$ is said to be \emph{adapted to $S$}, or is a \emph{slice chart for $S$}. The integer $k$ is called the \emph{codimension of $S$ in $(U,\phi)$}. 
 \end{definition}
 
-We'll justify this terminology in a moment by showing that submanifolds are actually manifolds in their own right (cf. \cref{submanifolds-are-manifolds}). But first, let's discuss some examples. The intuition is roughly that, if a subset $S$ of $X$ is ``smooth'' and doesn't have any ``pointy'' parts, it should be a submanifold. 
+% TODO: Picture
+
+We'll justify this terminology in a moment by showing that submanifolds are actually manifolds in their own right (cf. \cref{submanifolds-are-manifolds}). But first, let's discuss some examples. The intuition is roughly that, if a subset $S$ of $X$ is ``smooth'' (ie, doesn't have any ``pointy'' parts), it should be a submanifold. 
 
 \begin{example}
 	Consider the set $S = \{ (0,y) \in \R^2 : -1 < x < 1 \}$ inside $\R^2$. In other words, $S$ is the open interval $(-1,1)$ along the $y$-axis inside $\R^2$. Then $S$ is a submanifold. Indeed, let $U$ be the open box $(-1,1) \times (-1,1)$ inside $\R^2$, and $\phi : U \to \R^2$ the inclusion map. Then $(U, \phi)$ is a chart on $\R^2$, $\phi_1(x,y) = x$, and 
@@ -515,8 +517,74 @@ We'll justify this terminology in a moment by showing that submanifolds are actu
 \begin{exercise} \label{circle-submanifold}
 	Show that the unit circle $S^1$ is a submanifold of $\R^2$. 
 	\begin{hint}
-		Let $U = \{(x,y) \in S^1 : x > 0 \}$ and let $\phi(x,y) = (x^2+y^2-1, y)$. Show that $(U, \phi)$ is a chart that is adapted to $S^1$. But this one chart does not cover the circle, so then find more charts like this one that cover the circle. 
+		Let $U = \{(x,y) \in S^1 : x > 0 \}$ and let $\phi(x,y) = (x^2+y^2-1, y)$. See \cref{circle-submanifold-picture}. Show that $(U, \phi)$ is a chart that is adapted to $S^1$. But this one chart does not cover the circle, so then find more charts like this one that cover the circle. 
 	\end{hint}
+	\begin{figure}
+		\begin{center}
+			\begin{tikzpicture}
+			\begin{axis}[
+			xmin=-1.5,xmax=1.5,
+			ymin=-1.5,ymax=1.5,
+			ytick={0},
+			xtick={0},
+			yticklabels={},
+			axis lines=middle,
+			axis line style=lightgray,
+			width=0.5\textwidth,
+			axis equal
+			] 
+			
+			
+			\addplot[white] expression[name path=c,domain=0:2,samples=2]{1.5};
+			\addplot[white] expression[name path=d,domain=0:2,samples=2]{-1.5};
+			\addplot[fill=gray, fill opacity=0.1]
+			fill between[of=c and d,soft clip={domain=0:2}];
+			
+			\addplot[red,thick] expression[domain=0:1,samples=200]{sqrt(1-x^2)};
+			\addplot[red,thick] expression[domain=0:1,samples=200]{-sqrt(1-x^2)};
+			
+			\addplot +[mark=none,thick,black,dashed,->] coordinates {(0, -1.5) (0, 1.5)};
+			
+			\node[color=white,draw=red,circle,fill,inner sep=2pt] at (axis cs:0,1) {}; 
+			\node[color=white,draw=red,circle,fill,inner sep=2pt] at (axis cs:0,-1) {}; 
+			
+			\end{axis}
+			\end{tikzpicture}\hspace{1cm}
+			\begin{tikzpicture}
+			\begin{axis}[
+			xmin=-1.5,xmax=1.5,
+			ymin=-1.5,ymax=1.5,
+			ytick={0},
+			xtick={0},
+			axis lines=middle,
+			axis line style=lightgray,
+			width=0.5\textwidth,
+			axis equal
+			] 
+			
+			
+			\addplot[black,thick,dashed,->] expression[name path=a,domain=-1:1.15,samples=200]{sqrt(x+1)};
+			
+			\addplot[black,thick,dashed,-] expression[name path=b,domain=-1:1.15,samples=200]{-sqrt(x+1)};
+			
+			\addplot[fill=gray, fill opacity=0.1]
+			fill between[of=a and b,soft clip={domain=-1:1.15}];
+			
+			
+			\addplot[white] expression[name path=c,domain=1.15:2,samples=2]{1.5};
+			\addplot[white] expression[name path=d,domain=1.15:2,samples=2]{-1.5};
+			\addplot[fill=gray, fill opacity=0.1]
+			fill between[of=c and d,soft clip={domain=1.15:2}];
+			
+			\addplot +[mark=none,red,thick,solid,-] coordinates {(0, -1) (0, 1)};
+			
+			\node[color=white,draw=red,circle,fill,inner sep=2pt] at (axis cs:0,1) {}; 
+			\node[color=white,draw=red,circle,fill,inner sep=2pt] at (axis cs:0,-1) {}; 
+			\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		\caption{If $U = \{(x,y) : x > 0\}$ is the right half of the plane and $\phi : U \to \R^2$ is given by $\phi(x,y) = (x^2 + y^2 - 1, x)$, then $(U, \phi)$ is a chart on $\R^2$ that transforms the picture on the left into the picture on the right. The vertical axis on the left turns into the parabola on the right. The red semicircle on the left turns into the red line segment along the vertical axis on right. The horizontal axis on the left stays remains the horizontal axis on the right.}  \label{circle-submanifold-picture}
+	\end{figure}
 \end{exercise}
 
 \begin{exercise}

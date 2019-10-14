@@ -284,7 +284,7 @@ Quiz 3 revisions (2–3pm).
 <tr>
 <td rowspan="2">Mon</td>
 <td colspan="2">Review</td>
-<td> </td>
+<td>[Link](review.pdf)</td>
 </tr>
 
 <tr>
