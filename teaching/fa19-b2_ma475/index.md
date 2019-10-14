@@ -290,13 +290,13 @@ Quiz 3 revisions (2–3pm).
 <tr>
 <td colspan="3">
 Chapter 3 [proof portfolio](proof-portfolio) due (in class).  
-Office hours (1–2pm).  
+Office hours (1–3pm).  
 </td>
 </tr>
 
 <tr>
 <td>Tue</td>
-<td colspan="3">Final exam (in class). Covers through... (TBA).</td>
+<td colspan="3">Final exam (in class). Covers through 3.2.</td>
 </tr>
 
 <tr>

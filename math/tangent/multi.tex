@@ -415,6 +415,12 @@ Of course, the converse to \cref{differentiable-implies-continuous} is false. We
 	Prove that, if $f, g : S \to \R^n$ are both differentiable at an interior point $a \in S$, then $f + g$ is also differentiable at $a$ and \[ d(f+g)_a = df_a + dg_a. \]
 \end{exercise}
 
+\begin{solution}{\cref{sum-rule}}
+	Observe that 
+	\[ |(f+g)(a+h)-(f+g)(a)-(df_a+dg_a)(h)| = |f(a+h) - f(a) - df_a(h) + g(a+h) - g(a) - dg_a(h)| \leq |f(a+h) - f(a) - df_a(h)| + |g(a+h) - g(a) - dg_a(h)|. \]
+	Both $|f(a+h) - f(a) - df_a(h)|$ and $|g(a+h) - g(a) - dg_a(h)|$ are $o(|h|)$ by definition of the derivative, so it follows from \cref{little-o-vector-space,less-than-small-is-small} that $|(f+g)(a+h)-(f+g)(a)-(df_a+dg_a)(h)|$ is $o(|h|)$. Thus $df_a + dg_a = d(f+g)_a$. 
+\end{solution}
+
 \begin{exercise}[Scalar multiples rule] \label{scalar-multiples-rule} \index{scalar multiples rule}
 	Prove that, if $c$ is a constant and $f : S \to \R^n$ is differentiable at an interior point $a \in S$, then $cf$ is also differentiable at $a$ and \[ d(cf)_a = c \cdot df_a. \]
 \end{exercise}
@@ -831,6 +837,8 @@ Here are several examples to drive home these points. They're useful examples to
 \end{exercise}
 
 Thankfully, the failure of partial derivatives to imply differentiability is relatively pathological. \Cref{continuous-partials} below proves that the partial derivatives existing \emph{and being continuous} is sufficient to guarantee differentiability. 
+
+% TODO: Derivatives along curves
 
 \subsection{Jacobian matrix}
 

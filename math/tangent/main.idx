@@ -182,7 +182,7 @@
 \indexentry{open!open map|hyperpage}{156}
 \indexentry{coordinates|hyperpage}{156}
 \indexentry{transition function|hyperpage}{157}
-\indexentry{compatibile|hyperpage}{157}
+\indexentry{compatibile|hyperpage}{158}
 \indexentry{atlas|hyperpage}{160}
 \indexentry{atlas!maximal atlas|hyperpage}{160}
 \indexentry{maximal atlas|hyperindexformat{\see {atlas, maximal atlas}}}{160}
@@ -193,8 +193,8 @@
 \indexentry{s1@$S^1$|hyperindexformat{\see {circle}}}{163}
 \indexentry{circle|hyperpage}{163}
 \indexentry{homeomorphism|hyperpage}{163}
-\indexentry{sn@$S^n$|hyperindexformat{\see {$n$-sphere}}}{165}
-\indexentry{n-sphere@$n$-sphere|hyperpage}{165}
+\indexentry{sn@$S^n$|hyperindexformat{\see {$n$-sphere}}}{163}
+\indexentry{n-sphere@$n$-sphere|hyperpage}{163}
 \indexentry{mnm@$\mathscr{M}_{n \times m}$|hyperpage}{165}
 \indexentry{canonical topology|hyperpage}{165}
 \indexentry{homeomorphism|hyperpage}{165}
@@ -204,11 +204,11 @@
 \indexentry{p1@$\bbP^1$|hyperindexformat{\see {projective line}}}{169}
 \indexentry{projective plane|hyperpage}{169}
 \indexentry{p2@$\bbP^2$|hyperindexformat{\see {projective plane}}}{169}
-\indexentry{smooth|hyperpage}{177}
-\indexentry{smooth|hyperpage}{180}
+\indexentry{smooth|hyperpage}{178}
+\indexentry{smooth|hyperpage}{181}
 \indexentry{diffeomorphism|hyperpage}{183}
-\indexentry{local diffeomorphism|hyperindexformat{\see {diffeomorphism, local diffeomorphism}}}{183}
-\indexentry{diffeomorphism!local diffeomorphism|hyperpage}{183}
+\indexentry{local diffeomorphism|hyperindexformat{\see {diffeomorphism, local diffeomorphism}}}{184}
+\indexentry{diffeomorphism!local diffeomorphism|hyperpage}{184}
 \indexentry{curve|hyperpage}{185}
 \indexentry{equivalence!of curves|hyperpage}{185}
 \indexentry{tangent space|hyperpage}{186}

@@ -150,42 +150,42 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.A}First examples}{162}{subsection.639}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.B}M\"obius strip}{166}{subsection.667}
+\contentsline {subsection}{\numberline {3.2.B}M\"obius strip}{166}{subsection.666}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.C}More quotient examples}{168}{subsection.673}
+\contentsline {subsection}{\numberline {3.2.C}More quotient examples}{168}{subsection.672}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.D}Submanifolds}{169}{subsection.678}
+\contentsline {subsection}{\numberline {3.2.D}Submanifolds}{169}{subsection.677}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.E}Submanifolds of euclidean space}{173}{subsection.692}
+\contentsline {subsection}{\numberline {3.2.E}Submanifolds of euclidean space}{174}{subsection.696}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Smooth functions}{177}{section.707}
+\contentsline {section}{\numberline {3.3}Smooth functions}{177}{section.708}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.A}Smooth real-valued functions}{177}{subsection.708}
+\contentsline {subsection}{\numberline {3.3.A}Smooth real-valued functions}{178}{subsection.709}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.B}Smooth functions between manifolds}{180}{subsection.728}
+\contentsline {subsection}{\numberline {3.3.B}Smooth functions between manifolds}{181}{subsection.729}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.C}Paths}{182}{subsection.741}
+\contentsline {subsection}{\numberline {3.3.C}Paths}{183}{subsection.742}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.D}Diffeomorphisms}{182}{subsection.742}
+\contentsline {subsection}{\numberline {3.3.D}Diffeomorphisms}{183}{subsection.743}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Tangent Spaces}{185}{chapter.749}
+\contentsline {chapter}{\numberline {4}Tangent bundle}{185}{chapter.750}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Tangent space}{185}{section.750}
+\contentsline {section}{\numberline {4.1}Tangent space}{185}{section.751}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.A}Curves based at a point}{185}{subsection.751}
+\contentsline {subsection}{\numberline {4.1.A}Curves based at a point}{185}{subsection.752}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.B}Vector space structure}{186}{subsection.756}
+\contentsline {subsection}{\numberline {4.1.B}Vector space structure}{186}{subsection.757}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.C}Derivations $\star $}{190}{subsection.774}
+\contentsline {subsection}{\numberline {4.1.C}Derivations $\star $}{190}{subsection.775}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Pushforward}{192}{section.783}
+\contentsline {section}{\numberline {4.2}Pushforward}{192}{section.784}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.A}Definition of the pushforward}{192}{subsection.784}
+\contentsline {subsection}{\numberline {4.2.A}Definition of the pushforward}{192}{subsection.785}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.B}Rank of a smooth map}{194}{subsection.791}
+\contentsline {subsection}{\numberline {4.2.B}Rank of a smooth map}{194}{subsection.792}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Selected solutions}{195}{appendix.795}
+\contentsline {chapter}{\numberline {A}Selected solutions}{195}{appendix.796}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{199}{chapter*.796}
+\contentsline {chapter}{\nonumberline Bibliography}{199}{chapter*.797}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Index}{201}{chapter*.797}
+\contentsline {chapter}{\nonumberline Index}{201}{chapter*.798}
