@@ -19,33 +19,33 @@ At this point, we will need to use the language of topological spaces. If you've
 Throughout this section, let $X$ be a topological space.\index{topological space} Recall that we want for $X$ to be ``locally flat.'' Formally, this means that we can cover $X$ with open subsets, each of which is ``flat'' in the sense that it is homeomorphic to an open subset of $\R^n$. Notice that, if we remember not just the fact that each open subset $U$ in that cover is homeomorph\emph{ic} to $\R^n$, but the actual homeomorph\emph{ism}, then we can transfer the usual coordinate system on $\R^n$ through the homeomorphism onto $U$. In other words, a homeomorphism between $U$ and an open subset of $\R^n$ tells us both that $U$ is ``flat,'' and gives us a coordinate system on $U$. This is precisely what's accomplished by the following definition. 
 
 \begin{definition}[Chart] \index{chart}
-	A \emph{chart} on $X$ is a pair $(U, x)$ consisting of an open subset $U \subseteq X$ and a continuous, open\index{open!open map}, and injective function $x : U \to \R^n$ for some $n$. 
+	A \emph{chart} on $X$ is a pair $(U, \phi)$ consisting of an open subset $U \subseteq X$ and a continuous, open\index{open!open map}, and injective function $\phi : U \to \R^n$ for some $n$. 
 	\begin{itemize}
-		\item The integer $n$ is called the \emph{dimension} of the chart, and write $\dim (U,x)$ to denote it. 
+		\item The integer $n$ is called the \emph{dimension} of the chart, and write $\dim (U,\phi)$ to denote it. 
 		\item The function $x$ is called the \emph{coordinate function} of the chart. 
-		\item If $p \in X$, we say that the chart $(U,x)$ \emph{contains} $p$ if $p \in U$. If $(U,x)$ contains $p$ and $x(p) = 0$, we say that $(U,x)$ is \emph{centered at} $p$. 
-		\item For all $i = 1, \dotsc, n$, we define $x_i := \pi_i \circ x$. For any $p \in U$, the real numbers $x_1(p), \dotsc, x_n(p)$ are called the \emph{coordinates of $p$ with respect to the chart  $(U,x)$}.\index{coordinates}
+		\item If $a \in X$, we say that the chart $(U,\phi)$ \emph{contains} $a$ if $a \in U$. If $(U,\phi)$ contains $a$ and $\phi(a) = 0$, we say that $(U,\phi)$ is \emph{centered at} $a$. 
+		\item For all $i = 1, \dotsc, n$, we define $\phi_i := \pi_i \circ \phi$. For any $a \in U$, the real numbers $\phi_1(a), \dotsc, \phi_n(a)$ are called the \emph{coordinates of $a$ with respect to the chart  $(U,\phi)$}.\index{coordinates}
 	\end{itemize} 
 \end{definition}
 
 \begin{example} \label{polar-representation}
 	Let $X = \R^2$ and let $U$ denote $\R^2$ minus the non-negative $x$-axis. In other words, 
 	\[ U = \{(x,y) : x < 0 \text{ or } y \neq 0 \}. \]
-	Let $\rho : U \to \R^2$ be the function which sends a point $p$ to its polar representation $\rho(p) = (r(p), \theta(p))$, where $r(p) = |p|$ and $\theta(p)$ is the angle in radians strictly between 0 and $2\pi$ formed between $p$ and the non-negative real axis. Then $(U, \rho)$ is a chart. 
+	Let $\phi : U \to \R^2$ be the function which sends a point $p$ to its polar representation $\phi(p) = (r(p), \theta(p))$, where $r(p) = |p|$ and $\theta(p)$ is the angle in radians strictly between 0 and $2\pi$ formed between $p$ and the non-negative real axis. Let us show that $(U, \phi)$ is a chart. 
 	
-	To see this, observe that $\rho$ is injective, we have
-	\[ \rho(U) = \{ (r, \theta) : r > 0, \theta \in (0, 2\pi) \}, \]
-	and the inverse function of $\rho$ is given by  $\rho^{-1}(r,\theta) = (r\cos \theta, r\sin\theta)$. Clearly $\rho^{-1}$ is continuous. In fact, it is even \'etale, since 
-	\[ \det (\rho^{-1})'(r, \theta) = \det \begin{bmatrix} \cos \theta & -r\sin\theta \\ \sin\theta & r\cos \theta \end{bmatrix} = r^2 \neq 0 \]
-	on $\rho(U)$, so the inverse function theorem \ref{inverse-function-theorem} tells us that $\rho^{-1}$ is open. This means that $\rho$ is continuous as well, proving that $(U, \rho)$ is a chart. 
+	Observe that $\phi$ is injective, we have
+	\[ \phi(U) = \{ (r, \theta) : r > 0, \theta \in (0, 2\pi) \}, \]
+	and the inverse function of $\phi$ is given by  $\phi^{-1}(r,\theta) = (r\cos \theta, r\sin\theta)$. Clearly $\phi^{-1}$ is continuous. In fact, it is even \'etale, since 
+	\[ \det (\phi^{-1})'(r, \theta) = \det \begin{bmatrix} \cos \theta & -r\sin\theta \\ \sin\theta & r\cos \theta \end{bmatrix} = r^2 \neq 0 \]
+	on $\phi(U)$, so the inverse function theorem \ref{inverse-function-theorem} tells us that $\phi^{-1}$ is open. This means that $\phi$ is continuous as well, proving that $(U, \phi)$ is a chart. 
 	
-	Notice that the chart $(U, \rho)$ contains the point $(1,1)$. We calculate the coordinates of $(1,1)$ with respect to this chart by evaluating $\rho(1,1)$. We find
+	Notice that the chart $(U, \phi)$ contains the point $(1,1)$. We calculate the coordinates of $(1,1)$ with respect to this chart by evaluating $\phi(1,1)$. We find
 	\[ \rho(1,1) = (\sqrt{1^2 + 1^2}, \arctan(1)) = (\sqrt{2}, \pi/4). \]
-	In other words, $\rho$ outputs precisely the polar representation of $(1,1)$. 
+	In other words, $\phi$ outputs precisely the polar representation of $(1,1)$. 
 \end{example}
 
 \begin{remark} \label{recentering-chart}
-	If $(U,x)$ is a chart on $X$ and $p \in U$  is a point, we can ``recenter the chart at $p$'' by replacing $x$ with the function $x' = x - x(p)$. In other words, if $x' = x - x(p)$, then $(U, x')$ is also a chart, and we have $x'(p) = 0$.
+	If $(U,\phi)$ is a chart on $X$ and $a \in U$  is a point, we can ``recenter the chart at $a$'' by replacing $\phi$ with the function $\tilde{\phi}$ given by $\tilde{\phi}(x) = \phi(x) - \phi(a)$. In other words, if $\tilde{\phi} = \phi - \phi(a)$, then $(U, \tilde{\phi})$ is also a chart, and we have $\tilde{\phi}(a) = 0$.
 \end{remark}
 
 \subsection{Compatibility of charts}
@@ -53,70 +53,71 @@ Throughout this section, let $X$ be a topological space.\index{topological space
 Charts formalize the idea of local coordinate systems; the following formalizes the idea of \emph{changing} local coordinate systems. 
 
 \begin{definition}[Transition function] \label{transition-map} \index{transition function}
-	Suppose $(U, x)$ and $(U', x')$ are charts on $X$. The \emph{transition function} from $(U, x)$ to $(U', x')$ is the function $x' \circ x^{-1}$. 
+	Suppose $(U, \phi)$ and $(V, \psi)$ are charts on $X$. The \emph{transition function} from $(U, \phi)$ to $(V, \psi)$ is the function $\psi \circ \phi^{-1}$.
 	\[ \begin{tikzcd}
-	x(U \cap U') \ar{r}{x^{-1}} & U \cap U' \ar{r}{x'} & x'(U \cap U')
+	\phi(U \cap V) \ar{r}{\phi^{-1}} & U \cap V \ar{r}{\psi} & \psi(U \cap V)
 	\end{tikzcd} \]
+	Notice that the domain $\phi(U \cap V)$ is an open subset of $\R^m$ for $m = \dim(U, \phi)$ and the codomain $\psi(U \cap V)$ is an open subset of $\R^n$ for $n = \dim(V, \psi)$. In other words, $\psi \circ \phi^{-1}$ is precisely the kind of function whose derivative we studied in \cref{multi}. 
 \end{definition}
 
 \begin{definition}[Compatibility of charts] \index{compatibile} \label{compatibility}
-	The two charts $(U, x)$ and $(U', x')$ on $X$ are \emph{smoothly compatible}, or just \emph{compatible}, if both of the transition maps between $(U, x)$ and $(U', x')$ are smooth. 
+	The two charts $(U, \phi)$ and $(V, \psi)$ on $X$ are \emph{smoothly compatible}, or just \emph{compatible}, if the transition map $\psi \circ \phi^{-1}$ from $(U, \phi)$ to $(V, \psi)$ and the transition map $\phi \circ \psi^{-1}$ from $(V, \psi)$ to $(U, \phi)$ are smooth. 
 \end{definition}
 
 \begin{example} \label{cube-not-compatible}
-	Let $\id : \R \to \R$ denote the identity map and let $h : \R \to  \R$ denote the map $h(x) = x^3$. Both maps are homeomorphisms, so $(\R, \id)$ and $(\R, h)$ are charts. However, these two charts are not compatible. The transition function from $(\R, \id)$ to $(\R, h)$ is 
-	\[ \begin{tikzcd} \R = \id(\R) \ar{r}{\id^{-1}} & \R \ar{r}{h} & h(\R) = \R, \end{tikzcd} \]
-	which is just $h$, which is in fact smooth. However, in the other direction, the transition function is 
-	\[ \begin{tikzcd} \R = h(\R) \ar{r}{h^{-1}} & \R \ar{r}{h} & \id(\R) = \R, \end{tikzcd} \]
-	which is the function $h^{-1}(x) = \sqrt[3]{x}$. In other words, the transition function from $(\R, h)$ to $(\R, \id)$ is not differentiable. 
+	Let $\id : \R \to \R$ denote the identity map and let $\phi : \R \to  \R$ denote the map $\phi(x) = x^3$. Both maps are homeomorphisms, so $(\R, \id)$ and $(\R, \phi)$ are charts. However, these two charts are not compatible. The transition function from $(\R, \id)$ to $(\R, \phi)$ is 
+	\[ \begin{tikzcd} \R = \id(\R) \ar{r}{\id^{-1}} & \R \ar{r}{\phi} & \phi(\R) = \R, \end{tikzcd} \]
+	which is just $\phi$, which is in fact smooth. However, in the other direction, the transition function is 
+	\[ \begin{tikzcd} \R = \phi(\R) \ar{r}{\phi^{-1}} & \R \ar{r}{\phi} & \id(\R) = \R, \end{tikzcd} \]
+	which is the function $\phi^{-1}(x) = \sqrt[3]{x}$. In other words, the transition function from $(\R, \phi)$ to $(\R, \id)$ is not even differentiable. 
 \end{example}
 
 \begin{exercise}
-	Determine whether or not each of the following charts $(U, h)$ is compatible with $(\R, \id)$.
+	Determine whether or not each of the following charts $(U, \phi)$ is compatible with $(\R, \id)$.
 	\begin{enumerate}[(a)]
-		\item $U = \R$ and $h(x) = 2x$.
-		\item $U = \R$ and $h(x) = -x$. 
-		\item $U = \R$ and $h(x) = x|x|$. 
-		\item $U = \R$ and $h(x) = -x^3$. 
-		\item $U = (-\pi/2, \pi/2)$ and $h(x) = \tan(x)$. 
-		\item $U = (0, \infty)$ and $h(x) = \ln(x)$. 
-		\item $U = \R$ and $h(x) = x^5$. 
+		\item $U = \R$ and $\phi(x) = 2x$.
+		\item $U = \R$ and $\phi(x) = -x$. 
+		\item $U = \R$ and $\phi(x) = x|x|$. 
+		\item $U = \R$ and $\phi(x) = -x^3$. 
+		\item $U = (-\pi/2, \pi/2)$ and $\phi(x) = \tan(x)$. 
+		\item $U = (0, \infty)$ and $\phi(x) = \ln(x)$. 
+		\item $U = \R$ and $\phi(x) = x^5$. 
 	\end{enumerate}
-	Use these examples to formulate a conjecture for determining when a chart $(U, h)$ on $\R$ is compatible with $(\R, \id)$. Then prove your conjecture. 
+	Use these examples to formulate a conjecture for determining when a chart $(U, \phi)$ on $\R$ is compatible with $(\R, \id)$. Then prove your conjecture. 
 \end{exercise}
 
 \begin{example} \label{polar-compatible-with-identity}
-	Let $\id : \R^2 \to \R^2$ denote the identity map and $\rho : U \to \R^2$ the polar representation map from \cref{polar-representation}. The two charts $(\R^2, \id)$ and $(U, \rho)$ are compatible. To see this, observe that the transition function from $(U, \rho)$ to $(\R^2, \id)$ is the function
-	\[ \begin{tikzcd} \rho(U) \ar{r}{\rho^{-1}} & U \ar{r}{\id} & \id(U) = U, \end{tikzcd} \]
-	which is just $\rho^{-1}$. We saw in \cref{polar-representation} that $\rho^{-1}$ is given explicitly by \[ \rho^{-1}(r, \theta) = (r\cos\theta, r\sin\theta), \]
-	which is a smooth function. Going the other way, the transition function from $(\R^2, \id)$ to $(U, \rho)$ is precisely $\rho$. 
-	\[ \begin{tikzcd} U = \id(U) \ar{r}{\id^{-1}} \ar{r} & U \ar{r}{\rho} & \rho(U) \end{tikzcd} \]
-	As we saw in \cref{polar-representation}, the map $\rho^{-1}$ is \'etale, so its inverse function $\rho$ is smooth. Thus both transition functions are smooth, so the two charts are compatible. 
+	Let $\id : \R^2 \to \R^2$ denote the identity map and $\phi : U \to \R^2$ the polar representation map from \cref{polar-representation}. The two charts $(\R^2, \id)$ and $(U, \rho)$ are compatible. To see this, observe that the transition function from $(U, \phi)$ to $(\R^2, \id)$ is the function
+	\[ \begin{tikzcd} \phi(U) \ar{r}{\phi^{-1}} & U \ar{r}{\id} & \id(U) = U, \end{tikzcd} \]
+	which is just $\phi^{-1}$. We saw in \cref{polar-representation} that $\phi^{-1}$ is given explicitly by \[ \phi^{-1}(r, \theta) = (r\cos\theta, r\sin\theta), \]
+	which is a smooth function. Going the other way, the transition function from $(\R^2, \id)$ to $(U, \phi)$ is precisely $\phi$. 
+	\[ \begin{tikzcd} U = \id(U) \ar{r}{\id^{-1}} \ar{r} & U \ar{r}{\phi} & \phi(U) \end{tikzcd} \]
+	As we saw in \cref{polar-representation}, the map $\phi^{-1}$ is \'etale, so its inverse function $\phi$ is smooth by \cref{ck-stable-inversion}. Thus both transition functions are smooth, so the two charts are compatible. 
 \end{example}
 
 \begin{exercise}
-	Show that two charts $(U,x)$ and $(U', x')$ are compatible if and only if the transition function from $(U, x)$ to $(U',x')$ is smooth and \'etale. 
+	Show that two charts $(U,\phi)$ and $(V, \psi)$ are compatible if and only if the transition function from $(U, \phi)$ to $(V,\psi)$ is smooth and \'etale. 
 \end{exercise}
 
 \begin{exercise}
-	Suppose $(U, x)$ is a chart and $p \in X$ is a point. Consider the recentered chart $(U, x')$ where $x' = x - x(p)$, as in \cref{recentering-chart}. Show that $(U, x)$ and $(U, x')$ are compatible. 
+	Suppose $(U, \phi)$ is a chart and $a \in X$ is a point. Consider the recentered chart $(U, \tilde{\phi})$ where $\tilde{\phi} = \phi - \phi(a)$, as in \cref{recentering-chart}. Show that $(U, \phi)$ and $(U, \tilde{\phi})$ are compatible. 
 \end{exercise}
 
 \begin{remark} \label{compatibility-not-equivalence-relation}
-	An important cautionary observation is that compatibility of charts is \emph{not} an equivalence relation on the set of all charts. It is certainly reflexive and symmetric, but it fails to be transitive. For example, let $h(x) = x^3$ and then consider the three charts $(\R, \id), (\R \setminus \{0\}, h)$, and $(\R, h)$. The first two are compatible with each other, and the second two are compatible with each other, but the first and third are \emph{not} compatible with each other. See \cref{cube-not-compatible}. 
+	An important cautionary observation is that compatibility of charts is \emph{not} an equivalence relation on the set of all charts. It is certainly reflexive and symmetric, but it fails to be transitive. For example, let $\phi(x) = x^3$ and then consider the three charts $(\R, \id), (\R \setminus \{0\}, \phi)$, and $(\R, \phi)$. The first two are compatible with each other, and the second two are compatible with each other, but the first and third are \emph{not} compatible with each other (cf.  \cref{cube-not-compatible}). 
 \end{remark}
 
 \begin{exercise} \label{dimension-well-defined}
-	Suppose $(U, x)$ and $(U', x')$ are compatible charts and that the intersection $U \cap U'$ is nonempty. Show that $\dim(U,x) = \dim(U',x')$. 
+	Suppose $(U, \phi)$ and $(V, \psi)$ are compatible charts and that the intersection $U \cap V$ is nonempty. Show that $\dim(U,\phi) = \dim(V,\psi)$. 
 	\begin{hint}
-		Pick a point $p \in U \cap V$, and observe that the two transition functions between $(U, x)$ and $(U', x')$ are inverses of each other. What can you say about the total derivatives of the transition functions at $x(p)$ and $x'(p)$?
+		Fix a point $a \in U \cap V$, and consider the derivative of the transition function $\psi \circ \phi^{-1}$ at $\phi(a)$. 
 	\end{hint}
 \end{exercise}
 
 \subsection{Atlases and manifolds}
 
 \begin{definition}[Atlas] \index{atlas} \index{atlas!maximal atlas} \index{maximal atlas|see {atlas, maximal atlas}}
-	An \emph{atlas} on $X$ is a collection $\mathscr{A}$ of compatible charts such that covers $X$. In other words, a collection $\mathscr{A}$ of charts is an atlas if every pair of charts in $\mathscr{A}$ is compatible, and \[ \bigcup_{(U, x) \in \mathscr{A}} U = X. \]
+	An \emph{atlas} on $X$ is a collection $\mathscr{A}$ of compatible charts such that covers $X$. In other words, a collection $\mathscr{A}$ of charts is an atlas if every pair of charts in $\mathscr{A}$ is compatible, and \[ \bigcup_{(U, \phi) \in \mathscr{A}} U = X. \]
 	If $\mathscr{A}'$ is also an atlas and $\mathscr{A}' \subseteq \mathscr{A}$, we say that $\mathscr{A}'$ is a \emph{sub-atlas} of $\mathscr{A}$. An atlas is \emph{maximal} if there is no strictly larger atlas containing it.
 \end{definition}
 
@@ -147,7 +148,7 @@ This leads us to the following definition.
 	A \emph{smooth manifold}, or just a \emph{manifold}, is a pair $(X, \mathscr{A}_X)$ where $X$ is a topological space and $\mathscr{A}_X$ is a maximal atlas. Often, we just write ``$X$'' in place of the pair $(X, \mathscr{A}_X)$. Sometimes the maximal atlas $\mathscr{A}_X$ is called the \emph{manifold structure} or the \emph{smooth structure} on $X$.
 \end{definition}
 
-\Cref{existence-maximal-atlas} tells us that any not-necessarily-maximal atlas on a topological space $X$ can be extended uniquely to a maximal atlas, thus giving $X$ the structure of a manifold. When constructing examples, we will usually give an explicit non-maximal atlas and then use \cref{existence-maximal-atlas} to extend it to a maximal atlas; it is difficult to describe maximal atlases explicitly. But it is often convenient for theorem statements and abstract proofs to assume that the atlas that the manifold comes equipped with is already maximal, which is why the definition is made the way it is.
+\Cref{existence-maximal-atlas} tells us that any not-necessarily-maximal atlas on a topological space $X$ can be extended uniquely to a maximal atlas, thus giving $X$ the structure of a manifold. When constructing examples, we will usually give an explicit finite non-maximal atlas and then use \cref{existence-maximal-atlas} to extend it to a maximal atlas; it is difficult to describe maximal atlases explicitly, because there are many, many charts in maximal atlases. But it is often convenient for theorem statements and abstract proofs to assume that the atlas that the manifold comes equipped with is already maximal, which is why the definition is made the way it is.
 
 \begin{unimportantremark}
 	For any $k = 0, 1, 2, \dotsc, \infty$, we could define charts to be \emph{$C^k$-compatible} by requiring that the transition functions between them are $C^k$ (rather than smooth, as in \cref{compatibility}). This would lead to a definition of \emph{$C^k$-manifolds}. In these notes, we'll just stick to the $k = \infty$ case.  
@@ -156,21 +157,21 @@ This leads us to the following definition.
 \subsection{Dimension}
 
 \begin{definition}[Dimension] \index{dimension!of a manifold}
-	Suppose $X$ is a manifold and $p \in X$ is a point. By \cref{dimension-well-defined}, there is a unique integer $n$ such that $\dim(U,x) = n$ for every chart $(U, x) \in \mathscr{A}_X$ containing $p$. This integer is called the \emph{dimension of $X$ at $p$}, and is denoted $\dim_p(X)$. If there exists a single integer $n$ such that $\dim_p(X) = n$ for all $p \in X$, we say that $X$ is \emph{equidimensional} and that the \emph{dimension of $X$} is $n$. 
+	Suppose $X$ is a manifold and $a \in X$ is a point. By \cref{dimension-well-defined}, there is a unique integer $n$ such that $\dim(U,\phi) = n$ for every chart $(U, \phi) \in \mathscr{A}_X$ containing $a$. This integer is called the \emph{dimension of $X$ at $a$}, and is denoted $\dim_a(X)$. If there exists a single integer $n$ such that $\dim_x(X) = n$ for all $x \in X$, we say that $X$ is \emph{equidimensional} and that the \emph{dimension of $X$} is $n$. 
 \end{definition}
 
 \begin{proposition}
-	If the set $\N$ of natural numbers is given the discrete topology, the function $X \to \N$ given by $p \mapsto \dim_p(X)$ is continuous. In particular, if $X$ is a nonempty connected manifold, it must be equidimensional. 
+	If the set $\N$ of natural numbers is given the discrete topology, the function $X \to \N$ given by $x \mapsto \dim_x(X)$ is continuous. In particular, if $X$ is a nonempty connected manifold, it must be equidimensional. 
 \end{proposition}
 
 \begin{proof}
-	To show that $p \mapsto \dim_p(X)$ is continuous, we want to show that, for any natural number $n$, the set 
-	\[ X_n = \{ p \in X : \dim_p(X) = n \} \]
-	is an open subset of $X$. Suppose $p \in  X_n$. Let $(U, x)$ be a chart containing $p$. Then $\dim(U,x) = n$, and we have $\dim_q(X) = n$ for all $q \in U$. In other words, $U \subseteq X_n$. Thus every point in $X_n$ is contained inside an open neighborhood that is entirely contained in $X_n$, so $X_n$ is open. 
+	To show that $x \mapsto \dim_x(X)$ is continuous, we want to show that, for any natural number $n$, the set 
+	\[ X_n = \{ x \in X : \dim_x(X) = n \} \]
+	is an open subset of $X$. Suppose $a \in  X_n$. Let $(U, \phi)$ be a chart containing $a$. Then $\dim(U,\phi) = n$, and we have $\dim_x(X) = n$ for all $x \in U$. In other words, $U \subseteq X_n$. Thus, for every $a \in X_n$, there exists an open neighborhood of $a$ that is entirely contained inside $X_n$, so $X_n$ is open. 
 	
-	Now suppose $X$ is connected and $p \in X$. Let $n = \dim_p(X)$, so that $p \in X_n$. Then 
+	Now suppose $X$ is connected and $a \in X$. Let $n = \dim_a(X)$, so that $a \in X_n$. Then 
 	\[ X \setminus X_n = \bigcup_{m \neq n} X_m \]
-	is open, so $X_n$ is a nonempty subset of $X$ that is both open and closed. Since $X$ is connected, we conclude that $X = X_n$. In other words, $X$ is equidimensional of dimension $n$. 
+	is a union of open sets and is therefore also open. Thus $X_n$ is a nonempty subset of $X$ that is both open and closed. Since $X$ is connected, we conclude that $X = X_n$. In other words, $X$ is equidimensional of dimension $n$. 
 \end{proof}
 
 \section{Examples}
@@ -180,37 +181,33 @@ This leads us to the following definition.
 \subsubsection*{Euclidean space}
 
 \begin{example} \label{natural-euclidean-atlas}
-	The single chart $(\R^n, \id)$, where $\id : \R^n \to \R^n$ is the identity map, defines an atlas on $\R^n$. We can extend this to a maximal atlas, called the \emph{euclidean atlas} on $\R^n$. Unless explicitly specified otherwise, we always regard $\R^n$ as a manifold by equipping it with the euclidean atlas. By \cref{polar-compatible-with-identity}, the polar representation chart $(U, \rho)$ is an element of the euclidean atlas. 
+	The single chart $(\R^n, \id)$, where $\id : \R^n \to \R^n$ is the identity map, defines an atlas on $\R^n$. We can extend this to a maximal atlas, called the \emph{euclidean atlas} on $\R^n$. Unless explicitly specified otherwise, we always regard $\R^n$ as a manifold by equipping it with the euclidean atlas. The polar representation chart of  \cref{polar-representation,polar-compatible-with-identity} is an element of the euclidean atlas on $\R^2$. 
 \end{example}
 
 \begin{exercise}
-	For any $r > 0$, let $h_r : \R \to \R$ be the function
-	\[ h_r(t) = \begin{cases} t & \text{if } t \leq 0 \\ rt & \text{if } t > 0. \end{cases} \]
-	Note that $h_r$ is continuous and strictly increasing (hence also injective and open, by \cref{strictly-monotone-iff-injective,strictly-monotone-implies-open}), so $(\R, h_r)$ is a chart. Note also that $h_1 = \id$. 
+	For any $r > 0$, let $\phi_r : \R \to \R$ be the function
+	\[ \phi_r(t) = \begin{cases} t & \text{if } t \leq 0 \\ rt & \text{if } t > 0. \end{cases} \]
+	Note that $\phi_r$ is continuous and strictly increasing (hence also injective and open, by \cref{strictly-monotone-iff-injective,strictly-monotone-implies-open}), so $(\R, \phi_r)$ is a chart. Note also that $\phi_1 = \id$. 
 	\begin{enumerate}[(a)]
-		\item Show that $h_s \circ h_r = h_{sr}$ and that $h_r^{-1} = h_{1/r}$. 
-		\item Show that $(\R, h_r)$ and $(\R, h_s)$ are compatible if and only if $r = s$.
-		\item Let $\mathscr{A}_r$ be the maximal atlas obtained by extending $(\R, h_r)$. What can you say about $\mathscr{A}_r$ and $\mathscr{A}_s$ if $r \neq s$? Are any of these the euclidean atlas? What can you conclude about the number of maximal atlases on $\R$?
+		\item Show that $\phi_s \circ \phi_r = \phi_{sr}$ and that $(\phi_r)^{-1} = \phi_{1/r}$. 
+		\item Show that $(\R, \phi_r)$ and $(\R, \phi_s)$ are compatible if and only if $r = s$.
+		\item Let $\mathscr{A}_r$ be the maximal atlas obtained by extending $(\R, \phi_r)$. What can you say about $\mathscr{A}_r$ and $\mathscr{A}_s$ if $r \neq s$? Are any of these the euclidean atlas? What can you conclude about the number of maximal atlases on $\R$?
 	\end{enumerate}  
 \end{exercise}
 
-\begin{exercise}
-	Let $h : \R \to \R$ be the function $h(t) = t^3$. Note that $h$ is continuous and strictly increasing, so $(\R, h)$ is a chart (by \cref{strictly-monotone-iff-injective,strictly-monotone-implies-open}). Show that $(\R, f)$ is \emph{not} a member of the euclidean atlas on $\R$. 
-\end{exercise}
-
 \begin{exercise} \label{euclidean-chart-characterization}
-	Suppose $U$ is an open subset of $\R^n$ and $f : U \to \R^n$ is a function. Show that the pair $(U, f)$ is a chart in the euclidean atlas on $\R^n$ if and only if $f$ is smooth, injective, and \'etale.
+	Suppose $U$ is an open subset of $\R^n$ and $\phi : U \to \R^n$ is a function. Show that the pair $(U, \phi)$ is a chart in the euclidean atlas on $\R^n$ if and only if $\phi$ is injective, smooth, and \'etale.
 \end{exercise}
 
 \subsubsection*{Circles and spheres}
 
 \begin{exercise}[The circle $S^1$] \index{s1@$S^1$|see {circle}} \index{circle} \label{circle-projection-atlas}
 	Let $S^1$ denote the set of points in $\R^2$ along the unit circle. In other words,
-	\[ S^1 = \{ (a, b) \in \R^2 : a^2 + b^2 = 1 \}. \]
+	\[ S^1 = \{ (x, y) \in \R^2 : x^2 + y^2 = 1 \}. \]
 	\begin{enumerate}[(a)]
 		\item Do \cref{metric-subspace}. This shows that both ways that we might think to regard $S^1$ as a topological space are actually the same. 
 		
-		\item Let $U = S^1 \setminus \{(0,1)\}$. For $p \in S^1$, let $x(p)$ denote the $x$-coordinate of the point where the line $y = -1$ intersects the line passing through $(0,1)$ and $p$. This is sometimes called ``projection from the north pole.'' See \cref{circle-projection}. If $p = (a, b)$, find a formula for $x(p)$ in terms of $a$ and $b$. 
+		\item Let $U = S^1 \setminus \{(0,1)\}$. For a point $a \in S^1$, let $\phi(a)$ denote the $x$-coordinate of the point where the line $y = -1$ intersects the line passing through $(0,1)$ and $a$. This is sometimes called ``projection from the north pole.'' See \cref{circle-projection}. If $a = (x,y)$, find an explicit formula for $\phi(a)$ in terms of $x$ and $y$. 
 		
 		\begin{figure}
 			\begin{center}
@@ -238,30 +235,30 @@ This leads us to the following definition.
 				\addplot[black,<->] expression[domain=-1.5:1.5,samples=2]{-1};
 				
 				\node[label={85:{$(0,1)$}},color=white,draw=black,circle,fill,inner sep=2pt] at (axis cs:0,1) {}; 
-				\node[label={0:{$p$}},color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:0.707,-0.707) {}; 
+				\node[label={0:{$a$}},color=black,draw=black,circle,fill,inner sep=2pt] at (axis cs:0.707,-0.707) {}; 
 				\node[color=red,draw=red,circle,fill,inner sep=2pt] at (axis cs:0.8285,-1) {}; 
 				
 				\end{axis}
 				\end{tikzpicture}
 			\end{center}
-			\caption{Given a point $p \in U = S^1 \setminus \{(0,1)\}$, we draw a line connecting $p$ to $(0,1)$, indicated in red. The point where that line intersects the line $y = -1$ (in black) is sometimes called the ``projection'' of $p$ from $(0,1)$ onto $\R \times \{-1\}$. The $x$-coordinate of this point is $x(p)$.}  \label{circle-projection}
+			\caption{Given a point $a \in U = S^1 \setminus \{(0,1)\}$, we draw a line connecting $a$ to $(0,1)$, indicated in red. The point where that line intersects the line $y = -1$ (in black) is sometimes called the ``projection'' of $a$ from $(0,1)$ onto $\R \times \{-1\}$. The $x$-coordinate of this point is $\phi(a)$.}  \label{circle-projection}
 		\end{figure}
 		
-		\item Show that $x : U \to \R$ is a homeomorphism.\index{homeomorphism} Thus $(U, x)$ is a chart on $S^1$. 
+		\item Show that $\phi : U \to \R$ is a homeomorphism.\index{homeomorphism} Thus $(U, \phi)$ is a chart on $S^1$. 
 		\begin{hint} 
-			Use geometry to write down a formula for the inverse function to $x$. 
+			Use geometry to write down a formula for the inverse function to $\phi$. 
 		\end{hint}
 		
-		\item Let $U' = S^1 \setminus \{(0,-1)\}$. For $p \in U'$, let $x'(p)$ denote the $x$-coordinate of the point where the line $y = 1$ intersects the line passing through $(0,-1)$ and $p$. Show that $x' : U' \to \R$ is also a homeomorphism. 
+		\item Let $V = S^1 \setminus \{(0,-1)\}$. For $a \in V$, let $\psi(a)$ denote the $x$-coordinate of the point where the line $y = 1$ intersects the line passing through $(0,-1)$ and $a$. Show that $\psi : V \to \R$ is also a homeomorphism. 
 		
-		\item Show that $(U, x)$ and $(U', x')$ are compatible charts. Thus $\mathscr{A} = \{(U, x), (U', x')\}$ is an atlas on $S^1$. Extending $\mathscr{A}$ to a maximal atlas $\mathscr{A}_{S^1}$, we have defined a manifold structure on $S^1$.
+		\item Show that $(U, \phi)$ and $(V, \psi)$ are compatible charts. Thus $\mathscr{A} = \{(U, \phi), (V, \psi)\}$ is an atlas on $S^1$. Extending $\mathscr{A}$ to a maximal atlas $\mathscr{A}_{S^1}$, we have defined a manifold structure on $S^1$.
 		
-		\item Let $V = \{ (a,b) \in S^1 : a > 0 \}$ be the ``right half of the circle.'' If $y : V \to \R$ is the function $y(a,b) = b$, show that $(V,y)$ is a chart and that it is compatible with the charts in the atlas $\mathscr{A}$ above. Thus $(V,y) \in \mathscr{A}_{S^1}$. 
+		\item Let $W = \{ (x,y) \in S^1 : x > 0 \}$ be the ``right half of the circle.'' If $\pi : W \to \R$ is the function $\pi(x,y) = y$, show that $(W,\pi)$ is a chart and that it is compatible with the two charts in the atlas $\mathscr{A}$ constructed above. Thus $(W, \pi) \in \mathscr{A}_{S^1}$. 
 		
-		\item Can you think of any other charts in the maximal atlas $\mathscr{A}_{S^1}$, besides the three discussed above? In other words, can you think of any other charts that are compatible with both $(U,x)$ and $(U',x')$?
+		\item Can you think of any other charts in the maximal atlas $\mathscr{A}_{S^1}$, besides the three discussed above?
 		
 		\begin{hint}
-			There are many, many possibilities here. You could look at functions $(a,b) \mapsto a$ and/or $(a,b) \mapsto b$ on other halves of the circle, besides the right half discussed in (f) above. More interestingly, you could also think about charts defined somehow using sines and cosines. 
+			There are many, many possibilities here. You could project other halves of the circle onto the $x$-axis or the $y$-axis, like in (f). More interestingly, you could also think about charts defined using trigonometric functions. 
 		\end{hint}
 	\end{enumerate}
 \end{exercise}
@@ -273,9 +270,9 @@ This leads us to the following definition.
 \subsubsection*{Matrices and vector spaces}
 
 \begin{example}[Matrices]
-	There is an isomorphism of vector spaces $x : \mathscr{M}_{n \times m} \to \R^{mn}$\index{mnm@$\mathscr{M}_{n \times m}$} where, if $A \in \mathscr{M}_{n \times m}$ has entries $a_{i,j}$, then
-	\[ x(A) = \begin{bmatrix} a_{1,1} \\ a_{1,2} \\ \vdots \\ a_{1,m} \\ a_{2,1} \\ \vdots \\ a_{n,m} \end{bmatrix}. \]
-	If we endow $\mathscr{M}_{n \times m}$ with the canonical topology,\index{canonical topology} then $x$ is automatically a homeomorphism by \cref{linear-isomorphism-homeomorphism}.\index{homeomorphism} In other words, the single chart $(\mathscr{M}_{n \times m}, x)$ is an atlas on $\mathscr{M}_{n \times m}$. Extending it to a maximal atlas using \cref{existence-maximal-atlas}, we see that we can regard $\mathscr{M}_{n,m}$ as a manifold. It is $mn$-dimensional.  
+	There is an isomorphism of vector spaces $\phi : \mathscr{M}_{n \times m} \to \R^{mn}$\index{mnm@$\mathscr{M}_{n \times m}$} where, if $A \in \mathscr{M}_{n \times m}$ has entries $a_{i,j}$, then
+	\[ \phi(A) = \begin{bmatrix} a_{1,1} \\ a_{1,2} \\ \vdots \\ a_{1,m} \\ a_{2,1} \\ \vdots \\ a_{n,m} \end{bmatrix}. \]
+	If we endow $\mathscr{M}_{n \times m}$ with the canonical topology,\index{canonical topology} then $\phi$ is automatically a homeomorphism by \cref{linear-isomorphism-homeomorphism}.\index{homeomorphism} In other words, the single chart $(\mathscr{M}_{n \times m}, \phi)$ is an atlas on $\mathscr{M}_{n \times m}$. Extending it to a maximal atlas using \cref{existence-maximal-atlas}, we see that we can regard $\mathscr{M}_{n,m}$ as a manifold. It is $mn$-dimensional.  
 \end{example}
 
 The same process discussed above allows us to regard \emph{any} finite dimensional vector space as a manifold. 
@@ -293,18 +290,18 @@ The same process discussed above allows us to regard \emph{any} finite dimension
 \end{exercise}
 
 \begin{exercise}[Open submanifolds] \label{open-submanifold}
-	Let $X$ be a manifold and $U \subseteq X$ an open subset. Show that \[ \mathscr{A}_U = \{ (V,x) \in \mathscr{A}_X : V \subseteq U \} \]
+	Let $X$ be a manifold and $U \subseteq X$ an open subset. Show that \[ \mathscr{A}_U = \{ (V,\phi) \in \mathscr{A}_X : V \subseteq U \} \]
 	is a maximal atlas on $U$. We call $U$, equipped with this maximal atlas, an \emph{open submanifold} of $X$. 
 \end{exercise}
 
 \begin{exercise}[Product manifold]
-	Let $X$ and $Y$ be manifolds. Let $\mathscr{A}$ be the set of charts of the form $(U \times V, x \times y)$, where $(U,x : U \to \R^m) \in \mathscr{A}_X$, $(V, y : V \to \R^n) \in \mathscr{A}_Y$, and $x \times y$ denotes the natural map $U \times V \to \R^m \times \R^n = \R^{m+n}$. Show that $\mathscr{A}$ is an atlas on $X \times Y$. We call $X \times Y$, equipped with the corresponding maximal atlas, the \emph{product manifold}. 
+	Let $X$ and $Y$ be manifolds. Let $\mathscr{A}$ be the set of charts of the form $(U \times V, \phi \times \psi)$, where $(U, \phi) \in \mathscr{A}_X$, $(V, \psi) \in \mathscr{A}_Y$, and $\phi \times \psi$ denotes the natural map $U \times V \to \R^m \times \R^n = \R^{m+n}$, where $m = \dim(U,\phi)$ and $n = \dim(V, \psi)$. Show that $\mathscr{A}$ is an atlas on $X \times Y$. We call $X \times Y$, equipped with the corresponding maximal atlas, the \emph{product manifold}. 
 \end{exercise}
 
 \subsection{M\"obius strip}
 
-Let $B$ denote the box $[0,1] \times (0,1)$ inside $\R^2$, and let $\sim$ be the equivalence relation on $B$ generated by declaring $(0,b) \sim (1,1-b)$ for all $b \in (0,1)$. 
-See \cref{mobius-box}. The equivalence class of a point $(a,b) \in B$ is denoted by $[a,b]$. Observe that every equivalence class contains either 1 or 2 elements. The \emph{M\"obius strip}\index{mobius strip@M\"obius strip} $M$ is the set of equivalence classes in $B$. In other words, we take the box $[0,1] \times (0,1)$ and ``glue'' its left and right edges, with a twist. If you've ever made a M\"obius strip out of paper, you can probably see that we've formalized exactly that same process. See \cref{mobius-box}, again.
+Let $B$ denote the box $[0,1] \times (0,1)$ inside $\R^2$, and let $\sim$ be the equivalence relation on $B$ generated by declaring $(0,y) \sim (1,1-y)$ for all $y \in (0,1)$. 
+See \cref{mobius-box}. The equivalence class of a point $(x,y) \in B$ is denoted by $[x,y]$. Observe that every equivalence class contains either 1 or 2 elements. The \emph{M\"obius strip}\index{mobius strip@M\"obius strip} $M$ is the set of equivalence classes in $B$. In other words, we take the box $[0,1] \times (0,1)$ and ``glue'' its left and right edges, with a twist. If you've ever made a M\"obius strip out of paper, you can probably see that we've formalized exactly that same process. See \cref{mobius-box}, again.
 
 \begin{figure}
 	\begin{center}
@@ -394,55 +391,55 @@ See \cref{mobius-box}. The equivalence class of a point $(a,b) \in B$ is denoted
 
 We regard $M$ as a topological space using the quotient topology, as in \cref{quotient-space}. To give $X$ the structure of a manifold, we will construct an atlas consisting of two charts. But, before proceeding with the formalism, let's describe the intuition. Imagine making a cut in the M\"obius strip corresponding to a vertical cut in the box $B$ (ie, a cut perpendicular to the central red circle in \cref{mobius-box}). Once we make such a cut, we can untwist the M\"obius strip and we're left with an open rectangle, which we can regard as an open subset of $\R^2$. In other words, we've defined a chart on $M$. The points along the cut are missing from this chart; but if we construct a second chart by making a second separate cut, we will have constructed two charts that cover $M$. 
 
-Let's formalize this now. The easiest place to cut is the line along which we glued the M\"obius strip in the first place. In other words, we let \[ U = \{ [a, b] \in M : a \in (0,1) \} \] 
-and let $x : U \to \R^2$ be the function $x([a,b]) = (a, b)$.
+Let's formalize this now. The easiest place to cut is the line along which we glued the M\"obius strip in the first place. In other words, we let \[ U = \{ [x, y] \in M : x \in (0,1) \} \] 
+and let $\phi : U \to \R^2$ be the function $\phi([x,y]) = (x, y)$.
 
 \begin{exercise} \label{first-chart-mobius}
-	Show that $U$ is an open subset of $M$, and that the function $x : U \to \R^2$ is well-defined, continuous, injective, and open. 
+	Show that $U$ is an open subset of $M$, and that the function $\phi : U \to \R^2$ is well-defined, continuous, injective, and open. 
 \end{exercise}
 
 \begin{solution}{\cref{first-chart-mobius}}
-	Let $\pi : B \to M$ be the map $\pi(a,b) = [a,b]$. To show that $U = \{[a,b] \in M : a \neq 0,1\}$ is open, we use the definition of the quotient topology \cref{quotient-space}, which tells us that $U$ is an open subset of $M$ precisely when $\pi^{-1}(U)$ is an open subset of $B$. But \[ \pi^{-1}(U) = B^\circ = (0,1) \times (0,1) \] is an open subset of $B$, so $U$ is open in $M$. 
+	Let $\pi : B \to M$ be the map $\pi(x,y) = [x,y]$. To show that $U = \{[x,y] \in M : x \neq 0,1\}$ is open, we use the definition of the quotient topology \cref{quotient-space}, which tells us that $U$ is an open subset of $M$ precisely when $\pi^{-1}(U)$ is an open subset of $B$. But \[ \pi^{-1}(U) = B^\circ = (0,1) \times (0,1) \] is an open subset of $B$, so $U$ is open in $M$. 
 	
-	The facts that $x : U \to \R^2$ is well-defined and injective follow immediately from the observation that every equivalence class in $U$ has exactly one element. To see that $x$ is continuous, suppose $W$ is an open subset of $\R^2$. We want to show that $x^{-1}(W)$ is open in $U$, ie, that $\pi^{-1}(x^{-1}(W))$ is open in $B$. But $\pi^{-1}(x^{-1}(W)) = B^\circ \cap W$ is an intersection of two open subsets, so it is also open. 
+	The facts that $\phi : U \to \R^2$ is well-defined and injective follow immediately from the observation that every equivalence class in $U$ has exactly one element. To see that $\phi$ is continuous, suppose $W$ is an open subset of $\R^2$. We want to show that $\phi^{-1}(W)$ is open in $U$, ie, that $\pi^{-1}(\phi^{-1}(W))$ is open in $B$. But $\pi^{-1}(\phi^{-1}(W)) = B^\circ \cap W$ is an intersection of two open subsets, so it is also open. 
 	
-	To see that $x$ is open, suppose $W$ is an open subset of $U$. We want to show that $x(W)$ is open in $\R^2$. But notice that $x(W) = \pi^{-1}(W)$, and we know that $\pi^{-1}(W)$ is open in $B$ by the definition of open subsets in the quotient topology. Moreover, $x(W) \subseteq B^\circ$, so $x(W)$ is an open subset of $B^\circ$. Since $B^\circ$ is open in $\R^2$, we conclude that $x(W)$ is open in $\R^2$. 
+	To see that $\phi$ is open, suppose $W$ is an open subset of $U$. We want to show that $\phi(W)$ is an open subset of  $\R^2$. But notice that $\phi(W) = \pi^{-1}(W)$, and we know that $\pi^{-1}(W)$ is open in $B$ by the definition of open subsets in the quotient topology. Moreover, $\phi(W) \subseteq B^\circ$, so $\phi(W)$ is an open subset of $B^\circ$. Since $B^\circ$ is open in $\R^2$, we conclude that $\phi(W)$ is open in $\R^2$. 
 \end{solution}
 
-The second chart is a bit harder to describe mathematically, but the intuitive idea is the same. We'll cut the M\"obius strip along the line corresponding the vertical line $a = 1/2$ in $B$. Formally, let \[ V = \{ [a, b] \in M : a \neq 1/2 \} \] and let $y : V \to  \R^2$ be the function defined by 
-\[ y([a,b]) = \begin{cases} (a, b) & \text{if } a < 1/2 \\ (a-1, 1-b) & \text{if } a > 1/2 \end{cases} \]
+The second chart is a bit harder to describe mathematically, but the intuitive idea is the same. We'll cut the M\"obius strip along the line corresponding the vertical line $x = 1/2$ in $B$. Formally, let \[ V = \{ [x, y] \in M : x \neq 1/2 \} \] and let $\psi : V \to  \R^2$ be the function defined by 
+\[ y([x, y]) = \begin{cases} (x, y) & \text{if } x < 1/2 \\ (x-1, 1-x) & \text{if } x > 1/2 \end{cases} \]
 
 \begin{exercise} \label{second-chart-mobius}
-	Show that $V$ is also an open subset of $M$, and that $y : V \to \R^2$ is well-defined, continuous, injective, and open. 
+	Show that $V$ is also an open subset of $M$, and that $\psi : V \to \R^2$ is well-defined, continuous, injective, and open. 
 \end{exercise}
 
 \begin{solution}{\cref{second-chart-mobius}}
-	Let $\pi : B \to M$ be the map $\pi(a,b) = [a,b]$ again. Observe that $\pi^{-1}(V) = \{ (a,b) \in B : a \neq 1/2 \}$  is an open subset of $B$ (even though it is not an open subset of $\R^2$), so by definition of the quotient topology, $V$ is an open subset of $M$. 
+	Let $\pi : B \to M$ be the map $\pi(x, y) = [x,y]$ again. Observe that $\pi^{-1}(V) = \{ (x,y) \in B : x \neq 1/2 \}$  is an open subset of $B$ (even though it is not an open subset of $\R^2$), so by definition of the quotient topology, $V$ is an open subset of $M$. 
 	
-	Let us check that $y$ is well-defined. 
-	The verification that $y$ is continuous, injective, and open will be left to the reader. Most equivalence classes have just one element, and $y$ is clearly well-defined on those equivalence classes. Equivalence classes with two points are of the form $[0,b] = [1,1-b]$ for some $b \in (0,1)$. Observe that 
-	\[ y([1,1-b]) = (0,1-(1-b)) = (0,b) = y([0,b]), \]
-	which shows that $y$ is well-defined on the equivalence classes with two elements as well. 
+	Let us check that $\psi$ is well-defined. Most equivalence classes have just one element, and $\psi$ is clearly well-defined on those equivalence classes. Equivalence classes with two points are of the form $[0,y] = [1,1-y]$ for some $y \in (0,1)$. Observe that 
+	\[ \psi([1,1-y]) = (0,1-(1-y)) = (0,y) = \psi([0,y]), \]
+	which shows that $\psi$ is well-defined on the equivalence classes with two elements as well. 
+	The verification that $\psi$ is continuous, injective, and open will be left to the reader. 
 \end{solution}
 
 \begin{exercise} \label{mobius-charts-compatible}
-	Show that $(U, x)$ and $(V, y)$ are compatible.
+	Show that $(U, \phi)$ and $(V, \psi)$ are compatible.
 \end{exercise}
 
 \begin{solution}{\cref{mobius-charts-compatible}}
-	Observe that the transition function from $(U,x)$ to $(V,y)$ is the composite 
-	\[ \begin{tikzcd} x(U \cap V) \ar{r}{x^{-1}} & U \cap V \ar{r}{y} & y(U \cap V) \end{tikzcd} \]
+	Observe that the transition function $\psi \circ  \phi^{-1}$ from $(U,\phi)$ to $(V,\psi)$ is the composite 
+	\[ \begin{tikzcd} \phi(U \cap V) \ar{r}{\phi^{-1}} & U \cap V \ar{r}{\psi} & \psi(U \cap V) \end{tikzcd} \]
 	given by 
-	\[ (y \circ x^{-1})(a,b) = y([a,b]) = \begin{cases} (a,b) & \text{if } a < 1/2 \\ (a-1, 1-b) & \text{if } a > 1/2 \end{cases} \]
+	\[ (\psi \circ \phi^{-1})(x,y) = \psi([x,y]) = \begin{cases} (x,y) & \text{if } x < 1/2 \\ (x-1, 1-y) & \text{if } x > 1/2 \end{cases} \]
 	which is clearly smooth, and 
-	\[ (y \circ x^{-1})'(a,b) = \begin{cases} \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} & \text{if } a < 1/2 \\ \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} & \text{if } a > 1/2 \end{cases} \]
-	which shows that $y \circ x^{-1}$ is \'etale. Thus the two charts are compatible. 
+	\[ (\psi \circ \phi^{-1})'(x,y) = \begin{cases} \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} & \text{if } x < 1/2 \\ \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} & \text{if } x > 1/2 \end{cases} \]
+	which shows that $\psi \circ \phi^{-1}$ is \'etale. Thus the two charts are compatible. 
 \end{solution}
 
-Thus $\mathscr{A} = \{(U, x), (V, y)\}$ is an atlas on the M\"obius strip $M$. Letting $\mathscr{A}_M$ denote the corresponding maximal atlas, we obtain the structure of a manifold on $M$.
+Thus $\mathscr{A} = \{(U, \phi), (V, \psi)\}$ is an atlas on the M\"obius strip $M$. Letting $\mathscr{A}_M$ denote the corresponding maximal atlas, we obtain the structure of a manifold on $M$.
 
 \begin{exercise}
-	Fix a constant $c \in [0,1)$, and let $U_c$ be the subset of $M$ where we've cut out the vertical line $a = c$. Show that $U_c$ is an open subset of $M$. Write down a formula for a well-defined function $x_c : U_c \to \R^2$ which is continuous, injective, and open; the image of $x_c$ should be an open box in $\R^2$, and you should recover the function $x$ above when $c = 0$, and the function $y$ when $c = 1/2$. Then show that $(U_c, x_c) \in \mathscr{A}_M$ for all $c \in [0,1)$. 
+	Fix a constant $c \in [0,1)$, and let $U_c$ be the subset of $M$ where we've cut out the vertical line $x = c$. Show that $U_c$ is an open subset of $M$. Write down a formula for a well-defined function $\phi_c : U_c \to \R^2$ which is continuous, injective, and open; the image of $\phi_c$ should be an open box in $\R^2$, and you should recover the function $\phi$ above when $c = 0$, and the function $\psi$ when $c = 1/2$. Then show that $(U_c, \phi_c) \in \mathscr{A}_M$ for all $c \in [0,1)$. 
 \end{exercise}
 
 \subsection{More quotient examples}
@@ -450,11 +447,11 @@ Thus $\mathscr{A} = \{(U, x), (V, y)\}$ is an atlas on the M\"obius strip $M$. L
 Here are some more examples of manifolds you probably recognize which you probably recognize. 
 
 \begin{exercise}[Cylinder] \label{cylinder}
-	Let $S$ denote the infinite vertical strip $[0,1] \times \R$ inside $\R^2$, and let $\sim$ be the equivalence relation generated by $(0,b) \sim (1,b)$ for all $b \in \R$. Let $C$ be the corresponding quotient space. Describe an atlas on $C$. 
+	Let $S$ denote the infinite vertical strip $[0,1] \times \R$ inside $\R^2$, and let $\sim$ be the equivalence relation generated by $(0,y) \sim (1,y)$ for all $y \in \R$. Let $C$ be the corresponding quotient space. Describe an atlas on $C$. 
 \end{exercise}
 
 \begin{exercise}[Torus] \label{torus} \index{torus}
-	Let $B$ denote the box $[0,1] \times [0,1]$ inside $\R^2$ and let $\sim$ denote the equivalence relation generated by $(a,0) \sim (a,1)$ and $(0,b) \sim (1,b)$ for all $a, b \in [0,1]$. The \emph{torus} $T$ is defined to be the corresponding quotient space. Describe an atlas on $T$. 
+	Let $B$ denote the box $[0,1] \times [0,1]$ inside $\R^2$ and let $\sim$ denote the equivalence relation generated by $(x,0) \sim (x,1)$ and $(0,y) \sim (1,y)$ for all $x,y \in [0,1]$. The \emph{torus} $T$ is defined to be the corresponding quotient space. Describe an atlas on $T$. 
 \end{exercise}
 
 % TODO: Torus picture
@@ -466,81 +463,113 @@ But sometimes quotient spaces can be very difficult to visualize directly; the o
 \end{exercise}
 
 \begin{exercise}[Projective plane] \label{rp2} \index{projective plane} \index{p2@$\bbP^2$|see {projective plane}}
-	Let $S^2$ denote the 2-sphere as in \cref{sphere-projection-atlas}. Define an equivalence relation $\sim$ on $S^2$ which identifies antipodal points; in other words, every point on $S^2$ is declared to be equivalent to the point that is diametrically opposite it. The \emph{projective plane} $\bbP^2$ is defined to be the corresponding quotient space. Describe an atlas on $\bbP^2$. 
+	Let $S^2$ denote the 2-sphere as in \cref{sphere-projection-atlas}. Define an equivalence relation $\sim$ on $S^2$ which identifies antipodal points. The \emph{projective plane} $\bbP^2$ is defined to be the corresponding quotient space. Describe an atlas on $\bbP^2$. 
 \end{exercise}
 
 \subsection{Submanifolds}
 
+We now define submanifolds. Roughly, a submanifold is a subset for which there exist charts along such that the subset looks like the coordinate hyperplanes inside that chart. Before making the formal definition, recall that, if $(U, \phi)$ is a chart, then $\phi_i = \pi_i \circ \phi$ denotes the corresponding $i$th coordinate function. 
+
 \begin{definition} \label{submanifold}
-	Suppose $S$ is a subset of a manifold $X$. Then $S$ is a \emph{submanifold} of $X$ if there exist charts $(U, x) \in \mathscr{A}_X$ covering $S$ such that 
-	\[ S \cap U = \{ p \in U :  x_1(p) = x_2(p) = \dotsb = x_k(p) = 0 \} \]
-	for some non-negative integer $k \leq \dim(U,x)$. Such a chart $(U,x)$ is said to be \emph{adapted} to $S$, and the integer $k$ is called the \emph{codimension of $S$ in $(U,x)$}. 
+	Suppose $S$ is a subset of a manifold $X$. Then $S$ is a \emph{submanifold} of $X$ if there exist charts $(U, \phi) \in \mathscr{A}_X$ covering $S$ such that 
+	\[ S \cap U = \{ x \in U :  \phi_1(x) = \phi_2(x) = \dotsb = \phi_k(x) = 0 \} \]
+	for some non-negative integer $k \leq \dim(U,x)$. Such a chart $(U,\phi)$ is said to be \emph{adapted to $S$}, or is a \emph{slice chart for $S$}. The integer $k$ is called the \emph{codimension of $S$ in $(U,\phi)$}. 
 \end{definition}
 
-We'll justify this terminology in a moment by showing that submanifolds are actually manifolds in their own right (cf. \cref{submanifolds-are-manifolds}). But first, let's discuss some examples. 
+We'll justify this terminology in a moment by showing that submanifolds are actually manifolds in their own right (cf. \cref{submanifolds-are-manifolds}). But first, let's discuss some examples. The intuition is roughly that, if a subset $S$ of $X$ is ``smooth'' and doesn't have any ``pointy'' parts, it should be a submanifold. 
 
 \begin{example}
-	Consider the set $S = \{ (0,y) \in \R^2 : -1 < x < 1 \}$ inside $\R^2$. In other words, $S$ is the open interval $(-1,1)$ along the $y$-axis inside $\R^2$. Then $S$ is a submanifold. Indeed, let $U$ be the open box $(-1,1) \times (-1,1)$ inside $\R^2$, and $x : U \to \R^2$ the inclusion map. Then $(U, x)$ is a chart on $\R^2$, and 
-	\[ S \cap U = \{ p \in S : x_1(p) = 0 \} \]
-	so $(U,x)$ is adapted to $S$ and $S$ has codimension 1 in $(U,x)$. 
+	Consider the set $S = \{ (0,y) \in \R^2 : -1 < x < 1 \}$ inside $\R^2$. In other words, $S$ is the open interval $(-1,1)$ along the $y$-axis inside $\R^2$. Then $S$ is a submanifold. Indeed, let $U$ be the open box $(-1,1) \times (-1,1)$ inside $\R^2$, and $\phi : U \to \R^2$ the inclusion map. Then $(U, \phi)$ is a chart on $\R^2$, $\phi_1(x,y) = x$, and 
+	\[ \{ (x,y) \in U : \phi_1(x, y) = 0 \} = \{ (x,y) \in U : x = 0 \} = S = S \cap U \]
+	so $(U,\phi)$ is adapted to $S$ and $S$ has codimension 1 in $(U,\phi)$. 
 \end{example}
+
+\begin{example}
+	Consider the parabola \[ S = \{ (x, y) \in \R^2 : y = x^2, x \in \R \}. \] This doesn't ahve any ``pointy'' parts, so it should be a submanifold. Let's see how. It is sufficient to produce a chart $(\R^2, \phi)$ with the property that 
+	\[ S = \{ (x,y) \in \R^2 : \phi_1(x,y) = 0 \}. \]
+	This means we should take $\phi_1(x,y) = x^2 - y$. Then $\phi_2$ should be a smooth function $\phi_2 : \R^2 \to \R$ such that $\phi = (\phi_1, \phi_2)$ is injective and \'etale. In other words, we want the Jacobian matrix 
+	\[ \phi'(x,y) = \begin{bmatrix} 2x & -1 \\ \dfrac{\partial \phi_2}{\partial x} & \dfrac{\partial \phi_2}{\partial y} \end{bmatrix} \]
+	to always be invertible. The easiest way to guarantee this is to take $\phi_2(x,y) = x$, which makes $\det \phi'(x,y) = 1$. Moreover, the function $\phi(x,y) = (x^2 - y, x)$ is injective, since if $\phi(x_1, y_1) = \phi(x_2,y_2)$, then looking at the second coordinates shows that $x_1 = x_2$, and then looking at the first coordinates shows that $y_1 = y_2$. In other words, $(\R^2, \phi)$ is a chart in the euclidean atlas which covers $S$ and is adapted to $S$, so $S$ is a submanifold of $\R^2$. 
+\end{example}
+
+% TODO: Incomplete
+
+\begin{comment}
+	The subset  
+	\[ S = \{(x,y) : y = |x|, x \in \R \} \]
+	is ``pointy'' and does \emph{not} define a submanifold of $\R^2$. To see this formally, suppose there exists a chart $(U, \phi)$ on $\R^2$ that is adapted to $S$ and contains the origin. By making $U$ smaller, we can assume that $U$ is a box of the form $(-\epsilon, \epsilon) \times (-\epsilon, \epsilon)$. Then $S \cap U$ is neither all of $U$ nor just a point, so it must be that $S$ has codimension 1 in $(U, \phi)$. In other words, 
+	\[ S \cap U = \{ (x,y) : \phi_1(x,y) = 0 \}. \]
+\end{comment}
 
 \begin{exercise}
 	Show that each of the following is a submanifold of $\R^2$. 
 	\begin{enumerate}[(a)] 
 		\item The $y$-axis. 
 		\item The open interval $(-1,1)$ along the $x$-axis.
-		\item The line $y = x$. 
+		\item The line $y = x$.  
+		\item The curve $y = x^3$.
+		\item The graph of any smooth function $f : \R \to \R$.  
 	\end{enumerate}
 \end{exercise}
 
+\begin{exercise} \label{circle-submanifold}
+	Show that the unit circle $S^1$ is a submanifold of $\R^2$. 
+	\begin{hint}
+		Let $U = \{(x,y) \in S^1 : x > 0 \}$ and let $\phi(x,y) = (x^2+y^2-1, y)$. Show that $(U, \phi)$ is a chart that is adapted to $S^1$. But this one chart does not cover the circle, so then find more charts like this one that cover the circle. 
+	\end{hint}
+\end{exercise}
+
 \begin{exercise}
-	Let $C$ be the cylinder from \cref{cylinder} and let $L$ be the line \[ L = \{ [1/2, b] \in C : b \in \R \}. \] Show that $L$ is a submanifold of $C$. 
+	Let $C$ be the cylinder from \cref{cylinder} and let $L$ be the line \[ L = \{ [1/2, y] \in C : y \in \R \}. \] Show that $L$ is a submanifold of $C$. 
 \end{exercise}
 
 We now make good on our promise of proving that submanifolds are in fact manifolds. The proof is a little long because there are a lot of details to check, but there are no real tricks or surprises. 
 
 \begin{proposition} \label{submanifolds-are-manifolds}
-	Let $S$ be a submanifold of a manifold $X$. Suppose $(U, x) \in \mathscr{A}_X$ is adapted to $S$ and $S$ has codimension $k$ in $(U, x)$. Let $x|_S : S \cap U \to \R^{n-k}$ be the function defined by 
-	\[ x|_S(p) = (x_{k+1}(p), \dotsc, x_n(p)). \]
-	Regarding $S$ as a topological space using the subspace topology, the pair $(S \cap U, x|_S)$ is a chart on $S$, and the set of all charts of this form is an atlas on $S$. Thus $S$ becomes a manifold if we equip it with the corresponding maximal atlas $\mathscr{A}_S$. Finally, if $(U, x) \in \mathscr{A}_X$ is a chart adapted to $S$ such that $S$ has codimension $k$ in $S$, then
-	\[ \dim_p(S) = \dim_p(X) - k \]
-	for all $p \in S \cap U$. 
+	Let $S$ be a submanifold of a manifold $X$. Suppose $(U, \phi) \in \mathscr{A}_X$ is adapted to $S$ and $S$ has codimension $k$ in $(U, \phi)$. Let $\phi|_S : S \cap U \to \R^{n-k}$ be the function defined by 
+	\[ \phi|_S(p) = (\phi_{k+1}(p), \dotsc, \phi_n(p)). \]
+	Regarding $S$ as a topological space using the subspace topology, the pair $(S \cap U, \phi|_S)$ is a chart on $S$, and the set of all charts of this form is an atlas on $S$. Thus $S$ becomes a manifold if we equip it with the corresponding maximal atlas $\mathscr{A}_S$. Finally, if $(U, \phi) \in \mathscr{A}_X$ is a chart adapted to $S$ such that $S$ has codimension $k$ in $S$, then
+	\[ \dim_x(S) = \dim_x(X) - k \]
+	for all $x \in S \cap U$. 
 \end{proposition}
 
 \begin{proof}
-	Observe that, by definition, $x|_S$ is the composite
+	Observe that, by definition, $\phi|_S$ is the composite
 	\[ \begin{tikzcd}
-	S \cap U \ar[hookrightarrow]{r} & U \ar{r}{x} & \R^n \ar{r}{\pi} & \R^{n-k}
+	S \cap U \ar[hookrightarrow]{r} & U \ar{r}{\phi} & \R^n \ar{r}{\pi} & \R^{n-k}
 	\end{tikzcd} \]
-	where the first map is the inclusion, and the final map $\pi : \R^n \to \R^{n-k}$ projects onto the final $n-k$ coordinates (ie, $\pi(x_1, \dotsc, x_n) = (x_{k+1}, \dotsc, x_n)$). Each of these maps is continuous, so the composite $x|_S$ is continuous as well. The proof that $x|_S$ is injective is left as an exercise (cf. \cref{submanifolds-are-manifolds-details}). 
+	where the first map is the inclusion, and the final map $\pi : \R^n \to \R^{n-k}$ projects onto the final $n-k$ coordinates (ie, $\pi(x_1, \dotsc, x_n) = (x_{k+1}, \dotsc, x_n)$). Each of these maps is continuous, so the composite $x|_S$ is continuous as well. The proof that $\phi|_S$ is injective is left as an exercise (cf. \cref{submanifolds-are-manifolds-details}). 
 	
-	Let us show that $x|_S$ is open. By definition of the subspace topology \ref{subspace-topology}, every open subset of $S \cap U$ is of the form $S \cap V$ where $V$ is an open subset of $U$. Suppose $p \in  S \cap V$. We want to show that $x|_S(p)$ is an interior point of $x|_S(S \cap V)$. Since $V$ is open in $U$ and $x : U \to \R^n$ is an open map, we know that $x(p)$ is an interior point of $x(V)$, ie, there exists $\epsilon > 0$ such that every point of $\R^n$ within $\epsilon$ of $x(p)$ is inside $x(V)$. We claim that the $\epsilon$ ball around $x|_S(p)$ is contained in $x|_S(S \cap V)$. Suppose we have $a = (a_{k+1}, \dotsc, a_n) \in \R^{n-k}$ such that $|a - x|_S(p)| < \epsilon$. We will show that $a \in x|_S(S \cap V)$. 
+	Let us show that $\phi|_S$ is open. By definition of the subspace topology \ref{subspace-topology}, every open subset of $S \cap U$ is of the form $S \cap V$ where $V$ is an open subset of $U$. Suppose $a \in  S \cap V$. We want to show that $\phi|_S(a)$ is an interior point of $\phi|_S(S \cap V)$. Since $V$ is open in $U$ and $\phi : U \to \R^n$ is an open map, we know that $\phi(a)$ is an interior point of $\phi(V)$, ie, there exists $\epsilon > 0$ such that every point of $\R^n$ within $\epsilon$ of $\phi(a)$ is inside $\phi(V)$. We claim that the $\epsilon$ ball around $\phi|_S(a)$ is contained in $\phi|_S(S \cap V)$. Suppose we have $y = (y_{k+1}, \dotsc, y_n) \in \R^{n-k}$ such that $|y - \phi|_S(a)| < \epsilon$. We will show that $y \in \phi|_S(S \cap V)$. 
 	
-	Notice that, since $(U,x)$ is adapted to $S$, the vector $x(p) \in \R^n$ is the same as $x|_S(p) \in \R^{n-k}$ except that it is prepended with $k$ zeroes. Let $\iota : \R^{n-k} \to \R^n$ be the map that preprends vectors in $\R^{n-k}$ with a string of $k$ zeroes. In other words, 
-	\[ \iota(b_{k+1}, \dotsc, b_n) = (\overbrace{0, \dotsc, 0}^{k \text{ times}}, b_{k+1}, \dotsc, b_n). \]
-	Thus $x(p) = \iota(x|_S(p))$. Now by the definition of the euclidean norm, we see that $|\iota(a) - x(p)| = |a - x|_S(p)|$, which means that $|\iota(a) - x(p)| < \epsilon$. This means that $\iota(a) \in x(V)$ due to our choice of $\epsilon$. Since $x$ is injective, there exists a unique $q \in V$ such that $x(q) = \iota(a)$. This means that the first $k$ coordinates of $q$ are zero, so $q \in S \cap U$ since $(U, x)$ is adapted to $S$. Moreover
-	\[ x|_S(q) = \pi(x(q)) = \pi(\iota(a)) = a \]
-	which shows that $a \in x|_S(S \cap V)$. 
+	Notice that, since $(U,\phi)$ is adapted to $S$, the vector $\phi(a) \in \R^n$ is the same as $\phi|_S(a) \in \R^{n-k}$ except that it is prepended with $k$ zeroes. Let $\iota : \R^{n-k} \to \R^n$ be the map that preprends vectors in $\R^{n-k}$ with a string of $k$ zeroes. In other words, 
+	\[ \iota(y_{k+1}, \dotsc, y_n) = (\overbrace{0, \dotsc, 0}^{k \text{ times}}, y_{k+1}, \dotsc, y_n). \]
+	Thus $\phi(a) = \iota(\phi|_S(a))$. Now by the definition of the either the euclidean or the max norm, we see that $|\iota(y) - \phi(a)| = |y - \phi|_S(a)|$, which means that $|\iota(y) - \phi(a)| < \epsilon$. This means that $\iota(y) \in \phi(V)$ due to our choice of $\epsilon$. Since $\phi$ is injective, there exists a unique $b \in V$ such that $\phi(b) = \iota(y)$. This means that the first $k$ coordinates of $b$ are zero, so $b \in S \cap U$ since $(U, \phi)$ is adapted to $S$. Moreover
+	\[ \phi|_S(b) = \pi(\phi(b)) = \pi(\iota(y)) = y \]
+	which shows that $y \in \phi|_S(S \cap V)$. 
 	
-	Next up, suppose $(U, x)$ and $(U', x')$ are both charts in $\mathscr{A}_X$ that are adapted to $S$. We want to show that $(S \cap U, x|_S)$ and $(S \cap U', x'|_S)$ are compatible. If $S \cap U \cap U'$ is empty, there is nothing to do, so we assume that $S \cap U \cap U'$ is nonempty. Let $k$ and $k'$ be the codimensions of $S$ in the two charts $(U, x)$ and $(U', x')$, respectively. Once we prove compatibility, it follows from \cref{dimension-well-defined} that we must have $k = k'$. 
+	Next up, suppose $(U, \phi)$ and $(U', \phi')$ are both charts in $\mathscr{A}_X$ that are adapted to $S$. We want to show that $(S \cap U, \phi|_S)$ and $(S \cap U', \phi'|_S)$ are compatible. If $S \cap U \cap U'$ is empty, there is nothing to do, so we assume that $S \cap U \cap U'$ is nonempty. Let $k$ and $k'$ be the codimensions of $S$ in the two charts $(U, \phi)$ and $(U', \phi')$, respectively. Once we prove compatibility, it follows from \cref{dimension-well-defined} that we must have $k = k'$. 
 	
 	The proof of compatibility is encapsulated by the following diagram. 
 	\[ \begin{tikzcd}
-	x|_S(S \cap U \cap U') \ar{r}{(x|_S)^{-1}} \ar{d}[swap]{\iota} & S \cap U \cap U' \ar[hookrightarrow]{d} \ar{r}{x'|_S} & x'|_S(S \cap U \cap U') \\
-	x(U \cap U') \ar{r}{x^{-1}} & U \cap U' \ar{r}{x'} & x'(U \cap U') \ar{u}[swap]{\pi'}
+	\phi|_S(S \cap U \cap U') \ar{r}{(\phi|_S)^{-1}} \ar{d}[swap]{\iota} & S \cap U \cap U' \ar[hookrightarrow]{d} \ar{r}{\phi'|_S} & \phi'|_S(S \cap U \cap U') \\
+	\phi(U \cap V) \ar{r}{\phi^{-1}} & U \cap V \ar{r}{\phi} & \phi'(U \cap V) \ar{u}[swap]{\pi'}
 	\end{tikzcd} \]
-	Here $\iota$ denotes the ``prepend with $k$ zeroes'' map, and $\pi'$ is the ``project onto the final $k'$ coordinates'' map. You should stare at the above diagram until you've convinced yourself that it ``commutes,'' ie, that the result of following any two paths of arrows that start and end at the same place ends up being the same. (The fact that the square on the left of the diagram commutes is because $(U, x)$ is adapted to $S$, and the fact that square on the right commutes is by definition of the function $x'|_S$.)
+	Here $\iota$ denotes the ``prepend with $k$ zeroes'' map, and $\pi'$ is the ``project onto the final $k'$ coordinates'' map. You should stare at the above diagram until you've convinced yourself that it ``commutes,'' ie, that the result of following any two paths of arrows that start and end at the same place ends up being the same. (The fact that the square on the left of the diagram commutes is because $(U, \phi)$ is adapted to $S$, and the fact that square on the right commutes is by definition of the function $\phi'|_S$.)
 	
-	In other words, the diagram tells us that the transition function $x'|_S \circ (x|_S)^{-1}$ is equal to $\pi' \circ (x' \circ x^{-1}) \circ \iota$. Since $(U,x)$ and $(U', x')$ are compatible, we know that $x' \circ x^{-1}$ is smooth. Thus the transition function $x'|_S \circ (x|_S)^{-1}$ is smooth. 
+	In other words, the diagram tells us that the transition function $\phi'|_S \circ (\phi|_S)^{-1}$ is equal to $\pi' \circ (\phi' \circ \phi^{-1}) \circ \iota$. Since $(U,\phi)$ and $(U', \phi')$ are compatible, we know that $\phi' \circ \phi^{-1}$ is smooth. Thus the transition function $\phi'|_S \circ (\phi|_S)^{-1}$ is smooth. 
 	
 	Since $S$ is a submanifold, we know that it can be covered by charts in $X$ that are adapted to $S$. Thus we've just shown that the set
-	\[ \mathscr{A} = \{ (S \cap U, x|_S) : (U, x) \in \mathscr{A}_X \text{ is adapted to } S \} \]
-	is an atlas on $S$. The assertion about $\dim_p(S)$ follows immediately. 
+	\[ \mathscr{A} = \{ (S \cap U, \phi|_S) : (U, \phi) \in \mathscr{A}_X \text{ is adapted to } S \} \]
+	is an atlas on $S$. The assertion about $\dim_x(S)$ follows immediately. 
 \end{proof}
 
 \begin{exercise} \label{submanifolds-are-manifolds-details}
-	Show that $x|_S$ is injective. 
+	Show that $\phi|_S$ is injective. 
+\end{exercise}
+
+\begin{exercise}
+	We now have produced two maximal atlases on the unit circle: one we produced in \cref{circle-projection-atlas}, and then another is produced by \cref{circle-submanifold,submanifolds-are-manifolds}. Show that these two maximal atlases are the same. 
 \end{exercise}
 
 We've used the word ``submanifold'' once before, in \cref{open-submanifold} where we defined ``open submanifolds.'' Let us now show that this earlier usage of the word ``submanifold'' was justified and does not produce any conflicts with our new definitions.  
@@ -552,7 +581,7 @@ We've used the word ``submanifold'' once before, in \cref{open-submanifold} wher
 		\item Show that the maximal atlas on $U$ constructed by \cref{submanifolds-are-manifolds} is equal to the atlas described in \cref{open-submanifold}. 
 	\end{enumerate}
 	\begin{hint}
-		Show that a chart $(V, x) \in \mathscr{A}_X$ is adapted to $U$ if and only if $V \subseteq U$, and that $U$ has codimension 0 in any such chart. 
+		Show that a chart $(V, \phi) \in \mathscr{A}_X$ is adapted to $U$ if and only if $V \subseteq U$, and that $U$ has codimension 0 in any such chart. 
 	\end{hint}
 \end{exercise}
 
@@ -571,18 +600,18 @@ We now have two important results which let us produce lots of examples of subma
 First up, we have the following important theorem which goes by many names, including the ``regular level set theorem,'' the ``preimage theorem'' and the ``submersion theorem.'' We will later generalize this result. 
 
 \begin{theorem}[Submersion theorem] \label{submersion-theorem-local}
-	Suppose $U$ is an open subset of $\R^m$ and $f : U \to \R^n$ is smooth and submersive. Then $S = f^{-1}(q)$ is a submanifold of $U$ of dimension $m-n$ for any $q \in \R^n$. 
+	Suppose $U$ is an open subset of $\R^m$ and $f : U \to \R^n$ is smooth and submersive. Then $S = f^{-1}(b)$ is a submanifold of $U$ of dimension $m-n$ for any $b \in f(U)$. 
 \end{theorem}
 
 \begin{proof}
-	By replacing $f$ with the function $x \mapsto f(x)-q$, we can assume without loss of generality that $q = 0$. Fix $p \in S$. We want to find a chart adapted to $S$ containing $p$. We know that $f$ is submersive at $p$, which means that the $n \times m$ matrix $f'(p)$ has a non-vanishing $n \times n$ minor, ie, there exist $n$ distinct integers $i_1, \dotsc, i_n$ between $1$ and $m$ such that 
+	By replacing $f$ with the function $x \mapsto f(x)-b$, we can assume without loss of generality that $b = 0$. Fix $a \in S$. We want to find a chart adapted to $S$ containing $p$. We know that $f$ is submersive at $a$, which means that the $n \times m$ matrix $f'(a)$ has a non-vanishing $n \times n$ minor, ie, there exist $n$ distinct integers $i_1, \dotsc, i_n$ between $1$ and $m$ such that 
 	\begin{equation} \label{derivative-non-vanishing-minor} 
-	\det \begin{bmatrix} \partial_{i_1} f_1(p) & \dotsb & \partial_{i_n} f_1(p) \\ \vdots & \ddots & \vdots \\ \partial_{i_1} f_n(p) & \dotsb & \partial_{i_n} f_n(p) \end{bmatrix} \neq 0. 
+	\det \begin{bmatrix} \partial_{i_1} f_1(a) & \dotsb & \partial_{i_n} f_1(a) \\ \vdots & \ddots & \vdots \\ \partial_{i_1} f_n(a) & \dotsb & \partial_{i_n} f_n(a) \end{bmatrix} \neq 0. 
 	\end{equation}
-	By permuting the coordinates, we can assume without loss of generality that $i_1 = 1, i_2 = 2, \dotsc, i_n = n$ (cf. \cref{permutation-submanifold}). Consider the function $y : U \to \R^m$ such that, if $x = (x_1, \dotsc, x_m) \in U$, then
-	\[ y(x) = (f_1(x), \dotsc, f_n(x), x_{n+1}, \dotsc, x_m). \]
+	By permuting the coordinates, we can assume without loss of generality that $i_1 = 1, i_2 = 2, \dotsc, i_n = n$ (cf. \cref{permutation-submanifold}). Consider the function $\phi : U \to \R^m$ such that, if $x = (x_1, \dotsc, x_m) \in U$, then
+	\[ \phi(x) = (f_1(x), \dotsc, f_n(x), x_{n+1}, \dotsc, x_m). \]
 	Then
-	\[ y'(x) = 
+	\[ \phi'(x) = 
 	\begin{bmatrix} 
 	\partial_1 f_1(x) & \dotsb & \partial_n f_1(x) & \partial_{n+1} f_1(x) & \dotsb & \partial_m f_1(x) \\ 
 	\vdots & \dotsb & \vdots & \vdots & \ddots & \vdots \\ 
@@ -591,11 +620,11 @@ First up, we have the following important theorem which goes by many names, incl
 	\vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\ 
 	0 & \dotsb & 0 & 0 & \dotsb & 1
 	\end{bmatrix} \]
-	In other words, the $(m-n) \times m$ submatrix on the bottom left of $g'(x)$ is all zeroes, and the $(m-n) \times (m-n)$ submatrix on the bottom right is the identity matrix. This means that $\det y'(x)$ is equal, up to sign, to the determinant of the $n \times n$ in the top left, which we know from \cref{derivative-non-vanishing-minor} is nonzero when $x = p$. Thus $y$ is \'etale at $p$. 
+	In other words, the $(m-n) \times m$ submatrix on the bottom left of $\phi'(x)$ is all zeroes, and the $(m-n) \times (m-n)$ submatrix on the bottom right is the identity matrix. This means that $\det y'(x)$ is equal, up to sign, to the determinant of the $n \times n$ in the top left, which we know from \cref{derivative-non-vanishing-minor} is nonzero when $x = a$. Thus $\phi$ is \'etale at $a$. 
 	
-	Since $f$ is smooth, so is $y$, so there exists an open neighborhood $V$ of $p$ such that $y|_V$ is \'etale. By the inverse function theorem \ref{inverse-function-theorem}, we can replace $V$ with a smaller open neighborhood of $p$ in order to further assume that $y|_V$ is injective. Then \cref{euclidean-chart-characterization} tells us that $(V, y)$ is a chart in the euclidean atlas containing $p$. Moreover, 
-	\[ S \cap V = \{ p' \in V : f(p') = 0 \} = \{ p' \in V : y_1(p') = \dotsb = y_n(p') = 0 \} \]
-	because $y_j = f_j$ for all $j = 1, \dotsc, n$. This shows that $(V,y)$ is adapted to $S$, and that $S$ has codimension $n$ at $p$ in $\R^m$. 
+	Since $f$ is smooth, so is $\phi$, so there exists an open neighborhood $V$ of $a$ such that $\phi|_V$ is \'etale. By the inverse function theorem \ref{inverse-function-theorem}, we can replace $V$ with a smaller open neighborhood of $a$ in order to further assume that $\phi|_V$ is injective. Then \cref{euclidean-chart-characterization} tells us that $(V, \phi|_V)$ is a chart in the euclidean atlas which contains $a$. Moreover, 
+	\[ S \cap V = \{ x \in V : f(x) = 0 \} = \{ x \in V : \phi_1(x) = \dotsb = \phi_n(x) = 0 \} \]
+	because $\phi_j = f_j$ for all $j = 1, \dotsc, n$. This shows that $(V,\phi|_V)$ is adapted to $S$, and that $S$ has codimension $n$ at $a$ in $\R^m$. 
 \end{proof}
 
 \begin{exercise} \label{permutation-submanifold}
@@ -607,16 +636,12 @@ First up, we have the following important theorem which goes by many names, incl
 \begin{exercise}
 	Recall from \cref{circle-projection-atlas,sphere-projection-atlas} that the $n$-sphere $S^n$ is defined by
 	\[ S^n = \{ x \in \R^{n+1} : |x|_2 = 1 \}. \]
-	\begin{enumerate}[(a)]
-		\item Use the submersion theorem \ref{submersion-theorem-local} to show that $S^1$ is a submanifold of $\R^{2}$. 
-		\item Show that the maximal atlas on $S^1$ produced by \cref{submanifolds-are-manifolds} coincides with the maximal atlas from \cref{circle-projection-atlas}. 
-		\item Generalize parts (a) and (b) to $S^n$ for arbitrary $n$. 
-	\end{enumerate}
+	Use the submersion theorem to show that $S^n$ is a submanifold of $\R^{n+1}$. 
 \end{exercise}
 
 \begin{exercise} \label{torus-equation}
-	Let $T$ be the torus inside $\R^3$ centered around the $z$-axis where the distance from the origin to the center of the tube is $R$, the radius of the tube is $r$, and $0 < r < R$. Find a smooth function $f : U \to \R$ where $U$ is an open subset of $\R^3$, 0 is a regular value of $f$, and \[ T = \{ (x,y,z) \in U : f(x,y,z) = 0 \}. \]
-	Thus, applying the submersion theorem \ref{submersion-theorem-local}, we can conclude that $T$ is a submanifold of $\R^3$. 
+	Let $T$ be the torus inside $\R^3$ centered around the $z$-axis where the distance from the origin to the center of the tube is $R$, the radius of the tube is $r$, and $0 < r < R$. Find a smooth submersive map $f : U \to \R$ where $U$ is an open subset of $\R^3$ and \[ T = \{ (x,y,z) \in U : f(x,y,z) = 0 \}. \]
+	Applying the submersion theorem \ref{submersion-theorem-local}, we conclude that $T$ is a submanifold of $\R^3$. 
 	\begin{hint}
 		See \cref{torus-slice}. 
 	\end{hint}
@@ -690,7 +715,11 @@ First up, we have the following important theorem which goes by many names, incl
 
 \section{Smooth functions}
 
-We will now define what it means for a function between two manifolds to be smooth. Recall that in \cref{multi} we saw that the case when the codomain is $\R$ was the most important. The same will be true here. You may find that the number of definitions of ``smooth'' gets slightly out of hand; if you do, just remember that, whenever multiple definitions of ``smooth'' make sense, they'll all agree. 
+% TODO: Fix notation
+
+We will now define what it means for a function between two manifolds to be smooth. Roughly, the idea is that we know what smooth means on open subsets of $\R^n$, and we just use charts to transfer the definition to arbitrary manifolds. 
+
+Recall that in \cref{multi} we saw that the case when the codomain is $\R$ was the most important. The same will be true here. You may find that the number of definitions of ``smooth'' gets slightly out of hand; if you do, just remember that, whenever multiple definitions of ``smooth'' make sense for the objects in question, they'll all agree. 
 
 \subsection{Smooth real-valued functions}
 
