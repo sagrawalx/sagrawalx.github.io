@@ -456,7 +456,7 @@ Here are some more examples of manifolds you probably recognize which you probab
 
 % TODO: Torus picture
 
-But sometimes quotient spaces can be very difficult to visualize directly; the only way to have geometric intuition in these cases is to remember the space we started with before quotienting, and the equivalence relation we defined on it. 
+Sometimes quotient spaces can be very difficult to visualize directly; the only way to have geometric intuition in these cases is to remember the space we started with before quotienting, and the equivalence relation we defined on it. 
 
 \begin{exercise}[Projective line] \label{rp1} \index{projective line} \index{p1@$\bbP^1$|see {projective line}}
 	Let $S^1$ denote the circle as in \cref{circle-projection-atlas}. Define an equivalence relation $\sim$ on $S^1$ which identifies antipodal points; in other words, every point on $S^1$ is declared to be equivalent to the point that is diametrically opposite it. The \emph{projective line} $\bbP^1$ is defined to be the corresponding quotient space. Describe an atlas on $\bbP^1$. 
@@ -527,20 +527,18 @@ Intuitively, the definition says that, in the coordinate system on $U$ induced b
 We'll justify the word ``submanifold'' in a moment by showing that submanifolds are actually manifolds in their own right (cf. \cref{submanifolds-are-manifolds}). But first, let's discuss some examples. The intuition you should carry into these examples is roughly that, if a subset ``looks smooth'' (ie, doesn't have any ``pointy'' parts), it should be a submanifold. 
 
 \begin{example}
-	Consider the set $S = \{ (0,y) \in \R^2 : -1 < x < 1 \}$ inside $\R^2$. In other words, $S$ is the open interval $(-1,1)$ along the $y$-axis inside $\R^2$. Then $S$ is a submanifold. Indeed, let $U$ be the open box $(-1,1) \times (-1,1)$ inside $\R^2$, and $\phi : U \to \R^2$ the inclusion map. Then $(U, \phi)$ is a chart on $\R^2$, $\phi_1(x,y) = x$, and 
-	\[ \{ (x,y) \in U : \phi_1(x, y) = 0 \} = \{ (x,y) \in U : x = 0 \} = S = S \cap U \]
-	so $(U,\phi)$ is adapted to $S$ and $S$ has codimension 1 in $(U,\phi)$. 
+	Consider the set $S = \{ (x,0) \in \R^2 : -1 < x < 1 \}$ inside $\R^2$. In other words, $S$ is the open interval $(-1,1)$ along the $x$-axis inside $\R^2$. Then $S$ is a submanifold. Indeed, let $U$ be the open box $(-1,1) \times (-1,1)$ inside $\R^2$, and $\phi : U \to \R^2$ the inclusion map. Then $(U, \phi)$ is a chart in the euclidean atlas on $\R^2$, $\phi_2(x,y) = y$, and 
+	\[ \{ (x,y) \in U : \phi_2(x, y) = 0 \} = \{ (x,y) \in U : y = 0 \} = S = S \cap U \]
+	so $(U,\phi)$ is adapted to $S$ and $S$ has dimension 1 in $(U,\phi)$. 
 \end{example}
 
 \begin{example}
-	Consider the parabola \[ S = \{ (x, y) \in \R^2 : y = x^2, x \in \R \}. \] This doesn't have any ``pointy'' parts, so it should be a submanifold. Let's see how. It is sufficient to produce a chart $(\R^2, \phi)$ with the property that 
+	Consider the parabola \[ S = \{ (x, y) \in \R^2 : y = x^2, x \in \R \}. \] This ``looks smooth,'' so it should be a submanifold. Let's see how. It is sufficient to produce a chart $(\R^2, \phi)$ with the property that 
 	\[ S = \{ (x,y) \in \R^2 : \phi_2(x,y) = 0 \}. \]
 	This means we should take $\phi_2(x,y) = x^2 - y$. Then $\phi_1$ should be a smooth function $\phi_1 : \R^2 \to \R$ such that $\phi = (\phi_1, \phi_2)$ is injective and \'etale. In other words, we want the Jacobian matrix 
 	\[ \phi'(x,y) = \begin{bmatrix} \dfrac{\partial \phi_1}{\partial x} & \dfrac{\partial \phi_1}{\partial y} \\ 2x & -1 \end{bmatrix} \]
-	to always be invertible. The easiest way to guarantee this is to take $\phi_2(x,y) = x$, which makes $\det \phi'(x,y) = 1$. Moreover, the function $\phi(x,y) = (x, x^2 - y)$ is injective, since if $\phi(x_1, y_1) = \phi(x_2,y_2)$, then $(x_1, x_1^2 - y_1) = (x_2, x_2^2 - y_2)$, and looking at the first coordinates shows that $x_1 = x_2$, and finally looking at the first coordinates shows that $y_1 = y_2$. In other words, $(\R^2, \phi)$ is a chart in the euclidean atlas which covers $S$ and is adapted to $S$, so $S$ is a submanifold of $\R^2$. 
+	to always be invertible. The easiest way to guarantee this is to take $\phi_2(x,y) = x$, which makes $\det \phi'(x,y) = 1$. Moreover, the function $\phi(x,y) = (x, x^2 - y)$ is injective, since if $\phi(x_1, y_1) = \phi(x_2,y_2)$, then $(x_1, x_1^2 - y_1) = (x_2, x_2^2 - y_2)$, and looking at the first coordinates shows that $x_1 = x_2$, and finally looking at the first coordinates shows that $y_1 = y_2$. In other words, $(\R^2, \phi)$ is a slice chart for $S$ in the euclidean atlas, so $S$ is a submanifold of $\R^2$. 
 \end{example}
-
-% TODO: Incomplete
 
 \begin{comment}
 	The subset  
