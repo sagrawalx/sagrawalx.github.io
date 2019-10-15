@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  15 OCT 2019 08:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  14 OCT 2019 14:14
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1197,7 +1197,7 @@ File: english.lbx 2017/12/19 v3.10 biblatex localization (PK/JW/AB)
 )
 \@quotelevel=\count336
 \@quotereset=\count337
-No file figures/main-figure45.aux.
+No file figures/main-figure48.aux.
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
 LaTeX Font Info:    ... okay on input line 103.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 103.
@@ -1872,7 +1872,7 @@ LaTeX Warning: Reference `sup-norm' on page 1 undefined on input line 796.
 LaTeX Warning: Reference `constant-iff-derivative-zero-single' on page 1 undefi
 ned on input line 855.
 
-\openout8 = `figures/main-figure45.sols'.
+\openout8 = `figures/main-figure48.sols'.
 
 
 LaTeX Warning: Reference `monotone-derivative' on page 1 undefined on input lin
@@ -3454,318 +3454,245 @@ LaTeX Warning: Reference `circle-projection-atlas' on page 1 undefined on input
 LaTeX Warning: Reference `sphere-projection-atlas' on page 1 undefined on input
  line 466.
 
-
-LaTeX Warning: Reference `submanifold-definition-picture' on page 1 undefined o
-n input line 479.
-
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
-\openout4 = `figures/main-figure45.dpth'.
-
-NOTE: coordinate (1Y1.0095618e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.0203648e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.0311696e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.0419727e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.0527776e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.0635823e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.0743854e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.0851901e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.0959932e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.106798e0],3Y0.0e0]) has been dropped because it is unboun
-ded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.1176027e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.1284058e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.1392105e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.1500136e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.0095618e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.0203648e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.0311696e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.0419727e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.0527776e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.0635823e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.0743854e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.0851901e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.0959932e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.106798e0],3Y0.0e0]) has been dropped because it is unboun
-ded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.1176027e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.1284058e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.1392105e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-NOTE: coordinate (1Y1.1500136e0],3Y0.0e0]) has been dropped because it is unbou
-nded (in y). (see also unbounded coords=jump). 
-Package pgfplots info on input line 521: fill between: activating layered graph
-ics
-\pgf@layerbox@axis background=\box45
-\pgf@layerboxsaved@axis background=\box46
-\pgf@layerbox@axis grid=\box47
-\pgf@layerboxsaved@axis grid=\box48
-\pgf@layerbox@axis ticks=\box49
-\pgf@layerboxsaved@axis ticks=\box50
-\pgf@layerbox@axis lines=\box51
-\pgf@layerboxsaved@axis lines=\box52
-\pgf@layerbox@axis tick labels=\box53
-\pgf@layerboxsaved@axis tick labels=\box54
-\pgf@layerbox@pre main=\box55
-\pgf@layerboxsaved@pre main=\box56
-\pgf@layerbox@axis descriptions=\box57
-\pgf@layerboxsaved@axis descriptions=\box58
-\pgf@layerbox@axis foreground=\box59
-\pgf@layerboxsaved@axis foreground=\box60
-Package pgfplots info on input line 521: Setting layers 'axis background,axis g
-rid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axis
- foreground'...
-[152
-
-
-
-
-]
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 
 LaTeX Warning: Reference `submanifolds-are-manifolds' on page 1 undefined on in
-put line 527.
-
-
-LaTeX Warning: Reference `graphs-continuous' on page 1 undefined on input line 
-567.
-
-
-LaTeX Warning: Reference `graphs-smooth-single' on page 1 undefined on input li
-ne 567.
+put line 529.
 
 
 LaTeX Warning: Reference `circle-submanifold-picture' on page 1 undefined on in
-put line 573.
+put line 568.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-LaTeX Warning: Reference `cylinder' on page 1 undefined on input line 636.
+LaTeX Warning: Reference `cylinder' on page 1 undefined on input line 639.
 
 
 LaTeX Warning: Reference `submanifolds-are-manifolds-details' on page 1 undefin
-ed on input line 652.
+ed on input line 657.
 
 
 LaTeX Warning: Reference `subspace-topology' on page 155 undefined on input lin
-e 654.
+e 659.
+
+
+LaTeX Warning: Reference `dimension-well-defined' on page 1 undefined on input 
+line 667.
 
 
 LaTeX Warning: Reference `circle-projection-atlas' on page 1 undefined on input
- line 683.
+ line 688.
 
 
 LaTeX Warning: Reference `submanifolds-are-manifolds' on page 1 undefined on in
-put line 683.
+put line 688.
 
 
 LaTeX Warning: Reference `circle-submanifold' on page 1 undefined on input line
- 683.
+ 688.
 
 
 LaTeX Warning: Reference `open-submanifold' on page 1 undefined on input line 6
-86.
+91.
 
 
-LaTeX Warning: Reference `submanifold' on page 1 undefined on input line 689.
+LaTeX Warning: Reference `submanifold' on page 1 undefined on input line 696.
 
 
 LaTeX Warning: Reference `submanifolds-are-manifolds' on page 1 undefined on in
-put line 689.
+put line 697.
 
 
 LaTeX Warning: Reference `open-submanifold' on page 1 undefined on input line 6
-89.
+97.
 
 
-LaTeX Warning: Reference `graphs-continuous' on page 1 undefined on input line 
-726.
-
-
-LaTeX Warning: Reference `submanifolds-are-manifolds' on page 1 undefined on in
-put line 726.
-
-
-LaTeX Warning: Reference `graphs-smooth' on page 1 undefined on input line 726.
-
-
-
-LaTeX Warning: Reference `smooth-multi' on page 1 undefined on input line 731.
+LaTeX Warning: Reference `smooth-multi' on page 1 undefined on input line 712.
 
 
 LaTeX Warning: Reference `permutation-submanifold' on page 1 undefined on input
- line 742.
+ line 727.
 
 
 LaTeX Warning: Reference `derivative-non-vanishing-minor' on page 1 undefined o
-n input line 754.
+n input line 739.
 
 
 LaTeX Warning: Reference `inverse-function-theorem' on page 158 undefined on in
-put line 756.
+put line 741.
 
 
 LaTeX Warning: Reference `euclidean-chart-characterization' on page 1 undefined
- on input line 756.
+ on input line 741.
 
 
 LaTeX Warning: Reference `sphere-projection-atlas' on page 1 undefined on input
- line 768.
+ line 753.
 
 
 LaTeX Warning: Reference `circle-projection-atlas' on page 1 undefined on input
- line 768.
+ line 753.
 
 
 LaTeX Warning: Reference `submersion-theorem-local' on page 159 undefined on in
-put line 775.
+put line 760.
 
 
-LaTeX Warning: Reference `torus-slice' on page 1 undefined on input line 777.
+LaTeX Warning: Reference `torus-slice' on page 1 undefined on input line 762.
 
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
+\openout4 = `figures/main-figure48.dpth'.
 
-LaTeX Warning: Reference `torus-equation' on page 1 undefined on input line 810
+[159
+
+
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Reference `torus-equation' on page 1 undefined on input line 795
 .
 
 
-LaTeX Warning: Reference `torus-equation' on page 1 undefined on input line 810
+LaTeX Warning: Reference `torus-equation' on page 1 undefined on input line 795
 .
 
 
-LaTeX Warning: Reference `multi' on page 1 undefined on input line 820.
+LaTeX Warning: Reference `submersion-theorem-local' on page 159 undefined on in
+put line 806.
 
 
-LaTeX Warning: Reference `smooth-multi' on page 1 undefined on input line 848.
+LaTeX Warning: Reference `graphs-continuous' on page 1 undefined on input line 
+821.
+
+
+LaTeX Warning: Reference `graphs-smooth' on page 1 undefined on input line 821.
+
+
+
+LaTeX Warning: Reference `graphs-continuous' on page 1 undefined on input line 
+829.
+
+
+LaTeX Warning: Reference `submanifolds-are-manifolds' on page 1 undefined on in
+put line 829.
+
+
+LaTeX Warning: Reference `graphs-smooth' on page 1 undefined on input line 829.
+
+
+
+LaTeX Warning: Reference `multi' on page 1 undefined on input line 838.
+
+
+LaTeX Warning: Reference `smooth-multi' on page 1 undefined on input line 866.
 
 
 LaTeX Warning: Reference `open-submanifold' on page 1 undefined on input line 8
-48.
+66.
 
 
 LaTeX Warning: Reference `smooth-real-valued' on page 1 undefined on input line
- 848.
+ 866.
 
 
-LaTeX Warning: Reference `smooth-multi' on page 1 undefined on input line 851.
+LaTeX Warning: Reference `smooth-multi' on page 1 undefined on input line 869.
 
 
 LaTeX Warning: Reference `smooth-real-valued' on page 1 undefined on input line
- 851.
+ 869.
 
 
 LaTeX Warning: Reference `smooth-real-valued-local' on page 1 undefined on inpu
-t line 853.
+t line 871.
 
 
 LaTeX Warning: Reference `smooth-real-valued-stable' on page 1 undefined on inp
-ut line 880.
+ut line 898.
 
 
 LaTeX Warning: Reference `constant-compact-zero-outside-neighborhood' on page 1
- undefined on input line 885.
+ undefined on input line 903.
 
 
 LaTeX Warning: Reference `compact-topological-space' on page 1 undefined on inp
-ut line 885.
+ut line 903.
 
 
 LaTeX Warning: Reference `recentering-chart' on page 1 undefined on input line 
-892.
+910.
 
 
 LaTeX Warning: Reference `smooth-approximation-characteristic-compact-details' 
-on page 1 undefined on input line 892.
+on page 1 undefined on input line 910.
 
 
 LaTeX Warning: Reference `multivariable-bump-round-support' on page 1 undefined
- on input line 892.
+ on input line 910.
 
 
 LaTeX Warning: Reference `smooth-approximation-characteristic-compact-details' 
-on page 1 undefined on input line 892.
+on page 1 undefined on input line 910.
 
 
 LaTeX Warning: Reference `smooth-approximation-characteristic-compact-details' 
-on page 1 undefined on input line 894.
+on page 1 undefined on input line 912.
 
 
 LaTeX Warning: Reference `smooth-approximation-characteristic-compact-details' 
-on page 1 undefined on input line 896.
+on page 1 undefined on input line 914.
 
 
-LaTeX Warning: Reference `bridge-function' on page 1 undefined on input line 89
-6.
+LaTeX Warning: Reference `bridge-function' on page 1 undefined on input line 91
+4.
 
 
 LaTeX Warning: Reference `multivariable-bump-round-support' on page 1 undefined
- on input line 903.
+ on input line 921.
 
 
-LaTeX Warning: Reference `smooth-multi' on page 1 undefined on input line 937.
+LaTeX Warning: Reference `smooth-multi' on page 1 undefined on input line 955.
 
 
 LaTeX Warning: Reference `smooth-between-manifolds' on page 1 undefined on inpu
-t line 937.
+t line 955.
 
 
 LaTeX Warning: Reference `smooth-real-valued' on page 1 undefined on input line
- 941.
+ 959.
 
 
 LaTeX Warning: Reference `smooth-between-manifolds' on page 1 undefined on inpu
-t line 941.
+t line 959.
 
 
-LaTeX Warning: Reference `smooth-local' on page 1 undefined on input line 971.
+LaTeX Warning: Reference `smooth-local' on page 1 undefined on input line 989.
 
 
-LaTeX Warning: Reference `multi' on page 1 undefined on input line 971.
+LaTeX Warning: Reference `multi' on page 1 undefined on input line 989.
 
 
-LaTeX Warning: Reference `smooth-local' on page 1 undefined on input line 973.
+LaTeX Warning: Reference `smooth-local' on page 1 undefined on input line 991.
 
 
 LaTeX Warning: Reference `smooth-stable-composite' on page 1 undefined on input
- line 985.
+ line 1003.
 
 
 LaTeX Warning: Reference `euclidean-valued-smooth-iff-components-smooth' on pag
-e 1 undefined on input line 985.
+e 1 undefined on input line 1003.
 
 
-LaTeX Warning: Reference `paths-multi' on page 1 undefined on input line 994.
+LaTeX Warning: Reference `paths-multi' on page 1 undefined on input line 1012.
 
 
 LaTeX Warning: Reference `universal-cover-circle' on page 1 undefined on input 
-line 1019.
+line 1037.
 
 ) (./tangent.tex
 chapter 4.
@@ -3937,7 +3864,7 @@ LaTeX Warning: Reference `immersive-submersive-critical' on page 1 undefined on
 
 ) (./solutions.tex
 chapter A.
-(./figures/main-figure45.sols
+(./figures/main-figure48.sols
 
 LaTeX Warning: Reference `monotone-derivative' on page 1 undefined on input lin
 e 1.
@@ -4006,7 +3933,7 @@ t line 16.
 
 LaTeX Warning: Empty bibliography on input line 124.
 
-No file figures/main-figure45.ind.
+No file figures/main-figure48.ind.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 128.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 128.
 
@@ -4014,26 +3941,27 @@ LaTeX Warning: There were undefined references.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                figures/main-figure45
+(biblatex)                figures/main-figure48
 (biblatex)                and rerun LaTeX afterwards.
 
-Package logreq Info: Writing requests to 'figures/main-figure45.run.xml'.
-\openout1 = `figures/main-figure45.run.xml'.
+Package logreq Info: Writing requests to 'figures/main-figure48.run.xml'.
+\openout1 = `figures/main-figure48.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45060 strings out of 492982
- 1054717 string characters out of 6134895
- 1735889 words of memory out of 5000000
- 47724 multiletter control sequences out of 15000+600000
- 97275 words of font info for 196 fonts, out of 8000000 for 9000
+ 45029 strings out of 492982
+ 1052931 string characters out of 6134895
+ 1735890 words of memory out of 5000000
+ 47689 multiletter control sequences out of 15000+600000
+ 98600 words of font info for 200 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,15n,119p,8849b,2196s stack positions out of 5000i,500n,10000p,200000b,80000s
-
-Output written on figures/main-figure45.pdf (1 page, 5414 bytes).
+ 75i,15n,119p,8849b,2279s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb>
+Output written on figures/main-figure48.pdf (1 page, 13669 bytes).
 PDF statistics:
- 24 PDF objects out of 1000 (max. 8388607)
- 8 compressed objects within 1 object stream
+ 32 PDF objects out of 1000 (max. 8388607)
+ 14 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  25613 words of extra memory for PDF output out of 29859 (max. 10000000)
 

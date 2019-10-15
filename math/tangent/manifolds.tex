@@ -468,17 +468,63 @@ But sometimes quotient spaces can be very difficult to visualize directly; the o
 
 \subsection{Submanifolds}
 
-We now define submanifolds. Roughly, a submanifold is a subset for which there exist charts along such that the subset looks like the coordinate hyperplanes inside that chart. Before making the formal definition, recall that, if $(U, \phi)$ is a chart, then $\phi_i = \pi_i \circ \phi$ denotes the corresponding $i$th coordinate function. 
+We now define submanifolds. Recall that, if $(U, \phi)$ is a chart, then $\phi_i = \pi_i \circ \phi$ denotes the corresponding $i$th coordinate function. 
 
 \begin{definition} \label{submanifold}
 	Suppose $S$ is a subset of a manifold $X$. Then $S$ is a \emph{submanifold} of $X$ if there exist charts $(U, \phi) \in \mathscr{A}_X$ covering $S$ such that 
-	\[ S \cap U = \{ x \in U :  \phi_1(x) = \phi_2(x) = \dotsb = \phi_k(x) = 0 \} \]
-	for some non-negative integer $k \leq \dim(U,x)$. Such a chart $(U,\phi)$ is said to be \emph{adapted to $S$}, or is a \emph{slice chart for $S$}. The integer $k$ is called the \emph{codimension of $S$ in $(U,\phi)$}. 
+	\[ S \cap U = \{ x \in U :  \phi_{k+1}(x) = \phi_{k+2}(x) = \dotsb = \phi_n(x) = 0 \} \]
+	for some non-negative integer $k \leq \dim(U,x)$. Such a chart $(U,\phi)$ is called a \emph{slice chart} for $S$, or an \emph{adapted chart} for $S$, and the integer $k$ is called the \emph{dimension of $S$ in $(U,\phi)$}. 
 \end{definition}
 
-% TODO: Picture
+Intuitively, the definition says that, in the coordinate system on $U$ induced by the chart $(U, \phi)$, the subset $S \cap U$ should look like an open subset of a coordinate hyperplanes (specifically, the coordinate hyperplane where $x_{k+1} = x_{k+2} = \dotsb = x_n = 0$, ie, the $(x_1, x_2, \dotsc, x_k)$-hyperplane). See \cref{submanifold-definition-picture}. 
 
-We'll justify this terminology in a moment by showing that submanifolds are actually manifolds in their own right (cf. \cref{submanifolds-are-manifolds}). But first, let's discuss some examples. The intuition is roughly that, if a subset $S$ of $X$ is ``smooth'' (ie, doesn't have any ``pointy'' parts), it should be a submanifold. 
+\begin{figure}
+	\begin{center}
+	\begin{tikzpicture}[scale=1.5]
+	\draw[dotted] plot [smooth cycle, tension=1] coordinates { (0,0) (0.5,1) (1,2) (2,2.5) (3,1) (4,0) (2,-1) (1, -0.5) };
+	\draw[dashed,fill=gray,fill opacity=0.1] plot [smooth cycle, tension=1] coordinates { (1,1) (2,1.5) (2.5,-0.3) (1, -0.1) };
+	
+	
+	\draw[thick, lightgray, solid] plot [smooth] coordinates {(0.5,1) (0.65,0.9) (1,1)};
+	\draw[thick, black, solid] plot [smooth] coordinates {(1,1) (1.5,1.05) (2,0) (2.55,-0.12)};
+	\draw[thick, lightgray, solid] plot [smooth] coordinates {(2.55,-0.12) (3.5,0.1) (4,0)};
+	\node[color=white,draw=black,circle,fill,inner sep=2pt] at (1,1) {}; 
+	\node[color=white,draw=black,circle,fill,inner sep=2pt] at (2.55,-0.12) {}; 
+	
+	\node at (0.4,-0.6) {$X$};
+	\node at (0.2,1.1) {$S$};
+	\node at (1.75,1.25) {$U$};
+	\draw[black,->] (2.75,1) -- node[above] {$\phi$} (5,1);
+	\end{tikzpicture}
+	\begin{tikzpicture}
+	\begin{axis}[
+	xmin=-1.5,xmax=1.5,
+	ymin=-1.5,ymax=1.5,
+	ytick={0},
+	xtick={0},
+	axis lines=middle,
+	axis line style=lightgray,
+	width=0.5\textwidth,
+	axis equal
+	] 
+	
+	
+	\addplot[black,dashed] expression[name path=a,domain=-1:1.15,samples=200]{sqrt(1-x^2)};
+	\addplot[black,dashed] expression[name path=b,domain=-1:1.15,samples=200]{-sqrt(1-x^2)};
+	
+	\addplot[fill=gray, fill opacity=0.1]
+	fill between[of=a and b,soft clip={domain=-1:1.15}];
+	
+	\addplot +[mark=none,black,thick,solid,-] coordinates {(-1,0) (1, 0)};
+	\node[color=white,draw=black,circle,fill,inner sep=2pt] at (axis cs:-1,0) {}; 
+	\node[color=white,draw=black,circle,fill,inner sep=2pt] at (axis cs:1,0) {}; 
+	\end{axis}
+	\end{tikzpicture}
+	\end{center}
+	\caption{Suppose $X$ is a manifold (depicted above as an amorphous blob) and $S$ is a subset (depicted above as a squiggly line passing through the blob). Then $S$ is defined to be a \emph{submanifold} of $X$ if $S$ can be covered by charts $(U, \phi)$ such that, under $\phi$, the set $S \cap U$ corresponds to a coordinate hyperplane in $\R^n$. In the picture above, the map $\phi : U \to \R^2$ pulls the squiggle $S \cap U$ taut onto the $x$-axis inside $\R^2$. } \label{submanifold-definition-picture}
+\end{figure}
+
+We'll justify the word ``submanifold'' in a moment by showing that submanifolds are actually manifolds in their own right (cf. \cref{submanifolds-are-manifolds}). But first, let's discuss some examples. The intuition you should carry into these examples is roughly that, if a subset ``looks smooth'' (ie, doesn't have any ``pointy'' parts), it should be a submanifold. 
 
 \begin{example}
 	Consider the set $S = \{ (0,y) \in \R^2 : -1 < x < 1 \}$ inside $\R^2$. In other words, $S$ is the open interval $(-1,1)$ along the $y$-axis inside $\R^2$. Then $S$ is a submanifold. Indeed, let $U$ be the open box $(-1,1) \times (-1,1)$ inside $\R^2$, and $\phi : U \to \R^2$ the inclusion map. Then $(U, \phi)$ is a chart on $\R^2$, $\phi_1(x,y) = x$, and 
@@ -487,11 +533,11 @@ We'll justify this terminology in a moment by showing that submanifolds are actu
 \end{example}
 
 \begin{example}
-	Consider the parabola \[ S = \{ (x, y) \in \R^2 : y = x^2, x \in \R \}. \] This doesn't ahve any ``pointy'' parts, so it should be a submanifold. Let's see how. It is sufficient to produce a chart $(\R^2, \phi)$ with the property that 
-	\[ S = \{ (x,y) \in \R^2 : \phi_1(x,y) = 0 \}. \]
-	This means we should take $\phi_1(x,y) = x^2 - y$. Then $\phi_2$ should be a smooth function $\phi_2 : \R^2 \to \R$ such that $\phi = (\phi_1, \phi_2)$ is injective and \'etale. In other words, we want the Jacobian matrix 
-	\[ \phi'(x,y) = \begin{bmatrix} 2x & -1 \\ \dfrac{\partial \phi_2}{\partial x} & \dfrac{\partial \phi_2}{\partial y} \end{bmatrix} \]
-	to always be invertible. The easiest way to guarantee this is to take $\phi_2(x,y) = x$, which makes $\det \phi'(x,y) = 1$. Moreover, the function $\phi(x,y) = (x^2 - y, x)$ is injective, since if $\phi(x_1, y_1) = \phi(x_2,y_2)$, then looking at the second coordinates shows that $x_1 = x_2$, and then looking at the first coordinates shows that $y_1 = y_2$. In other words, $(\R^2, \phi)$ is a chart in the euclidean atlas which covers $S$ and is adapted to $S$, so $S$ is a submanifold of $\R^2$. 
+	Consider the parabola \[ S = \{ (x, y) \in \R^2 : y = x^2, x \in \R \}. \] This doesn't have any ``pointy'' parts, so it should be a submanifold. Let's see how. It is sufficient to produce a chart $(\R^2, \phi)$ with the property that 
+	\[ S = \{ (x,y) \in \R^2 : \phi_2(x,y) = 0 \}. \]
+	This means we should take $\phi_2(x,y) = x^2 - y$. Then $\phi_1$ should be a smooth function $\phi_1 : \R^2 \to \R$ such that $\phi = (\phi_1, \phi_2)$ is injective and \'etale. In other words, we want the Jacobian matrix 
+	\[ \phi'(x,y) = \begin{bmatrix} \dfrac{\partial \phi_1}{\partial x} & \dfrac{\partial \phi_1}{\partial y} \\ 2x & -1 \end{bmatrix} \]
+	to always be invertible. The easiest way to guarantee this is to take $\phi_2(x,y) = x$, which makes $\det \phi'(x,y) = 1$. Moreover, the function $\phi(x,y) = (x, x^2 - y)$ is injective, since if $\phi(x_1, y_1) = \phi(x_2,y_2)$, then $(x_1, x_1^2 - y_1) = (x_2, x_2^2 - y_2)$, and looking at the first coordinates shows that $x_1 = x_2$, and finally looking at the first coordinates shows that $y_1 = y_2$. In other words, $(\R^2, \phi)$ is a chart in the euclidean atlas which covers $S$ and is adapted to $S$, so $S$ is a submanifold of $\R^2$. 
 \end{example}
 
 % TODO: Incomplete
@@ -509,15 +555,14 @@ We'll justify this terminology in a moment by showing that submanifolds are actu
 		\item The $y$-axis. 
 		\item The open interval $(-1,1)$ along the $x$-axis.
 		\item The line $y = x$.  
-		\item The curve $y = x^3$.
-		\item The graph of any smooth function $f : \R \to \R$.  
+		\item The curve $y = x^3$. 
 	\end{enumerate}
 \end{exercise}
 
 \begin{exercise} \label{circle-submanifold}
 	Show that the unit circle $S^1$ is a submanifold of $\R^2$. 
 	\begin{hint}
-		Let $U = \{(x,y) \in S^1 : x > 0 \}$ and let $\phi(x,y) = (x^2+y^2-1, y)$. See \cref{circle-submanifold-picture}. Show that $(U, \phi)$ is a chart that is adapted to $S^1$. But this one chart does not cover the circle, so then find more charts like this one that cover the circle. 
+		Let $U = \{(x,y) \in S^1 : x > 0 \}$ and let $\phi(x,y) = (x,x^2+y^2-1)$. See \cref{circle-submanifold-picture}. Show that $(U, \phi)$ is a chart that is adapted to $S^1$. But this one chart does not cover the circle, so then find more charts like this one that cover the circle. 
 	\end{hint}
 	\begin{figure}
 		\begin{center}
@@ -535,18 +580,18 @@ We'll justify this terminology in a moment by showing that submanifolds are actu
 			] 
 			
 			
-			\addplot[white] expression[name path=c,domain=0:2,samples=2]{1.5};
-			\addplot[white] expression[name path=d,domain=0:2,samples=2]{-1.5};
+			\addplot[white] expression[name path=c,domain=-2:2,samples=2]{1.5};
+			\addplot[white] expression[name path=d,domain=-2:2,samples=2]{0};
 			\addplot[fill=gray, fill opacity=0.1]
-			fill between[of=c and d,soft clip={domain=0:2}];
+			fill between[of=c and d,soft clip={domain=-2:2}];
 			
-			\addplot[red,thick] expression[domain=0:1,samples=200]{sqrt(1-x^2)};
-			\addplot[red,thick] expression[domain=0:1,samples=200]{-sqrt(1-x^2)};
+			\addplot[black,thick] expression[domain=-1:1,samples=200]{sqrt(1-x^2)};
+			\addplot[lightgray,thick] expression[domain=-1:1,samples=200]{-sqrt(1-x^2)};
 			
-			\addplot +[mark=none,thick,black,dashed,->] coordinates {(0, -1.5) (0, 1.5)};
+			\addplot +[mark=none,black,dashed,->] coordinates {(-2, 0) (1.75, 0)};
 			
-			\node[color=white,draw=red,circle,fill,inner sep=2pt] at (axis cs:0,1) {}; 
-			\node[color=white,draw=red,circle,fill,inner sep=2pt] at (axis cs:0,-1) {}; 
+			\node[color=white,draw=black,circle,fill,inner sep=2pt] at (axis cs:-1,0) {}; 
+			\node[color=white,draw=black,circle,fill,inner sep=2pt] at (axis cs:1,0) {}; 
 			
 			\end{axis}
 			\end{tikzpicture}\hspace{1cm}
@@ -563,29 +608,29 @@ We'll justify this terminology in a moment by showing that submanifolds are actu
 			] 
 			
 			
-			\addplot[black,thick,dashed,->] expression[name path=a,domain=-1:1.15,samples=200]{sqrt(x+1)};
-			
-			\addplot[black,thick,dashed,-] expression[name path=b,domain=-1:1.15,samples=200]{-sqrt(x+1)};
-			
+			\addplot[black,dashed,->] expression[name path=b,domain=-1.575:1.575,samples=200]{x^2-1};
+			\addplot[white] expression[name path=a,domain=-1.575:1.575,samples=2]{1.575^2-1};
 			\addplot[fill=gray, fill opacity=0.1]
-			fill between[of=a and b,soft clip={domain=-1:1.15}];
+			fill between[of=a and b,soft clip={domain=-2:2}];
 			
+			\addplot +[mark=none,black,thick,solid,-] coordinates {(-1, 0) (1, 0)};
 			
-			\addplot[white] expression[name path=c,domain=1.15:2,samples=2]{1.5};
-			\addplot[white] expression[name path=d,domain=1.15:2,samples=2]{-1.5};
-			\addplot[fill=gray, fill opacity=0.1]
-			fill between[of=c and d,soft clip={domain=1.15:2}];
-			
-			\addplot +[mark=none,red,thick,solid,-] coordinates {(0, -1) (0, 1)};
-			
-			\node[color=white,draw=red,circle,fill,inner sep=2pt] at (axis cs:0,1) {}; 
-			\node[color=white,draw=red,circle,fill,inner sep=2pt] at (axis cs:0,-1) {}; 
+			\node[color=white,draw=black,circle,fill,inner sep=2pt] at (axis cs:-1,0) {}; 
+			\node[color=white,draw=black,circle,fill,inner sep=2pt] at (axis cs:1,0) {}; 
 			\end{axis}
 			\end{tikzpicture}
 		\end{center}
-		\caption{If $U = \{(x,y) : x > 0\}$ is the right half of the plane and $\phi : U \to \R^2$ is given by $\phi(x,y) = (x^2 + y^2 - 1, x)$, then $(U, \phi)$ is a chart on $\R^2$ that transforms the picture on the left into the picture on the right. The vertical axis on the left turns into the parabola on the right. The red semicircle on the left turns into the red line segment along the vertical axis on right. The horizontal axis on the left stays remains the horizontal axis on the right.}  \label{circle-submanifold-picture}
+		\caption{If $U = \{(x,y) : x > 0\}$ is the right half of the plane and $\phi : U \to \R^2$ is given by $\phi(x,y) = (x^2 + y^2 - 1, x)$, then $(U, \phi)$ is a chart on $\R^2$ that transforms the picture on the left into the picture on the right. The vertical axis on the left turns into the parabola on the right. The top half of the circle on the left turns into the horizontal line segment on right. The vertical axis on the left stays remains the vertical axis on the right.}  \label{circle-submanifold-picture}
 	\end{figure}
 \end{exercise}
+
+\begin{exercise} \label{graphs-smooth-single}
+	Show that the graph of a smooth function $f : \R \to \R$ is a submanifold of $\R^2$. 
+\end{exercise}
+
+\begin{caution}
+	Sometimes, a subspace that is a manifold can fail to be a submanifold. For example, you might notice that we showed in \cref{graphs-continuous} that the graph of a \emph{continuous} function $\R \to \R$ is a subspace of $\R^2$ and is also a manifold; and then we showed in \cref{graphs-smooth-single} that the graph of a \emph{smooth} function $\R \to \R$ is a submanifold of $\R^2$. And indeed, the graphs of continuous-but-not-smooth functions provide examples of subspaces that are manifolds but not submanifolds. 
+\end{caution}
 
 \begin{exercise}
 	Let $C$ be the cylinder from \cref{cylinder} and let $L$ be the line \[ L = \{ [1/2, y] \in C : y \in \R \}. \] Show that $L$ is a submanifold of $C$. 
@@ -594,41 +639,39 @@ We'll justify this terminology in a moment by showing that submanifolds are actu
 We now make good on our promise of proving that submanifolds are in fact manifolds. The proof is a little long because there are a lot of details to check, but there are no real tricks or surprises. 
 
 \begin{proposition} \label{submanifolds-are-manifolds}
-	Let $S$ be a submanifold of a manifold $X$. Suppose $(U, \phi) \in \mathscr{A}_X$ is adapted to $S$ and $S$ has codimension $k$ in $(U, \phi)$. Let $\phi|_S : S \cap U \to \R^{n-k}$ be the function defined by 
-	\[ \phi|_S(p) = (\phi_{k+1}(p), \dotsc, \phi_n(p)). \]
-	Regarding $S$ as a topological space using the subspace topology, the pair $(S \cap U, \phi|_S)$ is a chart on $S$, and the set of all charts of this form is an atlas on $S$. Thus $S$ becomes a manifold if we equip it with the corresponding maximal atlas $\mathscr{A}_S$. Finally, if $(U, \phi) \in \mathscr{A}_X$ is a chart adapted to $S$ such that $S$ has codimension $k$ in $S$, then
-	\[ \dim_x(S) = \dim_x(X) - k \]
-	for all $x \in S \cap U$. 
+	Let $S$ be a submanifold of a manifold $X$. Suppose $(U, \phi) \in \mathscr{A}_X$ is adapted to $S$ and $S$ has dimension $k$ in $(U, \phi)$. Let $\phi|_S : S \cap U \to \R^k$ be the function defined by 
+	\[ \phi|_S(p) = (\phi_1(p), \dotsc, \phi_k(p)). \]
+	Regarding $S$ as a topological space using the subspace topology, the pair $(S \cap U, \phi|_S)$ is a chart on $S$, and the set of all charts of this form is an atlas on $S$. Thus $S$ becomes a manifold if we equip it with the corresponding maximal atlas $\mathscr{A}_S$. Finally, for any $x \in S$, if $(U, \phi) \in \mathscr{A}_X$ is a slice chart for $S$ containing $x$ such that $S$ has dimension $k$ in $(U,\phi)$, then $\dim_x(S) = k$. 
 \end{proposition}
 
 \begin{proof}
 	Observe that, by definition, $\phi|_S$ is the composite
 	\[ \begin{tikzcd}
-	S \cap U \ar[hookrightarrow]{r} & U \ar{r}{\phi} & \R^n \ar{r}{\pi} & \R^{n-k}
+	S \cap U \ar[hookrightarrow]{r} & U \ar{r}{\phi} & \R^n \ar{r}{\pi} & \R^{k}
 	\end{tikzcd} \]
-	where the first map is the inclusion, and the final map $\pi : \R^n \to \R^{n-k}$ projects onto the final $n-k$ coordinates (ie, $\pi(x_1, \dotsc, x_n) = (x_{k+1}, \dotsc, x_n)$). Each of these maps is continuous, so the composite $x|_S$ is continuous as well. The proof that $\phi|_S$ is injective is left as an exercise (cf. \cref{submanifolds-are-manifolds-details}). 
+	where the first map is the inclusion, and the final map $\pi : \R^n \to \R^{k}$ projects onto the first $k$ coordinates (ie, $\pi(x_1, \dotsc, x_n) = (x_{1}, \dotsc, x_k)$). Each of these maps is continuous, so the composite $x|_S$ is continuous as well. The proof that $\phi|_S$ is injective is left as an exercise (cf. \cref{submanifolds-are-manifolds-details}). 
 	
-	Let us show that $\phi|_S$ is open. By definition of the subspace topology \ref{subspace-topology}, every open subset of $S \cap U$ is of the form $S \cap V$ where $V$ is an open subset of $U$. Suppose $a \in  S \cap V$. We want to show that $\phi|_S(a)$ is an interior point of $\phi|_S(S \cap V)$. Since $V$ is open in $U$ and $\phi : U \to \R^n$ is an open map, we know that $\phi(a)$ is an interior point of $\phi(V)$, ie, there exists $\epsilon > 0$ such that every point of $\R^n$ within $\epsilon$ of $\phi(a)$ is inside $\phi(V)$. We claim that the $\epsilon$ ball around $\phi|_S(a)$ is contained in $\phi|_S(S \cap V)$. Suppose we have $y = (y_{k+1}, \dotsc, y_n) \in \R^{n-k}$ such that $|y - \phi|_S(a)| < \epsilon$. We will show that $y \in \phi|_S(S \cap V)$. 
+	Let us show that $\phi|_S$ is open. By definition of the subspace topology \ref{subspace-topology}, every open subset of $S \cap U$ is of the form $S \cap V$ where $V$ is an open subset of $U$. Suppose $a \in  S \cap V$. We want to show that $\phi|_S(a)$ is an interior point of $\phi|_S(S \cap V)$. Since $V$ is open in $U$ and $\phi : U \to \R^n$ is an open map, we know that $\phi(a)$ is an interior point of $\phi(V)$, ie, there exists $\epsilon > 0$ such that every point of $\R^n$ within $\epsilon$ of $\phi(a)$ is inside $\phi(V)$. We claim that the $\epsilon$ ball around $\phi|_S(a)$ is contained in $\phi|_S(S \cap V)$. In other words, suppose we have $y = (y_{1}, \dotsc, y_k) \in \R^{k}$ such that $|y - \phi|_S(a)| < \epsilon$. We will show that $y \in \phi|_S(S \cap V)$. 
 	
-	Notice that, since $(U,\phi)$ is adapted to $S$, the vector $\phi(a) \in \R^n$ is the same as $\phi|_S(a) \in \R^{n-k}$ except that it is prepended with $k$ zeroes. Let $\iota : \R^{n-k} \to \R^n$ be the map that preprends vectors in $\R^{n-k}$ with a string of $k$ zeroes. In other words, 
-	\[ \iota(y_{k+1}, \dotsc, y_n) = (\overbrace{0, \dotsc, 0}^{k \text{ times}}, y_{k+1}, \dotsc, y_n). \]
-	Thus $\phi(a) = \iota(\phi|_S(a))$. Now by the definition of the either the euclidean or the max norm, we see that $|\iota(y) - \phi(a)| = |y - \phi|_S(a)|$, which means that $|\iota(y) - \phi(a)| < \epsilon$. This means that $\iota(y) \in \phi(V)$ due to our choice of $\epsilon$. Since $\phi$ is injective, there exists a unique $b \in V$ such that $\phi(b) = \iota(y)$. This means that the first $k$ coordinates of $b$ are zero, so $b \in S \cap U$ since $(U, \phi)$ is adapted to $S$. Moreover
+	Notice that, since $(U,\phi)$ is a slice chart for $S$, the vector $\phi(a) \in \R^n$ is the same as $\phi|_S(a) \in \R^{k}$ except that for some trailing zeroes. Let $\iota : \R^k \to \R^n$ be the map that concatenates vectors in $\R^{n-k}$ with a string of $n-k$ zeroes. In other words, 
+	\[ \iota(y_1, \dotsc, y_k) = (y_1, \dotsc, y_k, \overbrace{0, \dotsc, 0}^{n-k \text{ times}}). \]
+	Thus $\phi(a) = \iota(\phi|_S(a))$. Now by the definition of the either the euclidean or the max norm, we see that $|\iota(y) - \phi(a)| = |y - \phi|_S(a)|$, which means that $|\iota(y) - \phi(a)| < \epsilon$. This means that $\iota(y) \in \phi(V)$ due to our choice of $\epsilon$. Since $\phi$ is injective, there exists a unique $b \in V$ such that $\phi(b) = \iota(y)$. This means that the first $k$ coordinates of $b$ are zero, so $b \in S \cap U$ since $(U, \phi)$ is a slice chart for $S$. Moreover
 	\[ \phi|_S(b) = \pi(\phi(b)) = \pi(\iota(y)) = y \]
 	which shows that $y \in \phi|_S(S \cap V)$. 
 	
-	Next up, suppose $(U, \phi)$ and $(U', \phi')$ are both charts in $\mathscr{A}_X$ that are adapted to $S$. We want to show that $(S \cap U, \phi|_S)$ and $(S \cap U', \phi'|_S)$ are compatible. If $S \cap U \cap U'$ is empty, there is nothing to do, so we assume that $S \cap U \cap U'$ is nonempty. Let $k$ and $k'$ be the codimensions of $S$ in the two charts $(U, \phi)$ and $(U', \phi')$, respectively. Once we prove compatibility, it follows from \cref{dimension-well-defined} that we must have $k = k'$. 
+	Next up, suppose $(U, \phi)$ and $(U', \phi')$ are both charts in $\mathscr{A}_X$ that are adapted to $S$. We want to show that $(S \cap U, \phi|_S)$ and $(S \cap U', \phi'|_S)$ are compatible. If $S \cap U \cap U'$ is empty, there is nothing to do, so we assume that $S \cap U \cap U'$ is nonempty. Let $k$ and $k'$ be the dimensions of $S$ in the two charts $(U, \phi)$ and $(U', \phi')$, respectively. 
 	
 	The proof of compatibility is encapsulated by the following diagram. 
 	\[ \begin{tikzcd}
 	\phi|_S(S \cap U \cap U') \ar{r}{(\phi|_S)^{-1}} \ar{d}[swap]{\iota} & S \cap U \cap U' \ar[hookrightarrow]{d} \ar{r}{\phi'|_S} & \phi'|_S(S \cap U \cap U') \\
 	\phi(U \cap V) \ar{r}{\phi^{-1}} & U \cap V \ar{r}{\phi} & \phi'(U \cap V) \ar{u}[swap]{\pi'}
 	\end{tikzcd} \]
-	Here $\iota$ denotes the ``prepend with $k$ zeroes'' map, and $\pi'$ is the ``project onto the final $k'$ coordinates'' map. You should stare at the above diagram until you've convinced yourself that it ``commutes,'' ie, that the result of following any two paths of arrows that start and end at the same place ends up being the same. (The fact that the square on the left of the diagram commutes is because $(U, \phi)$ is adapted to $S$, and the fact that square on the right commutes is by definition of the function $\phi'|_S$.)
+	Here $\iota$ denotes the ``concatenate with $n-k$ trailing zeroes'' map, and $\pi'$ is the ``project onto the first $k'$ coordinates'' map. You should stare at the above diagram until you've convinced yourself that it ``commutes,'' ie, that the result of following any two paths of arrows that start and end at the same place ends up being the same. (The fact that the square on the left of the diagram commutes is because $(U, \phi)$ is a slice chart for $S$, and the fact that square on the right commutes is by definition of the function $\phi'|_S$.)
 	
 	In other words, the diagram tells us that the transition function $\phi'|_S \circ (\phi|_S)^{-1}$ is equal to $\pi' \circ (\phi' \circ \phi^{-1}) \circ \iota$. Since $(U,\phi)$ and $(U', \phi')$ are compatible, we know that $\phi' \circ \phi^{-1}$ is smooth. Thus the transition function $\phi'|_S \circ (\phi|_S)^{-1}$ is smooth. 
 	
 	Since $S$ is a submanifold, we know that it can be covered by charts in $X$ that are adapted to $S$. Thus we've just shown that the set
-	\[ \mathscr{A} = \{ (S \cap U, \phi|_S) : (U, \phi) \in \mathscr{A}_X \text{ is adapted to } S \} \]
+	\[ \mathscr{A} = \{ (S \cap U, \phi|_S) : (U, \phi) \in \mathscr{A}_X \text{ is a slice chart for } S \} \]
 	is an atlas on $S$. The assertion about $\dim_x(S)$ follows immediately. 
 \end{proof}
 
@@ -643,13 +686,9 @@ We now make good on our promise of proving that submanifolds are in fact manifol
 We've used the word ``submanifold'' once before, in \cref{open-submanifold} where we defined ``open submanifolds.'' Let us now show that this earlier usage of the word ``submanifold'' was justified and does not produce any conflicts with our new definitions.  
 
 \begin{exercise}[``Open submanifolds are submanifolds''] \label{open-submanifolds-are-submanifolds}
-	Suppose $X$ is a manifold and $U$ is an open subset. 
-	\begin{enumerate}[(a)]
-		\item Show that $U$ is a submanifold (in the sense of \cref{submanifold}). 
-		\item Show that the maximal atlas on $U$ constructed by \cref{submanifolds-are-manifolds} is equal to the atlas described in \cref{open-submanifold}. 
-	\end{enumerate}
+	Suppose $X$ is a manifold and $U$ is an open subset. Show that $U$ is a submanifold (in the sense of \cref{submanifold}), and that the maximal atlas on $U$ constructed by \cref{submanifolds-are-manifolds} is equal to the atlas described in \cref{open-submanifold}. 
 	\begin{hint}
-		Show that a chart $(V, \phi) \in \mathscr{A}_X$ is adapted to $U$ if and only if $V \subseteq U$, and that $U$ has codimension 0 in any such chart. 
+		Show that a chart $(V, \phi) \in \mathscr{A}_X$ is a slice chart for $U$ if and only if $V \subseteq U$. 
 	\end{hint}
 \end{exercise}
 
@@ -659,40 +698,62 @@ Here is another property you would hope would be true.
 	Let $X$ be a manifold, $S$ a submanifold of $X$, and $T$ a submanifold of $S$. Show that $T$ is a submanifold of $X$. 
 \end{exercise}
 
-\subsection{Submanifolds of euclidean space}
+Finally, here is a result that lets us produce many manifolds by considering graphs of smooth functions on euclidean space. 
 
-We now have two important results which let us produce lots of examples of submanifolds of euclidean space out of smooth functions (in the sense of \cref{smooth-multi}). 
+\begin{proposition} \label{graphs-smooth}
+	Suppose $U$ is an open subset of $\R^m$ and $f : U \to \R^n$ is smooth. Then the graph 
+	\[ \Gamma = \{ (x,y) \in U \times \R^n : f(x) = y \} \]
+	is a submanifold of $U \times \R^n$. 
+\end{proposition}
 
-\subsubsection*{Submersion theorem}
+\begin{proof}
+	Consider the function $\phi : U \times \R^n \to \R^{m+n}$ given by $\phi(x,y) = (x,f(x)-y)$. Then $\phi$ is injective, since if $\phi(x, y) = (a,b)$, then clearly $x = a$ and $y = f(a)-b$, so any input to $\phi$ is determined by its input. It is also clear that $\phi$ is smooth. If we compute the derivative, we find that  
+	\[ \phi'(x,y) = \begin{bmatrix} 
+	1 & 0 & \dotsb & 0 & 0 & 0 & \dotsb & 0 \\ 
+	0 & 1 & \dotsb & 0 & 0 & 0 & \dotsb & 0 \\
+	\vdots & \vdots & \ddots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+	0 & 0 & \dotsb & 1 & 0 & 0 & \dotsb & 0 \\ 
+	\partial_1 f_1(x) & \partial_2 f_1(x) & \dotsb & \partial_m f_1(x) & -1 & 0 & \dotsb & 0 \\
+	\partial_1 f_2(x) & \partial_2 f_2(x) & \dotsb & \partial_m f_2(x) & 0 & -1 & \dotsb & 0 \\
+	\vdots & \vdots & \ddots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+	\partial_1 f_n(x) & \partial_2 f_n(x) & \dotsb & \partial_m f_n(x) & 0 & 0 & \dotsb & -1
+	\end{bmatrix} = \begin{bmatrix} I_n & 0 \\ f'(x) & -I_m \end{bmatrix}, \]
+	where $I_r$ denotes the $r \times r$ identity matrix. In other words, the Jacobian matrix $\phi'(x,y)$ is a lower triangular $(n+m)\times(n+m)$ matrix with determinant $(-1)^m$. Thus $\phi$ is \'etale, so $(U \times \R^n, \phi)$ is a chart in the euclidean atlas on $U \times  \R^n$. It is evidently a slice chart for $\Gamma$, proving that $\Gamma$ is a submanifold of $U \times \R^n$. 
+\end{proof}
 
-First up, we have the following important theorem which goes by many names, including the ``regular level set theorem,'' the ``preimage theorem'' and the ``submersion theorem.'' We will later generalize this result. 
+\begin{exercise}
+	Suppose $U$ is an open subset of $\R^m$ and $f : U \to \R^n$ is a smooth function. We have discussed two maximal atlases on the graph $\Gamma$ of $f$. One was discussed in \cref{graphs-continuous}, and the other arises by combining \cref{graphs-smooth,submanifolds-are-manifolds}. How do these atlases compare?
+\end{exercise}
+
+\subsection{Submersion theorem}
+
+We now have a very important result which let us produce lots of examples of submanifolds of euclidean space out of smooth functions (in the sense of \cref{smooth-multi}). This result goes by many names, including the ``regular level set theorem,'' the ``preimage theorem'' and the ``submersion theorem.'' We will later generalize this result. 
 
 \begin{theorem}[Submersion theorem] \label{submersion-theorem-local}
 	Suppose $U$ is an open subset of $\R^m$ and $f : U \to \R^n$ is smooth and submersive. Then $S = f^{-1}(b)$ is a submanifold of $U$ of dimension $m-n$ for any $b \in f(U)$. 
 \end{theorem}
 
 \begin{proof}
-	By replacing $f$ with the function $x \mapsto f(x)-b$, we can assume without loss of generality that $b = 0$. Fix $a \in S$. We want to find a chart adapted to $S$ containing $p$. We know that $f$ is submersive at $a$, which means that the $n \times m$ matrix $f'(a)$ has a non-vanishing $n \times n$ minor, ie, there exist $n$ distinct integers $i_1, \dotsc, i_n$ between $1$ and $m$ such that 
+	By replacing $f$ with the function $x \mapsto f(x)-b$, we can assume without loss of generality that $b = 0$. Fix $a \in S$. We want to find a slice chart for $S$ containing $p$. We know that $f$ is submersive at $a$, which means that the $n \times m$ matrix $f'(a)$ has a non-vanishing $n \times n$ minor. By permuting the coordinates (cf. \cref{permutation-submanifold}), we can assume that it is the $n \times n$ minor on the far right of $f'(a)$ that does not vanish. In other words, we can assume without loss of generality that  
 	\begin{equation} \label{derivative-non-vanishing-minor} 
-	\det \begin{bmatrix} \partial_{i_1} f_1(a) & \dotsb & \partial_{i_n} f_1(a) \\ \vdots & \ddots & \vdots \\ \partial_{i_1} f_n(a) & \dotsb & \partial_{i_n} f_n(a) \end{bmatrix} \neq 0. 
-	\end{equation}
-	By permuting the coordinates, we can assume without loss of generality that $i_1 = 1, i_2 = 2, \dotsc, i_n = n$ (cf. \cref{permutation-submanifold}). Consider the function $\phi : U \to \R^m$ such that, if $x = (x_1, \dotsc, x_m) \in U$, then
-	\[ \phi(x) = (f_1(x), \dotsc, f_n(x), x_{n+1}, \dotsc, x_m). \]
-	Then
-	\[ \phi'(x) = 
-	\begin{bmatrix} 
-	\partial_1 f_1(x) & \dotsb & \partial_n f_1(x) & \partial_{n+1} f_1(x) & \dotsb & \partial_m f_1(x) \\ 
-	\vdots & \dotsb & \vdots & \vdots & \ddots & \vdots \\ 
-	\partial_1 f_n(x) & \dotsb & \partial_n f_n(x) & \partial_{n+1} f_n(x) & \dotsb & \partial_m f_n(x) \\
-	0 & \dotsb & 0 & 1 & \dotsb & 0 \\ 
-	\vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\ 
-	0 & \dotsb & 0 & 0 & \dotsb & 1
-	\end{bmatrix} \]
-	In other words, the $(m-n) \times m$ submatrix on the bottom left of $\phi'(x)$ is all zeroes, and the $(m-n) \times (m-n)$ submatrix on the bottom right is the identity matrix. This means that $\det y'(x)$ is equal, up to sign, to the determinant of the $n \times n$ in the top left, which we know from \cref{derivative-non-vanishing-minor} is nonzero when $x = a$. Thus $\phi$ is \'etale at $a$. 
+	\det \begin{bmatrix} \partial_{m-n+1} f_1(a) & \dotsb & \partial_{m-n+1} f_1(a) \\ \vdots & \ddots & \vdots \\ \partial_{m} f_n(a) & \dotsb & \partial_{m} f_n(a) \end{bmatrix} \neq 0. 
+	\end{equation} Consider the function $\phi : U \to \R^m$ such that, if $x = (x_1, \dotsc, x_m) \in U$, then
+	\[ \phi(x) = (x_1, \dotsc, x_{m-n}, f_{1}(x), \dotsc, f_n(x)). \]
+	Then 
+	\[ \phi'(x) = \begin{bmatrix}
+	1 & 0 & \dotsb & 0 & 0 & \dotsb & 0 \\
+	0 & 1 & \dotsb & 0 & 0 & \dotsb & 0 \\
+	\vdots & \vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\
+	0 & 0 & \dotsb & 1 & 0 & \dotsb & 0 \\
+	\partial_1 f_{1}(x) & \partial_2 f_{1}(x) & \dotsb & \partial_n f_{1}(x) & \partial_{n+1} f_{1}(x)& \dotsb & \partial_m f_{1}(x) \\ 
+	\vdots & \vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\
+	\partial_1 f_{n}(x) & \partial_2 f_{n}(x) & \dotsb & \partial_n f_{n}(x) & \partial_{n+1} f_{n}(x)& \dotsb & \partial_m f_{n}(x) \\ 
+	\end{bmatrix}. \]
+	In other words, the $(m-n) \times (m-n)$ submatrix on the top left is the identity matrix, the $(m-n) \times n$ submatrix on the top right of $\phi'(x)$ is all zeroes, and the bottom $n \times m$ submatrix is precisely $f'(x)$. This means that $\det \phi'(x)$ is equal, up to sign, to the determinant of the $n \times n$ in the bottom right, ie, the $n \times n$ minor on the far right of $f'(x)$. We know from \cref{derivative-non-vanishing-minor} that this minor is nonzero when $x = a$, so $\phi$ is \'etale at $a$. 
 	
-	Since $f$ is smooth, so is $\phi$, so there exists an open neighborhood $V$ of $a$ such that $\phi|_V$ is \'etale. By the inverse function theorem \ref{inverse-function-theorem}, we can replace $V$ with a smaller open neighborhood of $a$ in order to further assume that $\phi|_V$ is injective. Then \cref{euclidean-chart-characterization} tells us that $(V, \phi|_V)$ is a chart in the euclidean atlas which contains $a$. Moreover, 
-	\[ S \cap V = \{ x \in V : f(x) = 0 \} = \{ x \in V : \phi_1(x) = \dotsb = \phi_n(x) = 0 \} \]
-	because $\phi_j = f_j$ for all $j = 1, \dotsc, n$. This shows that $(V,\phi|_V)$ is adapted to $S$, and that $S$ has codimension $n$ at $a$ in $\R^m$. 
+	Since $f$ is smooth, so is $\phi$, so there exists an open neighborhood $V$ of $a$ such that $\phi|_V$ is \'etale. By the inverse function theorem \ref{inverse-function-theorem}, we can replace $V$ with a smaller open neighborhood of $a$ in order to further assume that $\phi|_V$ is injective. Then \cref{euclidean-chart-characterization} tells us that $(V, \phi)$ is a chart in the euclidean atlas which contains $a$. Moreover, 
+	\[ S \cap V = \{ x \in V : f(x) = 0 \} = \{ x \in V : \phi_{m-n+1}(x) = \dotsb = \phi_{m-n+1}(x) = 0 \} \]
+	because $\phi_{m-n+j} = f_j$ for all $j = 1, \dotsc, n$. This shows that $(V,\phi)$ is a slice chart for $S$, and that $S$ has dimension $m-n$ at $a$ in $\R^m$. 
 \end{proof}
 
 \begin{exercise} \label{permutation-submanifold}
@@ -746,39 +807,6 @@ First up, we have the following important theorem which goes by many names, incl
 		\end{center}
 		\caption{A slice of the torus $T$ from \cref{torus-equation} along a plane that is perpendicular to the $xy$-plane and contains the $z$-axis.}  \label{torus-slice}
 	\end{figure}
-\end{exercise}
-
-\subsubsection*{Graphs of smooth functions}
-
-\begin{proposition} \label{graphs-smooth}
-	Suppose $U$ is an open subset of $\R^m$ and $f : U \to \R^n$ is a smooth function. Then the graph of $f$ is a submanifold of $\R^{m+n}$. 
-\end{proposition}
-
-\begin{proof}
-	We derive this from the submersion theorem \ref{submersion-theorem-local}. Consider the function $g : U \times \R^n \to \R^n$ given by $g(x, y) = f(x) - y$. Then the graph of $f$ is equal to $g^{-1}(0)$, so the result will follow from the submersion theorem provided we can show that $g$ is submersive. To see this, we calculate $dg$. Note that if $x = (x_1, \dotsc, x_m) \in U$ and $y = (y_1, \dotsc, y_n) \in \R^n$, then
-	\[ g(x,y) = g(x_1, \dotsc, x_m, y_1, \dotsc, y_n) = (f_1(x_1,\dotsc, x_m)-y_1, \dotsc, f_n(x_1, \dotsc, x_m) - y_n) \]
-	by definition of $g$, which means that
-	\[ \frac{\partial g_k}{\partial x_i}(x,y) = \frac{\partial f_k}{\partial x_j}(x) = \partial_j f_k(x) \quad \text{and} \quad \frac{\partial g_k}{\partial y_j}(x,y) = -\delta_{j,k} = \begin{cases} -1 & \text{if } j = k \\ 0 & \text{if } j \neq k \end{cases} \]
-	where $i = 1, \dotsc, m$ and $j, k = 1, \dotsc n$. In other words, $g'(x,y)$ is the following $n \times (m+n)$ matrix. 
-	\[ g'(x,y) = 
-	\begin{bmatrix} 
-	\partial_1 f_1(x) & \partial_2 f_1(x) & \dotsb & \partial_m f_1(x) & -1 & 0 & \dotsb & 0 \\ 
-	\partial_1 f_2(x) & \partial_2 f_2(x) & \dotsb & \partial_m f_2(x) & 0 & -1 & \dotsb & 0 \\
-	\vdots & \vdots & \ddots & \vdots & \vdots & \vdots & \ddots & \vdots \\ 
-	\partial_1 f_n(x) & \partial_2 f_n(x) & \dotsb & \partial_m f_n(x) & 0 & 0 & \dotsb & -1 \end{bmatrix} = \begin{bmatrix} f'(x) & -I \end{bmatrix} \]
-	where $I$ denotes the $n \times n$ identity matrix. Since $I$ has rank $n$, so does $g'(x,y)$, proving that $g$ is submersive everywhere. 
-\end{proof}
-
-\begin{caution}
-	Sometimes, a subspace that is a manifold can fail to be a submanifold. For example, you might notice that we showed in \cref{graphs-continuous} that the graph of a \emph{continuous} function between two euclidean spaces is a subspace of euclidean space and is also a manifold; and then we showed in \cref{graphs-smooth} that the graph of a \emph{smooth} function is a submanifold of euclidean space. And indeed, the graphs of continuous-but-not-smooth functions provide examples of subspaces that are manifolds but not submanifolds. 
-\end{caution}
-
-\begin{exercise}
-	Let $f : \R \to \R$ be the function $f(x) = |x|$. Show that the graph of $f$ is not a submanifold of $\R^2$. 
-\end{exercise}
-
-\begin{exercise}
-	Suppose $U$ is an open subset of $\R^m$ and $f : U \to \R^n$ is a smooth function. We have discussed two atlases on the graph $\Gamma$ of $f$. One was discussed in \cref{graphs-continuous}, and the other arises by combining \cref{graphs-smooth,submanifolds-are-manifolds}. How do these atlases compare?
 \end{exercise}
 
 \section{Smooth functions}
