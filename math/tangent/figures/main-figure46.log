@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  14 OCT 2019 08:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  14 OCT 2019 15:39
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3455,236 +3455,269 @@ LaTeX Warning: Reference `sphere-projection-atlas' on page 1 undefined on input
  line 466.
 
 
-LaTeX Warning: Reference `submanifolds-are-manifolds' on page 1 undefined on in
-put line 479.
+LaTeX Warning: Reference `submanifold-definition-picture' on page 1 undefined o
+n input line 481.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-LaTeX Warning: Reference `cylinder' on page 1 undefined on input line 572.
-
-
-LaTeX Warning: Reference `submanifolds-are-manifolds-details' on page 1 undefin
-ed on input line 590.
-
-
-LaTeX Warning: Reference `subspace-topology' on page 154 undefined on input lin
-e 592.
-
-
-LaTeX Warning: Reference `dimension-well-defined' on page 1 undefined on input 
-line 600.
-
-
-LaTeX Warning: Reference `circle-projection-atlas' on page 1 undefined on input
- line 621.
-
-
 LaTeX Warning: Reference `submanifolds-are-manifolds' on page 1 undefined on in
-put line 621.
+put line 526.
 
 
-LaTeX Warning: Reference `circle-submanifold' on page 1 undefined on input line
- 621.
-
-
-LaTeX Warning: Reference `open-submanifold' on page 1 undefined on input line 6
-24.
-
-
-LaTeX Warning: Reference `submanifold' on page 1 undefined on input line 629.
-
-
-LaTeX Warning: Reference `submanifolds-are-manifolds' on page 1 undefined on in
-put line 630.
-
-
-LaTeX Warning: Reference `open-submanifold' on page 1 undefined on input line 6
-30.
-
-
-LaTeX Warning: Reference `smooth-multi' on page 1 undefined on input line 645.
-
-
-LaTeX Warning: Reference `permutation-submanifold' on page 1 undefined on input
- line 660.
-
-
-LaTeX Warning: Reference `derivative-non-vanishing-minor' on page 1 undefined o
-n input line 672.
-
-
-LaTeX Warning: Reference `inverse-function-theorem' on page 157 undefined on in
-put line 674.
-
-
-LaTeX Warning: Reference `euclidean-chart-characterization' on page 1 undefined
- on input line 674.
-
-
-LaTeX Warning: Reference `sphere-projection-atlas' on page 1 undefined on input
- line 686.
-
-
-LaTeX Warning: Reference `circle-projection-atlas' on page 1 undefined on input
- line 686.
-
-
-LaTeX Warning: Reference `submersion-theorem-local' on page 158 undefined on in
-put line 693.
-
-
-LaTeX Warning: Reference `torus-slice' on page 1 undefined on input line 695.
+LaTeX Warning: Reference `circle-submanifold-picture' on page 1 undefined on in
+put line 565.
 
 \openout4 = `figures/main-figure46.dpth'.
 
-[158
+Package pgfplots info on input line 596: fill between: activating layered graph
+ics
+\pgf@layerbox@axis background=\box45
+\pgf@layerboxsaved@axis background=\box46
+\pgf@layerbox@axis grid=\box47
+\pgf@layerboxsaved@axis grid=\box48
+\pgf@layerbox@axis ticks=\box49
+\pgf@layerboxsaved@axis ticks=\box50
+\pgf@layerbox@axis lines=\box51
+\pgf@layerboxsaved@axis lines=\box52
+\pgf@layerbox@axis tick labels=\box53
+\pgf@layerboxsaved@axis tick labels=\box54
+\pgf@layerbox@pre main=\box55
+\pgf@layerboxsaved@pre main=\box56
+\pgf@layerbox@axis descriptions=\box57
+\pgf@layerboxsaved@axis descriptions=\box58
+\pgf@layerbox@axis foreground=\box59
+\pgf@layerboxsaved@axis foreground=\box60
+Package pgfplots info on input line 596: Setting layers 'axis background,axis g
+rid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axis
+ foreground'...
+[153
 
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+]
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 
-LaTeX Warning: Reference `torus-equation' on page 1 undefined on input line 728
-.
-
-
-LaTeX Warning: Reference `torus-equation' on page 1 undefined on input line 728
-.
+LaTeX Warning: Reference `cylinder' on page 1 undefined on input line 636.
 
 
-LaTeX Warning: Reference `submersion-theorem-local' on page 158 undefined on in
-put line 739.
+LaTeX Warning: Reference `submanifolds-are-manifolds-details' on page 1 undefin
+ed on input line 654.
 
 
-LaTeX Warning: Reference `graphs-continuous' on page 1 undefined on input line 
-754.
+LaTeX Warning: Reference `subspace-topology' on page 155 undefined on input lin
+e 656.
 
 
-LaTeX Warning: Reference `graphs-smooth' on page 1 undefined on input line 754.
+LaTeX Warning: Reference `dimension-well-defined' on page 1 undefined on input 
+line 664.
 
 
-
-LaTeX Warning: Reference `graphs-continuous' on page 1 undefined on input line 
-762.
+LaTeX Warning: Reference `circle-projection-atlas' on page 1 undefined on input
+ line 685.
 
 
 LaTeX Warning: Reference `submanifolds-are-manifolds' on page 1 undefined on in
-put line 762.
+put line 685.
 
 
-LaTeX Warning: Reference `graphs-smooth' on page 1 undefined on input line 762.
+LaTeX Warning: Reference `circle-submanifold' on page 1 undefined on input line
+ 685.
+
+
+LaTeX Warning: Reference `open-submanifold' on page 1 undefined on input line 6
+88.
+
+
+LaTeX Warning: Reference `submanifold' on page 1 undefined on input line 693.
+
+
+LaTeX Warning: Reference `submanifolds-are-manifolds' on page 1 undefined on in
+put line 694.
+
+
+LaTeX Warning: Reference `open-submanifold' on page 1 undefined on input line 6
+94.
+
+
+LaTeX Warning: Reference `smooth-multi' on page 1 undefined on input line 709.
+
+
+LaTeX Warning: Reference `permutation-submanifold' on page 1 undefined on input
+ line 724.
+
+
+LaTeX Warning: Reference `derivative-non-vanishing-minor' on page 1 undefined o
+n input line 736.
+
+
+LaTeX Warning: Reference `inverse-function-theorem' on page 158 undefined on in
+put line 738.
+
+
+LaTeX Warning: Reference `euclidean-chart-characterization' on page 1 undefined
+ on input line 738.
+
+
+LaTeX Warning: Reference `sphere-projection-atlas' on page 1 undefined on input
+ line 750.
+
+
+LaTeX Warning: Reference `circle-projection-atlas' on page 1 undefined on input
+ line 750.
+
+
+LaTeX Warning: Reference `submersion-theorem-local' on page 159 undefined on in
+put line 757.
+
+
+LaTeX Warning: Reference `torus-slice' on page 1 undefined on input line 759.
+
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+LaTeX Warning: Reference `torus-equation' on page 1 undefined on input line 792
+.
+
+
+LaTeX Warning: Reference `torus-equation' on page 1 undefined on input line 792
+.
+
+
+LaTeX Warning: Reference `submersion-theorem-local' on page 159 undefined on in
+put line 803.
+
+
+LaTeX Warning: Reference `graphs-continuous' on page 1 undefined on input line 
+818.
+
+
+LaTeX Warning: Reference `graphs-smooth' on page 1 undefined on input line 818.
 
 
 
-LaTeX Warning: Reference `multi' on page 1 undefined on input line 771.
+LaTeX Warning: Reference `graphs-continuous' on page 1 undefined on input line 
+826.
 
 
-LaTeX Warning: Reference `smooth-multi' on page 1 undefined on input line 799.
+LaTeX Warning: Reference `submanifolds-are-manifolds' on page 1 undefined on in
+put line 826.
 
 
-LaTeX Warning: Reference `open-submanifold' on page 1 undefined on input line 7
-99.
+LaTeX Warning: Reference `graphs-smooth' on page 1 undefined on input line 826.
+
+
+
+LaTeX Warning: Reference `multi' on page 1 undefined on input line 835.
+
+
+LaTeX Warning: Reference `smooth-multi' on page 1 undefined on input line 863.
+
+
+LaTeX Warning: Reference `open-submanifold' on page 1 undefined on input line 8
+63.
 
 
 LaTeX Warning: Reference `smooth-real-valued' on page 1 undefined on input line
- 799.
+ 863.
 
 
-LaTeX Warning: Reference `smooth-multi' on page 1 undefined on input line 802.
+LaTeX Warning: Reference `smooth-multi' on page 1 undefined on input line 866.
 
 
 LaTeX Warning: Reference `smooth-real-valued' on page 1 undefined on input line
- 802.
+ 866.
 
 
 LaTeX Warning: Reference `smooth-real-valued-local' on page 1 undefined on inpu
-t line 804.
+t line 868.
 
 
 LaTeX Warning: Reference `smooth-real-valued-stable' on page 1 undefined on inp
-ut line 831.
+ut line 895.
 
 
 LaTeX Warning: Reference `constant-compact-zero-outside-neighborhood' on page 1
- undefined on input line 836.
+ undefined on input line 900.
 
 
 LaTeX Warning: Reference `compact-topological-space' on page 1 undefined on inp
-ut line 836.
+ut line 900.
 
 
 LaTeX Warning: Reference `recentering-chart' on page 1 undefined on input line 
-843.
+907.
 
 
 LaTeX Warning: Reference `smooth-approximation-characteristic-compact-details' 
-on page 1 undefined on input line 843.
+on page 1 undefined on input line 907.
 
 
 LaTeX Warning: Reference `multivariable-bump-round-support' on page 1 undefined
- on input line 843.
+ on input line 907.
 
 
 LaTeX Warning: Reference `smooth-approximation-characteristic-compact-details' 
-on page 1 undefined on input line 843.
+on page 1 undefined on input line 907.
 
 
 LaTeX Warning: Reference `smooth-approximation-characteristic-compact-details' 
-on page 1 undefined on input line 845.
+on page 1 undefined on input line 909.
 
 
 LaTeX Warning: Reference `smooth-approximation-characteristic-compact-details' 
-on page 1 undefined on input line 847.
+on page 1 undefined on input line 911.
 
 
-LaTeX Warning: Reference `bridge-function' on page 1 undefined on input line 84
-7.
+LaTeX Warning: Reference `bridge-function' on page 1 undefined on input line 91
+1.
 
 
 LaTeX Warning: Reference `multivariable-bump-round-support' on page 1 undefined
- on input line 854.
+ on input line 918.
 
 
-LaTeX Warning: Reference `smooth-multi' on page 1 undefined on input line 888.
+LaTeX Warning: Reference `smooth-multi' on page 1 undefined on input line 952.
 
 
 LaTeX Warning: Reference `smooth-between-manifolds' on page 1 undefined on inpu
-t line 888.
+t line 952.
 
 
 LaTeX Warning: Reference `smooth-real-valued' on page 1 undefined on input line
- 892.
+ 956.
 
 
 LaTeX Warning: Reference `smooth-between-manifolds' on page 1 undefined on inpu
-t line 892.
+t line 956.
 
 
-LaTeX Warning: Reference `smooth-local' on page 1 undefined on input line 922.
+LaTeX Warning: Reference `smooth-local' on page 1 undefined on input line 986.
 
 
-LaTeX Warning: Reference `multi' on page 1 undefined on input line 922.
+LaTeX Warning: Reference `multi' on page 1 undefined on input line 986.
 
 
-LaTeX Warning: Reference `smooth-local' on page 1 undefined on input line 924.
+LaTeX Warning: Reference `smooth-local' on page 1 undefined on input line 988.
 
 
 LaTeX Warning: Reference `smooth-stable-composite' on page 1 undefined on input
- line 936.
+ line 1000.
 
 
 LaTeX Warning: Reference `euclidean-valued-smooth-iff-components-smooth' on pag
-e 1 undefined on input line 936.
+e 1 undefined on input line 1000.
 
 
-LaTeX Warning: Reference `paths-multi' on page 1 undefined on input line 945.
+LaTeX Warning: Reference `paths-multi' on page 1 undefined on input line 1009.
 
 
 LaTeX Warning: Reference `universal-cover-circle' on page 1 undefined on input 
-line 970.
+line 1034.
 
 ) (./tangent.tex
 chapter 4.
@@ -3941,19 +3974,18 @@ Package logreq Info: Writing requests to 'figures/main-figure46.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45028 strings out of 492982
- 1052894 string characters out of 6134895
- 1734890 words of memory out of 5000000
- 47686 multiletter control sequences out of 15000+600000
- 98718 words of font info for 201 fonts, out of 8000000 for 9000
+ 45073 strings out of 492982
+ 1055129 string characters out of 6134895
+ 1735890 words of memory out of 5000000
+ 47739 multiletter control sequences out of 15000+600000
+ 97157 words of font info for 195 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,15n,119p,8849b,2279s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb>
-Output written on figures/main-figure46.pdf (1 page, 13669 bytes).
+ 75i,15n,119p,8849b,2358s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on figures/main-figure46.pdf (1 page, 5052 bytes).
 PDF statistics:
- 32 PDF objects out of 1000 (max. 8388607)
- 14 compressed objects within 1 object stream
+ 24 PDF objects out of 1000 (max. 8388607)
+ 8 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  25613 words of extra memory for PDF output out of 29859 (max. 10000000)
 
