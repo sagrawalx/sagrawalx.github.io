@@ -57,6 +57,7 @@ nonav: true
 ## Primary instructor
 
 * Colorado College
+    * Ordinary Differential Equations (Fall 2019, Block 3). 
     * Real Analysis 2 (Fall 2019, Block 2).
     * Linear Algebra (Spring 2019, Block 8).
     * Calculus 1 (Spring 2019, Block 6).

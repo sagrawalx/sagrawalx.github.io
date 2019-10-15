@@ -301,7 +301,7 @@ Office hours (1–3pm).
 
 <tr>
 <td>Wed</td>
-<td colspan="3">[Project presentations](final-project).</td>
+<td colspan="3">[Project presentations](project).</td>
 </tr>
 
 
