@@ -8,7 +8,7 @@ nonav: true
 
 # Overview
 
-* Class: Monday through Friday, 9:15am, in TBA.
+* Class: Monday through Friday, 9:15am, in Olin 258B.
 * Instructor: Shishir Agrawal (I also go by Sunny).
     * Email: <span class="email">@</span>.
     * Office: Tutt Science 234.
