@@ -45,7 +45,7 @@ sol.show()</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">sol <span class="op">=</span> desolve(deq, y, ics<span class="op">=</span>[<span class="dv">0</span>, <span class="fl">-0.5</span>])
 p <span class="op">=</span> plot(sol, <span class="dv">-2</span>, <span class="dv">2</span>)
 sol.show() <span class="co"># or p.show()</span></code></pre></div>
-<p>Here's how to generate a slope field of the ODE together the plot of a numerical solution to this ODE satisfying the same initial value condition.</p>
+<p>Here's how to generate a slope field of the ODE together with a plot of the numerical solution to this ODE satisfying the same initial value condition.</p>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">f(x,y) <span class="op">=</span> x<span class="op">+</span>y
 y <span class="op">=</span> var(<span class="st">&#39;y&#39;</span>)
 p <span class="op">=</span> plot_slope_field(f, (x, <span class="dv">-2</span>, <span class="dv">2</span>), (y, <span class="dv">-2</span>, <span class="dv">2</span>))
@@ -54,7 +54,7 @@ p.show()</code></pre></div>
 <h1 id="linear-algebra">Linear Algebra</h1>
 <p>...</p>
 <h1 id="systems-of-first-order-odes">Systems of First Order ODEs</h1>
-<p>Here's how to plot a vector field corresponding to the autonomous system x' = x + y and y' = xy.</p>
+<p>Here's how to plot a vector field corresponding to the autonomous nonlinear system x' = x + y and y' = xy.</p>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">y <span class="op">=</span> var(<span class="st">&#39;y&#39;</span>)
 plot_vector_field((x<span class="op">+</span>y,x<span class="op">*</span>y), (x,<span class="op">-</span><span class="dv">2</span>,<span class="dv">2</span>), (y,<span class="op">-</span><span class="dv">2</span>,<span class="dv">2</span>))</code></pre></div>
 <p>...</p>

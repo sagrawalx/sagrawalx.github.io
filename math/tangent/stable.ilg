@@ -1,9 +1,0 @@
-This is makeindex, version 2.15 [TeX Live 2017] (kpathsea + Thai support).
-Scanning input file stable.idx....
-!! Input index error (file = stable.idx, line = 16):
-   -- Extra `@' at position 46 of first argument.
-done (244 entries accepted, 1 rejected).
-Sorting entries.....done (2061 comparisons).
-Generating output file stable.ind....done (233 lines written, 0 warnings).
-Output written in stable.ind.
-Transcript written in stable.ilg.
