@@ -23,13 +23,13 @@ Linear algebra (at roughly the level of MA220) is an important prerequisite for 
 
 In the long run, more important than learning any particular piece of math is learning how to learn math independently (in technical parlance, that's "how to be a *self-regulated learner* of math"). Improving yourself in this regard is my foremost goal for you for this course. Research shows that the following three things are key aspects of this, and it will be good for you to keep them in the front of your mind as we go through the course.
 
-1. *Active reading*. Reading math is very different from other kinds of reading. You cannot read a math textbook the same way you'd read a novel for pleasure if you want to get anything out of it. You have to stop constantly as you're reading math. Try to work out examples yourself, instead of just reading through them. Doodle pictures to make sure you have some kind of a picture in your head of what's going on. Formulate *precise* questions about things you don't understand.
+1. *Active reading*. Reading math is very different from other kinds of reading. You can't read a math textbook the same way you'd read a novel for pleasure if you want to get anything out of it. You have to stop constantly as you're reading math. Try to work out examples yourself, instead of just reading through them. Doodle pictures to make sure you have some kind of a picture in your head of what's going on. Formulate *precise* questions about things you don't understand.
 
 2. *Peer communication*. Talking to your peers about math is incredibly important. If you don't understand a particular concept and ask your peers, you're much more likely to get an explanation that you actually find helpful. If you think you do understand a particular concept and help a peer who's struggling, you'll almost certainly find that the process of explaining the concept to your peer will solidify your own understanding of it.
 
 3. *Self reflection*. A key part of learning how to learn is reflecting on your learning and taking the time to ask yourself questions about your learning. What parts of your study habits are working for you? What parts aren't working? How actively are you reading? Is there anything you could try changing?
 
-All three of these are built into the way the course is structured. The first two are at the forefront of an evidence-based course structure known as *peer instruction*, which was pioneered by the physicist Eric Mazur at Harvard. It is predicated on the observation that *information transfer* (listening to lectures or reading books) is easier than *information assimilation* (solving problems and explaining concepts to others), so it makes sense to move information transfer *out* of the classroom and information assimilation *into* the classroom. There's a growing body of data that suggests this format is quite effective: by a certain metric, it leads to a two-fold improvement in conceptual understanding over more traditional methods!
+All three of these are built into the way the course is structured. The first two are at the forefront of an evidence-based course structure known as *peer instruction*, which was pioneered by the physicist Eric Mazur at Harvard. It's predicated on the observation that *information transfer* (listening to lectures or reading books) is easier than *information assimilation* (solving problems and explaining concepts to others), so it makes sense to move information transfer *out* of the classroom and information assimilation *into* the classroom. There's a growing body of data that suggests this format is quite effective: by a certain metric, it leads to a two-fold improvement in conceptual understanding over more traditional methods!
 
 To round off our three-pronged attack towards the goal of becoming self-regulated learners of mathematics, you'll be asked to complete weekly self-reflection forms. I encourage you to take advantage of these and use them as an opportunity to tweak your learning habits as you find necessary.
 
@@ -73,11 +73,11 @@ A few thoughts about these submissions:
 
 * I'll do my best to tailor our in-class discussions to address as many of your questions as I can. The earlier you send me your question, the more likely I am to be able to work it into our discussions. If I don't address your question in class or via email, please find me during office hours and ask again!
 
-* I'll check your solutions to the reading assignment exercises only for completeness.
+* I'll check your solutions to the reading assignment exercises only for completeness. The exercises numbered in the 100s have solutions in the back of the textbook.
 
 ### In-class structure
 
-I'll begin class with a very brief discussion of the reading. This is not intended to be a substitute for having done the reading. Instead, the idea is to refresh your memory about what we'll be discussing in class today by working through an couple of examples.
+I'll begin class with a very brief discussion of the reading. This is *not* intended to be a substitute for having done the reading. Instead, the idea is to refresh your memory about what we'll be discussing in class today by working through an couple of examples.
 
 We'll spend most of class time solving problems in the following format.
 
@@ -90,7 +90,7 @@ We'll spend most of class time solving problems in the following format.
 
 ### Problem sets
 
-After class, you will hopefully be ready to tackle the problem set listed in the fourth column of the calendar. These problems will not be collected, but problems on the quizzes will heavily resemble problems from the problem sets, so you're encouraged to spend time really figuring them out.
+After class, you'll hopefully be ready to tackle the problem set listed in the fourth column of the calendar. These problems won't be collected, but some of the problems on the quizzes will heavily resemble problems from the problem sets, so you're encouraged to spend time really figuring them out.
 
 ## Assessment
 

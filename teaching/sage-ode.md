@@ -27,7 +27,7 @@ p = plot(sol, -2, 2)
 sol.show() # or p.show()
 ```
 
-Here's how to generate a slope field of the ODE together the plot of a numerical solution to this ODE satisfying the same initial value condition.
+Here's how to generate a slope field of the ODE together with a plot of the numerical solution to this ODE satisfying the same initial value condition.
 
 ```python
 f(x,y) = x+y
@@ -43,7 +43,7 @@ p.show()
 
 # Systems of First Order ODEs
 
-Here's how to plot a vector field corresponding to the autonomous system x' = x + y and y' = xy.
+Here's how to plot a vector field corresponding to the autonomous nonlinear system x' = x + y and y' = xy.
 
 ```python
 y = var('y')

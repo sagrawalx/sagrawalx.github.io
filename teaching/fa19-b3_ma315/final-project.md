@@ -10,21 +10,32 @@ nonav: true
 
 ## Objective
 
-The goal of this project is to give you chance to explore a topic of your interest that has some connection to differential equations, and to share what you learn with your peers. It can be something purely mathematical, or it can involve an application of differential equations to an area of your choice.
+You'll form small groups and explore a topic of choice that has some connection to differential equations. It can be something purely mathematical, or it can involve an application to an area of your choice. Then you'll share what you've learned with your peers
 
-## Description
+The final product you'll be working towards will have two parts:
 
-You'll form groups of 2-3 and collectively choose a topic you want to work on. Your group and topic will need to be approved by me: one person in each proposed group should send me an email letting me know who you'll be working with and what you'll be working on, by 11:59pm on the third Tuesday.
+1. A typewritten document containing an original exposition of the topic of your choice.
+    * It should give an introduction to the topic, contain precise definitions of any new concepts involved, and incorporate a detailed and substantial proof and/or example.
+    * By "original exposition," I mean that you don't need to prove a whole new theorem or something like that, but everything should be written up in your own words.
+    * Pictures are always a great idea!
+    * You should cite references that you used.
+    * If something I've mentioned above doesn't really make sense for what you have in mind, that's fine! Just talk to me first and we'll figure what does make sense for what you have in mind.
+    * It's not required, but I strongly suggest using LaTeX. There's a bit of a learning curve, but the end result looks far more polished and professional than anything you can accomplish using other word processing software. It's probably a useful skill to have going forward.
+    * Send the document to me as a PDF before the start of class on the last day of class (fourth Wednesday).
+2. A presentation to share the highlights of the topic with the rest of the class.
+    * It should take 10-15 minutes.
+    * You don't need to go through all the details that you discuss in your document, but you should work through some illustrative examples.
+    * Pictures are always a great idea.
+    * You could do slides ("Beamer" is the TeX way of doing slides), or you could give a chalk talk. Or do whatever is most appropriate for what you have in mind. Feel free to be creative!
+    * You'll present during class on the last day of class (fourth Wednesday).
 
-For the last day of class, you'll prepare a handout and a digital presentation about your topic.
+For both of these, your intended audience is one of your classmates outside of your group: someone who's familiar with topics we've discussed in our class and has taken all of the prerequisite classes (eg, MA220), but not necessarily anything more than that.
 
-* The handout should be one typewritten page (front and back). It should give an introduction to the topic, and incorporate a detailed and substantial proof and/or example. It need not be entirely original (ie, you don't need to prove a brand new theorem about ODEs), but it should be fully explained *in your own words*. If you can incorporate the results of some computer calculations, that would be awesome! The handout should also include a list of works that you referenced, so that someone who wants to learn more about your topic knows where to start.
+There will be two deadlines related to the project before the last day. They will show up on the [course calendar](index). Here's what you need to have done by each of the deadlines.
 
-    Bring some copies of your handout to the presentation (at least one for me, and then a few more in case any of your peers would like to take one).
+* Proposal deadline: Nothing fancy is required. Just form your group (of 2-3 people), pick out a topic, and then one person in your group should send me an email by the deadline saying who's in the group and what you'll be working on. I'll want different groups to working on different topics, so I may suggest some re-organizing.
 
-* The presentation should convey the main ideas of your topic and some insightful examples. It should take about 10 minutes. We'll use the big data visualization wall in the library. Pictures and videos are always nice, if at all possible (but remember that, if you don't make a picture or video yourself, you have to attribute it to whoever did). All of the nitty gritty mathematical details do not need to appear during the presentation (that's what the handout is for), but make sure you do incorporate some mathematical content at least at a high level. You should be prepared to answer any questions me or your peers might have, after your presentation is over.
-
-Keep in mind that the intended audience is one of your classmates: someone who knows something about the kinds of ODEs we've discussed in our class, but may not know anything specific about your topic.
+* Draft deadline: I'd like to see a a draft of the document. It doesn't need to be complete, of course. It might just contain some of the basic definitions and theorem statements, perhaps an example or a picture. It could be a rough outline. I'm mostly looking for an indication that you've started thinking about your project topic in earnest.
 
 ## Grading
 
@@ -36,9 +47,9 @@ Your project score will be based on the following criteria.
 
 ## Possible Topics
 
-There are *so many* possibilities! I encourage you to be creative. I only ask that it not be something that we've spent time discussing as a class.
+There are *many* possibilities! I encourage you to be creative. I only ask that it not be something that we've spent time discussing as a class.
 
-If you're struggling to find things, here's a short list of things related to ODEs you might look into. I'll keep adding to this list as I think of more.
+If you're struggling to find things, here's a short list of things that I think might make interesting projects. I'll keep adding to this list as I think of more.
 
 * Pendulums.
 * Lotka-Volterra model for predator-prey systems.

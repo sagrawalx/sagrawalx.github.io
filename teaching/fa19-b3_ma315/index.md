@@ -118,7 +118,7 @@ Office hours (1–2pm).
 <tr>
 <td rowspan="2">Fri</td>
 <td>Linear algebra review</td>
-<td>Remind yourself some linear algebra.[^lin-alg]
+<td>None (ie, spend some time reminding yourself some linear algebra[^lin-alg])
 </td>
 <td>
 (These should all be review)
@@ -226,12 +226,13 @@ Office hours (2–3pm).
 <tr>
 <td rowspan="2">Thu</td>
 <td>Eigenvalue method: Defective eigenvalues</td>
-<td>Read: 3.7, and finish off 2.2[^1]  
-Do: 2.2.2, 102 (both ways), 3.7.102  
+<td>Read: 3.7, finish off 2.2[^1], 2.4    
+Do: 3.7.102, 2.2.2, 102 (both ways), 2.4.101    
 </td>
 <td>
-3.5.2, 3.5.103  
+3.5.2, 103  
 3.7.103–104  
+2.4.103, 4  
 </td>
 </tr>
 
@@ -309,12 +310,13 @@ Office hours (1–2pm).
 <td rowspan="2">Wed</td>
 <td>Nonhomogeneous equations: Undetermined coefficients</td>
 <td>
-Read: 2.5.1–2, 3.9.1 (the section on undetermined coefficients)  
-Do: 2.5.103, 3.9.101(c)  
+Read: 2.5.1–2, 3.9.1 (the section on undetermined coefficients), 2.6    
+Do: 2.5.103, 3.9.101(c), 2.6.101    
 </td>
 <td>
 2.5.101–102  
-3.9.102(c)
+3.9.102(c)  
+2.6.103  
 </td>
 </tr>
 
@@ -327,15 +329,9 @@ Office hours (1–2pm).
 
 <tr>
 <td rowspan="2">Thu</td>
-<td>Oscillations, Review</td>
-<td>
-Read: 2.4, 2.6  
-Do: 2.4.101, 2.6.101  
-</td>
-<td>
-2.4.103, 4  
-2.6.103  
-</td>
+<td>Review</td>
+<td>None</td>
+<td></td>
 </tr>
 
 <tr>
@@ -355,6 +351,7 @@ Quiz 3 (in class). Sections covered: Sections covered: 2.1–2, 3.1, 3.3–5, 3.
 <tr>
 <td colspan="3">
 Quiz 3 revisions (1–2pm).  
+[Final project](final-project) draft due (6pm).  
 Submit [self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSfR7DhcU_J2UER69_DAKCqxfQRKV1q4a4evcW3ge0NcHMruOA/viewform) for week 3 (due Sunday by 11:59pm).
 </td>
 </tr>
