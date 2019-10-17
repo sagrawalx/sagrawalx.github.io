@@ -18,8 +18,8 @@ nonav: true
     * If you want, you can look at the *unstable* version [here](/math/tangent/main.pdf). The exposition should be better, but the numbering won't agree with the stable version (or with the reading assignments below).
     * See [here](resources) for a longer list of potentially useful resources.
 * See [here](gradschool) for brief remark if you're going to graduate school.
-* [Reading assignment submission form](https://docs.google.com/forms/d/e/1FAIpQLScvWUKFyUFFxO4zHto7MVjVL1CZFBPaEA9x4Gs_kbPqUjNcPA/viewform).
-* [Self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSfxoVhQKw_e8xi-DBHaV0daVK_OlmKvBFCJGjhLQ5O58TK1aA/viewform).
+* Reading assignment submission form (link disabled).
+* Self reflection form (link disabled).
 
 # Calendar
 
