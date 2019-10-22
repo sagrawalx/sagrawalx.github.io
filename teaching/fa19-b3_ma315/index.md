@@ -62,6 +62,7 @@ Do: 1.2.101, 104, 1.7.101
 <td>
 1.2.102–103, 105, 7–8[^challenging]  
 1.7.103, 104a  
+[In class problems](slope-fields.pdf)
 </td>
 </tr>
 
@@ -152,6 +153,7 @@ Office hours (1–2pm).
 <tr>
 <td colspan="3">
 Quiz 1 (in class). Sections covered: 0.2–1.4, 1.6–7.  
+Fearless Friday talk (2:30pm in TSC 229).  
 Submit [self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSfR7DhcU_J2UER69_DAKCqxfQRKV1q4a4evcW3ge0NcHMruOA/viewform) for week 1 (due Sunday by 11:59pm).  
 Start working on the [SIR project](sir) (due third Monday).
 </td>
@@ -261,6 +263,7 @@ Office hours (1–2pm).
 <tr>
 <td colspan="3">
 Quiz 2 (in class). Sections covered: 2.1–2, 3.1, 3.3–5, and 3.7 up through 3.7.1 (ie, homogeneous first order linear systems with constant coefficients, but don't worry about defective eigenvalues yet).  
+Fearless Friday talk (noon, in TSC 122).  
 Submit [self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSfR7DhcU_J2UER69_DAKCqxfQRKV1q4a4evcW3ge0NcHMruOA/viewform) for week 2 (due Sunday by 11:59pm).
 </td>
 </tr>
@@ -351,6 +354,7 @@ Quiz 3 (in class). Sections covered: Sections covered: 2.1–2, 3.1, 3.3–5, 3.
 <tr>
 <td colspan="3">
 Quiz 3 revisions (1–2pm).  
+Fearless Friday talk (2:30pm in TSC 229).  
 [Final project](final-project) draft due (6pm).  
 Submit [self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSfR7DhcU_J2UER69_DAKCqxfQRKV1q4a4evcW3ge0NcHMruOA/viewform) for week 3 (due Sunday by 11:59pm).
 </td>
