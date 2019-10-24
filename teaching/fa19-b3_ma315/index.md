@@ -105,6 +105,7 @@ Do: 1.6.1, 101
 </td>
 <td>
 1.6.2, 102, 104, 6–7  
+[In class problems](autonomous+review.pdf)
 </td>
 </tr>
 
