@@ -132,6 +132,7 @@ Visiting Artist Concert: [Symmetry and Fractals in Music](https://www.coloradoco
 3.4.1, 2, 101a, 102a, 5, 11  
 3.7.8  
 3.8.9  
+[In class problems](linalg-review.pdf)[^review]
 </td>
 </tr>
 
@@ -176,6 +177,7 @@ Do: 3.1.101, 103, 3.3.103  </td>
 2.1.104  
 3.1.104–105  
 3.3.104  
+[In class problems](systems.pdf)
 </td>
 </tr>
 
