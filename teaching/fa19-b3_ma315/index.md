@@ -199,16 +199,17 @@ Do: 2.2.1, 7 (both ways)[^both-ways], 3.4.3
 3.1.102   
 3.4.101, 103  
 3.5.3–4  
+[In class problems](real-complete.pdf)
 </td>
 </tr>
 
 [^both-ways]: By "both ways," I mean that you should try to do this problem using two methods: the method of chapter 2, and the method of chapter 3 (ie, rewrite the higher order linear ODE as a first order linear system and then apply the eigenvalue method). Then compare the two methods.
 
-<tr>
+<!-- SNOW DAY! tr>
 <td colspan="3">
 Office hours (1–2pm).
 </td>
-</tr>
+</tr-->
 
 <tr>
 <td rowspan="2">Wed</td>
