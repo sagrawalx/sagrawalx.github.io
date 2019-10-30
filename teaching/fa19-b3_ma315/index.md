@@ -189,7 +189,7 @@ Quiz 1 revisions (1–2pm).
 
 
 <tr>
-<td>Tue</td>
+<t>Tue</td>
 <td>Eigenvalue method: Complete real eigenvalues</td>
 <td>Read: 2.2 up through theorem 2.2.1(i), 3.4.2, 3.5 (cases 1 through 3)  
 Do: 2.2.1, 7 (both ways)[^both-ways], 3.4.3  
@@ -221,12 +221,13 @@ Do: 2.2.103, 3.4.4, 102
 2.2.105  
 3.4.104  
 3.5.102  
+[In class problems](complex-complete.pdf)
 </td>
 </tr>
 
 <tr>
 <td colspan="3">
-Office hours (2–3pm).
+Office hours (2–3:30pm).
 </td>
 </tr>
 
@@ -250,7 +251,7 @@ Do: 3.7.102, 2.2.2, 102 (both ways), 2.4.101
 
 <tr>
 <td colspan="3">
-Office hours (1–2pm).
+Office hours (1–3:30pm).
 </td>
 </tr>
 
