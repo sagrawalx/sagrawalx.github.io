@@ -189,7 +189,7 @@ Quiz 1 revisions (1–2pm).
 
 
 <tr>
-<t>Tue</td>
+<td>Tue</td>
 <td>Eigenvalue method: Complete real eigenvalues</td>
 <td>Read: 2.2 up through theorem 2.2.1(i), 3.4.2, 3.5 (cases 1 through 3)  
 Do: 2.2.1, 7 (both ways)[^both-ways], 3.4.3  
