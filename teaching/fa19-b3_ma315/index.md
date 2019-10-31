@@ -159,7 +159,7 @@ Visiting Artist Concert: [Symmetry and Fractals in Music](https://www.coloradoco
 Quiz 1 (in class). Sections covered: 0.2–1.4, 1.6–7.  
 Fearless Friday talk: Finding long cycles in graphs (2:30pm in TSC 229).  
 Submit [self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSfR7DhcU_J2UER69_DAKCqxfQRKV1q4a4evcW3ge0NcHMruOA/viewform) for week 1 (due Sunday by 11:59pm).  
-Start working on the [SIR project](sir) (due third Monday).
+Start working on the [SIR project](sir) (due third Wednesday).
 </td>
 </tr>
 
@@ -291,7 +291,6 @@ Do: 3.8.101</td>
 <tr>
 <td colspan="3">
 Quiz 2 revisions (1–2pm).  
-[SIR project](sir) due (11:59pm).
 </td>
 </tr>
 
@@ -332,7 +331,8 @@ Do: 2.5.103, 3.9.101(c), 2.6.101
 
 <tr>
 <td colspan="3">
-Office hours (1–2pm).
+Office hours (1–2pm).  
+[SIR project](sir) due (11:59pm).
 </td>
 </tr>
 

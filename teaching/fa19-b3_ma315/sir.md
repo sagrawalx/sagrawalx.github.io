@@ -12,7 +12,7 @@ This project[^reference] asks you to explore an ODE model that is used in epidem
 
 [^reference]: This project is adapted from the SIR project described by Stanley Florkowski and Ryan Miller on [SIMIODE](https://www.simiode.org/resources/4796/download/6-018-S-ExploringSIRModel-StudentVersion.pdf?b192279d45ce41a0fded95960ba3c998=1), and from ideas I got from conversations with Andrea Bruder.
 
-Email me your report as a PDF by 11:59pm on 3rd Monday.
+Email me your report as a PDF by 11:59pm on 3rd Wednesday.
 
 ## Introduction
 
