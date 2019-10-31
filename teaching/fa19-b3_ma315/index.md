@@ -242,6 +242,7 @@ Do: 3.7.102, 2.2.2, 102 (both ways), 2.4.101
 3.5.2, 103  
 3.7.103–104  
 2.4.103, 4  
+[In class problems](eigenvalue-1.pdf)
 </td>
 </tr>
 
