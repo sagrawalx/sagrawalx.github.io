@@ -263,6 +263,7 @@ Office hours (1–3:30pm).
 <td>None[^trdetplane]</td>
 <td>
 3.5.1, 101  
+[In class problems](eigenvalue-2.pdf)
 </td>
 </tr>
 
