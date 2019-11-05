@@ -308,6 +308,7 @@ Do: 3.9.101(a, b)
 </td>
 <td>
 3.9.102(a, b), 103–104  
+[In class problems](nonhomogeneous-1.pdf)
 </td>
 </tr>
 
