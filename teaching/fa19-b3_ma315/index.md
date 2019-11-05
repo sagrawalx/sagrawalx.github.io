@@ -287,6 +287,7 @@ Submit [self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSfR7DhcU_
 <td>Read: 3.8  
 Do: 3.8.101</td>
 <td>3.8.102, 104, 6–8  
+[In class problems](matrix-exponential.pdf)
 </td>
 </tr>
 
