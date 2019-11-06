@@ -330,6 +330,7 @@ Do: 2.5.103, 3.9.101(c), 2.6.101
 2.5.101–102  
 3.9.102(c)  
 2.6.103  
+[In class problems](nonhomogeneous-2.pdf)
 </td>
 </tr>
 
