@@ -346,7 +346,7 @@ Office hours (1–2pm).
 <td rowspan="2">Thu</td>
 <td>Review</td>
 <td>None</td>
-<td></td>
+<td>[In class problems](review-1.pdf)</td>
 </tr>
 
 <tr>
