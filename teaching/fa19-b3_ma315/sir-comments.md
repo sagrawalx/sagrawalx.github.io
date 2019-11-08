@@ -11,11 +11,11 @@ nonav: true
 Here are some of the common mistakes I noticed when going through the SIR projects.
 
 * Part I
-    * Question 2. I was looking for the observation that b and c are both forced to be between 0 and 1, since they are both fractions. 
+    * Question 2. I was looking for the observation that b and c are both forced to be between 0 and 1, since they are both fractions.
 
-    * Question 3. I was looking for something along the lines of the following: Since $S + I + R = N$ is constant, we have $S' + I' + R' = 0$, which means that $I' = - S' - R'$.  if
+    * Question 3. I was looking for something along the lines of the following: Since $S + I + R = N$ is constant, we have $S' + I' + R' = 0$, which means that $I' = - S' - R'$.
 
-    * Question 5. All of you said that $S \to 0$ as $t \to \infty$. That's fine, and I didn't take off points for this, but this is not quite true: all that we know is that $S$ must stabilize at some value between 0 and $N$, but there is no guarantee that that value be 0. This will happen when the disease is not very virulent: recovery happens quickly (ie,$c$ is large), and the disease speads slowly (ie, $b$ is small). Here is a picture of this kind of situation. In this plot, we have $c = 0.5$, $b = 0.01$, $R(0) = 0$, and $I(0) = 1$.
+    * Question 5. All of you said that $S \to 0$ as $t \to \infty$. That's fine, and I didn't take off points for this, but this is not quite true: all that we know is that $S$ must stabilize at some value between 0 and $N$ (because it's monotonically decreasing and bounded), but there is no guarantee that that value be 0. This will happen when the disease is not very virulent: recovery happens quickly (ie,$c$ is large), and the disease speads slowly (ie, $b$ is small). Here is a picture of this kind of situation. In this plot, we have $c = 0.5$, $b = 0.01$, $R(0) = 0$, and $I(0) = 1$.
         <img src="sir-sample-3.png" style="width: 80%;"/>
 
         Here's a question I have: must it be the case that $I \to 0$ as $t \to \infty$? It seems like this should be true, and I haven't been able to come up with a counterexample, but I don't know how to prove this directly from the differential equations...
