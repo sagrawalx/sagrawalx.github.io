@@ -50,4 +50,5 @@ Here are some of the common mistakes I noticed when going through the SIR projec
 
 * Part II
     * Question 3. The maximum infected population happens around $t = 7.1$, when the infected population is about 273335. In other words, I was looking for something along the lines of "around day 7."
+
     * Question 6. 90% recovery happens somewhere between $t = 17.1$ and $t = 17.2$. In other words, I was looking for something like "around day 17."
