@@ -380,7 +380,7 @@ Submit [self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSfR7DhcU_
 <td rowspan="2">Mon</td>
 <td>Review</td>
 <td>None</td>
-<td></td>
+<td>[In class problems](review-2.pdf)</td>
 </tr>
 
 <tr>
