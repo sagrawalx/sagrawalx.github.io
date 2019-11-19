@@ -19,6 +19,7 @@ nonav: true
     * Check the [tutoring schedule for the QRC](https://www.coloradocollege.edu/offices/qrc/blocktutorschedule/).
 * [Reading assignment submission form](https://docs.google.com/forms/d/e/1FAIpQLSdMMtCai_Bb6LD0IUCIGU4Ev_s4FhcptETj2mBHwyiNQmciFQ/viewform).
 * [Self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSfIz4j0bvYcDgKmwFZECLi1lb88TJnPOYEaxX18LCSpv4zExQ/viewform).
+* [Random Seating Chart](https://docs.google.com/spreadsheets/d/1GxsMxnlWRkVqGVket16KmJjfZzHgS9GZ4T1HcFvKp5M/edit#gid=0). 
 
 # Calendar
 
@@ -36,7 +37,7 @@ nonav: true
 
 <tr>
 <td rowspan="2">Mon</td>
-<td>Introduction</td>
+<td>[Introduction](precalc.pdf)</td>
 <td>None</td>
 <td>
 (Optional[^recommended] precalculus review)  
@@ -51,7 +52,7 @@ nonav: true
 
 [^recommended]: These precalculus review exercises are technically optional, but you're *highly* encouraged to do them. If you remember all the concepts involved well, it should go quick. If you don't, going through the list will help you identify what you need to review so that you're prepared for the rest of class.
 
-    To encourage you to do these optional precalculus review exercises... If you hand them in to me by the beginning of class on Week 1 Thursday, you'll get extra credit (amounting to up to 5% of the problem set portion of your grade)!
+    To encourage you to do these review exercises... If you hand them in to me by the beginning of class on Week 1 Thursday, you'll get extra credit (amounting to up to 5% of the problem set portion of your grade)!
 
 <tr>
 <td colspan="3">
@@ -174,14 +175,14 @@ Quiz 1 revisions (12:30–2pm).
 <td rowspan="2">Tue</td>
 <td>More rules of differentiation</td>
 <td>Read: 3.7–9  
-Do: (3.7)   
-(3.8)   
-(3.9)   
+Do: (3.7) 261, 265, 279  
+(3.8) 301, 303  
+(3.9) 331–335 odds, 347    
 </td>
 <td>
-(3.7)   
-(3.8)  
-(3.9)    
+(3.7) 262, 264–270 evens, 296, 298  
+(3.8) 302–308 evens  
+(3.9) 340–352 evens   
 </td>
 </tr>
 
@@ -196,12 +197,12 @@ Problem session with Sophie (2–3pm).
 <td rowspan="1">Wed</td>
 <td>Linear approximations</td>
 <td>Read: 4.2, 4.9  
-Do: (4.2)   
-(4.9)   
+Do: (4.2) 63, 67, 83    
+(4.9) 423, 431    
 </td>
 <td>
-(4.2)   
-(4.9)
+(4.2) 62–66 evens, 78, 82     
+(4.9) 426, 432, 462–463    
 </td>
 </tr>
 
@@ -214,12 +215,12 @@ Do: (4.2)
 <td rowspan="2">Thu</td>
 <td>Optimization</td>
 <td>Read: 4.3, 4.7  
-Do: (4.3)    
-(4.7)    
+Do: (4.3) 97, 101, 105, 108     
+(4.7) 315, 321  
 </td>
 <td>
-(4.3)   
-(4.7)   
+(4.3) 98–106 evens, 120, 140, 144   
+(4.7) 316–322 evens, 326, 336, 338  
 </td>
 </tr>
 
@@ -232,21 +233,21 @@ Problem session with Sophie (2–3pm).
 
 <tr>
 <td rowspan="2">Fri</td>
-<td>Shape of a graph</td>
+<td>Graph shape</td>
 <td>Read: 4.5–6  
-Do: (4.5)    
-(4.6)    
+Do: (4.5) 207, 213, 217, 225     
+(4.6) 261, 271, 295       
 </td>
 <td>
-(4.5)      
-(4.6)    
+(4.5) 214, 216, 228, 241–245     
+(4.6) 266–272 evens, 296–300     
 </td>
 </tr>
 
 <tr>
 <td colspan="3">
 Problem sets for chapter 3, 4.2, and 4.9 due (in class).  
-Quiz 2 (in class). Sections covered: up through 4.1, and also 4.8.  
+Quiz 2 (in class). Sections covered: through chapter 3, and also 4.2 and 4.9.  
 [Self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSfIz4j0bvYcDgKmwFZECLi1lb88TJnPOYEaxX18LCSpv4zExQ/viewform) for week 2 (due Sunday 11:59pm).
 </td>
 </tr>
@@ -257,7 +258,24 @@ Quiz 2 (in class). Sections covered: up through 4.1, and also 4.8.
 
 <tr>
 <td rowspan="2">Mon</td>
-<td>L'Hopital's rule, Antiderivatives</td>
+<td>Related rates</td>
+<td>Read: 4.1  
+Do: (4.1)  
+</td>
+<td>
+(4.1)     
+</td>
+</tr>
+
+<tr>
+<td colspan="3">
+Quiz 2 revisions (12:30–2pm).
+</td>
+</tr>
+
+<tr>
+<td rowspan="2">Tue</td>
+<td>L'Hopital's rule, Optimization</td>
 <td>Read: 4.8, 4.10  
 Do: (4.8)  
 (4.10)    
@@ -270,12 +288,15 @@ Do: (4.8)
 
 <tr>
 <td colspan="3">
-Quiz 2 revisions (12:30–2pm).
+Sunny's office hours (1–2pm).  
+Problem session with Sophie (2–3pm).  
+[Final project proposals](final-project) due (11:59pm).  
 </td>
 </tr>
 
+
 <tr>
-<td rowspan="2">Tue</td>
+<td rowspan="2">Wed</td>
 <td>Definite integral</td>
 <td>Read: 5.1–2  
 Do: (5.1)  
@@ -288,15 +309,12 @@ Do: (5.1)
 </tr>
 
 <tr>
-<td colspan="3">
-Sunny's office hours (1–2pm).  
-Problem session with Sophie (2–3pm).  
-[Final project proposals](final-project) due (11:59pm).  
+<td colspan="3">  
 </td>
 </tr>
 
 <tr>
-<td rowspan="2">Wed</td>
+<td rowspan="2">Thu</td>
 <td>Fundamental Theorem of Calculus</td>
 <td>Read: 5.3–4    
 Do: (5.3)   
@@ -309,12 +327,16 @@ Do: (5.3)
 </tr>
 
 <tr>
-<td colspan="3">  
+<td colspan="3">
+Problem sets through 5.2 due (in class).  
+Problem session with Sophie (2–3pm).  
+Quiz 3 (in class). Sections covered: up through chapter 4.  
 </td>
 </tr>
 
+
 <tr>
-<td rowspan="2">Thu</td>
+<td rowspan="2">Fri</td>
 <td>Calculating integrals</td>
 <td>Read: 5.5–7  
 Do: (5.5)   
@@ -326,21 +348,6 @@ Do: (5.5)
 (5.6)  
 (5.7)     
 </td>
-</tr>
-
-<tr>
-<td colspan="3">
-Problem sets through 5.2 due (in class).  
-Problem session with Sophie (2–3pm).  
-Quiz 3 (in class). Sections covered: up through 5.2.  
-</td>
-</tr>
-
-<tr>
-<td rowspan="2">Fri</td>
-<td>Review</td>
-<td>None</td>
-<td>None</td>
 </tr>
 
 <tr>
