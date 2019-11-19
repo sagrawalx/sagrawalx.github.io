@@ -19,7 +19,7 @@ nonav: true
     * Check the [tutoring schedule for the QRC](https://www.coloradocollege.edu/offices/qrc/blocktutorschedule/).
 * [Reading assignment submission form](https://docs.google.com/forms/d/e/1FAIpQLSdMMtCai_Bb6LD0IUCIGU4Ev_s4FhcptETj2mBHwyiNQmciFQ/viewform).
 * [Self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSfIz4j0bvYcDgKmwFZECLi1lb88TJnPOYEaxX18LCSpv4zExQ/viewform).
-* [Random Seating Chart](https://docs.google.com/spreadsheets/d/1GxsMxnlWRkVqGVket16KmJjfZzHgS9GZ4T1HcFvKp5M/edit#gid=0). 
+* [Random Seating Chart](https://docs.google.com/spreadsheets/d/1GxsMxnlWRkVqGVket16KmJjfZzHgS9GZ4T1HcFvKp5M/edit#gid=0).
 
 # Calendar
 
@@ -62,7 +62,7 @@ Sunny's office hours (1–2pm).
 
 <tr>
 <td rowspan="2">Tue</td>
-<td>Limits</td>
+<td>[Limits](limits.pdf)</td>
 <td>Read: 2.2–3  
 Do: (2.2) 41, 47–53 odds, 77    
 (2.3) 95, 97, 103, 119   
