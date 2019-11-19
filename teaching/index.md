@@ -5,7 +5,7 @@ permalink: teaching/
 
 # Currently Teaching
 
-* Fall 2019, Block 4. [MA 126 - Ordinary Differential Equations](fa19-b4_ma126).
+* Fall 2019, Block 4. [MA 126 - Calculus 1](fa19-b4_ma126).
 
 # Previously Taught
 
