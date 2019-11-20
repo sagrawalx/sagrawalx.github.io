@@ -85,7 +85,7 @@ Problem session with Sophie (2–3pm).
 
 <tr>
 <td rowspan="2">Wed</td>
-<td>Continuity</td>
+<td>[Continuity](continuity.pdf)</td>
 <td>Read: 2.4  
 Do: (2.4) 131–137 odds, 151, 154, 157   
 </td>
