@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Fall 2019, Block 4 — MA126
+title: Home
 bannertext: Fall 2019, Block 4 — MA126
 bannerlink: teaching/fa19-b4_ma126
 nonav: true
@@ -103,7 +103,7 @@ Writing assignment due (11:59pm). [Prompt](/teaching/prompt.pdf).
 
 <tr>
 <td rowspan="2">Thu</td>
-<td>Derivatives</td>
+<td>[Derivatives](derivative-definition.pdf)</td>
 <td>Read: 3.1–2  
 Do: (3.1) 1, 3, 11, 13, 41  
 (3.2) 55, 65–69 odds, 79  
