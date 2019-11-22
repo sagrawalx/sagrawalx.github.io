@@ -123,7 +123,7 @@ Problem session with Sophie (2–3pm).
 
 <tr>
 <td rowspan="2">Fri</td>
-<td>Rates of change</td>
+<td>[Rates of change (+Review)](rate-of-change.pdf)</td>
 <td>Read: 3.4[^rules]  
 Do: (3.4) 151, 157, 161  
 </td>
