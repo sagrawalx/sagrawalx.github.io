@@ -152,7 +152,7 @@ Quiz 1 (in class). Sections covered: through chapter 2.
 
 <tr>
 <td rowspan="2">Mon</td>
-<td>Rules of differentiation</td>
+<td>[Rules of differentiation](differentiation1.pdf)</td>
 <td>Read: 3.3, 5–6  
 Do: (3.3) 109, 111, 123, 125, 131  
 (3.5) 181, 191    
