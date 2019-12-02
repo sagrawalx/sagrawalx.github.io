@@ -194,7 +194,7 @@ Problem session with Sophie (2–3pm).
 </tr>
 
 <tr>
-<td rowspan="1">Wed</td>
+<td rowspan="2">Wed</td>
 <td>Linear approximations</td>
 <td>Read: 4.2, 4.9  
 Do: (4.2) 63, 67, 83    
@@ -206,10 +206,11 @@ Do: (4.2) 63, 67, 83
 </td>
 </tr>
 
-<!--tr>
+<tr>
 <td colspan="3">
+FemSTEM Symposium Keynote Talk by Cynthia Chapple (4pm, Tutt Science Lecture Hall). 
 </td>
-</tr-->
+</tr>
 
 <tr>
 <td rowspan="2">Thu</td>
