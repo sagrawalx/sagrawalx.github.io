@@ -208,7 +208,7 @@ Do: (4.2) 63, 67, 83
 
 <tr>
 <td colspan="3">
-FemSTEM Symposium Keynote Talk by Cynthia Chapple (4pm, Tutt Science Lecture Hall). 
+FemSTEM Talk by Cynthia Chapple (4pm, Tutt Science Lecture Hall). 
 </td>
 </tr>
 
