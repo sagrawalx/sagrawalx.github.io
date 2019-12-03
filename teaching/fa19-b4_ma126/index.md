@@ -329,7 +329,7 @@ Do: (5.3)
 
 <tr>
 <td colspan="3">
-Problem sets through 5.2 due (in class).  
+Problem sets for chapter 4 (except 4.2 and 4.9) due (in class).  
 Problem session with Sophie (2–3pm).  
 Quiz 3 (in class). Sections covered: up through chapter 4.  
 </td>
