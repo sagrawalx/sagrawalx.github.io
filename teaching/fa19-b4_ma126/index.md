@@ -173,7 +173,7 @@ Quiz 1 revisions (12:30–2pm).
 
 <tr>
 <td rowspan="2">Tue</td>
-<td>More rules of differentiation</td>
+<td>[More rules of differentiation](differentiation2.pdf)</td>
 <td>Read: 3.7–9  
 Do: (3.7) 261, 265, 279  
 (3.8) 301, 303  
@@ -208,7 +208,7 @@ Do: (4.2) 63, 67, 83
 
 <tr>
 <td colspan="3">
-FemSTEM Talk by Cynthia Chapple (4pm, Tutt Science Lecture Hall). 
+FemSTEM Talk by Cynthia Chapple (4pm, Tutt Science Lecture Hall).
 </td>
 </tr>
 
@@ -261,10 +261,10 @@ Quiz 2 (in class). Sections covered: through chapter 3, and also 4.2 and 4.9.
 <td rowspan="2">Mon</td>
 <td>Related rates</td>
 <td>Read: 4.1  
-Do: (4.1)  
+Do: (4.1) 5, 7
 </td>
 <td>
-(4.1)     
+(4.1) 6–14 evens, 30, 32–40 evens      
 </td>
 </tr>
 
@@ -276,20 +276,19 @@ Quiz 2 revisions (12:30–2pm).
 
 <tr>
 <td rowspan="2">Tue</td>
-<td>L'Hopital's rule, Optimization</td>
+<td>L'Hopital's rule, Andiderivatives</td>
 <td>Read: 4.8, 4.10  
-Do: (4.8)  
-(4.10)    
+Do: (4.8) 367–375 odds   
+(4.10) 467, 471, 475     
 </td>
 <td>
-(4.8)  
-(4.10)   
+(4.8) 380–394 evens   
+(4.10) 474–480 evens, 484    
 </td>
 </tr>
 
 <tr>
 <td colspan="3">
-Sunny's office hours (1–2pm).  
 Problem session with Sophie (2–3pm).  
 [Final project proposals](final-project) due (11:59pm).  
 </td>
@@ -300,17 +299,18 @@ Problem session with Sophie (2–3pm).
 <td rowspan="2">Wed</td>
 <td>Definite integral</td>
 <td>Read: 5.1–2  
-Do: (5.1)  
-(5.2)  
+Do: (5.1) 1–13 odds, 43  
+(5.2) 61–71 odds  
 </td>
 <td>
-(5.1)  
-(5.2)  
+(5.1) 2–18 evens, 24, 26, 42, 44  
+(5.2) 60–74 evens, 88, 100   
 </td>
 </tr>
 
 <tr>
 <td colspan="3">  
+Sunny's office hours (1–2pm).  
 </td>
 </tr>
 
