@@ -194,7 +194,7 @@ Problem session with Sophie (2–3pm).
 </tr>
 
 <tr>
-<td rowspan="2">Wed</td>
+<td rowspan="1">Wed</td>
 <td>Linear approximations</td>
 <td>Read: 4.2, 4.9  
 Do: (4.2) 63, 67, 83    
@@ -203,12 +203,6 @@ Do: (4.2) 63, 67, 83
 <td>
 (4.2) 62–66 evens, 78, 82     
 (4.9) 426, 432, 462–463    
-</td>
-</tr>
-
-<tr>
-<td colspan="3">
-FemSTEM Talk by Cynthia Chapple (4pm, Tutt Science Lecture Hall).
 </td>
 </tr>
 
@@ -311,6 +305,7 @@ Do: (5.1) 1–13 odds, 43
 <tr>
 <td colspan="3">  
 Sunny's office hours (1–2pm).  
+FemSTEM Talk by Cynthia Chapple (4pm, Tutt Science Lecture Hall).  
 </td>
 </tr>
 
