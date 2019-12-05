@@ -195,7 +195,7 @@ Problem session with Sophie (2–3pm).
 
 <tr>
 <td rowspan="1">Wed</td>
-<td>Linear approximations</td>
+<td>[Linear approximations](linear-approx.pdf) (+[Worksheet](wksht_newton.pdf))</td>
 <td>Read: 4.2, 4.9  
 Do: (4.2) 63, 67, 83    
 (4.9) 423, 431    
@@ -208,7 +208,7 @@ Do: (4.2) 63, 67, 83
 
 <tr>
 <td rowspan="2">Thu</td>
-<td>Optimization</td>
+<td>[Optimization](optimization.pdf)</td>
 <td>Read: 4.3, 4.7  
 Do: (4.3) 97, 101, 105, 108     
 (4.7) 315, 321  
@@ -305,7 +305,7 @@ Do: (5.1) 1–13 odds, 43
 <tr>
 <td colspan="3">  
 Sunny's office hours (1–2pm).  
-FemSTEM Talk by Cynthia Chapple (4pm, Tutt Science Lecture Hall).  
+FemSTEM Talk by Cynthia Chapple (4pm, Tutt Science Lecture Hall).
 </td>
 </tr>
 
