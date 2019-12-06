@@ -228,7 +228,7 @@ Problem session with Sophie (2–3pm).
 
 <tr>
 <td rowspan="2">Fri</td>
-<td>Graph shape</td>
+<td>[Graph shape](graph-shape.pdf)</td>
 <td>Read: 4.5–6  
 Do: (4.5) 207, 213, 217, 225     
 (4.6) 261, 271, 295       
