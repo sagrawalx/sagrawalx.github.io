@@ -15,7 +15,7 @@ I completed my PhD at UC Berkeley in 2018. My advisor was [David Nadler](https:/
 
 {% include papers.html %}
 
-My PhD thesis is available [here](https://escholarship.org/uc/item/1sp926n0). There are several errata in the document. Most are not terribly serious, but I suggest that readers look at the arXiv version. However, it's worth notingn that the arXiv version does omit some of the expository content of the thesis.
+My PhD thesis is available [here](https://escholarship.org/uc/item/1sp926n0). There are several errata in the document. Most are not terribly serious, but I suggest that readers look at the arXiv version. However, it's worth noting that the arXiv version does omit some of the expository content of the thesis.
 
 # Miscellaneous
 
@@ -25,7 +25,7 @@ Here are some slides for presentations I've given.
 
 Here are some miscellaneous mathematical writings.
 
-* [Off on a tangent](tangent). Some notes about derivatives. 
+* [Off on a tangent](tangent). Some notes about derivatives.
 * [Exponential at infinity](exp-infty.pdf). A fun explicit calculation I did during summer 2017 involving an irregular rank 1 overconvergent differential module over the Robba ring.
 * [Contangent complex](cotangent.pdf). Some incomplete notes I compiled when I was preparing for a talk I gave in  David Nadler's Fall 2013 Geometric Representation Theory Seminar.
 * [Fundamental group of a curve](fg-curve.pdf). An expository term paper from Martin Olsson's Spring 2012 Algebraic Geometry course.
