@@ -345,7 +345,7 @@ Do: (5.5) 261, 217–275 odds
 
 <tr>
 <td colspan="3">
-Quiz 3 revisions (12:30–2pm).  
+Quiz 3 revisions (1–2pm).  
 [Self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSfIz4j0bvYcDgKmwFZECLi1lb88TJnPOYEaxX18LCSpv4zExQ/viewform) for week 3 (due Sunday 11:59pm).
 </td>
 </tr>
