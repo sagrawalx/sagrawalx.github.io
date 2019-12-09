@@ -188,8 +188,7 @@ Do: (3.7) 261, 265, 279
 
 <tr>
 <td colspan="3">
-Sunny's office hours (1–2pm).  
-Problem session with Sophie (2–3pm).  
+Problem session with Sophie (1–2pm).  
 </td>
 </tr>
 
