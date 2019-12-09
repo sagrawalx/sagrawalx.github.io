@@ -186,6 +186,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {A}Selected solutions}{195}{appendix.793}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{199}{chapter*.794}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Index}{201}{chapter*.795}
+\contentsline {chapter}{\nonumberline Index}{199}{chapter*.794}
