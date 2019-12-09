@@ -270,7 +270,7 @@ Quiz 2 revisions (12:30–2pm).
 
 <tr>
 <td rowspan="2">Tue</td>
-<td>L'Hopital's rule, Andiderivatives</td>
+<td>L'Hopital's rule, Antiderivatives</td>
 <td>Read: 4.8, 4.10  
 Do: (4.8) 367–375 odds   
 (4.10) 467, 471, 475     
@@ -313,12 +313,12 @@ FemSTEM Talk by Cynthia Chapple (4pm, Tutt Science Lecture Hall).
 <td rowspan="2">Thu</td>
 <td>Fundamental Theorem of Calculus</td>
 <td>Read: 5.3–4    
-Do: (5.3)   
-(5.4)   
+Do: (5.3) 149, 153, 161, 171  
+(5.4) 213, 223    
 </td>
 <td>
-(5.3)     
-(5.4)
+(5.3) 148–162 evens, 180–188 evens    
+(5.4) 222–226 evens, 234  
 </td>
 </tr>
 
@@ -333,16 +333,13 @@ Quiz 3 (in class). Sections covered: up through chapter 4.
 
 <tr>
 <td rowspan="2">Fri</td>
-<td>Calculating integrals</td>
-<td>Read: 5.5–7  
-Do: (5.5)   
-(5.6)    
-(5.7)   
+<td>Substitution</td>
+<td>Read: 5.5  
+Do: (5.5) 261, 217–275 odds  
 </td>
 <td>
-(5.5)   
-(5.6)  
-(5.7)     
+(5.5) 272–286 evens  
+(5.6) 320, 336–340 evens    
 </td>
 </tr>
 
