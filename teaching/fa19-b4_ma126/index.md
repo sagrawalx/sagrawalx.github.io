@@ -188,7 +188,8 @@ Do: (3.7) 261, 265, 279
 
 <tr>
 <td colspan="3">
-Problem session with Sophie (1–2pm).  
+Sunny's office hours (1–2pm).  
+Problem session with Sophie (2–3pm).  
 </td>
 </tr>
 
@@ -252,7 +253,7 @@ Quiz 2 (in class). Sections covered: through chapter 3, and also 4.2 and 4.9.
 
 <tr>
 <td rowspan="2">Mon</td>
-<td>Related rates</td>
+<td>[Related rates](wksht_releatedrates.pdf)</td>
 <td>Read: 4.1  
 Do: (4.1) 5, 7
 </td>
@@ -282,7 +283,7 @@ Do: (4.8) 367–375 odds
 
 <tr>
 <td colspan="3">
-Problem session with Sophie (2–3pm).  
+Problem session with Sophie (1–2pm).  
 [Final project proposals](final-project) due (11:59pm).  
 </td>
 </tr>
