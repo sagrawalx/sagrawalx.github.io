@@ -291,7 +291,7 @@ Problem session with Sophie (1–2pm).
 
 <tr>
 <td rowspan="2">Wed</td>
-<td>Definite integral</td>
+<td>[Definite integral](definite.pdf)</td>
 <td>Read: 5.1–2  
 Do: (5.1) 1–13 odds, 43  
 (5.2) 61–71 odds  
