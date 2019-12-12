@@ -335,7 +335,7 @@ Quiz 3 (in class). Sections covered: up through chapter 4.
 <td rowspan="2">Fri</td>
 <td>Substitution</td>
 <td>Read: 5.5  
-Do: (5.5) 261, 217–275 odds  
+Do: (5.5) 261, 271–275 odds  
 </td>
 <td>
 (5.5) 272–286 evens  
