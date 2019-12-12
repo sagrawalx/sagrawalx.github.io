@@ -370,7 +370,7 @@ Sunny's office hours (1–2pm).
 <tr>
 <td>Tue</td>
 <td colspan="3">
-Problem sets for 5.3–7 due (in class).  
+Problem sets for chapter 5 due (in class).  
 Final exam (in class). Sections covered: everything.
 </td>
 </tr>
