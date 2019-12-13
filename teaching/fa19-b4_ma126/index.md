@@ -333,7 +333,7 @@ Quiz 3 (in class). Sections covered: up through chapter 4.
 
 <tr>
 <td rowspan="2">Fri</td>
-<td>Substitution</td>
+<td>[Substitution](ftc+substitution.pdf)</td>
 <td>Read: 5.5  
 Do: (5.5) 261, 271–275 odds  
 </td>
