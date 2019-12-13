@@ -311,7 +311,7 @@ FemSTEM Talk by Cynthia Chapple (4pm, Tutt Science Lecture Hall).
 
 <tr>
 <td rowspan="2">Thu</td>
-<td>Fundamental Theorem of Calculus</td>
+<td>[Fundamental Theorem of Calculus](ftc.pdf)</td>
 <td>Read: 5.3–4    
 Do: (5.3) 149, 153, 161, 171  
 (5.4) 213, 223    
@@ -371,7 +371,7 @@ Sunny's office hours (1–2pm).
 <td>Tue</td>
 <td colspan="3">
 Problem sets for chapter 5 due (in class).  
-Final exam (in class). Sections covered: everything.
+Final exam (in class). Sections covered: through chapter 4.
 </td>
 </tr>
 
