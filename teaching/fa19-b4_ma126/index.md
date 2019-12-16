@@ -270,7 +270,7 @@ Quiz 2 revisions (12:30–2pm).
 
 <tr>
 <td rowspan="2">Tue</td>
-<td>L'Hopital's rule, Antiderivatives</td>
+<td>[L'Hopital's rule, Antiderivatives](lhopital+antiderivative.pdf)</td>
 <td>Read: 4.8, 4.10  
 Do: (4.8) 367–375 odds   
 (4.10) 467, 471, 475     
