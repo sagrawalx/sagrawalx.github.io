@@ -19,7 +19,7 @@ nonav: true
     * Check the [tutoring schedule for the QRC](https://www.coloradocollege.edu/offices/qrc/blocktutorschedule/).
 * Reading assignment submission form [disabled].
 * Self reflection form [disabled].
-* Random Seating Chart [disabled].
+* Random seating chart [disabled].
 
 # Calendar
 
