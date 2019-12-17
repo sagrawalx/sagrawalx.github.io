@@ -17,9 +17,9 @@ nonav: true
     * See below for problem sessions with Sophie (held in our classroom).
     * See below for Sunny's office hours (in Tutt Science 234).
     * Check the [tutoring schedule for the QRC](https://www.coloradocollege.edu/offices/qrc/blocktutorschedule/).
-* [Reading assignment submission form](https://docs.google.com/forms/d/e/1FAIpQLSdMMtCai_Bb6LD0IUCIGU4Ev_s4FhcptETj2mBHwyiNQmciFQ/viewform).
-* [Self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSfIz4j0bvYcDgKmwFZECLi1lb88TJnPOYEaxX18LCSpv4zExQ/viewform).
-* [Random Seating Chart](https://docs.google.com/spreadsheets/d/1GxsMxnlWRkVqGVket16KmJjfZzHgS9GZ4T1HcFvKp5M/edit#gid=0).
+* Reading assignment submission form [disabled].
+* Self reflection form [disabled].
+* Random Seating Chart [disabled].
 
 # Calendar
 
