@@ -5,12 +5,13 @@ permalink: teaching/
 
 # Currently Teaching
 
-* Fall 2019, Block 4. [MA 126 - Calculus 1](fa19-b4_ma126).
+* None.
 
 # Previously Taught
 
 ## Colorado College
 
+* Fall 2019, Block 4. [MA 126 - Calculus 1](fa19-b4_ma126).
 * Fall 2019, Block 3. [MA 315 - Ordinary Differential Equations](fa19-b3_ma315).
 * Fall 2019, Block 2. [MA475 - Real Analysis II](fa19-b2_ma475).
 * Fall 2019, Block 1. [MA375 - Real Analysis I](fa19-b1_ma375). Office hours only.
