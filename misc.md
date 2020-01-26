@@ -3,7 +3,7 @@ title: Miscellaneous
 permalink: misc/
 ---
 
-# Cool things
+<!-- # Cool things
 
 Here are a few things I like and/or find useful.
 
@@ -14,7 +14,7 @@ Here are a few things I like and/or find useful.
 * [A Desertful of Roses](http://www.columbia.edu/itc/mealac/pritchett/00ghalib/)
 * [Chomsky.info](https://chomsky.info/)
 * [Digital Dictionaries of South Asia](http://dsal.uchicago.edu/dictionaries/)
-* [jisho.org](https://jisho.org/)
+* [jisho.org](https://jisho.org/) -->
 
 # About the website
 

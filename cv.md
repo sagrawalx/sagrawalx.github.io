@@ -45,6 +45,7 @@ nonav: true
 
 # Research support
 
+* Research and Development Grant (2020). Natural Sciences Division, Colorado College.
 * Faculy student collaborative research grant (with Cinea Jenkins, Summer 2019). Colorado College.
 * Graduate student researcher (Spring 2018). NSF RTG grant DMS-1646385.
 * Chateaubriand fellowship (with Christine Huyghe, 2016-2017). Embassy of France.
@@ -57,7 +58,7 @@ nonav: true
 ## Primary instructor
 
 * Colorado College
-    * Ordinary Differential Equations (Fall 2019, Block 3). 
+    * Ordinary Differential Equations (Fall 2019, Block 3).
     * Real Analysis 2 (Fall 2019, Block 2).
     * Linear Algebra (Spring 2019, Block 8).
     * Calculus 1 (Spring 2019, Block 6).
