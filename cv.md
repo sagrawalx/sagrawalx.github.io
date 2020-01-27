@@ -45,7 +45,7 @@ nonav: true
 
 # Research support
 
-* Research and Development Grant (2020). Natural Sciences Division, Colorado College.
+* Research and development grant (2020). Natural Sciences Division, Colorado College.
 * Faculy student collaborative research grant (with Cinea Jenkins, Summer 2019). Colorado College.
 * Graduate student researcher (Spring 2018). NSF RTG grant DMS-1646385.
 * Chateaubriand fellowship (with Christine Huyghe, 2016-2017). Embassy of France.
