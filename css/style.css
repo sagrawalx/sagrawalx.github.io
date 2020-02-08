@@ -1,9 +1,9 @@
 @import url("reset.css");
-@import url("https://fonts.googleapis.com/css?family=Grand+Hotel|Noto+Sans");
+@import url("https://fonts.googleapis.com/css?family=Grand+Hotel|Noto+Sans|Noto+Sans+Devanagari|Noto+Sans+Arabic|Noto+Sans+Bengali|Noto+Sans+CJK+JP");
 body {
   font-size: 16px;
-  font-family: "Noto Sans", sans-serif;
-  font-weight: 300;
+  font-family: "Noto Sans", "Noto Sans Devanagari", "Noto Sans Arabic", "Noto Sans Bengali", "Noto Sans CJK JP", sans-serif;
+  font-weight: normal;
   line-height: 1.7;
   color: #444;
   min-width: 30em;
@@ -92,8 +92,11 @@ main {
     margin-top: 1em;
     margin-bottom: 1em; }
   main p {
-    margin-bottom: 1em;
-    margin-top: 1em; }
+    margin-bottom: 0.5em;
+    margin-top: 0.5em; }
+  main li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em; }
   main ul {
     list-style: square;
     padding-left: 2.5em; }
@@ -105,7 +108,7 @@ main {
   main .introduction, main .references {
     font-size: small;
     background-color: #eee;
-    padding: 0.2em 2em;
+    padding: 1em 2em;
     margin-bottom: 1em;
     border-radius: 0.2em; }
   main .references {
@@ -126,11 +129,11 @@ main {
     height: 1px;
     background: #ddd; }
 
-.email::after {
-  content: "coloradocollege.edu"; }
+.email:after {
+  content: attr(data-domain); }
 
-.email::before {
-  content: "sagrawal"; }
+.email:before {
+  content: attr(data-localpart) "@"; }
 
 ul.tags {
   padding-left: 0; }
