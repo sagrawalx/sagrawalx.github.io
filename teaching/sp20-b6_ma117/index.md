@@ -17,7 +17,7 @@ nonav: true
 * Materials:
 	* Textbook: [OpenIntro Statistics](https://www.openintro.org/book/os/).
 	* RStudio: You can either (1) [install R](https://cran.r-project.org/) and then [install RStudio](https://rstudio.com/products/rstudio/download/#download), or (2) use [rstudio.cloud](https://rstudio.cloud/) in a browser.[^laptop] Also, here's a [Short R Reference Card](https://cran.r-project.org/doc/contrib/Short-refcard.pdf) that you might find useful. 
-	* [Data sources](data).
+	* [Data sources](/teaching/data).
 * For help outside of class...
     * See below for problem sessions with Sophie (in classroom).
     * See below for Sunny's office hours (in Tutt Science 234, unless indicated otherwise).

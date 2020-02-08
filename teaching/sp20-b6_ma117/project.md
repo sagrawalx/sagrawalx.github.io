@@ -18,7 +18,7 @@ The presentation and paper will both be due on the last day of class. Before the
 
 Decide on your group (3-5 people) and a topic you want to investigate. One person in each group should send me an email by the proposal deadline indicated on the [calendar](index) listing all the members of the group and the topic you've settled on. This will be brief: a few sentences at most. 
 
-I encourage you to be creative and choose something that's interesting to you! The possibilities are endless. Maybe you want to understand what factors best predict whether or not a CC student voted in the 2019 election. Maybe you want to   Here is a list of some potential [data sources](data) if you need some inspiration, but don't feel like you have to use something off of this list. 
+I encourage you to be creative and choose something that's interesting to you! The possibilities are endless. Maybe you want to understand what factors best predict whether or not a CC student voted in the 2019 election. Maybe you want to   Here is a list of some potential [data sources](/teaching/data) if you need some inspiration, but don't feel like you have to use something off of this list. 
 
 ## Outline [7 points]
 

@@ -1,18 +1,17 @@
 ---
 layout: default
 title: Data Sources
-bannertext: Spring 2020, Block 6 — MA117
-bannerlink: teaching/sp20-b6_ma117
+bannertext: Data Sources
+bannerlink: teaching
 nonav: true
 ---
 
-# Data Sources
 
 There is just *so much* data out there! Here are some ways of acquiring data that I'm aware of.[^thanks]
 
-[^thanks]: Many thanks to Flavia Sancier-Barbosa for sharing her list with me. Her list was a immensely helpful for building this one. 
+[^thanks]: Many thanks to Flavia Sancier-Barbosa and David Brown, both of whom shared resources with me that this list is based on. 
 
-## US Data 
+# US Data 
 
 Here's some data available through the US government. 
 
@@ -35,28 +34,37 @@ Here's some other US-related data.
 * [Stock Fundamentals Data Archive](https://www.usfundamentals.com/)
 * Stanford: [Open Policing Project](https://openpolicing.stanford.edu/)
 
-## Colorado Data 
+# Regional Data 
+
+## Colorado Data
 
 * [Colorado Information Marketplace](https://data.colorado.gov/)
 * [Colorado Springs Open Data Portal](https://data.coloradosprings.gov/)
 * [Denver Regional Data Catalog](https://data.drcog.org/)
 
-Many other state, county, and city governments also have "Open Data" websites, and a map of these can be found [here](https://www.data.gov/open-gov/). For example, there's [California](https://data.ca.gov/), [Texas](https://data.texas.gov/), and [New York](https://data.ny.gov/). 
+## Other Regions
 
-## Global Data
+Many other state, county, and city governments also have "Open Data" websites; a map of these can be found [here](https://www.data.gov/open-gov/), or you can just use Google (typing in "(region-name) open data" typically works). For example, there's [California](https://data.ca.gov/), [Texas](https://data.texas.gov/), and [New York](https://data.ny.gov/). 
+
+# Global Data
+
+## International Data
 
 * [World Data Bank](https://data.worldbank.org/)
 * [WHO](https://www.who.int/data/gho) (World Health Organization)
 * [OECD](https://data.oecd.org/) (Organizaton for Economic Co-ordination and Development)
+* [Pew Research Center](https://www.pewresearch.org/download-datasets/)
 * [KAPSARC Energy Data](https://datasource.kapsarc.org/)
 * [ICPSR](https://www.icpsr.umich.edu/icpsrweb/ICPSR/) (Inter-university Consortium for Political and Social Research)
 * [IPUMS](https://ipums.org/) (census and survey data from around the world)
 * [Global Open Data Index](https://index.okfn.org/)
 
+## Foreign Data
+
 Many governments around the world (of all levels) maintain "Open Data" websites; you can find a map of some of these at [data.gov/open-gov](https://www.data.gov/open-gov/), or you can just use Google (typing in "(region-name) open data" typically works). Here's a short list of a few. Note that some of these are not in English, so you may need some foreign language competence to navigate through them. 
 
-* [Mexico](https://datos.gob.mx/)
 * [Canada](https://open.canada.ca/)
+* [Mexico](https://datos.gob.mx/)
 * [United Kingdom](https://data.gov.uk/)
 * [France](https://www.data.gouv.fr/)
 * [Spain](https://datos.gob.es/)
@@ -64,11 +72,11 @@ Many governments around the world (of all levels) maintain "Open Data" websites;
 * [Russia](https://data.gov.ru/)
 * [Pakistan](https://opendata.com.pk/)
 * [India](https://data.gov.in/)
-* [South Korea](http://www.data.go.kr/)
 * [Taiwan](http://data.gov.tw/)
+* [South Korea](http://www.data.go.kr/)
 * [Japan](https://www.data.go.jp/)
 
-## Other Health and/or Medical Data
+# Other Health and/or Medical Data
 
 A number of health and/or medical data sources are already mentioned above. Here are a few others. 
 
@@ -88,7 +96,7 @@ A number of health and/or medical data sources are already mentioned above. Here
 * [Sports Reference](https://www.sports-reference.com/)
 * [Cricsheet](https://cricsheet.org/downloads/) (cricket data)
 
-## Miscellaneous
+# Miscellaneous
 
 Here are some other things that might be useful: data search tools, data repositories, lists of data sources, etc. 
 

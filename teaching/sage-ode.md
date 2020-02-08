@@ -2,6 +2,7 @@
 layout: default
 title: Sage ODE Cheatsheet
 bannertext: Sage ODE Cheatsheet
+bannerlink: teaching
 nonav: true
 ---
 
