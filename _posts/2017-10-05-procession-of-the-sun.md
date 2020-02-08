@@ -1,10 +1,9 @@
 ---
 title: Here comes the procession of the Sun!
-tags: translation poem
+tags: translation
 layout: post
+summary: A poem by Harivansh Rai Bachchan
 ---
-
-*A translation of a poem by Harivansh Rai Bachchan*
 
 <div class="introduction">
 The original poem, written by Harivanish Rai Bachchan (1907-2003) in Hindustani, is called आ रही रवी की सवारी · <span dir="rtl">آ رہی روی کی سواری</span>, and comes from the collection निशा निमंत्रण · <span dir="rtl">نشا نمنترن</span> ("Invitation of the night," 1938). The original is available in Nagari on [Kavita Kosh](http://kavitakosh.org/kk/%E0%A4%86_%E0%A4%B0%E0%A4%B9%E0%A5%80_%E0%A4%B0%E0%A4%B5%E0%A4%BF_%E0%A4%95%E0%A5%80_%E0%A4%B8%E0%A4%B5%E0%A4%BE%E0%A4%B0%E0%A5%80_/_%E0%A4%B9%E0%A4%B0%E0%A4%BF%E0%A4%B5%E0%A4%82%E0%A4%B6%E0%A4%B0%E0%A4%BE%E0%A4%AF_%E0%A4%AC%E0%A4%9A%E0%A5%8D%E2%80%8D%E0%A4%9A%E0%A4%A8).

@@ -23,12 +23,12 @@ $banner-font-url: str-replace($banner-font, ' ', '+');
 $main-font-url: str-replace($main-font, ' ', '+');
 
 @import url("reset.css");
-@import url("https://fonts.googleapis.com/css?family=" + $banner-font-url + "|" + $main-font-url);
+@import url("https://fonts.googleapis.com/css?family=" + $banner-font-url + "|Noto+Sans|Noto+Sans+Devanagari|Noto+Sans+Arabic|Noto+Sans+Bengali|Noto+Sans+CJK+JP");
 
 body {
     font-size: 16px;
-    font-family: $main-font, sans-serif;
-    font-weight: 300;
+    font-family: "Noto Sans", "Noto Sans Devanagari", "Noto Sans Arabic", "Noto Sans Bengali", "Noto Sans CJK JP", sans-serif;
+    font-weight: normal;
     line-height: 1.7;
     color: $text;
 
@@ -161,9 +161,15 @@ main {
     }
 
     p {
-        margin-bottom: 1em;
-        margin-top: 1em;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
     }
+
+	
+	li {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+	}
 
     ul {
         list-style: square;
@@ -182,7 +188,7 @@ main {
     .introduction, .references {
         font-size: small;
         background-color: $light;
-        padding: 0.2em 2em;
+        padding: 1em 2em;
         margin-bottom: 1em;
         border-radius: 0.2em;
     }
@@ -214,11 +220,11 @@ main {
     }
 }
 
-.email::after {
-    content: "coloradocollege.edu";
+.email:after {
+    content: attr(data-domain);
 }
-.email::before {
-    content: "sagrawal";
+.email:before {
+    content: attr(data-localpart) "@";
 }
 
 ul.tags {

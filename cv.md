@@ -7,7 +7,7 @@ nonav: true
 
 # Basic information
 
-* Email: <span class="email">@</span>
+* Email: <span class="email" data-localpart="sagrawal" data-domain="coloradocollege.edu"></span>
 * Website: [sagrawalx.github.io](https://sagrawalx.github.io)
 * Citizenship: USA
 

@@ -3,9 +3,8 @@ title: Schwa Deletion in Hindustani
 date: 2018-07-13
 tags: linguistics
 layout: post
+summary: A discussion of several kinds of deleted schwas
 ---
-
-*A discussion of several kinds of deleted schwas*
 
 # Three kinds of "schwa deletion"
 

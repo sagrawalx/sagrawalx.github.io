@@ -3,9 +3,8 @@ title: Hindi and Urdu
 date: 2018-12-20
 tags: translation
 layout: post
+summary: A work of satire by Saadat Hasan Manto
 ---
-
-*An annotated translation of a piece of satire by Saadat Hasan Manto*
 
 <div class="introduction">
 
@@ -17,7 +16,7 @@ But first, a whirlwind synopsis of the historical and linguistic background for 
 
 While one can clearly identify this language in the historical record, assigning a name to this language turns out to be a complicated task. Historically, a variety of names were used: among them are Hindavi, Hindi, Hindustani, Bhasha, Rekhta, Khari Boli, and Urdu. Furthermore, some of these names sometimes referred to closely related but different languages (such as Braj Bhasha or Avadhi). A detailed discussion of the confusion surrounding naming can be found in {% cite chand --label chapter --locator III %}. In the 1800s, the name "Urdu" was in vogue.
 
-Around this time, profound sectarianism began coursing through South Asia. The causes are unclear and manifold: fingers are often pointed at the influence of Christian missionaries and at the political structure of the British Raj, but many of the key figures of direct importance were native. In any case, one aspect of this sectarian pulse was a religious-nationalist movement related to the language we've been discussing that picked up steam after the [Indian Rebellion of 1857](https://en.wikipedia.org/wiki/Indian_Rebellion_of_1857). The goal of this movement was two-fold. The first goal was merely orthographic: the movement wanted for this language to be written in Nagari rather than the Urdu alphabet. The second goal was more substantial, and involved throwing out Persian loanwords and replacing them with words borrowed wholesale from Sanskrit (a language that had been dead in South Asia for many, many centuries, but that continued to hold religious significance for the Hindu population of South Asia).
+Around this time, profound sectarianism began coursing through South Asia. The causes are unclear and manifold: fingers are often pointed at the influence of Christian missionaries and at the political structure of the British Raj, but many of the key figures of direct importance were native. In any case, one aspect of this sectarian pulse was a religious-nationalist movement related to the language we've been discussing that picked up steam after the [Indian Rebellion of 1857](https://en.wikipedia.org/wiki/Indian_Rebellion_of_1857). The goal of this movement was two-fold. The first goal was merely orthographic: the movement wanted for this language to be written in Nagari rather than the Urdu alphabet. The second goal was more substantial, and involved throwing out Persian loanwords and replacing them with words borrowed wholesale from Sanskrit (a language that had been dead in South Asia for many, many centuries, but that continued to hold religious significance for the Hindu population).
 
 This movement began to push out propaganda describing Urdu as a language "for Muslims," and decided to use the name "Hindi" for the variant language they were championing, a language "for Hindus." (In anticipation of the following piece of satire, it is worth pointing out at this point that even the name "Hindi" itself is of Persian origin.) Adherents of this movement became the first of three camps in an intense ideological struggle; let us call this "Camp Hindi."
 
@@ -62,7 +61,7 @@ Munshi: So you hate lemon soda.
 
 Iqbal: No... Why would I hate it, Munshi Narayan Prashad? It's just that everyone in my family drinks club soda, so I've gotten used to it. It's not a big deal, and actually I think that lemon soda is more enjoyable than club soda.
 
-Munshi: That's why I'm surprised. Why would you prefer an acrid drink over a sweet one? Lemon soda is not only sweet, it also smells nice. Don't you think so?
+Munshi: That's why I'm surprised. Why would you prefer an acrid drink over a sweet one? Lemon soda is not only sweet, it also smells nice. Don't you think?
 
 Iqbal: You're absolutely right. But...
 
@@ -70,7 +69,7 @@ Munshi: But what?
 
 Iqbal: Nothing... I was just about to say that I'm going to have club soda anyway.
 
-Munshi: How senseless! If someone was listening, they'd think I was forcing you to drink poison... Come on, is there even any difference between lemon soda and club soda? The same factory makes both bottles. The same machine fills them both up. And besides, if you take the sweetness and the fragrance out of lemon soda, what would you be left with?
+Munshi: Senseless! If someone was listening, they'd think I was forcing you to drink poison... Come on, is there even any difference between lemon soda and club soda? The same factory makes both bottles. The same machine fills them both up. And besides, if you take the sweetness and the fragrance out of lemon soda, what would you be left with?
 
 Iqbal: Club soda... Acrid water...
 
@@ -86,7 +85,7 @@ Iqbal: What will you[^you] drink?
 
 Munshi: I'll order another bottle.
 
-Iqbal: Why will you order another bottle? What's wrong with drinking club soda?
+Iqbal: Why would you order another bottle? What's wrong with drinking my club soda?
 
 Munshi: Th... There's no problem.
 

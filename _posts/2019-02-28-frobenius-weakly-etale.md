@@ -2,9 +2,8 @@
 tags: math
 title: Relative Frobenius of a weakly étale morphism
 layout: post
+summary: A fun lemma
 ---
-
-*A fun lemma*
 
 Here is a scheme theoretic generalization of the trivial observation that a field extension that is simultaneously separable and purely inseparable must be an isomorphism.
 

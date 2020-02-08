@@ -7,8 +7,8 @@ pandoc:
         - mathjax
 
 scholar:
-  style: css/custom.csl
-  bibliography_template: bib
+    style: css/custom.csl
+    bibliography_template: bib
 
 exclude: ["README.md", "jekgit.sh"]
 include: [".nojekyll"]
