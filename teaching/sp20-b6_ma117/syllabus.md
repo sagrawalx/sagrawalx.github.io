@@ -119,7 +119,9 @@ Here are some details about each of the components of your grade.
 
 	There will also be a few "extra credit" labs during the block. Each extra credit lab is worth a maximum of 5 points (ie, half the weight of a regular lab). 
 
-* There will be three quizzes during the block. They will take place in class; see the calendar on the course [webpage](index) for dates. There will be some free response questions, and some true-false questions. A day or two after the quiz, I'll block off a couple of hours in the afternoons for "quiz revisions." During this time, you can come by and meet with me one-on-one to discuss up to 2 of the true-false questions that you left blank. If you convince me that you now fully understand the solution, you'll get points for that question.
+* There will be three quizzes during the block. They will take place in class; see the calendar on the course [webpage](index) for dates. The only resource you will be allowed to use is one handwritten sheet of notes; in particular, no books and no electronic devices (unless I specifically announce otherwise). There will be some free response questions, and some true-false questions. 
+
+	A day or two after the quiz, I'll block off a couple of hours in the afternoons for "quiz revisions." During this time, you can come by and meet with me one-on-one to discuss up to 2 of the true-false questions that you left blank. If you convince me that you now fully understand the solution, you'll get points for that question.
 
     If you won't be able to to make it to a quiz, please reach out to me *before the quiz* to let me know and we'll work something out. Make-ups will not be given quizzes if you don't let me know in advance.
 
