@@ -232,7 +232,7 @@ Quiz 2 revisions (12:30–2pm).
 
 <tr>
 <td rowspan="2">Tue</td>
-<td>$t$-distrbution</td>
+<td>$t$ distribution</td>
 <td>Read: 7.1–2  
 Do: 
 </td>
