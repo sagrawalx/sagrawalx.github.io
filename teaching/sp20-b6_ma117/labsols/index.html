@@ -60,6 +60,66 @@ Spring 2020, Block 6 — MA117 —
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">present[<span class="kw">which.max</span>(present<span class="op">$</span>boys <span class="op">+</span><span class="st"> </span>present<span class="op">$</span>girls), <span class="dv">1</span>]</a></code></pre></div>
 <p>returns the answer 1961 in just one line.</p></li>
 </ol>
+<h1 id="lab-2">Lab 2</h1>
+<h2 id="exercises-1">Exercises</h2>
+<ol type="1">
+<li><p>There are 20000 cases and 9 variables. <code>genhlth</code> is categorical (ordinal), <code>exerany</code>, <code>hlthplan</code>, <code>smoke100</code>, and <code>gender</code> are categorical (non-ordinal), <code>height</code>, <code>weight</code>, and <code>wtdesire</code> are numerical (continuous), and finally, <code>age</code> is numerical (discrete).</p></li>
+<li><p>For <code>height</code> and <code>age</code>, we get the following numerical summaries, and the interquartile ranges are 6 and 26, respectively.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">summary</span>(cdc<span class="op">$</span>height)</a>
+<a class="sourceLine" id="cb5-2" title="2">   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </a>
+<a class="sourceLine" id="cb5-3" title="3">  <span class="fl">48.00</span>   <span class="fl">64.00</span>   <span class="fl">67.00</span>   <span class="fl">67.18</span>   <span class="fl">70.00</span>   <span class="fl">93.00</span> </a>
+<a class="sourceLine" id="cb5-4" title="4"><span class="op">&gt;</span><span class="st"> </span><span class="kw">summary</span>(cdc<span class="op">$</span>age)</a>
+<a class="sourceLine" id="cb5-5" title="5">   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </a>
+<a class="sourceLine" id="cb5-6" title="6">  <span class="fl">18.00</span>   <span class="fl">31.00</span>   <span class="fl">43.00</span>   <span class="fl">45.07</span>   <span class="fl">57.00</span>   <span class="fl">99.00</span></a></code></pre></div>
+<p>For <code>gender</code> and <code>exerany</code>, we have the following relative frequency distributions.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">table</span>(cdc<span class="op">$</span>gender)<span class="op">/</span><span class="dv">20000</span></a>
+<a class="sourceLine" id="cb6-2" title="2"></a>
+<a class="sourceLine" id="cb6-3" title="3">      m       f </a>
+<a class="sourceLine" id="cb6-4" title="4"><span class="fl">0.47845</span> <span class="fl">0.52155</span></a>
+<a class="sourceLine" id="cb6-5" title="5"><span class="op">&gt;</span><span class="st"> </span><span class="kw">table</span>(cdc<span class="op">$</span>exerany)<span class="op">/</span><span class="dv">20000</span></a>
+<a class="sourceLine" id="cb6-6" title="6"></a>
+<a class="sourceLine" id="cb6-7" title="7">     <span class="dv">0</span>      <span class="dv">1</span> </a>
+<a class="sourceLine" id="cb6-8" title="8"><span class="fl">0.2543</span> <span class="fl">0.7457</span> </a></code></pre></div>
+<p>There are 9569 males in the sample, and 23.285% of the sample population reports being in excellent health.</p></li>
+<li><p>The mosaic plot (below) shows that relatively more men report having smoked 100 cigarettes than women.</p>
+<p><img src="2-e3.png" /></p></li>
+<li><p><code>under23_and_smoke &lt;- subset(cdc, age &lt; 23 &amp; smoke100 == "1")</code></p></li>
+<li><p>The box plot of <code>genhlth</code> against <code>bmi</code> shows that decreasing health appears to coincide with higher BMIs.</p>
+<p><img src="2-e5a.png" /></p>
+<p>Here is a box plot of <code>hlthplan</code> against <code>bmi</code>. It appears that having a health plan is correlated with fewer extreme BMIs.</p>
+<p><img src="2-e5b.png" /></p></li>
+</ol>
+<h2 id="on-your-own-1">On Your Own</h2>
+<ol type="1">
+<li><p>The scatterplot shows a generally positive trend, but the slope appears to be less than 1.</p>
+<p><img src="2-o1.png" /></p></li>
+<li><p><code>wdiff &lt;- cdc$weight - cdc$wtdesire</code> (but could do it the other way around too, which will affect answers below).</p></li>
+<li><p><code>wdiff</code> is a vector of continuous numerical observations. An entry of 0 means that person is at their desired weight. An positive entry indicates the person wants to lose weight, and a negative entry indicates they want to gain weight.</p></li>
+<li><p>Running <code>hist(wdiff,breaks=50)</code> and <code>boxplot(wdiff)</code> yield the following plots.</p>
+<p><img src="2-o4a.png" /> <img src="2-o4b.png" /></p>
+<p>It appears that most people are happy with their weights, but there is more of a skew towards the positive side (ie, more people want to lose weight than gain).</p></li>
+<li><p>Here are numerical summaries.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1"><span class="op">&gt;</span><span class="st"> </span>cdc<span class="op">$</span>wdiff &lt;-<span class="st"> </span>wdiff</a>
+<a class="sourceLine" id="cb7-2" title="2"><span class="op">&gt;</span><span class="st"> </span>male &lt;-<span class="st"> </span><span class="kw">subset</span>(cdc, gender<span class="op">==</span><span class="st">&quot;m&quot;</span>)</a>
+<a class="sourceLine" id="cb7-3" title="3"><span class="op">&gt;</span><span class="st"> </span>female &lt;-<span class="st"> </span><span class="kw">subset</span>(cdc, gender<span class="op">==</span><span class="st">&quot;f&quot;</span>)</a>
+<a class="sourceLine" id="cb7-4" title="4"><span class="op">&gt;</span><span class="st"> </span><span class="kw">summary</span>(male<span class="op">$</span>wdiff)</a>
+<a class="sourceLine" id="cb7-5" title="5">   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </a>
+<a class="sourceLine" id="cb7-6" title="6"><span class="fl">-500.00</span>    <span class="fl">0.00</span>    <span class="fl">5.00</span>   <span class="fl">10.71</span>   <span class="fl">20.00</span>  <span class="fl">300.00</span> </a>
+<a class="sourceLine" id="cb7-7" title="7"><span class="op">&gt;</span><span class="st"> </span><span class="kw">summary</span>(female<span class="op">$</span>wdiff)</a>
+<a class="sourceLine" id="cb7-8" title="8">   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </a>
+<a class="sourceLine" id="cb7-9" title="9"> <span class="fl">-83.00</span>    <span class="fl">0.00</span>   <span class="fl">10.00</span>   <span class="fl">18.15</span>   <span class="fl">27.00</span>  <span class="fl">300.00</span> </a></code></pre></div>
+<p>And here is a side-by-side box plot.</p>
+<p><img src="2-e5.png" /></p>
+<p>It appears that women generally want to lose more weight (comparing mean and/or medians).</p></li>
+<li><p>It appears that 70.76% of the weights are within one standard deviation of the mean.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="op">&gt;</span><span class="st"> </span>m &lt;-<span class="st"> </span><span class="kw">mean</span>(cdc<span class="op">$</span>weight)</a>
+<a class="sourceLine" id="cb8-2" title="2"><span class="op">&gt;</span><span class="st"> </span>s &lt;-<span class="st"> </span><span class="kw">sd</span>(cdc<span class="op">$</span>weight)</a>
+<a class="sourceLine" id="cb8-3" title="3"><span class="op">&gt;</span><span class="st"> </span>within_one_sd &lt;-<span class="st"> </span><span class="kw">subset</span>(cdc, weight <span class="op">&gt;</span><span class="st"> </span>m<span class="op">-</span>s <span class="op">&amp;</span><span class="st"> </span>weight <span class="op">&lt;</span><span class="st"> </span>m<span class="op">+</span>s)</a>
+<a class="sourceLine" id="cb8-4" title="4"><span class="op">&gt;</span><span class="st"> </span><span class="kw">dim</span>(within_one_sd)</a>
+<a class="sourceLine" id="cb8-5" title="5">[<span class="dv">1</span>] <span class="dv">14152</span>    <span class="dv">10</span></a>
+<a class="sourceLine" id="cb8-6" title="6"><span class="op">&gt;</span><span class="st"> </span><span class="dv">14152</span><span class="op">/</span><span class="dv">20000</span></a>
+<a class="sourceLine" id="cb8-7" title="7">[<span class="dv">1</span>] <span class="fl">0.7076</span></a></code></pre></div></li>
+</ol>
 
 </main>
 
