@@ -10,15 +10,15 @@ nonav: true
 > Statistical thinking will one day be as necessary for efficient citizenship as the ability to read or write.
 > <span class="blockquote-attribution">—attributed to H. G. Wells[^attribution]</span>
 
-[^attribution]: This appears to be a partially false attribution. In *Mankind in the Making* (1903), Wells says 
+[^attribution]: This appears to be a sort of false attribution (or rather, it is a paraphrase). In *Mankind in the Making* (1903), H. G. Wells writes 
 
 	> The great body of physical science, a great deal of the essential fact of financial science, and endless social and political problems are only accessible and only thinkable to those who have had a sound training in mathematical analysis, and the time may not be very remote when it will be understood that for complete initiation as an efficient citizen of one of the new great complex world-wide States that are now developing, it is as necessary to be able to compute, to think in averages and maxima and minima, as it is now to be able to read and write.
 
-	This was later paraphrased by Samuel S. Wilks in his presidential address to the American Statistical Association in 1950 in the form quoted at the top of this syllabus, and the paraphrase spread under Wells's name from there. 
+	This was later paraphrased by Samuel S. Wilks in his presidential address to the American Statistical Association in 1950 in the form quoted at the top of this syllabus, and this paraphrase has spread under Wells's name since then. 
 
 ## Overview
 
-MA117 is an introduction to statistics, the science of understanding and analyzing data. En route, the course will cover some probability, which forms the mathematical backbone of statistical inference. The course will also involve using R, a statistical programming language that is indispensible to the modern practice of statistics. 
+MA117 is an introduction to statistics, the practice of collecting, analyzing, and interpreting data. En route, the course will cover some concepts from probability which form the mathematical backbone of statistical analysis. The course will also involve using R, a programming language that is ubiquitously used by statisticians today. 
 
 ## Course Structure Philosophy
 
@@ -70,11 +70,11 @@ A few thoughts about these submissions:
 
 * Remember that you don't necessarily need to wait till the night before day A to work on and submit the reading assignment for day A. You're strongly encouraged to get ahead. I've often found that letting things simmer in the back of my mind for a while helps me understand them.
 
-* You might be asking, "What if I don't have any questions about the reading?!" That's fine. You can submit a non-question instead. For example, you might decide to send me a question that you had, but then you managed to figure out, either by yourself or by asking someone for help. Or you might send me something that you understand but you think one of your peers might find confusing. I'm mostly looking for an indication that you read the assigned reading and made a sincere attempt to process it.
+* You might be asking, "What if I don't have any questions about the reading?!" That's fine. You can submit a non-question instead. For example, you might decide to send me a question that you had, but then you managed to figure out, either by yourself or by asking someone for help. Or you might send me something that you understand but you think your peers might find confusing. I'm mostly looking for an indication that you read the assigned reading and made a sincere attempt to process it.
 
-* I'll do my best to tailor our in-class discussions to address as many of your questions as I can. The earlier you send me your question, the more likely I am to be able to work it into our discussions. If I don't adequately address your question in class, please ask again!
+* I'll do my best to tailor our in-class discussions to address as many of your questions as I can. If I don't adequately address your question in class, please ask again!
 
-* I'll check your solutions to the reading assignment exercises only for completeness. They will usually be odd-numbered questions, and you're encouraged to check for correctness yourself using the solutions in the back of the textbook.
+* I'll check your solutions to the reading assignment exercises only for completeness. You're encouraged to check your solutions against the solutions in the back of the textbook yourself.
 
 ### In-class structure
 
@@ -82,17 +82,18 @@ I'll begin class with a very brief discussion of the reading. This is *not* inte
 
 We'll spend most of class time solving problems in the following format.
 
-* I'll put a problem on the board.
+* I'll put a multiple-choice problem on the board.
 * You'll think about the problem by yourself for a couple of minutes.
 * We'll vote on an answer to the problem.
 * You'll have a few minutes to talk to your classmates about the problem.
 * We'll vote again.
-* I'll tell you how I'd solve the problem.
+* I'll tell you how I'd answer the problem.
+
+Occasionally, we may also do worksheets in class. 
 
 ### Problem sets
 
-
-After class, you will hopefully be ready to tackle the problem set listed in the fourth column of the calendar. These problems will *not* be collected, but problems on the quizzes will heavily resemble problems from the problem sets, so you're encouraged to spend time really figuring them out. Discussing solutions (with your peers, with the paraprof, with tutors at the QRC, and with me) is strongly encouraged! 
+After class, you will hopefully be ready to tackle the problem set listed in the fourth column of the calendar. These problems will *not* be collected, but problems on quizzes will very likely resemble these problems, so you're encouraged to spend time really figuring them out. Discussing answers (with your peers, with the paraprof, with tutors at the QRC, and with me) is strongly encouraged! 
 
 ## Assessment
 
@@ -114,7 +115,7 @@ Here are some details about each of the components of your grade.
 
 * Every reading assignment you submit is worth up to 2 points: 1 for the question, 1 for the exercises. The reading assignments component of your grade will be the total number of points you accumulate in this way, out of a maximum of $2(n-2)$ points, where $n$ is the total number of reading assignments assigned. In other words, you don't need to do submit both things every day to get a perfect score for this component of your grade.
 
-* There will be several labs during the block; these are assignments that will require you to use R. Each will be worth 10 points. You will send me your responses to the questions asked in the lab as a PDF by the deadlines indicated on the [calendar](index). 
+* There will be several labs during the block; these are assignments that will require you to use R. Each will be worth 10 points. You will send me your responses to all of the questions asked in the lab as a PDF by the deadlines indicated on the [calendar](index). 
 
 	There will also be a few "extra credit" labs during the block. Each extra credit lab is worth a maximum of 5 points (ie, half the weight of a regular lab). 
 
