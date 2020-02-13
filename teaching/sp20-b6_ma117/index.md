@@ -10,7 +10,7 @@ nonav: true
 
 # Overview
 
-* Class: Monday through Friday, 9:15am, in TBA.
+* Class: Monday through Friday, 9:15am, in TSC 108.
 * Instructor: Shishir Agrawal (I also go by Sunny), <span class="email" data-localpart="sagrawal" data-domain="coloradocollege.edu"></span>.
     * Paraprof: Sophie Aiken, <span class="email" data-localpart="saiken" data-domain="coloradocollege.edu"></span>.
 * [Course syllabus](syllabus).
@@ -87,6 +87,7 @@ Do: 2.1, 5, 9, 11, 23, 25
 <tr>
 <td colspan="3">
 Sunny's office hours (1–2pm).  
+Problem session with Sophie (2–3pm).  
 Writing assignment due (11:59pm). [Prompt](/teaching/prompt.pdf).
 </td>
 </tr>
@@ -146,6 +147,7 @@ Do:
 <tr>
 <td colspan="3">
 Quiz 1 revisions (12:30–2pm).  
+Problem session with Sophie (2–3pm).  
 [Project: Topic proposal](project) due (11:59pm).  
 Extra credit: [Lab 4](https://htmlpreview.github.io/?https://github.com/andrewpbray/oiLabs-base-R/blob/master/normal_distribution/normal_distribution.html) due (11:59pm). 
 </td>
@@ -169,12 +171,18 @@ Sunny's office hours (2–3pm).
 </tr>
 
 <tr>
-<td rowspan="1">Wed</td>
+<td rowspan="2">Wed</td>
 <td>Hypothesis testing</td>
 <td>Read: 5.3  
 Do: 
 </td>
 <td>
+</td>
+</tr>
+
+<tr>
+<td colspan="3">
+Problem session with Sophie (2–3pm).  
 </td>
 </tr>
 
@@ -227,6 +235,7 @@ Do:
 <tr>
 <td colspan="3">
 Quiz 2 revisions (12:30–2pm).  
+Problem session with Sophie (2–3pm).  
 </td>
 </tr>
 
@@ -261,6 +270,7 @@ Do:
 <tr>
 <td colspan="3">  
 Sunny's office hours (1–2pm).  
+Problem session with Sophie (2–3pm).  
 [Project: Outline](project) due (11:59pm). 
 </td>
 </tr>
@@ -309,6 +319,7 @@ Quiz 3 revisions (12:30–2pm).
 <td>Mon</td>
 <td colspan="3">
 Final exam (in class). Sections covered: everything!  
+Problem session with Sophie (2–3pm).  
 Extra credit: [Lab 8](https://htmlpreview.github.io/?https://github.com/andrewpbray/oiLabs-base-R/blob/master/simple_regression/simple_regression.html) due (11:59pm). 
 </td>
 </tr>
