@@ -62,7 +62,8 @@ Sunny's office hours (1–2pm).
 Do: 1.1, 3, 7, 13, 17, 29
 </td>
 <td>
-1.5, 9, 11, 12, 19, 21, 22, 27, 28, 33, 34, 36, 40, 43, 44
+1.5, 9, 11, 12, 19, 21, 22, 27, 28, 33, 34, 36, 40, 43, 44  
+[Relevant xkcd](https://www.xkcd.com/552/)
 </td>
 </tr>
 
@@ -99,7 +100,8 @@ Writing assignment due (11:59pm). [Prompt](/teaching/prompt.pdf).
 Do: 3.1, 5, 7, 13, 23, 
 </td>
 <td>
-3.3, 8, 10, 11, 15, 17, 21, 25, 27
+3.3, 8, 10, 11, 15, 17, 21, 25, 27  
+[Relevant xkcd](https://xkcd.com/795/)
 </td>
 </tr>
 
@@ -138,9 +140,10 @@ Extra credit: [Lab 3](https://htmlpreview.github.io/?https://github.com/andrewpb
 <td rowspan="2">Mon</td>
 <td>Distributions</td>
 <td>Read: 4.1–3  
-Do: 
+Do: 4.3, 11, 13, 15, 17
 </td>
 <td>
+4.5, 7, 9, 14, 16, 19, 21, 22, 26
 </td>
 </tr>
 
@@ -177,6 +180,7 @@ Sunny's office hours (2–3pm).
 Do: 
 </td>
 <td>
+[Relevant xkcd](https://xkcd.com/882/), and [another](https://xkcd.com/1478/)
 </td>
 </tr>
 
@@ -282,6 +286,7 @@ Problem session with Sophie (2–3pm).
 Do: 
 </td>
 <td>
+[Relevant xkcd](https://xkcd.com/2048/)
 </td>
 </tr>
 
@@ -338,3 +343,7 @@ Project work day! No class.
 [Project presentations](project) (during class).</td>
 </tr>
 </table>
+
+# Fun Things
+
+* [FiveThirtyEight](https://fivethirtyeight.com/)
