@@ -63,6 +63,7 @@ Do: 1.1, 3, 7, 13, 17, 29
 </td>
 <td>
 1.5, 9, 11, 12, 19, 21, 22, 27, 28, 33, 34, 36, 40, 43, 44  
+[In class problems](data.pdf)
 [Relevant xkcd](https://www.xkcd.com/552/)
 </td>
 </tr>
@@ -160,9 +161,10 @@ Extra credit: [Lab 4](https://htmlpreview.github.io/?https://github.com/andrewpb
 <td rowspan="2">Tue</td>
 <td>Point estimates and confidence intervals</td>
 <td>Read: 5.1–2  
-Do: 
+Do: 5.1, 3, 7, 9
 </td>
 <td>
+5.2, 5, 8, 10, 11, 13
 </td>
 </tr>
 
@@ -177,9 +179,10 @@ Sunny's office hours (2–3pm).
 <td rowspan="2">Wed</td>
 <td>Hypothesis testing</td>
 <td>Read: 5.3  
-Do: 
+Do: 5.15, 17, 19
 </td>
 <td>
+5.16, 21, 23, 24, 26   
 [Relevant xkcd](https://xkcd.com/882/), and [another](https://xkcd.com/1478/)
 </td>
 </tr>
