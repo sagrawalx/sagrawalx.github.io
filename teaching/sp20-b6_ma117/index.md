@@ -82,7 +82,8 @@ Sunny's office hours (2–3pm).
 Do: 2.1, 5, 9, 11, 23, 25
 </td>
 <td>
-2.3, 6, 10, 12, 13, 17, 19, 20, 24, 26, 30, 33, 34
+2.3, 6, 10, 12, 13, 17, 19, 20, 24, 26, 30, 33, 34  
+[In class problems](descriptive.pdf)
 </td>
 </tr>
 
@@ -350,3 +351,4 @@ Project work day! No class.
 # Fun Things
 
 * [FiveThirtyEight](https://fivethirtyeight.com/)
+* [Pew Research](https://www.pewresearch.org/
