@@ -145,7 +145,7 @@ Extra credit: [Lab 3](https://htmlpreview.github.io/?https://github.com/andrewpb
 Do: 4.3, 11, 13, 15, 17
 </td>
 <td>
-4.5, 7, 9, 14, 16, 19, 21, 22, 26
+4.5, 7, 9, 14, 16, 19, 21, 22, 26, 35, 37, 39
 </td>
 </tr>
 
@@ -183,7 +183,7 @@ Sunny's office hours (2–3pm).
 Do: 5.15, 17, 19
 </td>
 <td>
-5.16, 21, 23, 24, 26   
+5.16, 21, 23, 24, 26, 27, 28, 32, 37   
 [Relevant xkcd](https://xkcd.com/882/), and [another](https://xkcd.com/1478/)
 </td>
 </tr>
@@ -198,9 +198,10 @@ Problem session with Sophie (2–3pm).
 <td rowspan="2">Thu</td>
 <td>Inference on proportions</td>
 <td>Read: 6.1–2  
-Do: 
+Do: 6.1, 3, 17, 19
 </td>
 <td>
+6.2, 4, 5, 9, 10, 11, 12, 14, 15, 16, 21, 23, 25, 29
 </td>
 </tr>
 
@@ -234,9 +235,10 @@ Quiz 2 (in class). Sections covered: through chapter 5.
 <td rowspan="2">Mon</td>
 <td>$\chi^2$ tests</td>
 <td>Read: 6.3–4  
-Do: 
+Do: 6.33, 35, 37
 </td>
 <td>
+6.31, 32, 34, 38, 41, 45, 49, 50
 </td>
 </tr>
 
