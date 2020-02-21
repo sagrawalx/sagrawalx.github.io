@@ -103,6 +103,7 @@ Do: 3.1, 5, 7, 13, 23,
 </td>
 <td>
 3.3, 8, 10, 11, 15, 17, 21, 25, 27  
+[In class problems](probability.pdf)
 [Relevant xkcd](https://xkcd.com/795/)
 </td>
 </tr>
