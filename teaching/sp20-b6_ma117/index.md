@@ -122,7 +122,8 @@ Sunny's office hours (2–3pm).
 Do: 3.29, 31, 37, 43
 </td>
 <td>
-3.33, 35, 36, 38, 39, 41, 45–47
+3.33, 35, 36, 38, 39, 41, 45–47  
+[In class problems](random-variable.pdf)
 </td>
 </tr>
 
