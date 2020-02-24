@@ -147,7 +147,8 @@ Extra credit: [Lab 3](https://htmlpreview.github.io/?https://github.com/andrewpb
 Do: 4.3, 11, 13, 15, 17
 </td>
 <td>
-4.5, 7, 9, 14, 16, 19, 21, 22, 26, 35, 37, 39
+4.5, 7, 9, 14, 16, 19, 21, 22, 26, 35, 37, 39  
+[In class problems](distributions.pdf)
 </td>
 </tr>
 
@@ -209,7 +210,7 @@ Do: 6.1, 3, 17, 19
 
 <tr>
 <td colspan="3">
-Sunny's office hours (2–3pm).  
+Sunny's office hours (1–2pm).  
 [Lab 5B](https://htmlpreview.github.io/?https://github.com/andrewpbray/oiLabs-base-R/blob/master/confidence_intervals/confidence_intervals.html) due (11:59pm). 
 </td>
 </tr>
@@ -255,9 +256,10 @@ Problem session with Sophie (2–3pm).
 <td rowspan="2">Tue</td>
 <td>$t$ distribution</td>
 <td>Read: 7.1–2  
-Do: 
+Do: 7.1, 3, 5, 7, 17, 19
 </td>
 <td>
+7.2, 4, 6, 9, 11, 15, 21
 </td>
 </tr>
 
@@ -273,9 +275,10 @@ Sunny's office hours (2-3pm).
 <td rowspan="2">Wed</td>
 <td>Comparing means</td>
 <td>Read: 7.3, 7.5  
-Do: 
+Do: 7.23, 35, 39
 </td>
 <td>
+7.25, 27, 29, 31, 37, 41, 45, 47, 49, 51  
 </td>
 </tr>
 
@@ -291,9 +294,10 @@ Problem session with Sophie (2–3pm).
 <td rowspan="2">Thu</td>
 <td>Linear regression</td>
 <td>Read: 8.1–3  
-Do: 
+Do: 8.1, 9, 17, 27
 </td>
 <td>
+8.3, 5, 7, 11, 13, 19, 21, 23, 28, 29  
 [Relevant xkcd](https://xkcd.com/2048/)
 </td>
 </tr>
@@ -310,9 +314,10 @@ Quiz 3 (in class). Sections covered: up through 7.2.
 <td rowspan="2">Fri</td>
 <td>Inference for linear regression</td>
 <td>Read: 8.4  
-Do:
+Do: 8.31, 33, 34
 </td>
 <td>
+8.37, 38, 39, 42
 </td>
 </tr>
 

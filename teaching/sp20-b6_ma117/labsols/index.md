@@ -145,4 +145,158 @@ nonav: true
 	[1] 0.7076
 	~~~
 
+# Lab 3
 
+## Exercises
+
+1. There is always exactly one miss in any streak. A streak of 1 has one hit and one miss. A streak of 0 has just one miss. 
+
+2. There are fewer and fewer longer streaks. The longest streak was 4, though the most frequent was 0. 
+	
+	![](3-e2.png)
+
+3. 21 heads, 79 tails
+
+4. `sim_basket = sample(outcomes, size = 133, replace = TRUE, prob = c(0.45, 0.55))`
+
+## On Your Own
+
+1. There are fewer and fewer longer streaks. The longest streak was 7, but the most frequent was 0. 
+	
+	![](3-o1.png)
+
+2. If we run the simulation again, the distribution should be similar, but not necessarily identical. Sometimes the longest streak is 4, sometimes it gets as long as 10, but it's never terribly different. 
+
+3. This simulation does not give evidence that Kobe has "hot hands." All of the simulations I ran were either similar to Kobe's distribution, or had longer streaks. 
+
+# Lab 4
+
+## Exercises
+
+1. Here are the distributions, overlaid one on top of the other using `ggplot(bdims, aes(x=hgt, color=sex)) + geom_histogram(fill="white", alpha=0.5, position="identity")`. 
+
+	![](4-e1.png)
+
+	Women tend to be less tall. But both distributions are roughly normal. 
+
+2. It does appear roughly normal. 
+
+	![](4-e2.png)
+
+3. The Q-Q plot of the simulated data looks an awful lot like the Q-Q plot of the real data.
+
+	![](4-e3.png)
+
+4. The plots do provide evidence that female heights are nearly normal. 
+
+5.  Female weights seem less normally distributed. 
+
+	![](4-e5.png)
+
+6. What is the probability that female heights are less than 178? The normal distribution says 97.8%, the actual data says 98.1%. 
+
+	What is the probability that female weights are less than 61? The normal distribution says 51.7%, the actual data says 59.2%. 
+
+	The answer for the height distribution is much closer. 
+
+## On Your Own
+
+1. B, C, D, A
+2. ??
+3. ??
+
+# Lab 5A
+
+## Exercises
+
+1. The distribution is slightly right skewed. The mean, at 1500, is slightly higher than the median, at 1442. 
+
+	![](5a-e1.png)
+
+2. `samp1` has a less bell-curved-looking distribution, though it is still right skewed. The mean is 1486.42. 
+
+3. `samp2` had a mean of 1418.44, which was less than the mean of `samp1`. If we took a larger sample, the sample mean should be closer to the true mean. 
+
+4. There are 5000 elements. The distribution is roughly normal, centered at 1500. If we took 50000 means, the distribution should still look roughly normal centered at 1500. 
+
+5. There are 100 elements. Each is a mean of a sample of 50 areas. 
+
+	~~~R
+	> sample_means_small
+	  [1] 1636.96 1512.40 1400.68 1539.86 1584.10 1513.30
+	  [7] 1488.74 1395.66 1524.02 1537.40 1520.12 1479.32
+	 [13] 1385.42 1502.90 1532.00 1510.06 1542.00 1429.46
+	 [19] 1361.28 1577.32 1496.66 1592.52 1464.08 1580.18
+	 [25] 1689.26 1403.20 1473.34 1465.64 1389.28 1464.44
+	 [31] 1560.10 1611.22 1551.54 1393.10 1616.98 1554.44
+	 [37] 1494.38 1368.18 1508.28 1492.74 1453.42 1406.52
+	 [43] 1525.18 1561.12 1408.74 1468.86 1403.62 1471.80
+	 [49] 1524.42 1565.74 1524.10 1514.20 1556.24 1509.26
+	 [55] 1509.12 1501.52 1595.48 1437.08 1483.24 1581.10
+	 [61] 1613.56 1527.60 1466.04 1548.70 1548.04 1539.76
+	 [67] 1524.82 1532.24 1487.40 1498.16 1343.76 1566.02
+	 [73] 1622.50 1438.38 1475.00 1514.18 1521.56 1581.84
+	 [79] 1492.78 1443.68 1467.14 1482.70 1572.48 1450.32
+	 [85] 1564.26 1462.30 1595.52 1645.76 1526.34 1513.40
+	 [91] 1575.64 1511.74 1451.78 1528.62 1525.22 1454.78
+	 [97] 1423.96 1572.24 1451.92 1566.10
+	~~~
+
+6. When the sample size is larger, the variability decreases. 
+
+	![](5a-e6.png)
+
+## On Your Own
+
+1. Running `mean(sample(price, 50))` yields 169726.3. 
+
+2. Here is the distribution. It is normal, with mean 181027. The true mean is 180796.1. 
+
+	![](5a-o2.png)
+
+3. Here is the distribution for `sample_means150`. It is also normal, with mean 180649. This is closer to the true mean. 
+
+	![](5a-o3.png)
+
+4. `sample_means150` has a narrower distribution. If we want to be more confident about our estimate, we should use a distribution with a narrower distribution (ie, we should take larger sample sizes). 
+
+	![](5a-o4.png)
+
+	To generate this plot, I ran the following. 
+
+	~~~R
+	> sample_mean = c(sample_means50, sample_means150)
+	> sample_size = c(rep("fifty",5000), rep("one-fifty",5000))
+	> frame = data.frame(sample_mean, sample_size)
+	> ggplot(frame, aes(x=sample_mean, color=sample_size)) + geom_histogram(fill="white", alpha=0.1, position="identity")
+	~~~
+
+# Lab 5B
+
+## Exercises
+
+1. The distribution is right skewed. If ``typical'' size means mean, then the mean is 1445.53, though perhaps the median is a better estimate since the data is skewed. The median is 1407. 
+
+	![](5b-e1.png)
+
+2. It should be similar, but not identical. Different people will have different samples of 60. 
+
+3. The observations need to be independent and the sample size needs to be at least 30 (cf. section 7.1). 
+
+4. "95% confidence interval" means that, 95% of the time, this interval will contain the true mean. 
+
+5. Yes, my confidence interval does contain the true mean. 
+
+6. One would expect that 95% of confidence intervals constructed in this way will contain the true mean. 
+
+## On Your Own
+
+1. 47/50 contain the true mean, which is about 94%. 
+
+	![](5b-o1.png)
+
+2. The critical value for 50% confidence interval is calculated by `abs(qnorm(0.25))`, which yields 0.674. (Note: `qnorm(0.25)` tells me the value below which 25% of the data lies under a standard normal distribution.)
+
+3. Constructing 50% confidence intervals (which are much narrower than 95% confidence intervals), 22 of them do not contain the true mean. Thus 27/50 = 54% of them do, which is pretty close. 
+
+	![](5b-o3.png)
