@@ -120,6 +120,109 @@ Spring 2020, Block 6 — MA117 —
 <a class="sourceLine" id="cb8-6" title="6"><span class="op">&gt;</span><span class="st"> </span><span class="dv">14152</span><span class="op">/</span><span class="dv">20000</span></a>
 <a class="sourceLine" id="cb8-7" title="7">[<span class="dv">1</span>] <span class="fl">0.7076</span></a></code></pre></div></li>
 </ol>
+<h1 id="lab-3">Lab 3</h1>
+<h2 id="exercises-2">Exercises</h2>
+<ol type="1">
+<li><p>There is always exactly one miss in any streak. A streak of 1 has one hit and one miss. A streak of 0 has just one miss.</p></li>
+<li><p>There are fewer and fewer longer streaks. The longest streak was 4, though the most frequent was 0.</p>
+<p><img src="3-e2.png" /></p></li>
+<li><p>21 heads, 79 tails</p></li>
+<li><p><code>sim_basket = sample(outcomes, size = 133, replace = TRUE, prob = c(0.45, 0.55))</code></p></li>
+</ol>
+<h2 id="on-your-own-2">On Your Own</h2>
+<ol type="1">
+<li><p>There are fewer and fewer longer streaks. The longest streak was 7, but the most frequent was 0.</p>
+<p><img src="3-o1.png" /></p></li>
+<li><p>If we run the simulation again, the distribution should be similar, but not necessarily identical. Sometimes the longest streak is 4, sometimes it gets as long as 10, but it’s never terribly different.</p></li>
+<li><p>This simulation does not give evidence that Kobe has “hot hands.” All of the simulations I ran were either similar to Kobe’s distribution, or had longer streaks.</p></li>
+</ol>
+<h1 id="lab-4">Lab 4</h1>
+<h2 id="exercises-3">Exercises</h2>
+<ol type="1">
+<li><p>Here are the distributions, overlaid one on top of the other using <code>ggplot(bdims, aes(x=hgt, color=sex)) + geom_histogram(fill="white", alpha=0.5, position="identity")</code>.</p>
+<p><img src="4-e1.png" /></p>
+<p>Women tend to be less tall. But both distributions are roughly normal.</p></li>
+<li><p>It does appear roughly normal.</p>
+<p><img src="4-e2.png" /></p></li>
+<li><p>The Q-Q plot of the simulated data looks an awful lot like the Q-Q plot of the real data.</p>
+<p><img src="4-e3.png" /></p></li>
+<li><p>The plots do provide evidence that female heights are nearly normal.</p></li>
+<li><p>Female weights seem less normally distributed.</p>
+<p><img src="4-e5.png" /></p></li>
+<li><p>What is the probability that female heights are less than 178? The normal distribution says 97.8%, the actual data says 98.1%.</p>
+<p>What is the probability that female weights are less than 61? The normal distribution says 51.7%, the actual data says 59.2%.</p>
+<p>The answer for the height distribution is much closer.</p></li>
+</ol>
+<h2 id="on-your-own-3">On Your Own</h2>
+<ol type="1">
+<li>B, C, D, A</li>
+<li>??</li>
+<li>??</li>
+</ol>
+<h1 id="lab-5a">Lab 5A</h1>
+<h2 id="exercises-4">Exercises</h2>
+<ol type="1">
+<li><p>The distribution is slightly right skewed. The mean, at 1500, is slightly higher than the median, at 1442.</p>
+<p><img src="5a-e1.png" /></p></li>
+<li><p><code>samp1</code> has a less bell-curved-looking distribution, though it is still right skewed. The mean is 1486.42.</p></li>
+<li><p><code>samp2</code> had a mean of 1418.44, which was less than the mean of <code>samp1</code>. If we took a larger sample, the sample mean should be closer to the true mean.</p></li>
+<li><p>There are 5000 elements. The distribution is roughly normal, centered at 1500. If we took 50000 means, the distribution should still look roughly normal centered at 1500.</p></li>
+<li><p>There are 100 elements. Each is a mean of a sample of 50 areas.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="op">&gt;</span><span class="st"> </span>sample_means_small</a>
+<a class="sourceLine" id="cb9-2" title="2">  [<span class="dv">1</span>] <span class="fl">1636.96</span> <span class="fl">1512.40</span> <span class="fl">1400.68</span> <span class="fl">1539.86</span> <span class="fl">1584.10</span> <span class="fl">1513.30</span></a>
+<a class="sourceLine" id="cb9-3" title="3">  [<span class="dv">7</span>] <span class="fl">1488.74</span> <span class="fl">1395.66</span> <span class="fl">1524.02</span> <span class="fl">1537.40</span> <span class="fl">1520.12</span> <span class="fl">1479.32</span></a>
+<a class="sourceLine" id="cb9-4" title="4"> [<span class="dv">13</span>] <span class="fl">1385.42</span> <span class="fl">1502.90</span> <span class="fl">1532.00</span> <span class="fl">1510.06</span> <span class="fl">1542.00</span> <span class="fl">1429.46</span></a>
+<a class="sourceLine" id="cb9-5" title="5"> [<span class="dv">19</span>] <span class="fl">1361.28</span> <span class="fl">1577.32</span> <span class="fl">1496.66</span> <span class="fl">1592.52</span> <span class="fl">1464.08</span> <span class="fl">1580.18</span></a>
+<a class="sourceLine" id="cb9-6" title="6"> [<span class="dv">25</span>] <span class="fl">1689.26</span> <span class="fl">1403.20</span> <span class="fl">1473.34</span> <span class="fl">1465.64</span> <span class="fl">1389.28</span> <span class="fl">1464.44</span></a>
+<a class="sourceLine" id="cb9-7" title="7"> [<span class="dv">31</span>] <span class="fl">1560.10</span> <span class="fl">1611.22</span> <span class="fl">1551.54</span> <span class="fl">1393.10</span> <span class="fl">1616.98</span> <span class="fl">1554.44</span></a>
+<a class="sourceLine" id="cb9-8" title="8"> [<span class="dv">37</span>] <span class="fl">1494.38</span> <span class="fl">1368.18</span> <span class="fl">1508.28</span> <span class="fl">1492.74</span> <span class="fl">1453.42</span> <span class="fl">1406.52</span></a>
+<a class="sourceLine" id="cb9-9" title="9"> [<span class="dv">43</span>] <span class="fl">1525.18</span> <span class="fl">1561.12</span> <span class="fl">1408.74</span> <span class="fl">1468.86</span> <span class="fl">1403.62</span> <span class="fl">1471.80</span></a>
+<a class="sourceLine" id="cb9-10" title="10"> [<span class="dv">49</span>] <span class="fl">1524.42</span> <span class="fl">1565.74</span> <span class="fl">1524.10</span> <span class="fl">1514.20</span> <span class="fl">1556.24</span> <span class="fl">1509.26</span></a>
+<a class="sourceLine" id="cb9-11" title="11"> [<span class="dv">55</span>] <span class="fl">1509.12</span> <span class="fl">1501.52</span> <span class="fl">1595.48</span> <span class="fl">1437.08</span> <span class="fl">1483.24</span> <span class="fl">1581.10</span></a>
+<a class="sourceLine" id="cb9-12" title="12"> [<span class="dv">61</span>] <span class="fl">1613.56</span> <span class="fl">1527.60</span> <span class="fl">1466.04</span> <span class="fl">1548.70</span> <span class="fl">1548.04</span> <span class="fl">1539.76</span></a>
+<a class="sourceLine" id="cb9-13" title="13"> [<span class="dv">67</span>] <span class="fl">1524.82</span> <span class="fl">1532.24</span> <span class="fl">1487.40</span> <span class="fl">1498.16</span> <span class="fl">1343.76</span> <span class="fl">1566.02</span></a>
+<a class="sourceLine" id="cb9-14" title="14"> [<span class="dv">73</span>] <span class="fl">1622.50</span> <span class="fl">1438.38</span> <span class="fl">1475.00</span> <span class="fl">1514.18</span> <span class="fl">1521.56</span> <span class="fl">1581.84</span></a>
+<a class="sourceLine" id="cb9-15" title="15"> [<span class="dv">79</span>] <span class="fl">1492.78</span> <span class="fl">1443.68</span> <span class="fl">1467.14</span> <span class="fl">1482.70</span> <span class="fl">1572.48</span> <span class="fl">1450.32</span></a>
+<a class="sourceLine" id="cb9-16" title="16"> [<span class="dv">85</span>] <span class="fl">1564.26</span> <span class="fl">1462.30</span> <span class="fl">1595.52</span> <span class="fl">1645.76</span> <span class="fl">1526.34</span> <span class="fl">1513.40</span></a>
+<a class="sourceLine" id="cb9-17" title="17"> [<span class="dv">91</span>] <span class="fl">1575.64</span> <span class="fl">1511.74</span> <span class="fl">1451.78</span> <span class="fl">1528.62</span> <span class="fl">1525.22</span> <span class="fl">1454.78</span></a>
+<a class="sourceLine" id="cb9-18" title="18"> [<span class="dv">97</span>] <span class="fl">1423.96</span> <span class="fl">1572.24</span> <span class="fl">1451.92</span> <span class="fl">1566.10</span></a></code></pre></div></li>
+<li><p>When the sample size is larger, the variability decreases.</p>
+<p><img src="5a-e6.png" /></p></li>
+</ol>
+<h2 id="on-your-own-4">On Your Own</h2>
+<ol type="1">
+<li><p>Running <code>mean(sample(price, 50))</code> yields 169726.3.</p></li>
+<li><p>Here is the distribution. It is normal, with mean 181027. The true mean is 180796.1.</p>
+<p><img src="5a-o2.png" /></p></li>
+<li><p>Here is the distribution for <code>sample_means150</code>. It is also normal, with mean 180649. This is closer to the true mean.</p>
+<p><img src="5a-o3.png" /></p></li>
+<li><p><code>sample_means150</code> has a narrower distribution. If we want to be more confident about our estimate, we should use a distribution with a narrower distribution (ie, we should take larger sample sizes).</p>
+<p><img src="5a-o4.png" /></p>
+<p>To generate this plot, I ran the following.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1"><span class="op">&gt;</span><span class="st"> </span>sample_mean =<span class="st"> </span><span class="kw">c</span>(sample_means50, sample_means150)</a>
+<a class="sourceLine" id="cb10-2" title="2"><span class="op">&gt;</span><span class="st"> </span>sample_size =<span class="st"> </span><span class="kw">c</span>(<span class="kw">rep</span>(<span class="st">&quot;fifty&quot;</span>,<span class="dv">5000</span>), <span class="kw">rep</span>(<span class="st">&quot;one-fifty&quot;</span>,<span class="dv">5000</span>))</a>
+<a class="sourceLine" id="cb10-3" title="3"><span class="op">&gt;</span><span class="st"> </span>frame =<span class="st"> </span><span class="kw">data.frame</span>(sample_mean, sample_size)</a>
+<a class="sourceLine" id="cb10-4" title="4"><span class="op">&gt;</span><span class="st"> </span><span class="kw">ggplot</span>(frame, <span class="kw">aes</span>(<span class="dt">x=</span>sample_mean, <span class="dt">color=</span>sample_size)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>(<span class="dt">fill=</span><span class="st">&quot;white&quot;</span>, <span class="dt">alpha=</span><span class="fl">0.1</span>, <span class="dt">position=</span><span class="st">&quot;identity&quot;</span>)</a></code></pre></div></li>
+</ol>
+<h1 id="lab-5b">Lab 5B</h1>
+<h2 id="exercises-5">Exercises</h2>
+<ol type="1">
+<li><p>The distribution is right skewed. If ``typical’’ size means mean, then the mean is 1445.53, though perhaps the median is a better estimate since the data is skewed. The median is 1407.</p>
+<p><img src="5b-e1.png" /></p></li>
+<li><p>It should be similar, but not identical. Different people will have different samples of 60.</p></li>
+<li><p>The observations need to be independent and the sample size needs to be at least 30 (cf. section 7.1).</p></li>
+<li><p>“95% confidence interval” means that, 95% of the time, this interval will contain the true mean.</p></li>
+<li><p>Yes, my confidence interval does contain the true mean.</p></li>
+<li><p>One would expect that 95% of confidence intervals constructed in this way will contain the true mean.</p></li>
+</ol>
+<h2 id="on-your-own-5">On Your Own</h2>
+<ol type="1">
+<li><p>47/50 contain the true mean, which is about 94%.</p>
+<p><img src="5b-o1.png" /></p></li>
+<li><p>The critical value for 50% confidence interval is calculated by <code>abs(qnorm(0.25))</code>, which yields 0.674. (Note: <code>qnorm(0.25)</code> tells me the value below which 25% of the data lies under a standard normal distribution.)</p></li>
+<li><p>Constructing 50% confidence intervals (which are much narrower than 95% confidence intervals), 22 of them do not contain the true mean. Thus 27/50 = 54% of them do, which is pretty close.</p>
+<p><img src="5b-o3.png" /></p></li>
+</ol>
 
 </main>
 
