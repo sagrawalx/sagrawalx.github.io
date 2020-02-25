@@ -168,7 +168,8 @@ Extra credit: [Lab 4](https://htmlpreview.github.io/?https://github.com/andrewpb
 Do: 5.1, 3, 7, 9
 </td>
 <td>
-5.2, 5, 8, 10, 11, 13
+5.2, 5, 8, 10, 11, 13  
+[In class problems](point-confidence.pdf)
 </td>
 </tr>
 
