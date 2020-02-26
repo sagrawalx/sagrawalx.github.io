@@ -187,7 +187,9 @@ Sunny's office hours (2–3pm).
 Do: 5.15, 17, 19
 </td>
 <td>
-5.16, 21, 23, 24, 26, 27, 28, 32, 37   
+5.16, 21, 23, 24, 26, 27, 28, 32, 37  
+[Worksheet](wksht-normal.pdf)  
+[In class problems](hypothesis.pdf)  
 [Relevant xkcd](https://xkcd.com/882/), and [another](https://xkcd.com/1478/)
 </td>
 </tr>
