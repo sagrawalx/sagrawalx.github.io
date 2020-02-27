@@ -207,7 +207,8 @@ Problem session with Sophie (2–3pm).
 Do: 6.1, 3, 17, 19
 </td>
 <td>
-6.2, 4, 5, 9, 10, 11, 12, 14, 15, 16, 21, 23, 25, 29
+6.2, 4, 5, 9, 10, 11, 12, 14, 15, 16, 21, 23, 25, 29  
+[In class problems](hypothesis-proportion.pdf)
 </td>
 </tr>
 
