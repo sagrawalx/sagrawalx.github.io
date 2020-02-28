@@ -224,6 +224,7 @@ Sunny's office hours (1–2pm).
 <td>Review</td>
 <td>None</td>
 <td>
+[In class problems](review.pdf)
 </td>
 </tr>
 
