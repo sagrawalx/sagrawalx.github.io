@@ -253,6 +253,7 @@ Do: 6.33, 35, 37
 <td colspan="3">
 Quiz 2 revisions (12:30–2pm).  
 Problem session with Sophie (2–3pm).  
+Sunny's office hours (3–4pm). 
 </td>
 </tr>
 
@@ -269,7 +270,6 @@ Do: 7.1, 3, 5, 7, 17, 19
 
 <tr>
 <td colspan="3">
-Sunny's office hours (2-3pm).  
 [Lab 6](https://htmlpreview.github.io/?https://github.com/andrewpbray/oiLabs-base-R/blob/master/inf_for_categorical_data/inf_for_categorical_data.html) due (11:59pm). 
 </td>
 </tr>
