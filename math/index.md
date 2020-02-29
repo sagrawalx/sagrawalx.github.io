@@ -21,6 +21,7 @@ My PhD thesis is available [here](https://escholarship.org/uc/item/1sp926n0). Th
 
 Here are some slides for presentations I've given.
 
+* [Perspective: The Mathematics of Depicting Depth](perspective.pdf). Slides for a talk I gave at Colorado College's *Fearless Fridays* seminar in February 2020. 
 * [A Smörgåsbord of Arithmetic Geometry](smorgasbord.pdf). Slides for a talk I gave at Colorado College's *Fearless Fridays* seminar in February 2018.
 
 Here are some miscellaneous mathematical writings.
