@@ -271,9 +271,11 @@ Do: 7.1, 3, 5, 7, 17, 19
 
 <tr>
 <td colspan="3">
-[Lab 6](https://htmlpreview.github.io/?https://github.com/andrewpbray/oiLabs-base-R/blob/master/inf_for_categorical_data/inf_for_categorical_data.html) due (11:59pm). 
+[Lab 6](https://htmlpreview.github.io/?https://github.com/andrewpbray/oiLabs-base-R/blob/master/inf_for_categorical_data/inf_for_categorical_data.html) due (11:59pm).[^paper]
 </td>
 </tr>
+
+[^paper]: The link to the study given in the lab doesn't work. Use this instead: [link](https://github.com/OpenIntroStat/oilabs/blob/master/data-raw/atheism/Global_INDEX_of_Religiosity_and_Atheism_PR__6.pdf). s
 
 
 <tr>
@@ -318,7 +320,7 @@ Quiz 3 (in class). Sections covered: up through 7.2.
 <tr>
 <td rowspan="2">Fri</td>
 <td>Inference for linear regression</td>
-<td>Read: 8.4  
+<td>Read: 8.4, and [this](https://www.nature.com/articles/d41586-019-00857-9)  
 Do: 8.31, 33, 34
 </td>
 <td>
