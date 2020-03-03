@@ -266,7 +266,8 @@ Sunny's office hours (3–4pm).
 Do: 7.1, 3, 5, 7, 17, 19
 </td>
 <td>
-7.2, 4, 6, 9, 11, 15, 21
+7.2, 4, 6, 9, 11, 15, 21  
+[Worksheet](wksht-t.pdf) (and [dataset](gifted.csv))
 </td>
 </tr>
 
