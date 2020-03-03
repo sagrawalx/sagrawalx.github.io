@@ -247,7 +247,7 @@ Do: 6.33, 35, 37
 </td>
 <td>
 6.31, 32, 34, 38, 41, 45, 49, 50  
-[In class worksheet](wksht-chisq.pdf)
+[Worksheet](wksht-chisq.pdf)
 </td>
 </tr>
 
