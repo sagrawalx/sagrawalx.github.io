@@ -332,7 +332,7 @@ Do: 8.31, 33, 34
 
 <tr>
 <td colspan="3">
-Quiz 3 revisions (12:30–2pm).  
+Quiz 3 revisions (1–2:30pm).  
 {{ reflection }} for week 3 due (Sunday 11:59pm).
 </td>
 </tr>
