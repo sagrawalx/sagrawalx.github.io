@@ -288,6 +288,7 @@ Do: 7.23, 35, 39
 </td>
 <td>
 7.25, 27, 29, 31, 37, 41, 45, 47, 49, 51  
+[Worksheet](wksht-comparing-means.pdf) (and [dataset 1](swahili.csv) and [dataset 2](diamonds.csv))
 </td>
 </tr>
 
