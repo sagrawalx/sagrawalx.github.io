@@ -370,6 +370,5 @@ Project work day! No class.
 # Fun Things
 
 * [FiveThirtyEight](https://fivethirtyeight.com/)
-* [Pew Research](https://www.pewresearch.org/)
-
+* [Pew Research](https://www.pewresearch.org/) 
 
