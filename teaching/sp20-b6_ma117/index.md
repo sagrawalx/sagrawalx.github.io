@@ -267,7 +267,7 @@ Do: 7.1, 3, 5, 7, 17, 19
 </td>
 <td>
 7.2, 4, 6, 9, 11, 15, 21  
-[Worksheet](wksht-t.pdf) (and [dataset](gifted.csv))
+[Worksheet](wksht-t.pdf) (and [gifted.csv](gifted.csv))
 </td>
 </tr>
 
@@ -288,7 +288,7 @@ Do: 7.23, 35, 39
 </td>
 <td>
 7.25, 27, 29, 31, 37, 41, 45, 47, 49, 51  
-[Worksheet](wksht-comparing-means.pdf) (and [dataset 1](swahili.csv) and [dataset 2](diamonds.csv))
+[Worksheet](wksht-comparing-means.pdf) (and [swahili.csv](swahili.csv) and [diamonds.csv](diamonds.csv))
 </td>
 </tr>
 
