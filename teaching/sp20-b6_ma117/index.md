@@ -308,6 +308,7 @@ Do: 8.1, 9, 17, 27
 </td>
 <td>
 8.3, 5, 7, 11, 13, 19, 21, 23, 28, 29  
+[In class problems](regression.pdf)  
 [Relevant xkcd](https://xkcd.com/2048/)
 </td>
 </tr>
