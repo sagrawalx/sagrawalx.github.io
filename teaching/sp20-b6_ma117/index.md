@@ -328,7 +328,8 @@ Quiz 3 (in class). Sections covered: up through 7.2.
 Do: 8.31, 33, 34
 </td>
 <td>
-8.37, 38, 39, 42
+8.37, 38, 39, 42  
+[Worksheet](wksht-review.pdf)
 </td>
 </tr>
 
