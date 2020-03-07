@@ -251,10 +251,84 @@ Spring 2020, Block 6 — MA117 —
 </ol>
 <h1 id="lab-7">Lab 7</h1>
 <h2 id="exercises-7">Exercises</h2>
+<ol type="1">
+<li><p>Each case (or observation) is a birth. There are 1000 cases.</p></li>
+<li><p>The side-by-side box plot is displayed below. It seems that babies born from mothers who smoke tend to weigh less, though there are more outlying weights on both ends for women who don’t smoke.</p>
+<p><img src="7-e2.png" /></p></li>
+<li><p>Each group has more than 30 observations (one has 126, the other has 873), so conditions for inference should be satisfied.</p></li>
+<li><p>Let <span class="math inline">\(\mu_1\)</span> be the average weight of babies born to mothers who don’t smoke, and <span class="math inline">\(\mu_2\)</span> the average weight of babies born to mothers who do smoke. Then <span class="math inline">\(H_0\)</span> is the statement that <span class="math inline">\(\mu_1 - \mu_2 = 0\)</span>, while <span class="math inline">\(H_A\)</span> is the statement that <span class="math inline">\(\mu_a - \mu_2 \neq 0\)</span>.</p></li>
+<li><p>The confidence interval is (0.05, 0.58). Since 0 is not contained in this interval, there does appear to be a statistically significant difference in birth weights for the two groups.</p></li>
+</ol>
 <h2 id="on-your-own-7">On Your Own</h2>
+<ol type="1">
+<li><p>The 95% confidence interval is (38.15, 38.52).</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1">ncs =<span class="st"> </span><span class="kw">subset</span>(nc, weeks <span class="op">!=</span><span class="st"> &quot;NA&quot;</span>)</a>
+<a class="sourceLine" id="cb11-2" title="2">me =<span class="st"> </span><span class="kw">qt</span>(<span class="fl">0.975</span>,<span class="dv">997</span>) <span class="op">*</span><span class="st"> </span><span class="kw">sd</span>(ncs<span class="op">$</span>weeks)<span class="op">/</span><span class="kw">sqrt</span>(<span class="dv">998</span>)</a>
+<a class="sourceLine" id="cb11-3" title="3">xbar =<span class="st"> </span><span class="kw">mean</span>(ncs<span class="op">$</span>weeks)</a>
+<a class="sourceLine" id="cb11-4" title="4"><span class="kw">c</span>(xbar<span class="op">-</span>me, xbar <span class="op">+</span><span class="st"> </span>me)</a></code></pre></div></li>
+<li><p>The 90% confidence interval is (38.18, 38.49).</p></li>
+<li><p>The t-value is 1.38 with 175.45 degrees of freedom, and p-value 0.169. This is not sufficient evidence to reject the null hypothesis that the average weight gained by the two groups is the same.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1">younger =<span class="st"> </span><span class="kw">subset</span>(ncs, mature<span class="op">==</span><span class="st">&quot;younger mom&quot;</span>)</a>
+<a class="sourceLine" id="cb12-2" title="2">mature =<span class="st"> </span><span class="kw">subset</span>(ncs, mature<span class="op">==</span><span class="st">&quot;mature mom&quot;</span>)</a>
+<a class="sourceLine" id="cb12-3" title="3"><span class="kw">t.test</span>(younger<span class="op">$</span>gained, mature<span class="op">$</span>gained)</a></code></pre></div></li>
+<li><p>It seems that mothers 34 and under are classified as “younger” while those 35 and older are “mature.”</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1"><span class="kw">max</span>(younger<span class="op">$</span>mage)</a>
+<a class="sourceLine" id="cb13-2" title="2"><span class="kw">min</span>(mature<span class="op">$</span>mage)</a></code></pre></div></li>
+<li><p>Let <span class="math inline">\(\mu_1\)</span> be the average weight of babies born to younger moms and <span class="math inline">\(\mu_2\)</span> the average weight born to mature moms. Let <span class="math inline">\(H_0\)</span> be the hypothesis that these means are the same, and <span class="math inline">\(H_A\)</span> that they are different. A boxplot of the distributions is displayed below. Running a t-test gives us a p-value of 0.85, so we fail to reject the hypothesis that these two means are different.</p>
+<p><img src="7-o5.png" /></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1"><span class="kw">ggplot</span>(nc, <span class="kw">aes</span>(mature, weight)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>()</a>
+<a class="sourceLine" id="cb14-2" title="2">younger =<span class="st"> </span><span class="kw">subset</span>(nc, mature<span class="op">==</span><span class="st">&quot;younger mom&quot;</span>)</a>
+<a class="sourceLine" id="cb14-3" title="3">mature =<span class="st"> </span><span class="kw">subset</span>(nc, mature<span class="op">==</span><span class="st">&quot;mature mom&quot;</span>)</a>
+<a class="sourceLine" id="cb14-4" title="4"><span class="kw">t.test</span>(younger<span class="op">$</span>weight, mature<span class="op">$</span>weight)</a></code></pre></div></li>
+</ol>
 <h1 id="lab-8">Lab 8</h1>
 <h2 id="exercises-8">Exercises</h2>
+<ol type="1">
+<li><p>We’d use a scatterplot. It’s not a great linear relationship, but does look generally positive.</p>
+<p><img src="8-e1.png" /></p></li>
+<li><p>See above.</p></li>
+<li><p>132185.4.</p></li>
+<li><p>The equation is <span class="math inline">\(y = 1.83x + 415.24\)</span>.</p>
+<p><img src="8-e4.png" /></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" title="1"><span class="kw">ggplot</span>(mlb11, <span class="kw">aes</span>(homeruns, runs)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">method=</span><span class="st">&quot;lm&quot;</span>)</a>
+<a class="sourceLine" id="cb15-2" title="2">m2 =<span class="st"> </span><span class="kw">lm</span>(runs <span class="op">~</span><span class="st"> </span>homeruns, <span class="dt">data =</span> mlb11)</a>
+<a class="sourceLine" id="cb15-3" title="3"><span class="kw">summary</span>(m2)</a></code></pre></div></li>
+<li><p>(Maybe this problem wanted 5579 <code>at_bats</code>…?) The model would predict 728.32. The actual runs were 713, so the model overestimates. The residual is -15.32.</p></li>
+<li><p>There’s not a clear pattern in the residuals.</p></li>
+<li><p>The residuals are normalish, but the fit is not great.</p></li>
+<li><p>The variability seems close to being constant. Perhaps it decreases slightly as <code>at_bats</code> increases.</p></li>
+</ol>
 <h2 id="on-your-own-8">On Your Own</h2>
+<ol type="1">
+<li><p>The relationship between <code>runs</code> and <code>bat_avg</code> seems sort of linear.</p>
+<p><embed src="8-o1.ong" /></p></li>
+<li><p>The <span class="math inline">\(R^2\)</span> is 0.65, compared to 0.37 for <code>runs</code> against <code>at_bats</code>, so the linear fit is better in this situation.</p></li>
+<li><p>It seems that <code>bat_avg</code> is the best predictor for <code>runs</code>.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">cor</span>(mlb11<span class="op">$</span>runs, mlb11<span class="op">$</span>at_bats)<span class="op">^</span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb16-2" title="2">[<span class="dv">1</span>] <span class="fl">0.3728654</span></a>
+<a class="sourceLine" id="cb16-3" title="3"><span class="op">&gt;</span><span class="st"> </span><span class="kw">cor</span>(mlb11<span class="op">$</span>runs, mlb11<span class="op">$</span>hits)<span class="op">^</span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb16-4" title="4">[<span class="dv">1</span>] <span class="fl">0.6419388</span></a>
+<a class="sourceLine" id="cb16-5" title="5"><span class="op">&gt;</span><span class="st"> </span><span class="kw">cor</span>(mlb11<span class="op">$</span>runs, mlb11<span class="op">$</span>homeruns)<span class="op">^</span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb16-6" title="6">[<span class="dv">1</span>] <span class="fl">0.6265636</span></a>
+<a class="sourceLine" id="cb16-7" title="7"><span class="op">&gt;</span><span class="st"> </span><span class="kw">cor</span>(mlb11<span class="op">$</span>runs, mlb11<span class="op">$</span>bat_avg)<span class="op">^</span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb16-8" title="8">[<span class="dv">1</span>] <span class="fl">0.6560771</span></a>
+<a class="sourceLine" id="cb16-9" title="9"><span class="op">&gt;</span><span class="st"> </span><span class="kw">cor</span>(mlb11<span class="op">$</span>runs, mlb11<span class="op">$</span>strikeouts)<span class="op">^</span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb16-10" title="10">[<span class="dv">1</span>] <span class="fl">0.1693579</span></a>
+<a class="sourceLine" id="cb16-11" title="11"><span class="op">&gt;</span><span class="st"> </span><span class="kw">cor</span>(mlb11<span class="op">$</span>runs, mlb11<span class="op">$</span>stolen_bases)<span class="op">^</span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb16-12" title="12">[<span class="dv">1</span>] <span class="fl">0.002913993</span></a>
+<a class="sourceLine" id="cb16-13" title="13"><span class="op">&gt;</span><span class="st"> </span><span class="kw">cor</span>(mlb11<span class="op">$</span>runs, mlb11<span class="op">$</span>wins)<span class="op">^</span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb16-14" title="14">[<span class="dv">1</span>] <span class="fl">0.3609712</span></a></code></pre></div></li>
+<li><p>All of them are better. The best seems to be <code>new_obs</code>.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" title="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">cor</span>(mlb11<span class="op">$</span>runs, mlb11<span class="op">$</span>new_onbase)<span class="op">^</span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb17-2" title="2">[<span class="dv">1</span>] <span class="fl">0.8491053</span></a>
+<a class="sourceLine" id="cb17-3" title="3"><span class="op">&gt;</span><span class="st"> </span><span class="kw">cor</span>(mlb11<span class="op">$</span>runs, mlb11<span class="op">$</span>new_slug)<span class="op">^</span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb17-4" title="4">[<span class="dv">1</span>] <span class="fl">0.8968704</span></a>
+<a class="sourceLine" id="cb17-5" title="5"><span class="op">&gt;</span><span class="st"> </span><span class="kw">cor</span>(mlb11<span class="op">$</span>runs, mlb11<span class="op">$</span>new_obs)<span class="op">^</span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb17-6" title="6">[<span class="dv">1</span>] <span class="fl">0.9349271</span></a></code></pre></div>
+<p><img src="8-o4.png" /></p></li>
+<li><p>There does appear to be no pattern in the residual plot, and the residuals are at least sort of normal.</p>
+<p><img src="8-o5.png" /> <img src="8-o5b.png" /></p></li>
+</ol>
 
 </main>
 
