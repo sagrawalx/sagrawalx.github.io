@@ -349,7 +349,6 @@ Quiz 3 revisions (1–2pm).
 <td>Mon</td>
 <td colspan="3">
 Final exam (in class). Sections covered: everything!  
-Problem session with Sophie (2–3pm).  
 Extra credit: [Lab 8](https://htmlpreview.github.io/?https://github.com/andrewpbray/oiLabs-base-R/blob/master/simple_regression/simple_regression.html) due (11:59pm). 
 </td>
 </tr>
