@@ -349,10 +349,130 @@ nonav: true
 
 ## Exercises
 
+1. Each case (or observation) is a birth. There are 1000 cases. 
+
+2. The side-by-side box plot is displayed below. It seems that babies born from mothers who smoke tend to weigh less, though there are more outlying weights on both ends for women who don't smoke. 
+
+	![](7-e2.png)
+
+3. Each group has more than 30 observations (one has 126, the other has 873), so conditions for inference should be satisfied. 
+
+4. Let $\mu_1$ be the average weight of babies born to mothers who don't smoke, and $\mu_2$ the average weight of babies born to mothers who do smoke. Then $H_0$ is the statement that $\mu_1 - \mu_2 = 0$, while $H_A$ is the statement that $\mu_a - \mu_2 \neq 0$. 
+
+5. The confidence interval is (0.05, 0.58). Since 0 is not contained in this interval, there does appear to be a statistically significant difference in birth weights for the two groups. 
+
 ## On Your Own
+
+1. The 95% confidence interval is (38.15, 38.52). 
+
+	~~~R	
+	ncs = subset(nc, weeks != "NA")
+	me = qt(0.975,997) * sd(ncs$weeks)/sqrt(998)
+	xbar = mean(ncs$weeks)
+	c(xbar-me, xbar + me)
+	~~~
+
+2. The 90% confidence interval is (38.18, 38.49).
+
+3. The t-value is 1.38 with 175.45 degrees of freedom, and p-value 0.169. This is not sufficient evidence to reject the null hypothesis that the average weight gained by the two groups is the same.
+
+	~~~R
+	younger = subset(ncs, mature=="younger mom")
+	mature = subset(ncs, mature=="mature mom")
+	t.test(younger$gained, mature$gained)
+	~~~ 
+
+4. It seems that mothers 34 and under are classified as "younger" while those 35 and older are "mature." 
+
+	~~~R
+	max(younger$mage)
+	min(mature$mage)
+	~~~
+
+5. Let $\mu_1$ be the average weight of babies born to younger moms and $\mu_2$ the average weight born to mature moms. Let $H_0$ be the hypothesis that these means are the same, and $H_A$ that they are different. A boxplot of the distributions is displayed below. Running a t-test gives us a p-value of 0.85, so we fail to reject the hypothesis that these two means are different. 
+
+	![](7-o5.png)
+
+	~~~R
+	ggplot(nc, aes(mature, weight)) + geom_boxplot()
+	younger = subset(nc, mature=="younger mom")
+	mature = subset(nc, mature=="mature mom")
+	t.test(younger$weight, mature$weight)
+	~~~
 
 # Lab 8
 
 ## Exercises
 
+
+1. We'd use a scatterplot. It's not a great linear relationship, but does look generally positive. 
+
+	![](8-e1.png)
+
+2. See above. 
+
+3. 132185.4.
+
+4. The equation is $y = 1.83x + 415.24$.
+
+	![](8-e4.png)
+
+	~~~R
+	ggplot(mlb11, aes(homeruns, runs)) + geom_point() + geom_smooth(method="lm")
+	m2 = lm(runs ~ homeruns, data = mlb11)
+	summary(m2)
+	~~~
+
+5. (Maybe this problem wanted 5579 `at_bats`...?) The model would predict 728.32. The actual runs were 713, so the model overestimates. The residual is -15.32. 
+
+6. There's not a clear pattern in the residuals. 
+
+7. The residuals are normalish, but the fit is not great. 
+
+8. The variability seems close to being constant. Perhaps it decreases slightly as `at_bats` increases. 
+
 ## On Your Own
+
+1. The relationship between `runs` and `bat_avg` seems sort of linear. 
+
+	![](8-o1.ong)
+
+2. The $R^2$ is 0.65, compared to 0.37 for `runs` against `at_bats`, so the linear fit is better in this situation. 
+
+3. It seems that `bat_avg` is the best predictor for `runs`. 
+
+	~~~R
+	> cor(mlb11$runs, mlb11$at_bats)^2
+	[1] 0.3728654
+	> cor(mlb11$runs, mlb11$hits)^2
+	[1] 0.6419388
+	> cor(mlb11$runs, mlb11$homeruns)^2
+	[1] 0.6265636
+	> cor(mlb11$runs, mlb11$bat_avg)^2
+	[1] 0.6560771
+	> cor(mlb11$runs, mlb11$strikeouts)^2
+	[1] 0.1693579
+	> cor(mlb11$runs, mlb11$stolen_bases)^2
+	[1] 0.002913993
+	> cor(mlb11$runs, mlb11$wins)^2
+	[1] 0.3609712
+	~~~
+
+4. All of them are better. The best seems to be `new_obs`. 
+
+	~~~R
+	> cor(mlb11$runs, mlb11$new_onbase)^2
+	[1] 0.8491053
+	> cor(mlb11$runs, mlb11$new_slug)^2
+	[1] 0.8968704
+	> cor(mlb11$runs, mlb11$new_obs)^2
+	[1] 0.9349271
+	~~~
+
+	![](8-o4.png) 
+	
+5. There does appear to be no pattern in the residual plot, and the residuals are at least sort of normal. 
+
+	![](8-o5.png)
+	![](8-o5b.png)
+
