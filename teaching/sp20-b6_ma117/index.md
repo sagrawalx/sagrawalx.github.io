@@ -6,7 +6,7 @@ bannerlink: teaching/sp20-b6_ma117
 nonav: true
 ---
 
-{% assign reflection = "[Self reflection form](https://docs.google.com/forms/d/e/1FAIpQLSd0Vv-GgiL2dRxteFhrZ6xmfF5tkqI-OcinIz72D-Phy5Q4YQ/viewform)" %}
+{% assign reflection = "Self reflection form (disabled)" %}
 
 # Overview
 
@@ -22,9 +22,9 @@ nonav: true
     * See below for problem sessions with Sophie (in classroom).
     * See below for Sunny's office hours (in Tutt Science 234, unless indicated otherwise).
     * Check the [tutoring schedule for the QRC](https://www.coloradocollege.edu/offices/qrc/blocktutorschedule/).
-* [Reading assignment submission form](https://docs.google.com/forms/d/e/1FAIpQLSe7VtOngFob9LF-myhPLo-ssDdMQPpuRL-03mXfaxy8myTYkg/viewform).
+* Reading assignment submission form (disabled).
 * {{ reflection }}.
-* [Random seating chart](https://docs.google.com/spreadsheets/d/1rkutTdcFYTITOBgNxOWAzSBeGX885FyW9iQfDUgg4S0/edit?usp=sharing).
+* Random seating chart (disabled).
 
 [^laptop]: If you don't have a personal laptop, you should still be able to use rstudio.cloud on any campus computer. The college typically also has some laptops available for you to borrow; if you'd like to borrow one and aren't sure how to go about it, please ask!
 
