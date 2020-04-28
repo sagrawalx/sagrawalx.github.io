@@ -1,150 +1,82 @@
 @import url("reset.css");
 @import url("https://fonts.googleapis.com/css?family=Baloo|Baloo+Bhaijaan|Baloo+Da|Noto+Sans|Noto+Sans+Devanagari|Noto+Sans+Arabic|Noto+Sans+Bengali|Noto+Sans+CJK+JP");
-body {
-  font-size: 16px;
-  font-family: "Noto Sans", "Noto Sans Devanagari", "Noto Sans Arabic", "Noto Sans Bengali", "Noto Sans CJK JP", sans-serif;
-  font-weight: normal;
-  line-height: 1.7;
-  color: #444;
-  min-width: 30em;
-  max-width: 45em;
-  text-align: left;
-  padding-left: 5em;
-  padding-right: 5em; }
-  body em {
-    font-style: italic; }
-  body strong {
-    font-weight: bold; }
-  body a, body a:visited {
-    color: #777;
-    text-decoration: none; }
-  body a:hover, body a:active, body a.current {
-    color: #339999; }
-  body blockquote, body .blockquote, body div.sourceCode {
-    display: block;
-    padding-left: 2em;
-    border-left-style: solid;
-    border-left-width: 5px;
-    border-left-color: #eee; }
-  body code, body div.sourceCode {
-    font-family: monospace;
-    overflow: auto;
-    max-height: 20em; }
-  body span.blockquote-attribution {
-    display: block;
-    text-align: right; }
-  body table th, body table td {
-    border: 1px solid #ddd;
-    padding: 0.5em; }
-  body table th {
-    background-color: #eee; }
-  body table td.subheading {
-    background-color: #eee;
-    font-style: italic; }
+@import url(code.css);
+body { font-size: 16px; font-family: "Noto Sans", "Noto Sans Devanagari", "Noto Sans Arabic", "Noto Sans Bengali", "Noto Sans CJK JP", sans-serif; font-weight: normal; line-height: 1.7; color: #444; min-width: 30em; max-width: 45em; text-align: left; padding-left: 5em; padding-right: 5em; }
 
-#banner {
-  padding-top: 1em; }
-  #banner a, #banner a:visited {
-    font-size: 2.25em;
-    color: #777;
-    font-weight: normal;
-    font-family: "Baloo", "Baloo Bhaijaan", cursive; }
-  #banner a:hover, #banner a:active {
-    color: #339999; }
+body em { font-style: italic; }
 
-.sidepic {
-  width: 17em;
-  float: right;
-  margin-left: 1em; }
+body strong { font-weight: bold; }
 
-#sitenav {
-  width: 100%;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden; }
-  #sitenav ul {
-    list-style: none; }
-    #sitenav ul li {
-      display: inline;
-      margin-right: 1em; }
+body a, body a:visited { color: #777; text-decoration: none; }
 
-main {
-  padding-bottom: 5em; }
-  main h1 {
-    font-weight: bold;
-    font-size: 1.25em;
-    margin-top: 1.25em;
-    margin-bottom: 1em; }
-    main h1 span.date {
-      font-weight: normal; }
-  main h2, main article h1 {
-    font-weight: bold;
-    font-style: normal;
-    font-size: 1em;
-    margin-top: 1em;
-    margin-bottom: 1em; }
-  main h3, main article h2 {
-    font-weight: normal;
-    font-style: italic;
-    margin-top: 1em;
-    margin-bottom: 1em; }
-  main p {
-    margin-bottom: 0.5em;
-    margin-top: 0.5em; }
-  main li {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em; }
-  main ul {
-    list-style: square;
-    padding-left: 2.5em; }
-    main ul ul {
-      list-style: circle; }
-  main ol {
-    list-style: decimal;
-    padding-left: 2.5em; }
-  main .introduction, main .references {
-    font-size: small;
-    background-color: #eee;
-    padding: 1em 2em;
-    margin-bottom: 1em;
-    border-radius: 0.2em; }
-  main .references {
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-    margin-top: 1em; }
-  main .footnoteRef, main sup {
-    vertical-align: super;
-    font-size: xx-small; }
-  main .footnotes {
-    font-size: small; }
-    main .footnotes ol {
-      padding-left: 4.5em;
-      padding-right: 2em; }
-  main hr {
-    margin-top: 1em;
-    border: 0;
-    height: 1px;
-    background: #ddd; }
+body a:hover, body a:active, body a.current { color: #339999; }
 
-.email:after {
-  content: attr(data-domain); }
+body blockquote, body .blockquote, body div.highlight { display: block; padding-left: 2em; border-left-style: solid; border-left-width: 5px; border-left-color: #eee; }
 
-.email:before {
-  content: attr(data-localpart) "@"; }
+body code, body div.highlight { font-family: monospace; overflow: auto; max-height: 40em; }
 
-ul.tags {
-  padding-left: 0; }
-  ul.tags li {
-    display: inline;
-    margin-right: 0.4em;
-    background-color: #eee;
-    padding: 0.1em 0.4em 0.1em 0.4em;
-    border-radius: 0.2em; }
-  ul.tags li:before {
-    content: "#";
-    color: #777;
-    padding: 0;
-    margin: 0; }
+body span.blockquote-attribution { display: block; text-align: right; }
+
+body table th, body table td { border: 1px solid #ddd; padding: 0.5em; }
+
+body table th { background-color: #eee; }
+
+body table td.subheading { background-color: #eee; font-style: italic; }
+
+#banner { padding-top: 1em; }
+
+#banner a, #banner a:visited { font-size: 2.25em; color: #777; font-weight: normal; font-family: "Baloo", "Baloo Bhaijaan", cursive; }
+
+#banner a:hover, #banner a:active { color: #339999; }
+
+.sidepic { width: 17em; float: right; margin-left: 1em; }
+
+#sitenav { width: 100%; padding-top: 1em; padding-bottom: 1em; display: flex; justify-content: space-between; align-items: center; overflow: hidden; }
+
+#sitenav ul { list-style: none; }
+
+#sitenav ul li { display: inline; margin-right: 1em; }
+
+main { padding-bottom: 5em; }
+
+main h1 { font-weight: bold; font-size: 1.25em; margin-top: 1.25em; margin-bottom: 1em; }
+
+main h1 span.date { font-weight: normal; }
+
+main h2, main article h1 { font-weight: bold; font-style: normal; font-size: 1em; margin-top: 1em; margin-bottom: 1em; }
+
+main h3, main article h2 { font-weight: normal; font-style: italic; margin-top: 1em; margin-bottom: 1em; }
+
+main p { margin-bottom: 0.5em; margin-top: 0.5em; }
+
+main li { margin-top: 0.5em; margin-bottom: 0.5em; }
+
+main ul { list-style: square; padding-left: 2.5em; }
+
+main ul ul { list-style: circle; }
+
+main ol { list-style: decimal; padding-left: 2.5em; }
+
+main .introduction, main .references { font-size: small; background-color: #eee; padding: 1em 2em; margin-bottom: 1em; border-radius: 0.2em; }
+
+main .references { padding-top: 1.5em; padding-bottom: 1.5em; margin-top: 1em; }
+
+main .footnoteRef, main sup { vertical-align: super; font-size: xx-small; }
+
+main .footnotes { font-size: small; }
+
+main .footnotes ol { padding-left: 4.5em; padding-right: 2em; }
+
+main hr { margin-top: 1em; border: 0; height: 1px; background: #ddd; }
+
+.email:after { content: attr(data-domain); }
+
+.email:before { content: attr(data-localpart) "@"; }
+
+ul.tags { padding-left: 0; }
+
+ul.tags li { display: inline; margin-right: 0.4em; background-color: #eee; padding: 0.1em 0.4em 0.1em 0.4em; border-radius: 0.2em; }
+
+ul.tags li:before { content: "#"; color: #777; padding: 0; margin: 0; }
+
+/*# sourceMappingURL=style.css.map */

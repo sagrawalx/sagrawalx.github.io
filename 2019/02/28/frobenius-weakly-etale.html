@@ -6,17 +6,9 @@
 <meta charset="UTF-8">
 
 <link rel="stylesheet" href="/css/style.css" type="text/css" />
-
-<!-- KaTeX -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css" integrity="sha384-B41nY7vEWuDrE9Mr+J2nBL0Liu+nl/rBXTdpQal730oTHdlrlXHzYMOhDU60cwde" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.js" integrity="sha384-L9gv4ooDLrYwW0QCM6zY3EKSSPrsuUncpx26+erN0pJX4wv1B1FzVW1SvpcJPx/8" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/contrib/auto-render.min.js" integrity="sha384-RkgGHBDdR8eyBOoWeZ/vpGg1cOvSAJRflCUDACusAAIVwkwPrOUYykglPeqWakZu" crossorigin="anonymous"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-      renderMathInElement(document.body);
-    });
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
-<!-- End KaTeX -->
 
 <title>
 Shishir Agrawal — Relative Frobenius of a weakly étale morphism
@@ -26,9 +18,11 @@ Shishir Agrawal — Relative Frobenius of a weakly étale morphism
 
 <body>
 
+
 <header id="banner">
     <a href="/">Shishir Agrawal</a>
 </header>
+
 
 
 <nav id="sitenav">
@@ -48,12 +42,30 @@ Shishir Agrawal — Relative Frobenius of a weakly étale morphism
 
 <article>
 <p>Here is a scheme theoretic generalization of the trivial observation that a field extension that is simultaneously separable and purely inseparable must be an isomorphism.</p>
-<p><strong>Lemma.</strong> Suppose <span class="math inline">\(f : X \to Y\)</span> is weakly étale universal homeomorphism of schemes. Then <span class="math inline">\(f\)</span> is an isomorphism.</p>
-<p><em>Proof.</em> Since <span class="math inline">\(f\)</span> is a universal homeomorphism, it is affine [Stacks, <a href="https://stacks.math.columbia.edu/tag/04DE">04DE</a>] . In particular, the diagonal <span class="math inline">\(\Delta : X \to X \times_Y X\)</span> is a closed immersion. Moreover, since <span class="math inline">\(f\)</span> is universally injective, <span class="math inline">\(\Delta\)</span> is also surjective [Stacks, <a href="https://stacks.math.columbia.edu/tag/01S4">01S4</a>] . But since <span class="math inline">\(f\)</span> is weakly étale, <span class="math inline">\(\Delta\)</span> is also flat, so <span class="math inline">\(\Delta\)</span> must be an isomorphism [Stacks, <a href="https://stacks.math.columbia.edu/tag/04PW">04PW</a>] , which means that <span class="math inline">\(f\)</span> is a monomorphism [Stacks, <a href="https://stacks.math.columbia.edu/tag/01L3">01L3</a>] . Since <span class="math inline">\(f\)</span> is also flat and surjective, it must be an isomorphism [Stacks, <a href="https://stacks.math.columbia.edu/tag/0B8C">0B8C</a>] .</p>
-<p>The following consequence of the above lemma is a weakly étale generalization of an analogous result for étale morphisms [Stacks, <a href="https://stacks.math.columbia.edu/tag/0EBS">0EBS</a>] .</p>
-<p><strong>Corollary.</strong> Let <span class="math inline">\(U \to X\)</span> be a weakly étale morphism of schemes where <span class="math inline">\(X\)</span> is a scheme in characteristic <span class="math inline">\(p\)</span>. Then the relative Frobenius <span class="math inline">\(F_{U/X} : U \to U \times_{X,F_X} X\)</span> is an isomorphism.</p>
-<p><em>Proof.</em> The morphism <span class="math inline">\(F_{U/X}\)</span> is a universal homeomorphism [Stacks, <a href="https://stacks.math.columbia.edu/tag/0CCB">0CCB</a>] . Since both <span class="math inline">\(U\)</span> and <span class="math inline">\(U \times_{X,F_X} X\)</span> are weakly étale over <span class="math inline">\(X\)</span>, we see that <span class="math inline">\(F_{U/X}\)</span> must be weakly étale as well [Stacks, <a href="https://stacks.math.columbia.edu/tag/0951">0951</a>] . Thus <span class="math inline">\(f\)</span> is an isomorphism by the lemma above.</p>
-<p><strong>Edit</strong> (2019-04-04). These lemmas have now been incorporated into the Stacks Project at [Stacks, <a href="https://stacks.math.columbia.edu/tag/0F6V">0F6V</a>] and [Stacks, <a href="https://stacks.math.columbia.edu/tag/0F6W">0F6W</a>] , respectively.</p>
+
+<p><strong>Lemma.</strong> Suppose \(f : X \to Y\) is weakly étale universal homeomorphism of schemes. Then \(f\) is an isomorphism.</p>
+
+<p><em>Proof.</em> Since \(f\) is a universal homeomorphism, it is affine [Stacks, <a href="https://stacks.math.columbia.edu/tag/04DE">04DE</a>]
+. In particular, the diagonal \(\Delta : X \to X \times_Y X\) is a closed immersion. Moreover, since \(f\) is universally injective, \(\Delta\) is also surjective [Stacks, <a href="https://stacks.math.columbia.edu/tag/01S4">01S4</a>]
+. But since \(f\) is weakly étale, \(\Delta\) is also flat, so \(\Delta\) must be an isomorphism [Stacks, <a href="https://stacks.math.columbia.edu/tag/04PW">04PW</a>]
+, which means that \(f\) is a monomorphism [Stacks, <a href="https://stacks.math.columbia.edu/tag/01L3">01L3</a>]
+. Since \(f\) is also flat and surjective, it must be an isomorphism [Stacks, <a href="https://stacks.math.columbia.edu/tag/0B8C">0B8C</a>]
+.</p>
+
+<p>The following consequence of the above lemma is a weakly étale generalization of an analogous result for étale morphisms [Stacks, <a href="https://stacks.math.columbia.edu/tag/0EBS">0EBS</a>]
+.</p>
+
+<p><strong>Corollary.</strong> Let \(U \to X\) be a weakly étale morphism of schemes where \(X\) is a scheme in characteristic \(p\). Then the relative Frobenius \(F_{U/X} : U \to U \times_{X,F_X} X\) is an isomorphism.</p>
+
+<p><em>Proof.</em> The morphism \(F_{U/X}\) is a universal homeomorphism
+[Stacks, <a href="https://stacks.math.columbia.edu/tag/0CCB">0CCB</a>]
+. Since both \(U\) and \(U \times_{X,F_X} X\) are weakly étale over \(X\), we see that \(F_{U/X}\) must be weakly étale as well
+[Stacks, <a href="https://stacks.math.columbia.edu/tag/0951">0951</a>]
+. Thus \(f\) is an isomorphism by the lemma above.</p>
+
+<p><strong>Edit</strong> (2019-04-04). These lemmas have now been incorporated into the Stacks Project at [Stacks, <a href="https://stacks.math.columbia.edu/tag/0F6V">0F6V</a>]
+ and [Stacks, <a href="https://stacks.math.columbia.edu/tag/0F6W">0F6W</a>]
+, respectively.</p>
 
 </article>
 
