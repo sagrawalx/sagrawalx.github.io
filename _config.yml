@@ -1,10 +1,7 @@
-plugins: ["jekyll-scholar", "jekyll-pandoc"]
+plugins: ["jekyll-scholar"]
 
-markdown: Pandoc
-
-pandoc:
-    extensions:
-        - mathjax
+markdown: kramdown
+highlighter: rouge
 
 scholar:
     style: css/custom.csl
@@ -14,8 +11,7 @@ exclude: ["README.md", "jekgit.sh"]
 include: [".nojekyll"]
 
 defaults:
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
+  - scope:
+      path: ""
     values:
       layout: "default"

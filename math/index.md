@@ -5,9 +5,9 @@ permalink: math/
 
 # Overview
 
-I study algebraic geometry: more specifically, I am interested in *p*-adic cohomology theories and *p*-adic analytic geometry.
+I study algebraic geometry: more specifically, I am interested in $$p$$-adic cohomology theories and $$p$$-adic analytic geometry.
 
-Here are some mathematical phrases that I find exciting/intriguing: *p*-adic, nonarchimedean, adic space, perfectoid, pro-étale, overconvergent, (bounded) Robba ring, (arithmetic) D-module, rigid cohomology, de Rham(-Witt), crystalline, cotangent complex, (higher) category, derived, homological, topos, derivator, non-noetherian, ...
+Here are some mathematical phrases that I find exciting/intriguing: $$p$$-adic, nonarchimedean, adic space, perfectoid, pro-étale, overconvergent, (bounded) Robba ring, (arithmetic) D-module, rigid cohomology, de Rham(-Witt), crystalline, cotangent complex, (higher) category, derived, homological, topos, derivator, non-noetherian, ...
 
 I completed my PhD at UC Berkeley in 2018. My advisor was [David Nadler](https://math.berkeley.edu/~nadler/).
 

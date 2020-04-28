@@ -1,0 +1,595 @@
+I"��<h1 id="lab-1">Lab 1</h1>
+
+<h2 id="exercises">Exercises</h2>
+
+<ol>
+  <li><code class="highlighter-rouge">arbuthnot$girls</code></li>
+  <li>
+    <p>It looks like there’s a generally upwards trend.</p>
+
+    <p><img src="1-e2.png" alt="" /></p>
+  </li>
+  <li>
+    <p>We generate the plot using the following command.</p>
+
+    <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="n">plot</span><span class="p">(</span><span class="n">arbuthnot</span><span class="o">$</span><span class="n">year</span><span class="p">,</span><span class="w"> </span><span class="n">arbuthnot</span><span class="o">$</span><span class="n">boys</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">arbuthnot</span><span class="o">$</span><span class="n">boys</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="n">arbuthnot</span><span class="o">$</span><span class="n">girls</span><span class="p">),</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"l"</span><span class="p">)</span><span class="w">	
+</span></code></pre></div>    </div>
+
+    <p>The result is the following. It looks like it fluctuates a lot, but always stays solidly above 0.5.</p>
+
+    <p><img src="1-e3.png" alt="" /></p>
+  </li>
+</ol>
+
+<h2 id="on-your-own">On Your Own</h2>
+
+<ol>
+  <li>The data is from years 1940-2002. There are 63 rows and 3 columns; the column names are “year,” “boys,” and “girls.”</li>
+  <li>The data is on a similar scale: Arbuthnot’s data ran for 82 years, while this data runs for 63.</li>
+  <li>
+    <p>There’s a generally decreasing trend in the ratio, but it stays above 1.</p>
+
+    <p><img src="1-o3.png" alt="" /></p>
+  </li>
+  <li>
+    <p>The largest number of total births happened in 1961.</p>
+
+    <p>To figure this out in R, we note that</p>
+
+    <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="n">which.max</span><span class="p">(</span><span class="n">present</span><span class="o">$</span><span class="n">boys</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">present</span><span class="o">$</span><span class="n">girls</span><span class="p">)</span><span class="w">
+</span></code></pre></div>    </div>
+    <p>returns the index of the largest entry of the vector <code class="highlighter-rouge">present$boys + present$girls</code>, which happens to be 22. Then, running</p>
+
+    <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="n">present</span><span class="p">[</span><span class="m">22</span><span class="p">,</span><span class="m">1</span><span class="p">]</span><span class="w">
+</span></code></pre></div>    </div>
+    <p>then returns the entry in row 22 and column 1 (ie, the year corresponding to index 22), which happens to be 1961.</p>
+
+    <p>We can also put all of this together; the command</p>
+
+    <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="n">present</span><span class="p">[</span><span class="n">which.max</span><span class="p">(</span><span class="n">present</span><span class="o">$</span><span class="n">boys</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">present</span><span class="o">$</span><span class="n">girls</span><span class="p">),</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w">
+</span></code></pre></div>    </div>
+    <p>returns the answer 1961 in just one line.</p>
+  </li>
+</ol>
+
+<h1 id="lab-2">Lab 2</h1>
+
+<h2 id="exercises-1">Exercises</h2>
+
+<ol>
+  <li>
+    <p>There are 20000 cases and 9 variables. <code class="highlighter-rouge">genhlth</code> is categorical (ordinal), <code class="highlighter-rouge">exerany</code>, <code class="highlighter-rouge">hlthplan</code>, <code class="highlighter-rouge">smoke100</code>, and <code class="highlighter-rouge">gender</code> are categorical (non-ordinal), <code class="highlighter-rouge">height</code>, <code class="highlighter-rouge">weight</code>, and <code class="highlighter-rouge">wtdesire</code> are numerical (continuous), and finally, <code class="highlighter-rouge">age</code> is numerical (discrete).</p>
+  </li>
+  <li>
+    <p>For <code class="highlighter-rouge">height</code> and <code class="highlighter-rouge">age</code>, we get the following numerical summaries, and the interquartile ranges are 6 and 26, respectively.</p>
+
+    <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">summary</span><span class="p">(</span><span class="n">cdc</span><span class="o">$</span><span class="n">height</span><span class="p">)</span><span class="w">
+    </span><span class="n">Min.</span><span class="w"> </span><span class="m">1</span><span class="n">st</span><span class="w"> </span><span class="n">Qu.</span><span class="w">  </span><span class="n">Median</span><span class="w">    </span><span class="n">Mean</span><span class="w"> </span><span class="m">3</span><span class="n">rd</span><span class="w"> </span><span class="n">Qu.</span><span class="w">    </span><span class="n">Max.</span><span class="w"> 
+   </span><span class="m">48.00</span><span class="w">   </span><span class="m">64.00</span><span class="w">   </span><span class="m">67.00</span><span class="w">   </span><span class="m">67.18</span><span class="w">   </span><span class="m">70.00</span><span class="w">   </span><span class="m">93.00</span><span class="w"> 
+ </span><span class="o">&gt;</span><span class="w"> </span><span class="n">summary</span><span class="p">(</span><span class="n">cdc</span><span class="o">$</span><span class="n">age</span><span class="p">)</span><span class="w">
+    </span><span class="n">Min.</span><span class="w"> </span><span class="m">1</span><span class="n">st</span><span class="w"> </span><span class="n">Qu.</span><span class="w">  </span><span class="n">Median</span><span class="w">    </span><span class="n">Mean</span><span class="w"> </span><span class="m">3</span><span class="n">rd</span><span class="w"> </span><span class="n">Qu.</span><span class="w">    </span><span class="n">Max.</span><span class="w"> 
+   </span><span class="m">18.00</span><span class="w">   </span><span class="m">31.00</span><span class="w">   </span><span class="m">43.00</span><span class="w">   </span><span class="m">45.07</span><span class="w">   </span><span class="m">57.00</span><span class="w">   </span><span class="m">99.00</span><span class="w">
+</span></code></pre></div>    </div>
+
+    <p>For <code class="highlighter-rouge">gender</code> and <code class="highlighter-rouge">exerany</code>, we have the following relative frequency distributions.</p>
+
+    <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">table</span><span class="p">(</span><span class="n">cdc</span><span class="o">$</span><span class="n">gender</span><span class="p">)</span><span class="o">/</span><span class="m">20000</span><span class="w">
+
+       </span><span class="n">m</span><span class="w">       </span><span class="n">f</span><span class="w"> 
+ </span><span class="m">0.47845</span><span class="w"> </span><span class="m">0.52155</span><span class="w">
+ </span><span class="o">&gt;</span><span class="w"> </span><span class="n">table</span><span class="p">(</span><span class="n">cdc</span><span class="o">$</span><span class="n">exerany</span><span class="p">)</span><span class="o">/</span><span class="m">20000</span><span class="w">
+
+      </span><span class="m">0</span><span class="w">      </span><span class="m">1</span><span class="w"> 
+ </span><span class="m">0.2543</span><span class="w"> </span><span class="m">0.7457</span><span class="w"> 
+</span></code></pre></div>    </div>
+
+    <p>There are 9569 males in the sample, and 23.285% of the sample population reports being in excellent health.</p>
+  </li>
+  <li>
+    <p>The mosaic plot (below) shows that relatively more men report having smoked 100 cigarettes than women.</p>
+
+    <p><img src="2-e3.png" alt="" /></p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">under23_and_smoke &lt;- subset(cdc, age &lt; 23 &amp; smoke100 == "1")</code></p>
+  </li>
+  <li>
+    <p>The box plot of <code class="highlighter-rouge">genhlth</code> against <code class="highlighter-rouge">bmi</code> shows that decreasing health appears to coincide with higher BMIs.</p>
+
+    <p><img src="2-e5a.png" alt="" /></p>
+
+    <p>Here is a box plot of <code class="highlighter-rouge">hlthplan</code> against <code class="highlighter-rouge">bmi</code>. It appears that having a health plan is correlated with fewer extreme BMIs.</p>
+
+    <p><img src="2-e5b.png" alt="" /></p>
+  </li>
+</ol>
+
+<h2 id="on-your-own-1">On Your Own</h2>
+
+<ol>
+  <li>
+    <p>The scatterplot shows a generally positive trend, but the slope appears to be less than 1.</p>
+
+    <p><img src="2-o1.png" alt="" /></p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">wdiff &lt;- cdc$weight - cdc$wtdesire</code> (but could do it the other way around too, which will affect answers below).</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">wdiff</code> is a vector of continuous numerical observations. An entry of 0 means that person is at their desired weight. An positive entry indicates the person wants to lose weight, and a negative entry indicates they want to gain weight.</p>
+  </li>
+  <li>
+    <p>Running <code class="highlighter-rouge">hist(wdiff,breaks=50)</code> and <code class="highlighter-rouge">boxplot(wdiff)</code> yield the following plots.</p>
+
+    <p><img src="2-o4a.png" alt="" /> <img src="2-o4b.png" alt="" /></p>
+
+    <p>It appears that most people are happy with their weights, but there is more of a skew towards the positive side (ie, more people want to lose weight than gain).</p>
+  </li>
+  <li>
+    <p>Here are numerical summaries.</p>
+
+    <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">cdc</span><span class="o">$</span><span class="n">wdiff</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">wdiff</span><span class="w">
+ </span><span class="o">&gt;</span><span class="w"> </span><span class="n">male</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">cdc</span><span class="p">,</span><span class="w"> </span><span class="n">gender</span><span class="o">==</span><span class="s2">"m"</span><span class="p">)</span><span class="w">
+ </span><span class="o">&gt;</span><span class="w"> </span><span class="n">female</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">cdc</span><span class="p">,</span><span class="w"> </span><span class="n">gender</span><span class="o">==</span><span class="s2">"f"</span><span class="p">)</span><span class="w">
+ </span><span class="o">&gt;</span><span class="w"> </span><span class="n">summary</span><span class="p">(</span><span class="n">male</span><span class="o">$</span><span class="n">wdiff</span><span class="p">)</span><span class="w">
+    </span><span class="n">Min.</span><span class="w"> </span><span class="m">1</span><span class="n">st</span><span class="w"> </span><span class="n">Qu.</span><span class="w">  </span><span class="n">Median</span><span class="w">    </span><span class="n">Mean</span><span class="w"> </span><span class="m">3</span><span class="n">rd</span><span class="w"> </span><span class="n">Qu.</span><span class="w">    </span><span class="n">Max.</span><span class="w"> 
+ </span><span class="m">-500.00</span><span class="w">    </span><span class="m">0.00</span><span class="w">    </span><span class="m">5.00</span><span class="w">   </span><span class="m">10.71</span><span class="w">   </span><span class="m">20.00</span><span class="w">  </span><span class="m">300.00</span><span class="w"> 
+ </span><span class="o">&gt;</span><span class="w"> </span><span class="n">summary</span><span class="p">(</span><span class="n">female</span><span class="o">$</span><span class="n">wdiff</span><span class="p">)</span><span class="w">
+    </span><span class="n">Min.</span><span class="w"> </span><span class="m">1</span><span class="n">st</span><span class="w"> </span><span class="n">Qu.</span><span class="w">  </span><span class="n">Median</span><span class="w">    </span><span class="n">Mean</span><span class="w"> </span><span class="m">3</span><span class="n">rd</span><span class="w"> </span><span class="n">Qu.</span><span class="w">    </span><span class="n">Max.</span><span class="w"> 
+  </span><span class="m">-83.00</span><span class="w">    </span><span class="m">0.00</span><span class="w">   </span><span class="m">10.00</span><span class="w">   </span><span class="m">18.15</span><span class="w">   </span><span class="m">27.00</span><span class="w">  </span><span class="m">300.00</span><span class="w"> 
+</span></code></pre></div>    </div>
+
+    <p>And here is a side-by-side box plot.</p>
+
+    <p><img src="2-e5.png" alt="" /></p>
+
+    <p>It appears that women generally want to lose more weight (comparing mean and/or medians).</p>
+  </li>
+  <li>
+    <p>It appears that 70.76% of the weights are within one standard deviation of the mean.</p>
+
+    <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">mean</span><span class="p">(</span><span class="n">cdc</span><span class="o">$</span><span class="n">weight</span><span class="p">)</span><span class="w">
+ </span><span class="o">&gt;</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sd</span><span class="p">(</span><span class="n">cdc</span><span class="o">$</span><span class="n">weight</span><span class="p">)</span><span class="w">
+ </span><span class="o">&gt;</span><span class="w"> </span><span class="n">within_one_sd</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">cdc</span><span class="p">,</span><span class="w"> </span><span class="n">weight</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">m</span><span class="o">-</span><span class="n">s</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">weight</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">m</span><span class="o">+</span><span class="n">s</span><span class="p">)</span><span class="w">
+ </span><span class="o">&gt;</span><span class="w"> </span><span class="nf">dim</span><span class="p">(</span><span class="n">within_one_sd</span><span class="p">)</span><span class="w">
+ </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">14152</span><span class="w">    </span><span class="m">10</span><span class="w">
+ </span><span class="o">&gt;</span><span class="w"> </span><span class="m">14152</span><span class="o">/</span><span class="m">20000</span><span class="w">
+ </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">0.7076</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+</ol>
+
+<h1 id="lab-3">Lab 3</h1>
+
+<h2 id="exercises-2">Exercises</h2>
+
+<ol>
+  <li>
+    <p>There is always exactly one miss in any streak. A streak of 1 has one hit and one miss. A streak of 0 has just one miss.</p>
+  </li>
+  <li>
+    <p>There are fewer and fewer longer streaks. The longest streak was 4, though the most frequent was 0.</p>
+
+    <p><img src="3-e2.png" alt="" /></p>
+  </li>
+  <li>
+    <p>21 heads, 79 tails</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">sim_basket = sample(outcomes, size = 133, replace = TRUE, prob = c(0.45, 0.55))</code></p>
+  </li>
+</ol>
+
+<h2 id="on-your-own-2">On Your Own</h2>
+
+<ol>
+  <li>
+    <p>There are fewer and fewer longer streaks. The longest streak was 7, but the most frequent was 0.</p>
+
+    <p><img src="3-o1.png" alt="" /></p>
+  </li>
+  <li>
+    <p>If we run the simulation again, the distribution should be similar, but not necessarily identical. Sometimes the longest streak is 4, sometimes it gets as long as 10, but it’s never terribly different.</p>
+  </li>
+  <li>
+    <p>This simulation does not give evidence that Kobe has “hot hands.” All of the simulations I ran were either similar to Kobe’s distribution, or had longer streaks.</p>
+  </li>
+</ol>
+
+<h1 id="lab-4">Lab 4</h1>
+
+<h2 id="exercises-3">Exercises</h2>
+
+<ol>
+  <li>
+    <p>Here are the distributions, overlaid one on top of the other using <code class="highlighter-rouge">ggplot(bdims, aes(x=hgt, color=sex)) + geom_histogram(fill="white", alpha=0.5, position="identity")</code>.</p>
+
+    <p><img src="4-e1.png" alt="" /></p>
+
+    <p>Women tend to be less tall. But both distributions are roughly normal.</p>
+  </li>
+  <li>
+    <p>It does appear roughly normal.</p>
+
+    <p><img src="4-e2.png" alt="" /></p>
+  </li>
+  <li>
+    <p>The Q-Q plot of the simulated data looks an awful lot like the Q-Q plot of the real data.</p>
+
+    <p><img src="4-e3.png" alt="" /></p>
+  </li>
+  <li>
+    <p>The plots do provide evidence that female heights are nearly normal.</p>
+  </li>
+  <li>
+    <p>Female weights seem less normally distributed.</p>
+
+    <p><img src="4-e5.png" alt="" /></p>
+  </li>
+  <li>
+    <p>What is the probability that female heights are less than 178? The normal distribution says 97.8%, the actual data says 98.1%.</p>
+
+    <p>What is the probability that female weights are less than 61? The normal distribution says 51.7%, the actual data says 59.2%.</p>
+
+    <p>The answer for the height distribution is much closer.</p>
+  </li>
+</ol>
+
+<h2 id="on-your-own-3">On Your Own</h2>
+
+<ol>
+  <li>B, C, D, A</li>
+  <li>It probably has to do with the discreteness of the data.</li>
+  <li>
+    <p>The Q-Q plot and the histogram are displayed below. In the Q-Q plot, the data lies above the line. This means that sample quantiles are above theoretical quantiles, which means that at any given point, we’ve seen <em>more</em> data than we would expect if the distribution was normally distributed. This means that the mass of the distribution is further to the left, so the distribution should be right skewed. This is confirmed by the histogram.</p>
+
+    <p><img src="4-o3.png" alt="" /></p>
+
+    <p><img src="4-o3b.png" alt="" /></p>
+  </li>
+</ol>
+
+<h1 id="lab-5a">Lab 5A</h1>
+
+<h2 id="exercises-4">Exercises</h2>
+
+<ol>
+  <li>
+    <p>The distribution is slightly right skewed. The mean, at 1500, is slightly higher than the median, at 1442.</p>
+
+    <p><img src="5a-e1.png" alt="" /></p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">samp1</code> has a less bell-curved-looking distribution, though it is still right skewed. The mean is 1486.42.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">samp2</code> had a mean of 1418.44, which was less than the mean of <code class="highlighter-rouge">samp1</code>. If we took a larger sample, the sample mean should be closer to the true mean.</p>
+  </li>
+  <li>
+    <p>There are 5000 elements. The distribution is roughly normal, centered at 1500. If we took 50000 means, the distribution should still look roughly normal centered at 1500.</p>
+  </li>
+  <li>
+    <p>There are 100 elements. Each is a mean of a sample of 50 areas.</p>
+
+    <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">sample_means_small</span><span class="w">
+   </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">1636.96</span><span class="w"> </span><span class="m">1512.40</span><span class="w"> </span><span class="m">1400.68</span><span class="w"> </span><span class="m">1539.86</span><span class="w"> </span><span class="m">1584.10</span><span class="w"> </span><span class="m">1513.30</span><span class="w">
+   </span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="w"> </span><span class="m">1488.74</span><span class="w"> </span><span class="m">1395.66</span><span class="w"> </span><span class="m">1524.02</span><span class="w"> </span><span class="m">1537.40</span><span class="w"> </span><span class="m">1520.12</span><span class="w"> </span><span class="m">1479.32</span><span class="w">
+  </span><span class="p">[</span><span class="m">13</span><span class="p">]</span><span class="w"> </span><span class="m">1385.42</span><span class="w"> </span><span class="m">1502.90</span><span class="w"> </span><span class="m">1532.00</span><span class="w"> </span><span class="m">1510.06</span><span class="w"> </span><span class="m">1542.00</span><span class="w"> </span><span class="m">1429.46</span><span class="w">
+  </span><span class="p">[</span><span class="m">19</span><span class="p">]</span><span class="w"> </span><span class="m">1361.28</span><span class="w"> </span><span class="m">1577.32</span><span class="w"> </span><span class="m">1496.66</span><span class="w"> </span><span class="m">1592.52</span><span class="w"> </span><span class="m">1464.08</span><span class="w"> </span><span class="m">1580.18</span><span class="w">
+  </span><span class="p">[</span><span class="m">25</span><span class="p">]</span><span class="w"> </span><span class="m">1689.26</span><span class="w"> </span><span class="m">1403.20</span><span class="w"> </span><span class="m">1473.34</span><span class="w"> </span><span class="m">1465.64</span><span class="w"> </span><span class="m">1389.28</span><span class="w"> </span><span class="m">1464.44</span><span class="w">
+  </span><span class="p">[</span><span class="m">31</span><span class="p">]</span><span class="w"> </span><span class="m">1560.10</span><span class="w"> </span><span class="m">1611.22</span><span class="w"> </span><span class="m">1551.54</span><span class="w"> </span><span class="m">1393.10</span><span class="w"> </span><span class="m">1616.98</span><span class="w"> </span><span class="m">1554.44</span><span class="w">
+  </span><span class="p">[</span><span class="m">37</span><span class="p">]</span><span class="w"> </span><span class="m">1494.38</span><span class="w"> </span><span class="m">1368.18</span><span class="w"> </span><span class="m">1508.28</span><span class="w"> </span><span class="m">1492.74</span><span class="w"> </span><span class="m">1453.42</span><span class="w"> </span><span class="m">1406.52</span><span class="w">
+  </span><span class="p">[</span><span class="m">43</span><span class="p">]</span><span class="w"> </span><span class="m">1525.18</span><span class="w"> </span><span class="m">1561.12</span><span class="w"> </span><span class="m">1408.74</span><span class="w"> </span><span class="m">1468.86</span><span class="w"> </span><span class="m">1403.62</span><span class="w"> </span><span class="m">1471.80</span><span class="w">
+  </span><span class="p">[</span><span class="m">49</span><span class="p">]</span><span class="w"> </span><span class="m">1524.42</span><span class="w"> </span><span class="m">1565.74</span><span class="w"> </span><span class="m">1524.10</span><span class="w"> </span><span class="m">1514.20</span><span class="w"> </span><span class="m">1556.24</span><span class="w"> </span><span class="m">1509.26</span><span class="w">
+  </span><span class="p">[</span><span class="m">55</span><span class="p">]</span><span class="w"> </span><span class="m">1509.12</span><span class="w"> </span><span class="m">1501.52</span><span class="w"> </span><span class="m">1595.48</span><span class="w"> </span><span class="m">1437.08</span><span class="w"> </span><span class="m">1483.24</span><span class="w"> </span><span class="m">1581.10</span><span class="w">
+  </span><span class="p">[</span><span class="m">61</span><span class="p">]</span><span class="w"> </span><span class="m">1613.56</span><span class="w"> </span><span class="m">1527.60</span><span class="w"> </span><span class="m">1466.04</span><span class="w"> </span><span class="m">1548.70</span><span class="w"> </span><span class="m">1548.04</span><span class="w"> </span><span class="m">1539.76</span><span class="w">
+  </span><span class="p">[</span><span class="m">67</span><span class="p">]</span><span class="w"> </span><span class="m">1524.82</span><span class="w"> </span><span class="m">1532.24</span><span class="w"> </span><span class="m">1487.40</span><span class="w"> </span><span class="m">1498.16</span><span class="w"> </span><span class="m">1343.76</span><span class="w"> </span><span class="m">1566.02</span><span class="w">
+  </span><span class="p">[</span><span class="m">73</span><span class="p">]</span><span class="w"> </span><span class="m">1622.50</span><span class="w"> </span><span class="m">1438.38</span><span class="w"> </span><span class="m">1475.00</span><span class="w"> </span><span class="m">1514.18</span><span class="w"> </span><span class="m">1521.56</span><span class="w"> </span><span class="m">1581.84</span><span class="w">
+  </span><span class="p">[</span><span class="m">79</span><span class="p">]</span><span class="w"> </span><span class="m">1492.78</span><span class="w"> </span><span class="m">1443.68</span><span class="w"> </span><span class="m">1467.14</span><span class="w"> </span><span class="m">1482.70</span><span class="w"> </span><span class="m">1572.48</span><span class="w"> </span><span class="m">1450.32</span><span class="w">
+  </span><span class="p">[</span><span class="m">85</span><span class="p">]</span><span class="w"> </span><span class="m">1564.26</span><span class="w"> </span><span class="m">1462.30</span><span class="w"> </span><span class="m">1595.52</span><span class="w"> </span><span class="m">1645.76</span><span class="w"> </span><span class="m">1526.34</span><span class="w"> </span><span class="m">1513.40</span><span class="w">
+  </span><span class="p">[</span><span class="m">91</span><span class="p">]</span><span class="w"> </span><span class="m">1575.64</span><span class="w"> </span><span class="m">1511.74</span><span class="w"> </span><span class="m">1451.78</span><span class="w"> </span><span class="m">1528.62</span><span class="w"> </span><span class="m">1525.22</span><span class="w"> </span><span class="m">1454.78</span><span class="w">
+  </span><span class="p">[</span><span class="m">97</span><span class="p">]</span><span class="w"> </span><span class="m">1423.96</span><span class="w"> </span><span class="m">1572.24</span><span class="w"> </span><span class="m">1451.92</span><span class="w"> </span><span class="m">1566.10</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>When the sample size is larger, the variability decreases.</p>
+
+    <p><img src="5a-e6.png" alt="" /></p>
+  </li>
+</ol>
+
+<h2 id="on-your-own-4">On Your Own</h2>
+
+<ol>
+  <li>
+    <p>Running <code class="highlighter-rouge">mean(sample(price, 50))</code> yields 169726.3.</p>
+  </li>
+  <li>
+    <p>Here is the distribution. It is normal, with mean 181027. The true mean is 180796.1.</p>
+
+    <p><img src="5a-o2.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Here is the distribution for <code class="highlighter-rouge">sample_means150</code>. It is also normal, with mean 180649. This is closer to the true mean.</p>
+
+    <p><img src="5a-o3.png" alt="" /></p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">sample_means150</code> has a narrower distribution. If we want to be more confident about our estimate, we should use a distribution with a narrower distribution (ie, we should take larger sample sizes).</p>
+
+    <p><img src="5a-o4.png" alt="" /></p>
+
+    <p>To generate this plot, I ran the following.</p>
+
+    <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">sample_mean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">sample_means50</span><span class="p">,</span><span class="w"> </span><span class="n">sample_means150</span><span class="p">)</span><span class="w">
+ </span><span class="o">&gt;</span><span class="w"> </span><span class="n">sample_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="nf">rep</span><span class="p">(</span><span class="s2">"fifty"</span><span class="p">,</span><span class="m">5000</span><span class="p">),</span><span class="w"> </span><span class="nf">rep</span><span class="p">(</span><span class="s2">"one-fifty"</span><span class="p">,</span><span class="m">5000</span><span class="p">))</span><span class="w">
+ </span><span class="o">&gt;</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">sample_mean</span><span class="p">,</span><span class="w"> </span><span class="n">sample_size</span><span class="p">)</span><span class="w">
+ </span><span class="o">&gt;</span><span class="w"> </span><span class="n">ggplot</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">sample_mean</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="o">=</span><span class="n">sample_size</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">geom_histogram</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="s2">"white"</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="o">=</span><span class="m">0.1</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="o">=</span><span class="s2">"identity"</span><span class="p">)</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+</ol>
+
+<h1 id="lab-5b">Lab 5B</h1>
+
+<h2 id="exercises-5">Exercises</h2>
+
+<ol>
+  <li>
+    <p>The distribution is right skewed. If ``typical’’ size means mean, then the mean is 1445.53, though perhaps the median is a better estimate since the data is skewed. The median is 1407.</p>
+
+    <p><img src="5b-e1.png" alt="" /></p>
+  </li>
+  <li>
+    <p>It should be similar, but not identical. Different people will have different samples of 60.</p>
+  </li>
+  <li>
+    <p>The observations need to be independent and the sample size needs to be at least 30 (cf. section 7.1).</p>
+  </li>
+  <li>
+    <p>“95% confidence interval” means that, 95% of the time, this interval will contain the true mean.</p>
+  </li>
+  <li>
+    <p>Yes, my confidence interval does contain the true mean.</p>
+  </li>
+  <li>
+    <p>One would expect that 95% of confidence intervals constructed in this way will contain the true mean.</p>
+  </li>
+</ol>
+
+<h2 id="on-your-own-5">On Your Own</h2>
+
+<ol>
+  <li>
+    <p>47/50 contain the true mean, which is about 94%.</p>
+
+    <p><img src="5b-o1.png" alt="" /></p>
+  </li>
+  <li>
+    <p>The critical value for 50% confidence interval is calculated by <code class="highlighter-rouge">abs(qnorm(0.25))</code>, which yields 0.674. (Note: <code class="highlighter-rouge">qnorm(0.25)</code> tells me the value below which 25% of the data lies under a standard normal distribution.)</p>
+  </li>
+  <li>
+    <p>Constructing 50% confidence intervals (which are much narrower than 95% confidence intervals), 22 of them do not contain the true mean. Thus 27/50 = 54% of them do, which is pretty close.</p>
+
+    <p><img src="5b-o3.png" alt="" /></p>
+  </li>
+</ol>
+
+<h1 id="lab-6">Lab 6</h1>
+
+<h2 id="exercises-6">Exercises</h2>
+
+<ol>
+  <li>
+    <p>Sample statistics (they certainly didn’t talk to everyone in the world!).</p>
+  </li>
+  <li>
+    <p>The study needs to have been a simple random sample. It’s fairly unlikely that this is the case. A large portion of the global population is not easy to communicate with (living remotely, lack of access to communications technology, etc).</p>
+  </li>
+  <li>
+    <p>Each row in Table 6 corresponds to a country. Each row in <code class="highlighter-rouge">atheist</code> corresponds to a person.</p>
+  </li>
+  <li>
+    <p>Running <code class="highlighter-rouge">table(us12$response)</code> shows that 50 out of 1002 US respondents reported being an atheist. 50/1002 = 0.0499002, which is basically 5% up to minor rounding.</p>
+  </li>
+  <li>
+    <p>We need the sample to be independent: as noted earlier, this is a bit unlikely. We also need the sample size to be large enough that the success-failure condition is satisfied. The success-failure condition requires checking that $1002 \cdot 0.05$ and $1002 \cdot 0.95$ are both bigger than 10, which is true.</p>
+  </li>
+  <li>
+    <p>R outputs a standard error of 0.007, so the margin of error is about 0.014. The 95% confidence interval is (0.0364 , 0.0634).</p>
+  </li>
+  <li>
+    <p>In India, 33 out of 1092 respondents reported being atheist, which is about 3%. The success-failure condition is satisfied (because both the atheist and non-atheist numbers are larger than 10), but it’s likely that the sample isn’t that great. The 95% confidence interval is (0.0201 , 0.0404), and the margin of error is about 0.0102.</p>
+
+    <p>In Japan, 372 out of 1212 respondents reported being atheist. Same comments about applicability of confidence interval methods. The 95% confidence interval is (0.281 , 0.3329), which has margin of error about 0.0259.</p>
+  </li>
+  <li>
+    <p>The graph is shaped like the top half of an ellipse.</p>
+  </li>
+  <li>
+    <p>The distribution is roughly normal, with mean at 0.09969.</p>
+  </li>
+  <li>
+    <p>The plots are displayed below. Increasing $n$ seems to make the plot narrower. Changing $p$ seems to move the center of the plot. All four are roughly normal, except for the very last one which is a little cut off towards the bottom, making it right skewed.</p>
+
+    <p><img src="6-e10.png" alt="" /></p>
+  </li>
+  <li>
+    <p>It is probably not a good idea to proceed with inference on Ecuador’s data, since the sampling distribution is likely not normal.</p>
+  </li>
+</ol>
+
+<h2 id="on-your-own-6">On Your Own</h2>
+
+<ol>
+  <li>
+    <p>For Spain, the success-failure condition is satisfied, though I have the same concerns about randomness of the sample that I’ve mentioned above. The 2005 confidence interval is (0.083 , 0.1177), and the 2012 confidence interval is (0.0734 , 0.1065). These overlap,so we do not have convincing evidence of chance.</p>
+
+    <p>In the US, the intervals are (0.0038 , 0.0161) and (0.0364, 0.0634), which do not overlap. This does provide some evidence of change.</p>
+  </li>
+  <li>
+    <p>We’d expect to detect a change in 5% of the countries in which there has been no change.</p>
+  </li>
+  <li>
+    <p>The point here is just to look at the inequality \(2 \sqrt{\frac{p(1-p)}{n}} \leq 0.01\) and solve it for $n$. Simplifying this gives $n \geq 40000p(1-p)$. The largest possible value of $p(1-p)$ happens when $p = 0.5$. When $p = 0.5$, we have $40000p(1-p) = 10000$. So we should sample at least 10000 people.</p>
+  </li>
+</ol>
+
+<h1 id="lab-7">Lab 7</h1>
+
+<h2 id="exercises-7">Exercises</h2>
+
+<ol>
+  <li>
+    <p>Each case (or observation) is a birth. There are 1000 cases.</p>
+  </li>
+  <li>
+    <p>The side-by-side box plot is displayed below. It seems that babies born from mothers who smoke tend to weigh less, though there are more outlying weights on both ends for women who don’t smoke.</p>
+
+    <p><img src="7-e2.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Each group has more than 30 observations (one has 126, the other has 873), so conditions for inference should be satisfied.</p>
+  </li>
+  <li>
+    <p>Let $\mu_1$ be the average weight of babies born to mothers who don’t smoke, and $\mu_2$ the average weight of babies born to mothers who do smoke. Then $H_0$ is the statement that $\mu_1 - \mu_2 = 0$, while $H_A$ is the statement that $\mu_a - \mu_2 \neq 0$.</p>
+  </li>
+  <li>
+    <p>The confidence interval is (0.05, 0.58). Since 0 is not contained in this interval, there does appear to be a statistically significant difference in birth weights for the two groups.</p>
+  </li>
+</ol>
+
+<h2 id="on-your-own-7">On Your Own</h2>
+
+<ol>
+  <li>
+    <p>The 95% confidence interval is (38.15, 38.52).</p>
+
+    <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="n">ncs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">nc</span><span class="p">,</span><span class="w"> </span><span class="n">weeks</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s2">"NA"</span><span class="p">)</span><span class="w">
+ </span><span class="n">me</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">qt</span><span class="p">(</span><span class="m">0.975</span><span class="p">,</span><span class="m">997</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sd</span><span class="p">(</span><span class="n">ncs</span><span class="o">$</span><span class="n">weeks</span><span class="p">)</span><span class="o">/</span><span class="nf">sqrt</span><span class="p">(</span><span class="m">998</span><span class="p">)</span><span class="w">
+ </span><span class="n">xbar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mean</span><span class="p">(</span><span class="n">ncs</span><span class="o">$</span><span class="n">weeks</span><span class="p">)</span><span class="w">
+ </span><span class="nf">c</span><span class="p">(</span><span class="n">xbar</span><span class="o">-</span><span class="n">me</span><span class="p">,</span><span class="w"> </span><span class="n">xbar</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">me</span><span class="p">)</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>The 90% confidence interval is (38.18, 38.49).</p>
+  </li>
+  <li>
+    <p>The t-value is 1.38 with 175.45 degrees of freedom, and p-value 0.169. This is not sufficient evidence to reject the null hypothesis that the average weight gained by the two groups is the same.</p>
+
+    <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="n">younger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">ncs</span><span class="p">,</span><span class="w"> </span><span class="n">mature</span><span class="o">==</span><span class="s2">"younger mom"</span><span class="p">)</span><span class="w">
+ </span><span class="n">mature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">ncs</span><span class="p">,</span><span class="w"> </span><span class="n">mature</span><span class="o">==</span><span class="s2">"mature mom"</span><span class="p">)</span><span class="w">
+ </span><span class="n">t.test</span><span class="p">(</span><span class="n">younger</span><span class="o">$</span><span class="n">gained</span><span class="p">,</span><span class="w"> </span><span class="n">mature</span><span class="o">$</span><span class="n">gained</span><span class="p">)</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>It seems that mothers 34 and under are classified as “younger” while those 35 and older are “mature.”</p>
+
+    <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="n">younger</span><span class="o">$</span><span class="n">mage</span><span class="p">)</span><span class="w">
+ </span><span class="nf">min</span><span class="p">(</span><span class="n">mature</span><span class="o">$</span><span class="n">mage</span><span class="p">)</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Let $\mu_1$ be the average weight of babies born to younger moms and $\mu_2$ the average weight born to mature moms. Let $H_0$ be the hypothesis that these means are the same, and $H_A$ that they are different. A boxplot of the distributions is displayed below. Running a t-test gives us a p-value of 0.85, so we fail to reject the hypothesis that these two means are different.</p>
+
+    <p><img src="7-o5.png" alt="" /></p>
+
+    <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="n">ggplot</span><span class="p">(</span><span class="n">nc</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">mature</span><span class="p">,</span><span class="w"> </span><span class="n">weight</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">geom_boxplot</span><span class="p">()</span><span class="w">
+ </span><span class="n">younger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">nc</span><span class="p">,</span><span class="w"> </span><span class="n">mature</span><span class="o">==</span><span class="s2">"younger mom"</span><span class="p">)</span><span class="w">
+ </span><span class="n">mature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">nc</span><span class="p">,</span><span class="w"> </span><span class="n">mature</span><span class="o">==</span><span class="s2">"mature mom"</span><span class="p">)</span><span class="w">
+ </span><span class="n">t.test</span><span class="p">(</span><span class="n">younger</span><span class="o">$</span><span class="n">weight</span><span class="p">,</span><span class="w"> </span><span class="n">mature</span><span class="o">$</span><span class="n">weight</span><span class="p">)</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+</ol>
+
+<h1 id="lab-8">Lab 8</h1>
+
+<h2 id="exercises-8">Exercises</h2>
+
+<ol>
+  <li>
+    <p>We’d use a scatterplot. It’s not a great linear relationship, but does look generally positive.</p>
+
+    <p><img src="8-e1.png" alt="" /></p>
+  </li>
+  <li>
+    <p>See above.</p>
+  </li>
+  <li>
+    <p>132185.4.</p>
+  </li>
+  <li>
+    <p>The equation is $y = 1.83x + 415.24$.</p>
+
+    <p><img src="8-e4.png" alt="" /></p>
+
+    <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="n">ggplot</span><span class="p">(</span><span class="n">mlb11</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">homeruns</span><span class="p">,</span><span class="w"> </span><span class="n">runs</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">"lm"</span><span class="p">)</span><span class="w">
+ </span><span class="n">m2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lm</span><span class="p">(</span><span class="n">runs</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">homeruns</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mlb11</span><span class="p">)</span><span class="w">
+ </span><span class="n">summary</span><span class="p">(</span><span class="n">m2</span><span class="p">)</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>(Maybe this problem wanted 5579 <code class="highlighter-rouge">at_bats</code>…?) The model would predict 728.32. The actual runs were 713, so the model overestimates. The residual is -15.32.</p>
+  </li>
+  <li>
+    <p>There’s not a clear pattern in the residuals.</p>
+  </li>
+  <li>
+    <p>The residuals are normalish, but the fit is not great.</p>
+  </li>
+  <li>
+    <p>The variability seems close to being constant. Perhaps it decreases slightly as <code class="highlighter-rouge">at_bats</code> increases.</p>
+  </li>
+</ol>
+
+<h2 id="on-your-own-8">On Your Own</h2>
+
+<ol>
+  <li>
+    <p>The relationship between <code class="highlighter-rouge">runs</code> and <code class="highlighter-rouge">bat_avg</code> seems sort of linear.</p>
+
+    <p><img src="8-o1.ong" alt="" /></p>
+  </li>
+  <li>
+    <p>The $R^2$ is 0.65, compared to 0.37 for <code class="highlighter-rouge">runs</code> against <code class="highlighter-rouge">at_bats</code>, so the linear fit is better in this situation.</p>
+  </li>
+  <li>
+    <p>It seems that <code class="highlighter-rouge">bat_avg</code> is the best predictor for <code class="highlighter-rouge">runs</code>.</p>
+
+    <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">cor</span><span class="p">(</span><span class="n">mlb11</span><span class="o">$</span><span class="n">runs</span><span class="p">,</span><span class="w"> </span><span class="n">mlb11</span><span class="o">$</span><span class="n">at_bats</span><span class="p">)</span><span class="o">^</span><span class="m">2</span><span class="w">
+ </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">0.3728654</span><span class="w">
+ </span><span class="o">&gt;</span><span class="w"> </span><span class="n">cor</span><span class="p">(</span><span class="n">mlb11</span><span class="o">$</span><span class="n">runs</span><span class="p">,</span><span class="w"> </span><span class="n">mlb11</span><span class="o">$</span><span class="n">hits</span><span class="p">)</span><span class="o">^</span><span class="m">2</span><span class="w">
+ </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">0.6419388</span><span class="w">
+ </span><span class="o">&gt;</span><span class="w"> </span><span class="n">cor</span><span class="p">(</span><span class="n">mlb11</span><span class="o">$</span><span class="n">runs</span><span class="p">,</span><span class="w"> </span><span class="n">mlb11</span><span class="o">$</span><span class="n">homeruns</span><span class="p">)</span><span class="o">^</span><span class="m">2</span><span class="w">
+ </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">0.6265636</span><span class="w">
+ </span><span class="o">&gt;</span><span class="w"> </span><span class="n">cor</span><span class="p">(</span><span class="n">mlb11</span><span class="o">$</span><span class="n">runs</span><span class="p">,</span><span class="w"> </span><span class="n">mlb11</span><span class="o">$</span><span class="n">bat_avg</span><span class="p">)</span><span class="o">^</span><span class="m">2</span><span class="w">
+ </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">0.6560771</span><span class="w">
+ </span><span class="o">&gt;</span><span class="w"> </span><span class="n">cor</span><span class="p">(</span><span class="n">mlb11</span><span class="o">$</span><span class="n">runs</span><span class="p">,</span><span class="w"> </span><span class="n">mlb11</span><span class="o">$</span><span class="n">strikeouts</span><span class="p">)</span><span class="o">^</span><span class="m">2</span><span class="w">
+ </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">0.1693579</span><span class="w">
+ </span><span class="o">&gt;</span><span class="w"> </span><span class="n">cor</span><span class="p">(</span><span class="n">mlb11</span><span class="o">$</span><span class="n">runs</span><span class="p">,</span><span class="w"> </span><span class="n">mlb11</span><span class="o">$</span><span class="n">stolen_bases</span><span class="p">)</span><span class="o">^</span><span class="m">2</span><span class="w">
+ </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">0.002913993</span><span class="w">
+ </span><span class="o">&gt;</span><span class="w"> </span><span class="n">cor</span><span class="p">(</span><span class="n">mlb11</span><span class="o">$</span><span class="n">runs</span><span class="p">,</span><span class="w"> </span><span class="n">mlb11</span><span class="o">$</span><span class="n">wins</span><span class="p">)</span><span class="o">^</span><span class="m">2</span><span class="w">
+ </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">0.3609712</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>All of them are better. The best seems to be <code class="highlighter-rouge">new_obs</code>.</p>
+
+    <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">cor</span><span class="p">(</span><span class="n">mlb11</span><span class="o">$</span><span class="n">runs</span><span class="p">,</span><span class="w"> </span><span class="n">mlb11</span><span class="o">$</span><span class="n">new_onbase</span><span class="p">)</span><span class="o">^</span><span class="m">2</span><span class="w">
+ </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">0.8491053</span><span class="w">
+ </span><span class="o">&gt;</span><span class="w"> </span><span class="n">cor</span><span class="p">(</span><span class="n">mlb11</span><span class="o">$</span><span class="n">runs</span><span class="p">,</span><span class="w"> </span><span class="n">mlb11</span><span class="o">$</span><span class="n">new_slug</span><span class="p">)</span><span class="o">^</span><span class="m">2</span><span class="w">
+ </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">0.8968704</span><span class="w">
+ </span><span class="o">&gt;</span><span class="w"> </span><span class="n">cor</span><span class="p">(</span><span class="n">mlb11</span><span class="o">$</span><span class="n">runs</span><span class="p">,</span><span class="w"> </span><span class="n">mlb11</span><span class="o">$</span><span class="n">new_obs</span><span class="p">)</span><span class="o">^</span><span class="m">2</span><span class="w">
+ </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">0.9349271</span><span class="w">
+</span></code></pre></div>    </div>
+
+    <p><img src="8-o4.png" alt="" /></p>
+  </li>
+  <li>
+    <p>There does appear to be no pattern in the residual plot, and the residuals are at least sort of normal.</p>
+
+    <p><img src="8-o5.png" alt="" />
+ <img src="8-o5b.png" alt="" /></p>
+  </li>
+</ol>
+
+:ET

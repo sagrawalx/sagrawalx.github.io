@@ -5,12 +5,13 @@ permalink: teaching/
 
 # Currently Teaching
 
-* Spring 2020, Block 6. [MA117 - Probability and Statistics](sp20-b6_ma117).
+* Spring 2020, Block 8. [MA220 - Linear Algebra (Quarantine Edition)](sp20-b8_ma220). 
 
-# Previously Taught
+# Previously Taughtw
 
 ## Colorado College
 
+* Spring 2020, Block 6. [MA117 - Probability and Statistics](sp20-b6_ma117).
 * Fall 2019, Block 4. [MA126 - Calculus 1](fa19-b4_ma126).
 * Fall 2019, Block 3. [MA315 - Ordinary Differential Equations](fa19-b3_ma315).
 * Fall 2019, Block 2. [MA475 - Real Analysis II](fa19-b2_ma475).
