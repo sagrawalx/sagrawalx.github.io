@@ -90,12 +90,12 @@ You've just inherited some money and a fish farm, and you've decided that you're
 
 You're starting off with $100,000 in cash, and your plan is to spend exactly $25,000 every year. We'll ignore inflation here. Your fish farm starts off with 10,000 newborn fish. Based on the average weight of fish at various ages and the going rate of fish in the market, you find that...
 
-| harvesting a...              | will get you|
-| -----------------------------|-------------|
-| newborn fish                 | $10         |
-| 1 year old fish              | $30         |
-| 2 year old fish              | $50         |
-| 3 year old fish              | $20         |
+| harvesting a...              | will get you... |
+| -----------------------------|-----------------|
+| newborn fish                 | $10             |
+| 1 year old fish              | $30             |
+| 2 year old fish              | $50             |
+| 3 year old fish              | $20             |
 
 Finally, suppose you know that you'll be able to retire as soon as you hit $2,000,000. Your job is to figure out a harvesting scheme so that you hit retirement as soon as possible, and also avoid bankruptcy. 
 
@@ -143,7 +143,7 @@ for t, m in enumerate(money, start=1):
     print("End of year {}: {}".format(t, locale.currency(m, grouping=True)))
 ```
 
-Running this code tells me that I go bankrupt in 11 years. In other words, this harvesting scheme is no good! It also outputs me how much money I have left at the end of each year. 
+Running this code tells me that I go bankrupt in 11 years. In other words, this harvesting scheme is no good! The code also outputs me how much money I have left at the end of each year. 
 
 Your job is to adjust the harvesting scheme so that you avoid bankruptcy and are able to retire as soon as possible. You can start by experimenting with just varying the percentage of fish harvested yearly, but you don't have to harvest a fixed percentage of all the fish every year. For example, what if you harvest only fish of certain ages? What if you harvest more fish of certain ages than of other ages? What if you wait some number of years before starting to harvest? The possibilities are endless! Be creative :)
 
