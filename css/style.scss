@@ -10,7 +10,6 @@ $accent: #339999;
 
 @import url("reset.css");
 @import url("https://fonts.googleapis.com/css?family=Baloo|Baloo+Bhaijaan|Baloo+Da|Noto+Sans|Noto+Sans+Devanagari|Noto+Sans+Arabic|Noto+Sans+Bengali|Noto+Sans+CJK+JP");
-@import "code.css";
 
 body {
     font-size: 16px;
@@ -33,16 +32,16 @@ body {
         font-weight: bold;
     }
 
-    a, a:visited {
+    a:link, a:visited {
         color: $link;
         text-decoration: none;
     }
 
-    a:hover, a:active, a.current {
+    a:link:hover, a:active, a.current {
         color: $accent;
     }
 
-    blockquote, .blockquote, div.highlight {
+    blockquote, .blockquote, div.sourceCode {
         display: block;
         padding-left: 2em;
         border-left-style: solid;
@@ -50,10 +49,11 @@ body {
         border-left-color: $light;
     }
 
-    code, div.highlight {
+    code, div.sourceCode {
         font-family: monospace;
         overflow: auto;
         max-height: 40em;
+        @import "css/_code";
     }
 
     span.blockquote-attribution {

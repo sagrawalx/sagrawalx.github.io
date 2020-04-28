@@ -1,19 +1,70 @@
 @import url("reset.css");
 @import url("https://fonts.googleapis.com/css?family=Baloo|Baloo+Bhaijaan|Baloo+Da|Noto+Sans|Noto+Sans+Devanagari|Noto+Sans+Arabic|Noto+Sans+Bengali|Noto+Sans+CJK+JP");
-@import url(code.css);
 body { font-size: 16px; font-family: "Noto Sans", "Noto Sans Devanagari", "Noto Sans Arabic", "Noto Sans Bengali", "Noto Sans CJK JP", sans-serif; font-weight: normal; line-height: 1.7; color: #444; min-width: 30em; max-width: 45em; text-align: left; padding-left: 5em; padding-right: 5em; }
 
 body em { font-style: italic; }
 
 body strong { font-weight: bold; }
 
-body a, body a:visited { color: #777; text-decoration: none; }
+body a:link, body a:visited { color: #777; text-decoration: none; }
 
-body a:hover, body a:active, body a.current { color: #339999; }
+body a:link:hover, body a:active, body a.current { color: #339999; }
 
-body blockquote, body .blockquote, body div.highlight { display: block; padding-left: 2em; border-left-style: solid; border-left-width: 5px; border-left-color: #eee; }
+body blockquote, body .blockquote, body div.sourceCode { display: block; padding-left: 2em; border-left-style: solid; border-left-width: 5px; border-left-color: #eee; }
 
-body code, body div.highlight { font-family: monospace; overflow: auto; max-height: 40em; }
+body code, body div.sourceCode { font-family: monospace; overflow: auto; max-height: 40em; /* Keyword */ /* DataType */ /* DecVal */ /* BaseN */ /* Float */ /* Char */ /* String */ /* Comment */ /* Other */ /* Alert */ /* Function */ /* Error */ /* Warning */ /* Constant */ /* SpecialChar */ /* VerbatimString */ /* SpecialString */ /* Import */ /* Variable */ /* ControlFlow */ /* Operator */ /* BuiltIn */ /* Extension */ /* Preprocessor */ /* Attribute */ /* Documentation */ /* Annotation */ /* CommentVar */ /* Information */ }
+
+body code span.kw, body div.sourceCode span.kw { color: #007020; font-weight: bold; }
+
+body code span.dt, body div.sourceCode span.dt { color: #902000; }
+
+body code span.dv, body div.sourceCode span.dv { color: #40a070; }
+
+body code span.bn, body div.sourceCode span.bn { color: #40a070; }
+
+body code span.fl, body div.sourceCode span.fl { color: #40a070; }
+
+body code span.ch, body div.sourceCode span.ch { color: #4070a0; }
+
+body code span.st, body div.sourceCode span.st { color: #4070a0; }
+
+body code span.co, body div.sourceCode span.co { color: #60a0b0; font-style: italic; }
+
+body code span.ot, body div.sourceCode span.ot { color: #007020; }
+
+body code span.al, body div.sourceCode span.al { color: #ff0000; font-weight: bold; }
+
+body code span.fu, body div.sourceCode span.fu { color: #06287e; }
+
+body code span.er, body div.sourceCode span.er { color: #ff0000; font-weight: bold; }
+
+body code span.wa, body div.sourceCode span.wa { color: #60a0b0; font-weight: bold; font-style: italic; }
+
+body code span.cn, body div.sourceCode span.cn { color: #880000; }
+
+body code span.sc, body div.sourceCode span.sc { color: #4070a0; }
+
+body code span.vs, body div.sourceCode span.vs { color: #4070a0; }
+
+body code span.ss, body div.sourceCode span.ss { color: #bb6688; }
+
+body code span.va, body div.sourceCode span.va { color: #19177c; }
+
+body code span.cf, body div.sourceCode span.cf { color: #007020; font-weight: bold; }
+
+body code span.op, body div.sourceCode span.op { color: #666666; }
+
+body code span.pp, body div.sourceCode span.pp { color: #bc7a00; }
+
+body code span.at, body div.sourceCode span.at { color: #7d9029; }
+
+body code span.do, body div.sourceCode span.do { color: #ba2121; font-style: italic; }
+
+body code span.an, body div.sourceCode span.an { color: #60a0b0; font-weight: bold; font-style: italic; }
+
+body code span.cv, body div.sourceCode span.cv { color: #60a0b0; font-weight: bold; font-style: italic; }
+
+body code span.in, body div.sourceCode span.in { color: #60a0b0; font-weight: bold; font-style: italic; }
 
 body span.blockquote-attribution { display: block; text-align: right; }
 

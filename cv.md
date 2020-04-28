@@ -37,7 +37,7 @@ nonav: true
 * Tilting (April 2016). Rigid analytic geometry seminar, UC Berkeley.
 * Introduction to D-modules (February 2015). Geometric representation theory seminar, UC Berkeley.
 * What is an arithmetic D-module? (April 2014). Geometric representation theory seminar, UC Berkeley.
-* $$\ell$$-adic representations (October 2013). Student number theory seminar, UC Berkeley.
+* $\ell$-adic representations (October 2013). Student number theory seminar, UC Berkeley.
 * Cotangent complex (October 2013). Geometric representation theory seminar, UC Berkeley.
 * Grothendieck ring of varieties (February 2013). Student algebraic geometry seminar, UC Berkeley.
 * Jacobians (November 2012). Student arithmetic geometry seminar, UC Berkeley.
@@ -97,10 +97,10 @@ nonav: true
 
 ## Mentor
 
-* Senior thesis with Kadin Mangalik (2019–2020). Topic: Sums of cubes over $$\mathbb{F}_p$$.
+* Senior thesis with Kadin Mangalik (2019–2020). Topic: Sums of cubes over $\mathbb{F}_p$.
 * Faculty student collaborative research with Cinea Jenkins (Summer 2019). Topic: Hodge polygons of F-crystals.
 * Independent study with Ying Wang (Spring 2019). Topic: Category theory. 
-* Senior thesis with Zhaopeng Li (2018–2019). Topic: Sums of cubes over $$\mathbb{F}_p$$.
+* Senior thesis with Zhaopeng Li (2018–2019). Topic: Sums of cubes over $\mathbb{F}_p$.
 * Directed reading program with Frank Dai (Fall 2017). Topic: Class field theory.
 * Directed reading program with Alice Zhao (Fall 2014). Topic: Elliptic curves.
 
@@ -110,11 +110,11 @@ nonav: true
 * Derived algebraic geometry and its applications (March 2019). MSRI, Berkeley.
 * Front Range Number Theory Day (September 2018). Colorado State University.
 * RTG Research Workshop (May 2018). University of California, Berkeley.
-* Old and new themes in $$p$$-adic cohomology (April 2018). University of Arkansas.
+* Old and new themes in $p$-adic cohomology (April 2018). University of Arkansas.
 * Hot Topics: The Homological Conjectures (March 2018). MSRI, Berkeley.
 * D-modules, geometric representation theory, and arithmetic applications (December 2017). Oxford University.
-    * Poster: Rigid overconvergent isocrystals on $$\mathbb{P}^1$$.
-* $$p$$-adic analytic geometry and differential equations (March 2017). CIRM, Luminy.
+    * Poster: Rigid overconvergent isocrystals on $\mathbb{P}^1$.
+* $p$-adic analytic geometry and differential equations (March 2017). CIRM, Luminy.
 * Nonarchimedean geometry and its applications (June 2015). University of Michigan, Ann Arbor.
 * New geometric methods in number theory and automorphic forms (August 2014). MSRI, Berkeley.
 * Perfectoid spaces and their applications (Februrary 2014). MSRI, Berkeley.

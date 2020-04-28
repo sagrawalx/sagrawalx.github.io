@@ -277,8 +277,6 @@ Do: 7.1, 3, 5, 7, 17, 19
 </td>
 </tr>
 
-[^paper]: The link to the study given in the lab doesn't work. Use this instead: [link](https://github.com/OpenIntroStat/oilabs/blob/master/data-raw/atheism/Global_INDEX_of_Religiosity_and_Atheism_PR__6.pdf). s
-
 
 <tr>
 <td rowspan="2">Wed</td>
@@ -373,3 +371,5 @@ Project work day! No class.
 * [FiveThirtyEight](https://fivethirtyeight.com/)
 * [Pew Research](https://www.pewresearch.org/) 
 
+
+[^paper]: The link to the study given in the lab doesn't work. Use this instead: [link](https://github.com/OpenIntroStat/oilabs/blob/master/data-raw/atheism/Global_INDEX_of_Religiosity_and_Atheism_PR__6.pdf). 

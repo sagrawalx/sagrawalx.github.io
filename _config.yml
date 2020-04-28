@@ -1,6 +1,13 @@
-plugins: ["jekyll-scholar"]
+plugins: 
+    - "jekyll-scholar"
+    - "jekyll-pandoc"
 
-markdown: kramdown
+markdown: Pandoc
+
+pandoc:
+    extensions:
+        - mathjax
+        
 highlighter: rouge
 
 scholar:

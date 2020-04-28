@@ -20,28 +20,28 @@ You will need you to understand some matrix operations, and to know how to do th
 
 We're in charge of managing the population of a certain species of fish in a certain lake. This species of fish has a life span of 4 years.
 
-Every year, we run a census to find the number of fish of each age, and record this number using a vector in $$\mathbb{R}^{4}$$. For example, a population vector $$v = (100,90,80,70)$$ means that there are 100 newborn fish, 90 1-year-old fish, 80 2-year-old fish, and 70 3-year-old fish.
+Every year, we run a census to find the number of fish of each age, and record this number using a vector in $\mathbb{R}^{4}$. For example, a population vector $v = (100,90,80,70)$ means that there are 100 newborn fish, 90 1-year-old fish, 80 2-year-old fish, and 70 3-year-old fish.
 
-After collecting many years of data, we find that if the population vector one year is $$v$$, then the population vector the following year is given by the matrix-vector product $$Av$$, where $$A$$ is the following $$4 \times 4$$ matrix.
+After collecting many years of data, we find that if the population vector one year is $v$, then the population vector the following year is given by the matrix-vector product $Av$, where $A$ is the following $4 \times 4$ matrix.
 
-$$A = \begin{bmatrix}
+$A = \begin{bmatrix}
 0 & 1.5 & 4.2 & 0 \\
 0.5 & 0 & 0 & 0 \\
 0 & 0.6 & 0 & 0 \\
 0 & 0 & 0.4 & 0
-\end{bmatrix}$$
+\end{bmatrix}$
 
-Suppose that the lake was empty in the year 2000 and we introduced 100 newborn fish into the lake. Let $$v_n$$ denote the population vector when $$n$$ years have elapsed. In other words, we have $$v_0 = (100, 0, 0, 0, 0)$$, $$v_1 = Av_0$$, $$v_2 = Av_1 = A^2v_0$$, and so forth.
-The matrix $$A$$ is called the *evolution matrix* of the system.
+Suppose that the lake was empty in the year 2000 and we introduced 100 newborn fish into the lake. Let $v_n$ denote the population vector when $n$ years have elapsed. In other words, we have $v_0 = (100, 0, 0, 0, 0)$, $v_1 = Av_0$, $v_2 = Av_1 = A^2v_0$, and so forth.
+The matrix $A$ is called the *evolution matrix* of the system.
 
-Here's how you would put the evolution matrix $$A$$ and the population vector $$v_0$$ into SageMath.
+Here's how you would put the evolution matrix $A$ and the population vector $v_0$ into SageMath.
 
 ```py
 A = matrix([[0,1.5,4.2,0],[.5,0,0,0],[0,.6,0,0],[0,0,.4,0]])
 v = vector([100,0,0,0])
 ```
 
-Then, to calculate $$v_1 = Av_0$$ and $$v_2 = A^2v_0$$, you would type in the following.
+Then, to calculate $v_1 = Av_0$ and $v_2 = A^2v_0$, you would type in the following.
 
 ```py
 A*v
@@ -50,25 +50,25 @@ A^2*v
 
 ## Part 1: Basics
 
-To answer the following questions, you might find it useful to compute a few of the terms $$v_1, v_2, v_3, ...$$ by hand, to get some intuition about what the evolution matrix is actually doing to the population vectors.
+To answer the following questions, you might find it useful to compute a few of the terms $v_1, v_2, v_3, ...$ by hand, to get some intuition about what the evolution matrix is actually doing to the population vectors.
 
-1. These number in the first row of $$A$$ are called *birth rates*. Explain what these numbers mean.
+1. These number in the first row of $A$ are called *birth rates*. Explain what these numbers mean.
 
 2. The nonzero entries below the first row are called *survival rates*. Explain what these numbers mean.
 
-3. Calculate $$v_{10}, v_{100}, v_{1000}$$, and $$v_{10000}$$. Can you qualitatively describe what happens to the fish population over time (eg, does it stay stable, does it blow up, ...)?
+3. Calculate $v_{10}, v_{100}, v_{1000}$, and $v_{10000}$. Can you qualitatively describe what happens to the fish population over time (eg, does it stay stable, does it blow up, ...)?
 
-4. Compare $$v_{100}$$ and $$v_{101}$$ by finding a real number $$\lambda$$ such that $$v_{101}$$ is *approximately* equal to $$\lambda v_{100}$$. Then do the same to compare $$v_{1000}$$ and $$v_{1001}$$. Then do the same to compare $$v_{10000}$$ and $$v_{10001}$$. What do you notice?
+4. Compare $v_{100}$ and $v_{101}$ by finding a real number $\lambda$ such that $v_{101}$ is *approximately* equal to $\lambda v_{100}$. Then do the same to compare $v_{1000}$ and $v_{1001}$. Then do the same to compare $v_{10000}$ and $v_{10001}$. What do you notice?
 
-The number $$\lambda$$ that you found above is called the *dominant eigenvalue* of the system. We'll discuss eigenvalues more at the end of the block.
+The number $\lambda$ that you found above is called the *dominant eigenvalue* of the system. We'll discuss eigenvalues more at the end of the block.
 
 ## Part 2: Pollution
 
-1. Suppose that pollution in the lake causes all of the birth rates to decline by 35% and survival rates to decline by 15%. Let $$B$$ denote the new evolution matrix. How does the evolution matrix change? Can you write $$B = DA$$ for some matrix $$D$$?
+1. Suppose that pollution in the lake causes all of the birth rates to decline by 35% and survival rates to decline by 15%. Let $B$ denote the new evolution matrix. How does the evolution matrix change? Can you write $B = DA$ for some matrix $D$?
 
-2. Calculate $$v_1, v_{10}, v_{100}, v_{1000}$$ and $$v_{10000}$$. Qualitatively describe what happens to the fish population in the long-term.
+2. Calculate $v_1, v_{10}, v_{100}, v_{1000}$ and $v_{10000}$. Qualitatively describe what happens to the fish population in the long-term.
 
-3. Finding the dominant eigenvalue of the system; in other words, find a real number $$\lambda$$ such that $$v_{10001}$$ is *approximately* equal to $$\lambda v_{10000}$$.
+3. Finding the dominant eigenvalue of the system; in other words, find a real number $\lambda$ such that $v_{10001}$ is *approximately* equal to $\lambda v_{10000}$.
 
 4. Suppose instead that pollution in the lake causes all of the birth rates to decline by 36% instead, and survival coefficients still decline by 15%. Qualitatively describe what happens to the fish population in the long term now, and find the dominant eigenvalue of the system.
 
@@ -76,9 +76,9 @@ The number $$\lambda$$ that you found above is called the *dominant eigenvalue* 
 
 ## Part 3: Sustainable Harvesting
 
-Let's ignore pollution and return the original evolution matrix $$A$$.
+Let's ignore pollution and return the original evolution matrix $A$.
 
-1. Suppose that a harvesting scheme is enacted wherein 50% of all fish are harvested every year. Let $$B$$ denote the new evolution matrix. How does $$B$$ compare to $$A$$? (*Hint*. This is more confusing than it looks at first glance, so don't just guess the answer; do some example calculations by hand to check if your proposed matrix $$B$$ makes sense.)
+1. Suppose that a harvesting scheme is enacted wherein 50% of all fish are harvested every year. Let $B$ denote the new evolution matrix. How does $B$ compare to $A$? (*Hint*. This is more confusing than it looks at first glance, so don't just guess the answer; do some example calculations by hand to check if your proposed matrix $B$ makes sense.)
 
 2. Like you did above, find the dominant eigenvalue of the system, and describe the qualitative long-term behavior of the fish population. Would this harvesting scheme be sustainable over the course of 100 years?
 
@@ -90,14 +90,12 @@ You've just inherited some money and a fish farm, and you've decided that you're
 
 You're starting off with $100,000 in cash, and your plan is to spend exactly $25,000 every year. We'll ignore inflation here. Your fish farm starts off with 10,000 newborn fish. Based on the average weight of fish at various ages and the going rate of fish in the market, you find that...
 
-|--------------------------------------------|
 | harvesting a...              | will get you|
 | -----------------------------|-------------|
 | newborn fish                 | $10         |
 | 1 year old fish              | $30         |
 | 2 year old fish              | $50         |
 | 3 year old fish              | $20         |
-|--------------------------------------------|
 
 Finally, suppose you know that you'll be able to retire as soon as you hit $2,000,000. Your job is to figure out a harvesting scheme so that you hit retirement as soon as possible, and also avoid bankruptcy. 
 

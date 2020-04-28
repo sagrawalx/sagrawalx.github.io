@@ -1,54 +1,33 @@
-I"�<h1 id="sage-ode-cheatsheet">Sage ODE Cheatsheet</h1>
-
+I"<h1 id="sage-ode-cheatsheet">Sage ODE Cheatsheet</h1>
 <p>Here’s a very brief overview of how to do a few ODE-related things in Sage, mostly intended as a reference for me, but maybe you’ll find it useful too.</p>
-
 <h2 id="first-order-odes">First Order ODEs</h2>
-
 <p>Here’s how to find the general solution to the ODE y’ = x + y.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="s">'y'</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
-<span class="n">deq</span> <span class="o">=</span> <span class="n">diff</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="c1"># or deq = diff(y,x) - f(x,y)
-</span><span class="n">sol</span> <span class="o">=</span> <span class="n">desolve</span><span class="p">(</span><span class="n">deq</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="n">sol</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div></div>
-
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1">f(x,y) <span class="op">=</span> x<span class="op">+</span>y</a>
+<a class="sourceLine" id="cb1-2" title="2">y <span class="op">=</span> function(<span class="st">&#39;y&#39;</span>)(x)</a>
+<a class="sourceLine" id="cb1-3" title="3">deq <span class="op">=</span> diff(y, x) <span class="op">==</span> f(x,y) <span class="co"># or deq = diff(y,x) - f(x,y)</span></a>
+<a class="sourceLine" id="cb1-4" title="4">sol <span class="op">=</span> desolve(deq, y)</a>
+<a class="sourceLine" id="cb1-5" title="5">sol.show()</a></code></pre></div>
 <p>Here’s how to find the solution that satisfies the initial value condition y(0) = -1/2 and how to plot it on the interval [-2,2]. Keeping the same first few commands as above,</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sol</span> <span class="o">=</span> <span class="n">desolve</span><span class="p">(</span><span class="n">deq</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">ics</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">])</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">plot</span><span class="p">(</span><span class="n">sol</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">sol</span><span class="p">.</span><span class="n">show</span><span class="p">()</span> <span class="c1"># or p.show()
-</span></code></pre></div></div>
-
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb2-1" title="1">sol <span class="op">=</span> desolve(deq, y, ics<span class="op">=</span>[<span class="dv">0</span>, <span class="fl">-0.5</span>])</a>
+<a class="sourceLine" id="cb2-2" title="2">p <span class="op">=</span> plot(sol, <span class="dv">-2</span>, <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb2-3" title="3">sol.show() <span class="co"># or p.show()</span></a></code></pre></div>
 <p>Here’s how to generate a slope field of the ODE together the plot of a numerical solution to this ODE satisfying the same initial value condition.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">var</span><span class="p">(</span><span class="s">'y'</span><span class="p">)</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">plot_slope_field</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
-<span class="n">p</span> <span class="o">+=</span> <span class="n">desolve_rk4</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">ics</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mf">0.5</span><span class="p">],</span> <span class="n">ivar</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="s">'plot'</span><span class="p">,</span> <span class="n">end_points</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">p</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div></div>
-
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb3-1" title="1">f(x,y) <span class="op">=</span> x<span class="op">+</span>y</a>
+<a class="sourceLine" id="cb3-2" title="2">y <span class="op">=</span> var(<span class="st">&#39;y&#39;</span>)</a>
+<a class="sourceLine" id="cb3-3" title="3">p <span class="op">=</span> plot_slope_field(f, (x, <span class="dv">-2</span>, <span class="dv">2</span>), (y, <span class="dv">-2</span>, <span class="dv">2</span>))</a>
+<a class="sourceLine" id="cb3-4" title="4">p <span class="op">+=</span> desolve_rk4(f, y, ics<span class="op">=</span>[<span class="dv">0</span>,<span class="op">-</span><span class="fl">0.5</span>], ivar<span class="op">=</span>x, output<span class="op">=</span><span class="st">&#39;plot&#39;</span>, end_points<span class="op">=</span>[<span class="op">-</span><span class="dv">2</span>,<span class="dv">2</span>], thickness<span class="op">=</span><span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb3-5" title="5">p.show()</a></code></pre></div>
 <h2 id="linear-algebra">Linear Algebra</h2>
-
 <p>…</p>
-
 <h2 id="systems-of-first-order-odes">Systems of First Order ODEs</h2>
-
 <p>Here’s how to plot a vector field corresponding to the autonomous system x’ = x + y and y’ = xy.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">y</span> <span class="o">=</span> <span class="n">var</span><span class="p">(</span><span class="s">'y'</span><span class="p">)</span>
-<span class="n">plot_vector_field</span><span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
-</code></pre></div></div>
-
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb4-1" title="1">y <span class="op">=</span> var(<span class="st">&#39;y&#39;</span>)</a>
+<a class="sourceLine" id="cb4-2" title="2">plot_vector_field((x<span class="op">+</span>y,x<span class="op">*</span>y), (x,<span class="op">-</span><span class="dv">2</span>,<span class="dv">2</span>), (y,<span class="op">-</span><span class="dv">2</span>,<span class="dv">2</span>))</a></code></pre></div>
 <p>…</p>
-
 <h2 id="references">References</h2>
-
 <p>Here are some other resources with more information.</p>
-
-<ol>
-  <li><a href="http://doc.sagemath.org/html/en/prep/Quickstarts/Differential-Equations.html">Sage Quickstart for Differential Equations</a>.</li>
-  <li>Judson’s <a href="http://faculty.sfasu.edu/judsontw/ode/"><em>ODEs Project</em></a>.</li>
+<ol type="1">
+<li><a href="http://doc.sagemath.org/html/en/prep/Quickstarts/Differential-Equations.html">Sage Quickstart for Differential Equations</a>.</li>
+<li>Judson’s <a href="http://faculty.sfasu.edu/judsontw/ode/"><em>ODEs Project</em></a>.</li>
 </ol>
 :ET
