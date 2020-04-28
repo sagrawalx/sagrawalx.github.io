@@ -78,7 +78,7 @@ Spring 2020, Block 8 — MA220 — Population Project
 <thead>
 <tr class="header">
 <th>harvesting a…</th>
-<th>will get you</th>
+<th>will get you…</th>
 </tr>
 </thead>
 <tbody>
@@ -141,7 +141,7 @@ Spring 2020, Block 8 — MA220 — Population Project
 <a class="sourceLine" id="cb3-37" title="37"><span class="bu">print</span>()</a>
 <a class="sourceLine" id="cb3-38" title="38"><span class="cf">for</span> t, m <span class="kw">in</span> <span class="bu">enumerate</span>(money, start<span class="op">=</span><span class="dv">1</span>):</a>
 <a class="sourceLine" id="cb3-39" title="39">    <span class="bu">print</span>(<span class="st">&quot;End of year </span><span class="sc">{}</span><span class="st">: </span><span class="sc">{}</span><span class="st">&quot;</span>.<span class="bu">format</span>(t, locale.currency(m, grouping<span class="op">=</span><span class="va">True</span>)))</a></code></pre></div>
-<p>Running this code tells me that I go bankrupt in 11 years. In other words, this harvesting scheme is no good! It also outputs me how much money I have left at the end of each year.</p>
+<p>Running this code tells me that I go bankrupt in 11 years. In other words, this harvesting scheme is no good! The code also outputs me how much money I have left at the end of each year.</p>
 <p>Your job is to adjust the harvesting scheme so that you avoid bankruptcy and are able to retire as soon as possible. You can start by experimenting with just varying the percentage of fish harvested yearly, but you don’t have to harvest a fixed percentage of all the fish every year. For example, what if you harvest only fish of certain ages? What if you harvest more fish of certain ages than of other ages? What if you wait some number of years before starting to harvest? The possibilities are endless! Be creative :)</p>
 <p>You should clearly explain (using full sentences) all of the harvesting schemes you experimented with in words, and indicate which one you found to be the best. For the best harvesting scheme you found, you should also include clearly commented code (like above) that explains how you ran the simulation (if you only adjusted the part that says “This is the part you want to edit,” you only need to include that part of the code).</p>
 <p>There are parts of this model that aren’t super realistic (for instance, depending on what you do, you could wind up with unrealistically large numbers of fish). If you like, you can treat this as a kind of linear algebra game! Just so you know, the best harvesting scheme I’ve been able to come up with gets me to retirement after 12 years. Can you get to retirement faster than me? :)</p>
