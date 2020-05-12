@@ -122,10 +122,22 @@ nonav: true
 * Homotopical methods in algebraic geometry (May 2013). University of Southern California.
 * Bridgeland stability workshop (March 2013). University of Illinois, Chicago.
 
-# Professional service
+# Service
+
+## Professional
 
 * Contributor to Stacks Project
 * Reviewer for zbMATH
+
+## Departmental
+
+* Summer Research Survey (2019-2020). 
+* Inclusive Spaces Committee (2019-2020). 
+* MAA Liaison (2018-2019).
+
+## Other
+
+* Translator for Mutual Aid NYC
 
 # Languages
 

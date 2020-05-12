@@ -143,6 +143,8 @@ for t, m in enumerate(money, start=1):
     print("End of year {}: {}".format(t, locale.currency(m, grouping=True)))
 ```
 
+Note: If you prefer R, here is an R translation of this code: [fish.R](fish.R). Many thanks to Hiromi K. for initiating this translation!
+
 Running this code tells me that I go bankrupt in 11 years. In other words, this harvesting scheme is no good! The code also outputs me how much money I have left at the end of each year. 
 
 Your job is to adjust the harvesting scheme so that you avoid bankruptcy and are able to retire as soon as possible. You can start by experimenting with just varying the percentage of fish harvested yearly, but you don't have to harvest a fixed percentage of all the fish every year. For example, what if you harvest only fish of certain ages? What if you harvest more fish of certain ages than of other ages? What if you wait some number of years before starting to harvest? The possibilities are endless! Be creative :)
