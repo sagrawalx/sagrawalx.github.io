@@ -20,9 +20,7 @@ nonav: true
 * UC Berkeley. PhD in Mathematics (2018).
     * Thesis: Deformations of overconvergent isocrystals on the projective line. [eScholarship:1sp926n0](https://escholarship.org/uc/item/1sp926n0).
     * Advisor: David Nadler.
-* UC San Diego. BS in Mathematics, summa cum laude (2011).
-    * Minors: Computer Science, General Biology.
-    * GPA: 3.96.
+* UC San Diego. BS in Mathematics, summa cum laude (2011). Minors in Computer Science and General Biology.
 
 # Papers
 
@@ -30,6 +28,7 @@ nonav: true
 
 # Talks
 
+* Perspective: The Mathematics of Depicting Depth (February 2020). Fearless Fridays, Colorado College. 
 * How local systems arise (February 2019). Rings and Wings, UC Colorado Springs.
 * Rigid local systems and rigid isocrystals (June 2018). Number theory seminar, UC San Diego.
 * Rigidity: Local systems and beyond (February 2018). Fearless Fridays, Colorado College.
@@ -58,6 +57,8 @@ nonav: true
 ## Primary instructor
 
 * Colorado College
+    * Linear Algebra (Spring 2020, Block 8). 
+    * Probability and Statistics (Spring 2020, Block 6). 
     * Ordinary Differential Equations (Fall 2019, Block 3).
     * Real Analysis 2 (Fall 2019, Block 2).
     * Linear Algebra (Spring 2019, Block 8).
@@ -97,6 +98,7 @@ nonav: true
 
 ## Mentor
 
+* Senior thesis with Ying Wang (2020–2021). Topic: TBA. 
 * Senior thesis with Kadin Mangalik (2019–2020). Topic: Sums of cubes over $\mathbb{F}_p$.
 * Faculty student collaborative research with Cinea Jenkins (Summer 2019). Topic: Hodge polygons of F-crystals.
 * Independent study with Ying Wang (Spring 2019). Topic: Category theory. 

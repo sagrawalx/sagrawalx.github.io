@@ -1,4 +1,4 @@
-I"å<p><img class="sidepic" src="/img/hello-bunny.svg" title="Hello!"/></p>
+I"¤!<p><img class="sidepic" src="/img/hello-bunny.svg" title="Hello!"/></p>
 <h1 id="basic-information">Basic information</h1>
 <ul>
 <li>Email: <span class="email" data-localpart="sagrawal" data-domain="coloradocollege.edu"></span></li>
@@ -16,21 +16,21 @@
 <li>Thesis: Deformations of overconvergent isocrystals on the projective line. <a href="https://escholarship.org/uc/item/1sp926n0">eScholarship:1sp926n0</a>.</li>
 <li>Advisor: David Nadler.</li>
 </ul></li>
-<li>UC San Diego. BS in Mathematics, summa cum laude (2011).
-<ul>
-<li>Minors: Computer Science, General Biology.</li>
-<li>GPA: 3.96.</li>
-</ul></li>
+<li>UC San Diego. BS in Mathematics, summa cum laude (2011). Minors in Computer Science and General Biology.</li>
 </ul>
 <h1 id="papers">Papers</h1>
 <p>All papers at <a href="https://arxiv.org/a/agrawal_s_1">arXiv.org/a/agrawal_s_1</a></p>
 <ul>
+<li>
+From category <span class="math inline">\(\mathcal{O}^\infty\)</span> to locally analytic representations. With <a href="http://pages.iu.edu/~mstrauch/">Matthias Strauch</a>. In progress.
+</li>
 <li>
 Deformations of overconvergent isocrystals on the projective line. <a href="https://arxiv.org/abs/1710.03404">arXiv:1710.03404</a>. <a href="https://doi.org/10.1016/j.jnt.2019.11.013">doi:10.1016/j.jnt.2019.11.013</a>.
 </li>
 </ul>
 <h1 id="talks">Talks</h1>
 <ul>
+<li>Perspective: The Mathematics of Depicting Depth (February 2020). Fearless Fridays, Colorado College.</li>
 <li>How local systems arise (February 2019). Rings and Wings, UC Colorado Springs.</li>
 <li>Rigid local systems and rigid isocrystals (June 2018). Number theory seminar, UC San Diego.</li>
 <li>Rigidity: Local systems and beyond (February 2018). Fearless Fridays, Colorado College.</li>
@@ -59,6 +59,8 @@ Deformations of overconvergent isocrystals on the projective line. <a href="http
 <ul>
 <li>Colorado College
 <ul>
+<li>Linear Algebra (Spring 2020, Block 8).</li>
+<li>Probability and Statistics (Spring 2020, Block 6).</li>
 <li>Ordinary Differential Equations (Fall 2019, Block 3).</li>
 <li>Real Analysis 2 (Fall 2019, Block 2).</li>
 <li>Linear Algebra (Spring 2019, Block 8).</li>
@@ -107,6 +109,7 @@ Deformations of overconvergent isocrystals on the projective line. <a href="http
 </ul>
 <h2 id="mentor">Mentor</h2>
 <ul>
+<li>Senior thesis with Ying Wang (2020â€“2021). Topic: TBA.</li>
 <li>Senior thesis with Kadin Mangalik (2019â€“2020). Topic: Sums of cubes over <span class="math inline">\(\mathbb{F}_p\)</span>.</li>
 <li>Faculty student collaborative research with Cinea Jenkins (Summer 2019). Topic: Hodge polygons of F-crystals.</li>
 <li>Independent study with Ying Wang (Spring 2019). Topic: Category theory.</li>
