@@ -8,13 +8,12 @@ nonav: true
 
 # Overview
 
-The Hindi-Urdu Mehfil is a gathering for anyone <del>in the Colorado Springs area</del>* with an interest in Hindi-Urdu linguistics, literature, music, film, etc. In particular, Hindi-Urdu learners are very welcome to participate. 
+The Hindi-Urdu Mehfil is a gathering for anyone <del>in the Colorado Springs area</del>* with an interest in Hindi-Urdu linguistics, literature, music, film, etc. In particular, Hindi-Urdu learners are very welcome to participate. If you'd like to be on the mailing list, send me an email at  <span class="email" data-localpart="sagrawal" data-domain="coloradocollege.edu"></span> to let me know! 
+
+* Here's an [ongoing list of generic resources](resources). Resources specific to particular topics are listed in the calendar below.
+* If you have a topic in mind that you'd like to discuss during one of our meetings, please let me know and I'll add it to our calendar! Also, here's an [ongoing list of possible future topics](ideas), just in case we need it.
 
 *: In observance of covid precautionary measures, we'll meet via Zoom until further notice. 
-
-* If you'd like to be on the mailing list, send me an email at  <span class="email" data-localpart="sagrawal" data-domain="coloradocollege.edu"></span> to let me know! 
-* If you have a topic in mind that you'd like to discuss during one of our meetings, please let me know and I'll add it to our calendar! Also, here's an [ongoing list of possible future topics](ideas), just in case we need it.
-* Here's an [ongoing list of generic resources](resources). Resources specific to particular topics are listed in the calendar below.
 
 # Calendar {#calendar}
 
