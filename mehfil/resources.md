@@ -23,6 +23,19 @@ Faiz Ahmed Faiz (फ़ैज़ अहमद फ़ैज़ · <span dir="rtl"
 
 * [A Desertful of Roses](http://www.columbia.edu/itc/mealac/pritchett/00ghalib/)
 
+## Digital Repositories
+
+Here are some repositories of literary texts. 
+
+* [Rekhta.org](rekhta.org)
+* [Hindwi.org](hindwi.org)
+* [Kavitakosh.org](kavitakosh.org)
+* [Gadyakosh.org](gadyakosh.org)
+
+Here are some sources for audio recordings of literature. 
+
+* [Adbi Duniya](https://www.youtube.com/channel/UCgcve0uzgkk7nlqlioi4Arg)
+
 ## Learning Hindi-Urdu {#learning}
 
 Here are some resources I'm aware of that might be useful for improving your knowledge of Hindi-Urdu. If you know of other good ones, please share so that I can add it to this list!
