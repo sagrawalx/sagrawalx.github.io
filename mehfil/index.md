@@ -25,15 +25,37 @@ The Hindi-Urdu Mehfil is a gathering for anyone <del>in the Colorado Springs are
 </tr>
 
 <tr>
-<td>9/15</td>
+<td>9/22</td>
 <td>TBA</td>
-<td></td>
+<td>
+</td>
+</tr>
+
+<tr>
+<td>9/15</td>
+<td>Ismat Chugtāī, *Lihāf*</td>
+<td>
+* Full text: [Nagari](https://www.rekhta.org/stories/lihaaf-ismat-chughtai-stories?lang=hi), [Urdu](https://www.rekhta.org/stories/lihaaf-ismat-chughtai-stories?lang=ur)
+* Translations:
+    - [Syeda Hameed and Tahira Naqvi](https://theinkbrain.wordpress.com/2012/01/09/ismat-chugtai-the-quilt-lihaaf-translated-from-the-urdu-by-syeda-hameed-and-tahira-naqvir/) (translation starts with "In the depth of winter..."
+    - [M Asaduddin](http://www.manushi-india.org/pdfs_issues/PDF%20file%20110/9.%20Short%20Story%20-%20Lihaaf%20%5BThe%20Quilt%5D.pdf)
+    - [Surjit Singh Dulai and Carlo Coppola](http://www.columbia.edu/itc/mealac/pritchett/00urdu/ismat/txt_quilt_dulai_coppola.html)
+* Audio/Video: 
+    - [Reading by Tasneef Haider](https://www.youtube.com/watch?v=CvSRP3RMxI8)
+    - [Radio Adaptation by Pankhmi Singh](https://www.youtube.com/watch?v=XUNEgUQH3eg) (ie, a slightly abridged reading)
+    - [Stage Adaptation by Sukhmanch Theatre](https://www.youtube.com/watch?v=aVlzXo6HOzA), ...
+</td>
 </tr>
 
 <tr>
 <td>9/8</td>
-<td>TBA</td>
-<td></td>
+<td>Mīrājī, *Klark Ka Nagmā-e-Mohabbat*</td>
+<td>
+* Full text: [Nagari](https://www.rekhta.org/nazms/clerk-kaa-nagma-e-mohabbat-sab-raat-mirii-sapnon-men-guzar-jaatii-hai-aur-main-sotaa-huun-meeraji-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/clerk-kaa-nagma-e-mohabbat-sab-raat-mirii-sapnon-men-guzar-jaatii-hai-aur-main-sotaa-huun-meeraji-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/clerk-kaa-nagma-e-mohabbat-sab-raat-mirii-sapnon-men-guzar-jaatii-hai-aur-main-sotaa-huun-meeraji-nazms)
+* Performances: [Tasneef Haider](https://www.youtube.com/watch?v=-BO7nBWFkWg)
+* [Translation by Geeta Patel](https://www.thebeacon.in/2020/05/18/unforeseen-poet-how-i-found-myself-in-lyric/) (scroll down, or search for "Clerk's Love Song")
+* [Other things about the poem](klark.md)
+</td>
 </tr>
 
 <tr>
@@ -44,10 +66,7 @@ The Hindi-Urdu Mehfil is a gathering for anyone <del>in the Colorado Springs are
 * Performances: [Faiz](https://www.youtube.com/watch?v=RNuU_lBRCDI), [Iqbal Bano](https://www.youtube.com/watch?v=dxtgsq5oVy4), [Coke Studio](https://www.youtube.com/watch?v=unOqa2tnzSM), ...
 * Essay and translation "[Singing the Revolution](http://positionspolitics.org/eikon_2dubrow/)" by Jennifer Dubrow
 * "[Stumbling over Faiz's 'Ahl-i-Hikam'](https://www.dawn.com/news/1431861)" by Syed Nomanul Haq
-* Related poems by Faiz: 
-    - An older *Tarānā*, some phrases of which are reused in *Ham Dekhenge*: [Nagari](https://www.rekhta.org/nazms/taraana-faiz-ahmad-faiz-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/taraana-faiz-ahmad-faiz-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/taraana-faiz-ahmad-faiz-nazms)
-    - *Intisāb*, another paean to the downtrodden: [Nagari](https://www.rekhta.org/nazms/intisaab-faiz-ahmad-faiz-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/intisaab-faiz-ahmad-faiz-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/intisaab-faiz-ahmad-faiz-nazms)
-    - Probably many more! Let me know if you have other favorite similar poems by Faiz. 
+* An older *Tarānā* by Faiz, some phrases of which are reused in *Ham Dekhenge*: [Nagari](https://www.rekhta.org/nazms/taraana-faiz-ahmad-faiz-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/taraana-faiz-ahmad-faiz-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/taraana-faiz-ahmad-faiz-nazms) 
 * [Faiz resources](resources#faiz)
 </td>
 </tr>
