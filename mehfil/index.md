@@ -42,8 +42,8 @@ The Hindi-Urdu Mehfil is a gathering for anyone <del>in the Colorado Springs are
     - [Surjit Singh Dulai and Carlo Coppola](http://www.columbia.edu/itc/mealac/pritchett/00urdu/ismat/txt_quilt_dulai_coppola.html)
 * Audio/Video: 
     - [Reading by Tasneef Haider](https://www.youtube.com/watch?v=CvSRP3RMxI8)
-    - [Radio Adaptation by Pankhmi Singh](https://www.youtube.com/watch?v=XUNEgUQH3eg) (ie, a slightly abridged reading)
-    - [Stage Adaptation by Sukhmanch Theatre](https://www.youtube.com/watch?v=aVlzXo6HOzA), ...
+    - [Radio Adaptation by Pankhuri Singh](https://www.youtube.com/watch?v=XUNEgUQH3eg) (ie, a slightly abridged reading)
+    - [Stage Adaptation by Sukhmanch Theatre](https://www.youtube.com/watch?v=aVlzXo6HOzA)
 </td>
 </tr>
 
