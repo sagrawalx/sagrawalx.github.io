@@ -22,6 +22,7 @@ Here are some repositories of literary texts.
 Here are some sources for audio recordings of literature. 
 
 * [Adbi Duniya](https://www.youtube.com/channel/UCgcve0uzgkk7nlqlioi4Arg)
+* [Rani Ketki](https://www.youtube.com/channel/UCQd6TqVGlayBrW0-qVJjaFw)
 
 ## Learning Hindi-Urdu {#learning}
 

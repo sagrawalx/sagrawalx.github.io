@@ -42,6 +42,7 @@ The Hindi-Urdu Mehfil is a gathering for anyone <del>in the Colorado Springs are
     - [Surjit Singh Dulai and Carlo Coppola](http://www.columbia.edu/itc/mealac/pritchett/00urdu/ismat/txt_quilt_dulai_coppola.html)
 * Audio/Video: 
     - [Reading by Tasneef Haider](https://www.youtube.com/watch?v=CvSRP3RMxI8)
+    - [Reading by Rani Ketki](https://www.youtube.com/watch?v=vJgwZPWtJTo)
     - [Radio Adaptation by Pankhuri Singh](https://www.youtube.com/watch?v=XUNEgUQH3eg) (ie, a slightly abridged reading)
     - [Stage Adaptation by Sukhmanch Theatre](https://www.youtube.com/watch?v=aVlzXo6HOzA)
 </td>
@@ -54,7 +55,7 @@ The Hindi-Urdu Mehfil is a gathering for anyone <del>in the Colorado Springs are
 * Full text: [Nagari](https://www.rekhta.org/nazms/clerk-kaa-nagma-e-mohabbat-sab-raat-mirii-sapnon-men-guzar-jaatii-hai-aur-main-sotaa-huun-meeraji-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/clerk-kaa-nagma-e-mohabbat-sab-raat-mirii-sapnon-men-guzar-jaatii-hai-aur-main-sotaa-huun-meeraji-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/clerk-kaa-nagma-e-mohabbat-sab-raat-mirii-sapnon-men-guzar-jaatii-hai-aur-main-sotaa-huun-meeraji-nazms)
 * Performances: [Tasneef Haider](https://www.youtube.com/watch?v=-BO7nBWFkWg)
 * [Translation by Geeta Patel](https://www.thebeacon.in/2020/05/18/unforeseen-poet-how-i-found-myself-in-lyric/) (scroll down, or search for "Clerk's Love Song")
-* [Other things about the poem](klark.md)
+* [Other things about the poem](klark)
 </td>
 </tr>
 

@@ -1,13 +1,20 @@
 ---
 title: Hindustani Annotated Bibliography
-date: 2020-01-28
+date: 2020-09-09
 tags: miscellaneous
 layout: post
 ---
 
 <div class="introduction">
-Here are a few references that deal with the history of Hindustani and the Hindi-Urdu debates, ordered alphabetically by the last name of the author. Included below each one are brief summaries and/or relevant excerpts. Please let me know if you find any broken links or other problems of any kind.
+Here are a few references that deal with the history of Hindustani (ie, Khari Boli) and of the Hindi-Urdu debates. They are ordered alphabetically by the last name of the author. Included below each one are brief summaries and/or relevant excerpts. Please let me know if you find any broken links or other problems of any kind.
 </div>
+
+* BANGHA, Imre. "Rekhta: Poetry in Mixed Language: The Emergence of Khari Boli Literature in North India." In *Before the Divide: Hindi and Urdu Literary Culture*, edited by Francesca Orsini. New Delhi: Orient Blackswan, 2010. 
+    * This article points out several interesting aspects of the early history of Khari Boli. First of all, it discusses the history of scripts in which Khari Boli was written. The tradition of writing Khari Boli in the Perso-Arabic script goes back quite far, to about the 1200s. That being said, the author points out that there was a tradition of writing Khari Boli in Nagari (and related scripts such as Gurmukhi) going back to at least the 1600s. These texts are associated with writings of Nirgun sants. It goes without saying that Persian loans permeate these texts. Texts of this tradition were ignored by the Hindi Language Movement of the late 1800s and beyond, perhaps since their efforts were largely focused on purging Khari Boli of its Persian loans. Banghe also points out that these texts are also ignored in some histories of Urdu, such as S. R. Faruqi's "Early Urdu Literary Culture and History."
+    
+        Another interesting aspect of this article is a  classification of types of language mixing in early Khari Boli poetry. One type in this classification is poetry written with a Khari Boli grammatical base, with appropriate Persian words inserted into that base; this is recognizable as the same kind of language mixing that one sees in modern Hindustani. The author calls other types of language mixing "macaronic." These other types of mixing involve entire phrases or lines of Persian. In other words, such poetry overtly exhibited Persian syntax. 
+    
+        A third interesting observation the article makes is that, in the early literature, Khari Boli was used to "invoke a domestic female tone as opposed to the male and the non-domestic female world of the ghazals." This historical point stands in stark contrast with the later male-chauvinist attitudes of linguistic chauvinists of the Hindi Language Movement (eg, Suryakant Tripathi "Nirala"), who felt that Hindi (ie, Sanskritized Khari Boli) was a much more "virile" language than other Indo-Aryan languages with strong literary traditions (eg, Bengali and Braj). 
 
 * CHAND, Tara. *The Problem of Hindustani*. Allahabad: Indian Periodicals Ltd, 1944. [[URL](http://www.columbia.edu/itc/mealac/pritchett/00urduhindilinks/tarachand/tarachand.html)]
     * Summary forthcoming.
