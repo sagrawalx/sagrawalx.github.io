@@ -5,6 +5,8 @@ permalink: teaching/
 
 # Currently Teaching
 
+* Fall 2020, Block 2. [MA251 - Number Theory (Quarantine Edition)](fa20-b2_ma251). 
+
 # Previously Taught
 
 ## Colorado College

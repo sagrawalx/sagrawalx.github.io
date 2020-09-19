@@ -1,6 +1,6 @@
 ---
 title: Hindustani Annotated Bibliography
-date: 2020-09-11
+date: 2020-09-17
 tags: miscellaneous
 layout: post
 ---
@@ -14,7 +14,12 @@ Here are a few references that deal with the history of Hindustani (ie, Khari Bo
     
         Another interesting aspect of this article is a classification of types of language mixing in early Khari Boli poetry. One type in this classification is poetry written with a Khari Boli grammatical base, with appropriate Persian words inserted into that base; this is recognizable as the same kind of language mixing that one sees in modern Hindustani. The author calls other types of language mixing "macaronic." These other types of mixing involve entire phrases or lines of Persian (in other words, macaronic poetry overtly exhibits Persian syntax). 
     
-        A third interesting observation the article makes is that, in the early literature, Khari Boli was used to "invoke a domestic female tone as opposed to the male and the non-domestic female world of the ghazals." I found this interesting because it contrasts with later male-chauvinist attitudes of linguistic chauvinists of the Hindi Language Movement (eg, Suryakant Tripathi "Nirala"), who felt that Hindi (ie, Sanskritized Khari Boli) was a much more "virile" language than other Indo-Aryan languages with strong literary traditions (eg, Bengali and Braj). 
+        A third interesting observation the article makes is that, in the early literature, Khari Boli was used to "invoke a domestic female tone as opposed to the male and the non-domestic female world of the ghazals." I found this interesting because it contrasts with later male-chauvinist attitudes of linguistic chauvinists of the Hindi Language Movement (eg, Suryakant Tripathi "Nirala"), who felt that Hindi (ie, Sanskritized Khari Boli) was a much more "virile" language than other Indo-Aryan languages with strong literary traditions (eg, Bengali and Braj).
+
+* BUKHARI, Sohail (<span dir="rtl">سہیل بخاری</span>). "Urdū kā qadīmtarīn adab* (<span dir="rtl">اردو کا قدیمترین ادب</span>). *Nuqūsh* (<span dir="rtl">نقوش</span>), Issue 102, May 1965. [URL](https://www.rekhta.org/ebooks/nuqoosh-shumara-number-102-mohammad-tufail-magazines). 
+    * There's a reference to this article in Bangha's "Rekhta: Poetry in Mixed Language," which is how I learned of it's existence, but the citation contains several errors. Many thanks to an anonymous friend who dug it up for me in spite of the mis-citation. 
+        
+        The article begins with a discussion of the customary history of Urdu literature. This history begins with Amir Khusrau in Delhi, and then abruptly moves to Bijapur, before returning to Delhi after some 300 years. The author points out that this is a
 
 * CHAND, Tara. *The Problem of Hindustani*. Allahabad: Indian Periodicals Ltd, 1944. [[URL](http://www.columbia.edu/itc/mealac/pritchett/00urduhindilinks/tarachand/tarachand.html)]
     * Summary forthcoming.
