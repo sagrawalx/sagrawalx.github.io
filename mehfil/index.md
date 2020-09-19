@@ -54,8 +54,8 @@ The Hindi-Urdu Mehfil is an *adabī aḍḍā* of sorts, a gathering for anyone 
 <td>
 * Full text: [Nagari](https://www.rekhta.org/nazms/clerk-kaa-nagma-e-mohabbat-sab-raat-mirii-sapnon-men-guzar-jaatii-hai-aur-main-sotaa-huun-meeraji-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/clerk-kaa-nagma-e-mohabbat-sab-raat-mirii-sapnon-men-guzar-jaatii-hai-aur-main-sotaa-huun-meeraji-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/clerk-kaa-nagma-e-mohabbat-sab-raat-mirii-sapnon-men-guzar-jaatii-hai-aur-main-sotaa-huun-meeraji-nazms)
 * Performances: [Tasneef Haider](https://www.youtube.com/watch?v=-BO7nBWFkWg)
-* [Translation by Geeta Patel](https://www.thebeacon.in/2020/05/18/unforeseen-poet-how-i-found-myself-in-lyric/) (scroll down, or search for "Clerk's Love Song")
-* [Other things about the poem](klark)
+* [A translation by Geeta Patel](https://www.thebeacon.in/2020/05/18/unforeseen-poet-how-i-found-myself-in-lyric/) (scroll down, or search for "Clerk's Love Song"), and [another one by her](klark-patel.pdf)
+* [Other things about the poem](miraji#klark)
 </td>
 </tr>
 
