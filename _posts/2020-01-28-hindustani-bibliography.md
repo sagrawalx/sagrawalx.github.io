@@ -19,10 +19,10 @@ Here are a few references that deal with the history of Hindustani (ie, Khari Bo
 * BUKHARI, Sohail (<span dir="rtl">سہیل بخاری</span>). "Urdū kā qadīmtarīn adab* (<span dir="rtl">اردو کا قدیمترین ادب</span>). *Nuqūsh* (<span dir="rtl">نقوش</span>), Issue 102, May 1965. [URL](https://www.rekhta.org/ebooks/nuqoosh-shumara-number-102-mohammad-tufail-magazines). 
     * There's a reference to this article in Bangha's "Rekhta: Poetry in Mixed Language," which is how I learned of it's existence, but the citation contains several errors. Many thanks to an anonymous friend who dug it up for me in spite of the mis-citation. 
         
-        The article begins with a discussion of the customary history of Urdu literature. This history begins with Amir Khusrau in Delhi, and then abruptly moves to Bijapur, before returning to Delhi after some 300 years. The author points out that this is a
+        Summary forthcoming!
 
 * CHAND, Tara. *The Problem of Hindustani*. Allahabad: Indian Periodicals Ltd, 1944. [[URL](http://www.columbia.edu/itc/mealac/pritchett/00urduhindilinks/tarachand/tarachand.html)]
-    * Summary forthcoming.
+    * Summary forthcoming!
 
 * FARUQI, Shamsur Rahman. *Early Urdu Literary Culture and History.* New Delhi: Oxford University Press, 2001. Chapter 1. [[Link](http://www.columbia.edu/itc/mealac/pritchett/00fwp/srf/earlyurdu/srf_earlyurdu.html)]
     * The author spends some time discussing language name, citing a number of names used by natives (including *Hindī* and *Rek͟htah*) and a number of names coined by the British (including *Hindustani*). In the late 1700s, it appears that *Hindī* was more often used to refer to the language, with *Urdū* or *Urdū-e mu'allā* referring to a place (the city of Delhi, the Mughal court, etc); this situation persists perhaps as late as the mid 1800s, since Shakespear's 1849 dictionary does not recognize *Urdū* as a language name. The more complete *Zabān-e urdū-e mu'allā* referred originally to Persian, but perhaps began referring to Hindustani under the reign of Shah 'Alam II in the late 1700s, since he had a particular predilection for the language. The word *Urdū* as a language name took a while to establish, and it took even longer for *Hindī* and *Urdū* to be used contrastively. 
