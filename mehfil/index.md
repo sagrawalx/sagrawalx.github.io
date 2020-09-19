@@ -50,7 +50,7 @@ The Hindi-Urdu Mehfil is an *adabī aḍḍā* of sorts, a gathering for anyone 
 
 <tr>
 <td>9/8</td>
-<td>Mīrājī, *Klark Ka Nagmā-e-Mohabbat*</td>
+<td>Mīrājī, *Klark Kā Nagmā-e-Mohabbat*</td>
 <td>
 * Full text: [Nagari](https://www.rekhta.org/nazms/clerk-kaa-nagma-e-mohabbat-sab-raat-mirii-sapnon-men-guzar-jaatii-hai-aur-main-sotaa-huun-meeraji-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/clerk-kaa-nagma-e-mohabbat-sab-raat-mirii-sapnon-men-guzar-jaatii-hai-aur-main-sotaa-huun-meeraji-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/clerk-kaa-nagma-e-mohabbat-sab-raat-mirii-sapnon-men-guzar-jaatii-hai-aur-main-sotaa-huun-meeraji-nazms)
 * Performances: [Tasneef Haider](https://www.youtube.com/watch?v=-BO7nBWFkWg)
