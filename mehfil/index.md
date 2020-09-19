@@ -73,7 +73,7 @@ The Hindi-Urdu Mehfil is an *adabī aḍḍā* of sorts, a gathering for anyone 
 </tr>
 </tr>
 
-[^name]: The name of this language is a conundrum which vexes me greatly. On this page, I alternate between *Hindi-Urdu* and *Urdu-Hindi* as the name of the language (other names for the same language include *Hindustani*, *Khari Boli*, etc). This language is traditionally written in two scripts. I have used the name *Nagari* to refer one script that is used to write this language (another name for this script is *Devanagari*), and *Urdu* to refer to the other script (other names for this script include *Nastaliq*, *Perso-Arabic*, etc). I may also use the word *Hindi* as shorthand for "the Hindi-Urdu language written in the Nagari script" and *Urdu* as a shorthand for "the Hindi-Urdu language written in the Urdu script." 
+[^name]: The name of this language is a conundrum which vexes me greatly. On this page, I alternate between *Hindi-Urdu* and *Urdu-Hindi* as the name of the language (other names for the same language include *Hindustani*, *Khari Boli*, etc). This language is traditionally written in two scripts. I have used the name *Nagari* to refer one script that is used to write this language (another name for this script is *Devanagari*), and *Urdu* to refer to the other script (other names for this script include *Nastaliq*, *Perso-Arabic*, etc). I may also use the word *Hindi* as shorthand for "the Hindi-Urdu language written in the Nagari script" and *Urdu* as a shorthand for "the Urdu-Hindi language written in the Urdu script." 
 
 
 </table>
