@@ -141,11 +141,6 @@ nonav: true
 
 * Translator for Mutual Aid NYC
 
-# Languages
-
-* Fluent: English, Hindi
-* Intermediate: Japanese, French
-
 # Awards
 
 * Muir scholar (2011). John Muir College, UC San Diego.
