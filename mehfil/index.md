@@ -25,8 +25,15 @@ The Hindi-Urdu Mehfil is an *adabī aḍḍā* of sorts, a gathering for anyone 
 </tr>
 
 <tr>
+<td>10/6</td>
+<td>TBA</td>
+<td>
+</td>
+</tr>
+
+<tr>
 <td>9/29</td>
-<td>TBA (Probably *Lihāf* continued?)</td>
+<td>*Lihāf* continued</td>
 <td>
 </td>
 </tr>
