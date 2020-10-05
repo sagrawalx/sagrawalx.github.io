@@ -8,7 +8,7 @@ nonav: true
 
 # Overview
 
-The Hindi-Urdu Mehfil is an *adabī aḍḍā* of sorts, a gathering for anyone <del>in the Colorado Springs area</del>* with an interest in Hindi-Urdu[^name] linguistics, literature, music, film, etc. In particular, Urdu-Hindi learners are very welcome to participate. If you'd like to be on the mailing list, send me an email at  <span class="email" data-localpart="sagrawal" data-domain="coloradocollege.edu"></span> to let me know! 
+We're an *adabī aḍḍā* of sorts, a gathering of people <del>in the Colorado Springs area</del>* with an interest in Hindi-Urdu[^name] linguistics, literature, music, film, etc. Everyone interested in these sorts of things is welcome to participate: we span the spectrum from native speakers to learners. If you'd like to be on the mailing list, send me an email at  <span class="email" data-localpart="sagrawal" data-domain="coloradocollege.edu"></span> to let me know! 
 
 * Here's an [ongoing list of generic resources](resources). Resources specific to particular topics are listed in the calendar below.
 * If you have a topic in mind that you'd like to discuss during one of our meetings, please let me know and I'll add it to our calendar! 
@@ -24,10 +24,25 @@ The Hindi-Urdu Mehfil is an *adabī aḍḍā* of sorts, a gathering for anyone 
 <th style="width: 60%;">Resources</th>
 </tr>
 
+
 <tr>
-<td>10/6</td>
+<td>10/20</td>
 <td>TBA</td>
 <td>
+</td>
+</tr>
+
+<tr>
+<td>10/6</td>
+<td>Mrinal Sen, *Bhuvan Shome*</td>
+<td>
+[YouTube](https://www.youtube.com/watch?v=3bvJW-5Z33E)
+
+Information: 
+
+* [Commentary by Srivastava Bannerjee](quotes#bhuvan-shome)
+* [Wikipedia on *Bhuvan Shome*](https://en.wikipedia.org/wiki/Bhuvan_Shome)
+* [Wikipedia on Mrinal Sen](https://en.wikipedia.org/wiki/Mrinal_Sen)
 </td>
 </tr>
 
