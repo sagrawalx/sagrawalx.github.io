@@ -15,4 +15,10 @@ Here is a short list of some specific ideas for topics we might pursue for one o
 * Safdar Hashmi, *Hallā Bol*. It could be fun to try to act out this play together, if we can get our hands on the text of the play... I haven't been able to find it on the internet. 
 * Faiz, Intisaab. 
 * Bachchan, Madhushala. 
+* Shamsher and Nagarjun , Kedarnath Agrawal , Muktibodh and Trilochan are often cited as five sense organs of the progressive Hindi poetry . 
+    * https://kavitakosh.org/kk/%E0%A4%97%E0%A4%BE%E0%A4%93_/_%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%B2%E0%A5%8B%E0%A4%9A%E0%A4%A8
+    * https://kavitakosh.org/kk/%E0%A4%A7%E0%A4%B0%E0%A5%8D%E0%A4%AE_%E0%A4%95%E0%A5%80_%E0%A4%95%E0%A4%AE%E0%A4%BE%E0%A4%88_/_%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%B2%E0%A5%8B%E0%A4%9A%E0%A4%A8
 * Please feel free to suggest more!
+* mridula garg, hari bindi
+* khwaja ahmad abbas: khaddar ka kafan, abaabiil
+

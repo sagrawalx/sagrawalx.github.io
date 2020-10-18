@@ -26,35 +26,38 @@ We're an *adabī aḍḍā* of sorts, a gathering of people <del>in the Colorado
 
 
 <tr>
-<td>10/20</td>
-<td>TBA</td>
+<td>10/27</td>
+<td>Khwajā Aḥmad ʿAbbās, *Khaddar Kā Kafan*</td>
 <td>
+* Full Text: [Nagari](https://www.rekhta.org/stories/khaddar-ka-kafan-khwaja-ahmad-abbas-stories?lang=hi), [Urdu](https://www.rekhta.org/stories/khaddar-ka-kafan-khwaja-ahmad-abbas-stories?lang=ur)
+</td>
+</tr>
+
+
+<tr>
+<td>10/20</td>
+<td>Saʿādat Ḥasan Manṭo, *Hindī Aur Urdū*</td>
+<td>
+* Full Text: [Nagari](https://www.rekhta.org/articles/hindi-aur-urdu-saadat-hasan-manto-articles?lang=hi), [Urdu](https://www.rekhta.org/articles/hindi-aur-urdu-saadat-hasan-manto-articles?lang=ur)
+* [Translation by Muhammad Umar Memon](https://kafila.online/2011/12/05/hindi-and-urdu-saadat-hasan-manto/)
 </td>
 </tr>
 
 <tr>
 <td>10/6</td>
-<td>Mrinal Sen, *Bhuvan Shome*</td>
+<td>Mrināl Sen, *Bhuvan Shome*</td>
 <td>
-[YouTube](https://www.youtube.com/watch?v=3bvJW-5Z33E)
+* [YouTube](https://www.youtube.com/watch?v=3bvJW-5Z33E)
 
-Information: 
-
-* [Commentary by Srivastava Bannerjee](quotes#bhuvan-shome)
-* [Wikipedia on *Bhuvan Shome*](https://en.wikipedia.org/wiki/Bhuvan_Shome)
-* [Wikipedia on Mrinal Sen](https://en.wikipedia.org/wiki/Mrinal_Sen)
+* Information: 
+    - [Commentary by Srivastava Bannerjee](quotes#bhuvan-shome)
+    - [Wikipedia on *Bhuvan Shome*](https://en.wikipedia.org/wiki/Bhuvan_Shome)
+    - [Wikipedia on Mrinal Sen](https://en.wikipedia.org/wiki/Mrinal_Sen)
 </td>
 </tr>
 
 <tr>
-<td>9/29</td>
-<td>*Lihāf* continued</td>
-<td>
-</td>
-</tr>
-
-<tr>
-<td>9/22</td>
+<td>9/22, 9/29</td>
 <td>Ismat Chugtāī, *Lihāf*</td>
 <td>
 * Full text: [Nagari](https://www.rekhta.org/stories/lihaaf-ismat-chughtai-stories?lang=hi), [Urdu](https://www.rekhta.org/stories/lihaaf-ismat-chughtai-stories?lang=ur)
