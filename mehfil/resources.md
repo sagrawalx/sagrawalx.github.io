@@ -41,6 +41,10 @@ Here are some useful online dictionaries:
 * Monolingual (Urdu): [<span dir="rtl">اردو لغت</span>](http://udb.gov.pk/)
 * Thesaurus (Nagari): [शब्दतंत्र](http://www.cfilt.iitb.ac.in/wordnet/webhwn/wn.php)
 
+## Transliteration
+
+* [Google Translate](https://translate.google.com/) provides a Roman transliteration if you input Hindi text in Nagari. 
+* [Ashtanga Yoga's transltieration tool](https://www.ashtangayoga.info/philosophy/sanskrit-and-devanagari/transliteration-tool/) will transliterate between a number of Indic scripts (Nagari, Bengali, Gurmukhi, ...) as well as some Roman transliteration schemes. 
 
 
 ## Faiz {#faiz}

@@ -1,4 +1,4 @@
-I"�&<h1 id="overview">Overview</h1>
+I"f'<h1 id="overview">Overview</h1>
 <ul>
 <li>Class: Monday through Friday, 9:15–11:45, in Olin 270A.</li>
 <li>Instructor: Shishir Agrawal (I also go by Sunny), <span class="email">@</span>.
@@ -49,7 +49,7 @@ Mon
 None
 </td>
 <td>
-(Optional<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> precalculus review)<br />
+(Optional<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> precalculus review)<br />
 (1.1) 1, 3, 4, 12, 17, 37, 43<br />
 (1.2) 89–97 odds, 103<br />
 (1.3) 129, 155, 163, 165<br />
@@ -74,7 +74,7 @@ Tue
 Read: 2.2–3<br />
 Do: (2.2) 41, 47–53 odds, 77<br />
 (2.3) 95, 97, 103, 119<br />
-Optional<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> reading: 2.5
+Optional<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> reading: 2.5
 </td>
 <td>
 (2.2) 42, 55–67, 78–80, 82<br />
@@ -139,7 +139,7 @@ Fri
 <a href="rate-of-change.pdf">Rates of change (+Review)</a>
 </td>
 <td>
-Read: 3.4<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a><br />
+Read: 3.4<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a><br />
 Do: (3.4) 151, 157, 161
 </td>
 <td>
@@ -435,13 +435,13 @@ Wed
 </td>
 </tr>
 </table>
-<section class="footnotes">
+<section class="footnotes" role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1"><p>These precalculus review exercises are technically optional, but you’re <em>highly</em> encouraged to do them. If you remember all the concepts involved well, it should go quick. If you don’t, going through the list will help you identify what you need to review so that you’re prepared for the rest of class.</p>
-<p>To encourage you to do these review exercises… If you hand them in to me by the beginning of class on Week 1 Thursday, you’ll get extra credit (amounting to up to 5% of the problem set portion of your grade)!<a href="#fnref1" class="footnote-back">↩</a></p></li>
-<li id="fn2"><p>The precise definition of the limit in section 2.5 is optional. But, if you’re really serious about math, I recommend reading it and making a sincere attempt at understanding it. It’s hard (it took me a couple of years to really understand what was going on with this definition), but all the time you put in now will pay off in the end.<a href="#fnref2" class="footnote-back">↩</a></p></li>
-<li id="fn3"><p>We haven’t discussed any rules for differentiation yet (in particular, we haven’t read 3.3 yet). You should use the <em>definition of the derivative</em> to evaluate all limits in this section (instead of applying rules you might know from an earlier calculus class).<a href="#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn1" role="doc-endnote"><p>These precalculus review exercises are technically optional, but you’re <em>highly</em> encouraged to do them. If you remember all the concepts involved well, it should go quick. If you don’t, going through the list will help you identify what you need to review so that you’re prepared for the rest of class.</p>
+<p>To encourage you to do these review exercises… If you hand them in to me by the beginning of class on Week 1 Thursday, you’ll get extra credit (amounting to up to 5% of the problem set portion of your grade)!<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>The precise definition of the limit in section 2.5 is optional. But, if you’re really serious about math, I recommend reading it and making a sincere attempt at understanding it. It’s hard (it took me a couple of years to really understand what was going on with this definition), but all the time you put in now will pay off in the end.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>We haven’t discussed any rules for differentiation yet (in particular, we haven’t read 3.3 yet). You should use the <em>definition of the derivative</em> to evaluate all limits in this section (instead of applying rules you might know from an earlier calculus class).<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 :ET

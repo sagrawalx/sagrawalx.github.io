@@ -1,4 +1,4 @@
-I"h$<h1 id="overview">Overview</h1>
+I"3%<h1 id="overview">Overview</h1>
 <ul>
 <li>Class: Monday through Friday, 9:15–11:45, in Palmer 227.</li>
 <li>Instructor: Shishir Agrawal (I also go by Sunny), <span class="email">@</span>.
@@ -170,7 +170,7 @@ Do: 1.13, 16, 2.9–11
 <td>
 1.17–18, 21, 31, 37<br />
 2.12, 17–19<br />
-<a href="dim.pdf">In class problems</a><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>
+<a href="dim.pdf">In class problems</a><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
 </td>
 </tr>
 <tr>
@@ -208,7 +208,7 @@ Problem session with Sam (7pm).
 Wed
 </td>
 <td>
-Matrix representations<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>
+Matrix representations<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>
 </td>
 <td>
 Read: Three.III<br />
@@ -373,7 +373,7 @@ Quiz 3 (in class, 11–12pm). Sections covered: up through Five.II.1 (excluding 
 Fri
 </td>
 <td colspan="3">
-Final Project Work Day<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>
+Final Project Work Day<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>
 </td>
 </tr>
 <tr>
@@ -425,12 +425,12 @@ Wed
 </td>
 </tr>
 </table>
-<section class="footnotes">
+<section class="footnotes" role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1"><p>These in class problems are all about dimension (rather than isomorphisms), so, topically speaking, belong with the in class problems from Week 1, Friday. Our in class discussions are a bit behind the reading schedule, but hopefully we’ll catch up soon. We’ll have some spare time on Thursday to play catch-up too.<a href="#fnref1" class="footnote-back">↩</a></p></li>
-<li id="fn2"><p>You might find this topic quite challenging, but it’s also really important to get down. I’ve assigned a lot of exercises to help with this. If you can understand what’s going on with matrix representations, you’ll have a much easier time when we discuss change of basis and diagonalization next week!<a href="#fnref2" class="footnote-back">↩</a></p></li>
-<li id="fn3"><p>We’ll spend class time working on final projects. You can meet with your group in the classroom or wherever you like. And if you’d like my help for anything, let me know!<a href="#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn1" role="doc-endnote"><p>These in class problems are all about dimension (rather than isomorphisms), so, topically speaking, belong with the in class problems from Week 1, Friday. Our in class discussions are a bit behind the reading schedule, but hopefully we’ll catch up soon. We’ll have some spare time on Thursday to play catch-up too.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>You might find this topic quite challenging, but it’s also really important to get down. I’ve assigned a lot of exercises to help with this. If you can understand what’s going on with matrix representations, you’ll have a much easier time when we discuss change of basis and diagonalization next week!<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>We’ll spend class time working on final projects. You can meet with your group in the classroom or wherever you like. And if you’d like my help for anything, let me know!<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 :ET

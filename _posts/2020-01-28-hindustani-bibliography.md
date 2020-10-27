@@ -17,7 +17,7 @@ Here are a few references that deal with the history of Hindi-Urdu (also called 
         A third interesting observation the article makes is that, in the early literature, Khari Boli was used to "invoke a domestic female tone as opposed to the male and the non-domestic female world of the ghazals." I found this interesting because it contrasts with later male-chauvinist attitudes of linguistic chauvinists of the Hindi Language Movement (eg, Suryakant Tripathi "Nirala"), who felt that Hindi (ie, Sanskritized Khari Boli) was a much more "virile" language than other Indo-Aryan languages with strong literary traditions (eg, Bengali and Braj).
 
 * BUKHARI, Sohail. "Urdū kā qadīmtarīn adab." *Nuqūsh* 102, May 1965. [URL](https://www.rekhta.org/ebooks/nuqoosh-shumara-number-102-mohammad-tufail-magazines). 
-    * There's a reference to this article in Bangha's "Rekhta: Poetry in Mixed Language," which is how I learned of it's existence, but the citation contains several errors. Many thanks to an anonymous friend who dug it up for me in spite of the mis-citation!
+    * I learned of this through its citation in Bangha's "Rekhta: Poetry in Mixed Language," but this citation contains several errors. Many thanks to an anonymous friend who dug it up for me in spite of the mis-citation!
         
         Summary forthcoming!
 
