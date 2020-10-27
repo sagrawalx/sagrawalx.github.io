@@ -43,13 +43,13 @@ Spring 2020, Block 8 — MA220 — Population Project Grading
 <li>I was just looking for some indication that you tried to play with the simulation.</li>
 </ol>
 <ul>
-<li>If you only gave me code and didn’t describe in words how the harvesting scheme works, 2 points were deducted.</li>
+<li><p>If you only gave me code and didn’t describe in words how the harvesting scheme works, 2 points were deducted.</p></li>
 <li><p>If you’re curious about the harvesting scheme I came up with that got me to retirement in 12 years, it’s the following: harvest 3% of 2-year-old fish and 100% of 3-year-old fish until I hit the point where selling all my fish would allow me to retire, at which point I close up shop by selling all my fish. To accomplish this, I replaced the “part you want to edit” with the following:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode py"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="cf">if</span> money[t<span class="dv">-1</span>] <span class="op">+</span> population.dot_product(prices) <span class="op">&gt;</span> retirement:</a>
-<a class="sourceLine" id="cb1-2" title="2">    current_harvest <span class="op">=</span> population</a>
-<a class="sourceLine" id="cb1-3" title="3"><span class="cf">else</span>:</a>
-<a class="sourceLine" id="cb1-4" title="4">    harvest_rate <span class="op">=</span> diagonal_matrix([<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.03</span>,<span class="dv">1</span>])</a>
-<a class="sourceLine" id="cb1-5" title="5">    current_harvest <span class="op">=</span> harvest_rate <span class="op">*</span> population</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> money[t<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> population.dot_product(prices) <span class="op">&gt;</span> retirement:</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    current_harvest <span class="op">=</span> population</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    harvest_rate <span class="op">=</span> diagonal_matrix([<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.03</span>,<span class="dv">1</span>])</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    current_harvest <span class="op">=</span> harvest_rate <span class="op">*</span> population</span></code></pre></div>
 <p>However, this is not necessarily the best harvesting scheme out there.</p></li>
 </ul></li>
 </ul>

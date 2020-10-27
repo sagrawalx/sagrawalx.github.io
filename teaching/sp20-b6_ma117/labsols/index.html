@@ -30,28 +30,28 @@ Spring 2020, Block 6 — MA117 —
 <h1 id="lab-1">Lab 1</h1>
 <h2 id="exercises">Exercises</h2>
 <ol type="1">
-<li><code>arbuthnot$girls</code></li>
+<li><p><code>arbuthnot$girls</code></p></li>
 <li><p>It looks like there’s a generally upwards trend.</p>
-<img src="1-e2.png" /></li>
+<p><img src="1-e2.png" /></p></li>
 <li><p>We generate the plot using the following command.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">plot</span>(arbuthnot<span class="op">$</span>year, arbuthnot<span class="op">$</span>boys <span class="op">/</span><span class="st"> </span>(arbuthnot<span class="op">$</span>boys <span class="op">+</span><span class="st">  </span>arbuthnot<span class="op">$</span>girls), <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>)  </a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(arbuthnot<span class="sc">$</span>year, arbuthnot<span class="sc">$</span>boys <span class="sc">/</span> (arbuthnot<span class="sc">$</span>boys <span class="sc">+</span>  arbuthnot<span class="sc">$</span>girls), <span class="at">type =</span> <span class="st">&quot;l&quot;</span>)  </span></code></pre></div>
 <p>The result is the following. It looks like it fluctuates a lot, but always stays solidly above 0.5.</p>
 <p><img src="1-e3.png" /></p></li>
 </ol>
 <h2 id="on-your-own">On Your Own</h2>
 <ol type="1">
-<li>The data is from years 1940-2002. There are 63 rows and 3 columns; the column names are “year,” “boys,” and “girls.”</li>
-<li>The data is on a similar scale: Arbuthnot’s data ran for 82 years, while this data runs for 63.</li>
+<li><p>The data is from years 1940-2002. There are 63 rows and 3 columns; the column names are “year,” “boys,” and “girls.”</p></li>
+<li><p>The data is on a similar scale: Arbuthnot’s data ran for 82 years, while this data runs for 63.</p></li>
 <li><p>There’s a generally decreasing trend in the ratio, but it stays above 1.</p>
-<img src="1-o3.png" /></li>
+<p><img src="1-o3.png" /></p></li>
 <li><p>The largest number of total births happened in 1961.</p>
 <p>To figure this out in R, we note that</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">which.max</span>(present<span class="op">$</span>boys <span class="op">+</span><span class="st"> </span>present<span class="op">$</span>girls)</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">which.max</span>(present<span class="sc">$</span>boys <span class="sc">+</span> present<span class="sc">$</span>girls)</span></code></pre></div>
 <p>returns the index of the largest entry of the vector <code>present$boys + present$girls</code>, which happens to be 22. Then, running</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">present[<span class="dv">22</span>,<span class="dv">1</span>]</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>present[<span class="dv">22</span>,<span class="dv">1</span>]</span></code></pre></div>
 <p>then returns the entry in row 22 and column 1 (ie, the year corresponding to index 22), which happens to be 1961.</p>
 <p>We can also put all of this together; the command</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">present[<span class="kw">which.max</span>(present<span class="op">$</span>boys <span class="op">+</span><span class="st"> </span>present<span class="op">$</span>girls), <span class="dv">1</span>]</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>present[<span class="fu">which.max</span>(present<span class="sc">$</span>boys <span class="sc">+</span> present<span class="sc">$</span>girls), <span class="dv">1</span>]</span></code></pre></div>
 <p>returns the answer 1961 in just one line.</p></li>
 </ol>
 <h1 id="lab-2">Lab 2</h1>
@@ -59,21 +59,21 @@ Spring 2020, Block 6 — MA117 —
 <ol type="1">
 <li><p>There are 20000 cases and 9 variables. <code>genhlth</code> is categorical (ordinal), <code>exerany</code>, <code>hlthplan</code>, <code>smoke100</code>, and <code>gender</code> are categorical (non-ordinal), <code>height</code>, <code>weight</code>, and <code>wtdesire</code> are numerical (continuous), and finally, <code>age</code> is numerical (discrete).</p></li>
 <li><p>For <code>height</code> and <code>age</code>, we get the following numerical summaries, and the interquartile ranges are 6 and 26, respectively.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">summary</span>(cdc<span class="op">$</span>height)</a>
-<a class="sourceLine" id="cb5-2" title="2">   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </a>
-<a class="sourceLine" id="cb5-3" title="3">  <span class="fl">48.00</span>   <span class="fl">64.00</span>   <span class="fl">67.00</span>   <span class="fl">67.18</span>   <span class="fl">70.00</span>   <span class="fl">93.00</span> </a>
-<a class="sourceLine" id="cb5-4" title="4"><span class="op">&gt;</span><span class="st"> </span><span class="kw">summary</span>(cdc<span class="op">$</span>age)</a>
-<a class="sourceLine" id="cb5-5" title="5">   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </a>
-<a class="sourceLine" id="cb5-6" title="6">  <span class="fl">18.00</span>   <span class="fl">31.00</span>   <span class="fl">43.00</span>   <span class="fl">45.07</span>   <span class="fl">57.00</span>   <span class="fl">99.00</span></a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(cdc<span class="sc">$</span>height)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fl">48.00</span>   <span class="fl">64.00</span>   <span class="fl">67.00</span>   <span class="fl">67.18</span>   <span class="fl">70.00</span>   <span class="fl">93.00</span> </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(cdc<span class="sc">$</span>age)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fl">18.00</span>   <span class="fl">31.00</span>   <span class="fl">43.00</span>   <span class="fl">45.07</span>   <span class="fl">57.00</span>   <span class="fl">99.00</span></span></code></pre></div>
 <p>For <code>gender</code> and <code>exerany</code>, we have the following relative frequency distributions.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">table</span>(cdc<span class="op">$</span>gender)<span class="op">/</span><span class="dv">20000</span></a>
-<a class="sourceLine" id="cb6-2" title="2"></a>
-<a class="sourceLine" id="cb6-3" title="3">      m       f </a>
-<a class="sourceLine" id="cb6-4" title="4"><span class="fl">0.47845</span> <span class="fl">0.52155</span></a>
-<a class="sourceLine" id="cb6-5" title="5"><span class="op">&gt;</span><span class="st"> </span><span class="kw">table</span>(cdc<span class="op">$</span>exerany)<span class="op">/</span><span class="dv">20000</span></a>
-<a class="sourceLine" id="cb6-6" title="6"></a>
-<a class="sourceLine" id="cb6-7" title="7">     <span class="dv">0</span>      <span class="dv">1</span> </a>
-<a class="sourceLine" id="cb6-8" title="8"><span class="fl">0.2543</span> <span class="fl">0.7457</span> </a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">table</span>(cdc<span class="sc">$</span>gender)<span class="sc">/</span><span class="dv">20000</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>      m       f </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fl">0.47845</span> <span class="fl">0.52155</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">table</span>(cdc<span class="sc">$</span>exerany)<span class="sc">/</span><span class="dv">20000</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>     <span class="dv">0</span>      <span class="dv">1</span> </span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fl">0.2543</span> <span class="fl">0.7457</span> </span></code></pre></div>
 <p>There are 9569 males in the sample, and 23.285% of the sample population reports being in excellent health.</p></li>
 <li><p>The mosaic plot (below) shows that relatively more men report having smoked 100 cigarettes than women.</p>
 <p><img src="2-e3.png" /></p></li>
@@ -93,26 +93,26 @@ Spring 2020, Block 6 — MA117 —
 <p><img src="2-o4a.png" /> <img src="2-o4b.png" /></p>
 <p>It appears that most people are happy with their weights, but there is more of a skew towards the positive side (ie, more people want to lose weight than gain).</p></li>
 <li><p>Here are numerical summaries.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1"><span class="op">&gt;</span><span class="st"> </span>cdc<span class="op">$</span>wdiff &lt;-<span class="st"> </span>wdiff</a>
-<a class="sourceLine" id="cb7-2" title="2"><span class="op">&gt;</span><span class="st"> </span>male &lt;-<span class="st"> </span><span class="kw">subset</span>(cdc, gender<span class="op">==</span><span class="st">&quot;m&quot;</span>)</a>
-<a class="sourceLine" id="cb7-3" title="3"><span class="op">&gt;</span><span class="st"> </span>female &lt;-<span class="st"> </span><span class="kw">subset</span>(cdc, gender<span class="op">==</span><span class="st">&quot;f&quot;</span>)</a>
-<a class="sourceLine" id="cb7-4" title="4"><span class="op">&gt;</span><span class="st"> </span><span class="kw">summary</span>(male<span class="op">$</span>wdiff)</a>
-<a class="sourceLine" id="cb7-5" title="5">   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </a>
-<a class="sourceLine" id="cb7-6" title="6"><span class="fl">-500.00</span>    <span class="fl">0.00</span>    <span class="fl">5.00</span>   <span class="fl">10.71</span>   <span class="fl">20.00</span>  <span class="fl">300.00</span> </a>
-<a class="sourceLine" id="cb7-7" title="7"><span class="op">&gt;</span><span class="st"> </span><span class="kw">summary</span>(female<span class="op">$</span>wdiff)</a>
-<a class="sourceLine" id="cb7-8" title="8">   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </a>
-<a class="sourceLine" id="cb7-9" title="9"> <span class="fl">-83.00</span>    <span class="fl">0.00</span>   <span class="fl">10.00</span>   <span class="fl">18.15</span>   <span class="fl">27.00</span>  <span class="fl">300.00</span> </a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> cdc<span class="sc">$</span>wdiff <span class="ot">&lt;-</span> wdiff</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> male <span class="ot">&lt;-</span> <span class="fu">subset</span>(cdc, gender<span class="sc">==</span><span class="st">&quot;m&quot;</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> female <span class="ot">&lt;-</span> <span class="fu">subset</span>(cdc, gender<span class="sc">==</span><span class="st">&quot;f&quot;</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(male<span class="sc">$</span>wdiff)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span><span class="fl">500.00</span>    <span class="fl">0.00</span>    <span class="fl">5.00</span>   <span class="fl">10.71</span>   <span class="fl">20.00</span>  <span class="fl">300.00</span> </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(female<span class="sc">$</span>wdiff)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a> <span class="sc">-</span><span class="fl">83.00</span>    <span class="fl">0.00</span>   <span class="fl">10.00</span>   <span class="fl">18.15</span>   <span class="fl">27.00</span>  <span class="fl">300.00</span> </span></code></pre></div>
 <p>And here is a side-by-side box plot.</p>
 <p><img src="2-e5.png" /></p>
 <p>It appears that women generally want to lose more weight (comparing mean and/or medians).</p></li>
 <li><p>It appears that 70.76% of the weights are within one standard deviation of the mean.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="op">&gt;</span><span class="st"> </span>m &lt;-<span class="st"> </span><span class="kw">mean</span>(cdc<span class="op">$</span>weight)</a>
-<a class="sourceLine" id="cb8-2" title="2"><span class="op">&gt;</span><span class="st"> </span>s &lt;-<span class="st"> </span><span class="kw">sd</span>(cdc<span class="op">$</span>weight)</a>
-<a class="sourceLine" id="cb8-3" title="3"><span class="op">&gt;</span><span class="st"> </span>within_one_sd &lt;-<span class="st"> </span><span class="kw">subset</span>(cdc, weight <span class="op">&gt;</span><span class="st"> </span>m<span class="op">-</span>s <span class="op">&amp;</span><span class="st"> </span>weight <span class="op">&lt;</span><span class="st"> </span>m<span class="op">+</span>s)</a>
-<a class="sourceLine" id="cb8-4" title="4"><span class="op">&gt;</span><span class="st"> </span><span class="kw">dim</span>(within_one_sd)</a>
-<a class="sourceLine" id="cb8-5" title="5">[<span class="dv">1</span>] <span class="dv">14152</span>    <span class="dv">10</span></a>
-<a class="sourceLine" id="cb8-6" title="6"><span class="op">&gt;</span><span class="st"> </span><span class="dv">14152</span><span class="op">/</span><span class="dv">20000</span></a>
-<a class="sourceLine" id="cb8-7" title="7">[<span class="dv">1</span>] <span class="fl">0.7076</span></a></code></pre></div></li>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> m <span class="ot">&lt;-</span> <span class="fu">mean</span>(cdc<span class="sc">$</span>weight)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> s <span class="ot">&lt;-</span> <span class="fu">sd</span>(cdc<span class="sc">$</span>weight)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> within_one_sd <span class="ot">&lt;-</span> <span class="fu">subset</span>(cdc, weight <span class="sc">&gt;</span> m<span class="sc">-</span>s <span class="sc">&amp;</span> weight <span class="sc">&lt;</span> m<span class="sc">+</span>s)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">dim</span>(within_one_sd)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="dv">14152</span>    <span class="dv">10</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="dv">14152</span><span class="sc">/</span><span class="dv">20000</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.7076</span></span></code></pre></div></li>
 </ol>
 <h1 id="lab-3">Lab 3</h1>
 <h2 id="exercises-2">Exercises</h2>
@@ -149,8 +149,8 @@ Spring 2020, Block 6 — MA117 —
 </ol>
 <h2 id="on-your-own-3">On Your Own</h2>
 <ol type="1">
-<li>B, C, D, A</li>
-<li>It probably has to do with the discreteness of the data.</li>
+<li><p>B, C, D, A</p></li>
+<li><p>It probably has to do with the discreteness of the data.</p></li>
 <li><p>The Q-Q plot and the histogram are displayed below. In the Q-Q plot, the data lies above the line. This means that sample quantiles are above theoretical quantiles, which means that at any given point, we’ve seen <em>more</em> data than we would expect if the distribution was normally distributed. This means that the mass of the distribution is further to the left, so the distribution should be right skewed. This is confirmed by the histogram.</p>
 <p><img src="4-o3.png" /></p>
 <p><img src="4-o3b.png" /></p></li>
@@ -164,24 +164,24 @@ Spring 2020, Block 6 — MA117 —
 <li><p><code>samp2</code> had a mean of 1418.44, which was less than the mean of <code>samp1</code>. If we took a larger sample, the sample mean should be closer to the true mean.</p></li>
 <li><p>There are 5000 elements. The distribution is roughly normal, centered at 1500. If we took 50000 means, the distribution should still look roughly normal centered at 1500.</p></li>
 <li><p>There are 100 elements. Each is a mean of a sample of 50 areas.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="op">&gt;</span><span class="st"> </span>sample_means_small</a>
-<a class="sourceLine" id="cb9-2" title="2">  [<span class="dv">1</span>] <span class="fl">1636.96</span> <span class="fl">1512.40</span> <span class="fl">1400.68</span> <span class="fl">1539.86</span> <span class="fl">1584.10</span> <span class="fl">1513.30</span></a>
-<a class="sourceLine" id="cb9-3" title="3">  [<span class="dv">7</span>] <span class="fl">1488.74</span> <span class="fl">1395.66</span> <span class="fl">1524.02</span> <span class="fl">1537.40</span> <span class="fl">1520.12</span> <span class="fl">1479.32</span></a>
-<a class="sourceLine" id="cb9-4" title="4"> [<span class="dv">13</span>] <span class="fl">1385.42</span> <span class="fl">1502.90</span> <span class="fl">1532.00</span> <span class="fl">1510.06</span> <span class="fl">1542.00</span> <span class="fl">1429.46</span></a>
-<a class="sourceLine" id="cb9-5" title="5"> [<span class="dv">19</span>] <span class="fl">1361.28</span> <span class="fl">1577.32</span> <span class="fl">1496.66</span> <span class="fl">1592.52</span> <span class="fl">1464.08</span> <span class="fl">1580.18</span></a>
-<a class="sourceLine" id="cb9-6" title="6"> [<span class="dv">25</span>] <span class="fl">1689.26</span> <span class="fl">1403.20</span> <span class="fl">1473.34</span> <span class="fl">1465.64</span> <span class="fl">1389.28</span> <span class="fl">1464.44</span></a>
-<a class="sourceLine" id="cb9-7" title="7"> [<span class="dv">31</span>] <span class="fl">1560.10</span> <span class="fl">1611.22</span> <span class="fl">1551.54</span> <span class="fl">1393.10</span> <span class="fl">1616.98</span> <span class="fl">1554.44</span></a>
-<a class="sourceLine" id="cb9-8" title="8"> [<span class="dv">37</span>] <span class="fl">1494.38</span> <span class="fl">1368.18</span> <span class="fl">1508.28</span> <span class="fl">1492.74</span> <span class="fl">1453.42</span> <span class="fl">1406.52</span></a>
-<a class="sourceLine" id="cb9-9" title="9"> [<span class="dv">43</span>] <span class="fl">1525.18</span> <span class="fl">1561.12</span> <span class="fl">1408.74</span> <span class="fl">1468.86</span> <span class="fl">1403.62</span> <span class="fl">1471.80</span></a>
-<a class="sourceLine" id="cb9-10" title="10"> [<span class="dv">49</span>] <span class="fl">1524.42</span> <span class="fl">1565.74</span> <span class="fl">1524.10</span> <span class="fl">1514.20</span> <span class="fl">1556.24</span> <span class="fl">1509.26</span></a>
-<a class="sourceLine" id="cb9-11" title="11"> [<span class="dv">55</span>] <span class="fl">1509.12</span> <span class="fl">1501.52</span> <span class="fl">1595.48</span> <span class="fl">1437.08</span> <span class="fl">1483.24</span> <span class="fl">1581.10</span></a>
-<a class="sourceLine" id="cb9-12" title="12"> [<span class="dv">61</span>] <span class="fl">1613.56</span> <span class="fl">1527.60</span> <span class="fl">1466.04</span> <span class="fl">1548.70</span> <span class="fl">1548.04</span> <span class="fl">1539.76</span></a>
-<a class="sourceLine" id="cb9-13" title="13"> [<span class="dv">67</span>] <span class="fl">1524.82</span> <span class="fl">1532.24</span> <span class="fl">1487.40</span> <span class="fl">1498.16</span> <span class="fl">1343.76</span> <span class="fl">1566.02</span></a>
-<a class="sourceLine" id="cb9-14" title="14"> [<span class="dv">73</span>] <span class="fl">1622.50</span> <span class="fl">1438.38</span> <span class="fl">1475.00</span> <span class="fl">1514.18</span> <span class="fl">1521.56</span> <span class="fl">1581.84</span></a>
-<a class="sourceLine" id="cb9-15" title="15"> [<span class="dv">79</span>] <span class="fl">1492.78</span> <span class="fl">1443.68</span> <span class="fl">1467.14</span> <span class="fl">1482.70</span> <span class="fl">1572.48</span> <span class="fl">1450.32</span></a>
-<a class="sourceLine" id="cb9-16" title="16"> [<span class="dv">85</span>] <span class="fl">1564.26</span> <span class="fl">1462.30</span> <span class="fl">1595.52</span> <span class="fl">1645.76</span> <span class="fl">1526.34</span> <span class="fl">1513.40</span></a>
-<a class="sourceLine" id="cb9-17" title="17"> [<span class="dv">91</span>] <span class="fl">1575.64</span> <span class="fl">1511.74</span> <span class="fl">1451.78</span> <span class="fl">1528.62</span> <span class="fl">1525.22</span> <span class="fl">1454.78</span></a>
-<a class="sourceLine" id="cb9-18" title="18"> [<span class="dv">97</span>] <span class="fl">1423.96</span> <span class="fl">1572.24</span> <span class="fl">1451.92</span> <span class="fl">1566.10</span></a></code></pre></div></li>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> sample_means_small</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">1</span>] <span class="fl">1636.96</span> <span class="fl">1512.40</span> <span class="fl">1400.68</span> <span class="fl">1539.86</span> <span class="fl">1584.10</span> <span class="fl">1513.30</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">7</span>] <span class="fl">1488.74</span> <span class="fl">1395.66</span> <span class="fl">1524.02</span> <span class="fl">1537.40</span> <span class="fl">1520.12</span> <span class="fl">1479.32</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a> [<span class="dv">13</span>] <span class="fl">1385.42</span> <span class="fl">1502.90</span> <span class="fl">1532.00</span> <span class="fl">1510.06</span> <span class="fl">1542.00</span> <span class="fl">1429.46</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a> [<span class="dv">19</span>] <span class="fl">1361.28</span> <span class="fl">1577.32</span> <span class="fl">1496.66</span> <span class="fl">1592.52</span> <span class="fl">1464.08</span> <span class="fl">1580.18</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a> [<span class="dv">25</span>] <span class="fl">1689.26</span> <span class="fl">1403.20</span> <span class="fl">1473.34</span> <span class="fl">1465.64</span> <span class="fl">1389.28</span> <span class="fl">1464.44</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a> [<span class="dv">31</span>] <span class="fl">1560.10</span> <span class="fl">1611.22</span> <span class="fl">1551.54</span> <span class="fl">1393.10</span> <span class="fl">1616.98</span> <span class="fl">1554.44</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a> [<span class="dv">37</span>] <span class="fl">1494.38</span> <span class="fl">1368.18</span> <span class="fl">1508.28</span> <span class="fl">1492.74</span> <span class="fl">1453.42</span> <span class="fl">1406.52</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a> [<span class="dv">43</span>] <span class="fl">1525.18</span> <span class="fl">1561.12</span> <span class="fl">1408.74</span> <span class="fl">1468.86</span> <span class="fl">1403.62</span> <span class="fl">1471.80</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a> [<span class="dv">49</span>] <span class="fl">1524.42</span> <span class="fl">1565.74</span> <span class="fl">1524.10</span> <span class="fl">1514.20</span> <span class="fl">1556.24</span> <span class="fl">1509.26</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a> [<span class="dv">55</span>] <span class="fl">1509.12</span> <span class="fl">1501.52</span> <span class="fl">1595.48</span> <span class="fl">1437.08</span> <span class="fl">1483.24</span> <span class="fl">1581.10</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a> [<span class="dv">61</span>] <span class="fl">1613.56</span> <span class="fl">1527.60</span> <span class="fl">1466.04</span> <span class="fl">1548.70</span> <span class="fl">1548.04</span> <span class="fl">1539.76</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a> [<span class="dv">67</span>] <span class="fl">1524.82</span> <span class="fl">1532.24</span> <span class="fl">1487.40</span> <span class="fl">1498.16</span> <span class="fl">1343.76</span> <span class="fl">1566.02</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a> [<span class="dv">73</span>] <span class="fl">1622.50</span> <span class="fl">1438.38</span> <span class="fl">1475.00</span> <span class="fl">1514.18</span> <span class="fl">1521.56</span> <span class="fl">1581.84</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a> [<span class="dv">79</span>] <span class="fl">1492.78</span> <span class="fl">1443.68</span> <span class="fl">1467.14</span> <span class="fl">1482.70</span> <span class="fl">1572.48</span> <span class="fl">1450.32</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a> [<span class="dv">85</span>] <span class="fl">1564.26</span> <span class="fl">1462.30</span> <span class="fl">1595.52</span> <span class="fl">1645.76</span> <span class="fl">1526.34</span> <span class="fl">1513.40</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a> [<span class="dv">91</span>] <span class="fl">1575.64</span> <span class="fl">1511.74</span> <span class="fl">1451.78</span> <span class="fl">1528.62</span> <span class="fl">1525.22</span> <span class="fl">1454.78</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a> [<span class="dv">97</span>] <span class="fl">1423.96</span> <span class="fl">1572.24</span> <span class="fl">1451.92</span> <span class="fl">1566.10</span></span></code></pre></div></li>
 <li><p>When the sample size is larger, the variability decreases.</p>
 <p><img src="5a-e6.png" /></p></li>
 </ol>
@@ -195,10 +195,10 @@ Spring 2020, Block 6 — MA117 —
 <li><p><code>sample_means150</code> has a narrower distribution. If we want to be more confident about our estimate, we should use a distribution with a narrower distribution (ie, we should take larger sample sizes).</p>
 <p><img src="5a-o4.png" /></p>
 <p>To generate this plot, I ran the following.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1"><span class="op">&gt;</span><span class="st"> </span>sample_mean =<span class="st"> </span><span class="kw">c</span>(sample_means50, sample_means150)</a>
-<a class="sourceLine" id="cb10-2" title="2"><span class="op">&gt;</span><span class="st"> </span>sample_size =<span class="st"> </span><span class="kw">c</span>(<span class="kw">rep</span>(<span class="st">&quot;fifty&quot;</span>,<span class="dv">5000</span>), <span class="kw">rep</span>(<span class="st">&quot;one-fifty&quot;</span>,<span class="dv">5000</span>))</a>
-<a class="sourceLine" id="cb10-3" title="3"><span class="op">&gt;</span><span class="st"> </span>frame =<span class="st"> </span><span class="kw">data.frame</span>(sample_mean, sample_size)</a>
-<a class="sourceLine" id="cb10-4" title="4"><span class="op">&gt;</span><span class="st"> </span><span class="kw">ggplot</span>(frame, <span class="kw">aes</span>(<span class="dt">x=</span>sample_mean, <span class="dt">color=</span>sample_size)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>(<span class="dt">fill=</span><span class="st">&quot;white&quot;</span>, <span class="dt">alpha=</span><span class="fl">0.1</span>, <span class="dt">position=</span><span class="st">&quot;identity&quot;</span>)</a></code></pre></div></li>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> sample_mean <span class="ot">=</span> <span class="fu">c</span>(sample_means50, sample_means150)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> sample_size <span class="ot">=</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">&quot;fifty&quot;</span>,<span class="dv">5000</span>), <span class="fu">rep</span>(<span class="st">&quot;one-fifty&quot;</span>,<span class="dv">5000</span>))</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> frame <span class="ot">=</span> <span class="fu">data.frame</span>(sample_mean, sample_size)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ggplot</span>(frame, <span class="fu">aes</span>(<span class="at">x=</span>sample_mean, <span class="at">color=</span>sample_size)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">fill=</span><span class="st">&quot;white&quot;</span>, <span class="at">alpha=</span><span class="fl">0.1</span>, <span class="at">position=</span><span class="st">&quot;identity&quot;</span>)</span></code></pre></div></li>
 </ol>
 <h1 id="lab-5b">Lab 5B</h1>
 <h2 id="exercises-5">Exercises</h2>
@@ -256,24 +256,24 @@ Spring 2020, Block 6 — MA117 —
 <h2 id="on-your-own-7">On Your Own</h2>
 <ol type="1">
 <li><p>The 95% confidence interval is (38.15, 38.52).</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1">ncs =<span class="st"> </span><span class="kw">subset</span>(nc, weeks <span class="op">!=</span><span class="st"> &quot;NA&quot;</span>)</a>
-<a class="sourceLine" id="cb11-2" title="2">me =<span class="st"> </span><span class="kw">qt</span>(<span class="fl">0.975</span>,<span class="dv">997</span>) <span class="op">*</span><span class="st"> </span><span class="kw">sd</span>(ncs<span class="op">$</span>weeks)<span class="op">/</span><span class="kw">sqrt</span>(<span class="dv">998</span>)</a>
-<a class="sourceLine" id="cb11-3" title="3">xbar =<span class="st"> </span><span class="kw">mean</span>(ncs<span class="op">$</span>weeks)</a>
-<a class="sourceLine" id="cb11-4" title="4"><span class="kw">c</span>(xbar<span class="op">-</span>me, xbar <span class="op">+</span><span class="st"> </span>me)</a></code></pre></div></li>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>ncs <span class="ot">=</span> <span class="fu">subset</span>(nc, weeks <span class="sc">!=</span> <span class="st">&quot;NA&quot;</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>me <span class="ot">=</span> <span class="fu">qt</span>(<span class="fl">0.975</span>,<span class="dv">997</span>) <span class="sc">*</span> <span class="fu">sd</span>(ncs<span class="sc">$</span>weeks)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="dv">998</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>xbar <span class="ot">=</span> <span class="fu">mean</span>(ncs<span class="sc">$</span>weeks)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(xbar<span class="sc">-</span>me, xbar <span class="sc">+</span> me)</span></code></pre></div></li>
 <li><p>The 90% confidence interval is (38.18, 38.49).</p></li>
 <li><p>The t-value is 1.38 with 175.45 degrees of freedom, and p-value 0.169. This is not sufficient evidence to reject the null hypothesis that the average weight gained by the two groups is the same.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1">younger =<span class="st"> </span><span class="kw">subset</span>(ncs, mature<span class="op">==</span><span class="st">&quot;younger mom&quot;</span>)</a>
-<a class="sourceLine" id="cb12-2" title="2">mature =<span class="st"> </span><span class="kw">subset</span>(ncs, mature<span class="op">==</span><span class="st">&quot;mature mom&quot;</span>)</a>
-<a class="sourceLine" id="cb12-3" title="3"><span class="kw">t.test</span>(younger<span class="op">$</span>gained, mature<span class="op">$</span>gained)</a></code></pre></div></li>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>younger <span class="ot">=</span> <span class="fu">subset</span>(ncs, mature<span class="sc">==</span><span class="st">&quot;younger mom&quot;</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>mature <span class="ot">=</span> <span class="fu">subset</span>(ncs, mature<span class="sc">==</span><span class="st">&quot;mature mom&quot;</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(younger<span class="sc">$</span>gained, mature<span class="sc">$</span>gained)</span></code></pre></div></li>
 <li><p>It seems that mothers 34 and under are classified as “younger” while those 35 and older are “mature.”</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1"><span class="kw">max</span>(younger<span class="op">$</span>mage)</a>
-<a class="sourceLine" id="cb13-2" title="2"><span class="kw">min</span>(mature<span class="op">$</span>mage)</a></code></pre></div></li>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(younger<span class="sc">$</span>mage)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(mature<span class="sc">$</span>mage)</span></code></pre></div></li>
 <li><p>Let <span class="math inline">\(\mu_1\)</span> be the average weight of babies born to younger moms and <span class="math inline">\(\mu_2\)</span> the average weight born to mature moms. Let <span class="math inline">\(H_0\)</span> be the hypothesis that these means are the same, and <span class="math inline">\(H_A\)</span> that they are different. A boxplot of the distributions is displayed below. Running a t-test gives us a p-value of 0.85, so we fail to reject the hypothesis that these two means are different.</p>
 <p><img src="7-o5.png" /></p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1"><span class="kw">ggplot</span>(nc, <span class="kw">aes</span>(mature, weight)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>()</a>
-<a class="sourceLine" id="cb14-2" title="2">younger =<span class="st"> </span><span class="kw">subset</span>(nc, mature<span class="op">==</span><span class="st">&quot;younger mom&quot;</span>)</a>
-<a class="sourceLine" id="cb14-3" title="3">mature =<span class="st"> </span><span class="kw">subset</span>(nc, mature<span class="op">==</span><span class="st">&quot;mature mom&quot;</span>)</a>
-<a class="sourceLine" id="cb14-4" title="4"><span class="kw">t.test</span>(younger<span class="op">$</span>weight, mature<span class="op">$</span>weight)</a></code></pre></div></li>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(nc, <span class="fu">aes</span>(mature, weight)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>younger <span class="ot">=</span> <span class="fu">subset</span>(nc, mature<span class="sc">==</span><span class="st">&quot;younger mom&quot;</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>mature <span class="ot">=</span> <span class="fu">subset</span>(nc, mature<span class="sc">==</span><span class="st">&quot;mature mom&quot;</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(younger<span class="sc">$</span>weight, mature<span class="sc">$</span>weight)</span></code></pre></div></li>
 </ol>
 <h1 id="lab-8">Lab 8</h1>
 <h2 id="exercises-8">Exercises</h2>
@@ -284,9 +284,9 @@ Spring 2020, Block 6 — MA117 —
 <li><p>132185.4.</p></li>
 <li><p>The equation is <span class="math inline">\(y = 1.83x + 415.24\)</span>.</p>
 <p><img src="8-e4.png" /></p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" title="1"><span class="kw">ggplot</span>(mlb11, <span class="kw">aes</span>(homeruns, runs)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">method=</span><span class="st">&quot;lm&quot;</span>)</a>
-<a class="sourceLine" id="cb15-2" title="2">m2 =<span class="st"> </span><span class="kw">lm</span>(runs <span class="op">~</span><span class="st"> </span>homeruns, <span class="dt">data =</span> mlb11)</a>
-<a class="sourceLine" id="cb15-3" title="3"><span class="kw">summary</span>(m2)</a></code></pre></div></li>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mlb11, <span class="fu">aes</span>(homeruns, runs)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&quot;lm&quot;</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>m2 <span class="ot">=</span> <span class="fu">lm</span>(runs <span class="sc">~</span> homeruns, <span class="at">data =</span> mlb11)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m2)</span></code></pre></div></li>
 <li><p>(Maybe this problem wanted 5579 <code>at_bats</code>…?) The model would predict 728.32. The actual runs were 713, so the model overestimates. The residual is -15.32.</p></li>
 <li><p>There’s not a clear pattern in the residuals.</p></li>
 <li><p>The residuals are normalish, but the fit is not great.</p></li>
@@ -295,30 +295,30 @@ Spring 2020, Block 6 — MA117 —
 <h2 id="on-your-own-8">On Your Own</h2>
 <ol type="1">
 <li><p>The relationship between <code>runs</code> and <code>bat_avg</code> seems sort of linear.</p>
-<p><embed src="8-o1.ong" /></p></li>
+<p><img src="8-o1.ong" /></p></li>
 <li><p>The <span class="math inline">\(R^2\)</span> is 0.65, compared to 0.37 for <code>runs</code> against <code>at_bats</code>, so the linear fit is better in this situation.</p></li>
 <li><p>It seems that <code>bat_avg</code> is the best predictor for <code>runs</code>.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">cor</span>(mlb11<span class="op">$</span>runs, mlb11<span class="op">$</span>at_bats)<span class="op">^</span><span class="dv">2</span></a>
-<a class="sourceLine" id="cb16-2" title="2">[<span class="dv">1</span>] <span class="fl">0.3728654</span></a>
-<a class="sourceLine" id="cb16-3" title="3"><span class="op">&gt;</span><span class="st"> </span><span class="kw">cor</span>(mlb11<span class="op">$</span>runs, mlb11<span class="op">$</span>hits)<span class="op">^</span><span class="dv">2</span></a>
-<a class="sourceLine" id="cb16-4" title="4">[<span class="dv">1</span>] <span class="fl">0.6419388</span></a>
-<a class="sourceLine" id="cb16-5" title="5"><span class="op">&gt;</span><span class="st"> </span><span class="kw">cor</span>(mlb11<span class="op">$</span>runs, mlb11<span class="op">$</span>homeruns)<span class="op">^</span><span class="dv">2</span></a>
-<a class="sourceLine" id="cb16-6" title="6">[<span class="dv">1</span>] <span class="fl">0.6265636</span></a>
-<a class="sourceLine" id="cb16-7" title="7"><span class="op">&gt;</span><span class="st"> </span><span class="kw">cor</span>(mlb11<span class="op">$</span>runs, mlb11<span class="op">$</span>bat_avg)<span class="op">^</span><span class="dv">2</span></a>
-<a class="sourceLine" id="cb16-8" title="8">[<span class="dv">1</span>] <span class="fl">0.6560771</span></a>
-<a class="sourceLine" id="cb16-9" title="9"><span class="op">&gt;</span><span class="st"> </span><span class="kw">cor</span>(mlb11<span class="op">$</span>runs, mlb11<span class="op">$</span>strikeouts)<span class="op">^</span><span class="dv">2</span></a>
-<a class="sourceLine" id="cb16-10" title="10">[<span class="dv">1</span>] <span class="fl">0.1693579</span></a>
-<a class="sourceLine" id="cb16-11" title="11"><span class="op">&gt;</span><span class="st"> </span><span class="kw">cor</span>(mlb11<span class="op">$</span>runs, mlb11<span class="op">$</span>stolen_bases)<span class="op">^</span><span class="dv">2</span></a>
-<a class="sourceLine" id="cb16-12" title="12">[<span class="dv">1</span>] <span class="fl">0.002913993</span></a>
-<a class="sourceLine" id="cb16-13" title="13"><span class="op">&gt;</span><span class="st"> </span><span class="kw">cor</span>(mlb11<span class="op">$</span>runs, mlb11<span class="op">$</span>wins)<span class="op">^</span><span class="dv">2</span></a>
-<a class="sourceLine" id="cb16-14" title="14">[<span class="dv">1</span>] <span class="fl">0.3609712</span></a></code></pre></div></li>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">cor</span>(mlb11<span class="sc">$</span>runs, mlb11<span class="sc">$</span>at_bats)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.3728654</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">cor</span>(mlb11<span class="sc">$</span>runs, mlb11<span class="sc">$</span>hits)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.6419388</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">cor</span>(mlb11<span class="sc">$</span>runs, mlb11<span class="sc">$</span>homeruns)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.6265636</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">cor</span>(mlb11<span class="sc">$</span>runs, mlb11<span class="sc">$</span>bat_avg)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.6560771</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">cor</span>(mlb11<span class="sc">$</span>runs, mlb11<span class="sc">$</span>strikeouts)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.1693579</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">cor</span>(mlb11<span class="sc">$</span>runs, mlb11<span class="sc">$</span>stolen_bases)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.002913993</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">cor</span>(mlb11<span class="sc">$</span>runs, mlb11<span class="sc">$</span>wins)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.3609712</span></span></code></pre></div></li>
 <li><p>All of them are better. The best seems to be <code>new_obs</code>.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" title="1"><span class="op">&gt;</span><span class="st"> </span><span class="kw">cor</span>(mlb11<span class="op">$</span>runs, mlb11<span class="op">$</span>new_onbase)<span class="op">^</span><span class="dv">2</span></a>
-<a class="sourceLine" id="cb17-2" title="2">[<span class="dv">1</span>] <span class="fl">0.8491053</span></a>
-<a class="sourceLine" id="cb17-3" title="3"><span class="op">&gt;</span><span class="st"> </span><span class="kw">cor</span>(mlb11<span class="op">$</span>runs, mlb11<span class="op">$</span>new_slug)<span class="op">^</span><span class="dv">2</span></a>
-<a class="sourceLine" id="cb17-4" title="4">[<span class="dv">1</span>] <span class="fl">0.8968704</span></a>
-<a class="sourceLine" id="cb17-5" title="5"><span class="op">&gt;</span><span class="st"> </span><span class="kw">cor</span>(mlb11<span class="op">$</span>runs, mlb11<span class="op">$</span>new_obs)<span class="op">^</span><span class="dv">2</span></a>
-<a class="sourceLine" id="cb17-6" title="6">[<span class="dv">1</span>] <span class="fl">0.9349271</span></a></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">cor</span>(mlb11<span class="sc">$</span>runs, mlb11<span class="sc">$</span>new_onbase)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.8491053</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">cor</span>(mlb11<span class="sc">$</span>runs, mlb11<span class="sc">$</span>new_slug)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.8968704</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">cor</span>(mlb11<span class="sc">$</span>runs, mlb11<span class="sc">$</span>new_obs)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.9349271</span></span></code></pre></div>
 <p><img src="8-o4.png" /></p></li>
 <li><p>There does appear to be no pattern in the residual plot, and the residuals are at least sort of normal.</p>
 <p><img src="8-o5.png" /> <img src="8-o5b.png" /></p></li>

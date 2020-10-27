@@ -47,11 +47,11 @@ Spring 2019, Block 8 — MA220 — Population Project
 \end{bmatrix}\]</span></p>
 <p>Suppose that the lake was empty in the year 2000 and we introduced 100 newborn fish into the lake. Let <span class="math inline">\(v_n\)</span> denote the population vector when <span class="math inline">\(n\)</span> years have elapsed. In other words, we have <span class="math inline">\(v_0 = (100, 0, 0, 0, 0)\)</span>, <span class="math inline">\(v_1 = Av_0\)</span>, <span class="math inline">\(v_2 = Av_1 = A^2v_0\)</span>, and so forth. The matrix <span class="math inline">\(A\)</span> is called the <em>evolution matrix</em> of the system.</p>
 <p>Here’s how you would put the evolution matrix <span class="math inline">\(A\)</span> and the population vector <span class="math inline">\(v_0\)</span> into SageMath.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1">A <span class="op">=</span> matrix([[<span class="dv">0</span>,<span class="fl">1.5</span>,<span class="fl">4.2</span>,<span class="dv">0</span>],[.<span class="dv">5</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>],[<span class="dv">0</span>,.<span class="dv">6</span>,<span class="dv">0</span>,<span class="dv">0</span>],[<span class="dv">0</span>,<span class="dv">0</span>,.<span class="dv">4</span>,<span class="dv">0</span>]])</a>
-<a class="sourceLine" id="cb1-2" title="2">v <span class="op">=</span> vector([<span class="dv">100</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> matrix([[<span class="dv">0</span>,<span class="fl">1.5</span>,<span class="fl">4.2</span>,<span class="dv">0</span>],[<span class="fl">.5</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>],[<span class="dv">0</span>,<span class="fl">.6</span>,<span class="dv">0</span>,<span class="dv">0</span>],[<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">.4</span>,<span class="dv">0</span>]])</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> vector([<span class="dv">100</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>])</span></code></pre></div>
 <p>Then, to calculate <span class="math inline">\(v_1 = Av_0\)</span> and <span class="math inline">\(v_2 = A^2v_0\)</span>, you would type in the following.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb2-1" title="1">A<span class="op">*</span>v</a>
-<a class="sourceLine" id="cb2-2" title="2">A<span class="op">^</span><span class="dv">2</span><span class="op">*</span>v</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>A<span class="op">*</span>v</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>A<span class="op">^</span><span class="dv">2</span><span class="op">*</span>v</span></code></pre></div>
 <h2 id="part-1-basics">Part 1: Basics</h2>
 <p>To answer the following questions, you might find it useful to compute a few of the terms <span class="math inline">\(v_1, v_2, v_3, ...\)</span> by hand, to get some intuition about what the evolution matrix is actually doing to the population vectors.</p>
 <ol type="1">
@@ -78,42 +78,42 @@ Spring 2019, Block 8 — MA220 — Population Project
 </ol>
 <h2 id="part-4-maximizing-harvesting">Part 4: Maximizing Harvesting</h2>
 <p>In the previous part, we discussed a very basic harvesting scheme: harvest some fixed percentage of fish every year. Here’s a SageMath code snippet that calculates the total number of fish harvested over the course of 50 years, assuming that every year we harvest 50% of the total population. Lines preceded by a # are comments; they don’t do anything, they’re just there to explain to you what each step of the code is doing.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb3-1" title="1"><span class="co"># the evolution matrix and population vector</span></a>
-<a class="sourceLine" id="cb3-2" title="2">A <span class="op">=</span> matrix([[<span class="dv">0</span>,<span class="fl">1.5</span>,<span class="fl">4.2</span>,<span class="dv">0</span>],[.<span class="dv">5</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>],[<span class="dv">0</span>,.<span class="dv">6</span>,<span class="dv">0</span>,<span class="dv">0</span>],[<span class="dv">0</span>,<span class="dv">0</span>,.<span class="dv">4</span>,<span class="dv">0</span>]])</a>
-<a class="sourceLine" id="cb3-3" title="3">population <span class="op">=</span> vector([<span class="dv">100</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>])</a>
-<a class="sourceLine" id="cb3-4" title="4"></a>
-<a class="sourceLine" id="cb3-5" title="5"><span class="co"># the percentage of fish harvested yearly</span></a>
-<a class="sourceLine" id="cb3-6" title="6">harvest_rate <span class="op">=</span> <span class="fl">0.5</span></a>
-<a class="sourceLine" id="cb3-7" title="7"></a>
-<a class="sourceLine" id="cb3-8" title="8"><span class="co"># the total number of harvested fish of all ages up till now</span></a>
-<a class="sourceLine" id="cb3-9" title="9"><span class="co"># we start off with 0 harvested of each age</span></a>
-<a class="sourceLine" id="cb3-10" title="10">harvested <span class="op">=</span> vector([<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>])</a>
-<a class="sourceLine" id="cb3-11" title="11"></a>
-<a class="sourceLine" id="cb3-12" title="12"><span class="co"># loop through 50 years</span></a>
-<a class="sourceLine" id="cb3-13" title="13"><span class="cf">for</span> t <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">50</span>):</a>
-<a class="sourceLine" id="cb3-14" title="14">    <span class="co"># compute how many fish we harvest this year</span></a>
-<a class="sourceLine" id="cb3-15" title="15">    current_harvest <span class="op">=</span> harvest_rate <span class="op">*</span> population</a>
-<a class="sourceLine" id="cb3-16" title="16"></a>
-<a class="sourceLine" id="cb3-17" title="17">    <span class="co"># add the current year&#39;s harvest to the harvested totals</span></a>
-<a class="sourceLine" id="cb3-18" title="18">    harvested <span class="op">+=</span> current_harvest</a>
-<a class="sourceLine" id="cb3-19" title="19"></a>
-<a class="sourceLine" id="cb3-20" title="20">    <span class="co"># remove the current year&#39;s harvest from the population</span></a>
-<a class="sourceLine" id="cb3-21" title="21">    population <span class="op">-=</span> current_harvest</a>
-<a class="sourceLine" id="cb3-22" title="22"></a>
-<a class="sourceLine" id="cb3-23" title="23">    <span class="co"># update population using evolution matrix</span></a>
-<a class="sourceLine" id="cb3-24" title="24">    population <span class="op">=</span> A <span class="op">*</span> population</a>
-<a class="sourceLine" id="cb3-25" title="25"></a>
-<a class="sourceLine" id="cb3-26" title="26"><span class="co"># compute the sum of entries of the harvested vector</span></a>
-<a class="sourceLine" id="cb3-27" title="27">total <span class="op">=</span> harvested.norm(<span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb3-28" title="28">total</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># the evolution matrix and population vector</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> matrix([[<span class="dv">0</span>,<span class="fl">1.5</span>,<span class="fl">4.2</span>,<span class="dv">0</span>],[<span class="fl">.5</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>],[<span class="dv">0</span>,<span class="fl">.6</span>,<span class="dv">0</span>,<span class="dv">0</span>],[<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">.4</span>,<span class="dv">0</span>]])</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>population <span class="op">=</span> vector([<span class="dv">100</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>])</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># the percentage of fish harvested yearly</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>harvest_rate <span class="op">=</span> <span class="fl">0.5</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># the total number of harvested fish of all ages up till now</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># we start off with 0 harvested of each age</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>harvested <span class="op">=</span> vector([<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>])</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># loop through 50 years</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> t <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">50</span>):</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># compute how many fish we harvest this year</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    current_harvest <span class="op">=</span> harvest_rate <span class="op">*</span> population</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># add the current year&#39;s harvest to the harvested totals</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    harvested <span class="op">+=</span> current_harvest</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># remove the current year&#39;s harvest from the population</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    population <span class="op">-=</span> current_harvest</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># update population using evolution matrix</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    population <span class="op">=</span> A <span class="op">*</span> population</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="co"># compute the sum of entries of the harvested vector</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> harvested.norm(<span class="dv">1</span>)</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>total</span></code></pre></div>
 <p>The output of the above code is 102.290076279678, which tells me that over the course of 50 years, the total output of the this harvesting scheme is about 102 fish.</p>
 <p>Your job is to come up with a harvesting scheme that maximizes the number of fish harvested from the lake over the course of 50 years. You might start with experimenting with just varying the percentage of fish harvested yearly, but you don’t have to harvest a fixed percentage of all the fish every year. For example, what if you harvest only fish of certain ages? What if you harvest more fish of certain ages than of other ages? What if you wait some number of years before starting to harvest? The possibilities are endless! Be creative :)</p>
 <p>You don’t need to prove mathematically that your harvesting scheme is the best possible scheme out there, but you should clearly explain all of the harvesting scheme you experimented with in words, and indicate which one you found to be the best. For the best harvesting scheme you found, you should also include clearly commented code (like above) that you used to calculate the total number of fish harvested over the course of 50 years.</p>
-<p>This is kind of just a game; depending on what harvesting scheme you choose, you may end up with unrealisitically<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> large numbers of fish, and that’s okay! To make it more game-like, maybe there’ll be an edible prize for the best harvesting scheme in the class! :)</p>
-<section class="footnotes">
+<p>This is kind of just a game; depending on what harvesting scheme you choose, you may end up with unrealisitically<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> large numbers of fish, and that’s okay! To make it more game-like, maybe there’ll be an edible prize for the best harvesting scheme in the class! :)</p>
+<section class="footnotes" role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1"><p>There are some ways of modifying the evolution part of the model to avoid unrealistically large numbers of fish, but I’ll leave that for you to explore yourself another day!<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn1" role="doc-endnote"><p>There are some ways of modifying the evolution part of the model to avoid unrealistically large numbers of fish, but I’ll leave that for you to explore yourself another day!<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
