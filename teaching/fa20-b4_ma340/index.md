@@ -1,0 +1,345 @@
+---
+layout: default
+title: Home
+bannertext: Fall 2020, Block 4 — MA340
+bannerlink: teaching/fa20-b4_ma340
+nonav: true
+---
+
+
+# Information
+
+* Instructor: Sunny (<span class="email" data-localpart="sagrawal" data-domain="coloradocollege.edu"></span>)
+* [Course syllabus](syllabus)
+* [Sage reference](sage)
+
+# Live event schedule
+ 
+* Group sessions: 
+    - Wed 10am MT: (group assignments TBA)
+    - Wed 11am MT: (group assignments TBA)
+* Office hours: 
+    - Mornings: Mon Fri 10-11am MT, Tue Thu 11-12am MT
+    - Afternoons: Mon Tue Thu Fri 2-3pm MT
+    - More by request; just email to ask!
+* [Zoom links on Canvas](https://canvas.coloradocollege.edu/courses/31880/external_tools/483)
+
+# Links 
+
+{% assign wr = "[Weekly reflection form](https://docs.google.com/forms/d/e/1FAIpQLScNlg1xsQUxZks9IG38ImyWTtPMVu-v6HlP9BwULrtBmM4Xqw/viewform)" %}
+
+* [Slack workspace](https://join.slack.com/t/fall2020block-bzo8759/signup) (for discussion)
+* Gradescope (for submitting assignments)
+* [Canvas](https://canvas.coloradocollege.edu/courses/31880/) (for [Zoom links](https://canvas.coloradocollege.edu/courses/31880/external_tools/483) and [videos](https://canvas.coloradocollege.edu/courses/31880/files))
+* [Reading question form](https://docs.google.com/forms/d/e/1FAIpQLScT5kA2-RArbJ3z3SXVD09uxIlpviQARi8vWxHC6ktTMQ3Rxw/viewform)
+* {{ wr }}
+
+# Calendar
+
+<table width="100%">
+<tr>
+<th style="text-align: center;" width="5%">W</th>
+<th width="19%">Mon</th>
+<th width="19%">Tue</th>
+<th width="19%">Wed</th>
+<th width="19%">Thu</th>
+<th width="19%">Fri</th>
+</tr>
+
+<tr>
+<td style="background-color: #f5f5f5; text-align: center;">1</td>
+<td>
+    &nbsp;
+    <hr/>
+    &nbsp;
+</td>
+<td>
+    1.1, 1.2
+    <hr/>
+    &nbsp;
+</td>
+<td>
+    1.3, 1.4
+    <hr/>
+    Autobio
+</td>
+<td>
+    1.5, 2.1
+    <hr/>
+    &nbsp;
+</td>
+<td>
+    2.2, 2.3
+    <hr/>
+    &nbsp;
+</td>
+</tr>
+
+<tr>
+<td colspan="6" style="background-color: #f5f5f5; text-align: center;">🍂 Fall Break 🍂</td>
+</tr>
+
+<tr>
+<td style="background-color: #f5f5f5; text-align: center;">2</td>
+<td>
+    2.4, WR1
+    <hr/>
+    &nbsp;
+</td>
+<td>
+    2.5
+    <hr/>
+    Batch A
+</td>
+<td>
+    2.6
+    <hr/>
+    &nbsp;
+</td>
+<td>
+    2.7
+    <hr/>
+    &nbsp;
+</td>
+<td>
+    2.8
+    <hr/>
+    Batch B
+</td>
+</tr>
+
+
+<tr>
+<td style="background-color: #f5f5f5; text-align: center;">3</td>
+<td>
+    2.9, WR2
+    <hr/>
+    &nbsp;
+</td>
+<td>
+    3.1, 3.2
+    <hr/>
+    Batch C
+</td>
+<td>
+    3.3<hr/>
+    &nbsp;
+</td>
+<td>
+    3.4
+    <hr/>
+    &nbsp;
+</td>
+<td>
+    4.1
+    <hr/>
+    Batch D
+</td>
+</tr>
+
+
+<tr>
+<td style="background-color: #f5f5f5; text-align: center;">4</td>
+<td>
+    4.2, WR3
+    <hr/>
+    &nbsp;
+</td>
+<td>
+    &nbsp;
+    <hr/>
+    &nbsp;
+</td>
+<td>
+    &nbsp;
+    <hr/>
+    Batch E, FR
+</td>
+<td colspan="2" style="background-color: #f5f5f5;"></td>
+</tr>
+
+</table>
+
+How to read this calendar: 
+
+* Things above the line are due at 8am MT on that day, and things below the line are due at noon MT on that day.
+* Abbreviations: 
+    - WR# = "{{ wr }} for week #" 
+    - FR = "Final reflection"
+* Batches: 
+    - Batch A = 1.1-5, 2.1
+    - Batch B: 2.2-4
+    - Batch C: 2.5-8
+    - Batch D: 2.9, 3.1-2
+    - Batch E: 3.3-4, 4.1-2
+
+# Sections
+
+## 1.1: Multivariable polynomials; Affine space
+
+CC: 5
+
+Easier: 2
+
+Harder: 3, 4, 6
+
+Notes:
+
+* Problems 3 and 4 require you to know something about groups. These are probably(?) the only problems in the book that require knowing something about groups. 
+
+## 1.2: Affine varieties
+
+CC: 1, 8
+
+Easier: 3, 4, 5, 6
+
+Harder: 2, 7, 9, 13+14, 15
+
+Notes: 
+
+* For the problems that ask you make a sketch, don't just plug in numbers, plot points, and interpolate. Also, don't just get a computer to make sketches for you. Instead, try to manipulate equations by hand and *reason* about what the plot will look like. Building up geometric intuition is very important!
+
+## 1.3: Parametrization
+
+CC: 1
+
+Easier: 2, 3, 12
+
+Harder: 4, 5(b-d), 6, 7, 8, 13, 14+15
+
+## 1.4: Ideals to Affine Varieties and Back
+
+CC: 2, 3
+
+Easier: 4, 9, 14, 16
+
+Harder: 6, 7-8, 10, 13, 15, 17+18, 19
+
+## 1.5: Polynomials in One Varaible
+
+CC: 1, 5
+
+Easier: 4
+
+Harder: 2, 7, 8, 10, 12, 14+15, 16+17
+
+## 2.1: Introduction to Gröbner Bases
+
+CC: 1
+
+Easier: 2, 3
+
+Harder: 4, 5
+
+Notes: 
+
+* The only solution I've thought of to problem 5 is a fairly challenging. It's elementary (as in, it doesn't use anything that you won't know), but it's not easy... Maybe you can find an easier solution?
+
+## 2.2: Monomial Orderings
+
+CC: A, B, 1
+
+Easier: 2, 3, 4, 6, 8
+
+Harder: 9+5, 7, 10, 11+12, 13
+
+Lettered problems: 
+
+<ol style="list-style-type: upper-alpha">
+<li>Make a list of all of the monomials in $k[x,y]$ in increasing order using lex with $x > y$. You can use "..." in your list, but make sure you identify a clear pattern. </li>
+<li>In $k[x,y,z]$, there are 6 monomials of total degree 2. Rank these 6 monomials in descending order using grlex. Then rank them in descending order again using grevlex.</li>
+</ol>
+
+Notes: 
+
+* Problem 9 is the reason that problem 5 is harder than problem 4. Doing problem 9 first will help you avoid a potential mistake in problem 5. I'll treat problems 9 and 5 as one problem.
+* One can use a vaguely similar strategy for both problems 10 and 5. 
+
+## 2.3: Multivariable Division Algorithm
+
+CC: 1, 2
+
+Easier: 4, 5, 9
+
+Harder: 6+7, 8, 10, 11
+
+## 2.4: Monomial Ideals 
+
+CC: 1, 2, 3
+
+Easier: 4(b), 5, 6, 9, A
+
+Harder: 7, 8, 10, 11
+
+Lettered Problems: 
+
+<ol style="list-style-type: upper-alpha">
+<li>Suppose $I \subseteq k[x_1, \dotsc, x_n]$ is a monomial ideal. Describe the corresponding affine variety $V(I)$ geometrically. </li>
+</ol>
+
+
+##  2.5: Gröbner Bases
+
+CC: 1, 4, 14
+
+Easier: 5, 7, 10, 12, 15, 16, 17
+
+Harder: 3, 6, 8, 9, 13, 18
+
+<!-- I don't know how to do 9 yet -->
+
+## 2.6: Properties of Gröbner Bases
+
+CC: 1, 2, 5
+
+Easier: 3, 4, 9, 10, A
+
+Harder: 6, 7, 11, 8+12, 13
+
+Lettered Problems: 
+
+<ol style="list-style-type: upper-alpha">
+<li>For any $f, g \in k[x_1, \dotsc, x_n]$ and $a, b \in k$ are nonzero, prove that $S(f,g) = S(af, bg)$.</li>
+</ol>
+
+Notes: 
+
+* It's important to understand the *statements* of lemma 5 and theorem 6. The proofs of these two results are fairly confusing; don't stress too much about them. 
+* If you do "8+12," you might find it convenient to do problem 12 before doing problem 8. 
+
+## 2.7: Buchberger's Algorithm
+
+CC: 1, 2, 3
+
+Easier: 6, 8, 9
+
+Harder: 7, 10, A, B
+
+Lettered Problems: 
+<ol style="list-style-type: upper-alpha">
+<li>Let $A = (a_{i,j})$ be a $n \times m$ matrix. Row $i$ of $A$ defines a linear polynomial $f_{A,i} = a_{i,1} x_1 + \dotsb + a_{i,m} x_m$ in $k[x_1, \dotsc, x_m]$. Let $I_A = \langle f_{A,1}, \dotsc, f_{A,n} \rangle$ be the ideal generated by these linear polynomials. 
+    <ol style="list-style-type: lower-alpha">
+    <li> Let $B$ be a $n \times n$ matrix. Show that $I_{BA} \subseteq I_A$. </li>
+    <li> Suppose $B$ is an invertible $n \times n$ matrix. Show that $I_{BA} = I_A$. </li>
+    <li> Use part (b) to solve problem 10(a) in the textbook.</li>
+    </ol>
+</li>
+
+<!--li>
+Fix a monomial order on $k[x_1,  \dotsc, x_n]$ such that $x_1 > x_2 > \dotsb x_n$. For a nonzero row vector $a = (a_1, \dotsc, a_m)$, let $f_a = a_1 x_1 + \dotsb + a_n x_n$ be a corresponding linear polynomial in $k[x_1, \dotsc, x_m]$. Also, for a nonzero row vector $a$, let $k(a) = \min\{ i : a_i \neq 0\}$. 
+
+Now let $a$ and $b$ be nonzero row vectors, and suppose we divide $S(f_a, f_b)$ by the list $(f_a, f_b)$. Let $r_{a,b}$ denote the resulting remainder. 
+    <ol style="list-style-type: lower-alpha">
+    <li>Suppose $k(a) < k(b)$. Show that $r_{a,b} = 0$.</li>
+    <li>Suppose $k := k(a) = k(b)$. </li>
+    </ol>
+</li-->
+
+<li>Write two Sage functions: `buchberger` and `reduce_groebner`. 
+    <ul>
+    <li>The function `buchberger` should implement the algorithm described in theorem 2. It should take as input a polynomial ring `R` and a list `F` of polynomials in `R`, and output a list that is a  Gröbner basis for the ideal generated by the polynomials in `F`.</li>
+    <li>The function `reduce_groebner` should take as input a ring `R` and a list of polynomials `G` that is a Gröbner basis for the ideal generated by the polynomials in `G`. It should output the unique reduced Gröbner basis for that same ideal. You can assume that `G` is guaranteed to be a Gröbner basis; in other words, it's okay if your function  `reduce_groebner` does something unexpected when `G` is not actually a Gröbner basis.</li>
+    </ul>
+Your functions can make use of the functions  `quo_rem_list` and `S` in the [Sage reference](sage), but nothing else (as in, if you want to have a function that does something else, you should write it yourself). If you're unsure if using some  particular function is legitimate, ask me!
+</li>
+</ol> 

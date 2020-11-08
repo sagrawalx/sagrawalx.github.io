@@ -57,6 +57,9 @@ nonav: true
 ## Primary instructor
 
 * Colorado College
+    * Algebraic Geometry (Fall 2020, Block 4). 
+    * Number Theory (Fall 2020, Block 3). 
+    * Number Theory (Fall 2020, Block 2). 
     * Linear Algebra (Spring 2020, Block 8). 
     * Probability and Statistics (Spring 2020, Block 6). 
     * Ordinary Differential Equations (Fall 2019, Block 3).
@@ -98,7 +101,8 @@ nonav: true
 
 ## Mentor
 
-* Senior thesis with Ying Wang (2020–2021). Topic: TBA. 
+* Independent study with Marston Xue (Spring 2021). Topic: Scheme theory. 
+* Senior thesis with Ying Wang (2020–2021). Topic: Tangent spaces in algebraic geometry. 
 * Senior thesis with Kadin Mangalik (2019–2020). Topic: Sums of cubes over $\mathbb{F}_p$.
 * Faculty student collaborative research with Cinea Jenkins (Summer 2019). Topic: Hodge polygons of F-crystals.
 * Independent study with Ying Wang (Spring 2019). Topic: Category theory. 
@@ -133,8 +137,8 @@ nonav: true
 
 ## Departmental
 
+* Inclusive Spaces Committee (2019-2021). 
 * Summer Research Survey (2019-2020). 
-* Inclusive Spaces Committee (2019-2020). 
 * MAA Liaison (2018-2019).
 
 ## Other

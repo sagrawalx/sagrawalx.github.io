@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Syllabus
-bannertext: Fall 2020, Block 2 — MA215
-bannerlink: teaching/fa20-b2_ma215
+bannertext: Fall 2020, Block 2 — MA251
+bannerlink: teaching/fa20-b2_ma251
 nonav: true
 ---
 
