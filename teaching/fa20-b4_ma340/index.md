@@ -14,7 +14,7 @@ nonav: true
 * [Sage reference](sage)
 * [Textbook errata](https://dacox.people.amherst.edu/iva.html)
 
-# Live event schedule
+# Live events
  
 * Group sessions: 
     - Wed 10am MT: (group assignments TBA)
