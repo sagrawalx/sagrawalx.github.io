@@ -1,4 +1,4 @@
-I"uA<h1 id="syllabus">Syllabus</h1>
+I"A<h1 id="syllabus">Syllabus</h1>
 <blockquote>
 <p>Algebraic geometry seems to have acquired the reputation of being esoteric, exclusive, and very abstract, with adherents who are secretly plotting to take over all the rest of mathematics! In one respect this last point is accurate… <span class="blockquote-attribution">—David Mumford, 1975</span></p>
 </blockquote>
@@ -7,7 +7,7 @@
 <p>Algebraic geometry is often defined as the branch of mathematics concerned with describing solutions to systems of polynomial equations, just as linear algebra is the branch of mathematics concerned with describing solutions to systems of linear equations.</p>
 <p>This definition is accurate in some respects, and makes an important analogy. One of the key ideas we’ll be exploring this block is a kind of generalization of row reduction that works for systems of polynomial equations.</p>
 <p>That being said, this definition also misses an important point: algebraic geometry is a bustling intellectual crossroads! Number theorists, combinatorialists, representation theorists, string theorists, theoretical computer scientists, and many others find themselves interacting with algebraic geometry these days. Part of the reason for this bustle is that, since Grothendieck revolutionized algebraic geometry in the mid-1900s, the field has become incredibly abstract — and with great abstraction comes great power. For this reason, many graduate-level algebraic geometry classes use the abstract framework, but this abstraction can be very difficult to wrap your mind around if you haven’t had any exposure to the more concrete parts of the subject.</p>
-<p>Our goal in this class will be to approach algebraic geometry in a more down-to-earth and computational way. This is fun in and of itself. I also hope that those of you who go on to study algebraic geometry later on find this to be useful as a bridge to help you approach the abstraction of modern algebraic geometry.</p>
+<p>Our goal in this class will be to approach algebraic geometry in a more down-to-earth and computational way. This is fun in and of itself. I also hope that those of you who go on to study algebraic geometry later on find this to be useful as a bridge to help you come to terms with the abstraction of the Grothendieck approach.</p>
 <h3 id="about-the-class">About the class</h3>
 <p>In order to keep all of us and our communities as safe as possible during the Covid-19 pandemic, this course will be fully remote.</p>
 <p>There’s great data out there that we learn much better by doing and discussing (rather than by trying to imbibe passively). This class will be structured around doing lots of problems and giving you opportunities to discuss them.</p>

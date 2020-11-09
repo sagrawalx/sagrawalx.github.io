@@ -21,7 +21,7 @@ This definition is accurate in some respects, and makes an important analogy. On
 
 That being said, this definition also misses an important point: algebraic geometry is a bustling intellectual crossroads! Number theorists, combinatorialists, representation theorists, string theorists, theoretical computer scientists, and many others find themselves interacting with algebraic geometry these days. Part of the reason for this bustle is that, since Grothendieck revolutionized algebraic geometry in the mid-1900s, the field has become incredibly abstract --- and with great abstraction comes great power. For this reason, many graduate-level algebraic geometry classes use the abstract framework, but this abstraction can be very difficult to wrap your mind around if you haven't had any exposure to the more concrete parts of the subject. 
 
-Our goal in this class will be to approach algebraic geometry in a more down-to-earth and computational way. This is fun in and of itself. I also hope that those of you who go on to study algebraic geometry later on find this to be useful as a bridge to help you approach the abstraction of modern algebraic geometry. 
+Our goal in this class will be to approach algebraic geometry in a more down-to-earth and computational way. This is fun in and of itself. I also hope that those of you who go on to study algebraic geometry later on find this to be useful as a bridge to help you come to terms with the abstraction of the Grothendieck approach. 
 
 ### About the class
 
