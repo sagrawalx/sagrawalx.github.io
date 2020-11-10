@@ -24,7 +24,9 @@ Harder fields:
 * `QQbar` for the field of algebraic numbers. 
 * `GF(9,'a')` for the finite field of 9 elements $\mathbb{F}_3(a)$ where $a$ is an element of degree 2 over $\mathbb{F}_3$. To be able to use the name `a`, type something like `k.<a> = GF(9,'a')` in analogy with the polynomial stuff below. 
 
-## Single variable polynomials 
+## Single variable polynomials
+
+You can get Sage to compute GCDs, as follows. 
 
 ```Python
 R.<x> = PolynomialRing(QQ, 'x')  
@@ -34,6 +36,18 @@ g = x^2
 
 gcd(f,g)
 ```
+
+You can get sage to compute roots, as follows. 
+
+
+```Python
+R.<x> = PolynomialRing(QQ, 'x')  
+
+f = x^2 - 1
+f.roots()
+```
+
+Note that the `roots` function is sensitive to the base field. For example, `(x^2+1).roots()` returns different results if your base field is `CC` instead of `QQ`. 
 
 ## Multivariable polynomials: Monomial Orders
 
@@ -112,12 +126,19 @@ Sage can calculate this $r$ using the `reduce` function, as follows:
 
 ```Python
 R.<x,y,z> = PolynomialRing(QQ, 'x,y,z', order='deglex')
-I = ideal(x^5 + y^4 + z^3 - 1,  x^3 + y^3 + z^2 - 1)
+I = Ideal(x^5 + y^4 + z^3 - 1,  x^3 + y^3 + z^2 - 1)
 f = x^7*y^2 + x^3*y^2 - y + 1
 f.reduce(I)
 ```
 
-In the background, Sage computes a Gröbner basis for `I` to do this reduction. 
+In the background, Sage computes a Gröbner basis for `I` to do this reduction. You can also get Sage to display a reduced Gröbner basis for an ideal. 
+
+
+```Python
+R.<x,y,z> = PolynomialRing(QQ, 'x,y,z', order='deglex')
+I = Ideal(x^5 + y^4 + z^3 - 1,  x^3 + y^3 + z^2 - 1)
+I.groebner_basis()
+```
 
 ## Links
 

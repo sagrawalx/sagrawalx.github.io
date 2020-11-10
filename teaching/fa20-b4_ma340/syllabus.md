@@ -85,7 +85,7 @@ You may choose any of the "easier" or "harder" problems indicated on the [webpag
 * Your solution must be complete. This means that, if you make an assertion, you should either give a reference to the statement in the textbook or prove it fully yourself. If your solution makes use of an unproved assertion, it is incomplete *even if* that assertion is true!
 * Your solution must be written with good "style." This is a little vague, but there are many examples of proofs with good style in the textbook. You'll notice, for example, that most of the proofs in the textbook are mostly written in complete sentences. A proof that is written entirely in symbols, even if correct and complete, is not good style.
 
-Your solutions must be [TeXed](#latex) (except for problems which require you to draw pictures, which can be done by hand). 
+Your solutions must be [TeXed](#latex) (except for problems which require you to draw pictures, which can be done by hand). If you use Sage to do some computations, include some code to show me what you did. 
 
 You'll submit solutions in "batches," whose deadlines are indicated on the [calendar](index#calendar). That being said, if you start thinking about a problem but aren't able to figure it out by the batch deadline, I'd like to encourage you to continue thinking about it! There's a lot to be learned from persevering when you're stuck. To this end, you may email me *up to ten* solutions after the relevant batch deadline (but before the end of the block) and you'll still get full credit for them. 
 

@@ -29,6 +29,8 @@ nonav: true
 
 {% assign wr = "[Weekly reflection form](https://docs.google.com/forms/d/e/1FAIpQLScNlg1xsQUxZks9IG38ImyWTtPMVu-v6HlP9BwULrtBmM4Xqw/viewform)" %}
 
+{% assign wrshort = "[WR](https://docs.google.com/forms/d/e/1FAIpQLScNlg1xsQUxZks9IG38ImyWTtPMVu-v6HlP9BwULrtBmM4Xqw/viewform)" %}
+
 * [Slack workspace](https://join.slack.com/t/fall2020block-bzo8759/signup) (for discussion)
 * Gradescope (for submitting assignments)
 * [Canvas](https://canvas.coloradocollege.edu/courses/31880/) (for [Zoom links](https://canvas.coloradocollege.edu/courses/31880/external_tools/483) and [videos](https://canvas.coloradocollege.edu/courses/31880/files))
@@ -83,7 +85,7 @@ nonav: true
 <tr>
 <td style="background-color: #f5f5f5; text-align: center;">2</td>
 <td>
-    2.4, WR1
+    2.4, {{ wrshort }}1
     <hr/>
     &nbsp;
 </td>
@@ -93,12 +95,12 @@ nonav: true
     Batch A
 </td>
 <td>
-    2.6
+    2.6, (2.9)
     <hr/>
     &nbsp;
 </td>
 <td>
-    2.7
+    2.7, (2.10)
     <hr/>
     &nbsp;
 </td>
@@ -113,18 +115,14 @@ nonav: true
 <tr>
 <td style="background-color: #f5f5f5; text-align: center;">3</td>
 <td>
-    2.9, WR2
+    3.1, 3.2, {{ wrshort }}2
     <hr/>
     &nbsp;
 </td>
 <td>
-    3.1, 3.2
+    3.3
     <hr/>
     Batch C
-</td>
-<td>
-    3.3<hr/>
-    &nbsp;
 </td>
 <td>
     3.4
@@ -134,6 +132,11 @@ nonav: true
 <td>
     4.1
     <hr/>
+    &nbsp;
+</td>
+<td>
+    4.2
+    <hr/>
     Batch D
 </td>
 </tr>
@@ -142,7 +145,7 @@ nonav: true
 <tr>
 <td style="background-color: #f5f5f5; text-align: center;">4</td>
 <td>
-    4.2, WR3
+    {{ wrshort }}3
     <hr/>
     &nbsp;
 </td>
@@ -164,7 +167,9 @@ nonav: true
 How to read this calendar: 
 
 * Things above the line are due at 8am MT on that day, and things below the line are due at noon MT on that day.
+* Parenthetical readings are optional.
 * Abbreviations: 
+    - Autobio = "Mathematical autobiography"
     - WR# = "{{ wr }} for week #" 
     - FR = "Final reflection"
 * Batches: 
@@ -186,7 +191,7 @@ Harder: 3, 4, 6
 
 Notes:
 
-* Problems 3 and 4 require you to know something about groups. These are probably(?) the only problems in the book that require knowing something about groups. 
+* Problems 3 and 4 require you to know something about groups. These are probably(?) the only problems in the book that require this. 
 
 ## 1.2: Affine varieties
 
@@ -353,5 +358,30 @@ Notes:
 $$ h(x) = \sum_{i = 1}^n b_i \prod_{j \neq i} \frac{x - a_j}{a_i - a_j} \in k[x]. $$
     This typo was corrected in the 2018 printing. 
     
+# 2.8: Applications of Gröbner Bases
+
+CC: 1, 3
+
+Easier: 2, 5, 6
+
+Harder: 7, 11, A
+
+Lettered problems: 
+
+<ol style="list-style-type: upper-alpha">
+<li>In the setup of exercise 11, I've done some computations that suggest that, for every positive integer $n$, there exists a rational number $r(n)$ such that the three given equations imply $a^n + b^n + c^n = r(n)$. But I don't know how to prove this. Can you prove this? Alternatively, can you find an integer $n$ for which this is not true?</li>
+</ol>
+
+Notes: 
+
+* 5(b) requires to remember something from multivariable calculus. 
+
+* I don't like the hint for 7(c). Here's a better hint. When you did part (b), you probably "threw away" some polynomials. Don't throw them away; they're useful!
+
+# 2.9: Refinements of the Buchberger Criterion
+
+Easier: 1, 3
+
+Harder: 2
     
 <!--  2.5.9, 2.7.12(b) -->
