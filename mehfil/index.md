@@ -24,12 +24,40 @@ We're an *adabī aḍḍā* of sorts, a gathering of people <del>in the Colorado
 <th style="width: 60%;">Resources</th>
 </tr>
 
+<tr>
+<td>12/8</td>
+<td>Bimal Roy, *Do Bīghā Zamīn*</td>
+<td>
+* [YouTube](https://www.youtube.com/watch?v=_a5cZ6OkgmA)
+* Inspired by: 
+    - "Two Bighas of Land" ([দুই বিঘা জমি](https://bn.wikisource.org/wiki/%E0%A6%95%E0%A6%A5%E0%A6%BE_%E0%A6%93_%E0%A6%95%E0%A6%BE%E0%A6%B9%E0%A6%BF%E0%A6%A8%E0%A7%80/%E0%A6%A6%E0%A7%81%E0%A6%87_%E0%A6%AC%E0%A6%BF%E0%A6%98%E0%A6%BE_%E0%A6%9C%E0%A6%AE%E0%A6%BF)) by [Rabindranath Tagore (রবীন্দ্রনাথ ঠাকুর)](https://en.wikipedia.org/wiki/Rabindranath_Tagore)
+    - [English translation by Fakrul Alam](https://www.thedailystar.net/news-detail-87362)
+* [Wikipedia on *Do Bīghā Zamīn*](https://en.wikipedia.org/wiki/Do_Bigha_Zamin)
+* [Wikipedia on Bimal Roy](https://en.wikipedia.org/wiki/Bimal_Roy)
+</td>
+</tr>
+
+<tr>
+<td>12/1</td>
+<td>Mīrājī, Poe, and Po
+
+</td>
+<td>
+* *Jhīl*:
+    - Full text: [Urdu](https://www.rekhta.org/ebooks/kulliyat-e-meeraji-ebooks) (p. 1013 of the e-reader), [Nagari](miraji-poe-po)
+    - Translation of: "[The Lake](https://poets.org/poem/lake)" by [Edgar Allan Poe](https://en.wikipedia.org/wiki/Edgar_Allan_Poe)
+* *Chānd, Main, Aur Merā Sāyā*
+    - Full text: [Urdu](https://www.rekhta.org/ebooks/kulliyat-e-meeraji-ebooks) (p. 907 of the e-reader), [Nagari](miraji-poe-po)
+    - Translation of: "Drinking Alone Under the Moon" ([月下獨酌](https://zh.wikisource.org/wiki/%E6%9C%88%E4%B8%8B%E7%8D%A8%E9%85%8C_(%E8%8A%B1%E9%96%93%E4%B8%80%E5%A3%BA%E9%85%92))) by [Li Po (李白)](https://en.wikipedia.org/wiki/Li_Bai)
+    - [English translation of the original Chinese by Arthur Waley](https://en.wikisource.org/wiki/More_Translations_from_the_Chinese/Drinking_Alone_by_Moonlight) 
+</td>
+</tr>
 
 <tr>
 <td>10/27</td>
 <td>Khwajā Aḥmad ʿAbbās, *Khaddar Kā Kafan*</td>
 <td>
-* Full Text: [Nagari](https://www.rekhta.org/stories/khaddar-ka-kafan-khwaja-ahmad-abbas-stories?lang=hi), [Urdu](https://www.rekhta.org/stories/khaddar-ka-kafan-khwaja-ahmad-abbas-stories?lang=ur)
+* Full text: [Nagari](https://www.rekhta.org/stories/khaddar-ka-kafan-khwaja-ahmad-abbas-stories?lang=hi), [Urdu](https://www.rekhta.org/stories/khaddar-ka-kafan-khwaja-ahmad-abbas-stories?lang=ur)
 </td>
 </tr>
 
@@ -38,7 +66,7 @@ We're an *adabī aḍḍā* of sorts, a gathering of people <del>in the Colorado
 <td>10/20</td>
 <td>Saʿādat Ḥasan Manṭo, *Hindī Aur Urdū*</td>
 <td>
-* Full Text: [Nagari](https://www.rekhta.org/articles/hindi-aur-urdu-saadat-hasan-manto-articles?lang=hi), [Urdu](https://www.rekhta.org/articles/hindi-aur-urdu-saadat-hasan-manto-articles?lang=ur)
+* Full text: [Nagari](https://www.rekhta.org/articles/hindi-aur-urdu-saadat-hasan-manto-articles?lang=hi), [Urdu](https://www.rekhta.org/articles/hindi-aur-urdu-saadat-hasan-manto-articles?lang=ur)
 * [Translation by Muhammad Umar Memon](https://kafila.online/2011/12/05/hindi-and-urdu-saadat-hasan-manto/)
 </td>
 </tr>
