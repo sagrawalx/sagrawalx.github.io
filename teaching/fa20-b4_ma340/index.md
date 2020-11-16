@@ -64,7 +64,7 @@ nonav: true
 <td>
     1.3, 1.4
     <hr/>
-    Autobio
+    [Autobio](../prompt.pdf)
 </td>
 <td>
     1.5, 2.1
