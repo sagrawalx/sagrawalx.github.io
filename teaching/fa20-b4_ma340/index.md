@@ -32,7 +32,7 @@ nonav: true
 {% assign wrshort = "[WR](https://docs.google.com/forms/d/e/1FAIpQLScNlg1xsQUxZks9IG38ImyWTtPMVu-v6HlP9BwULrtBmM4Xqw/viewform)" %}
 
 * [Slack workspace](https://join.slack.com/t/fall2020block-bzo8759/signup) (for discussion)
-* Gradescope (for submitting assignments)
+* [Gradescope](https://www.gradescope.com/courses/207281) (for submitting assignments)
 * [Canvas](https://canvas.coloradocollege.edu/courses/31880/) (for [Zoom links](https://canvas.coloradocollege.edu/courses/31880/external_tools/483) and [videos](https://canvas.coloradocollege.edu/courses/31880/files))
 * [Reading question form](https://docs.google.com/forms/d/e/1FAIpQLScT5kA2-RArbJ3z3SXVD09uxIlpviQARi8vWxHC6ktTMQ3Rxw/viewform)
 * {{ wr }}
