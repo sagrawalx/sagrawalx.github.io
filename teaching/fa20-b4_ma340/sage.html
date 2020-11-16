@@ -66,15 +66,27 @@ Fall 2020, Block 4 — MA340 — Syllabus
 <p>Note that the <code>roots</code> function is sensitive to the base field. For example, <code>(x^2+1).roots()</code> returns different results if your base field is <code>CC</code> instead of <code>QQ</code>.</p>
 <h2 id="multivariable-polynomials-monomial-orders">Multivariable polynomials: Monomial Orders</h2>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>R.<span class="op">&lt;</span>x,y<span class="op">&gt;</span> <span class="op">=</span> PolynomialRing(QQ, <span class="st">&#39;x,y&#39;</span>, order<span class="op">=</span><span class="st">&#39;degrevlex&#39;</span>)</span></code></pre></div>
-<p>Can use <code>order='lex'</code> (lex) or <code>order='deglex'</code> (grlex) or <code>order='degrevlex'</code> (grevlex). Note that grevlex is the default, so you don’t need to specify <code>order='degrevlex'</code> at all. For any other order, you do need to specify this argument.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> x<span class="op">^</span><span class="dv">7</span><span class="op">*</span>y<span class="op">^</span><span class="dv">2</span> <span class="op">+</span> x<span class="op">^</span><span class="dv">3</span><span class="op">*</span>y<span class="op">^</span><span class="dv">2</span> <span class="op">-</span> y <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>f.lt() <span class="co"># Leading term</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>f.lm() <span class="co"># Leading monomial</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>f.lc() <span class="co"># Leading coefficient</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>f.degree() <span class="co"># Total degree of f = 9</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>f.degrees() <span class="co"># Multidegree of f = (7,2)</span></span></code></pre></div>
+<p>Note that <code>order='degrevlex'</code> tells Sage you want to use grevlex order. This is default, so you can also omit this argument.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>R.<span class="op">&lt;</span>x,y<span class="op">&gt;</span> <span class="op">=</span> PolynomialRing(QQ, <span class="st">&#39;x,y&#39;</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> x<span class="op">^</span><span class="dv">7</span><span class="op">*</span>y<span class="op">^</span><span class="dv">2</span> <span class="op">+</span> x<span class="op">^</span><span class="dv">3</span><span class="op">*</span>y<span class="op">^</span><span class="dv">2</span> <span class="op">-</span> y <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>f.lt() <span class="co"># Leading term</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>f.lm() <span class="co"># Leading monomial</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>f.lc() <span class="co"># Leading coefficient</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>f.degree() <span class="co"># Total degree of f = 9</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>f.degrees() <span class="co"># Multidegree of f = (7,2)</span></span></code></pre></div>
+<p>If you want to change the order…</p>
+<ul>
+<li>For lex order, use <code>order='lex'</code></li>
+<li>For grlex order, use <code>order='deglex'</code></li>
+<li>For the product orders of 2.4.9 or 3.1.6(b), use things like <code>order='lex(2),deglex(3)'</code>.</li>
+<li>For the weight order of 2.4.11, use things like <code>order=TermOrder('wdegrevlex',(1,2))</code>.
+<ul>
+<li>You can replace <code>wdegrevlex</code> with <code>wdeglex</code>.</li>
+<li>The elimination orders of 2.4.11(d), 3.1.6(a), etc, are special cases of these weight orders.</li>
+</ul></li>
+</ul>
 <h2 id="multivariable-polynomials-division-generic">Multivariable polynomials: Division (Generic)</h2>
 <p>There are some problems with Sage’s built-in polynomial division functions <em>when you’re not dividing by a Gröbner basis</em>. Here’s some code that does this division correctly.</p>
 <p>The function <code>quo_rem_list(f,G)</code> divides a polynomial <code>f</code> by a list of polynomials <code>G</code>. The output is a pair <code>(Q,r)</code> where <code>Q</code> is the list of quotients and <code>r</code> is the remainder.</p>
