@@ -55,9 +55,10 @@ Note that the `roots` function is sensitive to the base field. For example, `(x^
 R.<x,y> = PolynomialRing(QQ, 'x,y', order='degrevlex')
 ```
 
-Can use `order='lex'` (lex) or `order='deglex'` (grlex) or `order='degrevlex'` (grevlex). Note that grevlex is the default, so you don't need to specify `order='degrevlex'` at all. For any other order, you do need to specify this argument. 
+Note that `order='degrevlex'` tells Sage you want to use grevlex order. This is default, so you can also omit this argument. 
 
 ```Python
+R.<x,y> = PolynomialRing(QQ, 'x,y')
 f = x^7*y^2 + x^3*y^2 - y + 1
 
 f.lt() # Leading term
@@ -67,6 +68,15 @@ f.lc() # Leading coefficient
 f.degree() # Total degree of f = 9
 f.degrees() # Multidegree of f = (7,2)
 ```
+
+If you want to change the order...  
+
+* For lex order, use `order='lex'`
+* For grlex order, use `order='deglex'`
+* For the product orders of 2.4.9 or 3.1.6(b), use things like `order='lex(2),deglex(3)'`. 
+* For the weight order of 2.4.11, use things like `order=TermOrder('wdegrevlex',(1,2))`.  
+    - You can replace `wdegrevlex` with `wdeglex`. 
+    - The elimination orders of 2.4.11(d), 3.1.6(a), etc, are special cases of these weight orders. 
 
 ## Multivariable polynomials: Division (Generic)
 

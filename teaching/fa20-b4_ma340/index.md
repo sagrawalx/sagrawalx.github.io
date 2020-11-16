@@ -183,10 +183,8 @@ How to read this calendar:
 
 ## 1.1: Multivariable polynomials; Affine space
 
-CC: 5
-
-Easier: 2
-
+CC: 5  
+Easier: 2  
 Harder: 3, 4, 6
 
 Notes:
@@ -195,10 +193,8 @@ Notes:
 
 ## 1.2: Affine varieties
 
-CC: 1, 8
-
-Easier: 3, 4, 5, 6
-
+CC: 1, 8  
+Easier: 3, 4, 5, 6  
 Harder: 2, 7, 9, 13+14, 15
 
 Notes: 
@@ -208,34 +204,26 @@ Notes:
 
 ## 1.3: Parametrization
 
-CC: 1
-
-Easier: 2, 3, 12
-
+CC: 1  
+Easier: 2, 3, 12  
 Harder: 4, 5(b-d), 6, 7, 8, 13, 14+15
 
 ## 1.4: Ideals to Affine Varieties and Back
 
-CC: 2, 3
-
-Easier: 4, 9, 14, 16
-
+CC: 2, 3  
+Easier: 4, 9, 14, 16  
 Harder: 6, 7+8, 10, 13, 15, 17+18, 19
 
 ## 1.5: Polynomials in One Varaible
 
-CC: 1, 5
-
-Easier: 4
-
+CC: 1, 5  
+Easier: 4  
 Harder: 2, 7, 8, 10, 12, 14+15, 16+17
 
 ## 2.1: Introduction to Gröbner Bases
 
-CC: 1
-
-Easier: 2, 3
-
+CC: 1  
+Easier: 2, 3  
 Harder: 4, 5
 
 Notes: 
@@ -244,10 +232,8 @@ Notes:
 
 ## 2.2: Monomial Orderings
 
-CC: A, B, 1
-
-Easier: 2, 3, 4, 6, 8
-
+CC: A, B, 1  
+Easier: 2, 3, 4, 6, 8  
 Harder: 9+5, 7, 10, 11+12, 13
 
 Lettered problems: 
@@ -264,18 +250,14 @@ Notes:
 
 ## 2.3: Multivariable Division Algorithm
 
-CC: 1, 2
-
-Easier: 4, 5, 9
-
+CC: 1, 2  
+Easier: 4, 5, 9  
 Harder: 6+7, 8, 10, 11
 
 ## 2.4: Monomial Ideals 
 
-CC: 1, 2, 3
-
-Easier: 4(b), 5, 6, 9, A
-
+CC: 1, 2, 3  
+Easier: 4(b), 5, 6, 9, A  
 Harder: 7, 8, 10, 11
 
 Lettered problems: 
@@ -287,18 +269,14 @@ Lettered problems:
 
 ##  2.5: Gröbner Bases
 
-CC: 1, 4, 14
-
-Easier: 5, 7, 10, 12, 15, 16, 17
-
+CC: 1, 4, 14  
+Easier: 5, 7, 10, 12, 15, 16, 17  
 Harder: 3, 6, 8, 13, 18
 
 ## 2.6: Properties of Gröbner Bases
 
-CC: 1, 2, 5
-
-Easier: 3, 4, 9, 10, A
-
+CC: 1, 2, 5  
+Easier: 3, 4, 9, 10, A  
 Harder: 6, 7, 11, 8+12, 13
 
 Lettered problems: 
@@ -314,10 +292,8 @@ Notes:
 
 ## 2.7: Buchberger's Algorithm
 
-CC: 1, 2, 3
-
-Easier: 6, 8, 9
-
+CC: 1, 2, 3  
+Easier: 6, 8, 9  
 Harder: 7, A, 10(b-c), 11, 13, 14, B
 
 Lettered problems: 
@@ -358,12 +334,10 @@ Notes:
 $$ h(x) = \sum_{i = 1}^n b_i \prod_{j \neq i} \frac{x - a_j}{a_i - a_j} \in k[x]. $$
     This typo was corrected in the 2018 printing. 
     
-# 2.8: Applications of Gröbner Bases
+## 2.8: Applications of Gröbner Bases
 
-CC: 1, 3
-
-Easier: 2, 5, 6
-
+CC: 1, 3  
+Easier: 2, 5, 6  
 Harder: 7, 11, A
 
 Lettered problems: 
@@ -378,18 +352,15 @@ Notes:
 
 * I don't like the hint for 7(c). Here's a better hint. When you did part (b), you probably "threw away" some polynomials. Don't throw them away; they're useful!
 
-# 2.9: Refinements of the Buchberger Criterion
+## 2.9: Refinements of the Buchberger Criterion
 
-Easier: 1, 3
-
+Easier: 1, 3  
 Harder: 2
     
 <!--  2.5.9, 2.7.12(b) -->
 
-# 3.1: Elimination and Extension
+## 3.1: Elimination and Extension
 
-CC: 1, 2(a-c), 5
-
-Easier: 3, 4,  
-
-Harder: 6
+CC: 1, 2(a-c), 5  
+Easier: 3, 4, 6, 8  
+Harder: 7, 9  
