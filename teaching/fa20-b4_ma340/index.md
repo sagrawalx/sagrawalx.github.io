@@ -17,8 +17,8 @@ nonav: true
 # Live events
  
 * Group sessions: 
-    - Wed 10am MT: Jules, Miles, Elizabeth
-    - Wed 11am MT: Dominic, Oliver, Alayna, Marston
+    - Wed 10am MT: Jules, Alayna, Elizabeth
+    - Wed 11am MT: Dominic, Oliver, Marston
 * Office hours: 
     - Mornings: Mon Fri 10-11am MT, Tue Thu 11-12am MT
     - Afternoons: Mon Tue Thu Fri 2-3pm MT
