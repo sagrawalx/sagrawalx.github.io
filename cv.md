@@ -57,18 +57,18 @@ nonav: true
 ## Primary instructor
 
 * Colorado College
-    * Algebraic Geometry (Fall 2020, Block 4). 
-    * Number Theory (Fall 2020, Block 3). 
-    * Number Theory (Fall 2020, Block 2). 
-    * Linear Algebra (Spring 2020, Block 8). 
-    * Probability and Statistics (Spring 2020, Block 6). 
-    * Ordinary Differential Equations (Fall 2019, Block 3).
-    * Real Analysis 2 (Fall 2019, Block 2).
-    * Linear Algebra (Spring 2019, Block 8).
+    * Topics: Algebraic geometry (Fall 2020, Block 4). 
+    * Number theory (Fall 2020, Block 3). 
+    * Number theory (Fall 2020, Block 2). 
+    * Linear algebra (Spring 2020, Block 8). 
+    * Probability and statistics (Spring 2020, Block 6). 
+    * Ordinary differential equations (Fall 2019, Block 3).
+    * Real analysis 2 (Fall 2019, Block 2).
+    * Linear algebra (Spring 2019, Block 8).
     * Calculus 1 (Spring 2019, Block 6).
-    * Ordinary Differential Equations (Spring 2019, Block 5).
+    * Ordinary differential equations (Spring 2019, Block 5).
     * Calculus 1 (Fall 2018, Block 3).
-    * Linear Algebra (Fall 2018, Block 2).
+    * Linear algebra (Fall 2018, Block 2).
 * UC Berkeley
     * Linear algebra (Summer 2017).
     * Analysis (Summer 2015).
