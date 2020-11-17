@@ -368,3 +368,14 @@ Harder: 2
 CC: 1, 2(a-c), 5  
 Easier: 3, 4, 6, 8  
 Harder: 7, 9  
+
+## 3.2: Geometry of Elimination
+
+CC: 2  
+Easier: 1  
+Harder: 4, 5+A  
+
+Lettered problems: 
+<ol style="list-style-type: upper-alpha">
+<li>Give an example (with proof) of an ideal $I \subseteq \mathbb{C}[x,y]$ such that $\pi_1(V(I)) \subsetneq V(I_1)$, where $\pi_1 : \mathbb{C}^2 \to \mathbb{C}$ is projection onto the $y$-axis and $I_1 = \mathbb{C}[y] \cap I$ is the first elimination ideal. *Possible hint*. By problem 5, any such ideal $I$ must have the property that $I_1 = \{0\}$. What does this tell you about $V(I_1)$? And what does this plus the closure theorem tell you about $\pi_1(V(I))$? It's helpful to use this geometric intuition to construct an appropriate ideal $I$, but be careful: you're working over $\mathbb{C}$, not $\mathbb{R}$.</li>
+</ol>
