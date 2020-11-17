@@ -190,6 +190,8 @@ Harder: 3, 4, 6
 Notes:
 
 * Problems 3 and 4 require you to know something about groups. These are probably(?) the only problems in the book that require this. 
+* [Select reading question responses](questions/q1-1.pdf)
+* [Video](https://canvas.coloradocollege.edu/files/936416) and [notes](notes/prop1-1-5.jpg)
 
 ## 1.2: Affine varieties
 
@@ -201,6 +203,8 @@ Notes:
 
 * For the problems that ask you make a sketch, don't just plug in numbers, plot points, and interpolate. Also, don't just get a computer to make sketches for you. Instead, try to manipulate equations by hand and *reason* about what the plot will look like. Building up geometric intuition is very important!
 * Problems that are conjoined with a "+", like "13+14" above, count as one problem. 
+* [Select reading question responses](questions/q1-2.pdf)
+* [Video](https://canvas.coloradocollege.edu/files/936439/) and [notes](notes/affine-varieties.jpg)
 
 ## 1.3: Parametrization
 
