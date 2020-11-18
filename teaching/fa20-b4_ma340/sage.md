@@ -128,7 +128,7 @@ R.<x,y,z> = PolynomialRing(QQ, order='lex')
 S(R,y-x^2,z-x^3)
 ```
 
-## Multivariable Polynomials: Ideals and Reduction
+## Multivariable Polynomials: Ideals, Reduction, and Gröbner bases
 
 Recall (from section 2.6, exercise 1) that given an ideal $I \subseteq k[x_1, \dotsc, x_n]$ and a polynomial $f \in k[x_1, \dotsc, x_n]$, there is a unique way to write $f = g + r$ where $g \in I$ and no term of $r$ is divisible by any element of $\mathrm{LT}(I)$. If $G$ is a Gröbner basis for $I$, then this $r$ is also denoted $\bar{f}^G$ in the textbook. 
 
