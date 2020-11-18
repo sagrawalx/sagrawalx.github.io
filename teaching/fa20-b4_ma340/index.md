@@ -19,6 +19,7 @@ nonav: true
 * Group sessions: 
     - Wed 10am MT: Jules, Alayna, Elizabeth
     - Wed 11am MT: Dominic, Oliver, Marston
+    - Notes: [11/18](notes/group11-18.jpg)
 * Office hours: 
     - Mornings: Mon Fri 10-11am MT, Tue Thu 11-12am MT
     - Afternoons: Mon Tue Thu Fri 2-3pm MT
@@ -178,10 +179,6 @@ How to read this calendar:
     - Batch C: 2.5-8
     - Batch D: 2.9, 3.1-2
     - Batch E: 3.3-4, 4.1-2
-
-# Miscellaneous
-
-* [Group Sessions 11/18](notes/group11-18.jpg)
 
 # Sections
 
