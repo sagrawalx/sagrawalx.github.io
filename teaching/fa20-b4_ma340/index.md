@@ -212,11 +212,19 @@ CC: 1
 Easier: 2, 3, 12  
 Harder: 4, 5(b-d), 6, 7, 8, 13, 14+15
 
+Notes:
+
+* [Select reading question responses](questions/q1-3.pdf)
+
 ## 1.4: Ideals to Affine Varieties and Back
 
 CC: 2, 3  
 Easier: 4, 9, 14, 16  
 Harder: 6, 7+8, 10, 13, 15, 17+18, 19
+
+Notes:
+
+* [Select reading question responses](questions/q1-4.pdf)
 
 ## 1.5: Polynomials in One Varaible
 
