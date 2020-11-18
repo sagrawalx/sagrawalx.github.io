@@ -179,6 +179,10 @@ How to read this calendar:
     - Batch D: 2.9, 3.1-2
     - Batch E: 3.3-4, 4.1-2
 
+# Miscellaneous
+
+* [Group Sessions 11/18](notes/group11-18.jpg)
+
 # Sections
 
 ## 1.1: Multivariable polynomials; Affine space
@@ -225,6 +229,7 @@ Harder: 6, 7+8, 10, 13, 15, 17+18, 19
 Notes:
 
 * [Select reading question responses](questions/q1-4.pdf)
+* [Video](https://canvas.coloradocollege.edu/files/937494/) and [notes](notes/ivback.jpg)
 
 ## 1.5: Polynomials in One Varaible
 
