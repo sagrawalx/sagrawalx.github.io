@@ -29,7 +29,7 @@ Harder fields:
 You can get Sage to compute GCDs, as follows. 
 
 ```Python
-R.<x> = PolynomialRing(QQ, 'x')  
+R.<x> = PolynomialRing(QQ)  
 
 f = x^5 + x^3 
 g = x^2
@@ -41,7 +41,7 @@ You can get sage to compute roots, as follows.
 
 
 ```Python
-R.<x> = PolynomialRing(QQ, 'x')  
+R.<x> = PolynomialRing(QQ)  
 
 f = x^2 - 1
 f.roots()
@@ -52,13 +52,13 @@ Note that the `roots` function is sensitive to the base field. For example, `(x^
 ## Multivariable polynomials: Monomial Orders
 
 ```Python
-R.<x,y> = PolynomialRing(QQ, 'x,y', order='degrevlex')
+R.<x,y> = PolynomialRing(QQ, order='degrevlex')
 ```
 
 Note that `order='degrevlex'` tells Sage you want to use grevlex order. This is default, so you can also omit this argument. 
 
 ```Python
-R.<x,y> = PolynomialRing(QQ, 'x,y')
+R.<x,y> = PolynomialRing(QQ)
 f = x^7*y^2 + x^3*y^2 - y + 1
 
 f.lt() # Leading term
@@ -103,7 +103,7 @@ def quo_rem_list(f, G):
             f -= f.lt()
     return Q, r
     
-R.<x,y> = PolynomialRing(QQ, 'x,y', order='lex')
+R.<x,y> = PolynomialRing(QQ, order='lex')
 f = x^7*y^2 + x^3*y^2 - y + 1
 G = [-y^3+x, x*y^2-x]
 quo_rem_list(f,G)
@@ -124,7 +124,7 @@ def S(R,f,g):
 Here's a sample usage:
 
 ```Python
-R.<x,y,z> = PolynomialRing(QQ, 'x,y,z', order='lex')
+R.<x,y,z> = PolynomialRing(QQ, order='lex')
 S(R,y-x^2,z-x^3)
 ```
 
@@ -135,7 +135,7 @@ Recall (from section 2.6, exercise 1) that given an ideal $I \subseteq k[x_1, \d
 Sage can calculate this $r$ using the `reduce` function, as follows: 
 
 ```Python
-R.<x,y,z> = PolynomialRing(QQ, 'x,y,z', order='deglex')
+R.<x,y,z> = PolynomialRing(QQ, order='deglex')
 I = Ideal(x^5 + y^4 + z^3 - 1,  x^3 + y^3 + z^2 - 1)
 f = x^7*y^2 + x^3*y^2 - y + 1
 f.reduce(I)
@@ -145,7 +145,7 @@ In the background, Sage computes a Gröbner basis for `I` to do this reduction. 
 
 
 ```Python
-R.<x,y,z> = PolynomialRing(QQ, 'x,y,z', order='deglex')
+R.<x,y,z> = PolynomialRing(QQ, order='deglex')
 I = Ideal(x^5 + y^4 + z^3 - 1,  x^3 + y^3 + z^2 - 1)
 I.groebner_basis()
 ```
