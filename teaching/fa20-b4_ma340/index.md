@@ -243,6 +243,8 @@ Harder: 4, 5
 Notes: 
 
 * The only solution I've thought of to problem 5 is a fairly challenging. It's elementary (as in, it doesn't use anything that you won't know), but it's not easy... Maybe you can find an easier solution?
+* [Video 1 ("Problem 2.1.1(c)")](https://canvas.coloradocollege.edu/files/938543/) and [notes](notes/problem2-1-1c.jpg)
+* [Video 2 ("Overview")](https://canvas.coloradocollege.edu/files/938548/) and [notes](notes/overview.jpg)
 
 ## 2.2: Monomial Orderings
 
