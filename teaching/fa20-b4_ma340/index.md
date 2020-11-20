@@ -272,6 +272,7 @@ Easier: 4, 5, 9
 Harder: 6+7, 8, 10, 11
 
 Notes: 
+
 * [Select reading question responses](questions/q2-3.pdf)
 * [Video](https://canvas.coloradocollege.edu/files/939420/) and [notes](notes/division.jpg)
 
@@ -326,16 +327,6 @@ Lettered problems:
     <li> Use part (b) to solve problem 10(a) in the textbook.</li>
     </ol>
 </li>
-
-<!--li>
-Fix a monomial order on $k[x_1,  \dotsc, x_n]$ such that $x_1 > x_2 > \dotsb x_n$. For a nonzero row vector $a = (a_1, \dotsc, a_m)$, let $f_a = a_1 x_1 + \dotsb + a_n x_n$ be a corresponding linear polynomial in $k[x_1, \dotsc, x_m]$. Also, for a nonzero row vector $a$, let $k(a) = \min\{ i : a_i \neq 0\}$. 
-
-Now let $a$ and $b$ be nonzero row vectors, and suppose we divide $S(f_a, f_b)$ by the list $(f_a, f_b)$. Let $r_{a,b}$ denote the resulting remainder. 
-    <ol style="list-style-type: lower-alpha">
-    <li>Suppose $k(a) < k(b)$. Show that $r_{a,b} = 0$.</li>
-    <li>Suppose $k := k(a) = k(b)$. </li>
-    </ol>
-</li-->
 
 <li>Write two Sage functions: `buchberger` and `reduce_groebner`. 
     <ul>
