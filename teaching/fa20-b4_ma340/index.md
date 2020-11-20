@@ -270,6 +270,10 @@ CC: 1, 2
 Easier: 4, 5, 9  
 Harder: 6+7, 8, 10, 11
 
+Notes: 
+* [Select reading question responses](questions/q2-3.pdf)
+* [Video](https://canvas.coloradocollege.edu/files/939420/) and [notes](notes/division.jpg)
+
 ## 2.4: Monomial Ideals 
 
 CC: 1, 2, 3  
