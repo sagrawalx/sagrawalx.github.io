@@ -6,11 +6,11 @@ layout: post
 summary: Scheme-theoretic implicitization results
 ---
 
-I'm currently teaching a class on algebraic geometry using Cox, Little, and O'Shea's *Ideals, Varieties, and Algorithms* (4th edition, CLO). Here is a scheme-theoretic formulation of the results in section 3.3 ("Implicitization") of this book. 
+I'm currently teaching a class on algebraic geometry using Cox, Little, and O'Shea's *Ideals, Varieties, and Algorithms* (4th edition, CLO). Here is a scheme-theoretic formulation of the results in section 3.3 ("Implicitization") of this book. Note that the results of [CLO, section 3.3] apply only to infinite fields, but the following works over an arbitrary base field $k$. 
 
-In the following, let $k$ be an arbitrary field (the results of section 3.3 in CLO apply only to infinite fields, but the scheme-theoretic version below applies to arbitrary fields). Let $\mathbb{A}^m$ and $\mathbb{A}^n$ be affine spaces over $k$ with coordinates $t = (t_1, \dotsc, t_m)$ and $x = (x_1, \dotsc, x_n)$, respectively. The object is to give an effective description of the scheme-theoretic image of a  morphism $$D(g) \to \mathbb{A}^n$$ where $D(g) \subseteq \mathbb{A}^m$ is a distinguished open defined by some $g \in k[t]$. Note that a morphism $D(g) \to \mathbb{A}^n$ is nothing more than a rational parametrization. 
+Let $\mathbb{A}^m$ and $\mathbb{A}^n$ be affine spaces over $k$ with coordinates $t = (t_1, \dotsc, t_m)$ and $x = (x_1, \dotsc, x_n)$, respectively. The object is to give an effective description of the scheme-theoretic image of a  morphism $$D(g) \to \mathbb{A}^n$$ where $D(g) \subseteq \mathbb{A}^m$ is a distinguished open defined by some $g \in k[t]$. Note that a morphism $D(g) \to \mathbb{A}^n$ is nothing more than a rational parametrization. 
 
-I'm sure this is all well-known. What's more,  there's nothing new to be gained from this scheme-theoretic formulation over and above CLO's classical formulation: since $D(g)$ is reduced, so too is any scheme-theoretic image of $D(g)$. But anyway, I thought it was fun to work out, so here it is!
+I'm sure this is all well-known. What's more,  there's nothing new to be gained from this scheme-theoretic formulation over and above CLO's classical formulation: since $D(g)$ is reduced, so too is any scheme-theoretic image of $D(g)$ [Stacks, [056B](https://stacks.math.columbia.edu/tag/056B)]. But anyway, I thought it was fun to work out, so here it is!
 
 We begin with a preliminary observation.  
 
