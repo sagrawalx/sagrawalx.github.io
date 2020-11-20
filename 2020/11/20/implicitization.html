@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="/css/style.css" type="text/css" />
+
+
+<!-- MathJax -->
+<!--script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script-->
+
+<!-- KaTeX -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+<title>
+Shishir Agrawal — Implicitization
+</title>
+
+</head>
+
+<body>
+
+
+<header id="banner">
+    <a href="/">Shishir Agrawal</a>
+</header>
+
+
+
+<nav id="sitenav">
+<ul id="pages">
+    <li><a href="/math/" >Mathematics</a></li>
+    <li><a href="/teaching/" >Teaching</a></li>
+    <li><a href="/misc/" >Miscellaneous</a></li>
+    
+</ul>
+</nav>
+
+
+<main>
+<header>
+<h1>Implicitization <span class="date">(2020-11-20)</span></h1>
+</header>
+
+<article>
+<p>I’m currently teaching a class on algebraic geometry using Cox, Little, and O’Shea’s <em>Ideals, Varieties, and Algorithms</em> (4th edition, CLO). Here is a scheme-theoretic formulation of the results in section 3.3 (“Implicitization”) of this book.</p>
+<p>In the following, let <span class="math inline">\(k\)</span> be an arbitrary field (the results of section 3.3 in CLO apply only to infinite fields, but the scheme-theoretic version below applies to arbitrary fields). Let <span class="math inline">\(\mathbb{A}^m\)</span> and <span class="math inline">\(\mathbb{A}^n\)</span> be affine spaces over <span class="math inline">\(k\)</span> with coordinates <span class="math inline">\(t = (t_1, \dotsc, t_m)\)</span> and <span class="math inline">\(x = (x_1, \dotsc, x_n)\)</span>, respectively. The object is to give an effective description of the scheme-theoretic image of a morphism <span class="math display">\[D(g) \to \mathbb{A}^n\]</span> where <span class="math inline">\(D(g) \subseteq \mathbb{A}^m\)</span> is a distinguished open defined by some <span class="math inline">\(g \in k[t]\)</span>. Note that a morphism <span class="math inline">\(D(g) \to \mathbb{A}^n\)</span> is nothing more than a rational parametrization.</p>
+<p>I’m sure this is all well-known. What’s more, there’s nothing new to be gained from this scheme-theoretic formulation over and above CLO’s classical formulation: since <span class="math inline">\(D(g)\)</span> is reduced, so too is any scheme-theoretic image of <span class="math inline">\(D(g)\)</span>. But anyway, I thought it was fun to work out, so here it is!</p>
+<p>We begin with a preliminary observation.</p>
+<p><strong>Lemma.</strong> Let <span class="math inline">\(f : \mathbb{A}^m \to \mathbb{A}^n\)</span> be a morphism of <span class="math inline">\(k\)</span>-schemes and let <span class="math display">\[\Gamma_f : \mathbb{A}^m \to \mathbb{A}^m \times \mathbb{A}^n = \mathrm{Spec}\, k[t, x]\]</span> be the graph of <span class="math inline">\(f\)</span>. Then <span class="math display">\[\ker(\Gamma_f^\sharp) = \langle x - f^\sharp(x) \rangle.\]</span> In other words, the scheme-theoretic image of <span class="math inline">\(\Gamma_f\)</span> is the closed subscheme <span class="math inline">\(V(x - f^\sharp(x))\)</span>.</p>
+<p><em>Proof.</em> Note that <span class="math inline">\(\Gamma_f^\sharp : k[t, x] \to k[t]\)</span> is the surjection given by the following: <span class="math display">\[ \begin{aligned} 
+\Gamma_f^\sharp(t) &amp;= t \\ 
+\Gamma_f^\sharp(x) &amp;= f^\sharp(x) \end{aligned} \]</span> Let us set <span class="math inline">\(I = \langle x - f^\sharp(x) \rangle\)</span>. It is clear that <span class="math inline">\(I \subseteq \ker(\Gamma_f^\sharp)\)</span> since <span class="math inline">\(\Gamma_f\)</span> annihilates each generator <span class="math inline">\(x_i - f^\sharp(x_i)\)</span> of <span class="math inline">\(I\)</span>. For the converse, suppose <span class="math inline">\(h \in \ker(\Gamma_f^\sharp) \subseteq k[t, x]\)</span>. We divide <span class="math inline">\(h\)</span> by the list <span class="math inline">\(x - f^\sharp(x)\)</span> using lex order where <span class="math inline">\(x_1 &gt; \cdots &gt; x_n &gt; t_1 &gt; \cdots &gt; t_m\)</span>. This produces an expression of the form<br />
+<span class="math display">\[ h = (x_1 - f^\sharp(x_1)) q_1 + \dotsb + (x_n - f^\sharp(x_n)) q_n + r \]</span> where no term of the remainder <span class="math inline">\(r\)</span> lies in <span class="math inline">\(\langle \mathrm{LT}(x - f^\sharp(x)) \rangle = \langle x \rangle\)</span>. In other words, <span class="math inline">\(r\)</span> is a polynomial in <span class="math inline">\(t_1, \dotsc, t_m\)</span>. Applying <span class="math inline">\(\Gamma_f^\sharp\)</span> to the above expression shows that <span class="math display">\[ 0 = \Gamma_f^\sharp(h) = \Gamma_f^\sharp(r) = r \]</span> since <span class="math inline">\(\Gamma_f^\sharp\)</span> annihilates <span class="math inline">\(h\)</span> as well as <span class="math inline">\(x_i - f^\sharp(x_i)\)</span> for all <span class="math inline">\(i\)</span>, and since it acts as the identity on polynomials in <span class="math inline">\(t_1, \dotsc, t_m\)</span>. Since <span class="math inline">\(r = 0\)</span>, we have<br />
+<span class="math display">\[ h = (x_1 - f^\sharp(x_1)) q_1 + \dotsb + (x_n - f^\sharp(x_n)) q_n \in I, \]</span> thus concluding the proof. <span style="float: right;"><span class="math inline">\(\Box\)</span></span></p>
+<p>This brings us to the main result.</p>
+<p><strong>Proposition.</strong> Fix <span class="math inline">\(g \in k[t]\)</span>. Suppose <span class="math inline">\(f : D(g) \to \mathbb{A}^n\)</span> is a morphism of <span class="math inline">\(k\)</span>-schemes. Choose <span class="math inline">\(r\)</span> large enough that <span class="math inline">\(g^r f^\sharp(x_i) \in k[t]\)</span> for all <span class="math inline">\(i\)</span>, and let <span class="math display">\[ I = \langle 1 - ug, g^r x - g^r f^\sharp(x) \rangle \subseteq k[u, t, x], \]</span> where <span class="math inline">\(u\)</span> is an indeterminate. Then <span class="math display">\[\ker(f^\sharp) = I \cap k[x].\]</span> In other words, the scheme-theoretic image of <span class="math inline">\(f\)</span> is <span class="math inline">\(V(I \cap k[x])\)</span>.</p>
+<p><em>Proof.</em> Let <span class="math inline">\(i^\sharp : k[u,t] \to k[t, 1/g]\)</span> be the surjective <span class="math inline">\(k[t]\)</span>-algebra homomorphism where <span class="math inline">\(i^\sharp(u) = 1/g\)</span>. Then <span class="math inline">\(\ker(i^\sharp) = \langle 1 - ug \rangle\)</span>. Then let <span class="math inline">\(\tilde{f}^\sharp : k[x] \to k[u,t]\)</span> be the <span class="math inline">\(k\)</span>-algebra homomorphism given by <span class="math inline">\(\tilde{f}^\sharp(x) = u^r g^r f^\sharp\)</span>. The rest of the proof follows rather formally from the following commutative diagram.</p>
+<div style="text-align: center;">
+<p><img src="/img/rational-implicitization.png" width="50%"/></p>
+</div>
+<p>Observe that <span class="math display">\[\ker(\Gamma_{\tilde{f}}^\sharp) = \langle x - u^r g^r f^\sharp(x) \rangle \subseteq k[u,t,x], \]</span> by the lemma. Set <span class="math inline">\(\Gamma^\sharp = i^\sharp \circ \Gamma_{\tilde{f}}^\sharp\)</span>. Since <span class="math inline">\(\ker(i^\sharp) = \langle 1 - ug \rangle\)</span> and <span class="math inline">\(1 - ug\)</span> is a lift of itself under the surjection <span class="math inline">\(\Gamma_{\tilde{f}}^\sharp\)</span>, it follows that <span class="math display">\[ \ker(\Gamma) = \langle 1 - ug, x - u^r g^r f^\sharp(x) \rangle \subseteq k[u,t,x]. \]</span> Indeed, it is clear that <span class="math inline">\(\Gamma\)</span> annihilates all generators listed here. Conversely, if <span class="math inline">\(h \in \ker(\Gamma^\sharp)\)</span>, then <span class="math inline">\(\Gamma_{\tilde{f}}^\sharp(h) \in \ker(i^\sharp)\)</span>, so there exists <span class="math inline">\(q\)</span> such that <span class="math inline">\(\Gamma_{\tilde{f}}^\sharp(h) = q(1-ug)\)</span>. Since <span class="math inline">\(\Gamma_{\tilde{f}}^\sharp\)</span> is surjective, there exists <span class="math inline">\(\tilde{q}\)</span> such that <span class="math inline">\(\Gamma_{\tilde{f}}^\sharp(\tilde{q}) = q\)</span>, which means that <span class="math display">\[ h - \tilde{q}(1 - ug) \in \ker(\Gamma_{\tilde{f}}^\sharp) = \langle x - u^r g^r f^\sharp(x) \rangle, \]</span> proving that <span class="math inline">\(h \in \langle 1 - ug, x - u^r g^r f^\sharp(x) \rangle\)</span>.</p>
+<p>Now it is also clear that <span class="math inline">\(k[u,t,x]/\ker(\Gamma) = k[u,t,x]/I\)</span>, whence <span class="math inline">\(\ker(\Gamma) = I\)</span>. Alternatively, note that <span class="math inline">\(1-u^rg^r = (1-ug)(1+ug+\dotsb + u^{r-1} g^{r-1})\)</span>, so <span class="math inline">\(1 - u^r g^r\)</span> is in both <span class="math inline">\(I\)</span> and <span class="math inline">\(\ker(\Gamma)\)</span>, and then we have the following relations which show that <span class="math inline">\(I = \ker(\Gamma)\)</span>. <span class="math display">\[ \begin{aligned} g^r x - g^r f^\sharp(x) &amp;= g^r (x - u^r g^r f^\sharp(x)) - g^r f^\sharp(x) (1 - u^r g^r) \\ 
+x - u^r g^r f^\sharp(x) &amp;= u^r (g^r x - g^r f^\sharp(x)) + x(1 - u^r g^r)
+\end{aligned} \]</span></p>
+<p>Finally, let <span class="math inline">\(\pi^\sharp : k[x] \to k[u,t,x]\)</span> be the inclusion. Then <span class="math inline">\(f^\sharp = \Gamma^\sharp \circ \pi^\sharp\)</span>, so <span class="math display">\[ \ker(f^\sharp) = (\pi^\sharp)^{-1}(\ker(\Gamma)) = (\pi^\sharp)^{-1}(I) = I \cap k[x]. \]</span> This concludes the proof. <span style="float: right;"><span class="math inline">\(\Box\)</span></span></p>
+<p><strong>Upshot.</strong> Let <span class="math inline">\(f : D(g) \to \mathbb{A}^n\)</span> and <span class="math inline">\(I \subseteq k[u,t,x]\)</span> be as in the statement of the proposition above. Then <span class="math inline">\(I \cap k[x]\)</span> is the <span class="math inline">\((1+m)\)</span>th elimination ideal of <span class="math inline">\(I\)</span>. The “elimination theorem” (3.1.2 in CLO) tells us that if we compute a Gröbner basis <span class="math inline">\(G\)</span> for <span class="math inline">\(I\)</span> using a <span class="math inline">\((1+m)\)</span>th elimination order (such as the lex order where <span class="math inline">\(u &gt; t_1 &gt; \cdots &gt; t_m &gt; x_1 &gt; \cdots &gt; x_n\)</span>), then <span class="math inline">\(G \cap k[x]\)</span> is a Gröbner basis for <span class="math inline">\(I \cap k[x]\)</span>. This gives an explicit algorithm for computing the scheme-theoretic image of <span class="math inline">\(f\)</span>.</p>
+
+</article>
+
+<footer>
+<br/>
+<ul class="tags">
+<li><a href="/blog#math">math</a></li>
+</ul>
+
+</footer>
+
+</main>
+
+
+</body>
+
+</html>
