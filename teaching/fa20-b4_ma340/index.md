@@ -263,6 +263,7 @@ Notes:
 
 * Problem 9 is the reason that problem 5 is harder than problem 4. Doing problem 9 first will help you avoid a potential mistake in problem 5. 
 * One can use a vaguely similar strategy for both problems 10 and 5. 
+* [Video](https://canvas.coloradocollege.edu/files/939481/) and [notes](notes/grevlex.jpg)
 
 ## 2.3: Multivariable Division Algorithm
 
