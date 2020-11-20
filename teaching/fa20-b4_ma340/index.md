@@ -392,15 +392,18 @@ Lettered problems:
 <li>Give an example (with proof) of an ideal $I \subseteq \mathbb{C}[x,y]$ such that $\pi_1(V(I)) \subsetneq V(I_1)$, where $\pi_1 : \mathbb{C}^2 \to \mathbb{C}$ is projection onto the $y$-axis and $I_1 = \mathbb{C}[y] \cap I$ is the first elimination ideal. *Possible hint*. By problem 5, any such ideal $I$ must have the property that $I_1 = \{0\}$. What does this tell you about $V(I_1)$? And what does this plus the closure theorem tell you about $\pi_1(V(I))$? It's helpful to use this geometric intuition to construct an appropriate ideal $I$, but be careful: you're working over $\mathbb{C}$, not $\mathbb{R}$.</li>
 </ol>
 
-<!--
 ## 3.3: Implicitization
 
 CC: 1, 6(a,b)  
 Easier: 2, 4, 8, 14  
-Harder: 3, 7, 10
+Harder: 3, 7, 10, 11, 12
 
 Notes:
 * For problem 10(a), it might be helpful to notice that the statement of the extension theorem does not require that you start with a Gröbner basis. Of course, it's *usually* useful to apply the statement with a Gröbner basis with respect to lex order (since that helps us identify what the elimination ideal actually is), but the statement of the theorem applies more generally, and that observation will probably be useful for problem 10(a). 
-* For problem 14(a), you don't really need to have done problem 13. Just use the statement of the rational implicitization theorem.  
+* For problem 14(a), you don't really need to have done problem 13. Just use the statement of the rational implicitization theorem.
+* For problem 12(b), $W = V(uv)$, and the ideal $J$ is the one defined on the bottom of page 139.  
 
-11, 12,13 -->
+
+
+
+
