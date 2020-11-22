@@ -126,7 +126,7 @@ nonav: true
     Batch C
 </td>
 <td>
-    3.4
+    3.4, (3.5)
     <hr/>
     &nbsp;
 </td>
@@ -292,8 +292,13 @@ Lettered problems:
 ##  2.5: Gröbner Bases
 
 CC: 1, 4, 14  
-Easier: 5, 7, 10, 12, 15, 16, 17  
+Easier: 5, 7, 10, 12, 15, 16, 17, A  
 Harder: 3, 6, 8, 13, 18
+
+Lettered problems: 
+<ol style="list-style-type: upper-alpha">
+<li>We know that any ideal $I$ in the single variable polynomial ring $k[x]$ is of the form  $I = \langle h \rangle$ for some $h \in k[x]$. Suppose $G = \{g_1, \dotsc, g_t \}$ is a subset of $I$. When is $G$ a Gröbner basis for $I$? Make a nontrivial statement of the form "$G$ is a Gröbner basis for $I$ if and only if...," and then prove it.</li>
+</ol>
 
 ## 2.6: Properties of Gröbner Bases
 
@@ -371,6 +376,10 @@ Harder: 2
     
 <!--  2.5.9, 2.7.12(b) -->
 
+Notes:
+
+* This reading is optional. That being said, note that some material in later sections (eg, sections 3.5 and 4.1) will only be accessible if you at least have a surface understanding of some concepts from this section. 
+
 ## 3.1: Elimination and Extension
 
 CC: 1, 2(a-c), 5  
@@ -395,11 +404,53 @@ Easier: 2, 4, 8, 14
 Harder: 3, 7, 10, 11, 12
 
 Notes:
+
 * For problem 10(a), it might be helpful to notice that the statement of the extension theorem does not require that you start with a Gröbner basis. Of course, it's *usually* useful to apply the statement with a Gröbner basis with respect to lex order (since that helps us identify what the elimination ideal actually is), but the statement of the theorem applies more generally, and that observation will probably be useful for problem 10(a). 
 * For problem 14(a), you don't really need to have done problem 13. Just use the statement of the rational implicitization theorem.
 * For problem 12(b), $W = V(uv)$, and the ideal $J$ is the one defined on the bottom of page 139.  
 
+## 3.4: Singular Points on Curves
 
+CC: 1, 8  
+Easier: 2, 3, 5+6  
+Harder: 9, 10+11, 12  
+
+Notes: 
+
+* Feel free to skip the bit about envelopes. None of the exercises above are about envelopes. 
+* This reading could probably have been a part of chapter 1. You won't need any Gröbner bases for the exercises about singular points. 
+
+## 3.5: Proof of Extension Theorem
+
+Easier: A, 1, 4  
+
+Lettered problems: 
+<ol style="list-style-type: upper-alpha">
+<li>Let $\varphi : A \to B$ be a surjective ring homomorphism. 
+    <ol style="list-style-type: lower-alpha">
+    <li>If $I \subseteq A$ is an ideal, show that $\varphi(I)$ is an ideal as well.</li>
+    <li>Suppose $I = \langle a_1, \dotsc, a_n \rangle$ for some $a_1, \dotsc, a_n \in A$. Show that $\varphi(I) = \langle \phi(a_1), \dotsc, \phi(a_n) \rangle$. </li>
+    <li>Explain how problems 2 and 5(a) in the textbook follow from parts (a) and (b) above.</li>
+    </ol>
+</li>
+</ol>
+
+Notes: 
+
+* This section is a challenging read. It also uses stuff about "standard representations" from section 2.9 (which was also an optional reading). If you decide to read it, I encourage you to read it twice. Read it once, skipping over the proof of theorem 2 (instead, focus on the statement of the theorem and the example right after the proof). Then work on some exercises, and then go back and try reading the proof of theorem 2. 
+* Problem 4(b) should say $g_o = g_2$. (The 2015 printing says $g_o = g_3$, but this was corrected in the 2018 printing.)
+
+## 4.1: Nullstellensatz
+
+CC: 2, 3  
+Easier: 1, 4  
+Harder: 7, 8, 9, 10  
+
+Notes: 
+
+* The proof of the Weak Nullstellensatz uses some material from section 2.9. If you didn't read section 2.9, feel free to skip this proof, but do make sure you understand the statement of the Weak Nullstellensatz!
+
+## 4.2: Ideal-Variety Correspondence
 
 
 
