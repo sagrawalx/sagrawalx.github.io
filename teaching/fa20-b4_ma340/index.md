@@ -452,5 +452,13 @@ Notes:
 
 ## 4.2: Ideal-Variety Correspondence
 
+CC: 1, 2, 14  
+Easier: 3, 4, 5, 7, 8, 12, 13  
+Harder: 6, 9+10, 15, 16+17  
 
+Notes: 
+
+* You should look through Appendix A as well. 
+* The discussion towards the end of the section about the radical of principal ideal generalizes problems 1.5.12--14. 
+* You might find problem 2.7.6 useful for problem 17 above. 
 
