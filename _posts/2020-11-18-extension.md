@@ -73,10 +73,10 @@ Since $y \in J$ also, we see that $c_f x^d \in J$. Any monomial of degree $d$ co
 
 **Lemma 4.** Let $f_1 : X \to Y_1$ and $g : Y_1 \to Y_2$ be morphisms of schemes. Set $f_2 = g \circ f_1 : X \to Y_2$, and let $Z_i \subseteq Y_i$ be the scheme-theoretic image of $f_i$ for $i = 1, 2$. Then $Z_2$ is the scheme-theoretic image of $Z_1$ under $g$. 
 
-*Proof.* We need to show that, if $Z$ is a closed subscheme of $Y_2$, then $f_2$ factors through $Z$ if and only if $g|_{Z_1}$ factors through $Z$. The "if" direction is clear, so suppose that $f_2$ factors through $Z$. 
-
-*//incomplete --- this is clear when $f_1$ and $g$ are quasi-compact, but in general...? //* 
+*Proof.* This is obvious.[^qc] Let $Z_2'$ be the scheme-theoretic image of $Z_1$ under $g$. Then $Z_2'$ is a closed subscheme of $Z_2$ by {% stacks 01R9 %}. Conversely, since $g|_{Z_1}$ factors through $Z_2'$, we see that $g \circ f_1 = f_2$ also factors through $Z_2'$. Thus $Z_2$ is a closed subscheme of $Z_2'$. 
 <span style="float: right;">$\Box$</span>
+
+[^qc]: Despite the obviousness, it's worth noting perhaps that this result is true without quasi-compactness assumptions on the morphisms (which is usually required for well-behavedness of scheme-theoretic images).
 
 Proposition 3 is a direct scheme-theoretic translation of the affine extension theorem. That being said, note that the statement furnishes the sharpest possible lower bound on $\pi(V(I))$ when $V(c_{f_1}, \dotsc, c_{f_t})$ is as small as possible, which happens when $\langle c_{f_1}, \dotsc, c_{f_r} \rangle$ is as large as possible. If $J = I^h + \langle y \rangle \subseteq k[t,x,y]$ is as in the proof above, we know that $\langle c_{f_1}, \dotsc, c_{f_r} \rangle \subseteq J^s \cap k[t]$, which leads to two questions: 
 
