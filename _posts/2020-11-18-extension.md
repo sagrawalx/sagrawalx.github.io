@@ -1,5 +1,5 @@
 ---
-title: Proj, "Extension," and "Closure"
+title: Proj, "extension," and "closure"
 date: 2020-11-30
 tags: math
 layout: post
@@ -78,7 +78,7 @@ Since $y \in J$ also, we see that $c_f x^d \in J$. Any monomial of degree $d$ co
 
 [^qc]: Despite the obviousness, it's worth noting perhaps that this result is true without quasi-compactness assumptions on the morphisms (which is usually required for well-behavedness of scheme-theoretic images).
 
-Proposition 3 is a direct scheme-theoretic translation of the affine extension theorem as well as the first part of the "closure theorem" {% cite clo --label theorem --locator 3.2.3(a), 4.4.4 %}. That being said, note that the statement furnishes the sharpest possible lower bound on $\pi(V(I))$ when $V(c_{f_1}, \dotsc, c_{f_t})$ is as small as possible, which happens when $\langle c_{f_1}, \dotsc, c_{f_r} \rangle$ is as large as possible. If $J = I^h + \langle y \rangle \subseteq k[t,x,y]$ is as in the proof above, we know that $\langle c_{f_1}, \dotsc, c_{f_r} \rangle \subseteq J^s \cap k[t]$, which leads to two questions: 
+Proposition 3 is a direct scheme-theoretic translation of the affine extension theorem as well as the first part of the closure theorem {% cite clo --label theorem --locator 3.2.3(a), 4.4.4 %}. That being said, note that the statement furnishes the sharpest possible lower bound on $\pi(V(I))$ when $V(c_{f_1}, \dotsc, c_{f_t})$ is as small as possible, which happens when $\langle c_{f_1}, \dotsc, c_{f_r} \rangle$ is as large as possible. If $J = I^h + \langle y \rangle \subseteq k[t,x,y]$ is as in the proof above, we know that $\langle c_{f_1}, \dotsc, c_{f_r} \rangle \subseteq J^s \cap k[t]$, which leads to two questions: 
 
 * Are there $f_1, \dotsc, f_r \in I$ such that $\langle c_{f_1}, \dotsc, c_{f_r} \rangle = J^s \cap k[t]$?
 
