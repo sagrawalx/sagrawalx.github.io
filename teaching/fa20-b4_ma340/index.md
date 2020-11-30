@@ -291,7 +291,7 @@ Lettered problems:
 Notes:
 
 * [Video](https://canvas.coloradocollege.edu/files/942351/) and [notes](notes/monomial.jpg)
-* Select reading question responses (coming soon!)
+* [Select reading question responses](questions/q2-4.pdf)
 
 
 ##  2.5: Gröbner Bases
