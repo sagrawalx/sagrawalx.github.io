@@ -12,6 +12,7 @@ highlighter: rouge
 
 scholar:
     style: css/custom.csl
+    locale: css/locales-en-US.csl
     bibliography_template: bib
 
 exclude: ["README.md", "jekgit.sh"]

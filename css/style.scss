@@ -184,6 +184,10 @@ main {
         padding-top: 1.5em;
         padding-bottom: 1.5em;
         margin-top: 1em;
+        
+        b {
+            font-weight: bold;
+        }
     }
 
     .footnoteRef, sup {
@@ -204,6 +208,20 @@ main {
         border: 0;
         height: 1px;
         background: $less-light;
+    }
+    
+    ol.bibliography {
+        span {
+            display: inline;
+        }
+        
+        div.csl-left-margin {
+            display: none;
+        }
+    
+        div.csl-right-inline {
+            display: inline;
+        }
     }
 }
 

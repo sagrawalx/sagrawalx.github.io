@@ -8,10 +8,10 @@ title: Home
 
 Hi there! My name is Shishir; I also go by Sunny. I am a human being. 
 
-I am employed as a mathematician at [Colorado College](https://www.coloradocollege.edu/). I study [algebraic geometry](math/), and [teach](teaching/) all sorts of things. 
+I am employed as a mathematician at [Colorado College](https://www.coloradocollege.edu/). I study [algebraic geometry](math/). 
 
 * Email: <span class="email" data-localpart="sagrawal" data-domain="coloradocollege.edu"></span> [[PGP](pgp.txt)]
 * Office: Tutt Science 234
 * [Curriculum vitae](cv)
 
-Other things I like doing include: reading, doodling, cooking, hiking, learning languages, studying linguistics...
+Other things besides math that I like doing include: reading, doodling, cooking, hiking, learning languages, studying linguistics...

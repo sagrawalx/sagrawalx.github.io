@@ -288,6 +288,11 @@ Lettered problems:
 <li>Suppose $I \subseteq k[x_1, \dotsc, x_n]$ is a monomial ideal. Describe the corresponding affine variety $V(I)$ geometrically. </li>
 </ol>
 
+Notes:
+
+* [Video](https://canvas.coloradocollege.edu/files/942351/) and [notes](notes/monomial.jpg)
+* Select reading question responses (coming soon!)
+
 
 ##  2.5: Gröbner Bases
 
