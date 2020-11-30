@@ -327,7 +327,7 @@ Notes:
 
 CC: 1, 2, 3  
 Easier: 6, 8, 9  
-Harder: 7, A, 10(b-c), 11, 13, 14, B
+Harder: 7, A, 10(b-c), 11, 13, 14, A, B
 
 Lettered problems: 
 <ol style="list-style-type: upper-alpha">
