@@ -159,7 +159,7 @@ nonav: true
 <td>
     &nbsp;
     <hr/>
-    Batch E, FR
+    Batch E, [FR](final-reflection.pdf)
 </td>
 <td colspan="2" style="background-color: #f5f5f5;"></td>
 </tr>
@@ -171,9 +171,9 @@ How to read this calendar:
 * Things above the line are due at 8am MT on that day, and things below the line are due at noon MT on that day.
 * Parenthetical readings are optional.
 * Abbreviations: 
-    - Autobio = "[Mathematical autobiography](../prompt.pdf)"
-    - WR# = "{{ wr }} for week #" 
-    - FR = "Final reflection"
+    - Autobio = "[Mathematical autobiography](../prompt.pdf)" (via email)
+    - WR# = "{{ wr }} for week #" (via Google Form)
+    - FR = "[Final reflection](final-reflection.pdf)" (via Gradescope)
 * Batches: 
     - Batch A = 1.1-5, 2.1
     - Batch B: 2.2-4
