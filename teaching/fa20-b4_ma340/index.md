@@ -177,9 +177,9 @@ How to read this calendar:
 * Batches: 
     - Batch A = 1.1-5, 2.1
     - Batch B: 2.2-4
-    - Batch C: 2.5-8
-    - Batch D: 2.9, 3.1-2
-    - Batch E: 3.3-4, 4.1-2
+    - Batch C: 2.5-8, (2.9)
+    - Batch D: 3.1-2
+    - Batch E: 3.3-4, (3.5), 4.1-2
 
 # Sections
 
