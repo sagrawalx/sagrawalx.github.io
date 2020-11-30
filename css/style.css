@@ -112,6 +112,8 @@ main .introduction, main .references { font-size: small; background-color: #eee;
 
 main .references { padding-top: 1.5em; padding-bottom: 1.5em; margin-top: 1em; }
 
+main .references b { font-weight: bold; }
+
 main .footnoteRef, main sup { vertical-align: super; font-size: xx-small; }
 
 main .footnotes { font-size: small; }
@@ -119,6 +121,12 @@ main .footnotes { font-size: small; }
 main .footnotes ol { padding-left: 4.5em; padding-right: 2em; }
 
 main hr { margin-top: 1em; border: 0; height: 1px; background: #ddd; }
+
+main ol.bibliography span { display: inline; }
+
+main ol.bibliography div.csl-left-margin { display: none; }
+
+main ol.bibliography div.csl-right-inline { display: inline; }
 
 .email:after { content: attr(data-domain); }
 
