@@ -307,6 +307,11 @@ Lettered problems:
 <li>We know that any ideal $I$ in the single variable polynomial ring $k[x]$ is of the form  $I = \langle h \rangle$ for some $h \in k[x]$. Suppose $G = \{g_1, \dotsc, g_t \}$ is a subset of $I$. When is $G$ a Gröbner basis for $I$? Make a nontrivial statement of the form "$G$ is a Gröbner basis for $I$ if and only if...," and then prove it.</li>
 </ol>
 
+Notes: 
+
+* [Notes](notes/groebner.jpg) (no video for now, technical difficulties)
+* [Select reading question responses](questions/q2-5.pdf)
+
 ## 2.6: Properties of Gröbner Bases
 
 CC: 1, 2, 5  
