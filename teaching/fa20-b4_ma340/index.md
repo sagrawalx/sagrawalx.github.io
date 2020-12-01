@@ -311,6 +311,7 @@ Notes:
 
 * [Notes](notes/groebner.jpg) (no video for now, technical difficulties)
 * [Select reading question responses](questions/q2-5.pdf)
+* [Select CC solutions](questions/c2-5.pdf)
 
 ## 2.6: Properties of Gröbner Bases
 
