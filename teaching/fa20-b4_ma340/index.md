@@ -329,6 +329,9 @@ Notes:
 
 * It's important to understand the *statements* of lemma 5 and theorem 6. The proofs of these two results are fairly confusing; don't stress too much about them. 
 * If you do "8+12," you might find it convenient to do problem 12 before doing problem 8. 
+* [Select reading question responses](questions/q2-6.pdf)
+* [Select CC solutions](questions/c2-6.pdf)
+* Video and notes will be posted later this afternoon
 
 ## 2.7: Buchberger's Algorithm
 
