@@ -1,4 +1,4 @@
-I"oT<h1 id="information">Information</h1>
+I"kT<h1 id="information">Information</h1>
 <ul>
 <li>Instructor: Sunny (<span class="email" data-localpart="sagrawal" data-domain="coloradocollege.edu"></span>)</li>
 <li><a href="syllabus">Course syllabus</a></li>
@@ -309,7 +309,7 @@ Harder: 6, 7, 11, 8+12, 13</p>
 <p>Lettered problems:</p>
 <ol style="list-style-type: upper-alpha">
 <li>
-For any <span class="math inline">\(f, g \in k[x_1, \dotsc, x_n]\)</span> and <span class="math inline">\(a, b \in k\)</span> are nonzero, prove that <span class="math inline">\(S(f,g) = S(af, bg)\)</span>.
+For any <span class="math inline">\(f, g \in k[x_1, \dotsc, x_n]\)</span> and <span class="math inline">\(a, b \in k\)</span> nonzero, prove that <span class="math inline">\(S(f,g) = S(af, bg)\)</span>.
 </li>
 </ol>
 <p>Notes:</p>

@@ -322,7 +322,7 @@ Harder: 6, 7, 11, 8+12, 13
 Lettered problems: 
 
 <ol style="list-style-type: upper-alpha">
-<li>For any $f, g \in k[x_1, \dotsc, x_n]$ and $a, b \in k$ are nonzero, prove that $S(f,g) = S(af, bg)$.</li>
+<li>For any $f, g \in k[x_1, \dotsc, x_n]$ and $a, b \in k$ nonzero, prove that $S(f,g) = S(af, bg)$.</li>
 </ol>
 
 Notes: 
