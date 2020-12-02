@@ -331,7 +331,9 @@ Notes:
 * If you do "8+12," you might find it convenient to do problem 12 before doing problem 8. 
 * [Select reading question responses](questions/q2-6.pdf)
 * [Select CC solutions](questions/c2-6.pdf)
-* Video and notes will be posted later this afternoon
+* Video (Parts [1](https://canvas.coloradocollege.edu/files/945014/), [2](https://canvas.coloradocollege.edu/files/945019/), [3](https://canvas.coloradocollege.edu/files/945020/)) and [notes](notes/spair.jpg)
+
+Video and notes will be posted later this afternoon
 
 ## 2.7: Buchberger's Algorithm
 
