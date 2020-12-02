@@ -328,6 +328,7 @@ Lettered problems:
 Notes: 
 
 * It's important to understand the *statements* of lemma 5 and theorem 6. The proofs of these two results are fairly confusing; don't stress too much about them. 
+* Problem 5(d) should say $g = z^2 - 3z$ (S-polynomials only make sense for polynomial functions!). This typo was corrected in the 2018 printing. 
 * If you do "8+12," you might find it convenient to do problem 12 before doing problem 8. 
 * [Select reading question responses](questions/q2-6.pdf)
 * [Select CC solutions](questions/c2-6.pdf)
