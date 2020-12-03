@@ -367,6 +367,8 @@ Notes:
 * In the 2015 printing of the textbook, there's a small typo in problem 14. The formula for $h$ given in the book has an $x_j$ instead of $x$. In other words, the correct formula is 
 $$ h(x) = \sum_{i = 1}^n b_i \prod_{j \neq i} \frac{x - a_j}{a_i - a_j} \in k[x]. $$
     This typo was corrected in the 2018 printing. 
+* [Select reading question responses](questions/q2-7.pdf)
+* Video and notes will be posted later this afternoon
     
 ## 2.8: Applications of Gröbner Bases
 
