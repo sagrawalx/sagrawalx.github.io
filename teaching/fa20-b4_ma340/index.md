@@ -387,7 +387,7 @@ Notes:
 
 * 5(b) requires to remember something from multivariable calculus. 
 * I don't like the hint for 7(c). Here's a better hint. When you did part (b), you probably "threw away" some polynomials. Don't throw them away; they're useful!
-* [Video](https://canvas.coloradocollege.edu/files/946928/) and [notes](notes/solving.jpg)
+* [Video](https://canvas.coloradocollege.edu/files/946928/) (and [corrections](https://canvas.coloradocollege.edu/files/946952/) and [notes](notes/solving.jpg)
 * [Select reading question responses](questions/q2-8.pdf)
 
 ## 2.9: Refinements of the Buchberger Criterion
