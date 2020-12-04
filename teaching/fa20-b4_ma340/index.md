@@ -24,7 +24,7 @@ nonav: true
     - Mornings: Mon Fri 10-11am MT, Tue Thu 11-12am MT
     - Afternoons: Mon Tue Thu Fri 2-3pm MT
     - More by request; just email and ask!
-    - Notes: [11/30](notes/office11-30.jpg)
+    - Notes: [11/30](notes/office11-30.jpg), [12/4](notes/office12-04.jpg)
 * [Zoom links on Canvas](https://canvas.coloradocollege.edu/courses/31880/external_tools/483)
 
 # Links 
@@ -367,6 +367,7 @@ Notes:
 * In the 2015 printing of the textbook, there's a small typo in problem 14. The formula for $h$ given in the book has an $x_j$ instead of $x$. In other words, the correct formula is 
 $$ h(x) = \sum_{i = 1}^n b_i \prod_{j \neq i} \frac{x - a_j}{a_i - a_j} \in k[x]. $$
     This typo was corrected in the 2018 printing. 
+* The hint for problem 10(b) should say $g_j = x_\ell + D$ and $S(g_i, g_j) = x_\ell C - x_s D$. This typo was corrected in the 2018 printing. 
 * [Select reading question responses](questions/q2-7.pdf)
 * Video (parts [1](https://canvas.coloradocollege.edu/files/945849/) and [2](https://canvas.coloradocollege.edu/files/945850/)) and [notes](notes/buchberger.jpg)
     
@@ -385,8 +386,9 @@ Lettered problems:
 Notes: 
 
 * 5(b) requires to remember something from multivariable calculus. 
-
 * I don't like the hint for 7(c). Here's a better hint. When you did part (b), you probably "threw away" some polynomials. Don't throw them away; they're useful!
+* [Video](https://canvas.coloradocollege.edu/files/946928/) and [notes](notes/solving.jpg)
+* [Select reading question responses](questions/q2-8.pdf)
 
 ## 2.9: Refinements of the Buchberger Criterion
 
