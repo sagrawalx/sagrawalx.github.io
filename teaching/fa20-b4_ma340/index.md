@@ -24,7 +24,7 @@ nonav: true
     - Mornings: Mon Fri 10-11am MT, Tue Thu 11-12am MT
     - Afternoons: Mon Tue Thu Fri 2-3pm MT
     - More by request; just email and ask!
-    - Notes: [11/30](notes/office11-30.jpg), [12/4](notes/office12-04.jpg)
+    - Notes: [11/30](notes/office11-30.jpg), [12/4](notes/office12-04.jpg), [12/7](notes/office12-07.jpg)
 * [Zoom links on Canvas](https://canvas.coloradocollege.edu/courses/31880/external_tools/483)
 
 # Links 
@@ -410,7 +410,7 @@ Harder: 7, 9
 Notes: 
 
 * [Select reading question responses](questions/q3-1.pdf)
-* Video and notes forthcoming 
+* [Video](https://canvas.coloradocollege.edu/files/949069/) and [notes](notes/elimination.jpg)
 
 ## 3.2: Geometry of Elimination
 
