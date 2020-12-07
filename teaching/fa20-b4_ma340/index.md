@@ -124,7 +124,7 @@ nonav: true
 <td>
     3.3
     <hr/>
-    Batch C
+    &nbsp;
 </td>
 <td>
     3.4, (3.5)
@@ -134,12 +134,12 @@ nonav: true
 <td>
     4.1
     <hr/>
-    &nbsp;
+    Batch C
 </td>
 <td>
     4.2
     <hr/>
-    Batch D
+    &nbsp;
 </td>
 </tr>
 
@@ -149,7 +149,7 @@ nonav: true
 <td>
     {{ wrshort }}3
     <hr/>
-    &nbsp;
+    Batch D
 </td>
 <td>
     &nbsp;
