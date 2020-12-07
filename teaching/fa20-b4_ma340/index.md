@@ -405,7 +405,12 @@ Notes:
 
 CC: 1, 2(a-c), 5  
 Easier: 3, 4, 6, 8  
-Harder: 7, 9  
+Harder: 7, 9 
+
+Notes: 
+
+* [Select reading question responses](questions/q3-1.pdf)
+* Video and notes forthcoming 
 
 ## 3.2: Geometry of Elimination
 
