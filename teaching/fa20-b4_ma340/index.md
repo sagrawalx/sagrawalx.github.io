@@ -434,6 +434,8 @@ Notes:
 * For problem 10(a), it might be helpful to notice that the statement of the extension theorem does not require that you start with a Gröbner basis. Of course, it's *usually* useful to apply the statement with a Gröbner basis with respect to lex order (since that helps us identify what the elimination ideal actually is), but the statement of the theorem applies more generally, and that observation will probably be useful for problem 10(a). 
 * For problem 14(a), you don't really need to have done problem 13. Just use the statement of the rational implicitization theorem.
 * For problem 12(b), $W = V(uv)$, and the ideal $J$ is the one defined on the bottom of page 139.  
+* [Select reading question responses](questions/q3-3.pdf)
+* Video and notes forthcoming
 
 ## 3.4: Singular Points on Curves
 
