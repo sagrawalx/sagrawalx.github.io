@@ -448,6 +448,7 @@ Notes:
 
 * Feel free to skip the bit about envelopes. None of the exercises above are about envelopes. 
 * This reading could probably have been a part of chapter 1. You won't need any Gröbner bases for the exercises about singular points. 
+* [Select reading question responses](questions/q3-4.pdf)
 
 ## 3.5: Proof of Extension Theorem
 
