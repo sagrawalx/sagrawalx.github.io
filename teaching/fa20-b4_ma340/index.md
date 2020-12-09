@@ -435,6 +435,7 @@ Notes:
 * For problem 14(a), you don't really need to have done problem 13. Just use the statement of the rational implicitization theorem.
 * For problem 12(b), $W = V(uv)$, and the ideal $J$ is the one defined on the bottom of page 139.  
 * [Select reading question responses](questions/q3-3.pdf)
+* [Select CC solutions](questions/c3-3.pdf)
 * [Video ("Zariski closure")](https://canvas.coloradocollege.edu/files/950367/) and [notes](notes/zariski.jpg)
 * Video ("Implicitization," parts [1](https://canvas.coloradocollege.edu/files/950369/), [2](https://canvas.coloradocollege.edu/files/950370/), and [3](https://canvas.coloradocollege.edu/files/950371/)) and [notes](notes/implicitization.jpg)
 
