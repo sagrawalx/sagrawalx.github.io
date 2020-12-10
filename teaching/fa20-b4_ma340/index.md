@@ -24,7 +24,7 @@ nonav: true
     - Mornings: Mon Fri 10-11am MT, Tue Thu 11-12am MT
     - Afternoons: Mon Tue Thu Fri 2-3pm MT
     - More by request; just email and ask!
-    - Notes: [11/30](notes/office11-30.jpg), [12/4](notes/office12-04.jpg), [12/7](notes/office12-07.jpg)
+    - Notes: [11/30](notes/office11-30.jpg), [12/4](notes/office12-04.jpg), [12/7](notes/office12-07.jpg), [12/10](notes/office12-10.jpg)
 * [Zoom links on Canvas](https://canvas.coloradocollege.edu/courses/31880/external_tools/483)
 
 # Links 
