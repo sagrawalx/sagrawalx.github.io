@@ -480,6 +480,7 @@ Harder: 7, 8, 9, 10
 Notes: 
 
 * The proof of the Weak Nullstellensatz uses some material from section 2.9. If you didn't read section 2.9, feel free to skip this proof, but do make sure you understand the statement of the Weak Nullstellensatz!
+* [Video](https://canvas.coloradocollege.edu/files/952437/) and [notes](notes/nullstellensatz.jpg)
 
 ## 4.2: Ideal-Variety Correspondence
 

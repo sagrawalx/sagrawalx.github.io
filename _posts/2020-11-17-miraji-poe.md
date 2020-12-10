@@ -1,6 +1,6 @@
 ---
 title: मीराजी और एडगर ऐलन पो
-date: 2020-11-17
+date: 2020-12-09
 tags: transliteration
 layout: post
 summary: पो की शायरी के तर्जुमे, मीराजी के हाथ
@@ -11,6 +11,7 @@ Nagari transliterations of Miraji's translations of some poems by Edgar Allan Po
 
 * [Alone](https://www.poetryfoundation.org/poems/46477/alone-56d2265f2667d), translated as [अकेला](#akelaa)
 * [Spirits of the Dead](https://www.poetryfoundation.org/poems/48632/spirits-of-the-dead), translated as [मरे हुओं की रूहें](#mare)
+* [To Ianthe in Heaven](https://www.eapoe.org/works/poems/paradsf.htm), translted as [स्वर्ग-बाशी से](#swarg)
 * [The Lake](https://poets.org/poem/lake), translated as [झील](#jhiil)
 </div>
 
@@ -43,7 +44,7 @@ Nagari transliterations of Miraji's translations of some poems by Edgar Allan Po
 [^barq]: बिजली
 [^raad]: बिजली की कड़क
 [^mujassam]: जिस्म-वाला
-[^sargardaan]: सिर घुमाता हुआ, इधर-उधर फिरता हुआ
+[^sargardaan]: घूमने वाला, चक्कर लगाने वाला
 
 # मरे हुओं की रूहें {#mare}
 
@@ -70,7 +71,55 @@ Nagari transliterations of Miraji's translations of some poems by Edgar Allan Po
 [^uzlat]: तन्हाई
 [^mohr]: ठप्पा
 [^saakin]: शांति
-[^razaa]: ख़ुश
+[^razaa]: ख़ुशी
+
+## तीन
+
+आकाश का मंडल रात को साफ़ तो होगा, मगर ग़ुर्राएगा  
+और अंजुम[^anjum]-ए-रख़शाँ[^raxshaaN] में भी यहाँ का उजाला नज़र आएगा  
+ये उजाला जिसमें आस दमकती मूरत बनके झलकती है  
+ये उजाला जिसकी हर इक किरन ऊँचे मंडल में चमकती है  
+वो अंजुम-ए-रख़शाँ लहू के धब्बों ऐसा रंग दिखाएँगे  
+वो थकन जो तुझ पे छाई होगी, उसको और बढ़ाएँगे  
+और तेरे लहू की गर्दिश में इक ऐसी गरमी लाएँगे  
+जिसकी सोज़िश से ख़ून के ज़र्रे अंगारे बन जाएँगे  
+
+[^anjum]: तारे
+[^raxshaaN]: चमकने वाला
+
+## चार
+
+सब इक पल में मिट जाएँगी ये बातें जो तेरे दिल में हैं  
+वो घड़ियाँ फिर न दिखाएँगी नज़ारे जो इस महफ़िल में हैं  
+जैसे शबनम के अड़ने पर शबनम का नाम गियाह[^giyaah] में है  
+इन बातों का है हाल यही, उनका हासिल इक आह में है  
+
+[^giyaah]: घास
+
+## पाँच
+
+वो सामने दूर पहाड़ी है और उस पर कुहरा छाया है  
+और बहती हवाओं ने अपने होंटों पर क़ुफ़ल[^qufl] लगाया है  
+ये कुहरा धुंधला है, ज़र्रे-ज़र्रे में समाया है  
+अनमिट है, लाफ़ानी, जैसे लोहे से किसी ने बनाया है  
+ये कुहरा एक इशारा है, पेड़ों के सिरों से छलका है  
+भेदों के भेद निहाँ इसमें, ये तो भेदों का धुंधलका है  
+
+[^qufl]: ताला
+
+# स्वर्ग-बाशी से {#swarg}
+
+*//incomplete//*
+
+# एक ख़्वाब {#khwaab}
+
+*//incomplete//*
+
+# किसी के नाम {#kisii}
+
+*//incomplete//*
+
+# जीवन की नर्री {#jiivan}
 
 *//incomplete//*
 
