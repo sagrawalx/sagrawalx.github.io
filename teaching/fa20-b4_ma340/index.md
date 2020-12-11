@@ -494,4 +494,5 @@ Notes:
 * The discussion towards the end of the section about the radical of principal ideal generalizes problems 1.5.12--14. 
 * You might find problem 2.7.6 useful for problem 17 above. 
 * [Select reading question responses](questions/q4-2.pdf)
+* [Select CC solutions](questions/c4-2.pdf)
 
