@@ -37,7 +37,20 @@ g = x^2
 gcd(f,g)
 ```
 
-You can get sage to compute roots, as follows. 
+The `gcd` function only takes two arguments at a time. If you have a list, use a loop:
+
+```Python
+def gcd_list(F, init=0):
+    g = init
+    for f in F:
+        g = gcd(g,f)
+    return g
+
+R.<x> = PolynomialRing(QQ)
+gcd_list([x^3,x^2*(x+1), x^2])
+```
+
+You can get Sage to compute roots, as follows. 
 
 
 ```Python
@@ -48,6 +61,59 @@ f.roots()
 ```
 
 Note that the `roots` function is sensitive to the base field. For example, `(x^2+1).roots()` returns different results if your base field is `CC` instead of `QQ`. 
+
+Similarly, you can also get Sage to factor polynomials. 
+
+```Python 
+R.<x> = PolynomialRing(QQ)
+f = x^2 + 2*x + 1
+f.factor()
+```
+
+## Multivariable polynomials: Partial derivatives
+
+Sage can compute partial derivatives of multivariable polynomials using the `gradient` function. 
+
+```Python
+R.<x,y> = PolynomialRing(QQ)
+f = (x^2+y^2-4)*(x^2+y^2-1) + (x-3/2)^2 + (y-3/2)^2
+f.gradient()
+```
+
+The output is a list of the partial derivatives of $f$, as follows: 
+
+```Python
+[4*x^3 + 4*x*y^2 - 8*x - 3, 4*x^2*y + 4*y^3 - 8*y - 3]
+```
+
+## Multivariable polynomials: GCDs, factoring, and reductions
+
+Sage can also compute gcds of multivariable polynomials and factorizations, using the same syntax as for single variable polynomials described [above]{#single-variable-polynomials}. 
+
+You can put this together with the `gradient` function to compute the reduction $f_{\mathrm{red}}$ of a polynomial $f$ as well, as defined in definition 4.2.10. 
+
+```Python
+def gcd_list(F, init=0):
+    g = init
+    for f in F:
+        g = gcd(g,f)
+    return g
+
+def reduction(f):
+    return (f/gcd_list(f.gradient(), init=f)).numerator()
+
+R.<x,y> = PolynomialRing(QQ)
+f = (x+y^2)^3*(x-y)
+reduction(f).factor()
+```
+
+The output of this is 
+
+```Python
+(-1) * (-x + y) * (x + y^2)
+```
+
+which is the same as what's given in the textbook on pgae 186 right after definition 4.2.10. 
 
 ## Multivariable polynomials: Monomial Orders
 
@@ -148,6 +214,16 @@ In the background, Sage computes a Gröbner basis for `I` to do this reduction. 
 R.<x,y,z> = PolynomialRing(QQ, order='deglex')
 I = Ideal(x^5 + y^4 + z^3 - 1,  x^3 + y^3 + z^2 - 1)
 I.groebner_basis()
+```
+
+## Multivariable Polynomials: Radicals
+
+Sage can compute radicals of arbitrary ideals in polynomial rings. The output of the following is a Gröbner basis for $\sqrt{I}$ where $I = \langle x^2+y^2-1,y-1 \rangle$. 
+
+```Python
+R.<x,y> = PolynomialRing(QQ, order='deglex')
+I = Ideal(x^2+y^2-1,y-1)
+I.radical().groebner_basis()
 ```
 
 ## Links
