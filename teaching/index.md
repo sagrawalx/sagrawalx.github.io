@@ -5,12 +5,14 @@ permalink: teaching/
 
 # Currently Teaching
 
-* Fall 2020, Block 4. [MA340 - Algebraic Geometry (Q)](fa20-b4_ma340). 
+* None
 
 # Previously Taught
 
 ## Colorado College
 
+
+* Fall 2020, Block 4. [MA340 - Algebraic Geometry (Q)](fa20-b4_ma340). 
 * Fall 2020, Block 3. [MA251 - Number Theory (Q)](fa20-b3_ma251). 
 * Fall 2020, Block 2. MA251 - Number Theory (Q). 
 * Spring 2020, Block 8. [MA220 - Linear Algebra (Q)](sp20-b8_ma220). 

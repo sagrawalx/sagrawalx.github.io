@@ -8,12 +8,11 @@ nonav: true
 
 # Overview
 
-We're an *adabī aḍḍā* of sorts, a gathering of people <del>in the Colorado Springs area</del>* with an interest in Hindi-Urdu[^name] linguistics, literature, music, film, etc. Everyone interested in these sorts of things is welcome to participate: we span the spectrum from native speakers to learners. If you'd like to be on the mailing list, send me an email at  <span class="email" data-localpart="sagrawal" data-domain="coloradocollege.edu"></span> to let me know! 
+We're an *adabī aḍḍā* of sorts --- a gathering* of people with an interest in Hindi-Urdu[^name] linguistics, literature, music, film, etc. Everyone interested in these sorts of things is welcome to participate: we span the spectrum from native speakers to learners. We also sometimes discuss things in other Southasian languages. If you'd like to be on the mailing list, send me an email at  <span class="email" data-localpart="sagrawal" data-domain="coloradocollege.edu"></span> to let me know! 
 
-* Here's an [ongoing list of generic resources](resources). Resources specific to particular topics are listed in the calendar below.
-* If you have a topic in mind that you'd like to discuss during one of our meetings, please let me know and I'll add it to our calendar! 
+Here's an [in-progress list of Urdu-Hindi resources](resources) that you might find useful. Resources specific to particular topics are listed in the calendar below.
 
-*: In observance of Covid precautionary measures, we'll meet via Zoom until further notice. 
+*: In light of Covid, we "gather" virtually for the time being. 
 
 # Calendar {#calendar}
 
@@ -22,6 +21,22 @@ We're an *adabī aḍḍā* of sorts, a gathering of people <del>in the Colorado
 <th style="width: 10%;">Date</th>
 <th style="width: 30%;">Topic</th>
 <th style="width: 60%;">Resources</th>
+</tr>
+
+<tr>
+<td>2/9</td>
+<td>Two songs of women's liberation: *Rupaiyā* and *Maiṇ Irādā*</td>
+<td>
+* Sona Mohapatra's *Rupaiyā*
+    * [YouTube](https://www.youtube.com/watch?v=BKzZNLByngU)
+    * [Lyrics](texts#rupaiya) (Nagari and Urdu)
+    * [Lyrics](http://www.bollymeaning.com/2012/05/mujhe-kya-bechega-rupaiya-satyamev.html) (Roman and English translation, but I think these are not entirely accurate[^rupaiya-error])
+* Haniya Aslam's *Maiṇ Irādā*
+    * [YouTube](https://www.youtube.com/watch?v=wbXUFGWVZxs)
+    * [Lyrics](https://www.cokestudio.com.pk/mobile/season11/e01-s02.html) (Urdu, Roman, and English translation)
+    
+    [^rupaiya-error]: In the third verse of this transcription, this website says *jiskī fitrat meṇ hairat samāī nahīṇ*, but *hairat* ("surprise") makes very little sense on context. This makes more sense if it was *jiskī fitrat meṇ hai rat samāī nahīṇ* (where *rat* means "love," roughly). Also, in the fourth verse, the second line begins *<u>d</u>o rasmoṇ...* but I think the singer sings *<u>t</u>o rasmoṇ...*. 
+</td>
 </tr>
 
 <tr>
@@ -44,10 +59,10 @@ We're an *adabī aḍḍā* of sorts, a gathering of people <del>in the Colorado
 </td>
 <td>
 * *Jhīl*:
-    - Full text: [Urdu](https://www.rekhta.org/ebooks/kulliyat-e-meeraji-ebooks) (p. 1013 of the e-reader), [Nagari](miraji-poe-po)
+    - Full text: [Urdu](https://www.rekhta.org/ebooks/kulliyat-e-meeraji-ebooks) (p. 1013 of the e-reader), [Nagari](texts#jhiil)
     - Translation of: "[The Lake](https://poets.org/poem/lake)" by [Edgar Allan Poe](https://en.wikipedia.org/wiki/Edgar_Allan_Poe)
 * *Chānd, Main, Aur Merā Sāyā*
-    - Full text: [Urdu](https://www.rekhta.org/ebooks/kulliyat-e-meeraji-ebooks) (p. 907 of the e-reader), [Nagari](miraji-poe-po)
+    - Full text: [Urdu](https://www.rekhta.org/ebooks/kulliyat-e-meeraji-ebooks) (p. 907 of the e-reader), [Nagari](texts#chaand-main-aur-meraa-saayaa)
     - Translation of: "Drinking Alone Under the Moon" ([月下獨酌](https://zh.wikisource.org/wiki/%E6%9C%88%E4%B8%8B%E7%8D%A8%E9%85%8C_(%E8%8A%B1%E9%96%93%E4%B8%80%E5%A3%BA%E9%85%92))) by [Li Po (李白)](https://en.wikipedia.org/wiki/Li_Bai)
     - [English translation of the original Chinese by Arthur Waley](https://en.wikisource.org/wiki/More_Translations_from_the_Chinese/Drinking_Alone_by_Moonlight) 
 </td>

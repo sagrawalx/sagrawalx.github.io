@@ -1,24 +1,143 @@
 ---
 layout: default
-title: Home
+title: Ideas
 bannertext: महफ़िल · محفل
 bannerlink: mehfil
 nonav: true
 ---
 
-# Topic Ideas
+# Ideas
 
-Here is a short list of some specific ideas for topics we might pursue for one of our meetings. 
+<table style="width: 100%">
+<tr>
+<th style="width: 10%;">Date</th>
+<th style="width: 30%;">Topic</th>
+<th style="width: 60%;">Resources</th>
+</tr>
 
-* Ismat Chughtai, [*Hindustān Chhoṛ Do*](https://www.rekhta.org/stories/hindustan-chhor-do-ismat-chughtai-stories?lang=hi). A compassionate story about a Britisher left behind in post-Independence India. 
-* Safdar Hashmi, [*Duniya Sabkī*](https://archive.org/details/DuniyaSabki-Hindi). Simple and fun children's poems with lots of enjoyable rhyme and meter, by a writer who's sort of a martyr-figure for the Indian Left. The title poem reflects some of his politics, as does *Rajū aur Kajū*. *Bāṃsurīwālā* is a rendition of the Pied Piper of Hamlin, with a bit of a democratic spin at the end. The last poem, *Peṛ*, is a call to end environmental exploitation. 
-* Safdar Hashmi, *Hallā Bol*. It could be fun to try to act out this play together, if we can get our hands on the text of the play... I haven't been able to find it on the internet. 
-* Faiz, Intisaab. 
-* Bachchan, Madhushala. 
-* Shamsher and Nagarjun , Kedarnath Agrawal , Muktibodh and Trilochan are often cited as five sense organs of the progressive Hindi poetry . 
-    * https://kavitakosh.org/kk/%E0%A4%97%E0%A4%BE%E0%A4%93_/_%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%B2%E0%A5%8B%E0%A4%9A%E0%A4%A8
-    * https://kavitakosh.org/kk/%E0%A4%A7%E0%A4%B0%E0%A5%8D%E0%A4%AE_%E0%A4%95%E0%A5%80_%E0%A4%95%E0%A4%AE%E0%A4%BE%E0%A4%88_/_%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%B2%E0%A5%8B%E0%A4%9A%E0%A4%A8
-* Please feel free to suggest more!
-* mridula garg, hari bindi
-* khwaja ahmad abbas: khaddar ka kafan, abaabiil
+<tr>
+<td>TBA</td>
+<td>
+Rabindranath Tagore, "Where the mind is without fear"
+</td>
+<td>
+* Tagore's poem
+    * [Wikipedia entry](https://en.wikipedia.org/wiki/Chitto_Jetha_Bhayshunyo) (including the [Bangla original](https://en.wikipedia.org/wiki/Chitto_Jetha_Bhayshunyo#Original_Bengali_script) and Tagore's [English translation](https://en.wikipedia.org/wiki/Chitto_Jetha_Bhayshunyo#English_translation)) 
+    * [Reading by Playtime Entertainment](https://www.youtube.com/watch?v=rLFJTGwYTJw) (of the Bangla)
+* Translation by Anwar Jalalpuri: [Urdu](https://www.rekhta.org/ebooks/urdu-shairi-mein-gitanjali-rabindrnath-tagore-ebooks) (p. 63 of the e-reader), [Nagari](texts#bekhaufii)
+* AR Rahman's *Jagāo Mere Des*
+    * [YouTube](https://www.youtube.com/watch?v=7FKEy_RWwQk)
+    * [Lyrics](http://dunkdaft.blogspot.com/2013/08/jagao-mere-des-ko-lyrics-meaning.html) (Roman)
+</td>
+</tr>
 
+<tr>
+<td>TBA</td>
+<td>Faiz Ahmad Faiz, *Yād*</td>
+<td>
+* Full text: [Nagari](https://www.rekhta.org/nazms/yaad-faiz-ahmad-faiz-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/yaad-faiz-ahmad-faiz-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/yaad-faiz-ahmad-faiz-nazms)
+* [Musical performance by Meesha Shafi](https://www.youtube.com/watch?v=tYB-6i_q4sU) (the closed captions on the YouTube video have Urdu and Roman lyrics and an English translation)
+</td>
+</tr>
+
+<tr>
+<td>TBA</td>
+<td>Muktibodh, *Maiṇ Tum Logoṇ Se Dūr Hūṇ*</td>
+<td>
+* Full text: [Nagari](http://www.kavitakosh.org/kk/%E0%A4%AE%E0%A5%88%E0%A4%82_%E0%A4%A4%E0%A5%81%E0%A4%AE_%E0%A4%B2%E0%A5%8B%E0%A4%97%E0%A5%8B%E0%A4%82_%E0%A4%B8%E0%A5%87_%E0%A4%A6%E0%A5%82%E0%A4%B0_%E0%A4%B9%E0%A5%82%E0%A4%81_/_%E0%A4%97%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%A8_%E0%A4%AE%E0%A4%BE%E0%A4%A7%E0%A4%B5_%E0%A4%AE%E0%A5%81%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AC%E0%A5%8B%E0%A4%A7)
+* [Reading by Kavyanki](https://www.youtube.com/watch?v=vHI_oD1h28A)
+* [Discussion and translation by Chanchal Chauhan](chauhan-muktibodh.pdf) (excerpt from the article "[Ideological Content of Muktibodh's Poetry](https://www.jstor.org/stable/23343293?seq=1)")
+</td>
+</tr>
+
+
+<tr>
+<td>TBA</td>
+<td>Kishwar Nahīd, *Ham Gunahgār Aurateṇ*</td>
+<td>
+* Full text: [Nagari](https://www.rekhta.org/nazms/top-10-nazms-of-kishwar-naheed/ham-gunahgaar-aurten-ye-ham-gunahgaar-aurten-hain-kishwar-naheed-nazms?sort=popularity-desc&lang=hi), [Urdu](https://www.rekhta.org/nazms/top-10-nazms-of-kishwar-naheed/ham-gunahgaar-aurten-ye-ham-gunahgaar-aurten-hain-kishwar-naheed-nazms?sort=popularity-desc&lang=ur), [Roman](https://www.rekhta.org/nazms/top-10-nazms-of-kishwar-naheed/ham-gunahgaar-aurten-ye-ham-gunahgaar-aurten-hain-kishwar-naheed-nazms?sort=popularity-desc)
+* [Translation by Rukhsana Ahmad](https://www.poetryinternational.org/pi/poem/23748/auto/0/0/Kishwar-Naheed/We-Sinful-Women/en/tile)
+</td>
+</tr>
+
+<tr>
+<td>TBA</td>
+<td>Two poems against war: *Ai Sharīf Insānoṇ* and *Sipāhī Kā Marsiyā*</td>
+<td>
+* Sahir Ludhianvi, *Ai Sharīf Insānoṇ*
+    - Full text: [Nagari](https://www.rekhta.org/nazms/ai-shariif-insaano-khuun-apnaa-ho-yaa-paraayaa-ho-sahir-ludhianvi-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/ai-shariif-insaano-khuun-apnaa-ho-yaa-paraayaa-ho-sahir-ludhianvi-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/ai-shariif-insaano-khuun-apnaa-ho-yaa-paraayaa-ho-sahir-ludhianvi-nazms)
+    - [Partial translation by Kanupriya Dhingra](https://indianculturalforum.in/2016/12/02/o-noble-men/)
+* Faiz Ahmad Faiz, *Sipāhī Kā Marsiyā*
+    - Full text: [Nagari](https://www.rekhta.org/nazms/sipaahii-kaa-marsiya-faiz-ahmad-faiz-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/sipaahii-kaa-marsiya-faiz-ahmad-faiz-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/sipaahii-kaa-marsiya-faiz-ahmad-faiz-nazms) (note: there are some typos on Rekhta[^sipahitypos])
+    - [Performance by Nayyara Noor](https://www.youtube.com/watch?v=lAVIREzPx9g)
+* [Wikipedia on the Indo-Pakistani War of 1965](https://en.wikipedia.org/wiki/Indo-Pakistani_War_of_1965) (which was the historical backdrop for both of these poems)
+</td>
+
+
+[^sipahitypos]: Line 4 should be तुमरी सेज सजावन कारन / تمری سیج سجاون کارن / *tumrī sej sajaawan kāran* ("in order to decorate your bed"). Then, in line 5, रैन / رین / *rain* means "[night](https://dsal.uchicago.edu/cgi-bin/app/platts_query.py?qs=rain&searchhws=yes&matchtype=exact)," not "rain!"
+</tr>
+
+<tr>
+
+<td>TBA</td>
+<td>Malkhān Singh, *Suno Brāhman*</td>
+<td>
+* [Full text](texts#suno-brahman) (Nagari and Urdu)
+* [Translation by Pratik Kanjilal](http://www.littlemag.com/reservation/malkhansingh.html)
+</td>
+</tr>
+
+<tr>
+<td>TBA</td>
+<td>Sūrajpāl Chauhān, *Bhīmrāo Kā Dalit Nahīṇ*</td>
+<td>
+* Full text: [Nagari](http://kavitakosh.org/kk/%E0%A4%AD%E0%A5%80%E0%A4%AE%E0%A4%B0%E0%A4%BE%E0%A4%B5_%E0%A4%95%E0%A4%BE_%E0%A4%A6%E0%A4%B2%E0%A4%BF%E0%A4%A4_%E0%A4%A8%E0%A4%B9%E0%A5%80%E0%A4%82_%E0%A4%AF%E0%A4%B9_%E0%A4%97%E0%A4%BE%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A5%80%E0%A4%9C%E0%A5%80_%E0%A4%95%E0%A4%BE_%E0%A4%B9%E0%A4%B0%E0%A4%BF%E0%A4%9C%E0%A4%A8_%E0%A4%B9%E0%A5%88_/_%E0%A4%B8%E0%A5%82%E0%A4%B0%E0%A4%9C%E0%A4%AA%E0%A4%BE%E0%A4%B2_%E0%A4%9A%E0%A5%8C%E0%A4%B9%E0%A4%BE%E0%A4%A8)
+</td>
+</tr>
+
+<tr>
+<td>TBA</td>
+<td>Rokeya Sakhawat Hossain, *Sultānā Kā Sapnā*</td>
+<td>
+* Full text: [Nagari](husain-sultana.pdf) (translation by Vidyanidhi)
+* [Original English](https://digital.library.upenn.edu/women/sultana/dream/dream.html)
+</td>
+</tr>
+
+<tr>
+<td>TBA</td>
+<td>Faiz Ahmad Faiz, *Intisāb*</td>
+<td>
+* Full text: [Nagari](https://www.rekhta.org/nazms/intisaab-aaj-ke-naam-faiz-ahmad-faiz-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/intisaab-aaj-ke-naam-faiz-ahmad-faiz-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/intisaab-aaj-ke-naam-faiz-ahmad-faiz-nazms)
+* [English translation by Shoaib Hashmi](https://urduwallahs.files.wordpress.com/2012/09/english1.png)
+* [Performance by Rekha Bhardwaj](https://www.youtube.com/watch?v=yEhaan9joj8)
+</td>
+</tr>
+
+</table>
+
+
+
+# Ideas that need further thought/research 
+
+* Nagarjun, *Pulis Afsar* (might tie into police brutality conversations in the US...?)
+* Dinkar, *Singhasan Khali Karo* (historical note: recited by Jayprakash Narayan at a protest during Emergency)
+* Shamsher Bahadur Singh -- there's lots of stuff on kavitakosh, but also some stuff on Rekhta. See  esp. his collection सुकून की तलाश for stuff that's Hindustani-in-the-sense-of-Grierson (not overly Persianized, not overly Sanskritized)
+* Khwaja Ahmad Abbas, if there's something of an appropriate length
+* [Sahir Ludhianvi](https://www.outlookindia.com/website/story/the-evanescent-poet/296751) (lots of music, including stuff that's socially aware)
+* Theme: caste 
+    - Sūrajpāl Chauhān: [यह दलितों की बस्ती है](http://kavitakosh.org/kk/%E0%A4%AF%E0%A5%87_%E0%A4%A6%E0%A4%B2%E0%A4%BF%E0%A4%A4%E0%A5%8B%E0%A4%82_%E0%A4%95%E0%A5%80_%E0%A4%AC%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%80_%E0%A4%B9%E0%A5%88_..._/_%E0%A4%B8%E0%A5%82%E0%A4%B0%E0%A4%9C%E0%A4%AA%E0%A4%BE%E0%A4%B2_%E0%A4%9A%E0%A5%8C%E0%A4%B9%E0%A4%BE%E0%A4%A8)
+    , [मेरी माँ](http://kavitakosh.org/kk/%E0%A4%AE%E0%A5%87%E0%A4%B0%E0%A5%80_%E0%A4%AE%E0%A4%BE%E0%A4%81_/_%E0%A4%B8%E0%A5%82%E0%A4%B0%E0%A4%9C%E0%A4%AA%E0%A4%BE%E0%A4%B2_%E0%A4%9A%E0%A5%8C%E0%A4%B9%E0%A4%BE%E0%A4%A8)
+    , [वह दिन ज़रूर आएगा](http://kavitakosh.org/kk/%E0%A4%B5%E0%A4%B9_%E0%A4%A6%E0%A4%BF%E0%A4%A8_%E0%A4%9C%E0%A4%BC%E0%A4%B0%E0%A5%82%E0%A4%B0_%E0%A4%86%E0%A4%8F%E0%A4%97%E0%A4%BE_/_%E0%A4%B8%E0%A5%82%E0%A4%B0%E0%A4%9C%E0%A4%AA%E0%A4%BE%E0%A4%B2_%E0%A4%9A%E0%A5%8C%E0%A4%B9%E0%A4%BE%E0%A4%A8)
+    - Dayānand Baṭohī, [द्रोणाचार्य सुनें, उनकी परंपराएँ सुनें](https://poshampa.org/dronacharya-sunein-unki-paramparaaein-sunein/)
+* Theme: bangla bhasha andolôn 
+* Theme: bangladeshi independence
+* Tagore (many options! besides poems and short stories, maybe some part of [ḍaak ghar](https://www.rekhta.org/ebooks/daak-ghar-rabindrnath-tagore-ebooks)...?)
+* Sharatchandra 
+* Music by shaan?
+* Arundhati roy?
+* Theme: protest
+* Kashmiri Urdu poets? esp contemporary ones? Nighat Sahiba (some on Rekhta), [Syed Saddam Gilani](https://www.rekhta.org/ghazals/aaj-barso-ke-khvaab-dhul-jaaen-syed-saddam-gilani-murad-ghazals?lang=hi), ...
+* Safdar Hashmi, *Duniya Sabki*
+* Intizar Hussain, if there's something of an appropriate length
+* Miraji

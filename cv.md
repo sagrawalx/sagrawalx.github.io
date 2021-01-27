@@ -137,12 +137,13 @@ nonav: true
 
 ## Departmental
 
-* Inclusive Spaces Committee (2019-2021). 
+* Inclusive Spaces Committee (2019-Present). 
 * Summer Research Survey (2019-2020). 
 * MAA Liaison (2018-2019).
 
 ## Other
 
+* Organizer for CC's Hindi-Urdu Mehfil
 * Translator for Mutual Aid NYC
 
 # Awards

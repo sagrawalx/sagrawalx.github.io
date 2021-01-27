@@ -1,6 +1,6 @@
 ---
 title: मीराजी और एडगर ऐलन पो
-date: 2020-12-09
+date: 2021-01-09
 tags: transliteration
 layout: post
 summary: पो की शायरी के तर्जुमे, मीराजी के हाथ
@@ -11,8 +11,13 @@ Nagari transliterations of Miraji's translations of some poems by Edgar Allan Po
 
 * [Alone](https://www.poetryfoundation.org/poems/46477/alone-56d2265f2667d), translated as [अकेला](#akelaa)
 * [Spirits of the Dead](https://www.poetryfoundation.org/poems/48632/spirits-of-the-dead), translated as [मरे हुओं की रूहें](#mare)
-* [To Ianthe in Heaven](https://www.eapoe.org/works/poems/paradsf.htm), translted as [स्वर्ग-बाशी से](#swarg)
+* [To One in Paradise](https://www.poetryfoundation.org/poems/50462/to-one-in-paradise), translated as [स्वर्ग-बाशी से](#swarg)
+* [A Dream](https://www.poetryfoundation.org/poems/44886/a-dream-56d22426d2d30), translated as [एक ख़्वाब](#khwaab)
+* [To ——](https://www.eapoe.org/works/campbell/kcp1724.htm), translated as [किसी के नाम](#kisii)
+* [The Vital Stream](https://www.eapoe.org/works/whitty/jhw1159c.htm), translated as [जीवन की नर्री](#jiivan) [see note below]
 * [The Lake](https://poets.org/poem/lake), translated as [झील](#jhiil)
+
+Note: The poem "The Vital Stream" is not by Poe. It was found written in Poe's handwriting and subsequently attributed to him in a few collections published in the early 1900s. Presumably Miraji was working from one of these collections. However, it was later discovered that this poem is actually from Thomas Skinner Surr's 1798 novel *George Barnwell*. 
 </div>
 
 # अकेला {#akelaa}
@@ -109,45 +114,139 @@ Nagari transliterations of Miraji's translations of some poems by Edgar Allan Po
 
 # स्वर्ग-बाशी से {#swarg}
 
-*//incomplete//*
+<div>
+<style type="text/css" scoped>
+.first { display: inline-block; width: 12em;}
+.indent { display: block; margin-left: 4em;}
+</style>
+
+<span class="first">ये तू ही थी जिसकी ख़्वाहिश का </span> जज़्बा मिरे दिल के अंदर था  
+<span class="first">सर-सब्ज़[^sarsabz] जज़ीरा समंदर में</span> इक चश्मा था, इक मंदिर था  
+<span class="indent">फल-फूल थे परियों की बस्ती के,  
+फल-फूल थे सब मेरे, मेरे!</span>
+<span class="first">सुंदर सपना था, मिट भी चुका</span> उम्मीद का शोला राख बना  
+<span class="first">"बढ़ता जा, आगे निकलता जा</span> आगे ही आगे चलता जा"  
+<span class="indent">आती है तिही[^tihii] आवाज़ मुझे  
+अब आने वाले ज़माने से</span>
+<span class="first">लेकिन माज़ी[^maazii] अब आँखों में</span> इक धुंधली ख़लीज की सूरत है  
+<span class="first">रहती है वहीं पर रूह मिरी</span> हैरान है, चुपकी मूरत है  
+<span class="indent">आराम की मै का पैमाना  
+माज़ी ही बना है काशाना[^kaashaanaa]</span>
+<span class="first">लेकिन अफ़सोस कि मुझमें नहीं</span> अब ज़ीस्त के वो अनवार[^anwaar]-ए-हसीं,  
+<span class="first">वो शमा बुझी, वो नूर मिटा</span> अब कुछ भी नहीं, अब कुछ भी नहीं
+<span class="indent">साहिल की रेत पर आती हैं  
+लहरें ये बात समझाती हैं</span>
+<span class="first">क्या सूखा पेड़ हरा होगा?</span> घायल पंछी पर तो लेगा?   
+<span class="first">नामुमकिन। मैं तो समझता हूँ</span> आइंदा दौर भी बोलेगा!
+<span class="indent">ऐ दुखिया दिल, माज़ी के मकीन[^makiin]!  
+अब कुछ भी नहीं, अब कुछ भी नहीं।</span>
+</div>
+
+[^sarsabz]: हरा-भरा
+[^tihii]: खाली
+[^maazii]: अतीत
+[^kaashaanaa]: घर
+[^anwaar]: रौशनियाँ, नज़ारे
+[^makiin]: रहने वाला, ठहरा हुआ
 
 # एक ख़्वाब {#khwaab}
 
-*//incomplete//*
+शब के तारीक तसव्वुर में मुझे लाखों बार  
+ख़्वाब आए हैं मसर्रत के, जो अब दूर हुई  
+ख़्वाब बेदारी के जब लाए मगर नूर-ए-हयात  
+दल मिरा टूट गया — रूह मिरी चूर हुई
+
+उसको हर चीज़ नज़र आती है दिन में इक ख़्वाब  
+जिसकी आँखें हों लगी बीते ज़माने की तरफ़  
+उसकी आँखों से निगाहों की किरन माइल है  
+हाल की बातों को माज़ी में छुपाने की तरफ़
+
+आह! वो ख़्वाब, वो इक ख़्वाब-ए-मुक़द्दस[^muqaddas] मेरा  
+मैं इसे देखता था, लोग हँसते थे  
+हाँ, इसी ख़्वाब ने अब तक मुझे ख़ुश रखा है  
+इसके ही नूर से रस्ते भी कटा करते थे  
+
+इसकी क्या फ़िक्र मुझे अब है जो तूफ़ानी रात  
+और वो नूर बहुत दूर से आता है नज़र  
+पूछता हूँ मैं कि सच्चाई के तारों में कभी  
+ऐसी ताबानी[^taabaanii] का देखा है किसी ने मंज़र?
+
+[^muqaddas]: पाक, पवित्र
+[^taabaanii]: रौशनी, चमक
 
 # किसी के नाम {#kisii}
 
-*//incomplete//*
+ग़रज़ नहीं मुझे इससे कि ख़ाक में मेरी  
+नहीं है ख़ाक का ज़र्रा भी अब कोई मौजूद,  
+न इसकी फ़िक्र है, नफ़रत के एक लम्हे से  
+हज़ारों साल मोहब्बत के हो गए नाबूद[^naa-buud]!
 
-# जीवन की नर्री {#jiivan}
+मैं इसका ग़म नहीं खाता कि दहर में जो लोग  
+अकेले रहते हैं, मुझसे ज़्यादा हैं मसरूर[^masruur]।  
+मुझे ये सोच है, मैं तो फ़क़त मुसाफ़िर हूँ  
+मिरे नसीब की बरगश्तगी[^bargashtagii] पर तू रंजूर[^ranjuur]?
 
-*//incomplete//*
+[^naa-buud]: नापैद, तबाह
+[^masruur]: ख़ुश
+[^bargashtagii]: फिरना, उलटना
+[^ranjuur]: फ़िक्रमंद, ग़मगीन 
+
+# जीवन की नद्दी[^naddii] {#jiivan}
+
+धीरे-धीरे — धीरे-धीरे — जीवन नद्दी बहती जा,  
+ऐ उन्नाबी लहू की बूँदो! रुक जाओ, अब रुक भी जाओ,  
+देखने दो तुम, देखने दो तुम मुझको ये सुंदर सपना    
+उन लम्हों तक जिनमें रुकेगा इस बहती दुनिया का बहाव।
+
+देखो, देखो! मेरी आखो! उसका दर्द, अज़ीयत, घाव,  
+देखो कैसे हर इक आँख की पुतली तेज़ चमकती जाए,  
+सुन लो, सुन लो! इन चीख़ों को, ये आवाज़ का प्यारा घिलाव  
+जिनमें उसकी ना-उम्मीदी धुंधली-धुंधली दमकती जाए।
+
+उट्ठो, उट्ठो, ऐ पाताल की रूहो! उट्ठो, उठ भी जाओ,  
+तीर के ऐसे आँख झपकती उसके दिल में डेरा जमाओ।  
+हैबत!— वहशत!— अपनी ख़ून-जमाती चीख़ों को ले आए  
+जलदी आए, आकर अपना नहूसत[^nahuusat] वाला जाल बिछाए।  
+
+हाँ, ऐ मेरे दिल की लहरो! ख़ुश हो जाओ, खुश हो जाओ,  
+अब बदले की मिठास को चक्खो, इसके नश्शे में खो जाओ,  
+और हाँ, तुम भी मेरे दिल की नफ़रत को देखो चुप-चाप,  
+क्या मलऊन[^maluun] था वो लम्हा भी जब कि हुआ था अपना मिलाप।
+
+[^naddii]: नदी
+[^nahuusat]: मनहूसियत
+[^maluun]: जिस पर लानत की गई हो या की जा सके
 
 # झील {#jhiil}
 
-जब आई बहार जवानी की, (मन-मोहन मीठी कहानी की)  
-इस फैली-फैली दुनिया का, इक कोना मैंने ढूँढ लिया  
-इस कोने से जो रग़बत थी, वैसी न किसी से चाहत थी  
-हर ज़र्रा दिल को लुभाता था, और आँखों को गरमाता था  
-इक झील थी बन में खोई हुई, और गहरी नींद में सोई हुई  
-उस झील के सूने किनारों को, कुछ काली चट्टानों ने घेरा था  
-और साथ सनोबर के लंबे-ऊँचे पेड़ों का डेरा था  
-लेकिन जब रात आ जाती थी, और दुनिया पर छा जाती थी  
-बेचैन हवाएँ चलती थी, और उनसे चीख़ें निकलती थी  
-वो गर ये था, वो नग़मा था, वो नग़मा भी इक नौहा[^nauhaa] था  
-मैं इस नौहे को सुनता था, और पहरों ही सिर धुनता था  
-उन रोते-रोते नग़मों में, उन चीख़ों वाले लम्हों में  
-पल-भर जादू मिट जाता था, और ध्यान मुझे  ये आता था  
-ये कैसी वहशत छाई है, तन्हाई है, तन्हाई है!  
-एहसास मगर नागुफ़्ता[^naaguftaa] था, ज़ाहिर था फिर भी निहुफ़्ता[^nihuftaa] था  
-हीरों की कान[^kaan] मिले मुझको, या सारा जहान मिले मुझको  
-मैं झील कहानी कैसे कहूँ? बहतर है यही ख़ामोश रहूँ  
-वो सब लहरें थीं ज़हर-भरी, उन लहरों में थी मौत छुपी  
-जो गहराई में बिछौना था, इक ऐसी क़ब्र का कोना था  
-जिसमें उस शख़्स को राहत हो, (और ज़ेहन-ए-रसा[^rasaa] को मसर्रत हो)  
-जो बिदके[^bidnaa] उस गहराई को, अपने दिल की तन्हाई को  
-उसके ज़र्रों में समो डाले, पहले मंज़र को धो डाले  
-वो धुंधली झील सँवर जाए, और बाग़ अदन[^adan] का निखर आए। 
+<div>
+<style type="text/css" scoped>
+.first { display: inline-block; width: 11em;}
+</style>
+<span class="first">जब आई बहार जवानी की</span> (मन-मोहन मीठी कहानी की)  
+<span class="first">इस फैली-फैली दुनिया का</span> इक कोना मैंने ढूँढ लिया  
+<span class="first">इस कोने से जो रग़बत थी</span> वैसी न किसी से चाहत थी  
+<span class="first">हर ज़र्रा दिल को लुभाता था</span> और आँखों को गरमाता था  
+<span class="first">इक झील थी बन में खोई हुई</span> और गहरी नींद में सोई हुई  
+<span class="first">उस झील के सूने किनारों को</span> कुछ काली चट्टानों ने घेरा था  
+<span class="first">और साथ सनोबर के लंबे</span> ऊँचे पेड़ों का डेरा था  
+<span class="first">लेकिन जब रात आ जाती थी</span> और दुनिया पर छा जाती थी  
+<span class="first">बेचैन हवाएँ चलती थी</span> और उनसे चीख़ें निकलती थी  
+<span class="first">वो गर ये था, वो नग़मा था</span> वो नग़मा भी इक नौहा[^nauhaa] था  
+<span class="first">मैं इस नौहे को सुनता था</span> और पहरों ही सिर धुनता था  
+<span class="first">उन रोते-रोते नग़मों में</span> उन चीख़ों वाले लम्हों में  
+<span class="first">पल-भर जादू मिट जाता था</span> और ध्यान मुझे  ये आता था  
+<span class="first">ये कैसी वहशत छाई है</span> तन्हाई है, तन्हाई है!  
+<span class="first">एहसास मगर नागुफ़्ता[^naaguftaa] था</span> ज़ाहिर था फिर भी निहुफ़्ता[^nihuftaa] था  
+<span class="first">हीरों की कान[^kaan] मिले मुझको</span> या सारा जहान मिले मुझको  
+<span class="first">मैं झील कहानी कैसे कहूँ?</span> बहतर है यही ख़ामोश रहूँ  
+<span class="first">वो सब लहरें थीं ज़हर-भरी</span> उन लहरों में थी मौत छुपी  
+<span class="first">जो गहराई में बिछौना था</span> इक ऐसी क़ब्र का कोना था  
+<span class="first">जिसमें उस शख़्स को राहत हो</span> (और ज़ेहन-ए-रसा[^rasaa] को मसर्रत हो)  
+<span class="first">जो बिदके[^bidnaa] उस गहराई को</span> अपने दिल की तन्हाई को  
+<span class="first">उसके ज़र्रों में समो डाले</span> पहले मंज़र को धो डाले  
+<span class="first">वो धुंधली झील सँवर जाए</span> और बाग़ अदन[^adan] का निखर आए। 
+</div>
  
 [^nauhaa]: रोना, शोर-ए-मातम
 [^naaguftaa]: अनकहा, नाक़ाबिल-ए-बयान

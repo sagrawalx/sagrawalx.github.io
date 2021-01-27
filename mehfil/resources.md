@@ -67,4 +67,5 @@ Faiz Ahmed Faiz (फ़ैज़ अहमद फ़ैज़ · <span dir="rtl"
 ## Mīrājī {#miraji} 
 
 * Geeta Patel, *Lyrical Movements, Historical Hauntings* (2002). 
+* [*Kulliyar-e-Mīrājī*](https://www.rekhta.org/ebooks/kulliyat-e-meeraji-ebooks)
 
