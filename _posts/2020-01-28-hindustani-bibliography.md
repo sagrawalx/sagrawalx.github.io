@@ -1,7 +1,7 @@
 ---
 title: "Partially annotated bibliography on Hindi-Urdu"
 date: 2021-01-06
-tags: linguistics
+tags: language
 layout: post
 ---
 

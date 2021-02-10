@@ -1,7 +1,7 @@
 ---
 title: Schwa Deletion in Hindustani
 date: 2018-07-13
-tags: linguistics
+tags: language
 layout: post
 summary: A discussion of several kinds of deleted schwas
 ---

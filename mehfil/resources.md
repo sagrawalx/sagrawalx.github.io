@@ -36,6 +36,7 @@ Here are some resources I'm aware of that might be useful for improving your kno
 
 Here are some useful online dictionaries: 
 
+* Very useful: [Rekhta Dictionary](https://rekhtadictionary.com/)
 * Bilingual: [Platts](https://dsal.uchicago.edu/dictionaries/platts/)
 * Monolingual (Nagari): [शब्दसागर](https://dsal.uchicago.edu/dictionaries/dasa-hindi/)
 * Monolingual (Urdu): [<span dir="rtl">اردو لغت</span>](http://udb.gov.pk/)

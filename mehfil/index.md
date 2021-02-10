@@ -24,6 +24,23 @@ Here's an [in-progress list of Urdu-Hindi resources](resources) that you might f
 </tr>
 
 <tr>
+<td>2/16</td>
+<td>Two poems against war: *Ai Sharīf Insānoṇ* and *Sipāhī Kā Marsiyā*</td>
+<td>
+* Sahir Ludhianvi, *Ai Sharīf Insānoṇ*
+    - Full text: [Nagari](https://www.rekhta.org/nazms/ai-shariif-insaano-khuun-apnaa-ho-yaa-paraayaa-ho-sahir-ludhianvi-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/ai-shariif-insaano-khuun-apnaa-ho-yaa-paraayaa-ho-sahir-ludhianvi-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/ai-shariif-insaano-khuun-apnaa-ho-yaa-paraayaa-ho-sahir-ludhianvi-nazms)
+    - [Partial translation by Kanupriya Dhingra](https://indianculturalforum.in/2016/12/02/o-noble-men/)
+* Faiz Ahmad Faiz, *Sipāhī Kā Marsiyā*
+    - Full text: [Nagari](https://www.rekhta.org/nazms/sipaahii-kaa-marsiya-faiz-ahmad-faiz-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/sipaahii-kaa-marsiya-faiz-ahmad-faiz-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/sipaahii-kaa-marsiya-faiz-ahmad-faiz-nazms) (note: there are some typos on Rekhta[^sipahitypos])
+    - [Performance by Nayyara Noor](https://www.youtube.com/watch?v=lAVIREzPx9g)
+* [Wikipedia on the Indo-Pakistani War of 1965](https://en.wikipedia.org/wiki/Indo-Pakistani_War_of_1965) (which was the historical backdrop for both of these poems)
+</td>
+
+
+[^sipahitypos]: Line 4 should be तुमरी सेज सजावन कारन / تمری سیج سجاون کارن / *tumrī sej sajaawan kāran* ("in order to decorate your bed"). Then, in line 5, रैन / رین / *rain* means "[night](https://dsal.uchicago.edu/cgi-bin/app/platts_query.py?qs=rain&searchhws=yes&matchtype=exact)," not "rain!"
+</tr>
+
+<tr>
 <td>2/9</td>
 <td>Two songs of women's liberation: *Rupaiyā* and *Maiṇ Irādā*</td>
 <td>
@@ -33,7 +50,7 @@ Here's an [in-progress list of Urdu-Hindi resources](resources) that you might f
     * [Lyrics](http://www.bollymeaning.com/2012/05/mujhe-kya-bechega-rupaiya-satyamev.html) (Roman and English translation, but I think these are not entirely accurate[^rupaiya-error])
 * Haniya Aslam's *Maiṇ Irādā*
     * [YouTube](https://www.youtube.com/watch?v=wbXUFGWVZxs)
-    * [Lyrics](https://www.cokestudio.com.pk/mobile/season11/e01-s02.html) (Urdu, Roman, and English translation)
+    * [Lyrics](https://www.cokestudio.com.pk/mobile/season11/e01-s02.html) (Urdu, Roman, and English translation; note that the translation is a little "loose" sometimes)
     
     [^rupaiya-error]: In the third verse of this transcription, this website says *jiskī fitrat meṇ hairat samāī nahīṇ*, but *hairat* ("surprise") makes very little sense on context. This makes more sense if it was *jiskī fitrat meṇ hai rat samāī nahīṇ* (where *rat* means "love," roughly). Also, in the fourth verse, the second line begins *<u>d</u>o rasmoṇ...* but I think the singer sings *<u>t</u>o rasmoṇ...*. 
 </td>

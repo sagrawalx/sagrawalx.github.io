@@ -1,7 +1,7 @@
 ---
 title: Hindustani honorific verbs
 date: 2021-01-27
-tags: linguistics
+tags: language
 layout: post
 summary: Honorifics à la Japanese in Urdu-Hindi
 ---

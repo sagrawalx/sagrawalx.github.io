@@ -48,6 +48,11 @@ body {
         border-left-width: 5px;
         border-left-color: $light;
     }
+    
+    .centerquote {
+        padding-left: 4em;
+        padding-right: 4em;
+    }
 
     code, div.sourceCode {
         font-family: monospace;
@@ -248,5 +253,33 @@ ul.tags {
         color: $link;
         padding: 0;
         margin: 0;
+    }
+}
+
+.hoverseg {
+    .unit {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+    }
+    
+    .unit .hover {
+        visibility: hidden;
+        width: 15em;
+        top: 100%;
+        left: 50%;
+        margin-left: -5em;
+        
+        background-color: $light;
+        padding: 0.25em 0.5em;
+        border-radius: 0.25em;
+        border: 1px solid black;
+        
+        position: absolute;
+        z-index: 1;
+    }
+    
+    .unit:hover .hover {
+        visibility: visible;
     }
 }
