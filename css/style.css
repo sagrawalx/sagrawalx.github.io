@@ -12,6 +12,8 @@ body a:link:hover, body a:active, body a.current { color: #339999; }
 
 body blockquote, body .blockquote, body div.sourceCode { display: block; padding-left: 2em; border-left-style: solid; border-left-width: 5px; border-left-color: #eee; }
 
+body .centerquote { padding-left: 4em; padding-right: 4em; }
+
 body code, body div.sourceCode { font-family: monospace; overflow: auto; max-height: 40em; /* Keyword */ /* DataType */ /* DecVal */ /* BaseN */ /* Float */ /* Char */ /* String */ /* Comment */ /* Other */ /* Alert */ /* Function */ /* Error */ /* Warning */ /* Constant */ /* SpecialChar */ /* VerbatimString */ /* SpecialString */ /* Import */ /* Variable */ /* ControlFlow */ /* Operator */ /* BuiltIn */ /* Extension */ /* Preprocessor */ /* Attribute */ /* Documentation */ /* Annotation */ /* CommentVar */ /* Information */ }
 
 body code span.kw, body div.sourceCode span.kw { color: #007020; font-weight: bold; }
@@ -137,5 +139,11 @@ ul.tags { padding-left: 0; }
 ul.tags li { display: inline; margin-right: 0.4em; background-color: #eee; padding: 0.1em 0.4em 0.1em 0.4em; border-radius: 0.2em; }
 
 ul.tags li:before { content: "#"; color: #777; padding: 0; margin: 0; }
+
+.hoverseg .unit { position: relative; display: inline-block; border-bottom: 1px dotted black; }
+
+.hoverseg .unit .hover { visibility: hidden; width: 15em; top: 100%; left: 50%; margin-left: -5em; background-color: #eee; padding: 0.25em 0.5em; border-radius: 0.25em; border: 1px solid black; position: absolute; z-index: 1; }
+
+.hoverseg .unit:hover .hover { visibility: visible; }
 
 /*# sourceMappingURL=style.css.map */
