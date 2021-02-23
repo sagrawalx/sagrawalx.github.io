@@ -52,7 +52,9 @@ Here's an [in-progress list of Urdu-Hindi resources](resources) that you might f
     * [YouTube](https://www.youtube.com/watch?v=wbXUFGWVZxs)
     * [Lyrics](https://www.cokestudio.com.pk/mobile/season11/e01-s02.html) (Urdu, Roman, and English translation; note that the translation is a little "loose" sometimes)
     
-    [^rupaiya-error]: In the third verse of this transcription, this website says *jiskī fitrat meṇ hairat samāī nahīṇ*, but *hairat* ("surprise") makes very little sense on context. This makes more sense if it was *jiskī fitrat meṇ hai rat samāī nahīṇ* (where *rat* means "love," roughly). Also, in the fourth verse, the second line begins *<u>d</u>o rasmoṇ...* but I think the singer sings *<u>t</u>o rasmoṇ...*. 
+    [^rupaiya-error]: In the third verse of this transcription, this website says *jiskī fitrat meṇ hairat samāī nahīṇ*, but *hairat* ("surprise") makes very little sense on context. It sounds a bit like *gairat* ("shame") to me. It might also be  *jiskī fitrat meṇ hai rat samāī nahīṇ* (with *rat* meaning "love," roughly), as some other transcriptions say. It's certainly not *hairat*, but I'm not very confident about *gairat* vs *hai rat*. 
+    
+        Also, one line of the transcription begins *<u>d</u>o rasmoṇ* but I think the singer might sing *<u>t</u>o rasmoṇ*. 
 </td>
 </tr>
 

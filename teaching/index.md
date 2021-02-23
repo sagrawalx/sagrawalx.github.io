@@ -5,7 +5,7 @@ permalink: teaching/
 
 # Currently Teaching
 
-* None
+* Spring 2021, Block 6. [MA117 - Probability and Statistics (Q)](sp21-b6_ma117). 
 
 # Previously Taught
 

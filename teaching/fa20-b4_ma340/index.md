@@ -29,9 +29,9 @@ nonav: true
 
 # Links 
 
-{% assign wr = "[Weekly reflection form](https://docs.google.com/forms/d/e/1FAIpQLScNlg1xsQUxZks9IG38ImyWTtPMVu-v6HlP9BwULrtBmM4Xqw/viewform)" %}
+{% assign wr = "Weekly reflection form (disabled)" %}
 
-{% assign wrshort = "[WR](https://docs.google.com/forms/d/e/1FAIpQLScNlg1xsQUxZks9IG38ImyWTtPMVu-v6HlP9BwULrtBmM4Xqw/viewform)" %}
+{% assign wrshort = "WR" %}
 
 * [Slack workspace](https://join.slack.com/t/fall2020block-bzo8759/signup) (for discussion)
 * [Gradescope](https://www.gradescope.com/courses/207281) (for submitting assignments)

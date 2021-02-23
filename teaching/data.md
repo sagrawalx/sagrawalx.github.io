@@ -86,11 +86,11 @@ A number of health and/or medical data sources are already mentioned above. Here
 * MIT Lab for Computational Physiology: [MIMIC-III Critical Care Database](https://mimic.physionet.org/)
 * [PRO-ACT (Pooled Resource Open-Access ALS Clinical Trials Database](https://nctu.partners.org/ProACT)
 
-## Financial Data
+# Financial Data
 
 * [Quandl](https://www.quandl.com/search)
 
-## Sports Data
+# Sports Data
 
 * [Rotowire](https://www.rotowire.com/)
 * [Sports Reference](https://www.sports-reference.com/)
@@ -101,6 +101,7 @@ A number of health and/or medical data sources are already mentioned above. Here
 Here are some other things that might be useful: data search tools, data repositories, lists of data sources, etc. 
 
 * Google: [Dataset Search](https://datasetsearch.research.google.com/)
+* Grinnell Stat2Lab: [Data Resources](https://stat2labs.sites.grinnell.edu/DataResources.html)
 * UC Irvine: [Machine Learning Repository](http://archive.ics.uci.edu/ml/index.php)
 * [Kaggle](https://www.kaggle.com/datasets)
 * [Re3Data (Registry of Research Data Repositories)](https://www.re3data.org/)
