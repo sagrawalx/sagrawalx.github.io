@@ -36,7 +36,7 @@ We'll be using R for this course. There are two ways of doing this:
 
 The latter is easier to set up. But, the last time I taught the class, a few students had some minor issues with rstudio.cloud that students using a desktop version didn't have. The issues didn't really impede students' ability to complete work (they just had to find some workarounds), and maybe rstudio.cloud has finessed these issues since then. In any case, my recommendation would be that you try to install RStudio on your computer if that's at all possible.
 
-If you have trouble installing R and/or RStudio, your best bet is to get in touch with ITS for help. If that still doesn't work, you can use rstudio.cloud in browser. We'll do our best to help you with any issues you might encounter later on.
+If you have trouble installing R and/or RStudio, your best bet is to get in touch with ITS for help. If that still doesn't work, you can use rstudio.cloud in browser, but just be aware that things might occasionally not work as you expect and feel free to ask for help when you need it. 
 
 If you don't have access to a computer that you can use for R at all (ie, you can't install R + RStudio and you can't use rstudio.cloud in a browser), let me know and we'll try to figure something out.
 
@@ -60,7 +60,7 @@ I will look through your questions and then make one or more short videos and/or
 
 There will be worksheet and/or further practice ("FP") problems associated to each reading. These will not be collected. That being said, some quiz and final exam problems will resemble these problems, so you are encouraged to do as many of them as you can. I also encourage you to work with your classmates on these problems. 
 
-You'll find solutions to odd-numbered exercises in the textbook. I won't be posting solutions to the worksheets or the even-numbered exercises, but you're welcome to ask me or Fernando or Cinea about anything you're struggling with!
+You'll find solutions to odd-numbered exercises in the textbook. I won't be posting solutions to the worksheets or the even-numbered exercises, but you're welcome to ask me or Fernando or Cinea or QRC tutors about anything you're struggling with!
 
 ### Quizzes and the Final Exam
 
@@ -68,7 +68,7 @@ There will be three quizzes and a final exam.
 
 The quizzes will be accessible to you through Gradescope 24 hours before their final deadlines (Fridays at 2pm). You are welcome to take the quiz at any time of day that works best for you. You are allotted 1 hour to work on quizzes. 
 
-Note that, once you access the document through Gradescope, the website will be require you to submit your work within 3 hours (but still before the 2pm deadline). I entrust to the Honor Code that you won't spend more than the allotted 1 hour on the quiz. The extra time is there for unusual situations (eg, if you run into technical problems in uploading your work, or if you have arranged for extra time accommodations with Accessibility Resources). Gradescope's 2pm deadline and 3-hour limit will be strict, so please make sure you get things in on time. 
+Note that, once you access the document through Gradescope, the website will be require you to submit your work within 3 hours (but it must be suubmitted before the 2pm deadline). I entrust to the Honor Code that you won't spend more than the allotted 1 hour on the quiz. The extra time is there for unusual situations (eg, if you run into technical problems in uploading your work, or if you've arranged for extra time accommodations with Accessibility Resources). Gradescope's 2pm deadline and 3-hour limit will be strict, so please make sure you get things in on time. 
 
 The format for the final exam will be roughly the same as that of the quizzes, except it'll be roughly twice as long. You'll have 2 hours to work on it, and you'll have to finish submitting the file within 5 hours after you access the document (but still before the final deadline!). 
 
@@ -88,7 +88,7 @@ There will be a number of labs over the course of the block. These will require 
 
 ### Project
 
-There will be a [group project](project). The final paper is due at the end of the block, but there will be some preliminary deadlines as well. 
+There will be a [project](project). The final product is due at the end of the block, but there will be some preliminary deadlines as well. 
 
 ### Self-reflection
 
@@ -104,17 +104,15 @@ There will be a few different types of live events:
 
     These group sessions are for you to talk to each other about whatever you're struggling with,  and I can chime in whenever necessary. This means that you should come with a question or two that you would like to discuss with the group! 
     
-    If you won't be able to make it to a group session on a day that your name is drawn, please let me know in advance and we'll work something out. 
+    If you won't be able to make it to a group session on a day that your name has been drawn for, please let me know in advance and we'll work something out. 
 
-* Problem sessions: **TBA** <!-- TODO -->
+* Problem sessions: **Info TBA** <!-- TODO -->
 
 * Office hours: 
     - I'll have office hours throughout the week for you to stop by and ask me for help with whatever you need. 
-    - The math paraprof, Cinea Jenkins, also holds  office hours. **TBA** <!-- TODO -->
+    - The math paraprof, Cinea, also holds  office hours. **Info TBA** <!-- TODO -->
 
-I strongly encourage you to set up live study sessions with your classmates on your own as well. I've set us up a Slack workspace that you might use to coordinate live study sessions; you can also use it to ask each other questions via chat. 
-
-It can be easy to feel isolated during this era of quarantines and social distancing, but, despite the vast distances that may separate us, you do have access to a community (which includes your classmates, me, Cinea, Fernando, and QRC tutors). Taking advantage of this community will help you feel less isolated, and also help your learning. 
+I strongly encourage you to set up live study sessions with your classmates on your own as well. I've set us up a Slack workspace that you might use to coordinate live study sessions; you can also use it to ask each other questions via chat. It can be easy to feel isolated during this era of quarantines and social distancing, but you do have access to a community (which includes your classmates, me, Cinea, Fernando, and QRC tutors). Taking advantage of this community will help you feel less isolated, and also help your learning. 
 
 ## Assessment
 
@@ -135,7 +133,7 @@ Here are further details about some of these components.
 
 * *Reading questions*. You get 1 point for each reading question you submit, up to a maximum of $n-2$, where $n$ is the number of days a reading is assigned. In other words, you don't need to submit a reading question every day to get full credit, and there's no extra credit for doing so.
 
-* *Comprehension checks*. You get 1 point for each problem you attempt, up to a maximum of $n-6$, where $n$ is the total number of comprehension check problems that are assigned. In other words, you don't need to submit comprehension checks every day to get full credit, and there's no extra credit for going above the requirements. 
+* *Comprehension checks*. You get 1 point for each problem you attempt, up to a maximum of $n-10$, where $n$ is the total number of comprehension check problems that are assigned. In other words, you don't need to submit comprehension checks every day to get full credit, and there's no extra credit for going above the requirements. 
 
 * *Reflection assignments*. This is for all of the reflection assignments (mathematical autobiography, weekly reflections, etc). 
 
