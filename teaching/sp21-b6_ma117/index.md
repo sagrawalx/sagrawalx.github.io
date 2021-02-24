@@ -25,7 +25,7 @@ nonav: true
 * Problem sessions: **TBA** <!-- TODO -->
 * Office hours: 
     - Sunny: Mon--Thu, 2--3pm MT (or by request). 
-    - Cinea: Mon--Fri, 9am--5pm MT (email Cinea and tell her you have a question)
+    - Cinea: Mon--Fri, 9am--5pm MT (email Cinea to  tell her you want to meet)
 * [Zoom links on Canvas](https://canvas.coloradocollege.edu/courses/32677/external_tools/483)
 
 You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/offices/qrc/blocktutorschedule/).
