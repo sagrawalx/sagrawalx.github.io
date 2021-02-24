@@ -109,8 +109,8 @@ There will be a few different types of live events:
 * Problem sessions: **Info TBA** <!-- TODO -->
 
 * Office hours: 
-    - I'll have office hours throughout the week for you to stop by and ask me for help with whatever you need. 
-    - The math paraprof, Cinea, also holds  office hours. **Info TBA** <!-- TODO -->
+    - I'll have office hours for you to stop by and ask me for help with whatever you need. 
+    - The math paraprof, Cinea, also holds office hours Monday through Friday, 9am--5pm MT. You should email her to let her know if there are things you'd like to ask her. 
 
 I strongly encourage you to set up live study sessions with your classmates on your own as well. I've set us up a Slack workspace that you might use to coordinate live study sessions; you can also use it to ask each other questions via chat. It can be easy to feel isolated during this era of quarantines and social distancing, but you do have access to a community (which includes your classmates, me, Cinea, Fernando, and QRC tutors). Taking advantage of this community will help you feel less isolated, and also help your learning. 
 
