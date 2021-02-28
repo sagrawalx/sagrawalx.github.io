@@ -106,7 +106,7 @@ There will be a few different types of live events:
     
     If you won't be able to make it to a group session on a day that your name has been drawn for, please let me know in advance and we'll work something out. 
 
-* Problem sessions: **Info TBA** <!-- TODO -->
+* Problem sessions: Fernando will hold problem sessions thrice a week. You might use these to talk to your classmates and to get help from Fernando on labs or whatever else you're struggling with! 
 
 * Office hours: 
     - I'll have office hours for you to stop by and ask me for help with whatever you need. 

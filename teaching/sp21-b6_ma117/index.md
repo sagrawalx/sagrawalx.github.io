@@ -19,14 +19,15 @@ nonav: true
 
 # Live events
  
+Zoom links for the following are all on [Canvas](https://canvas.coloradocollege.edu/courses/32677/external_tools/483): 
+
 * Group sessions: Mon--Fri, 10--10:30am MT. [Random name draws](https://docs.google.com/spreadsheets/d/1rp-psMIfI9a95xqvDpQ1h0lmJooA5epGqAMnX4i3ua0/edit?usp=sharing). 
     - You should show up to the group session if your name is indicated on the spreadsheet linked above.
     - **Note:** The name draws may fluctuate slightly while the class roster stabilizes over the first day or two of class. I will remove this note when the roster has stopped changing, at which point the random  name draws will remain fixed for the remainder of the block so that you can plan around this.  <!-- TODO -->
-* Problem sessions: **TBA** <!-- TODO -->
+* Problem sessions: Tue, Thu, and Sun, 6--7pm. 
 * Office hours: 
     - Sunny: Mon--Thu, 2--3pm MT (or by request). 
     - Cinea: Mon--Fri, 9am--5pm MT (email Cinea to  tell her you want to meet)
-* [Zoom links on Canvas](https://canvas.coloradocollege.edu/courses/32677/external_tools/483)
 
 You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/offices/qrc/blocktutorschedule/).
 
