@@ -24,6 +24,22 @@ Here's an [in-progress list of Urdu-Hindi resources](resources) that you might f
 </tr>
 
 <tr>
+<td>3/2</td>
+<td>
+Rabindranath Tagore, "Where the mind is without fear"
+</td>
+<td>
+* Tagore's poem
+    * [Wikipedia entry](https://en.wikipedia.org/wiki/Chitto_Jetha_Bhayshunyo) (including the [Bangla original](https://en.wikipedia.org/wiki/Chitto_Jetha_Bhayshunyo#Original_Bengali_script) and Tagore's [English translation](https://en.wikipedia.org/wiki/Chitto_Jetha_Bhayshunyo#English_translation)) 
+    * [Reading by Playtime Entertainment](https://www.youtube.com/watch?v=rLFJTGwYTJw) (of the Bangla)
+* Translation by Anwar Jalalpuri: [Urdu](https://www.rekhta.org/ebooks/urdu-shairi-mein-gitanjali-rabindrnath-tagore-ebooks) (p. 63 of the e-reader), [Nagari](texts#bekhaufii)
+* AR Rahman's *Jagāo Mere Des*
+    * [YouTube](https://www.youtube.com/watch?v=7FKEy_RWwQk)
+    * [Lyrics](http://dunkdaft.blogspot.com/2013/08/jagao-mere-des-ko-lyrics-meaning.html) (Roman)
+</td>
+</tr>
+
+<tr>
 <td>2/16</td>
 <td>Two poems against war: *Ai Sharīf Insānoṇ* and *Sipāhī Kā Marsiyā*</td>
 <td>
