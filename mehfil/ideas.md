@@ -17,22 +17,6 @@ nonav: true
 
 <tr>
 <td>TBA</td>
-<td>
-Rabindranath Tagore, "Where the mind is without fear"
-</td>
-<td>
-* Tagore's poem
-    * [Wikipedia entry](https://en.wikipedia.org/wiki/Chitto_Jetha_Bhayshunyo) (including the [Bangla original](https://en.wikipedia.org/wiki/Chitto_Jetha_Bhayshunyo#Original_Bengali_script) and Tagore's [English translation](https://en.wikipedia.org/wiki/Chitto_Jetha_Bhayshunyo#English_translation)) 
-    * [Reading by Playtime Entertainment](https://www.youtube.com/watch?v=rLFJTGwYTJw) (of the Bangla)
-* Translation by Anwar Jalalpuri: [Urdu](https://www.rekhta.org/ebooks/urdu-shairi-mein-gitanjali-rabindrnath-tagore-ebooks) (p. 63 of the e-reader), [Nagari](texts#bekhaufii)
-* AR Rahman's *Jagāo Mere Des*
-    * [YouTube](https://www.youtube.com/watch?v=7FKEy_RWwQk)
-    * [Lyrics](http://dunkdaft.blogspot.com/2013/08/jagao-mere-des-ko-lyrics-meaning.html) (Roman)
-</td>
-</tr>
-
-<tr>
-<td>TBA</td>
 <td>Faiz Ahmad Faiz, *Yād*</td>
 <td>
 * Full text: [Nagari](https://www.rekhta.org/nazms/yaad-faiz-ahmad-faiz-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/yaad-faiz-ahmad-faiz-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/yaad-faiz-ahmad-faiz-nazms)
