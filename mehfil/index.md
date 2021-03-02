@@ -1,14 +1,15 @@
 ---
 layout: default
-title: Home
+title: Mehfil
 bannertext: महफ़िल · محفل
 bannerlink: mehfil
 nonav: true
+permalink: mehfil/
 ---
 
 # Overview
 
-We're an *adabī aḍḍā* of sorts --- a gathering* of people with an interest in Hindi-Urdu[^name] linguistics, literature, music, film, etc. Everyone interested in these sorts of things is welcome to participate: we span the spectrum from native speakers to learners. We also sometimes discuss things in other Southasian languages. If you'd like to be on the mailing list, send me an email at  <span class="email" data-localpart="sagrawal" data-domain="coloradocollege.edu"></span> to let me know! 
+We're an *adabī aḍḍā* of sorts --- a gathering* of people with an interest in Hindi-Urdu[^name] linguistics, literature, music, film, etc. Everyone interested in these sorts of things is welcome to participate: we span the spectrum from native speakers to learners. We also sometimes discuss works in other Southasian languages. If you'd like to be on the mailing list, send me an email at  <span class="email" data-localpart="sagrawal" data-domain="coloradocollege.edu"></span> to let me know! 
 
 Here's an [in-progress list of Urdu-Hindi resources](resources) that you might find useful. Resources specific to particular topics are listed in the calendar below.
 
@@ -72,6 +73,10 @@ Rabindranath Tagore, "Where the mind is without fear"
     
         Also, one line of the transcription begins *<u>d</u>o rasmoṇ* but I think the singer might sing *<u>t</u>o rasmoṇ*. 
 </td>
+</tr>
+
+<tr>
+<td colspan="3" style="background-color: #eee; text-align: center;">2020</td>
 </tr>
 
 <tr>

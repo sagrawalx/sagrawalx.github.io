@@ -1,6 +1,7 @@
 ---
 title: CV
 nonav: true
+permalink: cv/
 ---
 
 <img class="sidepic" src="{{ site.baseurl }}/img/hello-bunny.svg" title="Hello!"/>
@@ -13,7 +14,7 @@ nonav: true
 
 # Employment
 
-* Colorado College. Visiting Assistant Professor (2018-present).
+* Colorado College. Visiting Assistant Professor (2018--present).
 
 # Education
 
@@ -57,6 +58,8 @@ nonav: true
 ## Primary instructor
 
 * Colorado College
+    * Number theory (Spring 2021, Block 7). 
+    * Probability and statistics (Spring 2021, Block 6). 
     * Topics: Algebraic geometry (Fall 2020, Block 4). 
     * Number theory (Fall 2020, Block 3). 
     * Number theory (Fall 2020, Block 2). 
@@ -102,7 +105,7 @@ nonav: true
 ## Mentor
 
 * Independent study with Marston Xue (Spring 2021). Topic: Scheme theory. 
-* Senior thesis with Ying Wang (2020–2021). Topic: Tangent spaces in algebraic geometry. 
+* Senior thesis with Ying Wang (2020–2021). Topic: Grassmannian. 
 * Senior thesis with Kadin Mangalik (2019–2020). Topic: Sums of cubes over $\mathbb{F}_p$.
 * Faculty student collaborative research with Cinea Jenkins (Summer 2019). Topic: Hodge polygons of F-crystals.
 * Independent study with Ying Wang (Spring 2019). Topic: Category theory. 
@@ -132,18 +135,18 @@ nonav: true
 
 ## Professional
 
-* Contributor to Stacks Project
+* Contributor to the Stacks Project
 * Reviewer for zbMATH
 
 ## Departmental
 
-* Inclusive Spaces Committee (2019-Present). 
-* Summer Research Survey (2019-2020). 
-* MAA Liaison (2018-2019).
+* Inclusive Spaces Committee (2019--Present). 
+* Summer Research Survey (2019--2020). 
+* MAA Liaison (2018--2019).
 
 ## Other
 
-* Organizer for CC's Hindi-Urdu Mehfil
+* Organizer of CC's Hindi-Urdu Mehfil
 * Translator for Mutual Aid NYC
 
 # Awards
@@ -151,4 +154,4 @@ nonav: true
 * Muir scholar (2011). John Muir College, UC San Diego.
 * Honors with highest distinction (2011). Department of Mathematics, UC San Diego.
 * Dean's award for excellence (2009). Division of Physical Sciences, UC San Diego.
-* Regents scholarship (2007-2011). UC San Diego.
+* Regents scholarship (2007--2011). UC San Diego.
