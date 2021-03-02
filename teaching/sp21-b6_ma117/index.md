@@ -188,7 +188,8 @@ How to read this calendar:
 
 * Topic: Data, surveys, and experiments
 * Read: 1.1--4  
-* Summary video (link will go here after the video is made!)
+* Summary video (parts [1](https://canvas.coloradocollege.edu/files/1007019/), [2](https://canvas.coloradocollege.edu/files/1007020/), and [3](https://canvas.coloradocollege.edu/files/1007022/)) and [notes](notes/data.jpg)
+* [Select reading question responses](questions/q3-2.pdf)
 * Comprehension check (CC): 1.1, 3, 7, 13, 17, 29  
 * [Worksheet 1 - Data](wksht/data.pdf) 
 * Further practice (FP): 1.5, 9, 11, 12, 19, 21, 22, 27, 28, 33, 34, 36, 40, 43, 44  
