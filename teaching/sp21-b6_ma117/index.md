@@ -191,7 +191,7 @@ How to read this calendar:
 * Summary video (parts [1](https://canvas.coloradocollege.edu/files/1007019/), [2](https://canvas.coloradocollege.edu/files/1007020/), and [3](https://canvas.coloradocollege.edu/files/1007022/)) and [notes](notes/data.jpg)
 * [Select reading question responses](questions/q3-2.pdf)
 * Comprehension check (CC): 1.1, 3, 7, 13, 17, 29  
-* [Worksheet 1 - Data](wksht/data.pdf) 
+* [Worksheet 1](wksht/data.pdf) 
 * Further practice (FP): 1.5, 9, 11, 12, 19, 21, 22, 27, 28, 33, 34, 36, 40, 43, 44  
 * Fun things: [xkcd](https://xkcd.com/552/)
 
@@ -201,7 +201,7 @@ How to read this calendar:
 * Read: 2.1--3
 * Summary video (link will go here after the video is made!)
 * CC: 2.1, 5, 9, 11, 23, 25 
-* [Worksheet 2 - Descriptive Statistics](wksht/descriptive.pdf) 
+* [Worksheet 2](wksht/descriptive.pdf) 
 * FP: 2.3, 6, 10, 12, 13, 17, 19, 20, 24, 26, 30, 33, 34  
 
 ## Week 1, Thursday 
@@ -209,7 +209,8 @@ How to read this calendar:
 * Topic: Probability
 * Read: 3.1–3
 * Summary video (link will go here after the video is made!)
-* CC: 3.1, 5, 7, 13, 23 
+* CC: 3.1, 5, 7, 13, 23  
+* [Worksheet 3](wksht/probability.pdf)
 * FP: 3.3, 8, 10, 11, 15, 17, 21, 25, 27
 * Fun things: [xkcd](https://xkcd.com/795/)
 
@@ -219,6 +220,7 @@ How to read this calendar:
 * Read: 3.4–5
 * Summary video (link will go here after the video is made!)
 * CC: 3.29, 31, 37, 43 
+* [Worksheet 4](wksht/random-variable.pdf)
 * FP: 3.33, 35, 36, 38, 39, 41, 45–47
 
 ## Week 2, Monday 
