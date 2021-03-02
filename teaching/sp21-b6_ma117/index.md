@@ -199,7 +199,8 @@ How to read this calendar:
 * Topic: Descriptive statistics
 * Read: 2.1--3
 * Summary video (link will go here after the video is made!)
-* CC: 2.1, 5, 9, 11, 23, 25  
+* CC: 2.1, 5, 9, 11, 23, 25 
+* [Worksheet 2 - Descriptive Statistics](wksht/descriptive.pdf) 
 * FP: 2.3, 6, 10, 12, 13, 17, 19, 20, 24, 26, 30, 33, 34  
 
 ## Week 1, Thursday 
