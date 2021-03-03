@@ -189,9 +189,9 @@ How to read this calendar:
 
 * Topic: Data, surveys, and experiments
 * Read: 1.1--4  
+* Comprehension check (CC): 1.1, 3, 7, 13, 17, 29  
 * Summary video (parts [1](https://canvas.coloradocollege.edu/files/1007019/), [2](https://canvas.coloradocollege.edu/files/1007020/), and [3](https://canvas.coloradocollege.edu/files/1007022/)) and [notes](notes/data.jpg)
 * [Select reading question responses](questions/q3-2.pdf)
-* Comprehension check (CC): 1.1, 3, 7, 13, 17, 29  
 * [Worksheet 1](wksht/data.pdf) 
 * Further practice (FP): 1.5, 9, 11, 12, 19, 21, 22, 27, 28, 33, 34, 36, 40, 43, 44  
 * Fun things: [xkcd](https://xkcd.com/552/)
@@ -200,8 +200,10 @@ How to read this calendar:
 
 * Topic: Descriptive statistics
 * Read: 2.1--3
-* Summary video (link will go here after the video is made!)
 * CC: 2.1, 5, 9, 11, 23, 25 
+* Summary video about descriptive statistics (parts [1](https://canvas.coloradocollege.edu/files/1008231/) and [2](https://canvas.coloradocollege.edu/files/1008233/)) and [notes](notes/descriptive.jpg)
+* [Summary video about hypothesis tests](https://canvas.coloradocollege.edu/files/1008238/) and [notes](notes/hypothesis-test.jpg)
+* [Select reading question responses](q3-3.pdf)
 * [Worksheet 2](wksht/descriptive.pdf) 
 * FP: 2.3, 6, 10, 12, 13, 17, 19, 20, 24, 26, 30, 33, 34  
 
