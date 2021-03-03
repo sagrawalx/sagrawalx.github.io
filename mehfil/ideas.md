@@ -37,16 +37,6 @@ nonav: true
 
 <tr>
 <td>TBA</td>
-<td>Kishwar Nahīd, *Ham Gunahgār Aurateṇ*</td>
-<td>
-* Full text: [Nagari](https://www.rekhta.org/nazms/top-10-nazms-of-kishwar-naheed/ham-gunahgaar-aurten-ye-ham-gunahgaar-aurten-hain-kishwar-naheed-nazms?sort=popularity-desc&lang=hi), [Urdu](https://www.rekhta.org/nazms/top-10-nazms-of-kishwar-naheed/ham-gunahgaar-aurten-ye-ham-gunahgaar-aurten-hain-kishwar-naheed-nazms?sort=popularity-desc&lang=ur), [Roman](https://www.rekhta.org/nazms/top-10-nazms-of-kishwar-naheed/ham-gunahgaar-aurten-ye-ham-gunahgaar-aurten-hain-kishwar-naheed-nazms?sort=popularity-desc)
-* [Translation by Rukhsana Ahmad](https://www.poetryinternational.org/pi/poem/23748/auto/0/0/Kishwar-Naheed/We-Sinful-Women/en/tile)
-</td>
-</tr>
-
-
-<tr>
-<td>TBA</td>
 <td>Malkhān Singh, *Suno Brāhman*</td>
 <td>
 * [Full text](texts#suno-brahman) (Nagari and Urdu)

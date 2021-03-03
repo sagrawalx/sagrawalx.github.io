@@ -134,7 +134,7 @@ You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/off
 <td>
     8.1--3
     <hr/>
-    &nbsp;
+    [Bio](bio.pdf)
 </td>
 <td>
     8.4
@@ -174,6 +174,7 @@ How to read this calendar:
     - "Autobio" = [Mathematical autobiography](../prompt.pdf) (submit via Gradescope)
     - "WR#" = {{ wr }} for week # (submit via Google Form)
     - "Proposal," "Outline," and "Project" refer to the [project](project)
+    - "Bio" = [Mathematical biography](bio.pdf) (submit via Gradescope)
     - "Articles" refers to [two articles](#week-4-monday) for you to read (in place of the usual textbook readings)
     - "FR" = Final reflection (submit via Gradescope) <!-- TODO -->
 * Quiz/exam material:

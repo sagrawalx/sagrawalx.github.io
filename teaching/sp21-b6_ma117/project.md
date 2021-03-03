@@ -16,7 +16,7 @@ The paper will be due on the last day of class. Before then, you'll be asked to 
 
 ## Topic Proposal [3 points]
 
-Decide on your group (3-5 people) and a topic you want to investigate. One person in each group should send me an email by the proposal deadline indicated on the [calendar](index#calendar) listing all the members of the group and the topic you've settled on. Your email will be brief: a few sentences at most. 
+Tell me who's in your group (3-5 people) and a topic you want to investigate. This will be brief: a few sentences at most. 
 
 I encourage you to be creative and choose something that's interesting to you! Maybe you want to understand what attributes of a CC student's reading habits most influence their political opinions, or maybe you want to understand how a country's economy influences its performance in the Olympics, or... The possibilities are endless. Here are [many data sources](/teaching/data) if you need some inspiration, but don't feel like you have to use something off of this list; you can find data yourself, or you can decide to collect data yourself. 
 
@@ -24,7 +24,7 @@ If you feel that you're in a situation that prevents you from working in a group
 
 ## Outline [7 points]
 
-The outline should be roughly one page, and can be written in bullet points. One person in each group should email me a PDF of your outline by the deadline indicated on the [calendar](index). You want to include enough detail here that someone could use your outline as a blueprint for replicating your statistical analysis. For example, you should address things like the following: 
+The outline should be roughly one page, and can be written in bullet points. You want to include enough detail here that someone could use your outline as a blueprint for replicating your statistical analysis. For example, you should address things like the following: 
 
 * What specific hypotheses will you be testing? 
 * How will you acquire the data you'll use? 
