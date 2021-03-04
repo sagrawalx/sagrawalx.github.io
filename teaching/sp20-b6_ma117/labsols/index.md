@@ -26,7 +26,10 @@ nonav: true
 ## On Your Own
 
 1. The data is from years 1940-2002. There are 63 rows and 3 columns; the column names are "year," "boys," and "girls."
-2. The data is on a similar scale: Arbuthnot's data ran for 82 years, while this data runs for 63. 
+2. The size of the data matrices are similar: Arbuthnot's data ran for 82 years, while this data runs for 63. 
+    
+    Note: Some students might interpret the question to be asking if the *birth counts* are on a similar scale. And the birth counts are not really on a similar scale: the present data set counts births in the millions, while Arbuthnot's counts births in the thousands. The question is a little vague (What does "these counts" mean? Is it the birth counts of this new data set, or is it referring back to the count of observations in the data matrix?), so either interpretation is probably okay.
+    
 3. There's a generally decreasing trend in the ratio, but it stays above 1. 
 	
 	![](1-o3.png)
