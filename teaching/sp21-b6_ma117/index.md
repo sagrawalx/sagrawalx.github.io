@@ -204,7 +204,7 @@ How to read this calendar:
 * CC: 2.1, 5, 9, 11, 23, 25 
 * Summary video about descriptive statistics (parts [1](https://canvas.coloradocollege.edu/files/1008231/) and [2](https://canvas.coloradocollege.edu/files/1008233/)) and [notes](notes/descriptive.jpg)
 * [Summary video about hypothesis tests](https://canvas.coloradocollege.edu/files/1008238/) and [notes](notes/hypothesis-test.jpg)
-* [Select reading question responses](q3-3.pdf)
+* [Select reading question responses](questions/q3-3.pdf)
 * [Worksheet 2](wksht/descriptive.pdf) 
 * FP: 2.3, 6, 10, 12, 13, 17, 19, 20, 24, 26, 30, 33, 34  
 
