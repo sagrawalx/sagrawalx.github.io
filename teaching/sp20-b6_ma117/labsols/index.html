@@ -66,7 +66,8 @@ Spring 2020, Block 6 — MA117 —
 <h1 id="lab-2">Lab 2</h1>
 <h2 id="exercises-1">Exercises</h2>
 <ol type="1">
-<li><p>There are 20000 cases and 9 variables. <code>genhlth</code> is categorical (ordinal), <code>exerany</code>, <code>hlthplan</code>, <code>smoke100</code>, and <code>gender</code> are categorical (non-ordinal), <code>height</code>, <code>weight</code>, and <code>wtdesire</code> are numerical (continuous), and finally, <code>age</code> is numerical (discrete).</p></li>
+<li><p>There are 20000 cases and 9 variables. <code>genhlth</code> is categorical (ordinal), <code>exerany</code>, <code>hlthplan</code>, <code>smoke100</code>, and <code>gender</code> are categorical (nominal), <code>height</code>, <code>weight</code>, and <code>wtdesire</code> are numerical (continuous), and finally, <code>age</code> is numerical (discrete).</p>
+<p>Note: It’s fine as long as students classify things as either “categorical” or “numerical” correctly. Their judgments about “ordinal” vs “nominal” and “discrete” vs “continuous” might differ from mine.</p></li>
 <li><p>For <code>height</code> and <code>age</code>, we get the following numerical summaries, and the interquartile ranges are 6 and 26, respectively.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">summary</span>(cdc<span class="sc">$</span>height)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span>
@@ -90,13 +91,16 @@ Spring 2020, Block 6 — MA117 —
 <li><p>The box plot of <code>genhlth</code> against <code>bmi</code> shows that decreasing health appears to coincide with higher BMIs.</p>
 <p><img src="2-e5a.png" /></p>
 <p>Here is a box plot of <code>hlthplan</code> against <code>bmi</code>. It appears that having a health plan is correlated with fewer extreme BMIs.</p>
-<p><img src="2-e5b.png" /></p></li>
+<p><img src="2-e5b.png" /></p>
+<p>Note: students might choose different variables here.</p></li>
 </ol>
 <h2 id="on-your-own-1">On Your Own</h2>
 <ol type="1">
 <li><p>The scatterplot shows a generally positive trend, but the slope appears to be less than 1.</p>
-<p><img src="2-o1.png" /></p></li>
-<li><p><code>wdiff &lt;- cdc$weight - cdc$wtdesire</code> (but could do it the other way around too, which will affect answers below).</p></li>
+<p><img src="2-o1.png" /></p>
+<p>Note: Students might interchange axes, and that’s fine.</p></li>
+<li><p><code>wdiff &lt;- cdc$weight - cdc$wtdesire</code></p>
+<p>Note: Students could subtract the other way around too. That’s fine; it will affect answers below.</p></li>
 <li><p><code>wdiff</code> is a vector of continuous numerical observations. An entry of 0 means that person is at their desired weight. An positive entry indicates the person wants to lose weight, and a negative entry indicates they want to gain weight.</p></li>
 <li><p>Running <code>hist(wdiff,breaks=50)</code> and <code>boxplot(wdiff)</code> yield the following plots.</p>
 <p><img src="2-o4a.png" /> <img src="2-o4b.png" /></p>
