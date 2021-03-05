@@ -58,7 +58,9 @@ nonav: true
 
 ## Exercises
 
-1. There are 20000 cases and 9 variables. `genhlth` is categorical (ordinal), `exerany`, `hlthplan`, `smoke100`, and `gender` are categorical (non-ordinal), `height`, `weight`, and `wtdesire` are numerical (continuous), and finally, `age` is numerical (discrete). 
+1. There are 20000 cases and 9 variables. `genhlth` is categorical (ordinal), `exerany`, `hlthplan`, `smoke100`, and `gender` are categorical (nominal), `height`, `weight`, and `wtdesire` are numerical (continuous), and finally, `age` is numerical (discrete). 
+
+    Note: It's fine as long as students classify things as either "categorical" or "numerical" correctly. Their judgments about "ordinal" vs "nominal" and "discrete" vs "continuous" might differ from mine. 
 
 2. For `height` and `age`, we get the following numerical summaries, and the interquartile ranges are 6 and 26, respectively. 
 	
@@ -99,14 +101,20 @@ nonav: true
 	Here is a box plot of `hlthplan` against `bmi`. It appears that having a health plan is correlated with fewer extreme BMIs. 
 
 	![](2-e5b.png)
+	
+	Note: students might choose different variables here. 
 
 ## On Your Own
 
 1. The scatterplot shows a generally positive trend, but the slope appears to be less than 1. 
 
 	![](2-o1.png)
+	
+	Note: Students might interchange axes, and that's fine. 
 
-2. `wdiff <- cdc$weight - cdc$wtdesire` (but could do it the other way around too, which will affect answers below). 
+2. `wdiff <- cdc$weight - cdc$wtdesire`
+
+    Note: Students could subtract the other way around too. That's fine; it will affect answers below. 
 
 3. `wdiff` is a vector of continuous numerical observations. An entry of 0 means that person is at their desired weight. An positive entry indicates the person wants to lose weight, and a negative entry indicates they want to gain weight.
 
