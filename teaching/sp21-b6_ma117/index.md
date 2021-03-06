@@ -233,37 +233,41 @@ How to read this calendar:
 
 * Topic: Distributions
 * Read: 4.1–3
-* Summary video (link will go here after the video is made!)
 * CC: 4.3, 11, 13, 15, 17
+* Summary video (link will go here after the video is made!)
+* [Worksheet 5](wksht/distributions.pdf)
 * FP: 4.5, 7, 9, 14, 16, 19, 21, 22, 26, 35, 37, 39
 
 ## Week 2, Tuesday 
 
 * Topic: Point estimates and confidence intervals
 * Read: 5.1–2
-* Summary video (link will go here after the video is made!)
 * CC: 5.1, 3, 7, 9 
+* Summary video (link will go here after the video is made!)
+* [Worksheet 6](wksht/point-confidence.pdf)
 * FP: 5.2, 5, 8, 10, 11, 13
 
 ## Week 2, Wednesday 
 
-* Topic: Hypothesis testing
-* Read: 5.3
+* Topic: Hypothesis testing for a proportion
+* Read: 5.3, 6.1
+* CC: 5.15, 17, 19, 6.1, 3
 * Summary video (link will go here after the video is made!)
-* CC: 5.15, 17, 19 
-* FP: 5.16, 21, 23, 24, 26, 27, 28, 32, 37
+* [Worksheet 7](wksht/hypothesis-proportion.pdf)
+* FP: 5.16, 21, 23, 24, 26, 27, 28, 32, 37, 6.2, 4, 5, 9, 10, 11, 12, 14, 15, 16
 
 ## Week 2, Thursday 
 
-* Topic: Inference on proportions
-* Read: 6.1–2
+* Topic: Hypothesis testing for a difference of proportions
+* Read: 6.2
+* CC: 6.17, 19  
 * Summary video (link will go here after the video is made!)
-* CC: 6.1, 3, 17, 19 
-* FP: 6.2, 4, 5, 9, 10, 11, 12, 14, 15, 16, 21, 23, 25, 29
+* No new worksheet; try the FP problems below and catch up on anything you're behind on. 
+* FP: 21, 23, 25, 29
 
 ## Week 2, Friday
 
-* No new reading! Catch up on anything you're behind on.  
+* No new material! Catch up on anything you're behind on.  
 
 ## Week 3, Monday
 
@@ -271,6 +275,7 @@ How to read this calendar:
 * Read: 6.3–4
 * Summary video (link will go here after the video is made!)
 * CC: 6.33, 35, 37 
+* [Worksheet 8](wksht/chisq.pdf)
 * FP: 6.31, 32, 34, 38, 41, 45, 49, 50
 
 ## Week 3, Tuesday
