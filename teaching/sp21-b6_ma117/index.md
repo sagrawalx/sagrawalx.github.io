@@ -273,8 +273,8 @@ How to read this calendar:
 
 * Topic: $\chi^2$ tests
 * Read: 6.3–4
-* Summary video (link will go here after the video is made!)
 * CC: 6.33, 35, 37 
+* Summary video (link will go here after the video is made!)
 * [Worksheet 8](wksht/chisq.pdf)
 * FP: 6.31, 32, 34, 38, 41, 45, 49, 50
 
@@ -282,42 +282,43 @@ How to read this calendar:
 
 * Topic: $t$ distribution
 * Read: 7.1–2
-* Summary video (link will go here after the video is made!)
-* CC: 7.1, 3, 5, 7, 17, 19
+* CC: 7.1, 3, 5, 7, 17, 19  
+* Summary video (link will go here after the video is made!)  
+* [Worksheet 9](wksht/t.pdf) (data set: [gifted.csv](wksht/gifted.csv))
 * FP: 7.2, 4, 6, 9, 11, 15, 21
 
 ## Week 3, Wednesday  
 
 * Topic: Comparing means
 * Read: 7.3, 7.5
-* Summary video (link will go here after the video is made!)
 * CC: 7.23, 35, 39 
+* Summary video (link will go here after the video is made!)
 * FP: 7.25, 27, 29, 31, 37, 41, 45, 47, 49, 51
 
 ## Week 3, Thursday  
 
 * Topic: Linear regression
 * Read: 8.1–3
-* Summary video (link will go here after the video is made!)
 * CC: 8.1, 9, 17, 27 
+* Summary video (link will go here after the video is made!)
 * FP: 8.3, 5, 7, 11, 13, 19, 21, 23, 28, 29
 
 ## Week 3, Friday 
 
 * Topic: Inference for linear regression
 * Read: 8.4
-* Summary video (link will go here after the video is made!)
 * CC: 8.31, 33, 34
+* Summary video (link will go here after the video is made!)
 * FP: 8.37, 38, 39, 42 
 
 ## Week 4, Monday 
 
 * Read: This [*Nature* article](https://www.nature.com/articles/d41586-019-00857-9) and this [*ASA* article](https://doi.org/10.1080/00031305.2016.1154108)
-* No CC
+* No CC or anything else
 
 ## Week 4, Tuesday 
 
-* No new reading!
+* No new material!
 
 ## Week 4, Wednesday 
 
