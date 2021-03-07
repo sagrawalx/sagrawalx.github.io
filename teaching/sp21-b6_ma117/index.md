@@ -293,6 +293,7 @@ How to read this calendar:
 * Read: 7.3, 7.5
 * CC: 7.23, 35, 39 
 * Summary video (link will go here after the video is made!)
+* [Worksheet 10](wksht/comparing-means.pdf) (data sets: [swahili.csv](wksht/swahili.csv), [diamonds.csv](wksht/diamonds.csv))
 * FP: 7.25, 27, 29, 31, 37, 41, 45, 47, 49, 51
 
 ## Week 3, Thursday  
@@ -301,6 +302,7 @@ How to read this calendar:
 * Read: 8.1–3
 * CC: 8.1, 9, 17, 27 
 * Summary video (link will go here after the video is made!)
+* [Worksheet 11](wksht/regression.pdf)
 * FP: 8.3, 5, 7, 11, 13, 19, 21, 23, 28, 29
 
 ## Week 3, Friday 
@@ -309,12 +311,12 @@ How to read this calendar:
 * Read: 8.4
 * CC: 8.31, 33, 34
 * Summary video (link will go here after the video is made!)
+* [Worksheet 12](wksht/review.pdf) (data sets: [diamonds.csv](wksht/diamonds.csv), [vocab.csv](wksht/vocab.csv), [textbooks.csv](wksht/textbooks.csv), [speciesdiversity.csv](wksht/speciesdiversity.csv), [grinnell.csv](wksht/grinnell.csv))
 * FP: 8.37, 38, 39, 42 
 
 ## Week 4, Monday 
 
 * Read: This [*Nature* article](https://www.nature.com/articles/d41586-019-00857-9) and this [*ASA* article](https://doi.org/10.1080/00031305.2016.1154108)
-* No CC or anything else
 
 ## Week 4, Tuesday 
 
