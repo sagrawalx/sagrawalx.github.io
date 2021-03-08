@@ -23,7 +23,7 @@ Zoom links for the following are all on [Canvas](https://canvas.coloradocollege.
 
 * Group sessions: Mon--Fri, 10--10:30am MT. [Random name draws](https://docs.google.com/spreadsheets/d/1rp-psMIfI9a95xqvDpQ1h0lmJooA5epGqAMnX4i3ua0/edit?usp=sharing). 
     - You should show up to the group session if your name is indicated on the spreadsheet linked above.
-    - Notes from the group sessions: [3/2](notes/group3-2.jpg), [3/3](notes/group3-3.jpg), [3/4](notes/group3-4.jpg), [3/5](notes/group3-5.jpg)
+    - Notes from the group sessions: [3/2](notes/group3-2.jpg), [3/3](notes/group3-3.jpg), [3/4](notes/group3-4.jpg), [3/5](notes/group3-5.jpg), [3/8](notes/group3-8.jpg)
 * Problem sessions: Tue, Thu, and Sun, 6--7pm. 
 * Office hours: 
     - Sunny: Mon--Thu, 2--3pm MT (or by request). Notes: [3/2](notes/office3-2.jpg), [3/4](notes/office3-4.jpg)
@@ -71,7 +71,7 @@ You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/off
 <td>
     2.1--3
     <hr/>
-    [Lab 1](https://htmlpreview.github.io/?https://github.com/andrewpbray/oiLabs-base-R/blob/master/intro_to_r/intro_to_r.html), [Autobio](../prompt.pdf)
+    [Lab 1](https://htmlpreview.github.io/?https://github.com/andrewpbray/oiLabs-base-R/blob/master/intro_to_r/intro_to_r.html), [Autobio](autobio.pdf)
 </td>
 <td>
     3.1--3
@@ -172,7 +172,7 @@ How to read this calendar:
 * Things above the line are due at 8am MT on the indicated day. Things below the line are due at 2pm MT on the indicated day.
 * Numbers like "1.1--4" mean you need to read those sections in the textbook, do the associated "comprehension check" problems (see [below](#readings-problems-etc)), and submit a [reading question](https://docs.google.com/forms/d/e/1FAIpQLScWvLhXpdYcYpsA_u4UAvYKpttWnDOWMm7pmlBybaW4isxh-g/viewform) about those sections. 
 * Abbreviations: 
-    - "Autobio" = [Mathematical autobiography](../prompt.pdf) (submit via Gradescope)
+    - "Autobio" = [Mathematical autobiography](autobio.pdf) (submit via Gradescope)
     - "WR#" = {{ wr }} for week # (submit via Google Form)
     - "Proposal," "Outline," and "Project" refer to the [project](project)
     - "Bio" = [Mathematical biography](bio.pdf) (submit via Gradescope)
@@ -234,7 +234,8 @@ How to read this calendar:
 * Topic: Distributions
 * Read: 4.1–3
 * CC: 4.3, 11, 13, 15, 17
-* Summary video (link will go here after the video is made!)
+* Summary video (parts [1](https://canvas.coloradocollege.edu/files/1013165/) and [2](https://canvas.coloradocollege.edu/files/1008233/)) and [notes](notes/distributions.jpg)
+* [Select reading question respones](questions/q3-8.pdf)
 * [Worksheet 5](wksht/distributions.pdf)
 * FP: 4.5, 7, 9, 14, 16, 19, 21, 22, 26, 35, 37, 39
 

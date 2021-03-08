@@ -166,7 +166,9 @@ nonav: true
 	
 	![](3-e2.png)
 
-3. 21 heads, 79 tails
+3. 21 heads, 79 tails. 
+
+    Note: Others might have different answers here, since this is a random simulation. 
 
 4. `sim_basket = sample(outcomes, size = 133, replace = TRUE, prob = c(0.45, 0.55))`
 
@@ -178,7 +180,7 @@ nonav: true
 
 2. If we run the simulation again, the distribution should be similar, but not necessarily identical. Sometimes the longest streak is 4, sometimes it gets as long as 10, but it's never terribly different. 
 
-3. This simulation does not give evidence that Kobe has "hot hands." All of the simulations I ran were either similar to Kobe's distribution, or had longer streaks. 
+3. My simulations do not give evidence that Kobe has "hot hands" --- all of the simulations I ran were either similar to Kobe's distribution, or had even longer streaks! 
 
 # Lab 4
 
