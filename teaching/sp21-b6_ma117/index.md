@@ -23,7 +23,7 @@ Zoom links for the following are all on [Canvas](https://canvas.coloradocollege.
 
 * Group sessions: Mon--Fri, 10--10:30am MT. [Random name draws](https://docs.google.com/spreadsheets/d/1rp-psMIfI9a95xqvDpQ1h0lmJooA5epGqAMnX4i3ua0/edit?usp=sharing). 
     - You should show up to the group session if your name is indicated on the spreadsheet linked above.
-    - Notes from the group sessions: [3/2](notes/group3-2.jpg), [3/3](notes/group3-3.jpg), [3/4](notes/group3-4.jpg), [3/5](notes/group3-5.jpg), [3/8](notes/group3-8.jpg)
+    - Notes from the group sessions: [3/2](notes/group3-2.jpg), [3/3](notes/group3-3.jpg), [3/4](notes/group3-4.jpg), [3/5](notes/group3-5.jpg), [3/8](notes/group3-8.jpg), [3/9](notes/group3-9.jpg)
 * Problem sessions: Tue, Thu, and Sun, 6--7pm. 
 * Office hours: 
     - Sunny: Mon--Thu, 2--3pm MT (or by request). Notes: [3/2](notes/office3-2.jpg), [3/4](notes/office3-4.jpg)
@@ -244,7 +244,8 @@ How to read this calendar:
 * Topic: Point estimates and confidence intervals
 * Read: 5.1–2
 * CC: 5.1, 3, 7, 9 
-* Summary video (link will go here after the video is made!)
+* Summary video (parts [1](https://canvas.coloradocollege.edu/files/1014268/) and [2](https://canvas.coloradocollege.edu/files/1014272/)) and [notes](notes/point-confidence.jpg)
+* [Select reading question responses](questions/q3-9.pdf)
 * [Worksheet 6](wksht/point-confidence.pdf)
 * FP: 5.2, 5, 8, 10, 11, 13
 
