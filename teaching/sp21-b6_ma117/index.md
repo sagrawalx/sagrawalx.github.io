@@ -234,7 +234,7 @@ How to read this calendar:
 * Topic: Distributions
 * Read: 4.1–3
 * CC: 4.3, 11, 13, 15, 17
-* Summary video (parts [1](https://canvas.coloradocollege.edu/files/1013165/) and [2](https://canvas.coloradocollege.edu/files/1008233/)) and [notes](notes/distributions.jpg)
+* Summary video (parts [1](https://canvas.coloradocollege.edu/files/1013165/) and [2](https://canvas.coloradocollege.edu/files/1013221/)) and [notes](notes/distributions.jpg)
 * [Select reading question respones](questions/q3-8.pdf)
 * [Worksheet 5](wksht/distributions.pdf)
 * FP: 4.5, 7, 9, 14, 16, 19, 21, 22, 26, 35, 37, 39
