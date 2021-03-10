@@ -265,7 +265,7 @@ How to read this calendar:
 * CC: 6.17, 19  
 * Summary video (link will go here after the video is made!)
 * No new worksheet; try the FP problems below and catch up on anything you're behind on. 
-* FP: 21, 23, 25, 29
+* FP: 6.21, 23, 25, 29
 
 ## Week 2, Friday
 
