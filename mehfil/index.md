@@ -25,11 +25,22 @@ Here's an [in-progress list of Urdu-Hindi resources](resources) that you might f
 </tr>
 
 <tr>
+<td>3/16</td>
+<td>Malkhān Singh, *Suno Brāhman*</td>
+<td>
+* [Full text](texts#suno-brahman) (Nagari and Urdu)
+* [Translation by Pratik Kanjilal](http://www.littlemag.com/reservation/malkhansingh.html)
+</td>
+</tr>
+
+<tr>
 <td>3/9</td>
-<td>Kishwar Nahīd, *Ham Gunahgār Aurateṇ*</td>
+<td>Kishwar Nāhīd, *Ham Gunahgār Aurateṇ*</td>
 <td>
 * Full text: [Nagari](https://www.rekhta.org/nazms/top-10-nazms-of-kishwar-naheed/ham-gunahgaar-aurten-ye-ham-gunahgaar-aurten-hain-kishwar-naheed-nazms?sort=popularity-desc&lang=hi), [Urdu](https://www.rekhta.org/nazms/top-10-nazms-of-kishwar-naheed/ham-gunahgaar-aurten-ye-ham-gunahgaar-aurten-hain-kishwar-naheed-nazms?sort=popularity-desc&lang=ur), [Roman](https://www.rekhta.org/nazms/top-10-nazms-of-kishwar-naheed/ham-gunahgaar-aurten-ye-ham-gunahgaar-aurten-hain-kishwar-naheed-nazms?sort=popularity-desc)
 * [Translation by Rukhsana Ahmad](https://www.poetryinternational.org/pi/poem/23748/auto/0/0/Kishwar-Naheed/We-Sinful-Women/en/tile)
+* ["We Sinful Women": Transgressing Temporality and Poetic Form](https://transgresslit.wordpress.com/2014/04/17/hum-guneghaar-auratein-transgressing-temporality-and-poetic-form/)
+* [*Aurat Ne Janam Diya Mardoṇ Ko*](https://www.youtube.com/watch?v=jadi-lBEYUU) (song: similar content, very different tone)
 </td>
 </tr>
 
