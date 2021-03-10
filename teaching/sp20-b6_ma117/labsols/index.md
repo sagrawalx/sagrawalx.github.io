@@ -215,7 +215,11 @@ nonav: true
 ## On Your Own
 
 1. B, C, D, A
-2. It probably has to do with the discreteness of the data.
+
+2. It probably has to do with the discreteness of the data? 
+
+    Note: I don't really have a great answer to this question. Just give credit as long as they attempted something. 
+    
 3. The Q-Q plot and the histogram are displayed below. In the Q-Q plot, the data lies above the line. This means that sample quantiles are above theoretical quantiles, which means that at any given point, we've seen *more* data than we would expect if the distribution was normally distributed. This means that the mass of the distribution is further to the left, so the distribution should be right skewed. This is confirmed by the histogram. 
 
 	![](4-o3.png)
