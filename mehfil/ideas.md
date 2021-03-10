@@ -34,16 +34,6 @@ nonav: true
 </td>
 </tr>
 
-
-<tr>
-<td>TBA</td>
-<td>Malkhān Singh, *Suno Brāhman*</td>
-<td>
-* [Full text](texts#suno-brahman) (Nagari and Urdu)
-* [Translation by Pratik Kanjilal](http://www.littlemag.com/reservation/malkhansingh.html)
-</td>
-</tr>
-
 <tr>
 <td>TBA</td>
 <td>Sūrajpāl Chauhān, *Bhīmrāo Kā Dalit Nahīṇ*</td>

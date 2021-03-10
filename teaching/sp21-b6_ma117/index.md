@@ -23,7 +23,7 @@ Zoom links for the following are all on [Canvas](https://canvas.coloradocollege.
 
 * Group sessions: Mon--Fri, 10--10:30am MT. [Random name draws](https://docs.google.com/spreadsheets/d/1rp-psMIfI9a95xqvDpQ1h0lmJooA5epGqAMnX4i3ua0/edit?usp=sharing). 
     - You should show up to the group session if your name is indicated on the spreadsheet linked above.
-    - Notes from the group sessions: [3/2](notes/group3-2.jpg), [3/3](notes/group3-3.jpg), [3/4](notes/group3-4.jpg), [3/5](notes/group3-5.jpg), [3/8](notes/group3-8.jpg), [3/9](notes/group3-9.jpg)
+    - Notes from the group sessions: [3/2](notes/group3-2.jpg), [3/3](notes/group3-3.jpg), [3/4](notes/group3-4.jpg), [3/5](notes/group3-5.jpg), [3/8](notes/group3-8.jpg), [3/9](notes/group3-9.jpg), [3/10](notes/group3-10.jpg)
 * Problem sessions: Tue, Thu, and Sun, 6--7pm. 
 * Office hours: 
     - Sunny: Mon--Thu, 2--3pm MT (or by request). Notes: [3/2](notes/office3-2.jpg), [3/4](notes/office3-4.jpg)
@@ -254,7 +254,8 @@ How to read this calendar:
 * Topic: Hypothesis testing for a proportion
 * Read: 5.3, 6.1
 * CC: 5.15, 17, 19, 6.1, 3
-* Summary video (link will go here after the video is made!)
+* Summary video (parts [1](https://canvas.coloradocollege.edu/files/1015851/) and [2](https://canvas.coloradocollege.edu/files/1015857/)) and [notes](notes/hypothesis-proportion).jpg
+* Select reading question responses forthcoming...
 * [Worksheet 7](wksht/hypothesis-proportion.pdf)
 * FP: 5.16, 21, 23, 24, 26, 27, 28, 32, 37, 6.2, 4, 5, 9, 10, 11, 12, 14, 15, 16
 
@@ -262,7 +263,7 @@ How to read this calendar:
 
 * Topic: Hypothesis testing for a difference of proportions
 * Read: 6.2
-* CC: 6.17, 19  
+* CC: 6.17, 19 
 * Summary video (link will go here after the video is made!)
 * No new worksheet; try the FP problems below and catch up on anything you're behind on. 
 * FP: 6.21, 23, 25, 29
