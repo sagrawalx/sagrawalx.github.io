@@ -26,7 +26,7 @@ Zoom links for the following are all on [Canvas](https://canvas.coloradocollege.
     - Notes from the group sessions: [3/2](notes/group3-2.jpg), [3/3](notes/group3-3.jpg), [3/4](notes/group3-4.jpg), [3/5](notes/group3-5.jpg), [3/8](notes/group3-8.jpg), [3/9](notes/group3-9.jpg), [3/10](notes/group3-10.jpg)
 * Problem sessions: Tue, Thu, and Sun, 6--7pm. 
 * Office hours: 
-    - Sunny: Mon--Thu, 2--3pm MT (or by request). Notes: [3/2](notes/office3-2.jpg), [3/4](notes/office3-4.jpg)
+    - Sunny: Mon--Thu, 2--3pm MT (or by request). Notes: [3/2](notes/office3-2.jpg), [3/4](notes/office3-4.jpg), [3/10](notes/office3-10.jpg)
     - Cinea: Mon--Fri, 9am--5pm MT (email Cinea to  tell her you want to meet)
 
 You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/offices/qrc/blocktutorschedule/).
@@ -255,7 +255,7 @@ How to read this calendar:
 * Read: 5.3, 6.1
 * CC: 5.15, 17, 19, 6.1, 3
 * Summary video (parts [1](https://canvas.coloradocollege.edu/files/1015851/) and [2](https://canvas.coloradocollege.edu/files/1015857/)) and [notes](notes/hypothesis-proportion).jpg
-* Select reading question responses forthcoming...
+* [Select reading question responses](questions/q3-10.pdf)
 * [Worksheet 7](wksht/hypothesis-proportion.pdf)
 * FP: 5.16, 21, 23, 24, 26, 27, 28, 32, 37, 6.2, 4, 5, 9, 10, 11, 12, 14, 15, 16
 
