@@ -98,12 +98,12 @@ You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/off
     [Proposal](project)
 </td>
 <td>
-    5.3
+    5.3, 6.1
     <hr/>
     [Lab 4](https://htmlpreview.github.io/?https://github.com/andrewpbray/oiLabs-base-R/blob/master/normal_distribution/normal_distribution.html)
 </td>
 <td>
-    6.1--2
+    6.2
     <hr/>
     &nbsp;
 </td>
