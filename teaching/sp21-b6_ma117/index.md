@@ -254,7 +254,7 @@ How to read this calendar:
 * Topic: Hypothesis testing for a proportion
 * Read: 5.3, 6.1
 * CC: 5.15, 17, 19, 6.1, 3
-* Summary video (parts [1](https://canvas.coloradocollege.edu/files/1015851/) and [2](https://canvas.coloradocollege.edu/files/1015857/)) and [notes](notes/hypothesis-proportion).jpg
+* Summary video (parts [1](https://canvas.coloradocollege.edu/files/1015851/) and [2](https://canvas.coloradocollege.edu/files/1015857/)) and [notes](notes/hypothesis-proportion.jpg)
 * [Select reading question responses](questions/q3-10.pdf)
 * [Worksheet 7](wksht/hypothesis-proportion.pdf)
 * FP: 5.16, 21, 23, 24, 26, 27, 28, 32, 37, 6.2, 4, 5, 9, 10, 11, 12, 14, 15, 16
