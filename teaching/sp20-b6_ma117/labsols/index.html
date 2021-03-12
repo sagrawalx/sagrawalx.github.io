@@ -155,7 +155,7 @@ Spring 2020, Block 6 — MA117 —
 <li><p>The Q-Q plot of the simulated data looks an awful lot like the Q-Q plot of the real data.</p>
 <p><img src="4-e3.png" /></p></li>
 <li><p>The plots do provide evidence that female heights are nearly normal.</p></li>
-<li><p>Female weights seem less normally distributed.</p>
+<li><p>Female weights seem less normally distributed than heights.</p>
 <p><img src="4-e5.png" /></p></li>
 <li><p>What is the probability that female heights are less than 178? The normal distribution says 97.8%, the actual data says 98.1%.</p>
 <p>What is the probability that female weights are less than 61? The normal distribution says 51.7%, the actual data says 59.2%.</p>
@@ -213,7 +213,8 @@ Spring 2020, Block 6 — MA117 —
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> sample_mean <span class="ot">=</span> <span class="fu">c</span>(sample_means50, sample_means150)</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> sample_size <span class="ot">=</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">&quot;fifty&quot;</span>,<span class="dv">5000</span>), <span class="fu">rep</span>(<span class="st">&quot;one-fifty&quot;</span>,<span class="dv">5000</span>))</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> frame <span class="ot">=</span> <span class="fu">data.frame</span>(sample_mean, sample_size)</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ggplot</span>(frame, <span class="fu">aes</span>(<span class="at">x=</span>sample_mean, <span class="at">color=</span>sample_size)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">fill=</span><span class="st">&quot;white&quot;</span>, <span class="at">alpha=</span><span class="fl">0.1</span>, <span class="at">position=</span><span class="st">&quot;identity&quot;</span>)</span></code></pre></div></li>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ggplot</span>(frame, <span class="fu">aes</span>(<span class="at">x=</span>sample_mean, <span class="at">color=</span>sample_size)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">fill=</span><span class="st">&quot;white&quot;</span>, <span class="at">alpha=</span><span class="fl">0.1</span>, <span class="at">position=</span><span class="st">&quot;identity&quot;</span>)</span></code></pre></div>
+<p>Note: I apparently switched to using <code>ggplot</code> at this point when writing up solutions, just for fun. The students don’t have to use <code>ggplot</code>.</p></li>
 </ol>
 <h1 id="lab-5b">Lab 5B</h1>
 <h2 id="exercises-5">Exercises</h2>
