@@ -202,7 +202,7 @@ nonav: true
 
 4. The plots do provide evidence that female heights are nearly normal. 
 
-5.  Female weights seem less normally distributed. 
+5.  Female weights seem less normally distributed than heights. 
 
 	![](4-e5.png)
 
@@ -291,6 +291,8 @@ nonav: true
 	> frame = data.frame(sample_mean, sample_size)
 	> ggplot(frame, aes(x=sample_mean, color=sample_size)) + geom_histogram(fill="white", alpha=0.1, position="identity")
 	~~~
+	
+	Note: I apparently switched to using `ggplot` at this point when writing up solutions, just for fun. The students don't have to use `ggplot`. 
 
 # Lab 5B
 
