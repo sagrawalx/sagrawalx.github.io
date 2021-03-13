@@ -9,11 +9,13 @@ permalink: mehfil/
 
 # Overview
 
-We're an *adabī aḍḍā* of sorts --- a gathering* of people with an interest in Hindi-Urdu[^name] linguistics, literature, music, film, etc. Everyone interested in these sorts of things is welcome to participate: we span the spectrum from native speakers to learners. We also sometimes discuss works in other Southasian languages. If you'd like to be on the mailing list, send me an email at  <span class="email" data-localpart="sagrawal" data-domain="coloradocollege.edu"></span> to let me know! 
+We're an *adabī aḍḍā* of sorts --- a gathering* of people interested in Hindi-Urdu[^name] linguistics, literature, music, film, etc. Everyone is welcome to participate: we span the spectrum from native speakers to learners. We also sometimes discuss works in other Southasian languages. If you'd like to be on the mailing list, send me an email at  <span class="email" data-localpart="sagrawal" data-domain="coloradocollege.edu"></span> to let me know! 
 
 Here's an [in-progress list of Urdu-Hindi resources](resources) that you might find useful. Resources specific to particular topics are listed in the calendar below.
 
-*: In light of Covid, we "gather" virtually for the time being. 
+*: In light of Covid, we "gather" virtually for now. 
+
+[^name]: The name of this language is a conundrum which vexes me greatly. On this page, I alternate between *Hindi-Urdu* and *Urdu-Hindi* as the name of the language (other names for the same language include *Hindustani*, *Khari Boli*, etc). This language is traditionally written in two scripts. I have used the name *Nagari* to refer one script that is used to write this language (another name for this script is *Devanagari*), and *Urdu* to refer to the other script (other names for this script include *Nastaliq*, *Perso-Arabic*, etc). I may also use the word *Hindi* as shorthand for "the Hindi-Urdu language written in the Nagari script" and *Urdu* as a shorthand for "the Urdu-Hindi language written in the Urdu script." 
 
 # Calendar {#calendar}
 
@@ -26,10 +28,10 @@ Here's an [in-progress list of Urdu-Hindi resources](resources) that you might f
 
 <tr>
 <td>3/16</td>
-<td>Malkhān Singh, *Suno Brāhman*</td>
+<td>Anitā Bhārtī, *Krāntikāri Jaibhīm*</td>
 <td>
-* [Full text](texts#suno-brahman) (Nagari and Urdu)
-* [Translation by Pratik Kanjilal](http://www.littlemag.com/reservation/malkhansingh.html)
+* [Full text](texts#krantikaarii-jaibhiim) (Nagari and Urdu) 
+* [Wikipedia on the Mahāṛ Satyāgrah](https://en.wikipedia.org/wiki/Mahad_Satyagraha)
 </td>
 </tr>
 
@@ -200,8 +202,6 @@ Rabindranath Tagore, "Where the mind is without fear"
 </td>
 </tr>
 </tr>
-
-[^name]: The name of this language is a conundrum which vexes me greatly. On this page, I alternate between *Hindi-Urdu* and *Urdu-Hindi* as the name of the language (other names for the same language include *Hindustani*, *Khari Boli*, etc). This language is traditionally written in two scripts. I have used the name *Nagari* to refer one script that is used to write this language (another name for this script is *Devanagari*), and *Urdu* to refer to the other script (other names for this script include *Nastaliq*, *Perso-Arabic*, etc). I may also use the word *Hindi* as shorthand for "the Hindi-Urdu language written in the Nagari script" and *Urdu* as a shorthand for "the Urdu-Hindi language written in the Urdu script." 
 
 
 </table>

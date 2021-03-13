@@ -226,10 +226,10 @@ A Devanagari transliteration of Anwar Jalalpuri's Urdu rendition of Rabindranath
 [^jannat]: paradise
 
 
-<h1 id="suno-brahman"><div style="display: flex;"><div style="flex: 1;">सुनो ब्राह्मण</div><div dir="rtl" style="flex: 1; text-align: right;">سُنو براہمن</div></h2>
+<h1 id="suno-brahman"><div style="display: flex;"><div style="flex: 1;">सुनो ब्राह्मण</div><div dir="rtl" style="flex: 1; text-align: right;">سُنو براہمن</div></h1>
 
 <div class="introduction">
-A poem by the Dalit poet Malkhan Singh. The original can be found on [Hindwi](https://www.hindwi.org/kavita/suno-braahman-malkhan-singh-kavita), and an English translation by Pratik Kanjilal is available [here](http://www.littlemag.com/reservation/malkhansingh.html). 
+A poem by Malkhān Singh. The original can be found on [Hindwī](https://www.hindwi.org/kavita/suno-braahman-malkhan-singh-kavita), and an English translation by Pratīk Kanjīlāl is available [here](http://www.littlemag.com/reservation/malkhansingh.html). 
 </div>
 
 <div style="display: flex;">
@@ -477,3 +477,157 @@ A poem by the Dalit poet Malkhan Singh. The original can be found on [Hindwi](ht
 </div>
 
 
+
+<h1 id="krantikaarii-jaibhiim"><div style="display: flex;"><div style="flex: 1;">क्रांतिकारी जयभीम</div><div dir="rtl" style="flex: 1; text-align: right;">کرانتی کاری جئے بھیم</div></h1>
+
+<div class="introduction">
+A poem by Anitā Bhārtī. The original can be found on [Kavitākosh](http://kavitakosh.org/kk/%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%A8%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%80_%E0%A4%9C%E0%A4%AF%E0%A4%AD%E0%A5%80%E0%A4%AE_/_%E0%A4%85%E0%A4%A8%E0%A4%BF%E0%A4%A4%E0%A4%BE_%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A5%80#). 
+There are a few *minor* changes here from Kavitākosh's transcription. For example, Kavitākosh's transcription of the poem contains a reference to the year 1925, but the poem makes significantly more sense if this were 1927 instead (when Ambeḍkar launched the [Mahāṛ Satyāgrah](https://en.wikipedia.org/wiki/Mahad_Satyagraha) and many of the incidents described in the poem happened), so I've changed the date below. If I had to guess, I suspect that someone mistook ७ for ५ when transcribing. I will try to get my hands on a paper copy of the poem at some point to confirm what the original says.  
+</div>
+
+<div style="display: flex;">
+<div style="flex: 1;">
+प्रिय मित्र,  
+क्रांतिकारी[^kraantikaarii] जयभीम[^jaibhiim]!
+
+[^kraantikaarii]: revolutionary
+[^jaibhiim]: "[Victory to Bhim](https://en.wikipedia.org/wiki/Jai_Bhim)!"
+
+जब तुम उदास होते हो  
+तो सारी सृष्टि[^srishTi] में उदासी भर जाती है  
+थके आंदोलन-सी आँखें  
+नारे लगाने की विवशता[^vivashtaa]  
+ज़ोर-ज़ोर से गीत गाने की रिवायत[^riwaayat]    
+नहीं तोड़ पाती तुम्हारी खामोशी  
+
+[^riwaayat]: tradition
+[^vivashtaa]: powerlessness, helplessness
+[^srishTi]: creation
+
+मुझे याद है —  
+1927 का वह दिन  
+जब तुम्हारे चेहरे पर  
+अनोखी रौनक थी  
+संघर्ष से चमकता तुम्हारा  
+वो दिव्य[^divya] रूप  
+
+[^divya]: divine, wonderful  
+
+सोने-चांदी से मृदभांड[^mritbhaanD]      
+उतर पड़े थे तालाब में यकायक  
+आसमान ताली बजा रहा था  
+सितारे फूल बरसा रहे थे  
+यूँ तो मटके पकते हैं आग में  
+पर उस दिन पके थे चवदार तालाब में  
+
+[^mritbhaanD]: pot
+
+आई थी एक क्रांति  
+तुम्हारी बहनें उतार रही थीं  
+हाथों, पैरों और गले से  
+गुलामी के निशान  
+
+और तुम दहाड़ रहे थे  
+जैसे कोई बरसों से सोया शेर  
+क्रूर[^kruur] शिकारी को देखकर दहाड़े  
+
+[^kruur]: cruel
+
+मुझे याद है — आज भी वह दिन  
+जब चारों तरफ़ जोश था  
+और उधर  
+एक जानवराना क्रोध[^krodh] था 
+
+[^krodh]: anger 
+
+तुम बढ़ रहे थे क्रांतिधर्मा[^krantidharmaa]  
+सैकड़ों क्रांतिधर्माओं के साथ  
+उस ईश्वर के द्वार[^dvaar]  
+जिसे कहा जाता है सर्वव्यापी[^sarvavyaapii]  
+पर था एक मंदिर में छुपा  
+उन्होंने रोका, बरसाए डंडे  
+पर तुम कब रुके?  
+तुम आग उगल रहे थे   
+उस आग में जल रहे थे  
+पुरातनपंथी[^puraatanpanthii] क्रूर ईश्वरीकृत[^iishwariikrit] कानून  
+
+[^krantidharmaa]: one whose [*dharma*](https://en.wikipedia.org/wiki/Dharma) is revolution  
+[^dvaar]: door 
+[^sarvavyaapii]: ubiquitous, omnipresent
+[^puraatanpanthii]: reactionary 
+[^iishwariikrit]: god-made 
+
+हम गढ़ेंगे अपना इतिहास[^itihaas]  
+की थी उस दिन घोषणा[^ghoshnaa] तुमने  
+दौड़ गई थी शिराओं[^shiraa] में बिजली  
+उस दिन    
+जो अभी तक दौड़ रही है  
+हमारी नसों में, हमारे दिमाग में  
+और हमारे विचारों में  
+
+[^itihaas]: history
+[^ghoshnaa]: declaration
+[^shiraa]: vein  
+
+</div>
+
+<div dir="rtl" style="flex: 1; text-align: right;">
+پرِیہ مِتر،  
+کرانتی کاری[^kraantikaarii] جئے بھیم[^jaibhiim]!  
+
+جب تُم اُداس ہوتے ہو  
+تو ساری سرِشٹی[^srishTi] میں اُداسی بھر جاتی ہے  
+تھکے آندولن سی آنکھیں  
+نارے لگانے کی وِوَشتا[^vivashtaa]  
+زور زور سے گیت گانے کی رِوایت[^riwaayat]  
+نہیں توڑ پاتی تمھاری خاموشی  
+
+
+مُجھے یاد ہے —  
+1927 کا وہ دن  
+جب تُمھارے چِہرے پر  
+انوکھی رَونق تھی  
+سنگھرش سے چمکتا تُمھارا  
+وہ دِویہ[^divya] رُوپ
+
+سونے چاندی سے مرِتبھانڈ[^mritbhaanD]  
+اُتر پڑے تھے تالاب میں یکایک  
+آسمان تالی بجا رہا تھا  
+سِتارے پھُول برسا رہے تھے  
+یوں تو مٹکے پکتے ہیں آگ میں  
+پر اُس دِن پکے تھے چودار تالاب میں   
+
+آئی تھی ایک کرانتی  
+تُمھاری بہنیں اُتار رہی تھیں  
+ہاتھوں، پَیروں، اور گلے سے  
+غُلامی کے نِشان  
+
+اور تُم دہاڑ رہے تھے  
+جیسے کوئی برسوں سے سویا شیر  
+کرور[^kruur] شِکاری کو دیکھ کر دہاڑے  
+
+مُجھے یاد ہے— آج بھی وہ دن  
+جب چاروں طرف جوش تھا  
+اور اُدھر  
+ایک جانورانا کرودھ[^krodh] تھا  
+
+تُم بڑھ رہے تھے کرانتی دھرما[^krantidharmaa]  
+سیکڑوں کرانتی دھرماؤں کے ساتھ  
+اُس اِیشور کے دْوار[^dvaar]    
+جِسے کہا جاتا ہے سروہ ویاپی[^sarvavyaapii]  
+پر تھا ایک مندر میں چھُپا  
+اُنھوں نے روکا، برسائے ڈنڈے  
+پر تُم کب رُکے؟  
+تُم آگ اُگل رہے تھے  
+اُس آگ میں جل رہے تھے  
+پُراتن پنتھی[^puraatanpanthii] کرور اِیشورِیکرِت[^iishwariikrit] قانون  
+
+ہم گڑھیں گے اپنا اِتِہاس[^itihaas]  
+کی تھی اُس دِن گھوشنا[^ghoshnaa] تُم نے  
+دَوڑ گئی تھی شِراؤں[^shiraa] میں بِجلی  
+اُس دن  
+جو ابھی تک دَوڑ رہا ہے  
+ہماری نسوں میں، ہمارے دِماغ میں  
+اور ہمارے وِچاروں میں  
+</div>
+</div>

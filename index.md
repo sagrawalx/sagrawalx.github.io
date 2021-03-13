@@ -12,7 +12,7 @@ Hi there! My name is Shishir; I also go by Sunny. I am a human being. You can ge
 
 I am employed as a mathematician at [Colorado College](https://www.coloradocollege.edu/). I study [algebraic geometry](math/). 
 
-Other things besides math that I like doing include: doodling, reading, cooking, hiking, learning about language(s), etc. I also organize a [Hindi-Urdu "reading club" of sorts](mehfil) at CC. 
+Other things besides math that I like doing include: doodling, reading, cooking, hiking, learning about language(s), etc. I also organize a [Hindi-Urdu "reading club" of sorts](mehfil). 
 
 # About the website
 

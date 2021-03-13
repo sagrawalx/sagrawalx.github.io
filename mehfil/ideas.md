@@ -44,6 +44,15 @@ nonav: true
 
 <tr>
 <td>TBA</td>
+<td>Malkhān Singh, *Suno Brāhman*</td>
+<td>
+* [Full text](texts#suno-brahman) (Nagari and Urdu)
+* [Translation by Pratik Kanjilal](http://www.littlemag.com/reservation/malkhansingh.html)
+</td>
+</tr>
+
+<tr>
+<td>TBA</td>
 <td>Rokeya Sakhawat Hossain, *Sultānā Kā Sapnā*</td>
 <td>
 * Full text: [Nagari](husain-sultana.pdf) (translation by Vidyanidhi)
