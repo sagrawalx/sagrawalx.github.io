@@ -1,4 +1,4 @@
-I"�<h1 id="lab-1">Lab 1</h1>
+I"��<h1 id="lab-1">Lab 1</h1>
 <h2 id="exercises">Exercises</h2>
 <ol type="1">
 <li><p><code>arbuthnot$girls</code></p></li>
@@ -138,8 +138,10 @@
 <ol type="1">
 <li><p>The distribution is slightly right skewed. The mean, at 1500, is slightly higher than the median, at 1442.</p>
 <p><img src="5a-e1.png" /></p></li>
-<li><p><code>samp1</code> has a less bell-curved-looking distribution, though it is still right skewed. The mean is 1486.42.</p></li>
-<li><p><code>samp2</code> had a mean of 1418.44, which was less than the mean of <code>samp1</code>. If we took a larger sample, the sample mean should be closer to the true mean.</p></li>
+<li><p><code>samp1</code> has a less bell-curved-looking distribution, though it is still right skewed. The mean is 1486.42.</p>
+<p>Note: There is randomness involved here.</p></li>
+<li><p><code>samp2</code> had a mean of 1418.44, which was less than the mean of <code>samp1</code>. If we took a larger sample, the sample mean should be closer to the true mean.</p>
+<p>Note: There is randomness involved here.</p></li>
 <li><p>There are 5000 elements. The distribution is roughly normal, centered at 1500. If we took 50000 means, the distribution should still look roughly normal centered at 1500.</p></li>
 <li><p>There are 100 elements. Each is a mean of a sample of 50 areas.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> sample_means_small</span>
@@ -165,11 +167,14 @@
 </ol>
 <h2 id="on-your-own-4">On Your Own</h2>
 <ol type="1">
-<li><p>Running <code>mean(sample(price, 50))</code> yields 169726.3.</p></li>
+<li><p>Running <code>mean(sample(price, 50))</code> yields 169726.3.</p>
+<p>Note: There is randomness involved here.</p></li>
 <li><p>Here is the distribution. It is normal, with mean 181027. The true mean is 180796.1.</p>
-<p><img src="5a-o2.png" /></p></li>
+<p><img src="5a-o2.png" /></p>
+<p>Note: There is randomness involved here, so answers might differ slightly (but probably not a lot).</p></li>
 <li><p>Here is the distribution for <code>sample_means150</code>. It is also normal, with mean 180649. This is closer to the true mean.</p>
-<p><img src="5a-o3.png" /></p></li>
+<p><img src="5a-o3.png" /></p>
+<p>Note: There is randomness involved here, so answers might differ slightly (but probably not a lot).</p></li>
 <li><p><code>sample_means150</code> has a narrower distribution. If we want to be more confident about our estimate, we should use a distribution with a narrower distribution (ie, we should take larger sample sizes).</p>
 <p><img src="5a-o4.png" /></p>
 <p>To generate this plot, I ran the following.</p>
@@ -182,21 +187,27 @@
 <h1 id="lab-5b">Lab 5B</h1>
 <h2 id="exercises-5">Exercises</h2>
 <ol type="1">
-<li><p>The distribution is right skewed. If ``typical’’ size means mean, then the mean is 1445.53, though perhaps the median is a better estimate since the data is skewed. The median is 1407.</p>
-<p><img src="5b-e1.png" /></p></li>
+<li><p>The distribution is right skewed. If “typical” size means mean, then the mean is 1445.53, though perhaps the median is a better estimate since the data is skewed. The median is 1407.</p>
+<p><img src="5b-e1.png" /></p>
+<p>Note: It’s fine if they interpret “typical” to mean either mean or median.</p></li>
 <li><p>It should be similar, but not identical. Different people will have different samples of 60.</p></li>
-<li><p>The observations need to be independent and the sample size needs to be at least 30 (cf. section 7.1).</p></li>
+<li><p>The observations need to be independent and the sample size needs to be at least 30 (cf. section 7.1).</p>
+<p>Note: Students haven’t read section 7.1 yet, so just give full credit on this problem even if their answer isn’t correct.</p></li>
 <li><p>“95% confidence interval” means that, 95% of the time, this interval will contain the true mean.</p></li>
-<li><p>Yes, my confidence interval does contain the true mean.</p></li>
-<li><p>One would expect that 95% of confidence intervals constructed in this way will contain the true mean.</p></li>
+<li><p>Yes, my confidence interval does contain the true mean.</p>
+<p>Note: The question also has a part “if you are working on this lab in a classroom…” The students aren’t working on this lab in a classroom, so can ignore this part.</p></li>
+<li><p>One would expect that 95% of confidence intervals constructed in this way will contain the true mean.</p>
+<p>Note: The question also has a part “if you are working on this lab in a classroom…” The students aren’t working on this lab in a classroom, so can ignore this part.</p></li>
 </ol>
 <h2 id="on-your-own-5">On Your Own</h2>
 <ol type="1">
-<li><p>47/50 contain the true mean, which is about 94%.</p>
+<li><p>47/50 contain the true mean, which is about 94%. This is approximately equal to the confidence level, but not quite. This makes sense because we’d only expect 95% of confidence intervals to contain the true mean in the limit (eg, if we took 50000000 samples instead of just 50).</p>
 <p><img src="5b-o1.png" /></p></li>
-<li><p>The critical value for 50% confidence interval is calculated by <code>abs(qnorm(0.25))</code>, which yields 0.674. (Note: <code>qnorm(0.25)</code> tells me the value below which 25% of the data lies under a standard normal distribution.)</p></li>
+<li><p>The critical value for 50% confidence interval is calculated by <code>abs(qnorm(0.25))</code>, which yields 0.674. (Note: <code>qnorm(0.25)</code> tells me the value below which 25% of the data lies under a standard normal distribution.)</p>
+<p>Note: Students might choose different confidence levels here, so their computation of the critical value will also be different.</p></li>
 <li><p>Constructing 50% confidence intervals (which are much narrower than 95% confidence intervals), 22 of them do not contain the true mean. Thus 27/50 = 54% of them do, which is pretty close.</p>
-<p><img src="5b-o3.png" /></p></li>
+<p><img src="5b-o3.png" /></p>
+<p>Note: Again, students might have chosen a different confidence level in question 2 above, so their answer here might be different.</p></li>
 </ol>
 <h1 id="lab-6">Lab 6</h1>
 <h2 id="exercises-6">Exercises</h2>

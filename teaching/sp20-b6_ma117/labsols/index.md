@@ -236,7 +236,11 @@ nonav: true
 
 2. `samp1` has a less bell-curved-looking distribution, though it is still right skewed. The mean is 1486.42. 
 
+    Note: There is randomness involved here. 
+
 3. `samp2` had a mean of 1418.44, which was less than the mean of `samp1`. If we took a larger sample, the sample mean should be closer to the true mean. 
+    
+    Note: There is randomness involved here. 
 
 4. There are 5000 elements. The distribution is roughly normal, centered at 1500. If we took 50000 means, the distribution should still look roughly normal centered at 1500. 
 
@@ -271,13 +275,19 @@ nonav: true
 
 1. Running `mean(sample(price, 50))` yields 169726.3. 
 
+    Note: There is randomness involved here. 
+
 2. Here is the distribution. It is normal, with mean 181027. The true mean is 180796.1. 
 
 	![](5a-o2.png)
+	
+	Note: There is randomness involved here, so answers might differ slightly (but probably not a lot). 
 
 3. Here is the distribution for `sample_means150`. It is also normal, with mean 180649. This is closer to the true mean. 
 
 	![](5a-o3.png)
+	
+	Note: There is randomness involved here, so answers might differ slightly (but probably not a lot). 
 
 4. `sample_means150` has a narrower distribution. If we want to be more confident about our estimate, we should use a distribution with a narrower distribution (ie, we should take larger sample sizes). 
 
@@ -298,31 +308,43 @@ nonav: true
 
 ## Exercises
 
-1. The distribution is right skewed. If ``typical'' size means mean, then the mean is 1445.53, though perhaps the median is a better estimate since the data is skewed. The median is 1407. 
+1. The distribution is right skewed. If "typical" size means mean, then the mean is 1445.53, though perhaps the median is a better estimate since the data is skewed. The median is 1407. 
 
 	![](5b-e1.png)
+	
+	Note: It's fine if they interpret "typical" to mean either mean or median. 
 
 2. It should be similar, but not identical. Different people will have different samples of 60. 
 
 3. The observations need to be independent and the sample size needs to be at least 30 (cf. section 7.1). 
 
+    Note: Students haven't read section 7.1 yet, so just give full credit on this problem even if their answer isn't correct. 
+
 4. "95% confidence interval" means that, 95% of the time, this interval will contain the true mean. 
 
 5. Yes, my confidence interval does contain the true mean. 
 
+    Note: The question also has a part "if you are working on this lab in a classroom..." The students aren't working on this lab in a classroom, so can ignore this part. 
+
 6. One would expect that 95% of confidence intervals constructed in this way will contain the true mean. 
+
+    Note: The question also has a part "if you are working on this lab in a classroom..." The students aren't working on this lab in a classroom, so can ignore this part. 
 
 ## On Your Own
 
-1. 47/50 contain the true mean, which is about 94%. 
+1. 47/50 contain the true mean, which is about 94%. This is approximately equal to the confidence level, but not quite. This makes sense because we'd only expect 95% of confidence intervals to contain the true mean in the limit (eg, if we took 50000000 samples instead of just 50). 
 
 	![](5b-o1.png)
 
 2. The critical value for 50% confidence interval is calculated by `abs(qnorm(0.25))`, which yields 0.674. (Note: `qnorm(0.25)` tells me the value below which 25% of the data lies under a standard normal distribution.)
 
+    Note: Students might choose different confidence levels here, so their computation of the critical value will also be different. 
+
 3. Constructing 50% confidence intervals (which are much narrower than 95% confidence intervals), 22 of them do not contain the true mean. Thus 27/50 = 54% of them do, which is pretty close. 
 
 	![](5b-o3.png)
+	
+	Note: Again, students might have chosen a different confidence level in question 2 above, so their answer here might be different. 
 
 # Lab 6
 
