@@ -277,7 +277,7 @@ How to read this calendar:
 * Topic: $\chi^2$ tests
 * Read: 6.3–4
 * CC: 6.33, 35, 37 
-* Summary video (parts [1](https://canvas.coloradocollege.edu/files/1021766/), [2](), and [3](https://canvas.coloradocollege.edu/files/1021771/)) and [notes](notes/chisq.jpg) -- part 2 will be uploaded soon... 
+* Summary video (parts [1](https://canvas.coloradocollege.edu/files/1021766/), [2](https://canvas.coloradocollege.edu/files/1021968/), and [3](https://canvas.coloradocollege.edu/files/1021771/)) and [notes](notes/chisq.jpg)
 * [Select reading question responses](questions/q3-15.pdf)
 * [Worksheet 8](wksht/chisq.pdf)
 * FP: 6.31, 32, 34, 38, 41, 45, 49, 50
