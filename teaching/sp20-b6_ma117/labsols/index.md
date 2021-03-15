@@ -352,23 +352,35 @@ nonav: true
 
 1. Sample statistics (they certainly didn't talk to everyone in the world!). 
 
-2. The study needs to have been a simple random sample. It's fairly unlikely that this is the case. A large portion of the global population is not easy to communicate with (living remotely, lack of access to communications technology, etc). 
+2. The study needs to have been a simple random sample. It's fairly unlikely that this is the case on the nose. A large portion of the global population is not easy to communicate with (living in remote locations, lack of access to communications technology, etc), but it seems that the study did try to minimize bias, so we can probably assume that the sample was "simple random" enough. 
+
+    Note: Exact answers might differ from the above. This might be one where most (reasonable?) responses get full credit. 
 
 3. Each row in Table 6 corresponds to a country. Each row in `atheist` corresponds to a person. 
 
 4. Running `table(us12$response)` shows that 50 out of 1002 US respondents reported being an atheist. 50/1002 = 0.0499002, which is basically 5% up to minor rounding. 
 
-5. We need the sample to be independent: as noted earlier, this is a bit unlikely. We also need the sample size to be large enough that the success-failure condition is satisfied. The success-failure condition requires checking that $1002 \cdot 0.05$ and $1002 \cdot 0.95$ are both bigger than 10, which is true. 
+5. We need the sample to be independent: as noted earlier in question 2, this is a bit unlikely, but maybe it's close enough. We also need the sample size to be large enough that the success-failure condition is satisfied. The success-failure condition requires checking that $1002 \cdot 0.05$ and $1002 \cdot 0.95$ are both bigger than 10, which is true. 
 
 6. R outputs a standard error of 0.007, so the margin of error is about 0.014. The 95% confidence interval is (0.0364 , 0.0634).
 
 7. In India, 33 out of 1092 respondents reported being atheist, which is about 3%. The success-failure condition is satisfied (because both the atheist and non-atheist numbers are larger than 10), but it's likely that the sample isn't that great. The 95% confidence interval is (0.0201 , 0.0404), and the margin of error is about 0.0102. 
 
 	In Japan, 372 out of 1212 respondents reported being atheist. Same comments about applicability of confidence interval methods. The 95% confidence interval is (0.281 , 0.3329), which has margin of error about 0.0259. 
+	
+	Note: Students might choose different countries here. 
 
 8. The graph is shaped like the top half of an ellipse. 
 
+    ![](6-e8.png)
+    
+    Note: Students might say something like "semicircle" or "parabolic" or something, and that's okay too. 
+
 9. The distribution is roughly normal, with mean at 0.09969. 
+
+    ![](6-e9.png)
+    
+    Note: Randomness is involved here, so students' means might differ slightly. 
 
 10. The plots are displayed below. Increasing $n$ seems to make the plot narrower. Changing $p$ seems to move the center of the plot. All four are roughly normal, except for the very last one which is a little cut off towards the bottom, making it right skewed. 
 
@@ -384,7 +396,7 @@ nonav: true
 
 2. We'd expect to detect a change in 5% of the countries in which there has been no change. 
 
-3. The point here is just to look at the inequality $$2 \sqrt{\frac{p(1-p)}{n}} \leq 0.01$$ and solve it for $n$. Simplifying this gives $n \geq 40000p(1-p)$. The largest possible value of $p(1-p)$ happens when $p = 0.5$. When $p = 0.5$, we have $40000p(1-p) = 10000$. So we should sample at least 10000 people. 
+3. The point here is to look at the inequality $$2 \sqrt{\frac{p(1-p)}{n}} \leq 0.01$$ and solve it for $n$. Simplifying this gives $n \geq 40000p(1-p)$. The largest possible value of $p(1-p)$ happens when $p = 0.5$. When $p = 0.5$, we have $40000p(1-p) = 10000$. So we should sample at least 10000 people. 
 
 # Lab 7
 
