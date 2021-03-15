@@ -23,7 +23,7 @@ Zoom links for the following are all on [Canvas](https://canvas.coloradocollege.
 
 * Group sessions: Mon--Fri, 10--10:30am MT. [Random name draws](https://docs.google.com/spreadsheets/d/1rp-psMIfI9a95xqvDpQ1h0lmJooA5epGqAMnX4i3ua0/edit?usp=sharing). 
     - You should show up to the group session if your name is indicated on the spreadsheet linked above.
-    - Notes from the group sessions: [3/2](notes/group3-2.jpg), [3/3](notes/group3-3.jpg), [3/4](notes/group3-4.jpg), [3/5](notes/group3-5.jpg), [3/8](notes/group3-8.jpg), [3/9](notes/group3-9.jpg), [3/10](notes/group3-10.jpg), [3/11](notes/group3-11.jpg), [3/12](notes/group3-12.jpg)
+    - Notes from the group sessions: [3/2](notes/group3-2.jpg), [3/3](notes/group3-3.jpg), [3/4](notes/group3-4.jpg), [3/5](notes/group3-5.jpg), [3/8](notes/group3-8.jpg), [3/9](notes/group3-9.jpg), [3/10](notes/group3-10.jpg), [3/11](notes/group3-11.jpg), [3/12](notes/group3-12.jpg), [3/15](notes/group3-15.jpg)
 * Problem sessions: Tue, Thu, and Sun, 6--7pm. 
 * Office hours: 
     - Sunny: Mon--Thu, 2--3pm MT (or by request). Notes: [3/2](notes/office3-2.jpg), [3/4](notes/office3-4.jpg), [3/10](notes/office3-10.jpg), [3/11](notes/office3-11.jpg)
@@ -277,7 +277,8 @@ How to read this calendar:
 * Topic: $\chi^2$ tests
 * Read: 6.3–4
 * CC: 6.33, 35, 37 
-* Summary video (link will go here after the video is made!)
+* Summary video (parts [1](https://canvas.coloradocollege.edu/files/1021766/), [2](), and [3](https://canvas.coloradocollege.edu/files/1021771/)) and [notes](notes/chisq.jpg) -- part 2 will be uploaded soon... 
+* [Select reading question responses](questions/q3-15.pdf)
 * [Worksheet 8](wksht/chisq.pdf)
 * FP: 6.31, 32, 34, 38, 41, 45, 49, 50
 
