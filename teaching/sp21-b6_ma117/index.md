@@ -160,7 +160,7 @@ You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/off
 <td>
     [Project](project)
     <hr/>
-    [FR](final-reflection.pdf)
+    [FR](final-reflection)
 </td>
 <td colspan="2" style="background-color: #f5f5f5;"></td>
 </tr>
@@ -177,7 +177,7 @@ How to read this calendar:
     - "Proposal," "Outline," and "Project" refer to the [project](project)
     - "Bio" = [Mathematical biography](bio.pdf) (submit via Gradescope)
     - "Articles" refers to [two articles](#week-4-monday) for you to read (in place of the usual textbook readings)
-    - "FR" = Final reflection (submit via Gradescope) <!-- TODO -->
+    - "FR" = [Final reflection](final-reflection) (submit via Gradescope)
 * Quiz/exam material:
     - Quiz 1: through chapter 2
     - Quiz 2: through chapter 5

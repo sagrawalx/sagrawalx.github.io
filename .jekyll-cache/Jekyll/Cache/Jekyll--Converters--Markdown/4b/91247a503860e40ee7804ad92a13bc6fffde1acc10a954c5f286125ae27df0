@@ -1,4 +1,4 @@
-I"i<<h1 id="information">Information</h1>
+I"v<<h1 id="information">Information</h1>
 <ul>
 <li>Instructor: Sunny (<span class="email" data-localpart="sagrawal" data-domain="coloradocollege.edu"></span>)
 <ul>
@@ -164,7 +164,7 @@ Final Exam
 <td>
 <a href="project">Project</a>
 <hr/>
-<a href="final-reflection.pdf">FR</a>
+<a href="final-reflection">FR</a>
 </td>
 <td colspan="2" style="background-color: #f5f5f5;">
 </td>
@@ -181,7 +181,7 @@ Final Exam
 <li>“Proposal,” “Outline,” and “Project” refer to the <a href="project">project</a></li>
 <li>“Bio” = <a href="bio.pdf">Mathematical biography</a> (submit via Gradescope)</li>
 <li>“Articles” refers to <a href="#week-4-monday">two articles</a> for you to read (in place of the usual textbook readings)</li>
-<li>“FR” = Final reflection (submit via Gradescope) <!-- TODO --></li>
+<li>“FR” = <a href="final-reflection">Final reflection</a> (submit via Gradescope)</li>
 </ul></li>
 <li>Quiz/exam material:
 <ul>
