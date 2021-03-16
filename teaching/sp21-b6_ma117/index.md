@@ -26,7 +26,7 @@ Zoom links for the following are all on [Canvas](https://canvas.coloradocollege.
     - Notes from the group sessions: [3/2](notes/group3-2.jpg), [3/3](notes/group3-3.jpg), [3/4](notes/group3-4.jpg), [3/5](notes/group3-5.jpg), [3/8](notes/group3-8.jpg), [3/9](notes/group3-9.jpg), [3/10](notes/group3-10.jpg), [3/11](notes/group3-11.jpg), [3/12](notes/group3-12.jpg), [3/15](notes/group3-15.jpg), [3/16](notes/group3-16.jpg)
 * Problem sessions: Tue, Thu, and Sun, 6--7pm. 
 * Office hours: 
-    - Sunny: Mon--Thu, 2--3pm MT (or by request). Notes: [3/2](notes/office3-2.jpg), [3/4](notes/office3-4.jpg), [3/10](notes/office3-10.jpg), [3/11](notes/office3-11.jpg), [3/15](notes/office3-15.jpg)
+    - Sunny: Mon--Thu, 2--3pm MT (or by request). Notes: [3/2](notes/office3-2.jpg), [3/4](notes/office3-4.jpg), [3/10](notes/office3-10.jpg), [3/11](notes/office3-11.jpg), [3/15](notes/office3-15.jpg), [3/16](notes/office3-16.jpg)
     - Cinea: Mon--Fri, 9am--5pm MT (email Cinea to tell her you want to meet)
 
 You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/offices/qrc/blocktutorschedule/).
