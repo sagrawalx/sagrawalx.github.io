@@ -31,7 +31,9 @@ Here's an [in-progress list of Urdu-Hindi resources](resources) that you might f
 <td>Anitā Bhārtī, *Krāntikāri Jaibhīm*</td>
 <td>
 * [Full text](texts#krantikaarii-jaibhiim) (Nagari and Urdu) 
-* [Wikipedia on the Mahāṛ Satyāgrah](https://en.wikipedia.org/wiki/Mahad_Satyagraha)
+* Background information:
+    - [Wikipedia on the Mahāṛ Satyāgrah](https://en.wikipedia.org/wiki/Mahad_Satyagraha)
+    - [Ambeḍkar on women shedding markers of Dalithood](dalit-women-markers.png) (from Shailaja Paik's *Dalit Women's Education in Modern India*)
 </td>
 </tr>
 
