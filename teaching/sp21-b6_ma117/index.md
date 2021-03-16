@@ -23,11 +23,11 @@ Zoom links for the following are all on [Canvas](https://canvas.coloradocollege.
 
 * Group sessions: Mon--Fri, 10--10:30am MT. [Random name draws](https://docs.google.com/spreadsheets/d/1rp-psMIfI9a95xqvDpQ1h0lmJooA5epGqAMnX4i3ua0/edit?usp=sharing). 
     - You should show up to the group session if your name is indicated on the spreadsheet linked above.
-    - Notes from the group sessions: [3/2](notes/group3-2.jpg), [3/3](notes/group3-3.jpg), [3/4](notes/group3-4.jpg), [3/5](notes/group3-5.jpg), [3/8](notes/group3-8.jpg), [3/9](notes/group3-9.jpg), [3/10](notes/group3-10.jpg), [3/11](notes/group3-11.jpg), [3/12](notes/group3-12.jpg), [3/15](notes/group3-15.jpg)
+    - Notes from the group sessions: [3/2](notes/group3-2.jpg), [3/3](notes/group3-3.jpg), [3/4](notes/group3-4.jpg), [3/5](notes/group3-5.jpg), [3/8](notes/group3-8.jpg), [3/9](notes/group3-9.jpg), [3/10](notes/group3-10.jpg), [3/11](notes/group3-11.jpg), [3/12](notes/group3-12.jpg), [3/15](notes/group3-15.jpg), [3/16](notes/group3-16.jpg)
 * Problem sessions: Tue, Thu, and Sun, 6--7pm. 
 * Office hours: 
     - Sunny: Mon--Thu, 2--3pm MT (or by request). Notes: [3/2](notes/office3-2.jpg), [3/4](notes/office3-4.jpg), [3/10](notes/office3-10.jpg), [3/11](notes/office3-11.jpg), [3/15](notes/office3-15.jpg)
-    - Cinea: Mon--Fri, 9am--5pm MT (email Cinea to  tell her you want to meet)
+    - Cinea: Mon--Fri, 9am--5pm MT (email Cinea to tell her you want to meet)
 
 You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/offices/qrc/blocktutorschedule/).
 
@@ -287,7 +287,7 @@ How to read this calendar:
 * Topic: $t$ distribution
 * Read: 7.1–2
 * CC: 7.1, 3, 5, 7, 17, 19  
-* Summary video (link will go here after the video is made!)  
+* Summary video (parts [1](https://canvas.coloradocollege.edu/files/1023262/) and [2](https://canvas.coloradocollege.edu/files/1023264/)) and [notes](notes/t-test.jpg)  
 * [Worksheet 9](wksht/t.pdf) (data set: [gifted.csv](wksht/gifted.csv))
 * FP: 7.2, 4, 6, 9, 11, 15, 21
 
