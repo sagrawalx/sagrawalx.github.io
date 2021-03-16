@@ -288,6 +288,7 @@ How to read this calendar:
 * Read: 7.1–2
 * CC: 7.1, 3, 5, 7, 17, 19  
 * Summary video (parts [1](https://canvas.coloradocollege.edu/files/1023262/) and [2](https://canvas.coloradocollege.edu/files/1023264/)) and [notes](notes/t-test.jpg)  
+* [Select reading question responses](questions/q3-16.pdf)
 * [Worksheet 9](wksht/t.pdf) (data set: [gifted.csv](wksht/gifted.csv))
 * FP: 7.2, 4, 6, 9, 11, 15, 21
 
