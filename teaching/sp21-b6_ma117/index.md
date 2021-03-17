@@ -299,7 +299,8 @@ How to read this calendar:
 * CC: 7.23, 35, 39 
 * Summary video (link will go here after the video is made!)
 * [Worksheet 10](wksht/comparing-means.pdf) (data sets: [swahili.csv](wksht/swahili.csv), [diamonds.csv](wksht/diamonds.csv))
-* FP: 7.25, 27, 29, 31, 37, 41, 45, 47, 49, 51
+* FP: 7.25, 27, 29, 31, 37, 41, 45, 47, 49, 51  
+* Fun things: [xkcd](https://xkcd.com/882/) (re: data snooping)
 
 ## Week 3, Thursday  
 
