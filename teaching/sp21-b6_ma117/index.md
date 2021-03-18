@@ -308,7 +308,7 @@ How to read this calendar:
 * Topic: Linear regression
 * Read: 8.1–3
 * CC: 8.1, 9, 17, 27 
-* Summary video (link will go here after the video is made!)
+* [Summary video](https://canvas.coloradocollege.edu/files/1025970/) and [notes](notes/regression.jpg)
 * [Select reading question responses](questions/q3-18.pdf)
 * [Worksheet 11](wksht/regression.pdf)
 * FP: 8.3, 5, 7, 11, 13, 19, 21, 23, 28, 29
