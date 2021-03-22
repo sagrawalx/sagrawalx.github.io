@@ -36,6 +36,8 @@ You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/off
 
 * [Slack workspace]() (for discussion)
 * [Gradescope](https://www.gradescope.com/courses/256271) (for submitting most things)
+    - [Instructions](https://help.gradescope.com/article/ccbpppziu9-student-submit-work#submitting_a_pdf) for submitting a PDF
+    - [Instructions](https://help.gradescope.com/article/ccbpppziu9-student-submit-work#submitting_individual_images) for submitting individual images
 * [Canvas](https://canvas.coloradocollege.edu/courses/32678/) (for [Zoom links](https://canvas.coloradocollege.edu/courses/32678/external_tools/483) and [videos](https://canvas.coloradocollege.edu/courses/32678/files))
 * [Reading question form](https://docs.google.com/forms/d/e/1FAIpQLSdg3-GJp5B9FOhZd6VvWv4Ls_Ms2qwgV3YGwNh8snx-Nuh9Lg/viewform)
 * {{ wr }}

@@ -457,16 +457,19 @@ nonav: true
 
 ## Exercises
 
-
-1. We'd use a scatterplot. It's not a great linear relationship, but does look generally positive. 
+1. We'd use a scatterplot. It's not a great linear relationship, but does look generally positive. It might be reasonable to use `at_bats` to predict `runs`, but we couldn't be very confident in our prediction. 
 
 	![](8-e1.png)
 
-2. See above. 
+2. (More or less the same as exercise 1) There's an increasing relationship, but the linear fit doesn't appear to be very great. The Boston Red Sox observation, with more than 5700 `at_bats` is fairly unusual. The Yankees observation, with 5518 `at_bats` and 867 `runs` is also somewhat unusual. 
 
-3. 132185.4.
+    Note: Students might not identify both of those "unusual" observations, but they should at least identify one. 
 
-4. The equation is $y = 1.83x + 415.24$.
+3. The smallest sum of square residuals I was able to pinpoint was 132185.4.
+
+    Note: This problem involves playing around with examples trying to minimize the sum of square residuals. It's unlikely that students will get the exact sum number as me, but probably they should be able to get something in the ballpark. 
+
+4. The equation is $y = 1.83x + 415.24$. The slope tells us that, for each additional `at_bat`, a team is expected to make 1.83 additional `runs`. 
 
 	![](8-e4.png)
 
@@ -476,11 +479,18 @@ nonav: true
 	summary(m2)
 	~~~
 
-5. (Maybe this problem wanted 5579 `at_bats`...?) The model would predict 728.32. The actual runs were 713, so the model overestimates. The residual is -15.32. 
+5. The model would predict 728.32. The actual runs were 713, so the model overestimates. The residual is -15.32. 
+
+    Note: There's a typo in the problem: it says 5578 `at_bats` when it should say 5579. I'd give credit as long as they said "overestimates," even if they didn't get the exact residual. 
 
 6. There's not a clear pattern in the residuals. 
 
-7. The residuals are normalish, but the fit is not great. 
+    ![](8-e6.png)
+
+7. The residuals are sort of normal, but not very normal --- there seems to be a slight right skew in the histogram. 
+
+    ![](8-e7a.png)
+    ![](8-e7b.png)
 
 8. The variability seems close to being constant. Perhaps it decreases slightly as `at_bats` increases. 
 
@@ -488,11 +498,13 @@ nonav: true
 
 1. The relationship between `runs` and `bat_avg` seems sort of linear. 
 
-	![](8-o1.ong)
+	![](8-o1.png)
+	
+    Note: In this problem and the next, students have a choice about what variables they choose to analyze. You don't need to go through and check that their numbers are actually correct. Just make sure that they've answered everything and their interpretations are correct based on the numbers they've given. 
 
 2. The $R^2$ is 0.65, compared to 0.37 for `runs` against `at_bats`, so the linear fit is better in this situation. 
 
-3. It seems that `bat_avg` is the best predictor for `runs`. 
+3. `bat_avg` is the best predictor for `runs`. 
 
 	~~~R
 	> cor(mlb11$runs, mlb11$at_bats)^2
@@ -511,7 +523,7 @@ nonav: true
 	[1] 0.3609712
 	~~~
 
-4. All of them are better. The best seems to be `new_obs`. 
+4. All of these new ones are better; the best is `new_obs`. 
 
 	~~~R
 	> cor(mlb11$runs, mlb11$new_onbase)^2
@@ -524,7 +536,7 @@ nonav: true
 
 	![](8-o4.png) 
 	
-5. There does appear to be no pattern in the residual plot, and the residuals are at least sort of normal. 
+5. There does appear to be no pattern in the residual plot, and the residuals are relatively normal (certainly more normal than they were for `at_bats`!). 
 
 	![](8-o5.png)
 	![](8-o5b.png)
