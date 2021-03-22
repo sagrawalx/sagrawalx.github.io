@@ -311,26 +311,32 @@ Spring 2020, Block 6 — MA117 —
 <h1 id="lab-8">Lab 8</h1>
 <h2 id="exercises-8">Exercises</h2>
 <ol type="1">
-<li><p>We’d use a scatterplot. It’s not a great linear relationship, but does look generally positive.</p>
+<li><p>We’d use a scatterplot. It’s not a great linear relationship, but does look generally positive. It might be reasonable to use <code>at_bats</code> to predict <code>runs</code>, but we couldn’t be very confident in our prediction.</p>
 <p><img src="8-e1.png" /></p></li>
-<li><p>See above.</p></li>
-<li><p>132185.4.</p></li>
-<li><p>The equation is <span class="math inline">\(y = 1.83x + 415.24\)</span>.</p>
+<li><p>(More or less the same as exercise 1) There’s an increasing relationship, but the linear fit doesn’t appear to be very great. The Boston Red Sox observation, with more than 5700 <code>at_bats</code> is fairly unusual. The Yankees observation, with 5518 <code>at_bats</code> and 867 <code>runs</code> is also somewhat unusual.</p>
+<p>Note: Students might not identify both of those “unusual” observations, but they should at least identify one.</p></li>
+<li><p>The smallest sum of square residuals I was able to pinpoint was 132185.4.</p>
+<p>Note: This problem involves playing around with examples trying to minimize the sum of square residuals. It’s unlikely that students will get the exact sum number as me, but probably they should be able to get something in the ballpark.</p></li>
+<li><p>The equation is <span class="math inline">\(y = 1.83x + 415.24\)</span>. The slope tells us that, for each additional <code>at_bat</code>, a team is expected to make 1.83 additional <code>runs</code>.</p>
 <p><img src="8-e4.png" /></p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mlb11, <span class="fu">aes</span>(homeruns, runs)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&quot;lm&quot;</span>)</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>m2 <span class="ot">=</span> <span class="fu">lm</span>(runs <span class="sc">~</span> homeruns, <span class="at">data =</span> mlb11)</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m2)</span></code></pre></div></li>
-<li><p>(Maybe this problem wanted 5579 <code>at_bats</code>…?) The model would predict 728.32. The actual runs were 713, so the model overestimates. The residual is -15.32.</p></li>
-<li><p>There’s not a clear pattern in the residuals.</p></li>
-<li><p>The residuals are normalish, but the fit is not great.</p></li>
+<li><p>The model would predict 728.32. The actual runs were 713, so the model overestimates. The residual is -15.32.</p>
+<p>Note: There’s a typo in the problem: it says 5578 <code>at_bats</code> when it should say 5579. I’d give credit as long as they said “overestimates,” even if they didn’t get the exact residual.</p></li>
+<li><p>There’s not a clear pattern in the residuals.</p>
+<p><img src="8-e6.png" /></p></li>
+<li><p>The residuals are sort of normal, but not very normal — there seems to be a slight right skew in the histogram.</p>
+<p><img src="8-e7a.png" /> <img src="8-e7b.png" /></p></li>
 <li><p>The variability seems close to being constant. Perhaps it decreases slightly as <code>at_bats</code> increases.</p></li>
 </ol>
 <h2 id="on-your-own-8">On Your Own</h2>
 <ol type="1">
 <li><p>The relationship between <code>runs</code> and <code>bat_avg</code> seems sort of linear.</p>
-<p><img src="8-o1.ong" /></p></li>
+<p><img src="8-o1.png" /></p>
+<p>Note: In this problem and the next, students have a choice about what variables they choose to analyze. You don’t need to go through and check that their numbers are actually correct. Just make sure that they’ve answered everything and their interpretations are correct based on the numbers they’ve given.</p></li>
 <li><p>The <span class="math inline">\(R^2\)</span> is 0.65, compared to 0.37 for <code>runs</code> against <code>at_bats</code>, so the linear fit is better in this situation.</p></li>
-<li><p>It seems that <code>bat_avg</code> is the best predictor for <code>runs</code>.</p>
+<li><p><code>bat_avg</code> is the best predictor for <code>runs</code>.</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">cor</span>(mlb11<span class="sc">$</span>runs, mlb11<span class="sc">$</span>at_bats)<span class="sc">^</span><span class="dv">2</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.3728654</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">cor</span>(mlb11<span class="sc">$</span>runs, mlb11<span class="sc">$</span>hits)<span class="sc">^</span><span class="dv">2</span></span>
@@ -345,7 +351,7 @@ Spring 2020, Block 6 — MA117 —
 <span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.002913993</span></span>
 <span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">cor</span>(mlb11<span class="sc">$</span>runs, mlb11<span class="sc">$</span>wins)<span class="sc">^</span><span class="dv">2</span></span>
 <span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.3609712</span></span></code></pre></div></li>
-<li><p>All of them are better. The best seems to be <code>new_obs</code>.</p>
+<li><p>All of these new ones are better; the best is <code>new_obs</code>.</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">cor</span>(mlb11<span class="sc">$</span>runs, mlb11<span class="sc">$</span>new_onbase)<span class="sc">^</span><span class="dv">2</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.8491053</span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">cor</span>(mlb11<span class="sc">$</span>runs, mlb11<span class="sc">$</span>new_slug)<span class="sc">^</span><span class="dv">2</span></span>
@@ -353,7 +359,7 @@ Spring 2020, Block 6 — MA117 —
 <span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">cor</span>(mlb11<span class="sc">$</span>runs, mlb11<span class="sc">$</span>new_obs)<span class="sc">^</span><span class="dv">2</span></span>
 <span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="fl">0.9349271</span></span></code></pre></div>
 <p><img src="8-o4.png" /></p></li>
-<li><p>There does appear to be no pattern in the residual plot, and the residuals are at least sort of normal.</p>
+<li><p>There does appear to be no pattern in the residual plot, and the residuals are relatively normal (certainly more normal than they were for <code>at_bats</code>!).</p>
 <p><img src="8-o5.png" /> <img src="8-o5b.png" /></p></li>
 </ol>
 
