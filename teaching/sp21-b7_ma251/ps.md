@@ -8,7 +8,7 @@ nonav: true
 
 # Problem Sets
 
-See instructions on the [syllabus](syllabus#problem-sets). Draft and final deadlines for each problem set are indicated on the [calendar](index#calendar). Submissions are all through Gradescope. 
+See instructions on the [syllabus](syllabus#problem-sets). Draft and final deadlines for each problem set are indicated on the [calendar](index#calendar). Submissions are all through Gradescope. <!-- test -->
 
 ## Problem Set A
 
