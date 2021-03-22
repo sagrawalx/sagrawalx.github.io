@@ -492,7 +492,7 @@ nonav: true
     ![](8-e7a.png)
     ![](8-e7b.png)
 
-8. The variability seems close to being constant. Perhaps it decreases slightly as `at_bats` increases. 
+8. The variability seems close to being constant. Perhaps it decreases slightly as `at_bats` increases. (See the plot from exercise 6 above)
 
 ## On Your Own
 

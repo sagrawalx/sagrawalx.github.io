@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Writing Assignments
+title: Final Project
 bannertext: Spring 2021, Block 7 — MA251
 bannerlink: teaching/sp21-b7_ma251
 nonav: true
