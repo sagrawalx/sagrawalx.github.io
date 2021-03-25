@@ -91,13 +91,12 @@ There won't be any!
 
 There will be a few different types of live events:
 
-* Introduction session: This will happen only on the first day. It'll be a chance for all of us to see each other's faces, get to know each other, ask questions about the syllabus, etc. 
-* Group sessions: **TBA** <!-- todo --> This is a chance for you to talk to your groupmates about whatever you're struggling with, and if there are things you're all struggling on together, I'll be there to chime in and help. 
-* Problem sessions: Elizabeth and Cinea will host problem sessions at various times throughout the week. These are opportunities for you to work on math together with your classmates, and Elizabeth and Cinea can help out if needed. 
-* Sunny's office hours: I'll have some office hours throughout the week for you to stop by and ask me for help with whatever you need.
-* Cinea's office hours: You can email Cinea during the day to ask her that you'd like to meet.  
+* Introduction Session: This will happen only on the first day. It'll be a chance for all of us to see each other's faces, get to know each other, ask questions about the syllabus, etc. 
+* Problem Sessions: Me, Elizabeth and Cinea will host problem sessions at various times throughout the week. These are opportunities for you to work on math together with your classmates, and Elizabeth and Cinea can help out if needed. 
+* Sunny's Office Hours: I'll have some office hours at some fixed times throughout the week, and you can email me to request additional times to meet. 
+* Cinea's Office Hours: You can email Cinea during the day to ask her that you'd like to meet.  
 
-I *strongly* encourage you to attend as many of these live events as you can, and to set up synchronous study sessions with your classmates on your own as well. It can be easy to feel isolated during this era of quarantines and social distancing, but, despite the vast distances that may separate us, you do have access to a community: me, Elizabeth, Cinea, and all of your classmates. Taking advantage of this will help you feel less isolated, and also help your learning. 
+I *strongly* encourage you to attend as many of these live events as you can, and to set up synchronous study sessions with your classmates on your own as well. Having access to a learning community can be very valuable for your learning. Learning communities don't develop online as easily as they do in person; you have to be proactive, make an effort to show up, reach out, and so forth. 
 
 ## Assessment
 
@@ -116,18 +115,16 @@ Here are some details about some of these components.
 
 * *Reading questions*. You'll get 1 point for each reading question you submit, up to a maximum of $n-2$, where $n$ is the total number of readings assigned. In other words, you don't need to submit a question every day to get full credit here, and there's no extra credit for doing so. 
 * *Comprehension checks*. You'll get 1 point for each problem you submit, up to a maximum of $n-6$, where $n$ is the total number of problems assigned for comprehension checks. In other words, you don't need to submit a question every day to get full credit here, and there's no extra credit for doing so. 
-* *Participation*. You'll get a full score for the participation component of your grade as long as I am able to see that you are putting in a good faith effort to engage with the class. This includes showing up to as many of the live events as you can. 
+* *Participation*. You'll get a full score for the participation component of your grade as long as I am able to see that you are putting in a good faith effort to engage with the class.  
 
 ## Accommodations
 
 If you anticipate or experience any disability-related barriers to your learning in this course, please discuss your concerns with me as soon as possible and we'll find a way to provide the accommodations that you need. Also, please contact the office of [Accessibility Resources](https://www.coloradocollege.edu/offices/accessibilityresources/) if you have not done so already.
 
+## Covid-19
+
+The Covid-19 pandemic challenges us as individuals and as communities in so many ways. If you find yourself faced with a challenging situation that might affect your classwork, please let me know and I'll do my best to accommodate your situation. Also know that a variety of offices on campus are available to help you through difficult situations. For instance, you might get in touch with the [Counseling Center](https://www.coloradocollege.edu/offices/counseling/), or with [Campus Safety](https://www.coloradocollege.edu/offices/campussafety/). You can get financial help through the [Coronavirus Emergency Fund](https://www.coloradocollege.edu/other/coronavirus/emergency-fund.html), and you can find more information and resources on the [Coronavirus Updates & Resources page](https://www.coloradocollege.edu/other/coronavirus/). 
+
 ## Honor code
 
 Please make sure that you are familiar with the [Honor Code](https://www.coloradocollege.edu/other/honorcouncil/resources/student.html) at CC. Violations of the Honor Code will have to be reported to the Honor Council, which is really no fun for anyone.
-
-## Covid-19
-
-The Covid-19 pandemic challenges us as individuals and as communities in so many ways. Remote learning is one of them. I am not an expert at remote learning, and I understand that you're likely only just starting to get used to remote learning as well. Please feel free to reach out if you find yourself in need of advice and I'll do what I can to help. 
-
-If you find yourself faced with a challenging situation that might affect your classwork, please let me know and I'll do my best to accommodate your situation. Also know that a variety of offices on campus are available to help you through difficult situations. For instance, you might get in touch with the [Counseling Center](https://www.coloradocollege.edu/offices/counseling/), or with [Campus Safety](https://www.coloradocollege.edu/offices/campussafety/). You can get financial help through the [Coronavirus Emergency Fund](https://www.coloradocollege.edu/other/coronavirus/emergency-fund.html), and you can find more information and resources on the [Coronavirus Updates & Resources page](https://www.coloradocollege.edu/other/coronavirus/). 

@@ -13,17 +13,18 @@ nonav: true
     - LA: Elizabeth (<span class="email" data-localpart="e_wolfe" data-domain="coloradocollege.edu"></span>)
     - Paraprof: Cinea (<span class="email" data-localpart="cjenkins" data-domain="coloradocollege.edu"></span>)
 * [Course syllabus](syllabus)
+* [Problem sets](ps)
 * Textbook: Burton, *Elementary Number Theory* (7th edition)
 
 # Live events
  
 Zoom links for the following are all on [Canvas](https://canvas.coloradocollege.edu/courses/32678/external_tools/483): 
 
-* Group sessions: **TBA** <!-- tba -->
+* Problem sessions with Sunny: Mon Wed Fri, 11am--noon MT
 * Problem sessions with Elizabeth: **TBA** <!--tba -->
 * Problem sessions with Cinea: Mon Wed, 3--4pm MT
 * Office hours: 
-    - Sunny: **TBA** <!-- tba-->
+    - Sunny: Mon--Thu, 1--2pm MT (or by request)
     - Cinea: **TBA** <!-- tba --> (email Cinea to tell her you want to meet)
 
 You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/offices/qrc/blocktutorschedule/).
@@ -34,7 +35,7 @@ You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/off
 
 {% assign wrshort = "[WR](https://docs.google.com/forms/d/e/1FAIpQLSdQgaXEp3Qov9xlInt3PINIC4LlETqZOyLtmzzoHRPTrc7Xrw/viewform)" %}
 
-* [Slack workspace]() (for discussion)
+* [Slack workspace](https://join.slack.com/t/spring2021blo-buh3028/shared_invite/zt-obs84x10-ZSnlhSgGZz0J9V0t1IPfFg) (for discussion)
 * [Gradescope](https://www.gradescope.com/courses/256271) (for submitting most things)
     - [Instructions](https://help.gradescope.com/article/ccbpppziu9-student-submit-work#submitting_a_pdf) for submitting a PDF
     - [Instructions](https://help.gradescope.com/article/ccbpppziu9-student-submit-work#submitting_individual_images) for submitting individual images
@@ -79,7 +80,7 @@ You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/off
 <td>
     2.3--4
     <hr/>
-    PS A Draft
+    [PS A](ps#A) Draft
 </td>
 <td>
     2.5
@@ -93,12 +94,12 @@ You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/off
 <td>
     3.1--2, {{ wrshort }}1
     <hr/>
-    PS B Draft
+    [PS B](ps#B) Draft
 </td>
 <td>
     4.1--2
     <hr/>
-    PS A Final
+    [PS A](ps#A) Final
 </td>
 <td>
     4.3
@@ -108,7 +109,7 @@ You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/off
 <td>
     4.4
     <hr/>
-    PS B Final
+    [PS B](ps#B) Final
 </td>
 <td>
     5.1--3
@@ -123,7 +124,7 @@ You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/off
 <td>
     7.1--2, 7.4, {{ wrshort }}2
     <hr/>
-    PS C Draft
+    [PS C](ps#C) Draft
 </td>
 <td>
     7.3
@@ -138,12 +139,12 @@ You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/off
 <td>
     8.3
     <hr/>
-    PS D Draft
+    [PS D](ps#D) Draft
 </td>
 <td>
     &nbsp;
     <hr/>
-    PS C Final
+    [PS C](ps#D) Final
 </td>
 </tr>
 
@@ -153,12 +154,12 @@ You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/off
 <td>
     {{ wrshort }}3
     <hr/>
-    PS D Final
+    [PS D](ps#D) Final
 </td>
 <td>
     &nbsp;
     <hr/>
-    PS E Final
+    [PS E](ps#E) Final
 </td>
 <td>
     [Project](project)
@@ -172,11 +173,11 @@ You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/off
 
 How to read this calendar: 
 
-* Things above the line are due at 8am MT on the indicated day. Things below the line are due at 2pm MT on the indicated day.
+* Things above the line are due before 8am MT on the indicated day. Things below the line are due before 2pm MT on the indicated day.
 * Numbers like "1.1--2" mean you need to read those sections in the textbook, do the associated "comprehension check" problems (see [below](#readings-problems-etc)), and submit a [reading question](https://docs.google.com/forms/d/e/1FAIpQLSdg3-GJp5B9FOhZd6VvWv4Ls_Ms2qwgV3YGwNh8snx-Nuh9Lg/viewform) about those sections. 
 * Abbreviations: 
     - "Autobio" = [Mathematical autobiography](writing#autobio) (submit via Gradescope)
-    - "PS" = Problem set (submit via Gradescope)
+    - "PS" = [Problem set](ps) (submit via Gradescope)
     - "WR#" = {{ wr }} for week # (submit via Google Form)
     - "Proposal" and "Project" refer to the [project](project)
     - "Bio" = [Mathematical biography](writing#bio) (submit via Gradescope)
