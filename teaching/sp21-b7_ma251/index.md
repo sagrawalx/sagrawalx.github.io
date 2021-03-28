@@ -21,7 +21,7 @@ nonav: true
 Zoom links for the following are all on [Canvas](https://canvas.coloradocollege.edu/courses/32678/external_tools/483): 
 
 * Problem sessions with Sunny: Mon Wed Fri, 11am--noon MT
-* Problem sessions with Elizabeth: **TBA** <!--tba -->
+* Problem sessions with Elizabeth: Tue Thu Sun, 7:45--8:45pm MT
 * Problem sessions with Cinea: Mon Wed, 3--4pm MT
 * Office hours: 
     - Sunny: Mon--Thu, 1--2pm MT (or by request)

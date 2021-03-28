@@ -27,6 +27,15 @@ Here's an [in-progress list of Urdu-Hindi resources](resources) that you might f
 </tr>
 
 <tr>
+<td>3/30</td>
+<td>Alī Sardār Jāfrī, *Merā Safar*</td>
+<td>
+* Full text: [Nagari](https://www.rekhta.org/nazms/meraa-safar-ham-chuu-sabza-baar-haa-roiida-em-ali-sardar-jafri-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/meraa-safar-ham-chuu-sabza-baar-haa-roiida-em-ali-sardar-jafri-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/meraa-safar-ham-chuu-sabza-baar-haa-roiida-em-ali-sardar-jafri-nazms)
+* [Translation by Kathleen Grant Jaeger and Baidar Bakht](jafri-safar.pdf) (from [*An Anthology of Modern Urdu Poetry*, Volume I](http://www.columbia.edu/itc/mealac/pritchett/00urduhindilinks/baidarbakht/))
+</td>
+</tr>
+
+<tr>
 <td>3/16</td>
 <td>Anitā Bhārtī, *Krāntikāri Jaibhīm*</td>
 <td>
