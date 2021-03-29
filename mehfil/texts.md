@@ -631,3 +631,311 @@ There are a few *minor* changes here from Kavitākosh's transcription. For examp
 اور ہمارے وِچاروں میں  
 </div>
 </div>
+
+
+<h1 id="tum-logon-se-duur"><div style="display: flex;"><div style="flex: 1;">मैं तुम लोगों से दूर हूँ</div><div dir="rtl" style="flex: 1; text-align: right;">میں تُم لوگوں سے دور ہوں</div></h1>
+
+<div class="introduction">
+A poem by Muktibodh. The original can be found on [Kavitākosh](http://www.kavitakosh.org/kk/%E0%A4%AE%E0%A5%88%E0%A4%82_%E0%A4%A4%E0%A5%81%E0%A4%AE_%E0%A4%B2%E0%A5%8B%E0%A4%97%E0%A5%8B%E0%A4%82_%E0%A4%B8%E0%A5%87_%E0%A4%A6%E0%A5%82%E0%A4%B0_%E0%A4%B9%E0%A5%82%E0%A4%81_/_%E0%A4%97%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%A8_%E0%A4%AE%E0%A4%BE%E0%A4%A7%E0%A4%B5_%E0%A4%AE%E0%A5%81%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AC%E0%A5%8B%E0%A4%A7). 
+</div>
+
+<div style="display: flex;">
+<div style="flex: 1;">
+मैं तुम लोगों से इतना दूर हूँ  
+तुम्हारी प्रेरणाओं[^prernaa] से मेरी प्रेरणा इतनी भिन्न[^bhinn] है  
+कि जो तुम्हारे लिए विष[^vish] है, मेरे लिए अन्न[^ann] है  
+
+[^prernaa]: motivation
+[^bhinn]: different
+[^vish]: poison
+[^ann]: grain, food
+
+मेरी असंग[^asang] स्थिति में चलता-फिरता साथ है  
+अकेले में साहचर्य[^saahcharya] का हाथ है  
+उनका जो तुम्हारे द्वारा गर्हित[^garhit] हैं,  
+किंतु वो मेरी व्याकुल[^vyaakul] आत्मा में बिंबित[^bimbit] हैं,  
+पुरस्कृत[^puraskrit] हैं  
+इसीलिए तुम्हारा मुझ पर सतत[^satat] आघात[^aaghaat] है!!  
+सबके सामने और अकेले में।  
+(मेरे रक्त-भरे महाकाव्यों[^mahaakavya] के पन्ने उड़ते हैं  
+तुम्हारे-हमारे इस सारे झमेले में)  
+
+[^asang]: alone  
+[^saahcharya]: companionship
+[^garhit]: detestable 
+[^vyaakul]: agitated  
+[^bimbit]: reflected
+[^puraskrit]: awarded, honored
+[^satat]: constant
+[^aaghaat]: blow, blast, injury
+[^mahaakavya]: epic poem
+
+असफलता का धूल-कचरा ओढ़े हूँ  
+इसलिए कि वो चक्करदार ज़ीनों पर मिलती है  
+छल-छद्म[^chhadm] धन की  
+किंतु मैं सीधी-सादी पटरी-पटरी दौड़ा हूँ  
+जीवन की।  
+फिर भी मैं अपनी सार्थकता[^saarthaktaa] से खिन्न हूँ  
+विष से अप्रसन्न[^aprasann] हूँ  
+इसलिए कि जो है उससे बेहतर चाहिए  
+पूरी दुनिया साफ़ करने के लिए मेहतर चाहिए  
+वो मेहतर मैं हो नहीं पाता  
+पर रोज़ कोई भीतर चिल्लाता है  
+कि कोई काम बुरा नहीं  
+बशर्ते[^basharte] कि आदमी खरा[^kharaa] हो  
+फिर भी मैं उस ओर अपने को ढो नहीं पाता।  
+रिफ़्रिजरेटरों, विटैमिनों, रेडियोग्रेमों के बाहर की  
+गतियों[^gati] की दुनिया में  
+मेरी वो भूखी बच्ची मुनिया है शून्यों[^shuunya] में  
+पेटों की आँतों[^aant] में न्यूनों[^nyuun] की पीड़ा[^piiRaa] है  
+छाती के कोषों[^kosh] में रहितों[^rahit] की व्रीड़ा[^vriiRaa] है  
+
+[^chhadm]: deception
+[^saarthaktaa]: significance, purpose
+[^aprasann]: unhappy
+[^basharte]: provided that, as long as
+[^kharaa]: good, upstanding
+[^gati]: situation, condition
+[^shuunya]: emptiness
+[^aant]: innards, bowels
+[^nyuun]: low, deficient, inferior, insignificant 
+[^piiRaa]: pain
+[^kosh]: store-room, treasury
+[^rahit]: deprived, without
+[^vriiRaa]: shame, modesty
+
+शून्यों से घिरी हुई पीड़ा ही सत्य[^satya] है  
+शेष[^shesh] सब अवास्तव[^avaastav] अयथार्थ[^ayathaarth] मिथ्या[^mithyaa] है भ्रम[^bhram] है  
+सत्य केवल एक जो कि  
+दुःखों का क्रम[^kram] है  
+
+[^satya]: truth
+[^shesh]:remaining
+[^avaastav]: ungenuine
+[^ayathaarth]: unreal
+[^mithyaa]: false  
+[^bhram]: confusion, doubt  
+[^kram]: sequence, succession
+
+मैं कनफटा[^kanphataa] हूँ हेठा[^heThaa] हूँ  
+शेव्रलेट-डॉज के नीचे मैं लेटा हूँ  
+तेलिया लिबास[^libaas] में पुरज़े सुधारता हूँ  
+तुम्हारी आज्ञाएँ[^aagyaa] ढोता हूँ।   
+
+[^kanphaTaa]: split-eared (usually referring to [yogis](https://www.britannica.com/topic/Kanphata-Yogi))
+[^heThaa]: inferior, contemptible
+[^libaas]: clothes
+[^aagyaa]: order, command
+
+</div>
+
+<div dir="rtl" style="flex: 1; text-align: right;">
+میں تُم لوگوں سے اِتنا دور ہوں  
+تُمھاری پریرناؤں[^prernaa] سے میری پریرنا اِتنی بھِنّ[^bhinn] ہے  
+کہ جو تُمھارے لیے وِش[^vish] ہے، میرے لیے اَنّ[^ann] ہے  
+
+میری اَسنگ[^asang] ستھِتی میں چلتا پھِرتا ساتھ ہے  
+اکیلے میں ساہچریہ[^saahcharya] کا ہاتھ ہے  
+اُن کا جو تُمھارے دوارا گرہِت[^garhit] ہیں،  
+کِنتو وہ میری وِیاکُل[^vyaakul] آتما میں بِمبِت[^garhit] ہیں،  
+پُرسکرِت[^puraskrit] ہیں  
+اسی لیے تُمھارا مُجھ پر ستت[^satat] آگھات[^aaghaat] ہے!!  
+سب کے سامنے اور اکیلے میں۔  
+(میرے رکت بھرے مہاکاوْیوں[^mahaakavya] کے پنّے اُڑتے ہیں  
+تُمھارے ہمارے اِس سارے جھمیلے میں)  
+
+اَسپھلتا کا دھول کچرا اوڑھے ہوں  
+اِس لیے کہ وہ چکّر دار زینوں پر مِلتی ہے  
+چھل چھدم[^chhadm] دھن کی  
+کِنتو میں سیدھی سادی پٹری پٹری دوڑا ہوں  
+جیون کی۔  
+پھِر بھی میں اپنی سارتھکتا[^saarthaktaa] سے کھِنّ ہوں  
+وِش سے اَپرَسنّ[^aprasann] ہوں   
+اِس لیے کہ جو ہے اُس سے بہتر چاہیے  
+پوری دُنیا صاف کرنے کے لیے مہتر چاہیے  
+وہ مہتر میں ہو نہیں پاتا  
+پر روز کوئی بھیتر چِلّاتا ہے  
+کہ کوئی کام بُرا نہیں   
+بشرطے[^basharte] کہ آدمی کھرا[^kharaa] ہو  
+پھِر بھی میں اُس اور اپنے کو ڈھو نہیں پاتا  
+رِفرِجریٹروں، وِٹیمنوں، ریدیوگراموں کے باہر کی  
+گتیوں[^gati] کی دُنیا میں  
+میری وہ بھوکی بچّی مُنیا ہے شونیوں[^shuunya] میں  
+پیٹوں کی آنتوں[^aant] میں نیونوں[^nyuun] کی پیڑا ہے  
+چھاتی کے کوشوں[^kosh] میں رہیتوں[^rahit] کی وْرِیڑا[^vriiRaa] ہے  
+
+شونیوں سے گھِری ہوئی پیڑا ہی ستیہ[^satya] ہے  
+شیش[^shesh] سب اَواستَو[^avaastav] اَیَتھارتھ[^ayathaarth] مِتھیا[^mithyaa] ہے، بھرَم[^bhram] ہے  
+ستیہ کیوَل ایک جو کہ  
+دُکھوں کا کرَم[^kram] ہے
+
+میں کن پھٹا[^kanphaTaa] ہوں ہیتھا[^heThaa] ہوں  
+شیوْرولیٹ ڈَوج کے نیچے میں لیٹا ہوں  
+تیلیا لباس[^libaas] میں پُرزے سُدھارتا ہوں  
+تُمھاری آگیائیں[^aagyaa] ڈھوتا ہوں۔
+</div>
+</div>
+
+# सर-ए-तूर[^sar-e-tuur] {#sar-e-tuur}
+
+<div class="introduction">
+A poem by Alī Sardār Jāfri, published in the collection *Ek Khwāb Aur* (1965). Note that the collection was published in the 1960s, when many [milestones in spaceflight](https://en.wikipedia.org/wiki/Timeline_of_the_Space_Race) were being set. For example, Yuri Gagarin became the first human being in space in 1961. 
+</div>
+
+(आसमाँ-परवाज़ों[^aasmaan-parvaaz] के नाम)
+
+[^sar-e-tuur]: On Mount Sinai 
+[^aasmaan-parvaaz]: astronaut  
+
+<div style="margin-left: 1em;">
+"क्या फ़र्ज़ है कि सब को मिले एक-सा जवाब  
+आओ ना, हम भी सैर करें कोह-ए-तूर[^koh-e-tuur] की"  
+—ग़ालिब
+</div>
+
+[^koh-e-tuur]: Mount Sinai
+
+दिल को बेताब रखती है इक आरज़ू  
+कम है ये वुसअत[^wus3at]-ए-आलम-ए-रंग-ओ-बू   
+ले चली है किधर फिर नई जुस्तजू  
+ता बा-हद्द-ए-नज़र[^taa-ba-hadd-e-nazar] उड़के जाते हैं हम  
+वो जो हायल[^haayal] थे राहों में शम्स[^shams]-ओ-क़मर[^qamar]  
+हमसफ़र उनको अपना बनाते हैं हम  
+
+[^wus3at]: extent, spaciousness
+[^taa-ba-hadd-e-nazar]: until the limits of [our] vision
+[^haayal]: obstacle, hindrance, impediment  
+[^shams]: sun
+[^qamar]: moon
+
+है ज़मीं परदा-ए-लाला[^laalaa]-ओ-नस्तरन[^nastaran]  
+आसमाँ परदा-ए-कहकशाँ है अभी  
+राज़-ए-फ़ितरत हुआ लाख हम पर अयाँ[^3ayaan]  
+राज़-ए-फ़ितरत निहाँ[^nihaan] का निहाँ है अभी  
+जिसकी सदियों उधर हमने की इब्तिदा[^ibtidaa]  
+नातमाम[^naatamaam] अपनी वो दास्ताँ है अभी  
+मंज़िलें उड़ गईं बनके गर्द-ए-सफ़र  
+रहगुज़ारों[^rahguzaar] ही में कारवाँ है अभी  
+पीके नाकामियों की शराब-ए-कोहन[^kohan]  
+अपना ज़ौक़[^zauq]-ए-तजस्सुस[^tajassus] जवाँ है अभी  
+
+[^laalaa]: tulip
+[^nastaran]: white rose 
+[^3ayaan]: manifest, clear
+[^nihaan]: hidden
+[^ibtidaa]: beginning
+[^rahguzaar]: road
+[^naatamaam]: incomplete
+[^kohan]: old, ancient  
+[^zauq]: taste, enjoyment
+[^tajassus]: searching  
+
+हाथ काटे गए जुरअत[^jurat]-ए-शौक़ पर  
+ख़ूँ-चकाँ[^khuun-chakaan] होके वो गुल-फ़िशाँ[^gul-fishaan] हो गए  
+हैरतों ने लगाई जो मोहर-ए-सुकूत[^mohr-e-sukuut]  
+लब ख़ामोशी में जादू-बयाँ[^jaaduu-bayaan] हो गए  
+रासते में जो कोहसार[^kohsaar] आए तो हम  
+ऐसे तड़पे कि सैल-ए-रवाँ[^sail-e-rawaan] हो गए  
+हैं अज़ल[^azal] से ज़मीं के कुरे[^kuraa] पर असीर[^asiir]    
+होके महदूद[^mahduud] हम बेकराँ[^bekaraan] हो गए  
+ज़ौक़-ए-परवाज़[^parwaaz] भी दिल की इक हसरत है  
+ख़ाक से ज़ीनत[^ziinat]-ए-आसमाँ हो गए  
+
+[^jurat]: boldness, courage
+[^khuun-chakaan]: dripping blood 
+[^gul-fishaan]: scattering flowers
+[^mohr-e-sukuut]: seal of silence 
+[^jaaduu-bayaan]: "speaker of spells"
+[^kohsaar]: mountain  
+[^sail-e-rawaan]: flowing torrent  
+[^azal]: eternity without beginning  
+[^kuraa]: globe, sphere  
+[^asiir]: imprisoned 
+[^mahduud]: limited, bounded  
+[^bekaraan]: limitless, boundless
+[^parwaaz]: flight  
+[^ziinat]: ornament, embellishment, beauty   
+
+अक़ल-ए-चालाक ने दी है आकर ख़बर  
+इक शबिस्तान[^shabistaan] है ऐवान-ए-महताब[^aiwaan-e-mahtaab] में  
+मुंतज़िर[^muntazir] हैं निगारान[^nigaaraan]-ए-आतिश[^aatish]-बदन  
+जगमगाती फ़िज़ाओं की मेहराब[^mehraab] में  
+कितने दिलकश हसीं ख़्वाब बेदार[^bedaar] हैं  
+माह[^maah]-ओ-मिर्रीख़[^mirriikh] की चश्म[^chashm]-ए-बेख़्वाब में  
+खींच फिर ज़ुल्फ़-ए-माशूक़ा-ए-नीलगूँ[^niilguun]  
+ले ले शोले को फिर दस्त[^dast]-ए-बेताब में  
+
+[^shabistaan]: bedroom  
+[^aiwaan-e-mahtaab]: halls of the moon 
+[^muntazir]: anxiously waiting
+[^nigaaraan]: picture; beauty (pl)
+[^aatish]: fire 
+[^mehraab]: arch; uppermost sitting place (for kings, chiefs, etc)
+[^bedaar]: awake 
+[^maah]: moon
+[^mirriikh]: Mars  
+[^chashm]: eye  
+[^niilguun]: cerulean 
+[^dast]: hand 
+
+मुज़दा[^muzhda] हो मह-जबीनान[^mahjabiinaan]-ए-अफ़लाक[^aflaak] को  
+बज़्म[^bazm]-ए-गीती[^giitii] का साहब नज़र आ गया  
+तहनियत[^tahniyat] हुस्न[^husn] को बेनिक़ाबी की दो  
+दीदावर[^diidaawar] आ गया, परदादर[^pardaadar] आ गया  
+आसमाँ से गिरा था जो कल टूटकर  
+वो सितारा बदोश-ए-क़मर [^badosh-e-qamar] आ गया  
+लेके पैमाना[^paimaanaa]-ए-दर्द-ए-दिल हाथ में  
+मलके चेहरे पर ख़ून-ए-जिगर[^khuun-e-jigar] आ गया  
+बज़्म[^bazm]-ए-सैयारगान[^saiyaargaan]-ए-फ़लक[^falak]-सैर में  
+एक हुनरमंद[^hunarmand] सैयारागर[^saiyaaraagaar] आ गया
+
+[^muzhda]: good news
+[^mahjabiinaan]: "moon-faced" (pl)  
+[^aflaak]: heavens
+[^bazm]: assembly; feast
+[^giitii]: the world, the universe
+[^tahniyat]: congratulations 
+[^husn]: beauty  
+[^diidaawar]: sharp-sighted  
+[^pardaadar]: revealer of secrets  
+[^badosh-e-qamar]: having the moon on one's back
+[^paimaanaa]: cup  
+[^khuun-e-jigar]: hard work    
+[^saiyaargaan]: planets (pl)
+[^falak]: heaven, celestial sphere  
+[^hunarmand]: skilled 
+[^saiyaaraagaar]: maker of planets  
+
+शौक़ की हद मगर चांद तक तो नहीं  
+है अभी रफ़ात[^rafaat]-ए-आसमाँ और भी  
+है सुरैया[^suraiyaa] के पीछे सुरैया रवाँ[^rawaan]  
+कहकशाँ से परे कहकशाँ और भी  
+झाँकती हैं फ़िज़ाओं के पेचाक[^pechaak] से  
+रंग और नूर की वादियाँ और भी  
+और भी मंज़िलें, और भी मुश्किलें  
+हैं अभी इश्क़ के इम्तिहाँ और भी  
+
+[^rafaat]: height
+[^suraiyaa]: [Pleiades](https://en.wikipedia.org/wiki/Pleiades)
+[^rawaan]: going
+[^pechaak]: skein (eg, of thread), twist, curl, intricacy
+
+आज दस्त[^dast]-ए-जुनूँ पर है शमा[^shamaa]-ए-ख़िरद[^khirad]  
+दो जहाँ जिसके शोले से मामूर[^maamuur] हैं  
+लेके आएँ पयाम[^payaam]-ए-तुलू[^tuluu]-ए-सहर[^sahar]  
+जितने सूरज ख़लाओं[^khalaa] में मस्तूर[^mastuur] हैं  
+कह दो बर्क़[^barq]-ए-तजल्ली[^tajallii] से हो जलवागर[^jalwaagar]  
+आज मूसा[^muusaa] नहीं, हम सर-ए-तूर[^sar-e-tuur] हैं  
+
+[^shamaa]: lamp
+[^khirad]: reason, intellect 
+[^maamuur]: filled
+[^payaam]: message  
+[^tuluu]: rising (eg, of the sun)
+[^sahar]: dawn, daybreak
+[^khalaa]: space, emptiness
+[^mastuur]: hidden
+[^barq]: lightning
+[^tajallii]: luster, glory 
+[^jalwaagar]: clear, manifest  
+[^muusaa]: Moses

@@ -16,6 +16,15 @@ nonav: true
 </tr>
 
 <tr>
+<td>4/13</td>
+<td>Alī Sardār Jāfri, *Sar-e-Tūr*</td>
+<td>
+* Rekhta ([Nagari](https://www.rekhta.org/nazms/sar-e-tuur-ali-sardar-jafri-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/sar-e-tuur-ali-sardar-jafri-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/sar-e-tuur-ali-sardar-jafri-nazms)), or [here](texts#sar-e-tuur) (Nagari)
+* [Excerpt from Baider and Jaeger's *An Anthology of Modern Urdu Poetry*, Volume I](jafri-tuur.pdf) (Urdu text and English translation)
+</td>
+</tr>
+
+<tr>
 <td>TBA</td>
 <td>Faiz Ahmad Faiz, *Yād*</td>
 <td>
@@ -28,7 +37,7 @@ nonav: true
 <td>TBA</td>
 <td>Muktibodh, *Maiṇ Tum Logoṇ Se Dūr Hūṇ*</td>
 <td>
-* Full text: [Nagari](http://www.kavitakosh.org/kk/%E0%A4%AE%E0%A5%88%E0%A4%82_%E0%A4%A4%E0%A5%81%E0%A4%AE_%E0%A4%B2%E0%A5%8B%E0%A4%97%E0%A5%8B%E0%A4%82_%E0%A4%B8%E0%A5%87_%E0%A4%A6%E0%A5%82%E0%A4%B0_%E0%A4%B9%E0%A5%82%E0%A4%81_/_%E0%A4%97%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%A8_%E0%A4%AE%E0%A4%BE%E0%A4%A7%E0%A4%B5_%E0%A4%AE%E0%A5%81%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AC%E0%A5%8B%E0%A4%A7)
+* [Full text](texts#tum-logon-se-duur) (Nagari and Urdu)
 * [Reading by Kavyanki](https://www.youtube.com/watch?v=vHI_oD1h28A)
 * [Discussion and translation by Chanchal Chauhan](chauhan-muktibodh.pdf) (excerpt from the article "[Ideological Content of Muktibodh's Poetry](https://www.jstor.org/stable/23343293?seq=1)")
 </td>
@@ -53,7 +62,7 @@ nonav: true
 
 <tr>
 <td>TBA</td>
-<td>Rokeya Sakhawat Hossain, *Sultānā Kā Sapnā*</td>
+<td>Ruqaiyā Sakhāwat Hussain, *Sultānā Kā Sapnā*</td>
 <td>
 * Full text: [Nagari](husain-sultana.pdf) (translation by Vidyanidhi)
 * [Original English](https://digital.library.upenn.edu/women/sultana/dream/dream.html)
