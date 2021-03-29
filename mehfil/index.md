@@ -32,6 +32,7 @@ Here's an [in-progress list of Urdu-Hindi resources](resources) that you might f
 <td>
 * Full text: [Nagari](https://www.rekhta.org/nazms/meraa-safar-ham-chuu-sabza-baar-haa-roiida-em-ali-sardar-jafri-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/meraa-safar-ham-chuu-sabza-baar-haa-roiida-em-ali-sardar-jafri-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/meraa-safar-ham-chuu-sabza-baar-haa-roiida-em-ali-sardar-jafri-nazms)
 * [Excerpt from  by Bakht and Jaeger's *An Anthology of Modern Urdu Poetry*, Volume I](jafri-safar.pdf) (Urdu text, English translation)
+* [Reading by Abdul Ahad Saaz](https://www.youtube.com/watch?v=n22J3Tamax8)
 </td>
 </tr>
 
