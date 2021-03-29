@@ -25,7 +25,7 @@ Zoom links for the following are all on [Canvas](https://canvas.coloradocollege.
 * Problem sessions with Cinea: Mon Wed, 3--4pm MT
 * Office hours: 
     - Sunny: Mon--Thu, 1--2pm MT (or by request)
-    - Cinea: **TBA** <!-- tba --> (email Cinea to tell her you want to meet)
+    - Cinea: 9am--5pm MT (email Cinea to tell her you want to meet)
 
 You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/offices/qrc/blocktutorschedule/).
 

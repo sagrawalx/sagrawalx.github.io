@@ -79,6 +79,14 @@ nonav: true
 </td>
 </tr>
 
+<tr>
+<td>TBA</td>
+<td>Alī Sardār Jāfrī, *Dostī Kā Hāth*</td>
+<td>
+* Full text: [Nagari](https://www.rekhta.org/nazms/dostii-kaa-haath-ali-sardar-jafri-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/dostii-kaa-haath-ali-sardar-jafri-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/dostii-kaa-haath-ali-sardar-jafri-nazms)
+</td>
+</tr>
+
 </table>
 
 

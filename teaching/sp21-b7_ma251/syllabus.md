@@ -114,7 +114,7 @@ Participation           15%
 Here are some details about some of these components. 
 
 * *Reading questions*. You'll get 1 point for each reading question you submit, up to a maximum of $n-2$, where $n$ is the total number of readings assigned. In other words, you don't need to submit a question every day to get full credit here, and there's no extra credit for doing so. 
-* *Comprehension checks*. You'll get 1 point for each problem you submit, up to a maximum of $n-6$, where $n$ is the total number of problems assigned for comprehension checks. In other words, you don't need to submit a question every day to get full credit here, and there's no extra credit for doing so. 
+* *Comprehension checks*. You'll get 1 point for each problem you submit, up to a maximum of $n-7$, where $n$ is the total number of problems assigned for comprehension checks. In other words, you don't need to submit comprehension checks every day to get full credit here, and there's no extra credit for doing so. Note that the average number of problems assigned for each comprehension checks is 3.23, so you can expect to miss roughly 2 comprehension checks without penalty. 
 * *Participation*. You'll get a full score for the participation component of your grade as long as I am able to see that you are putting in a good faith effort to engage with the class.  
 
 ## Accommodations
