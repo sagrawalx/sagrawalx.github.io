@@ -1,6 +1,6 @@
 ---
 layout: default
-title: महफ़िल · محفل
+title: Home
 bannertext: महफ़िल · محفل
 bannerlink: mehfil
 nonav: true
