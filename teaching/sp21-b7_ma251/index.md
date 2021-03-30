@@ -190,8 +190,11 @@ How to read this calendar:
 * Topic: Sets, Induction, Binomial Theorem
 * Read: [A Rapid Introduction to Sets](sets.pdf), and 1.1--2  
 * Comprehension check (CC): (1.1) 1, 2, (1.2) 1(a)
-* Summary video (link will go here)
-* Select reading question responses (link will go here)
+* Summary videos and notes:
+    - [Induction](https://canvas.coloradocollege.edu/files/1033106/) and [notes](notes/induction.jpg)
+    - [Strong induction](https://canvas.coloradocollege.edu/files/1033098/) and [notes](notes/strong-induction.jpg)
+    - [Binomal theorem](https://canvas.coloradocollege.edu/files/1033149/) and [notes](notes/binomial.jpg)
+* [Select reading question responses](questions/intro.pdf)
 * Further practice (FP): (1.1) 3, 6, 7, 13, (1.2) 3
 
 ## Week 1, Wednesday

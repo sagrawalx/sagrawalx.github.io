@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Mehfil
+title: महफ़िल · محفل
 bannertext: महफ़िल · محفل
 bannerlink: mehfil
 nonav: true
@@ -9,7 +9,7 @@ permalink: mehfil/
 
 # Overview
 
-We're an *adabī aḍḍā* of sorts --- a gathering* of people interested in Hindi-Urdu[^name] linguistics, literature, music, film, etc. Everyone is welcome to participate: we span the spectrum from native speakers to learners. We also sometimes discuss works in other Southasian languages. If you'd like to be on the mailing list, send me an email at  <span class="email" data-localpart="sagrawal" data-domain="coloradocollege.edu"></span> to let me know! 
+We're an *adabī aḍḍā* of sorts --- a gathering* of people interested in Hindi-Urdu[^name] linguistics, literature, music, film, etc. Everyone is welcome to participate: we span the spectrum from native speakers to learners. We also sometimes discuss works in other Southasian languages. If you'd like to be on the mailing list, let me know at  <span class="email" data-localpart="sagrawal" data-domain="coloradocollege.edu"></span>! 
 
 Here's an [in-progress list of Urdu-Hindi resources](resources) that you might find useful. Resources specific to particular topics are listed in the calendar below.
 
