@@ -40,7 +40,7 @@ Spring 2021, Block 7 — MA251 — Problem Sets
 <p>There are two special types of problems:</p>
 <ul>
 <li>Problems labelled “Challenging” might be harder than the others (or they might not be, and I just went about them in a harder-than-necessary way!). A thorough solution to these problems will earn you 1 additional point on top of whatever you would otherwise have gotten on that problem.</li>
-<li>Problems labelled “programming” might require you to write some code (or they might not require that, and there’s a non-programmatic way of solving them that I haven’t thought of!). Note, though, that these problems will require some mathematical forethought. Feel free to write your code in whatever programming language you like. Write up a description in words of how your code works in your TeX file to submit through Gradescope, and then email me a plaintext file (<code>.py</code>, <code>.sage</code>, <code>.R</code>, <code>.hs</code>, etc) containing the code you wrote.</li>
+<li>Problems labelled “programming” might require you to write some code. Feel free to write your code in whatever programming language you like. Note, though, that these problems will still require some mathematical forethought. In your TeX document, tell me the answer you got and write up a proof that your code works. Submit your TeX document through Gradescope as usual, and then email me a well-commented plaintext file containing the code you wrote (<code>.py</code>, <code>.sage</code>, <code>.R</code>, <code>.hs</code>, etc).</li>
 </ul>
 <h2 id="A">Problem Set A</h2>
 <ol type="1">
@@ -65,30 +65,19 @@ F_5 &amp;= F_4 + F_3 = 3 + 2 = 5 \\
 <p>Prove that this pattern continues forever.</p></li>
 </ol>
 <h2 id="B">Problem Set B</h2>
-<!--
-1. There are 63 piles of bananas with $n$ bananas each, and 7 additional bananas. All of these bananas are divided evenly among 23 travelers. How many bananas can be in each pile? (Describe the set of all possible values of $n$.)
-
-    *Note*. This is a slight variant on a problem posed by the ninth-century mathematician [Mahāvīra](https://en.wikipedia.org/wiki/Mah%C4%81v%C4%ABra_(mathematician)). 
-
-2. Prove that $n!+1$ and $(n+1)!+1$ are relatively prime for any integer $n \geq 1$. 
-
-3. Prove that $$ \frac{\gcd(m,n)}{n} \binom{n}{m} $$ is an integer for all integers $n \geq m \geq 1$.
-
-    *Possible hint*. Write $\gcd(m,n)$ as a linear combination of $m$ and $n$. 
-
-4. Loki has acquired a well-earned reputation as a mischief-maker among the gods of Asgard. One day, Loki steals the goddess Iðunn's apples of eternal youth. With a wide grin on his face, he tells Iðunn that he's thinking of a perfect square which has remainder 3 when divided by 7, and if she tells him what number he's thinking of, he'll return her apples. Iðunn thinks about this for a few minutes, and then says "..." Loki glumly returns her apples. What does Iðunn say?
-
-5. Define a sequence of integers recursively by declaring $S_1 = 1$, $S_2 = 2$, and $$ S_{n+2} = 2S_{n+1} + S_n $$ for all $n \geq 1$. How many divisions must the Euclidean algorithm perform when computing $\gcd(S_{n+1}, S_n)$ before it finds a remainder of 0? What is this gcd? How would your answers to these questions change if the initial conditions used to define the sequence were $S_1 = 14$ and $S_2 = 49$ instead?
-
-6. Recall the definition of the *triangular numbers* $t_n$ from section 2.1, problem 1. Give an explicit description of the set of all positive integers $n$ such that $n \mid (t_1 + \dotsb + t_n)$. 
-
-    *Possible hint*. You may find it helpful to use results you've proved on comprehension checks. If you do this, make sure to TeX up your proofs to these results as a part of your solution to this problem. 
-    
-7. 
-
-8. Solve a problem from a previous problem set that you have not gotten any points for so far. 
-
--->
+<ol type="1">
+<li><p>There are 63 piles of bananas with <span class="math inline">\(n\)</span> bananas each, and 7 additional bananas. All of these bananas are divided evenly among 23 travelers. How many bananas can be in each pile? (Describe the set of all possible values of <span class="math inline">\(n\)</span>.)</p>
+<p><em>Note</em>. This is a slight variant on a problem posed by the ninth-century mathematician <a href="https://en.wikipedia.org/wiki/Mah%C4%81v%C4%ABra_(mathematician)">Mahāvīra</a>.</p></li>
+<li><p>Prove that <span class="math inline">\(n!+1\)</span> and <span class="math inline">\((n+1)!+1\)</span> are relatively prime for any integer <span class="math inline">\(n \geq 1\)</span>.</p></li>
+<li><p>Prove that <span class="math display">\[ \frac{\gcd(m,n)}{n} \binom{n}{m} \]</span> is an integer for all integers <span class="math inline">\(n \geq m \geq 1\)</span>.</p>
+<p><em>Possible hint</em>. Write <span class="math inline">\(\gcd(m,n)\)</span> as a linear combination of <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span>.</p></li>
+<li><p>Loki has acquired a well-earned reputation as a mischief-maker among the gods of Asgard. One day, Loki steals the goddess Iðunn’s apples of eternal youth. With a wide grin on his face, he tells Iðunn that he’s thinking of a perfect square which has remainder 3 when divided by 7, and if she tells him what number he’s thinking of, he’ll return her apples. Iðunn thinks about this for a few minutes, and then says “…” Loki glumly returns her apples. What does Iðunn say?</p></li>
+<li><p>Define a sequence of integers recursively by declaring <span class="math inline">\(S_1 = 1\)</span>, <span class="math inline">\(S_2 = 2\)</span>, and <span class="math display">\[ S_{n+2} = 2S_{n+1} + S_n \]</span> for all <span class="math inline">\(n \geq 1\)</span>. How many divisions must the Euclidean algorithm perform when computing <span class="math inline">\(\gcd(S_{n+1}, S_n)\)</span> before it finds a remainder of 0? What is this gcd? How would your answers to these questions change if the initial conditions used to define the sequence were <span class="math inline">\(S_1 = 14\)</span> and <span class="math inline">\(S_2 = 49\)</span> instead?</p></li>
+<li><p>Recall the definition of the <em>triangular numbers</em> <span class="math inline">\(t_n\)</span> from section 2.1, problem 1. Give an explicit description of the set of all positive integers <span class="math inline">\(n\)</span> such that <span class="math inline">\(n \mid (t_1 + \dotsb + t_n)\)</span>.</p>
+<p><em>Possible hint</em>. You may find it helpful to use results you’ve proved on comprehension checks. If you do this, make sure to TeX up your proofs to these results as a part of your solution to this problem.</p></li>
+<li><p>(Programming) Qwmqwm is a mathematicalien. Whenever she chooses a favorite number <span class="math inline">\(n\)</span>, her body reconfigures itself so that it has <span class="math inline">\(T(n)\)</span> tentacles, where <span class="math display">\[ T(n) = \sum_{k = 1}^{n-1} \gcd(n+k,n-k). \]</span> Qwmqwm has just chosen her favorite number to be 7568640000000083, which happens to be prime. How many tentacles does she now have?</p></li>
+<li><p>Submit a solution to a problem from a previous problem set that you haven’t gotten any points for so far.</p></li>
+</ol>
 <h2 id="C">Problem Set C</h2>
 <h2 id="D">Problem Set D</h2>
 <h2 id="E">Problem Set E</h2>
