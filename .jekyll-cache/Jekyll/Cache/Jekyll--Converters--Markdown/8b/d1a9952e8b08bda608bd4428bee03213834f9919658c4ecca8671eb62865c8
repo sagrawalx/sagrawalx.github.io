@@ -1,0 +1,53 @@
+I"�!<h1 id="problem-sets">Problem Sets</h1>
+<p>See instructions on the <a href="syllabus#problem-sets">syllabus</a>. Draft and final deadlines for each problem set are indicated on the <a href="index#calendar">calendar</a>. Submissions are all through Gradescope.</p>
+<p>There are two special types of problems:</p>
+<ul>
+<li>Problems labelled “Challenging” might be harder than the others (or they might not be, and I just went about them in a harder-than-necessary way!). A thorough solution to these problems will earn you 1 additional point on top of whatever you would otherwise have gotten on that problem.</li>
+<li>Problems labelled “programming” might require you to write some code. Feel free to write your code in whatever programming language you like. Note, though, that these problems will still require some mathematical forethought. In your TeX document, tell me the answer you got and write up a proof that your code works. Submit your TeX document through Gradescope as usual, and then email me a well-commented plaintext file containing the code you wrote (<code>.py</code>, <code>.sage</code>, <code>.R</code>, <code>.hs</code>, etc).</li>
+</ul>
+<h2 id="A">Problem Set A</h2>
+<ol type="1">
+<li><p>Let <span class="math inline">\(T\)</span> be the set of equilateral triangles with integer side lengths. Let <span class="math inline">\(T_1\)</span> be the subset of <span class="math inline">\(T\)</span> consisting of triangles with even side lengths, and let <span class="math inline">\(T_2\)</span> be the subset of <span class="math inline">\(T\)</span> consisting of triangles with even perimeter. Is it true that <span class="math inline">\(T_1 = T_2\)</span>? If so, prove it. If not, give an explicit example of a triangle that is in one of the sets but not the other.</p></li>
+<li><p>It is a fact that <span class="math inline">\((1+a)^n \geq 1+na\)</span> for any real number <span class="math inline">\(a \geq 0\)</span> and any integer <span class="math inline">\(n \geq 0\)</span>. Give two proofs of this fact: one using induction on <span class="math inline">\(n\)</span>, and another using the binomial theorem.</p></li>
+<li><p>The Fibonnacci numbers <span class="math inline">\(F_1, F_2, F_3, \dotsc\)</span> are defined by declaring <span class="math inline">\(F_1 = F_2 = 1\)</span> and then recursively defining <span class="math inline">\(F_{n+2} = F_{n+1} + F_n\)</span>. For example: <span class="math display">\[ \begin{aligned} 
+F_3 &amp;= F_2 + F_1 = 1 + 1 = 2 \\
+F_4 &amp;= F_3 + F_2 = 2 + 1 = 3 \\
+F_5 &amp;= F_4 + F_3 = 3 + 2 = 5 \\
+&amp;\;\,\vdots
+\end{aligned} \]</span> Prove that <span class="math inline">\(F_1^2 + \dotsb + F_n^2 = F_nF_{n+1}\)</span> for all <span class="math inline">\(n \geq 1\)</span>.</p></li>
+<li><p>Suppose that the post office only issued 3-cent stamps and 7-cent stamps. Give an <em>explicit</em> description of the set of all postage amounts that can be created using stamps of these two types. Prove that your description is correct.</p>
+<p><em>Possible hint</em>. Start by working out some examples to see what amounts are possible. Is 1 cent possible? No. Is 2 cents possible? No. Keep going like this until you find a pattern, and then prove that your pattern holds forever.</p></li>
+<li><p>Prove that, for any integer <span class="math inline">\(n \geq 1\)</span>, the binomial coefficient <span class="math inline">\(\binom{2n}{n}\)</span> is even.</p>
+<p><em>Possible hint</em>. If it’s possible to do this using induction, I don’t know how. The argument I have in mind is not inductive. But if you’re able to figure out an inductive argument, I’ll be very happy to see it!</p></li>
+<li><p>(Programming, Challenging) A mysterious order of technomonks has developed an arcane alphabet with 13 letters. They believe that all of the names of God are enumerated by strings of lengths 1 through 13 in this alphabet, except those strings in which a single letter occurs more than 3 times in succession. When all of the names of God have been listed, they believe that the universe will blink out of existence. To bring about this eschatological end, they’ve written a computer program that will print out exactly one name of God every second. In how many years will the universe blink out of existence?<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p></li>
+<li><p>(Challenging) Observe that the sums of the numbers in the diagonals of Pascal’s triangle depicted below are Fibonacci numbers.</p>
+<div style="text-align:center;">
+<img src="pascal-diagonals.png" width="65%"/><br />
+<span style="font-size:  0.75em;">[<a href="pascal-diagonals.tex">TeX Source</a>]</span>
+</div>
+<p>Prove that this pattern continues forever.</p></li>
+</ol>
+<h2 id="B">Problem Set B</h2>
+<ol type="1">
+<li><p>There are 63 piles of bananas with <span class="math inline">\(n\)</span> bananas each, and 7 additional bananas. All of these bananas are divided evenly among 23 travelers. How many bananas can be in each pile? (Describe the set of all possible values of <span class="math inline">\(n\)</span>.)</p>
+<p><em>Note</em>. This is a slight variant on a problem posed by the ninth-century mathematician <a href="https://en.wikipedia.org/wiki/Mah%C4%81v%C4%ABra_(mathematician)">Mahāvīra</a>.</p></li>
+<li><p>Prove that <span class="math inline">\(n!+1\)</span> and <span class="math inline">\((n+1)!+1\)</span> are relatively prime for any integer <span class="math inline">\(n \geq 1\)</span>.</p></li>
+<li><p>Prove that <span class="math display">\[ \frac{\gcd(m,n)}{n} \binom{n}{m} \]</span> is an integer for all integers <span class="math inline">\(n \geq m \geq 1\)</span>.</p>
+<p><em>Possible hint</em>. Write <span class="math inline">\(\gcd(m,n)\)</span> as a linear combination of <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span>.</p></li>
+<li><p>Loki has acquired a well-earned reputation as a mischief-maker among the gods of Asgard. One day, Loki steals the goddess Iðunn’s apples of eternal youth. With a wide grin on his face, he tells Iðunn that he’s thinking of a perfect square which has remainder 3 when divided by 7, and if she tells him what number he’s thinking of, he’ll return her apples. Iðunn thinks about this for a few minutes, and then says “…” Loki glumly returns her apples. What does Iðunn say?</p></li>
+<li><p>Define a sequence of integers recursively by declaring <span class="math inline">\(S_1 = 1\)</span>, <span class="math inline">\(S_2 = 2\)</span>, and <span class="math display">\[ S_{n+2} = 2S_{n+1} + S_n \]</span> for all <span class="math inline">\(n \geq 1\)</span>. How many divisions must the Euclidean algorithm perform when computing <span class="math inline">\(\gcd(S_{n+1}, S_n)\)</span> before it finds a remainder of 0? What is this gcd? How would your answers to these questions change if the initial conditions used to define the sequence were <span class="math inline">\(S_1 = 14\)</span> and <span class="math inline">\(S_2 = 49\)</span> instead?</p></li>
+<li><p>Recall the definition of the <em>triangular numbers</em> <span class="math inline">\(t_n\)</span> from section 2.1, problem 1. Give an explicit description of the set of all positive integers <span class="math inline">\(n\)</span> such that <span class="math inline">\(n \mid (t_1 + \dotsb + t_n)\)</span>.</p>
+<p><em>Possible hint</em>. You may find it helpful to use results you’ve proved on comprehension checks. If you do this, make sure to TeX up your proofs to these results as a part of your solution to this problem.</p></li>
+<li><p>(Programming) Qwmqwm is a mathematicalien. Whenever she chooses a favorite number <span class="math inline">\(n\)</span>, her body reconfigures itself so that it has <span class="math inline">\(T(n)\)</span> tentacles, where <span class="math display">\[ T(n) = \sum_{k = 1}^{n-1} \gcd(n+k,n-k). \]</span> Qwmqwm has just chosen her favorite number to be 7568640000000083, which happens to be prime. How many tentacles does she now have?</p></li>
+<li><p>Submit a solution to a problem from a previous problem set that you haven’t gotten any points for so far.</p></li>
+</ol>
+<h2 id="C">Problem Set C</h2>
+<h2 id="D">Problem Set D</h2>
+<h2 id="E">Problem Set E</h2>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>The premise of this problem is based loosely on Arthur C. Clarke’s short story, “The Nine Billion Names of God.” But, in this problem, there might not be nine billion names… ☺<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+:ET

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Resources
 bannertext: महफ़िल · محفل
 bannerlink: mehfil
 nonav: true

@@ -13,7 +13,7 @@ See instructions on the [syllabus](syllabus#problem-sets). Draft and final deadl
 There are two special types of problems: 
 
 * Problems labelled "Challenging" might be harder than the others (or they might not be, and I just went about them in a harder-than-necessary way!). A thorough solution to these problems will earn you 1 additional point on top of whatever you would otherwise have gotten on that problem. 
-* Problems labelled "programming" might require you to write some code (or they might not require that, and there's a non-programmatic way of solving them that I haven't thought of!). Note, though, that these problems will require some mathematical forethought. Feel free to write your code in whatever programming language you like. Write up a description in words of how your code works in your TeX file to submit through Gradescope, and then email me a plaintext file (`.py`, `.sage`, `.R`, `.hs`, etc) containing the code you wrote. 
+* Problems labelled "programming" might require you to write some code. Feel free to write your code in whatever programming language you like. Note, though, that these problems will still require some mathematical forethought. In your TeX document, tell me the answer you got and write up a proof that your code works. Submit your TeX document through Gradescope as usual, and then email me a well-commented plaintext file containing the code you wrote (`.py`, `.sage`, `.R`, `.hs`, etc). 
 
 ## Problem Set A {#A}
 
@@ -53,7 +53,6 @@ Prove that $F_1^2 + \dotsb + F_n^2 = F_nF_{n+1}$ for all $n \geq 1$.
 
 ## Problem Set B {#B}
 
-<!--
 1. There are 63 piles of bananas with $n$ bananas each, and 7 additional bananas. All of these bananas are divided evenly among 23 travelers. How many bananas can be in each pile? (Describe the set of all possible values of $n$.)
 
     *Note*. This is a slight variant on a problem posed by the ninth-century mathematician [Mahāvīra](https://en.wikipedia.org/wiki/Mah%C4%81v%C4%ABra_(mathematician)). 
@@ -72,11 +71,9 @@ Prove that $F_1^2 + \dotsb + F_n^2 = F_nF_{n+1}$ for all $n \geq 1$.
 
     *Possible hint*. You may find it helpful to use results you've proved on comprehension checks. If you do this, make sure to TeX up your proofs to these results as a part of your solution to this problem. 
     
-7. 
+7. (Programming) Qwmqwm is a mathematicalien. Whenever she chooses a favorite number $n$, her body reconfigures itself so that it has $T(n)$ tentacles, where $$ T(n) = \sum_{k = 1}^{n-1} \gcd(n+k,n-k). $$ Qwmqwm has just chosen her favorite number to be 7568640000000083, which happens to be prime. How many tentacles does she now have? 
 
-8. Solve a problem from a previous problem set that you have not gotten any points for so far. 
-
--->
+8. Submit a solution to a problem from a previous problem set that you haven't gotten any points for so far. 
 
 ## Problem Set C {#C}
 
