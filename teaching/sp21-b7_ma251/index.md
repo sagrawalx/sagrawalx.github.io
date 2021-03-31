@@ -15,7 +15,7 @@ nonav: true
 * [Course syllabus](syllabus)
 * [Problem sets](ps)
 * Textbook: Burton, *Elementary Number Theory* (7th edition)
-* [Proof writing guidelines](guidelines.pdf)
+* [Proof writing advice](advice.pdf)
 
 # Live events
  
