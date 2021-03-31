@@ -15,6 +15,17 @@ nonav: true
 <th style="width: 60%;">Resources</th>
 </tr>
 
+
+<tr>
+<td>3/30</td>
+<td>Alī Sardār Jāfrī, *Merā Safar*</td>
+<td>
+* Full text: [Nagari](https://www.rekhta.org/nazms/meraa-safar-ham-chuu-sabza-baar-haa-roiida-em-ali-sardar-jafri-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/meraa-safar-ham-chuu-sabza-baar-haa-roiida-em-ali-sardar-jafri-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/meraa-safar-ham-chuu-sabza-baar-haa-roiida-em-ali-sardar-jafri-nazms)
+* [Excerpt from  by Bakht and Jaeger's *An Anthology of Modern Urdu Poetry*, Volume I](jafri-safar.pdf) (Urdu text, English translation)
+* [Reading by Abdul Ahad Saaz](https://www.youtube.com/watch?v=n22J3Tamax8)
+</td>
+</tr>
+
 <tr>
 <td>4/13</td>
 <td>Alī Sardār Jāfri, *Sar-e-Tūr*</td>
@@ -30,16 +41,6 @@ nonav: true
 <td>
 * Full text: [Nagari](https://www.rekhta.org/nazms/yaad-faiz-ahmad-faiz-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/yaad-faiz-ahmad-faiz-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/yaad-faiz-ahmad-faiz-nazms)
 * [Musical performance by Meesha Shafi](https://www.youtube.com/watch?v=tYB-6i_q4sU) (the closed captions on the YouTube video have Urdu and Roman lyrics and an English translation)
-</td>
-</tr>
-
-<tr>
-<td>TBA</td>
-<td>Muktibodh, *Maiṇ Tum Logoṇ Se Dūr Hūṇ*</td>
-<td>
-* [Full text](texts#tum-logon-se-duur) (Nagari and Urdu)
-* [Reading by Kavyanki](https://www.youtube.com/watch?v=vHI_oD1h28A)
-* [Discussion and translation by Chanchal Chauhan](chauhan-muktibodh.pdf) (excerpt from the article "[Ideological Content of Muktibodh's Poetry](https://www.jstor.org/stable/23343293?seq=1)")
 </td>
 </tr>
 

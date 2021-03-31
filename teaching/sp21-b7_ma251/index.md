@@ -15,6 +15,7 @@ nonav: true
 * [Course syllabus](syllabus)
 * [Problem sets](ps)
 * Textbook: Burton, *Elementary Number Theory* (7th edition)
+* [Proof writing guidelines](guidelines.pdf)
 
 # Live events
  
@@ -202,8 +203,8 @@ How to read this calendar:
 * Topics: Early Number Theory, Division Algorithm
 * Read: 2.1--2
 * CC: (2.1) 1, (2.2) 1, 2
-* Summary video (link will go here)
-* Select reading question responses (link will go here)
+* [Summary video](https://canvas.coloradocollege.edu/files/1033150/) and [notes](notes/division.jpg)
+* [Select reading question responses](questions/basics.pdf)
 * FP: (2.1) 2, 7, (2.2) 3, 4, 5
 
 ## Week 1, Thursday

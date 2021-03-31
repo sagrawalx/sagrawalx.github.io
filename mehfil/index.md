@@ -27,12 +27,12 @@ Here's an [in-progress list of Urdu-Hindi resources](resources) that you might f
 </tr>
 
 <tr>
-<td>3/30</td>
-<td>Alī Sardār Jāfrī, *Merā Safar*</td>
+<td>4/6</td>
+<td>Muktibodh, *Maiṇ Tum Logoṇ Se Dūr Hūṇ*</td>
 <td>
-* Full text: [Nagari](https://www.rekhta.org/nazms/meraa-safar-ham-chuu-sabza-baar-haa-roiida-em-ali-sardar-jafri-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/meraa-safar-ham-chuu-sabza-baar-haa-roiida-em-ali-sardar-jafri-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/meraa-safar-ham-chuu-sabza-baar-haa-roiida-em-ali-sardar-jafri-nazms)
-* [Excerpt from  by Bakht and Jaeger's *An Anthology of Modern Urdu Poetry*, Volume I](jafri-safar.pdf) (Urdu text, English translation)
-* [Reading by Abdul Ahad Saaz](https://www.youtube.com/watch?v=n22J3Tamax8)
+* [Full text](texts#tum-logon-se-duur) (Nagari and Urdu)
+* [Reading by Kavyanki](https://www.youtube.com/watch?v=vHI_oD1h28A)
+* [Discussion and translation by Chanchal Chauhan](chauhan-muktibodh.pdf) (excerpt from the article "[Ideological Content of Muktibodh's Poetry](https://www.jstor.org/stable/23343293?seq=1)")
 </td>
 </tr>
 

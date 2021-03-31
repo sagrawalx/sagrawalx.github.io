@@ -1,4 +1,4 @@
-I"#<p><img class="sidepic" src="/img/hello-bunny.svg" title="Hello!"/></p>
+I"[$<p><img class="sidepic" src="/img/hello-bunny.svg" title="Hello!"/></p>
 <h1 id="basic-information">Basic information</h1>
 <ul>
 <li>Email: <span class="email" data-localpart="sagrawal" data-domain="coloradocollege.edu"></span></li>
@@ -29,6 +29,10 @@ Deformations of overconvergent isocrystals on the projective line. <a href="http
 </li>
 </ul>
 <h1 id="talks">Talks</h1>
+<!--
+* From category $\mathcal{O}^\infty$ to locally analytic representations (May 2021). Arithmetic geomerty seminar, Institut de Recherche Mathématique de Rennes. 
+* From category $\mathcal{O}^\infty$ to locally analytic representations (April 2021). $p$-Adic Representations and Arithmetic D-modules, Università degli Studi di Padova. 
+-->
 <ul>
 <li>Perspective: The Mathematics of Depicting Depth (February 2020). Fearless Fridays, Colorado College.</li>
 <li>How local systems arise (February 2019). Rings and Wings, UC Colorado Springs.</li>
@@ -151,13 +155,13 @@ Deformations of overconvergent isocrystals on the projective line. <a href="http
 </ul>
 <h2 id="departmental">Departmental</h2>
 <ul>
-<li>Inclusive Spaces Committee (2019–Present).</li>
-<li>Summer Research Survey (2019–2020).</li>
-<li>MAA Liaison (2018–2019).</li>
+<li>Inclusive Spaces Committee (2019–Present)</li>
+<li>Summer Research Survey (2019–Present)</li>
+<li>MAA Liaison (2018–2019)</li>
 </ul>
 <h2 id="other">Other</h2>
 <ul>
-<li>Organizer of CC’s Hindi-Urdu Mehfil</li>
+<li>Organizer of a Hindi-Urdu Mehfil</li>
 <li>Translator for Mutual Aid NYC</li>
 </ul>
 <h1 id="awards">Awards</h1>
