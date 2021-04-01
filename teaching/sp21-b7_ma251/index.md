@@ -25,10 +25,16 @@ Zoom links for the following are all on [Canvas](https://canvas.coloradocollege.
 * Problem sessions with Elizabeth: Tue Thu Sun, 7:45--8:45pm MT
 * Problem sessions with Cinea: Mon Wed, 3--4pm MT
 * Office hours: 
-    - Sunny: Mon--Thu, 1--2pm MT (or by request). Notes: [3/30](notes/oh3-30.pdf)
+    - Sunny: Mon--Thu, 1--2pm MT (or by request).
     - Cinea: 9am--5pm MT (email Cinea to tell her you want to meet)
 
 You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/offices/qrc/blocktutorschedule/).
+
+Here are notes from Sunny's office hours and/or problem sessions: 
+
+<div style="text-align:center;">
+[3/30](notes/3-30.pdf), [3/31](notes/3-31.pdf), ...
+</div>
 
 # Links 
 
@@ -195,7 +201,7 @@ How to read this calendar:
     - [Induction](https://canvas.coloradocollege.edu/files/1033106/) and [notes](notes/induction.jpg)
     - [Strong induction](https://canvas.coloradocollege.edu/files/1033098/) and [notes](notes/strong-induction.jpg)
     - [Binomal theorem](https://canvas.coloradocollege.edu/files/1033149/) and [notes](notes/binomial.jpg)
-* [Select reading question responses](questions/intro.pdf)
+* [Select reading question responses](srqr/intro.pdf)
 * Further practice (FP): (1.1) 3, 6, 7, 13, (1.2) 3
 
 ## Week 1, Wednesday
@@ -204,7 +210,7 @@ How to read this calendar:
 * Read: 2.1--2
 * CC: (2.1) 1, (2.2) 1, 2
 * [Summary video](https://canvas.coloradocollege.edu/files/1033150/) and [notes](notes/division.jpg)
-* [Select reading question responses](questions/basics.pdf)
+* [Select reading question responses](srqr/basics.pdf)
 * FP: (2.1) 2, 7, (2.2) 3, 4, 5
 
 ## Week 1, Thursday
@@ -212,8 +218,10 @@ How to read this calendar:
 * Topic: Greatest Common Divisors
 * Read: 2.3--4
 * CC: (2.3) 2(a), 3, 4(a), 12, (2.4) 1
-* Summary video (link will go here)
-* Select reading question responses (link will go here)
+* Summary videos and notes:
+    - [Divisibility](https://canvas.coloradocollege.edu/files/1033107/) and [notes](notes/divisibility.jpg)
+    - GCD (parts [1](https://canvas.coloradocollege.edu/files/1033101/) and [2](https://canvas.coloradocollege.edu/files/1033165/)) and [notes](notes/gcd.jpg)
+* [Select reading question responses](srqr/divisibility.pdf)
 * FP: (2.3) 2(b-d), 4(b-e), 6, 7, (2.4) 2, 4(a,b), 11
 
 ## Week 1, Friday
