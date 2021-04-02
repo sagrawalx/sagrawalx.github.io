@@ -1,4 +1,4 @@
-I"�!<h1 id="problem-sets">Problem Sets</h1>
+I"w"<h1 id="problem-sets">Problem Sets</h1>
 <p>See instructions on the <a href="syllabus#problem-sets">syllabus</a>. Draft and final deadlines for each problem set are indicated on the <a href="index#calendar">calendar</a>. Submissions are all through Gradescope.</p>
 <p>There are two special types of problems:</p>
 <ul>
@@ -38,7 +38,8 @@ F_5 &amp;= F_4 + F_3 = 3 + 2 = 5 \\
 <li><p>Define a sequence of integers recursively by declaring <span class="math inline">\(S_1 = 1\)</span>, <span class="math inline">\(S_2 = 2\)</span>, and <span class="math display">\[ S_{n+2} = 2S_{n+1} + S_n \]</span> for all <span class="math inline">\(n \geq 1\)</span>. How many divisions must the Euclidean algorithm perform when computing <span class="math inline">\(\gcd(S_{n+1}, S_n)\)</span> before it finds a remainder of 0? What is this gcd? How would your answers to these questions change if the initial conditions used to define the sequence were <span class="math inline">\(S_1 = 14\)</span> and <span class="math inline">\(S_2 = 49\)</span> instead?</p></li>
 <li><p>Recall the definition of the triangular numbers <span class="math inline">\(t_n\)</span> from section 2.1, problem 1. Give an explicit description of the set of all positive integers <span class="math inline">\(n\)</span> such that <span class="math inline">\(n \mid (t_1 + \dotsb + t_n)\)</span>.</p>
 <p><em>Possible hint</em>. You may find it helpful to use results you’ve proved on comprehension checks. If you do this, make sure to TeX up your proofs to these results as a part of your solution to this problem.</p></li>
-<li><p>(Programming) Qwmqwm is a mathematicalien. Whenever she chooses a favorite number <span class="math inline">\(n\)</span>, her body reconfigures itself so that it has <span class="math inline">\(T(n)\)</span> tentacles, where <span class="math display">\[ T(n) = \sum_{k = 1}^{n-1} \gcd(n+k,n-k). \]</span> Qwmqwm has just chosen her favorite number to be 7568640000000083, which happens to be prime. How many tentacles does she now have?</p></li>
+<li><p>(Programming?) Qwmqwm is a mathematicalien. Whenever she chooses a favorite number <span class="math inline">\(n\)</span>, her body reconfigures itself so that it has <span class="math inline">\(T(n)\)</span> tentacles, where <span class="math display">\[ T(n) = \sum_{k = 1}^{n-1} \gcd(n+k,n-k). \]</span> Qwmqwm has just chosen her favorite number to be 7568640000000083, which happens to be prime. How many tentacles does she now have?</p>
+<p>Note: This problem can be done without programming. It might just take you a little bit longer to notice a pattern by hand.</p></li>
 <li><p>Submit a solution to a problem from a previous problem set that you haven’t gotten any points for so far.</p></li>
 </ol>
 <h2 id="C">Problem Set C</h2>
