@@ -226,7 +226,7 @@ How to read this calendar:
 
 ## Week 1, Friday
 
-* Topic: The Diophantine Equation $ax + by = c$
+* Topic: Diophantine $ax + by = c$
 * Read: 2.5
 * CC: (2.5) 1, 2
 * Summary video (parts [1](https://canvas.coloradocollege.edu/files/1033161/), [2](https://canvas.coloradocollege.edu/files/1033160/), and [3](https://canvas.coloradocollege.edu/files/1033096/)) and [notes](notes/diophantine.jpg)
