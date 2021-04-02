@@ -229,8 +229,8 @@ How to read this calendar:
 * Topic: The Diophantine Equation $ax + by = c$
 * Read: 2.5
 * CC: (2.5) 1, 2
-* Summary video (link will go here)
-* Select reading question responses (link will go here)
+* Summary video (parts [1](https://canvas.coloradocollege.edu/files/1033161/), [2](https://canvas.coloradocollege.edu/files/1033160/), and [3](https://canvas.coloradocollege.edu/files/1033096/)) and [notes](notes/diophantine.jpg)
+* [Select reading question responses](srqr/diophantine.pdf)
 * FP: (2.5) 4, 6
 
 ## Week 2, Monday
