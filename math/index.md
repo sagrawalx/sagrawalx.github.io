@@ -15,7 +15,7 @@ I completed my PhD at UC Berkeley in 2018. My advisor was [David Nadler](https:/
 
 {% include papers.html %}
 
-My PhD thesis is available [here](https://escholarship.org/uc/item/1sp926n0). There are several errata in the document. Most are not terribly serious, but I suggest that readers look at the arXiv version. However, it's worth noting that the arXiv version does omit some of the expository content of the thesis.
+My PhD thesis is available [here](https://escholarship.org/uc/item/1sp926n0). There are a few typos. Most are not terribly serious. The arXiv and published versions correct these typos, but they do omit some of the expository content that's in my thesis.
 
 # Miscellaneous
 
