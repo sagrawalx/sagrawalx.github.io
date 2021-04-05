@@ -1,4 +1,4 @@
-I"�<h1 id="overview">Overview</h1>
+I"<h1 id="overview">Overview</h1>
 <p>I study algebraic geometry: more specifically, I am interested in <span class="math inline">\(p\)</span>-adic cohomology theories and <span class="math inline">\(p\)</span>-adic analytic geometry.</p>
 <p>Here are some mathematical phrases that I find exciting/intriguing: <span class="math inline">\(p\)</span>-adic, nonarchimedean, adic space, perfectoid, pro-étale, overconvergent, (bounded) Robba ring, (arithmetic) D-module, rigid cohomology, de Rham(-Witt), crystalline, cotangent complex, (higher) category, derived, homological, topos, derivator, non-noetherian, …</p>
 <p>I completed my PhD at UC Berkeley in 2018. My advisor was <a href="https://math.berkeley.edu/~nadler/">David Nadler</a>.</p>
@@ -13,18 +13,19 @@ Deformations of overconvergent isocrystals on the projective line. <a href="http
 </li>
 </ul>
 <p>My PhD thesis is available <a href="https://escholarship.org/uc/item/1sp926n0">here</a>. There are a few typos. Most are not terribly serious. The arXiv and published versions correct these typos, but they do omit some of the expository content that’s in my thesis.</p>
-<h1 id="miscellaneous">Miscellaneous</h1>
-<p>Here are some slides and/or notes for talks I’ve given.</p>
+<h1 id="talks">Talks</h1>
+<p>Here are some slides and/or notes for some of the talks I’ve given.</p>
 <ul>
 <li><a href="o-infty-padova.pdf">From category <span class="math inline">\(\mathcal{O}^\infty\)</span> to locally analytic representations</a>. Notes from a talk I gave (about the paper of the same name) in April 2021 at the <em>p-adic representations and arithmetic D-modules</em> seminar, organized by Andrés Sarrazola Alzate and Francesco Baldassari, at the Università degli Studi di Padova.</li>
 <li><a href="perspective.pdf">Perspective: The Mathematics of Depicting Depth</a>. Slides for a talk I gave at Colorado College’s <em>Fearless Fridays</em> seminar in February 2020.</li>
 <li><a href="smorgasbord.pdf">A Smörgåsbord of Arithmetic Geometry</a>. Slides for a talk I gave at Colorado College’s <em>Fearless Fridays</em> seminar in February 2018.</li>
+<li><a href="cotangent.pdf">Contangent complex</a>. Some (incomplete!) notes I compiled when I was preparing for a talk I gave in David Nadler’s fall 2013 <em>geometric representation theory</em> seminar.</li>
 </ul>
+<h1 id="miscellaneous">Miscellaneous</h1>
 <p>Here are some miscellaneous mathematical writings.</p>
 <ul>
 <li><a href="tangent">Off on a tangent</a>. Some notes about derivatives.</li>
 <li><a href="exp-infty.pdf">Exponential at infinity</a>. A fun explicit calculation I did during summer 2017 involving an irregular rank 1 overconvergent differential module over the Robba ring.</li>
-<li><a href="cotangent.pdf">Contangent complex</a>. Some incomplete notes I compiled when I was preparing for a talk I gave in David Nadler’s Fall 2013 Geometric Representation Theory Seminar.</li>
 <li><a href="fg-curve.pdf">Fundamental group of a curve</a>. An expository term paper from Martin Olsson’s Spring 2012 Algebraic Geometry course.</li>
 </ul>
 <p>If you find errors in any of these, please let me know!</p>
