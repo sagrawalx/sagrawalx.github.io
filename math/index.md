@@ -21,7 +21,7 @@ My PhD thesis is available [here](https://escholarship.org/uc/item/1sp926n0). Th
 
 Here are some slides and/or notes for talks I've given.
 
-* [From category $\mathcal{O}^\infty$ to locally analytic representations](o-infty-padova.pdf). Notes from a talk I gave (about the paper of the same name) in April 2021 at the *p-adic representations and arithmetic D-modules* seminar, organized by Andrés Sarrazola A. and Francesco Baldassari, at the Università degli Studi di Padova. 
+* [From category $\mathcal{O}^\infty$ to locally analytic representations](o-infty-padova.pdf). Notes from a talk I gave (about the paper of the same name) in April 2021 at the *p-adic representations and arithmetic D-modules* seminar, organized by Andrés Sarrazola Alzate and Francesco Baldassari, at the Università degli Studi di Padova. 
 * [Perspective: The Mathematics of Depicting Depth](perspective.pdf). Slides for a talk I gave at Colorado College's *Fearless Fridays* seminar in February 2020. 
 * [A Smörgåsbord of Arithmetic Geometry](smorgasbord.pdf). Slides for a talk I gave at Colorado College's *Fearless Fridays* seminar in February 2018.
 
