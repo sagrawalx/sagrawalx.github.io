@@ -30,7 +30,7 @@ Zoom links for the following are all on [Canvas](https://canvas.coloradocollege.
 
 You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/offices/qrc/blocktutorschedule/).
 
-Here are notes from Sunny's office hours and/or problem sessions: [3/30](notes/3-30.pdf), [3/31](notes/3-31.pdf), ...
+Here are notes from Sunny's office hours and/or problem sessions: [3/30](notes/3-30.pdf), [3/31](notes/3-31.pdf), [4/2](notes/4-02.pdf)...
 
 # Links 
 
@@ -233,7 +233,9 @@ How to read this calendar:
 
 * Topic: Primes
 * Read: 3.1--2 (3.3 is optional)
-* CC: (3.1) 3(a), 4, 7, 12 (3.2) 1, 2
+* CC: (3.1) 3(a), 4, 7, 12 (3.2) 1, 2  
+* Summary video (parts [1](https://canvas.coloradocollege.edu/files/1033177/), [2](https://canvas.coloradocollege.edu/files/1033178/), [3](https://canvas.coloradocollege.edu/files/1033100/), and [4](https://canvas.coloradocollege.edu/files/1033179/)) and [notes](notes/primes.jpg)
+* [Select reading question responses](srqr/primes.pdf)
 * FP: (3.1) 3(b-e), 15, 17 (3.2) 5, 7, 9(a)
 
 ## Week 2, Tuesday 

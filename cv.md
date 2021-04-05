@@ -30,9 +30,8 @@ permalink: cv/
 # Talks
 
 <!--
-* From category $\mathcal{O}^\infty$ to locally analytic representations (May 2021). Arithmetic geomerty seminar, Institut de Recherche Mathématique de Rennes. 
+* From category $\mathcal{O}^\infty$ to locally analytic representations (May 2021). Arithmetic geomerty seminar, Institut de Recherche Mathématique de Rennes. -->
 * From category $\mathcal{O}^\infty$ to locally analytic representations (April 2021). $p$-Adic Representations and Arithmetic D-modules, Università degli Studi di Padova. 
--->
 * Perspective: The Mathematics of Depicting Depth (February 2020). Fearless Fridays, Colorado College. 
 * How local systems arise (February 2019). Rings and Wings, UC Colorado Springs.
 * Rigid local systems and rigid isocrystals (June 2018). Number theory seminar, UC San Diego.
