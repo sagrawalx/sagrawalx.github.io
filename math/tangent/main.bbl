@@ -1,0 +1,442 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global}
+    \entry{konigsberger}{book}{}
+      \name{author}{1}{}{%
+        {{hash=6ccc562a716d5970a27b749bf96cf4f5}{%
+           family={Königsberger},
+           familyi={K\bibinitperiod},
+           given={Konrad},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{6ccc562a716d5970a27b749bf96cf4f5}
+      \strng{fullhash}{6ccc562a716d5970a27b749bf96cf4f5}
+      \strng{bibnamehash}{6ccc562a716d5970a27b749bf96cf4f5}
+      \strng{authorbibnamehash}{6ccc562a716d5970a27b749bf96cf4f5}
+      \strng{authornamehash}{6ccc562a716d5970a27b749bf96cf4f5}
+      \strng{authorfullhash}{6ccc562a716d5970a27b749bf96cf4f5}
+      \field{labelalpha}{{Kö93}}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{3-540-54723-1}
+      \field{note}{Grundwissen Mathematik}
+      \field{series}{Springer-Lehrbuch}
+      \field{shorthand}{{Kö93}}
+      \field{title}{Analysis 2}
+      \field{year}{1993}
+      \true{nocite}
+    \endentry
+    \entry{axler}{book}{}
+      \name{author}{1}{}{%
+        {{hash=71493eec7caacea528ad39dbfb52773a}{%
+           family={Axler},
+           familyi={A\bibinitperiod},
+           given={Sheldon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{71493eec7caacea528ad39dbfb52773a}
+      \strng{fullhash}{71493eec7caacea528ad39dbfb52773a}
+      \strng{bibnamehash}{71493eec7caacea528ad39dbfb52773a}
+      \strng{authorbibnamehash}{71493eec7caacea528ad39dbfb52773a}
+      \strng{authornamehash}{71493eec7caacea528ad39dbfb52773a}
+      \strng{authorfullhash}{71493eec7caacea528ad39dbfb52773a}
+      \field{labelalpha}{Axl15}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Third}
+      \field{series}{Undergraduate Texts in Mathematics}
+      \field{title}{Linear algebra done right}
+      \field{year}{2015}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1007/978-3-319-11080-6
+      \endverb
+    \endentry
+    \entry{gadea}{book}{}
+      \name{author}{3}{}{%
+        {{hash=a24be1cee096841d5db4892efaaf7cba}{%
+           family={Gadea},
+           familyi={G\bibinitperiod},
+           given={Pedro\bibnamedelima M.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=a8961ed8d32e2f24a67ebd1752b5c5d8}{%
+           family={Masqué},
+           familyi={M\bibinitperiod},
+           given={Jaime\bibnamedelima Muñoz},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=572d9b6f3b5c70bdd4fb5484335630b3}{%
+           family={Mykytyuk},
+           familyi={M\bibinitperiod},
+           given={Ihor\bibnamedelima V.},
+           giveni={I\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{f69c63f05d2a33033e379e3e5112e871}
+      \strng{fullhash}{f69c63f05d2a33033e379e3e5112e871}
+      \strng{bibnamehash}{f69c63f05d2a33033e379e3e5112e871}
+      \strng{authorbibnamehash}{f69c63f05d2a33033e379e3e5112e871}
+      \strng{authornamehash}{f69c63f05d2a33033e379e3e5112e871}
+      \strng{authorfullhash}{f69c63f05d2a33033e379e3e5112e871}
+      \field{labelalpha}{GMM13}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Second}
+      \field{series}{Problem Books in Mathematics}
+      \field{title}{Analysis and algebra on differentiable manifolds}
+      \field{year}{2013}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1007/978-94-007-5952-7
+      \endverb
+    \endentry
+    \entry{counterexamples}{book}{}
+      \name{author}{2}{}{%
+        {{hash=480e47081ad9c1c9459d27c11bcbe315}{%
+           family={Gelbaum},
+           familyi={G\bibinitperiod},
+           given={Bernard\bibnamedelima R.},
+           giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=11b06f64a79fcf5a90fbdf8d35bb6955}{%
+           family={Olmsted},
+           familyi={O\bibinitperiod},
+           given={John\bibnamedelimb M.\bibnamedelimi H.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Dover Publications, Inc.}%
+      }
+      \strng{namehash}{fa10e98b781a591c685cd015f419a933}
+      \strng{fullhash}{fa10e98b781a591c685cd015f419a933}
+      \strng{bibnamehash}{fa10e98b781a591c685cd015f419a933}
+      \strng{authorbibnamehash}{fa10e98b781a591c685cd015f419a933}
+      \strng{authornamehash}{fa10e98b781a591c685cd015f419a933}
+      \strng{authorfullhash}{fa10e98b781a591c685cd015f419a933}
+      \field{labelalpha}{GO03}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0-486-42875-3}
+      \field{note}{Corrected reprint of the second (1965) edition}
+      \field{title}{Counterexamples in analysis}
+      \field{year}{2003}
+      \true{nocite}
+    \endentry
+    \entry{golub}{book}{}
+      \name{author}{2}{}{%
+        {{hash=8b856da92ad549d323acc679ecf7f474}{%
+           family={Golub},
+           familyi={G\bibinitperiod},
+           given={Gene\bibnamedelima H.},
+           giveni={G\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=4ed2d13e66ef340bd8d892c23333c87b}{%
+           family={Van\bibnamedelima Loan},
+           familyi={V\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Charles\bibnamedelima F.},
+           giveni={C\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Johns Hopkins University Press}%
+      }
+      \strng{namehash}{315525c1558db03561c0e8a8b605758b}
+      \strng{fullhash}{315525c1558db03561c0e8a8b605758b}
+      \strng{bibnamehash}{315525c1558db03561c0e8a8b605758b}
+      \strng{authorbibnamehash}{315525c1558db03561c0e8a8b605758b}
+      \strng{authornamehash}{315525c1558db03561c0e8a8b605758b}
+      \strng{authorfullhash}{315525c1558db03561c0e8a8b605758b}
+      \field{labelalpha}{GV13}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Fourth}
+      \field{isbn}{978-1-4214-0859-0}
+      \field{series}{Johns Hopkins Studies in the Mathematical Sciences}
+      \field{title}{Matrix computations}
+      \field{year}{2013}
+      \true{nocite}
+    \endentry
+    \entry{hefferon}{book}{}
+      \name{author}{1}{}{%
+        {{hash=3cd51a2d67ae8156be919188521703a6}{%
+           family={Hefferon},
+           familyi={H\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{3cd51a2d67ae8156be919188521703a6}
+      \strng{fullhash}{3cd51a2d67ae8156be919188521703a6}
+      \strng{bibnamehash}{3cd51a2d67ae8156be919188521703a6}
+      \strng{authorbibnamehash}{3cd51a2d67ae8156be919188521703a6}
+      \strng{authornamehash}{3cd51a2d67ae8156be919188521703a6}
+      \strng{authorfullhash}{3cd51a2d67ae8156be919188521703a6}
+      \field{labelalpha}{Hef19}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Third}
+      \field{title}{Linear algebra}
+      \field{year}{2019}
+      \true{nocite}
+      \verb{urlraw}
+      \verb http://joshua.smcvt.edu/linearalgebra/
+      \endverb
+      \verb{url}
+      \verb http://joshua.smcvt.edu/linearalgebra/
+      \endverb
+    \endentry
+    \entry{protter-morrey}{book}{}
+      \name{author}{2}{}{%
+        {{hash=5fa3111c8891e7fe545c8146972d2a4b}{%
+           family={Protter},
+           familyi={P\bibinitperiod},
+           given={Murray\bibnamedelima H.},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=6a6fb328dec67e03e2a476aae716185c}{%
+           family={Morrey},
+           familyi={M\bibinitperiod},
+           given={Charles\bibnamedelima B.},
+           giveni={C\bibinitperiod\bibinitdelim B\bibinitperiod},
+           suffix={Jr.},
+           suffixi={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{e37ca88806da41cacddf1df503bb7563}
+      \strng{fullhash}{e37ca88806da41cacddf1df503bb7563}
+      \strng{bibnamehash}{e37ca88806da41cacddf1df503bb7563}
+      \strng{authorbibnamehash}{e37ca88806da41cacddf1df503bb7563}
+      \strng{authornamehash}{e37ca88806da41cacddf1df503bb7563}
+      \strng{authorfullhash}{e37ca88806da41cacddf1df503bb7563}
+      \field{labelalpha}{PM91}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Second}
+      \field{series}{Undergraduate Texts in Mathematics}
+      \field{title}{A first course in real analysis}
+      \field{year}{1991}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1007/978-1-4419-8744-0
+      \endverb
+    \endentry
+    \entry{pompeiu}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5cf4d638fa0ec80bcd63ee70e297b34a}{%
+           family={Pompeiu},
+           familyi={P\bibinitperiod},
+           given={Dimitrie\bibnamedelima D.},
+           giveni={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{5cf4d638fa0ec80bcd63ee70e297b34a}
+      \strng{fullhash}{5cf4d638fa0ec80bcd63ee70e297b34a}
+      \strng{bibnamehash}{5cf4d638fa0ec80bcd63ee70e297b34a}
+      \strng{authorbibnamehash}{5cf4d638fa0ec80bcd63ee70e297b34a}
+      \strng{authornamehash}{5cf4d638fa0ec80bcd63ee70e297b34a}
+      \strng{authorfullhash}{5cf4d638fa0ec80bcd63ee70e297b34a}
+      \field{labelalpha}{Pom07}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0025-5831}
+      \field{journaltitle}{Mathematische Annalen}
+      \field{number}{3}
+      \field{title}{Sur les fonctions dérivées}
+      \field{volume}{63}
+      \field{year}{1907}
+      \true{nocite}
+      \field{pages}{326\bibrangedash 332}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1007/BF01449201
+      \endverb
+    \endentry
+    \entry{pugh}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ef00d8704773bb171f29f9d141629cd0}{%
+           family={Pugh},
+           familyi={P\bibinitperiod},
+           given={Charles\bibnamedelima C.},
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{ef00d8704773bb171f29f9d141629cd0}
+      \strng{fullhash}{ef00d8704773bb171f29f9d141629cd0}
+      \strng{bibnamehash}{ef00d8704773bb171f29f9d141629cd0}
+      \strng{authorbibnamehash}{ef00d8704773bb171f29f9d141629cd0}
+      \strng{authornamehash}{ef00d8704773bb171f29f9d141629cd0}
+      \strng{authorfullhash}{ef00d8704773bb171f29f9d141629cd0}
+      \field{labelalpha}{Pug15}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Second}
+      \field{series}{Undergraduate Texts in Mathematics}
+      \field{title}{Real mathematical analysis}
+      \field{year}{2015}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1007/978-3-319-17771-7
+      \endverb
+    \endentry
+    \entry{rudin}{book}{}
+      \name{author}{1}{}{%
+        {{hash=33be2fc2739d3493c6d6cc5d56a4c41e}{%
+           family={Rudin},
+           familyi={R\bibinitperiod},
+           given={Walter},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill Book C}%
+      }
+      \strng{namehash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \strng{fullhash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \strng{bibnamehash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \strng{authorbibnamehash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \strng{authornamehash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \strng{authorfullhash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \field{labelalpha}{Rud76}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Third}
+      \field{note}{International Series in Pure and Applied Mathematics}
+      \field{title}{Principles of mathematical analysis}
+      \field{year}{1976}
+      \true{nocite}
+    \endentry
+    \entry{saint-raymond}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b4dadb35ac0309156da28fe25f9eb3de}{%
+           family={Saint\bibnamedelima Raymond},
+           familyi={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Jean},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b4dadb35ac0309156da28fe25f9eb3de}
+      \strng{fullhash}{b4dadb35ac0309156da28fe25f9eb3de}
+      \strng{bibnamehash}{b4dadb35ac0309156da28fe25f9eb3de}
+      \strng{authorbibnamehash}{b4dadb35ac0309156da28fe25f9eb3de}
+      \strng{authornamehash}{b4dadb35ac0309156da28fe25f9eb3de}
+      \strng{authorfullhash}{b4dadb35ac0309156da28fe25f9eb3de}
+      \field{labelalpha}{Sai02}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0025-5793}
+      \field{journaltitle}{Mathematika}
+      \field{number}{1-2}
+      \field{title}{Local inversion for differentiable functions and the {D}arboux property}
+      \field{volume}{49}
+      \field{year}{2002}
+      \true{nocite}
+      \field{pages}{141\bibrangedash 158 (2004)}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1112/S0025579300016132
+      \endverb
+    \endentry
+    \entry{spivak}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ee3293a9c2577bc8e7bb84e4d67e85c5}{%
+           family={Spivak},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Publish or Perish, Inc}%
+      }
+      \strng{namehash}{ee3293a9c2577bc8e7bb84e4d67e85c5}
+      \strng{fullhash}{ee3293a9c2577bc8e7bb84e4d67e85c5}
+      \strng{bibnamehash}{ee3293a9c2577bc8e7bb84e4d67e85c5}
+      \strng{authorbibnamehash}{ee3293a9c2577bc8e7bb84e4d67e85c5}
+      \strng{authornamehash}{ee3293a9c2577bc8e7bb84e4d67e85c5}
+      \strng{authorfullhash}{ee3293a9c2577bc8e7bb84e4d67e85c5}
+      \field{extraname}{1}
+      \field{labelalpha}{Spi05}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Third}
+      \field{isbn}{0-914098-83-7}
+      \field{title}{A Comprehensive Introduction to Differential Geometry}
+      \field{volume}{I}
+      \field{year}{2005}
+      \true{nocite}
+    \endentry
+    \entry{spivak_calculus}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ee3293a9c2577bc8e7bb84e4d67e85c5}{%
+           family={Spivak},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {W. A. Benjamin, Inc.}%
+      }
+      \strng{namehash}{ee3293a9c2577bc8e7bb84e4d67e85c5}
+      \strng{fullhash}{ee3293a9c2577bc8e7bb84e4d67e85c5}
+      \strng{bibnamehash}{ee3293a9c2577bc8e7bb84e4d67e85c5}
+      \strng{authorbibnamehash}{ee3293a9c2577bc8e7bb84e4d67e85c5}
+      \strng{authornamehash}{ee3293a9c2577bc8e7bb84e4d67e85c5}
+      \strng{authorfullhash}{ee3293a9c2577bc8e7bb84e4d67e85c5}
+      \field{extraname}{2}
+      \field{labelalpha}{Spi65}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Calculus on manifolds}
+      \field{year}{1965}
+      \true{nocite}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
