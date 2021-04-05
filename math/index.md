@@ -26,6 +26,8 @@ Here are some slides and/or notes for some of the talks I've given.
 * [A Smörgåsbord of Arithmetic Geometry](smorgasbord.pdf). Slides for a talk I gave at Colorado College's *Fearless Fridays* seminar in February 2018.
 * [Contangent complex](cotangent.pdf). Some (incomplete!) notes I compiled when I was preparing for a talk I gave in David Nadler's fall 2013 *geometric representation theory* seminar. 
 
+If you find errors in any of these, please let me know!
+
 # Miscellaneous
 
 Here are some miscellaneous mathematical writings.
