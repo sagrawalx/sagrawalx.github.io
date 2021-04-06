@@ -27,12 +27,11 @@ Here's an [in-progress list of Urdu-Hindi resources](resources) that you might f
 </tr>
 
 <tr>
-<td>4/6</td>
-<td>Muktibodh, *Maiṇ Tum Logoṇ Se Dūr Hūṇ*</td>
+<td>4/13</td>
+<td>Alī Sardār Jāfri, *Sar-e-Tūr*</td>
 <td>
-* [Full text](texts#tum-logon-se-duur) (Nagari and Urdu)
-* [Reading by Kavyanki](https://www.youtube.com/watch?v=vHI_oD1h28A)
-* [Discussion and translation by Chanchal Chauhan](chauhan-muktibodh.pdf) (excerpt from the article "[Ideological Content of Muktibodh's Poetry](https://www.jstor.org/stable/23343293?seq=1)")
+* Rekhta ([Nagari](https://www.rekhta.org/nazms/sar-e-tuur-ali-sardar-jafri-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/sar-e-tuur-ali-sardar-jafri-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/sar-e-tuur-ali-sardar-jafri-nazms)), or [here](texts#sar-e-tuur) (Nagari)
+* [Excerpt from Baider and Jaeger's *An Anthology of Modern Urdu Poetry*, Volume I](jafri-tuur.pdf) (Urdu text and English translation)
 </td>
 </tr>
 
