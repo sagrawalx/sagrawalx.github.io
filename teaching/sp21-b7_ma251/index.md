@@ -243,6 +243,8 @@ How to read this calendar:
 * Topic: Congruences
 * Read: 4.1--2
 * CC: (4.2) 1, 2, 4(a)
+* Summary video (parts [1](https://canvas.coloradocollege.edu/files/1033111/) and [2](https://canvas.coloradocollege.edu/files/1033110/)) and [notes](notes/congruences.jpg)
+* [Select Reading Question Responses](srqr/congruences.pdf)
 * FP: (4.2) 4(b), 5, 8, 9, 18
 
 ## Week 2, Wednesday
