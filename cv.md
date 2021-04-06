@@ -18,9 +18,11 @@ permalink: cv/
 
 # Education
 
-* UC Berkeley. PhD in Mathematics (2018).
+* UC Berkeley. PhD in Mathematics (2018). 
+    * Advisor: David Nadler. 
     * Thesis: Deformations of overconvergent isocrystals on the projective line. [eScholarship:1sp926n0](https://escholarship.org/uc/item/1sp926n0).
-    * Advisor: David Nadler.
+* Université de Strasbourg. Chateaubriand fellowship (2016--2017). 
+    * Advisor: Christine Huyghe. 
 * UC San Diego. BS in Mathematics, summa cum laude (2011). Minors in Computer Science and General Biology.
 
 # Papers
@@ -31,7 +33,7 @@ permalink: cv/
 
 <!--
 * From category $\mathcal{O}^\infty$ to locally analytic representations (May 2021). Arithmetic geomerty seminar, Institut de Recherche Mathématique de Rennes. -->
-* From category $\mathcal{O}^\infty$ to locally analytic representations (April 2021). $p$-Adic Representations and Arithmetic D-modules, Università degli Studi di Padova. 
+* From category $\mathcal{O}^\infty$ to locally analytic representations (April 2021). $p$-Adic representations and arithmetic D-modules seminar, Università degli Studi di Padova. 
 * Perspective: The Mathematics of Depicting Depth (February 2020). Fearless Fridays, Colorado College. 
 * How local systems arise (February 2019). Rings and Wings, UC Colorado Springs.
 * Rigid local systems and rigid isocrystals (June 2018). Number theory seminar, UC San Diego.
@@ -51,7 +53,7 @@ permalink: cv/
 * Research and development grant (2020). Natural Sciences Division, Colorado College.
 * Faculy student collaborative research grant (with Cinea Jenkins, Summer 2019). Colorado College.
 * Graduate student researcher (Spring 2018). NSF RTG grant DMS-1646385.
-* Chateaubriand fellowship (with Christine Huyghe, 2016-2017). Embassy of France.
+* Chateaubriand fellowship (with Christine Huyghe, 2016--2017). Embassy of France.
 * Summer grant (2012, 2013, 2016). UC Berkeley.
 * Graduate student researcher (Spring 2015). FRG: Collaborative Research: In and Around Theory X.
 * Chancellor's research scholarship (2009). UC San Diego.

@@ -21,14 +21,11 @@ There are two special types of problems:
 
 2. It is a fact that $(1+a)^n \geq 1+na$ for any real number $a \geq 0$ and any integer $n \geq 0$. Give two proofs of this fact: one using induction on $n$, and another using the binomial theorem. 
 
-3. The Fibonnacci numbers $F_1, F_2, F_3, \dotsc$ are defined by declaring $F_1 = F_2 = 1$ and then recursively defining $F_{n+2} = F_{n+1} + F_n$. For example: 
-$$ \begin{aligned} 
+3. The Fibonnacci numbers $F_1, F_2, F_3, \dotsc$ are defined by declaring $F_1 = F_2 = 1$ and then recursively defining $F_{n+2} = F_{n+1} + F_n$. For example: $$ \begin{aligned} 
 F_3 &= F_2 + F_1 = 1 + 1 = 2 \\
 F_4 &= F_3 + F_2 = 2 + 1 = 3 \\
 F_5 &= F_4 + F_3 = 3 + 2 = 5 \\
-&\;\,\vdots
-\end{aligned} $$
-Prove that $F_1^2 + \dotsb + F_n^2 = F_nF_{n+1}$ for all $n \geq 1$. 
+&\;\,\vdots \end{aligned} $$ Prove that $F_1^2 + \dotsb + F_n^2 = F_nF_{n+1}$ for all $n \geq 1$. 
 
 4. Suppose that the post office only issued 3-cent stamps and 7-cent stamps. Give an *explicit* description of the set of all postage amounts that can be created using stamps of these two types. Prove that your description is correct. 
 
@@ -73,11 +70,58 @@ Prove that $F_1^2 + \dotsb + F_n^2 = F_nF_{n+1}$ for all $n \geq 1$.
     
 7. (Programming?) Qwmqwm is a mathematicalien. Whenever she chooses a favorite number $n$, her body reconfigures itself so that it has $T(n)$ tentacles, where $$ T(n) = \sum_{k = 1}^{n-1} \gcd(n+k,n-k). $$ Qwmqwm has just chosen her favorite number to be 7568640000000083, which happens to be prime. How many tentacles does she now have? 
 
-    Note: This problem can be done without programming. It might just take you a little bit longer to notice a pattern by hand. 
+    *Note*. This problem can be done without programming. It might just take you a little bit longer to notice a pattern by hand. 
 
 8. Submit a solution to a problem from a previous problem set that you haven't gotten any points for so far. 
 
 ## Problem Set C {#C}
+
+1. (Ancient Chinese Problem) A band of 17 pirates stole a sack of gold coins. When they tried to divide the fortune into equal portions, 3 coins remainded. In the ensuing brawl over who should get the extra coins, one pirate was killed. The wealth was redistributed, but this time an equal division left 10 coins. Again an argument developed in which another pirate was killed. But now the total fortune was evenly distributed among the survivors. What was the least number of coins that could have been stolen?
+
+2. Calculate the remainder when $76^{76^{76}}$ is divided by 7. Justify your answer.
+
+    *Warning*. $76^{76^{76}}$ means `76^(76^76)`, not `(76^76)^76`. Those are different numbers! 
+    
+    *Note*. The number $76^{76^{76}}$ is monstrously large! Its binary representation would have roughly $10^{143}$ digits. Generous estimates for the [number of protons in the observable universe](https://en.wikipedia.org/wiki/Eddington_number) run around $10^{80}$. In other words, no computer known to humans has even *remotely* enough room to explicitly represent a number like $76^{76^{76}}$. Don't bother trying to compute this number!
+    
+3. Prove that an integer is a perfect square if and only if its square root is rational.
+
+    *Possible hint*. If the square root of an integer is written as a fraction, show by contradiction that the denominator of that fraction cannot have any prime divisors. Also note that this is an "if and only if" statement, so make sure you address both directions (even if there's  not much to say for one direction!). 
+    
+4. Suppose $p_1, p_2, \dotsc, p_d$ are distinct primes. Show that $$\frac{1}{p_1} + \frac{1}{p_2} + \dotsb + \frac{1}{p_d}$$ is never an integer. 
+
+5. If $n > 4$ is composite, show that $(n-1)! \equiv 0 \pmod{n}$. 
+
+    *Note*. This result is not true for $n = 4$, so make sure your proof uses the fact that $n > 4$ at some point.
+    
+6. You have just discovered the ruins of a medieval monastery which has been uninhabited for centuries. One room of the monastery is locked by an 8-digit combination lock. As you continue exploring, you discover the diary of a monk who seems to love numbers written in Latin. This monk writes: 
+
+    > Numerus perfectissimus inveni! Is est quadratus perfectus et divisibilis per 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, et 12.[^latin]
+
+    [^latin]: I don't know Latin very well. If you do, please forgive any mistakes I may have made here... I'd also appreciate knowing how to say this in correct Latin!
+    
+    You suspect this has something to do with the combination lock, so you pull out your smartphone. Google Translate does a shoddy job translating out of Latin, but it's good enough for you to decipher this passage: 
+
+    > I have found the most perfect number! It is a perfect square and it is divisible by 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, and 12.
+
+    You think a bit, calculate a number on your phone, put it into the combination lock, and... much to your dismay, it doesn't work. But then you think a bit more, calculate another number, and put it into the combination lock. You're sure this time that it has to be this number, and indeed, this time, the lock opens! What two numbers did you try? Explain. 
+    
+7. Let's say that a *palindrome* is a positive number whose decimal representation reads the same backward as forward. For instance, 373 and 5225 are palindromes. 
+    <ol style="list-style-type: lower-alpha;">
+    <li>Show that every palindrome with an even number of digits is divisible by 11. </li>
+    <li>Give three examples of palindromes with an odd number of digits: (i) one which is not divisible by 11, (ii) one which is divisible by 11 and whose middle digit is not 0, and (iii) one which is divisible by 11 and whose middle digit is 0.</li>
+    <li>Suppose $n = (a_r a_{r-1} \dotsb a_1 a_0)_{10}$ is a palindrome with an odd number of digits which is divisible by 11. Note that, since $n$ has an odd number of digits, $r$ is an even number and $a_{r/2}$ is the middle digit of $n$. Let $m = (a_{(r/2)-1} \dotsb a_1 a_0)_{10}$ (ie, $m$ is the "bottom half" of $n$, excluding the middle digit). Show that $m$ is divisible by 11 if and only if $a_{r/2} = 0$.</li>
+    </ol>
+
+8. (Programming) Let's say that a positive integer $n$ is *qrime*[^qrime] if there exists a non-negative integer $k$ such that $n/2^k$ is prime. For example, there are 16 total qrime numbers less than or equal to  20 --- namely: 
+
+    2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 16, 17, 19, 20.  
+    
+    How many qrime numbers are less than or equal to 100,000?  
+    
+    [^qrime]: I (obviously?) made this term up ☺ This is not standard mathematical terminology!
+
+9. Submit a solution to a problem from a previous problem set that you haven't gotten any points for so far. 
 
 ## Problem Set D {#D}
 
