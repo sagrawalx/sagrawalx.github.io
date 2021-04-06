@@ -30,7 +30,7 @@ Zoom links for the following are all on [Canvas](https://canvas.coloradocollege.
 
 You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/offices/qrc/blocktutorschedule/).
 
-Here are notes from Sunny's office hours and/or problem sessions: [3/30](notes/3-30.pdf), [3/31](notes/3-31.pdf), [4/2](notes/4-02.pdf)...
+Here are notes from Sunny's office hours and/or problem sessions: [3/30](notes/3-30.pdf), [3/31](notes/3-31.pdf), [4/2](notes/4-02.pdf), [4/5](notes/4-05.pdf), [4/6](notes/4-06.pdf)...
 
 # Links 
 
