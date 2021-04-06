@@ -82,7 +82,7 @@ F_5 &= F_4 + F_3 = 3 + 2 = 5 \\
 
     *Warning*. $76^{76^{76}}$ means `76^(76^76)`, not `(76^76)^76`. Those are different numbers! 
     
-    *Note*. The number $76^{76^{76}}$ is monstrously large! Its binary representation would have roughly $10^{143}$ digits. Generous estimates for the [number of protons in the observable universe](https://en.wikipedia.org/wiki/Eddington_number) run around $10^{80}$. In other words, no computer known to humans has even *remotely* enough room to explicitly represent a number like $76^{76^{76}}$. Don't bother trying to compute this number!
+    *Note*. The number $76^{76^{76}}$ is monstrously large! Its binary representation would have roughly $10^{143}$ digits. Estimates for the [number of protons in the observable universe](https://en.wikipedia.org/wiki/Eddington_number) run around $10^{80}$. In other words, no computer known to humans has even *remotely* enough room to explicitly represent a number like $76^{76^{76}}$. Don't bother trying to compute this number!
     
 3. Prove that an integer is a perfect square if and only if its square root is rational.
 
