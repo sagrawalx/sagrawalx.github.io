@@ -249,9 +249,13 @@ How to read this calendar:
 
 ## Week 2, Wednesday
 
-* Topic: Representing Numbers 
+* Topic: Binary exponentiation, Representing bumbers 
 * Read: 4.3
-* CC: (4.3) 2, 4
+* CC: (4.3) 2, 4  
+* Summary video and notes
+    - [Binary exponentiation](https://canvas.coloradocollege.edu/files/1033128/) and [notes](notes/binaryexponentiation.jpg)
+    - [Representing numbers](https://canvas.coloradocollege.edu/files/1033129/) and [notes](notes/representingnumbers.jpg)
+* [Select reading question responses](srqr/binary+representing.pdf)
 * FP: (4.3) 3, 7, 10
 
 ## Week 2, Thursday
