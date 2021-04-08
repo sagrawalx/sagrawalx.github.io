@@ -30,7 +30,7 @@ Zoom links for the following are all on [Canvas](https://canvas.coloradocollege.
 
 You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/offices/qrc/blocktutorschedule/).
 
-Here are notes from Sunny's office hours and/or problem sessions: [3/30](notes/3-30.pdf), [3/31](notes/3-31.pdf), [4/2](notes/4-02.pdf), [4/5](notes/4-05.pdf), [4/6](notes/4-06.pdf)...
+Here are notes from Sunny's office hours and/or problem sessions: [3/30](notes/3-30.pdf), [3/31](notes/3-31.pdf), [4/2](notes/4-02.pdf), [4/5](notes/4-05.pdf), [4/6](notes/4-06.pdf), [4/7](notes/4-07.pdf)...
 
 # Links 
 
@@ -263,6 +263,11 @@ How to read this calendar:
 * Topics: Linear Congruences, Chinese Remainder Theorem
 * Read: 4.4
 * CC: (4.4) 1, 4
+* Summary video and notes:
+    - Linear conguences (parts [1](https://canvas.coloradocollege.edu/files/1033143/) and [2](https://canvas.coloradocollege.edu/files/1033147/)) and [notes](notes/linear-congruence.jpg)
+    - [Inverses](https://canvas.coloradocollege.edu/files/1033145/) and [notes](notes/inverses.jpg)
+    - [Chinese Remainder Theorem](https://canvas.coloradocollege.edu/files/1033113/) and [notes](notes/crt.jpg)
+* [Select reading question responses](srqr/crt.pdf)
 * FP: (4.4) 3, 6, 8, 15
 
 ## Week 2, Friday
