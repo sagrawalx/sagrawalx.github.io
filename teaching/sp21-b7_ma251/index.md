@@ -30,7 +30,7 @@ Zoom links for the following are all on [Canvas](https://canvas.coloradocollege.
 
 You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/offices/qrc/blocktutorschedule/).
 
-Here are notes from Sunny's office hours and/or problem sessions: [3/30](notes/3-30.pdf), [3/31](notes/3-31.pdf), [4/2](notes/4-02.pdf), [4/5](notes/4-05.pdf), [4/6](notes/4-06.pdf), [4/7](notes/4-07.pdf)...
+Here are notes from Sunny's office hours and/or problem sessions: [3/30](notes/3-30.pdf), [3/31](notes/3-31.pdf), [4/2](notes/4-02.pdf), [4/5](notes/4-05.pdf), [4/6](notes/4-06.pdf), [4/7](notes/4-07.pdf), [4/8](notes/4-08.pdf)...
 
 # Links 
 
@@ -275,6 +275,10 @@ How to read this calendar:
 * Topics: Fermat's Little Theorem, Wilson's Theorem
 * Read: 5.1--3 (5.4 is optional)
 * CC: (5.2) 1, 2 (5.3) 1, 3
+* Summary video and notes:
+    - [Wilson's theorem](https://canvas.coloradocollege.edu/files/1033157/) and [notes](notes/wilson.jpg)
+    - Fermat's little theorem (parts [1](https://canvas.coloradocollege.edu/files/1033159/) and [2](https://canvas.coloradocollege.edu/files/1033114/)) and [notes](notes/fermat.jpg)
+* [Select reading question responses](srqr/fermat+wilson.pdf)
 * FP: (5.2) 4, 5, 6(a), 11(a) (5.3) 4(a)
 
 ## Week 3, Monday
