@@ -72,7 +72,7 @@ F_5 &= F_4 + F_3 = 3 + 2 = 5 \\
 
     *Note*. This problem can be done without programming. It might just take you a little bit longer to notice a pattern by hand. 
 
-8. Submit a solution to a problem from a previous problem set that you haven't gotten any points for so far. 
+8. Submit a solution to a problem from any previous problem set that you haven't gotten any points for so far. 
 
 ## Problem Set C {#C}
 
@@ -115,14 +115,39 @@ F_5 &= F_4 + F_3 = 3 + 2 = 5 \\
 
 8. (Programming) Let's say that a positive integer $n$ is *qrime*[^qrime] if there exists a non-negative integer $k$ such that $n/2^k$ is prime. For example, there are 16 total qrime numbers less than or equal to  20 --- namely: 
 
-    2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 16, 17, 19, 20.  
+    <div style="text-align: center;">2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 16, 17, 19, 20.</div>
     
     How many qrime numbers are less than or equal to 100,000?  
     
     [^qrime]: I (obviously?) made this term up ☺ This is not standard mathematical terminology!
 
-9. Submit a solution to a problem from a previous problem set that you haven't gotten any points for so far. 
+9. Submit a solution to a problem from any previous problem set that you haven't gotten any points for so far. 
 
 ## Problem Set D {#D}
+
+1. If you've ever done any tutoring, you probably know that students learning algebra for the first time will sometimes assert things like $(a+b)^2 = a^2 + b^2$. This, of course, is just not true! (Take $a = b = 1$ for a counterexample.) However, it *is* true that 
+$$ (a+b)^p \equiv a^p + b^p \pmod{p} $$
+for $a, b \in \Z$ and any prime number $p$. Prove this fact.
+
+2. Let $p$ be prime and $a \in \Z$. If $(d_m d_{m-1} \dotsb d_0)_p$ is the base $p$ representation of a positive integer $n$, show that
+$$ a^n \equiv a^{d_m + d_{m-1} + \dotsb + d_0} \pmod{p}. $$
+
+3. Show that $(p+1)^p \equiv 1 \pmod{p^2}$ for any prime $p$. 
+
+    *Possible hint*. You might find it useful to study the second proof of Fermat's little theorem, given on p. 88--89. 
+
+4. Let $n \geq 1$ be an integer. Show that $$ \sum_{k = 1}^n \gcd(k,n) = \sum_{d \mid n} d \cdot  \phi\left( \frac{n}{d} \right). $$
+
+    *Possible hint*. You might find it useful to study the proof of Gauss's theorem 7.6. 
+    
+5. Prove that, if $\gcd(a,b) = 1$, then $a^{\phi(b)} + b^{\phi(a)} \equiv 1 \pmod{ab}$. 
+
+6. Describe explicitly what numbers are in the set $$ S = \{ n \in \mathbb{N} \mid a^n \text{ has the same units digit as } a \text{ for all positive integers } a \}. $$ 
+
+    *Note*. Your description will probably be something like "$n \in S$ if and only if $n$ is congruent to *something* mod *something*."
+
+7. (Programming) Among all integers strictly between 1 and 10,000,000, find the unique integer $n$ for which $n/\phi(n)$ is as *small* as possible, and the unique integer $n$ for which $n/\phi(n)$ is as *large* as possible. 
+
+8. Submit a solution to a problem from any previous problem set that you haven't gotten any points for so far. 
 
 ## Problem Set E {#E}

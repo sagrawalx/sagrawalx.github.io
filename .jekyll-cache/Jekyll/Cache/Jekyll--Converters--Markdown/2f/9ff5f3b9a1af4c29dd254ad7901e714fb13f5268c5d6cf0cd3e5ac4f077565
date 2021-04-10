@@ -1,4 +1,4 @@
-I"�:<h1 id="problem-sets">Problem Sets</h1>
+I"�E<h1 id="problem-sets">Problem Sets</h1>
 <p>See instructions on the <a href="syllabus#problem-sets">syllabus</a>. Draft and final deadlines for each problem set are indicated on the <a href="index#calendar">calendar</a>. Submissions are all through Gradescope.</p>
 <p>There are two special types of problems:</p>
 <ul>
@@ -39,7 +39,7 @@ F_5 &amp;= F_4 + F_3 = 3 + 2 = 5 \\
 <p><em>Possible hint</em>. You may find it helpful to use results you’ve proved on comprehension checks. If you do this, make sure to TeX up your proofs to these results as a part of your solution to this problem.</p></li>
 <li><p>(Programming?) Qwmqwm is a mathematicalien. Whenever she chooses a favorite number <span class="math inline">\(n\)</span>, her body reconfigures itself so that it has <span class="math inline">\(T(n)\)</span> tentacles, where <span class="math display">\[ T(n) = \sum_{k = 1}^{n-1} \gcd(n+k,n-k). \]</span> Qwmqwm has just chosen her favorite number to be 7568640000000083, which happens to be prime. How many tentacles does she now have?</p>
 <p><em>Note</em>. This problem can be done without programming. It might just take you a little bit longer to notice a pattern by hand.</p></li>
-<li><p>Submit a solution to a problem from a previous problem set that you haven’t gotten any points for so far.</p></li>
+<li><p>Submit a solution to a problem from any previous problem set that you haven’t gotten any points for so far.</p></li>
 </ol>
 <h2 id="C">Problem Set C</h2>
 <ol type="1">
@@ -74,11 +74,26 @@ F_5 &amp;= F_4 + F_3 = 3 + 2 = 5 \\
 </li>
 </ol></li>
 <li><p>(Programming) Let’s say that a positive integer <span class="math inline">\(n\)</span> is <em>qrime</em><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> if there exists a non-negative integer <span class="math inline">\(k\)</span> such that <span class="math inline">\(n/2^k\)</span> is prime. For example, there are 16 total qrime numbers less than or equal to 20 — namely:</p>
-<p>2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 16, 17, 19, 20.</p>
+<div style="text-align: center;">
+2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 16, 17, 19, 20.
+</div>
 <p>How many qrime numbers are less than or equal to 100,000?</p></li>
-<li><p>Submit a solution to a problem from a previous problem set that you haven’t gotten any points for so far.</p></li>
+<li><p>Submit a solution to a problem from any previous problem set that you haven’t gotten any points for so far.</p></li>
 </ol>
 <h2 id="D">Problem Set D</h2>
+<ol type="1">
+<li><p>If you’ve ever done any tutoring, you probably know that students learning algebra for the first time will sometimes assert things like <span class="math inline">\((a+b)^2 = a^2 + b^2\)</span>. This, of course, is just not true! (Take <span class="math inline">\(a = b = 1\)</span> for a counterexample.) However, it <em>is</em> true that <span class="math display">\[ (a+b)^p \equiv a^p + b^p \pmod{p} \]</span> for <span class="math inline">\(a, b \in \Z\)</span> and any prime number <span class="math inline">\(p\)</span>. Prove this fact.</p></li>
+<li><p>Let <span class="math inline">\(p\)</span> be prime and <span class="math inline">\(a \in \Z\)</span>. If <span class="math inline">\((d_m d_{m-1} \dotsb d_0)_p\)</span> is the base <span class="math inline">\(p\)</span> representation of a positive integer <span class="math inline">\(n\)</span>, show that <span class="math display">\[ a^n \equiv a^{d_m + d_{m-1} + \dotsb + d_0} \pmod{p}. \]</span></p></li>
+<li><p>Show that <span class="math inline">\((p+1)^p \equiv 1 \pmod{p^2}\)</span> for any prime <span class="math inline">\(p\)</span>.</p>
+<p><em>Possible hint</em>. You might find it useful to study the second proof of Fermat’s little theorem, given on p. 88–89.</p></li>
+<li><p>Let <span class="math inline">\(n \geq 1\)</span> be an integer. Show that <span class="math display">\[ \sum_{k = 1}^n \gcd(k,n) = \sum_{d \mid n} d \cdot  \phi\left( \frac{n}{d} \right). \]</span></p>
+<p><em>Possible hint</em>. You might find it useful to study the proof of Gauss’s theorem 7.6.</p></li>
+<li><p>Prove that, if <span class="math inline">\(\gcd(a,b) = 1\)</span>, then <span class="math inline">\(a^{\phi(b)} + b^{\phi(a)} \equiv 1 \pmod{ab}\)</span>.</p></li>
+<li><p>Describe explicitly what numbers are in the set <span class="math display">\[ S = \{ n \in \mathbb{N} \mid a^n \text{ has the same units digit as } a \text{ for all positive integers } a \}. \]</span></p>
+<p><em>Note</em>. Your description will probably be something like “<span class="math inline">\(n \in S\)</span> if and only if <span class="math inline">\(n\)</span> is congruent to <em>something</em> mod <em>something</em>.”</p></li>
+<li><p>(Programming) Among all integers strictly between 1 and 10,000,000, find the unique integer <span class="math inline">\(n\)</span> for which <span class="math inline">\(n/\phi(n)\)</span> is as <em>small</em> as possible, and the unique integer <span class="math inline">\(n\)</span> for which <span class="math inline">\(n/\phi(n)\)</span> is as <em>large</em> as possible.</p></li>
+<li><p>Submit a solution to a problem from any previous problem set that you haven’t gotten any points for so far.</p></li>
+</ol>
 <h2 id="E">Problem Set E</h2>
 <section class="footnotes" role="doc-endnotes">
 <hr />
