@@ -30,7 +30,7 @@ Zoom links for the following are all on [Canvas](https://canvas.coloradocollege.
 
 You may also be interested in [QRC tutoring](https://www.coloradocollege.edu/offices/qrc/blocktutorschedule/).
 
-Here are notes from Sunny's office hours and/or problem sessions: [3/30](notes/3-30.pdf), [3/31](notes/3-31.pdf), [4/2](notes/4-02.pdf), [4/5](notes/4-05.pdf), [4/6](notes/4-06.pdf), [4/7](notes/4-07.pdf), [4/8](notes/4-08.pdf)...
+Here are notes from Sunny's office hours and/or problem sessions: [3/30](notes/3-30.pdf), [3/31](notes/3-31.pdf), [4/2](notes/4-02.pdf), [4/5](notes/4-05.pdf), [4/6](notes/4-06.pdf), [4/7](notes/4-07.pdf), [4/8](notes/4-08.pdf), [4/9](notes/4-09.pdf)...
 
 # Links 
 
@@ -287,6 +287,8 @@ How to read this calendar:
 * Read: 7.1--2 and 7.4
     - Note: We've skipped chapter 6. The one piece of terminology from chapter 6 that you'll need for this reading is the definition of a multiplicative function, but the definition is easy: a function $f$ defined on the natural numbers is multiplicative if $f(mn) = f(m)f(n)$ whenever $\textrm{gcd}(m,n) = 1$. Also note the Möbius inversion formula is another thing that's discussed in chapter 6. Theorem 7.8 in section 7.4 is an application of this formula, so feel free to skip theorem 7.8. 
 * CC: (7.2) 1, 4(a,b)
+* Summary video (parts [1](https://canvas.coloradocollege.edu/files/1033170/) and [2](https://canvas.coloradocollege.edu/files/1033171/)) and [notes](notes/euler-phi.jpg)
+* [Select reading question responses](srqr/euler-phi.pdf)
 * FP: (7.2) 4(c-e), 6, 10, 11(a)
 
 ## Week 3, Tuesday
