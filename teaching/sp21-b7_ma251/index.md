@@ -296,6 +296,8 @@ How to read this calendar:
 * Topic: Euler's formula
 * Read: 7.3
 * CC: (7.3) 2, 4, 9
+* Summary video (parts [1](https://canvas.coloradocollege.edu/files/1033135/) and [2](https://canvas.coloradocollege.edu/files/1033135/)) and [notes](notes/eulers-theorem.jpg)
+* [Select reading question responses](srqr/eulers-theorem.pdf)
 * FP: (7.3) 3, 7
 
 ## Week 3, Wednesday
