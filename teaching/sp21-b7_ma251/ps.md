@@ -151,3 +151,39 @@ $$ a^n \equiv a^{d_m + d_{m-1} + \dotsb + d_0} \pmod{p}. $$
 8. Submit a solution to a problem from any previous problem set that you haven't gotten any points for so far. 
 
 ## Problem Set E {#E}
+
+1. Come up with a rule that determines if a number is divisible by 3 using the *binary* representation of that number. State your divisibility rule clearly, using  the words "if and only if." Then prove your rule. 
+
+2. This problem is about primitive roots of 19. Make sure to explain your work.
+    <ol style="list-style: lower-alpha;">
+    <li>Show that 3 is a primitive root of 19.</li>
+    <li>Find a finite list of integers $h$ such that taking $3^h$ for all of the $h$ in your list would produce a list of all of the primitive roots of 19 up to congruence mod 19.</li>
+    </ol> 
+
+3. This problem is about primes that are congruent to 1 mod 8. 
+    <ol style="list-style: lower-alpha;">
+    <li>If $m$ is an integer and $p$ is an odd prime divisor of $m^4 + 1$, show that $p \equiv 1 \bmod{8}$.
+    
+     *Possible hint*. Begin by carefully showing that $m$ has order 8 mod $p$.</li>
+     
+     <li>Prove that there are infinitely many primes that are congruent to 1 mod 8.
+     
+     *Possible hint*. Like in Euclid's proof of the infinitude of primes, suppose for a contradiction that there are only finitely many primes $p_1, \dotsc, p_r$ that are congruent to 1 mod 8. To find a contradiction, consider the number $n = (2p_1 \dotsb p_r)^4 + 1$.</li>
+    </ol>
+    
+4. Suppose $p$ is a prime. A "cube root of 1 mod $p$" is a solution to the congruence 
+$$ x^3 \equiv 1 \pmod{p}. $$
+Notice that $x = 1$ is always a solution to this congruence; in other words, 1 is always a cube root of 1 mod $p$. Show that 1 is the *only* cube root of 1 mod $p$ if and only if $p \not\equiv 1 \pmod{3}$. How many cube roots of 1 are there when $p \equiv 1 \pmod{3}$?
+
+5. Suppose $a$ is a primitive root of $p^2$. Show that $a$ is also a primitive root of $p^n$ for all $n \geq 2$. 
+
+    *Possible hints*. First prove that, for any $n \geq 1$, we have $$ a^{\phi(p^n)} = 1 + q_n p^n $$
+for some integer $q_n$ such that $p \nmid q_n$. To prove this, you might find it useful to study the  inductive proof of Euler's theorem in section 7.3. Then, let $d_n$ be the order of $a$ modulo $p^n$ and use induction to show that $d_n = \phi(p^n)$ for all $n \geq 2$. For the inductive step, you might first use your inductive hypothesis to explain why $\phi(p^k) \mid d_{k+1} \mid \phi(p^{k+1})$, and then use the result from your first induction to explain why $d_{k+1} \neq \phi(p^k)$. 
+
+6. (Programming) Let $p$ be an odd prime number. There are $p-1$ integers less than $p$ that are relatively prime with $p$ (namely, the integers $1, 2, ..., p-1$). Let's say the *primitive root density* of $p$ is the fraction of these $p-1$ integers that are primitive roots for $p$. For example, the prime $p = 7$ has exactly 2 primitive roots (namely, 3 and 5), so the primitive root density of 7 is 
+$$ \frac{\text{number of primitive roots of $p$  among } 1, \dotsc, p-1}{p-1} = \frac{2}{6} = \frac{1}{3}. $$
+Find five odd primes whose primitive root density is exactly 1/2. Does there exist an odd prime whose primitive root density is larger than 1/2? 
+
+7. Submit a solution to a problem from any previous problem set that you haven't gotten any points for so far. 
+
+8. Submit a solution to a problem from any previous problem set that you haven't gotten any points for so far. 
