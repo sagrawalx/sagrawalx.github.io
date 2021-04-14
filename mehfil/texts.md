@@ -838,7 +838,7 @@ A poem by Alī Sardār Jāfri, published in the collection *Ek Khwāb Aur* (1965
 ऐसे तड़पे कि सैल-ए-रवाँ[^sail-e-rawaan] हो गए  
 हैं अज़ल[^azal] से ज़मीं के कुरे[^kuraa] पर असीर[^asiir]    
 होके महदूद[^mahduud] हम बेकराँ[^bekaraan] हो गए  
-ज़ौक़-ए-परवाज़[^parwaaz] भी दिल की इक हसरत है  
+ज़ौक़-ए-परवाज़[^parwaaz] भी दिल की इक जस्त[^jast] है  
 ख़ाक से ज़ीनत[^ziinat]-ए-आसमाँ हो गए  
 
 [^jurat]: boldness, courage
@@ -854,6 +854,7 @@ A poem by Alī Sardār Jāfri, published in the collection *Ek Khwāb Aur* (1965
 [^mahduud]: limited, bounded  
 [^bekaraan]: limitless, boundless
 [^parwaaz]: flight  
+[^jast]: leap, jump
 [^ziinat]: ornament, embellishment, beauty   
 
 अक़ल-ए-चालाक ने दी है आकर ख़बर  
