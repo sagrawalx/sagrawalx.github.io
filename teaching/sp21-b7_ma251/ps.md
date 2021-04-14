@@ -182,9 +182,9 @@ for some integer $q_n$ such that $p \nmid q_n$. To prove this, you might find it
 
 6. (Programming) Let $p$ be an odd prime number. There are $p-1$ integers less than $p$ that are relatively prime with $p$ (namely, the integers $1, 2, ..., p-1$). Let's say the *primitive root density* of $p$ is the fraction of these $p-1$ integers that are primitive roots for $p$. For example, the prime $p = 7$ has exactly 2 primitive roots (namely, 3 and 5), so the primitive root density of 7 is 
 $$ \frac{\text{number of primitive roots of $p$  among } 1, \dotsc, p-1}{p-1} = \frac{2}{6} = \frac{1}{3}. $$
-Find five odd primes whose primitive root density is exactly 1/2. Does there exist an odd prime whose primitive root density is larger than 1/2? 
+Find five odd primes whose primitive root density is exactly 0.5. Does there exist an odd prime whose primitive root density is larger than 0.5? 
 
-    *Note*. No one knows for sure if there are more than five odd primes whose primitive root density is exactly 1/2...!
+    *Note*. No one knows for sure if there are more than five odd primes whose primitive root density is exactly 0.5...!
 
 7. Submit a solution to a problem from any previous problem set that you haven't gotten any points for so far. 
 
