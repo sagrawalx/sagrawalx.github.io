@@ -184,6 +184,8 @@ for some integer $q_n$ such that $p \nmid q_n$. To prove this, you might find it
 $$ \frac{\text{number of primitive roots of $p$  among } 1, \dotsc, p-1}{p-1} = \frac{2}{6} = \frac{1}{3}. $$
 Find five odd primes whose primitive root density is exactly 1/2. Does there exist an odd prime whose primitive root density is larger than 1/2? 
 
+    *Note*. No one knows for sure if there are more than five odd primes whose primitive root density is exactly 1/2...!
+
 7. Submit a solution to a problem from any previous problem set that you haven't gotten any points for so far. 
 
 8. Submit a solution to a problem from any previous problem set that you haven't gotten any points for so far. 
