@@ -305,6 +305,10 @@ How to read this calendar:
 * Topics: Order Modulo $n$, Primitive Roots
 * Read: 8.1--2
 * CC: (8.1) 1, 2 (8.2) 1, 2, 4
+* Summary video and notes
+    - Order (parts [1](https://canvas.coloradocollege.edu/files/1033137/) and [2](https://canvas.coloradocollege.edu/files/1033124/)) and [notes](notes/order.jpg)
+    - [Primitive roots for primes](https://canvas.coloradocollege.edu/files/1033138/) and [notes](notes/primitive-prime.jpg)
+* [Select reading question responses](srqr/order+primitive-prime.pdf)
 * FP: (8.1) 4 (8.2) 3, 5, 6
 
 ## Week 3, Thursday 
