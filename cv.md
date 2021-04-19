@@ -120,7 +120,8 @@ permalink: cv/
 
 # Conferences
 
-* D-modules and representation theory (June 2019). Rennes.
+* Spring school towards a mod $p$ Langlands correspondence (April 2021). Universität Duisberg Essen. 
+* D-modules and representation theory (June 2019). Institut de Recherche Mathématique de Rennes.
 * Derived algebraic geometry and its applications (March 2019). MSRI, Berkeley.
 * Front Range Number Theory Day (September 2018). Colorado State University.
 * RTG Research Workshop (May 2018). University of California, Berkeley.
