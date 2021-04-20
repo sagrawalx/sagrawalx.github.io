@@ -175,7 +175,7 @@ $$ a^n \equiv a^{d_m + d_{m-1} + \dotsb + d_0} \pmod{p}. $$
 $$ x^3 \equiv 1 \pmod{p}. $$
 Notice that $x = 1$ is always a solution to this congruence; in other words, 1 is always a cube root of 1 mod $p$. Show that 1 is the *only* cube root of 1 mod $p$ if and only if $p \not\equiv 1 \pmod{3}$. How many cube roots of 1 are there when $p \equiv 1 \pmod{3}$?
 
-5. Suppose $a$ is a primitive root of $p^2$. Show that $a$ is also a primitive root of $p^n$ for all $n \geq 2$. 
+5. Let $p$ be an odd prime and suppose $a$ is a primitive root of $p^2$. Show that $a$ is also a primitive root of $p^n$ for all $n \geq 2$. 
 
     *Possible hints*. First prove that, for any $n \geq 1$, we have $$ a^{\phi(p^n)} = 1 + q_n p^n $$
 for some integer $q_n$ such that $p \nmid q_n$. To prove this, you might find it useful to study the  inductive proof of Euler's theorem in section 7.3. Then, let $d_n$ be the order of $a$ modulo $p^n$ and use induction to show that $d_n = \phi(p^n)$ for all $n \geq 2$. For the inductive step, you might first use your inductive hypothesis to explain why $\phi(p^k) \mid d_{k+1} \mid \phi(p^{k+1})$, and then use the result from your first induction to explain why $d_{k+1} \neq \phi(p^k)$. 
