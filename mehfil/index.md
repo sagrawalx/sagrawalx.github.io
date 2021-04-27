@@ -27,6 +27,15 @@ Here's an [in-progress list of Urdu-Hindi resources](resources) that you might f
 </tr>
 
 <tr>
+<td>4/27</td>
+<td>Faiz Ahmad Faiz, *Yād*</td>
+<td>
+* Full text: [Nagari](https://www.rekhta.org/nazms/yaad-faiz-ahmad-faiz-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/yaad-faiz-ahmad-faiz-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/yaad-faiz-ahmad-faiz-nazms)
+* [Musical performance by Meesha Shafi](https://www.youtube.com/watch?v=tYB-6i_q4sU) (the closed captions on the YouTube video have Urdu and Roman lyrics and an English translation)
+</td>
+</tr>
+
+<tr>
 <td>4/13</td>
 <td>Alī Sardār Jāfri, *Sar-e-Tūr*</td>
 <td>

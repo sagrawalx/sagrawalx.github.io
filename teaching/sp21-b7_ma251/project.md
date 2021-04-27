@@ -25,7 +25,7 @@ nonav: true
 
 2. Write up an exposition of the topic. Here are some thoughts about this part. 
     
-    * It should be written in \LaTeX.
+    * It should be written in LaTeX.
     * Length is flexible; somewhere in the whereabouts of 2 pages might be reasonable. 
     * Make sure to give clear definitions of any new terms. 
     * If there's a theorem involved whose proof is too long or hard, you can omit the proof and just provide the statement. 

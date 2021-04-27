@@ -109,6 +109,8 @@ permalink: cv/
 
 ## Mentor
 
+* Research project with Timothy Somerset (Spring 2021). 
+* Research project with Elizabeth Wolfe (Spring 2021). 
 * Independent study with Marston Xue (Spring 2021). Topic: Scheme theory. 
 * Senior thesis with Ying Wang (2020–2021). Topic: Grassmannian. 
 * Senior thesis with Kadin Mangalik (2019–2020). Topic: Sums of cubes over $\mathbb{F}_p$.
@@ -120,7 +122,7 @@ permalink: cv/
 
 # Conferences
 
-* Spring school towards a mod $p$ Langlands correspondence (April 2021). Universität Duisberg Essen. 
+* Spring school: Towards a mod $p$ Langlands correspondence (April 2021). Universität Duisberg Essen. 
 * D-modules and representation theory (June 2019). Institut de Recherche Mathématique de Rennes.
 * Derived algebraic geometry and its applications (March 2019). MSRI, Berkeley.
 * Front Range Number Theory Day (September 2018). Colorado State University.
