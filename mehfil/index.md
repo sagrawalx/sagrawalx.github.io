@@ -32,6 +32,7 @@ Here's an [in-progress list of Urdu-Hindi resources](resources) that you might f
 <td>
 * Full text: [Nagari](https://www.rekhta.org/nazms/yaad-faiz-ahmad-faiz-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/yaad-faiz-ahmad-faiz-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/yaad-faiz-ahmad-faiz-nazms)
 * [Musical performance by Meesha Shafi](https://www.youtube.com/watch?v=tYB-6i_q4sU) (the closed captions on the YouTube video have Urdu and Roman lyrics and an English translation)
+* [Musical performance by Iqbal Bano](https://www.youtube.com/watch?v=Ev8ucJuj3DM)
 </td>
 </tr>
 
