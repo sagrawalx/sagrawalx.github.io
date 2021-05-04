@@ -5,12 +5,14 @@ permalink: teaching/
 
 # Currently Teaching
 
-* Spring 2021, Block 6. [MA251 - Number Theory (Q)](sp21-b7_ma251). 
+* None. 
 
 # Previously Taught
 
 ## Colorado College
 
+
+* Spring 2021, Block 6. [MA251 - Number Theory (Q)](sp21-b7_ma251). 
 * Spring 2021, Block 6. [MA117 - Probability and Statistics (Q)](sp21-b6_ma117). 
 * Fall 2020, Block 4. [MA340 - Algebraic Geometry (Q)](fa20-b4_ma340). 
 * Fall 2020, Block 3. MA251 - Number Theory (Q). 

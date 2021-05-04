@@ -27,7 +27,7 @@ Here's an [in-progress list of Urdu-Hindi resources](resources) that you might f
 </tr>
 
 <tr>
-<td>4/27</td>
+<td>5/4</td>
 <td>Faiz Ahmad Faiz, *Yād*</td>
 <td>
 * Full text: [Nagari](https://www.rekhta.org/nazms/yaad-faiz-ahmad-faiz-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/yaad-faiz-ahmad-faiz-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/yaad-faiz-ahmad-faiz-nazms)
