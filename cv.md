@@ -109,7 +109,7 @@ permalink: cv/
 
 ## Mentor
 
-* Research project with Timothy Somerset (Spring 2021). 
+* Research project with Timothy Somerset (Summer 2021). 
 * Research project with Elizabeth Wolfe (Spring 2021). 
 * Independent study with Marston Xue (Spring 2021). Topic: Scheme theory. 
 * Senior thesis with Ying Wang (2020–2021). Topic: Grassmannian. 
@@ -123,7 +123,8 @@ permalink: cv/
 # Conferences
 
 * Spring school: Towards a mod $p$ Langlands correspondence (April 2021). Universität Duisberg Essen. 
-* D-modules and representation theory (June 2019). Institut de Recherche Mathématique de Rennes.
+* D-modules and representation theory (June 2019). Institut de recherche mathématique de Rennes.
+* Rocky Mountain Section Meeting of the MAA (April 2019). Fort Lewis College. 
 * Derived algebraic geometry and its applications (March 2019). MSRI, Berkeley.
 * Front Range Number Theory Day (September 2018). Colorado State University.
 * RTG Research Workshop (May 2018). University of California, Berkeley.

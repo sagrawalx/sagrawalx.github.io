@@ -22,7 +22,7 @@ permalink: teaching/
 * Fall 2019, Block 4. [MA126 - Calculus 1](fa19-b4_ma126).
 * Fall 2019, Block 3. [MA315 - Ordinary Differential Equations](fa19-b3_ma315).
 * Fall 2019, Block 2. [MA475 - Real Analysis II](fa19-b2_ma475).
-* Fall 2019, Block 1. [MA375 - Real Analysis I](fa19-b1_ma375). Office hours only.
+* Fall 2019, Block 1. [MA375 - Real Analysis I](fa19-b1_ma375) (Office hours only). 
 * Spring 2019, Block 8. [MA220 - Linear Algebra](sp19-b8_ma220).
 * Spring 2019, Block 6. MA126 - Calculus 1.
 * Spring 2019, Block 5. MA315 - Ordinary Differential Equations.
