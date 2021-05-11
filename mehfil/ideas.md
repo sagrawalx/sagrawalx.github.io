@@ -15,17 +15,6 @@ nonav: true
 <th style="width: 60%;">Resources</th>
 </tr>
 
-
-<tr>
-<td>3/30</td>
-<td>Alī Sardār Jāfrī, *Merā Safar*</td>
-<td>
-* Full text: [Nagari](https://www.rekhta.org/nazms/meraa-safar-ham-chuu-sabza-baar-haa-roiida-em-ali-sardar-jafri-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/meraa-safar-ham-chuu-sabza-baar-haa-roiida-em-ali-sardar-jafri-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/meraa-safar-ham-chuu-sabza-baar-haa-roiida-em-ali-sardar-jafri-nazms)
-* [Excerpt from  by Bakht and Jaeger's *An Anthology of Modern Urdu Poetry*, Volume I](jafri-safar.pdf) (Urdu text, English translation)
-* [Reading by Abdul Ahad Saaz](https://www.youtube.com/watch?v=n22J3Tamax8)
-</td>
-</tr>
-
 <tr>
 <td>TBA</td>
 <td>Sūrajpāl Chauhān, *Bhīmrāo Kā Dalit Nahīṇ*</td>
@@ -92,6 +81,7 @@ nonav: true
 * Shamsher Bahadur Singh -- there's lots of stuff on kavitakosh, but also some stuff on Rekhta. See  esp. his collection सुकून की तलाश for stuff that's Hindustani-in-the-sense-of-Grierson (not overly Persianized, not overly Sanskritized)
 * Khwaja Ahmad Abbas, if there's something of an appropriate length
 * [Sahir Ludhianvi](https://www.outlookindia.com/website/story/the-evanescent-poet/296751) (lots of music, including stuff that's socially aware)
+* Shailendra, Gulzar, Javed Akhtar
 * Theme: caste 
     - Sūrajpāl Chauhān: [यह दलितों की बस्ती है](http://kavitakosh.org/kk/%E0%A4%AF%E0%A5%87_%E0%A4%A6%E0%A4%B2%E0%A4%BF%E0%A4%A4%E0%A5%8B%E0%A4%82_%E0%A4%95%E0%A5%80_%E0%A4%AC%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%80_%E0%A4%B9%E0%A5%88_..._/_%E0%A4%B8%E0%A5%82%E0%A4%B0%E0%A4%9C%E0%A4%AA%E0%A4%BE%E0%A4%B2_%E0%A4%9A%E0%A5%8C%E0%A4%B9%E0%A4%BE%E0%A4%A8)
     , [मेरी माँ](http://kavitakosh.org/kk/%E0%A4%AE%E0%A5%87%E0%A4%B0%E0%A5%80_%E0%A4%AE%E0%A4%BE%E0%A4%81_/_%E0%A4%B8%E0%A5%82%E0%A4%B0%E0%A4%9C%E0%A4%AA%E0%A4%BE%E0%A4%B2_%E0%A4%9A%E0%A5%8C%E0%A4%B9%E0%A4%BE%E0%A4%A8)

@@ -1,4 +1,4 @@
-I"a&<p><img class="sidepic" src="/img/hello-bunny.svg" title="Hello!"/></p>
+I"<'<p><img class="sidepic" src="/img/hello-bunny.svg" title="Hello!"/></p>
 <h1 id="basic-information">Basic information</h1>
 <ul>
 <li>Email: <span class="email" data-localpart="sagrawal" data-domain="coloradocollege.edu"></span></li>
@@ -33,9 +33,9 @@ Deformations of overconvergent isocrystals on the projective line. <a href="http
 </li>
 </ul>
 <h1 id="talks">Talks</h1>
-<!--
-* From category $\mathcal{O}^\infty$ to locally analytic representations (May 2021). Arithmetic geomerty seminar, Institut de Recherche Mathématique de Rennes. -->
 <ul>
+<li>From category <span class="math inline">\(\mathcal{O}^\infty\)</span> to locally analytic representations (May 2021). Séminare de géométrie arithmétique, Institut de recherche mathématique de Rennes.</li>
+<li>From category <span class="math inline">\(\mathcal{O}^\infty\)</span> to locally analytic representations (May 2021). Algebraic geomerty seminar, Cornell University.</li>
 <li>From category <span class="math inline">\(\mathcal{O}^\infty\)</span> to locally analytic representations (April 2021). <span class="math inline">\(p\)</span>-Adic representations and arithmetic D-modules seminar, Università degli Studi di Padova.</li>
 <li>Perspective: The Mathematics of Depicting Depth (February 2020). Fearless Fridays, Colorado College.</li>
 <li>How local systems arise (February 2019). Rings and Wings, UC Colorado Springs.</li>

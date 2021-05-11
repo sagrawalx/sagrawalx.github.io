@@ -15,7 +15,7 @@ Here's an [in-progress list of Urdu-Hindi resources](resources) that you might f
 
 *: In light of Covid, we "gather" virtually for now. 
 
-[^name]: The name of this language is a conundrum which vexes me greatly. On this page, I alternate between *Hindi-Urdu* and *Urdu-Hindi* as the name of the language (other names for the same language include *Hindustani*, *Khari Boli*, etc). This language is traditionally written in two scripts. I have used the name *Nagari* to refer one script that is used to write this language (another name for this script is *Devanagari*), and *Urdu* to refer to the other script (other names for this script include *Nastaliq*, *Perso-Arabic*, etc). I may also use the word *Hindi* as shorthand for "the Hindi-Urdu language written in the Nagari script" and *Urdu* as a shorthand for "the Urdu-Hindi language written in the Urdu script." 
+[^name]: Naming this language is a conundrum which vexes me. On this page, I alternate between *Hindi-Urdu* and *Urdu-Hindi* as the name of the language (other names for the same language include *Hindustani*, *Khari Boli*, etc). This language is traditionally written in two scripts. I have used the name *Nagari* to refer one script that is used to write this language (another name for this script is *Devanagari*), and *Urdu* to refer to the other script (other names for this script include *Nastaliq*, *Perso-Arabic*, etc). I sometimes also use the word *Hindi* as shorthand for "the Urdu-Hindi language written in the Nagari script" and *Urdu* as a shorthand for "the Hindi-Urdu language written in the Urdu script." 
 
 # Calendar {#calendar}
 
@@ -24,6 +24,16 @@ Here's an [in-progress list of Urdu-Hindi resources](resources) that you might f
 <th style="width: 10%;">Date</th>
 <th style="width: 30%;">Topic</th>
 <th style="width: 60%;">Resources</th>
+</tr>
+
+<tr>
+<td>5/11</td>
+<td>Alī Sardār Jāfrī, *Merā Safar*</td>
+<td>
+* Full text: [Nagari](https://www.rekhta.org/nazms/meraa-safar-ham-chuu-sabza-baar-haa-roiida-em-ali-sardar-jafri-nazms?lang=hi), [Urdu](https://www.rekhta.org/nazms/meraa-safar-ham-chuu-sabza-baar-haa-roiida-em-ali-sardar-jafri-nazms?lang=ur), [Roman](https://www.rekhta.org/nazms/meraa-safar-ham-chuu-sabza-baar-haa-roiida-em-ali-sardar-jafri-nazms)
+* [Excerpt from  by Bakht and Jaeger's *An Anthology of Modern Urdu Poetry*, Volume I](jafri-safar.pdf) (Urdu text, English translation)
+* [Reading by Abdul Ahad Saaz](https://www.youtube.com/watch?v=n22J3Tamax8)
+</td>
 </tr>
 
 <tr>
