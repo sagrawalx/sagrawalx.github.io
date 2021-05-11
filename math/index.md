@@ -9,7 +9,7 @@ Broadly speaking, I study algebraic geometry. More specifically, here are some m
 
 $p$-adic, nonarchimedean, adic space, perfectoid, pro-étale, overconvergent, (bounded) Robba ring, (arithmetic) D-module, rigid cohomology, de Rham(-Witt), crystalline, cotangent complex, (higher) category, derived, homological, topos, derivator, non-noetherian, locally analytic representation, local Langlands correspondences, ...
 
-I completed my PhD at UC Berkeley in 2018. My advisor was [David Nadler](https://math.berkeley.edu/~nadler/). My PhD thesis is available [here](https://escholarship.org/uc/item/1sp926n0). There are a few typos in this document, but they're not terribly serious. The arXiv and published versions below corrects these typos, but they omit some of the expository content of my thesis.
+I completed my PhD at UC Berkeley in 2018. My advisor was [David Nadler](https://math.berkeley.edu/~nadler/). My PhD thesis is available [here](https://escholarship.org/uc/item/1sp926n0). There are a few typos in this document, but they're not terribly serious. The arXiv and published versions below correct these typos, but they omit some of the expository content of my thesis.
 
 # Papers
 
