@@ -19,8 +19,7 @@ I completed my PhD at UC Berkeley in 2018. My advisor was [David Nadler](https:/
 
 Here are some slides and/or notes for some of the talks I've given.
 
-* *From category $\mathcal{O}^\infty$ to locally analytic representations*. I've given a couple of similar but not completely identical talks about the paper of this name. 
-    - Rennes, Cornell (link forthcoming). May 2021 at the *Algebraic Geometry Seminar* at Cornell University, and then a bit later in May 2021 at the *Séminare de géométrie arithmétique* at the Institut de recherche mathématique de Rennes. 
+* *From category $\mathcal{O}^\infty$ to locally analytic representations*.  
     - [Padova](o-infty-padova.pdf). April 2021 at the *p-adic representations and arithmetic D-modules* seminar, organized by Andrés Sarrazola Alzate and Francesco Baldassari, at the Università degli Studi di Padova. This talk assumes some background material that had been discussed in preceding seminar talks. 
 * [Perspective: The Mathematics of Depicting Depth](perspective.pdf). Slides for a talk I gave at Colorado College's *Fearless Fridays* seminar in February 2020. 
 * [A Smörgåsbord of Arithmetic Geometry](smorgasbord.pdf). Slides for a talk I gave at Colorado College's *Fearless Fridays* seminar in February 2018.

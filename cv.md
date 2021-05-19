@@ -144,8 +144,8 @@ permalink: cv/
 
 ## Professional
 
-* Contributor to the Stacks Project
-* Reviewer for zbMATH
+* Contributor to the [Stacks Project](https://stacks.math.columbia.edu/)
+* Reviewer for [zbMATH](https://zbmath.org/)
 
 ## Departmental
 
