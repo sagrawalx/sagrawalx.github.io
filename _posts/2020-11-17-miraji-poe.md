@@ -1,9 +1,9 @@
 ---
 title: मीराजी और एडगर ऐलन पो
-date: 2021-01-09
+update: 2021-01-09
 tags: transliteration
 layout: post
-summary: पो की शायरी के तर्जुमे, मीराजी के हाथ
+summary: एडगर ऐलन पो की शायरी, मीराजी के तर्जुमे
 ---
 
 <div class="introduction">
@@ -18,6 +18,8 @@ Nagari transliterations of Miraji's translations of some poems by Edgar Allan Po
 * [The Lake](https://poets.org/poem/lake), translated as [झील](#jhiil)
 
 Note: The poem "The Vital Stream" is not by Poe. It was found written in Poe's handwriting and subsequently attributed to him in a few collections published in the early 1900s. Presumably Miraji was working from one of these collections. However, it was later discovered that this poem is actually from Thomas Skinner Surr's 1798 novel *George Barnwell*. 
+
+Latest update: {{ page.update }}. 
 </div>
 
 # अकेला {#akelaa}

@@ -1,6 +1,5 @@
 ---
 title: Implicitization
-date: 2020-11-20
 tags: math
 layout: post
 summary: Scheme-theoretic version of Cox-Little-O'Shea's "implicitization" results

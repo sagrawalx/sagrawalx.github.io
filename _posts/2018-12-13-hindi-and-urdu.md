@@ -1,6 +1,5 @@
 ---
 title: Hindi and Urdu
-date: 2018-12-20
 tags: translation language
 layout: post
 summary: A work of satire by Saadat Hasan Manto

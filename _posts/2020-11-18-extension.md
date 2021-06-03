@@ -1,6 +1,5 @@
 ---
 title: Proj, "extension," and "closure"
-date: 2020-11-30
 tags: math
 layout: post
 summary: Scheme-theoretic discussion of Cox-Little-O'Shea's "extension" and "closure" theorems

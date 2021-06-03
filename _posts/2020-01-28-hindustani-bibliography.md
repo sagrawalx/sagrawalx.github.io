@@ -1,12 +1,16 @@
 ---
-title: "Partially annotated bibliography on Hindi-Urdu"
-date: 2021-02-21
+title: "Annotated bibliography on Hindi-Urdu"
+updated: 2021-06-03
 tags: language
 layout: post
+summary: Well, partially annotated anyway...
 ---
 
 <div class="introduction">
-Here are a few references that deal with the history of Hindi-Urdu (also called Hindustani, Khari Boli, ...). They are ordered alphabetically by the last name of the author. Following each one is some comments of mine (summaries, excerpts, opinions, etc). Please let me know if you find any broken links or other problems of any kind.
+Here are a few references that deal with the history of Hindi-Urdu (also called Hindustani, Khari Boli, ...). They are ordered alphabetically by the last name of the author. Following most are some comments of mine (summaries, excerpts, opinions, etc). Please let me know if you find any broken links or other problems of any kind.
+
+
+Latest update: {{ page.updated }}. 
 </div>
 
 * BANGHA, Imre. "Rekhta: Poetry in Mixed Language: The Emergence of Khari Boli Literature in North India." In *Before the Divide: Hindi and Urdu Literary Culture*, edited by Francesca Orsini. New Delhi: Orient Blackswan, 2010. 
@@ -22,6 +26,24 @@ Here are a few references that deal with the history of Hindi-Urdu (also called 
     * Summary, translation, and possibly transliteration forthcoming!
 
 * CHAND, Tara. *The Problem of Hindustani*. Allahabad: Indian Periodicals Ltd, 1944. [[Link](http://www.columbia.edu/itc/mealac/pritchett/00urduhindilinks/tarachand/tarachand.html)]
+
+* FAROUQI, Ather. 'From Urdu to Hindustani: Has the Former Sung the Latter's Dying Dirge?' Speech delivered on August 23, 2013, in Chennai. Published in *Mainstream*, Vol LII No 1, Decemeber 28, 2013. [[Link](https://www.mainstreamweekly.net/article4666.html)]
+
+    * This is the text of the author's acceptance speech for one of the 2012 Sahitya Akademi translation awards. The award was conferred for *Bābar Kī Aulād*, a Hindustani  translation of Salman Khurshid's English play *Songs of Babur*. The play was published in both the Devanagari and Urdu scripts, and won the Sahitya Akademi's 2012 translation award for a translation into Urdu. 
+    
+        Regarding the language of the play, the author writes: 
+    
+        > As I hope people who have seen the performances of *Babur ki Aulad* will agree, it can easily be considered as being either in Hindi—of course by liberals and not Hindi chauvinists or protagonists of political Hindi in the name of modern Hindi—or in Urdu—as the Sahitya Akademi has done. Since the play is set in the pre-1857 period and is related to the last Mughal king, himself a prominent poet of Urdu, the language had to be the language of those times—Hindustani with lashings of Persian.
+    
+        While discussing this play, the author spends some time discussing the state of post-Partition  Muslim society in general, and of Urdu in particular. For instance, the author writes: 
+    
+        >  That Urdu was adopted by the enemy nation of Pakistan only added to its woes... [It] eventually became easy prey to *dini madaris* which happily adopted it resulting in Urdu being now firmly identified with the brand of Islam that is promoted by these seedbeds of militancy. 
+    
+        He also writes of the artificiality of Sanskritized Hindi for a population that speaks Hindustani: 
+    
+        > [It] is this Hindustani-speaking populace that has been subsumed by Hindi chauvinism, which has imposed a formal and contrived structure on Hindustani, the natural tongue of a vast majority of north Indians. 
+    
+        He also discusses the perversity of the Urdu-Hindi distinction, describing the situation as "the most bizarre scenario in the history of languages." The author concludes with the suggestion that "the Sahitya Akademi seriously consider recognising Hindustani as a language and confer awards in it as in any other Indian language."
     
 * FAROUQI, Ather. "'Urdu': Not a Language Name but the City of Shahjahanabad." *IIC Quarterly*, Summer & Autumn 2020, Volume 47, Numbers 1 & 2, pp. 156--63. 
     * This article reiterates one of the main points made by Faruqi in *Early Urdu Literary Culture and History* --- namely, the assertion that the word *Urdū* as a language name has a relatively short history. The author provides some examples from the historical record from the 1700s showing *Urdū* used a place name rather than a language name. 
@@ -115,12 +137,37 @@ Here are a few references that deal with the history of Hindi-Urdu (also called 
        In the end, though, he leaves the script issue up to the test of time. For the time being, he writes: 
        
        > हमें इस शर्त को मानकर चलना है कि हिंदी और उर्दू दोनों ही राष्ट्र-लिपि हैं और हमें अख्तियार है, हम चाहे जिस लिपि में उसका व्यवहार करें। 
+
+
+* PREMCHAND."Hindī Urdū Kī Ektā." Lecture delivered at the *Ārya-Samāj-Sammelan* in Lahore on April 23--24, 1936. [[Link](https://hindikahani.hindi-kavita.com/Hindi-Urdu-Ki-Ekta-Munshi-Premchand.php)]
+
+    * This is quite similar to the lecture discussed above. He asserts the unity of Hindi and Urdu: 
+        
+        > यह [भाषा] लिखी जाती है दो लिपियों में और उसी एतबार से हम उसे हिंदी या उर्दू कहते हैं, पर है वह एक ही।
+        
+        He talks about Khari Boli becoming predominant over Braj, Awadhi, etc: 
+        
+        > हिंदी को यह गौरव प्रदान करने का श्रेय मुसलमानों को है। मुसलमानों ने ही दिल्ली प्रांत की इस बोली को, जिसको उस वक्त तक भाषा का पद न मिला था, व्यवहार में ला कर उसे दरबार की भाषा बना दिया और दिल्ली के उमरा और सामंत जिन प्रान्तों में गए, हिंदी भाषा को साथ लेते गए। 
+        
+        He laments the bifurcation of Hindi and Urdu: 
+        
+        > एक तरफ़ हमारे मौलवी साहेबान अरबी और फ़ारसी के शब्द भरते जाते हैं, दूसरी ओर पंडितगण संस्कृत और प्राकृत के शब्द ठूँस रहे हैं, और दोनों भाषाएँ अवाम से दूर होती जा रही हैं।
+        
+        > चूंकि उर्दू ज़बान अरसे से अदालती और सभ्य समाज की भाषा रही है इसलिए उसने हज़ारों फ़ारसी और अरबी के शब्द इस तरह घुल-मिल गए हैं कि ब्रज देहाती भी उनका मतलब समझ जाता है। ऐसे शब्दों को अलग करके हिंदी में विशुद्धता लाने का जो प्रयत्न किया जा रहा है, हम उसे ज़बान और कौम दोनों ही के साथ अन्याय समझते हैं। इसी तरह हिंदी या संस्कृत या अंग्रेजी के जो बिगड़े हुए शब्द उर्दू में मिल गए, उनको चुन-चुनकर निकालने और उनकी जगह खालिस फ़ारसी और अरबी के शब्दों के इस्तेमाल को भी उतना ही एतराज़ के लायक समझते हैं। दोनों तरह के इस अलगौझे का सबब शायद यही है कि हमारा पढ़ा-लिखा समाज जनता से अलग-थलग होता जा रहा है और उसे इसकी खबर ही नहीं कि जनता किस तरह अपने भावों और विचारों को अदा करती है। ऐसी ज़बान जिसमें लिखने और समझने वाले थोड़े से पढ़े-लिखे लोग ही हों, मसनुई बेजान और बोझल हो जाती है। जनता का मर्म स्पर्श करने की, उन तक अपना पैगाम पहुँचाने की उसमें कोई शक्ति नहीं रहती। वह उस तालाब की तरह है जिसके घाट संगमरमर के बने हो, जिस में कमल खिले हों, लेकिन उसका पानी बंद हो। क्या उस पानी में वह मज़ा, वह सेहत देने वाली ताकत, वह सफ़ाई है, जो खुली हुई धारा में होती है?
+        
+        > यह सारी करामात फ़ोर्ट विलियम की है जिसने एक ही ज़बान के दो रूप मान लिए। इसमें भी उस वक्त कोई राजनीति काम कर रही थी, या उस वक्त भी दोनों ज़बानों में काफ़ी फ़र्क आ गया था, यह हम नहीं कह सकते, लेकिन जिन हाथों ने यहाँ की ज़बान के उस वक्त दो टुकड़े कर दिए, उसने हमारी कौमी ज़िंदगी के दो टुकड़े कर दिए।
+        
+        He also talks about countering the bifurcation, describing an optimistic vision while acknowledging the pessimism warranted by the present situation: 
+        
+        > हिंदी हिंदुओं की और उर्दू मुसलमानों की ज़बान होती जा रही है। क्या उन्हें अपने-अपने ढंग पर संस्कृति के अनुसार बढ़ने दिया जाए, या दोनों को इतना करीब लाया जाए कि उसमें लिपि के सिवा कोई भेद न रहे? ऐसे लोग बहुत ही कम हैं जो सोचते हैं कि दोनों ज़बानों में एकता लाई जा सकती है और इस बढ़ते हुए फ़र्क को रोका जा सकता है, लेकिन उनकी आवाज़ नक्कारखाने में तूती की आवाज़ है। ये लोग हिंदी और उर्दू नामों का व्यवहार नहीं करते, क्योंकि दो नामों का व्यवहार उनके भेद को और मज़बूत करता है, ये लोग दोनों को एक नाम से ही पुकारते हैं और वह है 'हिंदुस्तानी'। उनका आदर्श है कि जहाँ तक मुमकिन हो लिखी जाने वाली ज़बान और बोलचाल की ज़बान की सूरत एक हो, और वह थोड़े से पढ़े-लिखे आदमियों की ज़बान न रह कर सारी कौम की ज़बान हो। जो कुछ लिखा जाए उस का फ़ायदा जनता भी उठा सके, और हमारे यहाँ पढ़े-लिखों की जो एक जमात अलग बनती जा रही है और जनता से उनका संबंध जो दूर होता जा रहा है, वह दूरी मिट जाए और पढ़े-बेपढ़े सब अपने को एक जान एक दिल समझें और कौम में ताकत आए।
+        
+        > सर विलियम [मैरिस] ने इलाहाबाद की हिंदुस्तानी एकेडेमी खोलते वक्त हिंदी-उर्दू के लेखकों को जो सलाह दी थी, उसे ध्यान में रखने की आज भी उतनी ही ज़रूरत है, जितनी उस वक्त थी। शायद और ज़्यादा। आप ने फ़रमाया कि हिंदी के लेखकों को लिखते वक्त यह समझते रहना चाहिए कि उनके पाठक मुसलमान हैं। इसी तरह उर्दू के लेखकों को यह खयाल रखना चाहिए [कि] उनके कारी हिंदू हैं। यह एक सुनहरी सलाह है और अगर हम इसे गाँठ बांध लें तो ज़बान का मसला बहुत कुछ तय हो जाए।
        
 * RAZA, Rahi Masoom. *Ṭopī Shuklā*. New Delhi: Rājkamal Prakāshan Pvt Ltd, 1966.
 
     * Discussions of language are interspersed throughout this novel --- especially characters commenting on each others pronunciation and language use. But there are other things as well. For example, at one point the author writes: 
     
-        > यह नामों का चक्कर भी अजीब है। उर्दू और हिन्दी एक ही भाषा, हिन्दवी के दो नाम हैं। परन्तु अब खुद देख लीजिए कि नाम बदल जाने से कैसे-कैसे घपले हो रहे हैं।
+        > यह नामों का चक्कर भी अजीब है। उर्दू और हिंदी एक ही भाषा, हिंदवी के दो नाम हैं। परंतु अब खुद देख लीजिए कि नाम बदल जाने से कैसे-कैसे घपले हो रहे हैं।
     
         There is some discussion of the unnaturality of hyper-Sanskritized Hindi as a colloquial language. At one point, an Urdu teacher in the novel remarks, 
         
@@ -128,7 +175,7 @@ Here are a few references that deal with the history of Hindi-Urdu (also called 
         
         Soon after, a Hindi teacher is described as follows: 
         
-        > वह अच्छी उर्दू, फ़ारसी जानते थे। मगर मौलवी साहब की ज़िद में उन्होंने उर्दू बोलना छोड़ दिया। हिंन्दी बोलने में उन्हें कठिनाई होती। परन्तु वह हिन्दी ही बोलने लगे। उर्दू-फ़ारसी के जो शब्द उनकी ज़बान पर चढ़े हुए थे उन्हें कोशिश करके उन्होंने भुला दिया।
+        > वह अच्छी उर्दू, फ़ारसी जानते थे। मगर मौलवी साहब की ज़िद में उन्होंने उर्दू बोलना छोड़ दिया। हिंदी बोलने में उन्हें कठिनाई होती। परन्तु वह हिंदी ही बोलने लगे। उर्दू-फ़ारसी के जो शब्द उनकी ज़बान पर चढ़े हुए थे उन्हें कोशिश करके उन्होंने भुला दिया।
         
         At another point, characters discussing pronunciation turns into some musings on the Hindi-Urdu fissure by the author: 
         
@@ -155,3 +202,21 @@ Here are a few references that deal with the history of Hindi-Urdu (also called 
     > INTERVIEWER: Bombay has many languages. What is your mother tongue?
     >
     > RUSHDIE: Urdu. Urdu is literally my mother's tongue. It's my father’s tongue, too. But in northern India one also spoke Hindi. Actually, what we spoke was neither of them, or rather more like both. I mean, what people in northern India actually speak is not a real language. It's a colloquial mixture of Hindi and Urdu called Hindustani. It isn't written. It's the language of Bollywood movies. And some mixture of Hindustani and English is what we spoke at home.
+    
+* VIJ, Shivam. 'Why I won't apologize for being a Macaulayputra.' *Scroll.in*, August 8th, 2014. [[Link](https://scroll.in/article/673235/Why-I-won't-apologise-for-being-a-Macaulayputra)]
+
+    * This is a nice reflection about language (English, Hinglish, Hindustani, Hindi, etc) as it applies to both the personal and the political. 
+    
+        Regarding English, the article identifies Thomas Babington Macaulay as instrumental to the passage of the English Education Act of 1835. In his *Minute on Indian Education* of February 1835, Macaulay asserted that "English is better worth knowing than Sanskrit or Arabic," and this set the stage for an Indian educated elite who was at home in English (ie, the community of "Macaulayputras," with which the author identifies).
+    
+        Regarding Sanskritized Hindi in contrast with vernacular Hindustani, the author writes things such as the following: 
+
+        > The Hindi that my schoolmates and I spoke each other with, the Hindi that we spoke at home and in the bazaars was a Hindi that my teacher insisted had too many Farsi words in it – and would penalise me for using it in writing. I identified myself as primarily being a Hindi speaker... 
+    
+        > If my mother tongue is the language my mother speaks, it is Hindustani, and I speak it too. There is no one mother tongue in India, not even in the Hindi heartland... This is why the Hindustani poetry of Amir Khusro, written 800 years ago, is more naturally intelligible to me than the gibberish Sanskritised Hindi that my government tells me is my language.
+
+        > The Rajbhasha Committee... should ask themselves why they need to promote a language if it is the mother tongue of the people.
+
+
+
+

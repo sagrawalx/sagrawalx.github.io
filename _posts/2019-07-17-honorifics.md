@@ -1,14 +1,19 @@
 ---
 title: Hindustani honorific verbs
-date: 2021-01-27
+update: 2021-01-27
 tags: language
 layout: post
 summary: Honorifics à la Japanese in Urdu-Hindi
 ---
 
+<div class="introduction">
+
 One often sees discussions of honorific verbs in Japanese. They come in two varieties: the *respectful honorifics* (尊敬語), which exalt the subject of the verb, and the *humble honorifics* (謙譲語), which express humility of the subject. For example, the verb one would normally use to talk about eating is *taberu* (食べる). But if one were speaking about one's boss eating, one might use the respectful variant *meshiagaru* (召し上がる). On the other hand, one might talk about oneself eating in the presence of one's boss using the humble variant *itadaku* (いただく). 
 
 It occurs to me that this phenomenon of honorific verbs of both varieties exists to some extent in Hindustani (ie, Urdu-Hindi) as well, though these expressions are not very common in the language as I've been exposed to it colloquially. They sound very formal; some of them evoke images of royal courts of a bygone era. In any case, I felt like it might be useful for me at some point if I compiled a list of the honorific verbal expressions I've encountered. I'll continue to update this list as I find more. 
+
+Latest update: {{ page.update }}
+</div>
 
 # Respectful Honorifics
 
