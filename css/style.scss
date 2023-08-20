@@ -1,0 +1,294 @@
+---
+---
+
+$light: #eee;
+$less-light: #ddd;
+$text: #444;
+$link: #777;
+$banner: #777;
+$accent: #339999;
+
+@import url("reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Baloo+Bhaijaan+2:wght@800&family=Noto+Sans&family=Noto+Sans+Devanagari&family=Noto+Sans+Arabic&family=Noto+Sans+Bengali&family=Noto+Sans+JP&display=swap');
+
+body {
+    font-size: 16px;
+    font-family: "Noto Sans", "Noto Sans Devanagari", "Noto Sans Arabic", "Noto Sans Bengali", "Noto Sans JP", sans-serif;
+    font-weight: normal;
+    line-height: 1.7;
+    color: $text;
+
+    min-width: 30em;
+    max-width: 50em;
+    text-align: left;
+    padding-left: 5em;
+    padding-right: 5em;
+
+    em {
+        font-style: italic;
+    }
+
+    strong {
+        font-weight: bold;
+    }
+
+    a:link, a:visited {
+        color: $link;
+        text-decoration: none;
+    }
+
+    a:hover, a:active, a.current {
+        color: $accent;
+    }
+
+    blockquote, .blockquote, div.sourceCode {
+        display: block;
+        padding-left: 2em;
+        border-left-style: solid;
+        border-left-width: 5px;
+        border-left-color: $light;
+    }
+    
+    .centerquote {
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    code, div.sourceCode {
+        font-family: monospace;
+        overflow: auto;
+        max-height: 40em;
+        @import url("code.css");
+    }
+
+    span.blockquote-attribution {
+        display:  block;
+        text-align: right;
+    }
+
+    table {
+        th, td {
+            border: 1px solid $less-light;
+            padding: 0.5em;
+        }
+
+        th {
+            background-color: $light;
+        }
+        td.subheading {
+            background-color: $light;
+            font-style: italic;
+        }
+    }
+}
+
+#banner {
+    padding-top: 1em;
+
+    a, a:visited {
+        font-size: 2.25em;
+        color: $banner;
+        font-weight: normal;
+        font-family: "Baloo 2", "Baloo Bhaijaan 2", cursive;
+    }
+
+    a:hover, a:active {
+        color: $accent;
+    }
+}
+
+.sidepic {
+    width: 16em;
+    float: right;
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+#sitenav {
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+
+    ul {
+        list-style: none;
+
+        li {
+            display: inline;
+            margin-right: 1em;
+        }
+    }
+}
+
+main {
+    padding-bottom: 5em;
+
+    h1 {
+        font-weight: bold;
+        font-size: 1.25em;
+        margin-top: 1.25em;
+        margin-bottom: 1em;
+    }
+    
+    header {
+        margin-bottom: 1em;
+        
+        h1 {
+            margin-bottom: 0em;
+        }
+        
+        span.page-info {
+            font-size: small;
+        }
+    }
+
+    h2, article h1 {
+        font-weight: bold;
+        font-style: normal;
+        font-size: 1em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    h3, article h2 {
+        font-weight: normal;
+        font-style: italic;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    p {
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+    }
+
+	
+	li {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+	}
+
+    ul {
+        list-style: square;
+        padding-left: 2.5em;
+
+        ul {
+            list-style: circle;
+        }
+    }
+
+    ol {
+        list-style: decimal;
+        padding-left: 2.5em;
+    }
+
+    .introduction, .references {
+        font-size: small;
+        background-color: $light;
+        padding: 1em 2em;
+        margin-bottom: 1em;
+        border-radius: 0.2em;
+    }
+
+    .references {
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        margin-top: 1em;
+        
+        b {
+            font-weight: bold;
+        }
+    }
+
+    .footnoteRef, sup {
+        vertical-align: super;
+        font-size: xx-small;
+    }
+
+    .footnotes {
+        font-size: small;
+        ol {
+            padding-left: 4.5em;
+            padding-right: 2em;
+        }
+    }
+
+    hr {
+        margin-top: 1em;
+        border: 0;
+        height: 1px;
+        background: $less-light;
+    }
+    
+    ol.bibliography {
+        span {
+            display: inline;
+        }
+        
+        div.csl-left-margin {
+            display: none;
+        }
+    
+        div.csl-right-inline {
+            display: inline;
+        }
+    }
+}
+
+.email:after {
+    content: attr(data-domain);
+}
+.email:before {
+    content: attr(data-localpart) "@";
+}
+
+ul.tags {
+    padding-left: 0;
+    display: inline;
+
+    li {
+        display: inline;
+        margin-right: 0.4em;
+        background-color: $light;
+        padding: 0.1em 0.4em 0.1em 0.4em;
+        border-radius: 0.2em;
+        color: $link;
+    }
+
+    li:before {
+        content: "#";
+        color: $link;
+    }
+}
+
+.hoverseg {
+    .unit {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+    }
+    
+    .unit .hover {
+        visibility: hidden;
+        width: 15em;
+        top: 100%;
+        left: 50%;
+        margin-left: -5em;
+        
+        background-color: $light;
+        padding: 0.25em 0.5em;
+        border-radius: 0.25em;
+        border: 1px solid black;
+        
+        position: absolute;
+        z-index: 1;
+    }
+    
+    .unit:hover .hover {
+        visibility: visible;
+    }
+}

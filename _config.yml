@@ -1,0 +1,20 @@
+plugins: 
+    - jekyll-pandoc
+    - jekyll-redirect-from
+
+markdown: Pandoc
+
+pandoc:
+    extensions:
+        - mathjax
+        
+defaults:
+  - scope:
+        path: ""
+    values:
+        layout: default
+
+exclude: 
+    - README.md
+    - push.sh
+    - pull.sh
