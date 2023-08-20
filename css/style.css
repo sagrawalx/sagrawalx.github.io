@@ -1,0 +1,237 @@
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Baloo+Bhaijaan+2:wght@800&family=Noto+Sans&family=Noto+Sans+Devanagari&family=Noto+Sans+Arabic&family=Noto+Sans+Bengali&family=Noto+Sans+JP&display=swap");
+body {
+  font-size: 16px;
+  font-family: "Noto Sans", "Noto Sans Devanagari", "Noto Sans Arabic", "Noto Sans Bengali", "Noto Sans JP", sans-serif;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #444;
+  min-width: 30em;
+  max-width: 50em;
+  text-align: left;
+  padding-left: 5em;
+  padding-right: 5em;
+}
+body em {
+  font-style: italic;
+}
+body strong {
+  font-weight: bold;
+}
+body a:link, body a:visited {
+  color: #777;
+  text-decoration: none;
+}
+body a:hover, body a:active, body a.current {
+  color: #339999;
+}
+body blockquote, body .blockquote, body div.sourceCode {
+  display: block;
+  padding-left: 2em;
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-left-color: #eee;
+}
+body .centerquote {
+  padding-left: 4em;
+  padding-right: 4em;
+}
+body code, body div.sourceCode {
+  font-family: monospace;
+  overflow: auto;
+  max-height: 40em;
+  @import url("code.css");
+}
+body span.blockquote-attribution {
+  display: block;
+  text-align: right;
+}
+body table th, body table td {
+  border: 1px solid #ddd;
+  padding: 0.5em;
+}
+body table th {
+  background-color: #eee;
+}
+body table td.subheading {
+  background-color: #eee;
+  font-style: italic;
+}
+
+#banner {
+  padding-top: 1em;
+}
+#banner a, #banner a:visited {
+  font-size: 2.25em;
+  color: #777;
+  font-weight: normal;
+  font-family: "Baloo 2", "Baloo Bhaijaan 2", cursive;
+}
+#banner a:hover, #banner a:active {
+  color: #339999;
+}
+
+.sidepic {
+  width: 16em;
+  float: right;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+#sitenav {
+  width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+#sitenav ul {
+  list-style: none;
+}
+#sitenav ul li {
+  display: inline;
+  margin-right: 1em;
+}
+
+main {
+  padding-bottom: 5em;
+}
+main h1 {
+  font-weight: bold;
+  font-size: 1.25em;
+  margin-top: 1.25em;
+  margin-bottom: 1em;
+}
+main header {
+  margin-bottom: 1em;
+}
+main header h1 {
+  margin-bottom: 0em;
+}
+main header span.page-info {
+  font-size: small;
+}
+main h2, main article h1 {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+main h3, main article h2 {
+  font-weight: normal;
+  font-style: italic;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+main p {
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+main li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+main ul {
+  list-style: square;
+  padding-left: 2.5em;
+}
+main ul ul {
+  list-style: circle;
+}
+main ol {
+  list-style: decimal;
+  padding-left: 2.5em;
+}
+main .introduction, main .references {
+  font-size: small;
+  background-color: #eee;
+  padding: 1em 2em;
+  margin-bottom: 1em;
+  border-radius: 0.2em;
+}
+main .references {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  margin-top: 1em;
+}
+main .references b {
+  font-weight: bold;
+}
+main .footnoteRef, main sup {
+  vertical-align: super;
+  font-size: xx-small;
+}
+main .footnotes {
+  font-size: small;
+}
+main .footnotes ol {
+  padding-left: 4.5em;
+  padding-right: 2em;
+}
+main hr {
+  margin-top: 1em;
+  border: 0;
+  height: 1px;
+  background: #ddd;
+}
+main ol.bibliography span {
+  display: inline;
+}
+main ol.bibliography div.csl-left-margin {
+  display: none;
+}
+main ol.bibliography div.csl-right-inline {
+  display: inline;
+}
+
+.email:after {
+  content: attr(data-domain);
+}
+
+.email:before {
+  content: attr(data-localpart) "@";
+}
+
+ul.tags {
+  padding-left: 0;
+  display: inline;
+}
+ul.tags li {
+  display: inline;
+  margin-right: 0.4em;
+  background-color: #eee;
+  padding: 0.1em 0.4em 0.1em 0.4em;
+  border-radius: 0.2em;
+  color: #777;
+}
+ul.tags li:before {
+  content: "#";
+  color: #777;
+}
+
+.hoverseg .unit {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.hoverseg .unit .hover {
+  visibility: hidden;
+  width: 15em;
+  top: 100%;
+  left: 50%;
+  margin-left: -5em;
+  background-color: #eee;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  border: 1px solid black;
+  position: absolute;
+  z-index: 1;
+}
+.hoverseg .unit:hover .hover {
+  visibility: visible;
+}
+
+/*# sourceMappingURL=style.css.map */
