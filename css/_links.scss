@@ -1,0 +1,20 @@
+@use "colors";
+
+a:link, a:visited {
+    color: colors.$link;
+    text-decoration: none;
+}
+
+a:hover, a:active, a.current {
+    color: colors.$accent;
+}
+
+a[href$=".pdf"]:after, a[href$=".asc"]:after {
+    content: url("/assets/pdf.svg");
+    padding-left: 0.1em;
+}
+
+a[href^="https://"]:after, a[href^="http://"]:after {
+    content: url("/assets/external.svg");
+    padding-left: 0.1em;
+}

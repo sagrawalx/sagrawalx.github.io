@@ -1,10 +1,9 @@
 ---
-title: Home
-banner: महफ़िल · محفل
+title: महफ़िल · محفل
 redirect_from: mehfil/
 ---
 
-**(I stopped organizing this group when I left CC in 2022. This page is no longer maintained.)**
+*(I stopped organizing this group when I left CC in 2022. This page is no longer maintained.)*
 
 # Overview
 

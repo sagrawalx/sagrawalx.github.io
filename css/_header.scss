@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Cherry+Bomb+One&display=swap');
+
+header {
+    margin-bottom: 1em;
+}
+
+#banner {
+    font-size: 2em;
+    font-family: "Baloo 2", "Cherry Bomb One", cursive;
+}
+
+nav#languages {
+    display: none; // Change to inline-block
+    font-size: xx-small;
+    
+    ul li {
+        display: inline;
+        margin-left: 0.5em;
+    }
+    
+    /*
+    ul {
+        height: 1em;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    ul li {
+        font-size: xx-small;
+        width: 2em;
+    } */
+}
+
+nav#pages {
+    ul li {
+        display: inline;
+        margin-right: 1em;
+    }
+}

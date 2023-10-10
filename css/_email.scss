@@ -1,0 +1,6 @@
+.email:after {
+    content: attr(data-domain);
+}
+.email:before {
+    content: attr(data-localpart) "@";
+}

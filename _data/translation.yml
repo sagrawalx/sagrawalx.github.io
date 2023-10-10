@@ -1,0 +1,28 @@
+languages:
+- en
+- ja
+labels:
+    en: en
+    ja: 日
+    hi: हिं
+    ur: اُر
+    fr: fr
+banners:
+    en: Shishir Agrawal
+    ja: シシル・アガラワル
+    hi: शिशिर अग्रवाल
+    ur: ششر اگروال
+    fr: Shishir Agrawal
+navigation:
+- en: Math Docs
+  ja: 数学書類
+  href: math
+- en: CV
+  ja: 履歴
+  href: cv
+- en: Teaching Archive
+  ja: 教材アーカイブ
+  url: https://sagrawalx.github.io/teaching/
+- en: GitHub
+  ja: GitHub
+  url: https://github.com/sagrawalx/

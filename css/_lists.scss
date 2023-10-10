@@ -1,0 +1,22 @@
+main {
+    ul, ol {
+        padding-left: 2.5em;
+    }
+
+    li {
+	    margin-top: 0.5em;
+	    margin-bottom: 0.5em;
+    }
+
+    ul {
+        list-style: square;
+    }
+
+    ul ul {
+        list-style: circle;
+    }
+
+    ol {
+        list-style: decimal;
+    }
+}

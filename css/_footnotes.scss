@@ -1,0 +1,12 @@
+.footnoteRef, sup {
+    vertical-align: super;
+    font-size: xx-small;
+}
+
+.footnotes {
+    font-size: small;
+    ol {
+        padding-left: 4.5em;
+        padding-right: 2em;
+    }
+}

@@ -1,0 +1,1 @@
+{% assign languages = page.language | split: ", " | concat: site.data.translation.languages | uniq %}{% assign break_flag = false %}{% for x in languages %}{% for y in site.pages %}{% if x == y.language %}{% if y.slug == include.href %}{{ y.url }}{% assign break_flag = true %}{% break %}{% endif %}{% endif %}{% endfor %}{% if break_flag %}{% break %}{% endif %}{% endfor %}

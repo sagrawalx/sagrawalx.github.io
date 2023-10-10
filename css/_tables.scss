@@ -1,0 +1,23 @@
+@use "colors";
+
+table {
+    th, td {
+        border: 1px solid colors.$less-light;
+        padding: 0.5em;
+    }
+
+    th {
+        background-color: colors.$light;
+    }
+    td.subheading {
+        background-color: colors.$light;
+        font-style: italic;
+    }
+}
+
+hr {
+    margin-top: 1em;
+    border: 0;
+    height: 1px;
+    background: colors.$less-light;
+}

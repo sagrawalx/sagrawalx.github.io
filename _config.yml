@@ -1,20 +1,36 @@
 plugins: 
     - jekyll-pandoc
     - jekyll-redirect-from
+    
+exclude: 
+    - README.md
+    - push.sh
+    - pull.sh
+
+redirects_from:
+    json: false
 
 markdown: Pandoc
-
 pandoc:
     extensions:
         - mathjax
+        
+collections:
+    pages:
+        output: true
+        permalink: /:path
         
 defaults:
   - scope:
         path: ""
     values:
         layout: default
-
-exclude: 
-    - README.md
-    - push.sh
-    - pull.sh
+        language: en
+  - scope:
+        path: _pages/en/
+    values:
+        language: en
+  - scope:
+        path: _pages/ja/
+    values:
+        language: ja
