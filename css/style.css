@@ -1,134 +1,129 @@
-@import url("reset.css");
-@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Baloo+Bhaijaan+2:wght@800&family=Noto+Sans&family=Noto+Sans+Devanagari&family=Noto+Sans+Arabic&family=Noto+Sans+Bengali&family=Noto+Sans+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Cherry+Bomb+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Devanagari&family=Noto+Sans+Arabic&family=Noto+Sans+Bengali&family=Noto+Sans+JP&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
 body {
-  font-size: 16px;
-  font-family: "Noto Sans", "Noto Sans Devanagari", "Noto Sans Arabic", "Noto Sans Bengali", "Noto Sans JP", sans-serif;
-  font-weight: normal;
-  line-height: 1.7;
-  color: #444;
-  min-width: 30em;
-  max-width: 50em;
-  text-align: left;
-  padding-left: 5em;
-  padding-right: 5em;
-}
-body em {
-  font-style: italic;
-}
-body strong {
-  font-weight: bold;
-}
-body a:link, body a:visited {
-  color: #777;
-  text-decoration: none;
-}
-body a:hover, body a:active, body a.current {
-  color: #339999;
-}
-body blockquote, body .blockquote, body div.sourceCode {
-  display: block;
-  padding-left: 2em;
-  border-left-style: solid;
-  border-left-width: 5px;
-  border-left-color: #eee;
-}
-body .centerquote {
-  padding-left: 4em;
-  padding-right: 4em;
-}
-body code, body div.sourceCode {
-  font-family: monospace;
-  overflow: auto;
-  max-height: 40em;
-  @import url("code.css");
-}
-body span.blockquote-attribution {
-  display: block;
-  text-align: right;
-}
-body table th, body table td {
-  border: 1px solid #ddd;
-  padding: 0.5em;
-}
-body table th {
-  background-color: #eee;
-}
-body table td.subheading {
-  background-color: #eee;
-  font-style: italic;
+  line-height: 1;
 }
 
-#banner {
-  padding-top: 1em;
-}
-#banner a, #banner a:visited {
-  font-size: 2.25em;
-  color: #777;
-  font-weight: normal;
-  font-family: "Baloo 2", "Baloo Bhaijaan 2", cursive;
-}
-#banner a:hover, #banner a:active {
-  color: #339999;
+ol, ul {
+  list-style: none;
 }
 
-.sidepic {
-  width: 16em;
-  float: right;
-  margin-left: 1em;
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
   margin-bottom: 1em;
 }
 
-#sitenav {
-  width: 100%;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
+#banner {
+  font-size: 2em;
+  font-family: "Baloo 2", "Cherry Bomb One", cursive;
 }
-#sitenav ul {
-  list-style: none;
+
+nav#languages {
+  display: none;
+  font-size: xx-small;
+  /*
+  ul {
+      height: 1em;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+  }
+
+  ul li {
+      font-size: xx-small;
+      width: 2em;
+  } */
 }
-#sitenav ul li {
+nav#languages ul li {
+  display: inline;
+  margin-left: 0.5em;
+}
+
+nav#pages ul li {
   display: inline;
   margin-right: 1em;
 }
 
-main {
-  padding-bottom: 5em;
+a:link, a:visited {
+  color: #777;
+  text-decoration: none;
 }
-main h1 {
-  font-weight: bold;
-  font-size: 1.25em;
-  margin-top: 1.25em;
-  margin-bottom: 1em;
+
+a:hover, a:active, a.current {
+  color: #339999;
 }
-main header {
-  margin-bottom: 1em;
+
+a[href$=".pdf"]:after, a[href$=".asc"]:after {
+  content: url("/assets/pdf.svg");
+  padding-left: 0.1em;
 }
-main header h1 {
-  margin-bottom: 0em;
+
+a[href^="https://"]:after, a[href^="http://"]:after {
+  content: url("/assets/external.svg");
+  padding-left: 0.1em;
 }
-main header span.page-info {
-  font-size: small;
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 0.5em;
 }
-main h2, main article h1 {
-  font-weight: bold;
-  font-style: normal;
-  font-size: 1em;
-  margin-top: 1em;
-  margin-bottom: 1em;
+table th {
+  background-color: #eee;
 }
-main h3, main article h2 {
-  font-weight: normal;
+table td.subheading {
+  background-color: #eee;
   font-style: italic;
-  margin-top: 1em;
-  margin-bottom: 1em;
 }
-main p {
-  margin-bottom: 0.5em;
-  margin-top: 0.5em;
+
+hr {
+  margin-top: 1em;
+  border: 0;
+  height: 1px;
+  background: #ddd;
+}
+
+main ul, main ol {
+  padding-left: 2.5em;
 }
 main li {
   margin-top: 0.5em;
@@ -136,55 +131,12 @@ main li {
 }
 main ul {
   list-style: square;
-  padding-left: 2.5em;
 }
 main ul ul {
   list-style: circle;
 }
 main ol {
   list-style: decimal;
-  padding-left: 2.5em;
-}
-main .introduction, main .references {
-  font-size: small;
-  background-color: #eee;
-  padding: 1em 2em;
-  margin-bottom: 1em;
-  border-radius: 0.2em;
-}
-main .references {
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
-  margin-top: 1em;
-}
-main .references b {
-  font-weight: bold;
-}
-main .footnoteRef, main sup {
-  vertical-align: super;
-  font-size: xx-small;
-}
-main .footnotes {
-  font-size: small;
-}
-main .footnotes ol {
-  padding-left: 4.5em;
-  padding-right: 2em;
-}
-main hr {
-  margin-top: 1em;
-  border: 0;
-  height: 1px;
-  background: #ddd;
-}
-main ol.bibliography span {
-  display: inline;
-}
-main ol.bibliography div.csl-left-margin {
-  display: none;
-}
-main ol.bibliography div.csl-right-inline {
-  display: inline;
 }
 
 .email:after {
@@ -195,43 +147,95 @@ main ol.bibliography div.csl-right-inline {
   content: attr(data-localpart) "@";
 }
 
-ul.tags {
-  padding-left: 0;
-  display: inline;
-}
-ul.tags li {
-  display: inline;
-  margin-right: 0.4em;
-  background-color: #eee;
-  padding: 0.1em 0.4em 0.1em 0.4em;
-  border-radius: 0.2em;
-  color: #777;
-}
-ul.tags li:before {
-  content: "#";
-  color: #777;
+.footnoteRef, sup {
+  vertical-align: super;
+  font-size: xx-small;
 }
 
-.hoverseg .unit {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
+.footnotes {
+  font-size: small;
 }
-.hoverseg .unit .hover {
-  visibility: hidden;
-  width: 15em;
-  top: 100%;
-  left: 50%;
-  margin-left: -5em;
-  background-color: #eee;
-  padding: 0.25em 0.5em;
-  border-radius: 0.25em;
-  border: 1px solid black;
-  position: absolute;
-  z-index: 1;
+.footnotes ol {
+  padding-left: 4.5em;
+  padding-right: 2em;
 }
-.hoverseg .unit:hover .hover {
-  visibility: visible;
+
+img.sidepic {
+  width: 16em;
+  float: right;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+body {
+  /* Text Settings */
+  font-size: 16px;
+  font-family: "Noto Sans", "Noto Sans JP", "Noto Sans Devanagari", "Noto Sans Arabic", "Noto Sans Bengali", sans-serif;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #444;
+  /* Content Box */
+  min-width: 30em;
+  max-width: 50em;
+  text-align: left;
+  padding: 2em 5em 5em 5em;
+}
+
+main {
+  /* Headings */
+  /* Main Text */
+  /* 
+  blockquote, .blockquote, div.sourceCode {
+      display: block;
+      padding-left: 2em;
+      border-left-style: solid;
+      border-left-width: 5px;
+      border-left-color: colors.$light;
+  }
+
+  .centerquote {
+      padding-left: 4em;
+      padding-right: 4em;
+  }
+
+  code, div.sourceCode {
+      font-family: monospace;
+      overflow: auto;
+      max-height: 40em;
+      @import url("code.css");
+  }
+
+  span.blockquote-attribution {
+      display:  block;
+      text-align: right;
+  }
+
+  padding-bottom: 5em;
+
+   */
+}
+main header, main h1, main h2 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+main header {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+main h1 {
+  font-weight: bold;
+}
+main h2 {
+  font-style: italic;
+}
+main p {
+  margin-bottom: 0.5em;
+}
+main em {
+  font-style: italic;
+}
+main strong {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
