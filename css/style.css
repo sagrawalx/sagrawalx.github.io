@@ -167,6 +167,131 @@ img.sidepic {
   margin-bottom: 1em;
 }
 
+code {
+  font-family: monospace;
+  /* Keyword */
+  /* DataType */
+  /* DecVal */
+  /* BaseN */
+  /* Float */
+  /* Char */
+  /* String */
+  /* Comment */
+  /* Other */
+  /* Alert */
+  /* Function */
+  /* Error */
+  /* Warning */
+  /* Constant */
+  /* SpecialChar */
+  /* VerbatimString */
+  /* SpecialString */
+  /* Import */
+  /* Variable */
+  /* ControlFlow */
+  /* Operator */
+  /* BuiltIn */
+  /* Extension */
+  /* Preprocessor */
+  /* Attribute */
+  /* Documentation */
+  /* Annotation */
+  /* CommentVar */
+  /* Information */
+}
+code span.kw {
+  color: #007020;
+  font-weight: bold;
+}
+code span.dt {
+  color: #902000;
+}
+code span.dv {
+  color: #40a070;
+}
+code span.bn {
+  color: #40a070;
+}
+code span.fl {
+  color: #40a070;
+}
+code span.ch {
+  color: #4070a0;
+}
+code span.st {
+  color: #4070a0;
+}
+code span.co {
+  color: #60a0b0;
+  font-style: italic;
+}
+code span.ot {
+  color: #007020;
+}
+code span.al {
+  color: #ff0000;
+  font-weight: bold;
+}
+code span.fu {
+  color: #06287e;
+}
+code span.er {
+  color: #ff0000;
+  font-weight: bold;
+}
+code span.wa {
+  color: #60a0b0;
+  font-weight: bold;
+  font-style: italic;
+}
+code span.cn {
+  color: #880000;
+}
+code span.sc {
+  color: #4070a0;
+}
+code span.vs {
+  color: #4070a0;
+}
+code span.ss {
+  color: #bb6688;
+}
+code span.va {
+  color: #19177c;
+}
+code span.cf {
+  color: #007020;
+  font-weight: bold;
+}
+code span.op {
+  color: #666666;
+}
+code span.pp {
+  color: #bc7a00;
+}
+code span.at {
+  color: #7d9029;
+}
+code span.do {
+  color: #ba2121;
+  font-style: italic;
+}
+code span.an {
+  color: #60a0b0;
+  font-weight: bold;
+  font-style: italic;
+}
+code span.cv {
+  color: #60a0b0;
+  font-weight: bold;
+  font-style: italic;
+}
+code span.in {
+  color: #60a0b0;
+  font-weight: bold;
+  font-style: italic;
+}
+
 body {
   /* Text Settings */
   font-size: 16px;
@@ -184,35 +309,7 @@ body {
 main {
   /* Headings */
   /* Main Text */
-  /* 
-  blockquote, .blockquote, div.sourceCode {
-      display: block;
-      padding-left: 2em;
-      border-left-style: solid;
-      border-left-width: 5px;
-      border-left-color: colors.$light;
-  }
-
-  .centerquote {
-      padding-left: 4em;
-      padding-right: 4em;
-  }
-
-  code, div.sourceCode {
-      font-family: monospace;
-      overflow: auto;
-      max-height: 40em;
-      @import url("code.css");
-  }
-
-  span.blockquote-attribution {
-      display:  block;
-      text-align: right;
-  }
-
-  padding-bottom: 5em;
-
-   */
+  /* Blocks of quotes or code */
 }
 main header, main h1, main h2 {
   margin-top: 1em;
@@ -236,6 +333,20 @@ main em {
 }
 main strong {
   font-weight: bold;
+}
+main blockquote, main div.sourceCode {
+  display: block;
+  padding-left: 2em;
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-left-color: #eee;
+  overflow: auto;
+  max-height: 25em;
+  margin-bottom: 0.5em;
+}
+main span.blockquote-attribution {
+  display: block;
+  text-align: right;
 }
 
 /*# sourceMappingURL=style.css.map */
