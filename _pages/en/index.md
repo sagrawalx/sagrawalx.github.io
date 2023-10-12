@@ -6,7 +6,7 @@ title: About Me
 
 Hi! My name is Shishir Agrawal; I also go by Sunny. I am a human being. I currently live on lands stewarded since time immemorial by the [Kumeyaay people](https://en.wikipedia.org/wiki/Kumeyaay). 
 
-I'm employed as a postdoctoral mathematician at UC San Diego. My research interests include algebraic geometry and related things (arithmetic geometry, algebraic statistics, ...). 
+I'm employed as a postdoctoral mathematician at UC San Diego. My research interests include algebraic geometry and related fields, like arithmetic geometry or algebraic statistics. 
 
 Outside of math, things I like doing include doodling, reading, cooking, backpacking, studying language(s), and hanging out with my husband and my cat. 
 

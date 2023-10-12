@@ -9,6 +9,7 @@
 @use "email";       // Email address (munged)
 @use "footnotes";   // Footnotes
 @use "sidepic";     // Side picture
+@use "code";        // Code blocks
 
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Devanagari&family=Noto+Sans+Arabic&family=Noto+Sans+Bengali&family=Noto+Sans+JP&display=swap");
 body {
@@ -59,34 +60,20 @@ main {
         font-weight: bold;
     }
     
-
-    /* 
-    blockquote, .blockquote, div.sourceCode {
+    /* Blocks of quotes or code */
+    blockquote, div.sourceCode {
         display: block;
         padding-left: 2em;
         border-left-style: solid;
         border-left-width: 5px;
         border-left-color: colors.$light;
-    }
-    
-    .centerquote {
-        padding-left: 4em;
-        padding-right: 4em;
-    }
-
-    code, div.sourceCode {
-        font-family: monospace;
         overflow: auto;
-        max-height: 40em;
-        @import url("code.css");
+        max-height: 25em;
+        margin-bottom: 0.5em;
     }
 
     span.blockquote-attribution {
         display:  block;
         text-align: right;
     }
-
-    padding-bottom: 5em;
-
-     */
 }
