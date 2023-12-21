@@ -8,6 +8,7 @@ title: Teaching History
 {{ prefix }}# Primary Instructor
 
 * UC San Diego.
+    * Algebraic Geometry (Winter 2024). 
     * Probability and Statistics (Spring 2023). 
     * Cryptography (Winter 2023). 
     * Modern Algebra 1 (Fall 2022). 

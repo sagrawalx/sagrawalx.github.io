@@ -73,6 +73,7 @@ title: CV
 
 ## Virtual Attendance
 
+* Bayesian Statistics and Statistical Learning: New Directions in Algebraic Statistics (December 2023). IMSI, Chicago. 
 * Computations and Data in Algebraic Statistics (May 2023). CMO, Oaxaca. 
 * Global Virtual Sage Days 112.358 (June 2022). 
 * Franco-Asian Summer School on Arithmetic Geometry (May-June 2022). CIRM, Luminy. 
